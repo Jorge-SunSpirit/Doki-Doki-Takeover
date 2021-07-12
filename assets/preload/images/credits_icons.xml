@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="credits_icons.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="icona basic0000" x="0" y="0" width="82" height="87"/>
+	<SubTexture name="icona basic0001" x="87" y="0" width="82" height="87"/>
+	<SubTexture name="icona basic0002" x="87" y="0" width="82" height="87"/>
+	<SubTexture name="icona basic0003" x="87" y="0" width="82" height="87"/>
+	<SubTexture name="icona basic0004" x="87" y="0" width="82" height="87"/>
+	<SubTexture name="icona white0000" x="174" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icona white0001" x="174" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icona white0002" x="174" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icona white0003" x="174" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icona white0004" x="174" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icona white0005" x="1290" y="0" width="1189" height="1152"/>
+	<SubTexture name="icona white0006" x="1290" y="0" width="1189" height="1152"/>
+	<SubTexture name="icona white0007" x="1290" y="0" width="1189" height="1152"/>
+	<SubTexture name="icona white0008" x="1290" y="0" width="1189" height="1152"/>
+	<SubTexture name="icona white0009" x="1290" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconc basic0000" x="2484" y="0" width="82" height="87"/>
+	<SubTexture name="iconc basic0001" x="2571" y="0" width="82" height="87"/>
+	<SubTexture name="iconc basic0002" x="2571" y="0" width="82" height="87"/>
+	<SubTexture name="iconc basic0003" x="2571" y="0" width="82" height="87"/>
+	<SubTexture name="iconc basic0004" x="2571" y="0" width="82" height="87"/>
+	<SubTexture name="iconc white0000" x="2658" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconc white0001" x="2658" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconc white0002" x="2658" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconc white0003" x="2658" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconc white0004" x="2658" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconc white0005" x="3774" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconc white0006" x="3774" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconc white0007" x="3774" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconc white0008" x="3774" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconc white0009" x="3774" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconcv basic0000" x="4968" y="0" width="82" height="87"/>
+	<SubTexture name="iconcv basic0001" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconcv basic0002" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconcv basic0003" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconcv basic0004" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconcv white0000" x="5142" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconcv white0001" x="5142" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconcv white0002" x="5142" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconcv white0003" x="5142" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconcv white0004" x="5142" y="0" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconcv white0005" x="6258" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconcv white0006" x="6258" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconcv white0007" x="6258" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconcv white0008" x="6258" y="0" width="1189" height="1152"/>
+	<SubTexture name="iconcv white0009" x="6258" y="0" width="1189" height="1152"/>
+	<SubTexture name="icond basic0000" x="7452" y="0" width="82" height="87"/>
+	<SubTexture name="icond basic0001" x="7539" y="0" width="82" height="87"/>
+	<SubTexture name="icond basic0002" x="7539" y="0" width="82" height="87"/>
+	<SubTexture name="icond basic0003" x="7539" y="0" width="82" height="87"/>
+	<SubTexture name="icond basic0004" x="7539" y="0" width="82" height="87"/>
+	<SubTexture name="icond white0000" x="0" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icond white0001" x="0" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icond white0002" x="0" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icond white0003" x="0" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icond white0004" x="0" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icond white0005" x="1116" y="1157" width="1189" height="1152"/>
+	<SubTexture name="icond white0006" x="1116" y="1157" width="1189" height="1152"/>
+	<SubTexture name="icond white0007" x="1116" y="1157" width="1189" height="1152"/>
+	<SubTexture name="icond white0008" x="1116" y="1157" width="1189" height="1152"/>
+	<SubTexture name="icond white0009" x="1116" y="1157" width="1189" height="1152"/>
+	<SubTexture name="iconj basic0000" x="2310" y="1157" width="82" height="87"/>
+	<SubTexture name="iconj basic0001" x="2397" y="1157" width="82" height="87"/>
+	<SubTexture name="iconj basic0002" x="2397" y="1157" width="82" height="87"/>
+	<SubTexture name="iconj basic0003" x="2397" y="1157" width="82" height="87"/>
+	<SubTexture name="iconj basic0004" x="2397" y="1157" width="82" height="87"/>
+	<SubTexture name="iconj white0000" x="2484" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconj white0001" x="2484" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconj white0002" x="2484" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconj white0003" x="2484" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconj white0004" x="2484" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="iconj white0005" x="3600" y="1157" width="1189" height="1152"/>
+	<SubTexture name="iconj white0006" x="3600" y="1157" width="1189" height="1152"/>
+	<SubTexture name="iconj white0007" x="3600" y="1157" width="1189" height="1152"/>
+	<SubTexture name="iconj white0008" x="3600" y="1157" width="1189" height="1152"/>
+	<SubTexture name="iconj white0009" x="3600" y="1157" width="1189" height="1152"/>
+	<SubTexture name="iconnew basic0000" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconnew basic0001" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconnew basic0002" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconnew basic0003" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconnew basic0004" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="iconnew white0000" x="4794" y="1157" width="1058" height="1035" frameX="-34" frameY="-44" frameWidth="1134" frameHeight="1113"/>
+	<SubTexture name="iconnew white0001" x="4794" y="1157" width="1058" height="1035" frameX="-34" frameY="-44" frameWidth="1134" frameHeight="1113"/>
+	<SubTexture name="iconnew white0002" x="4794" y="1157" width="1058" height="1035" frameX="-34" frameY="-44" frameWidth="1134" frameHeight="1113"/>
+	<SubTexture name="iconnew white0003" x="4794" y="1157" width="1058" height="1035" frameX="-34" frameY="-44" frameWidth="1134" frameHeight="1113"/>
+	<SubTexture name="iconnew white0004" x="4794" y="1157" width="1058" height="1035" frameX="-34" frameY="-44" frameWidth="1134" frameHeight="1113"/>
+	<SubTexture name="iconnew white0005" x="5857" y="1157" width="1134" height="1113"/>
+	<SubTexture name="iconnew white0006" x="5857" y="1157" width="1134" height="1113"/>
+	<SubTexture name="iconnew white0007" x="5857" y="1157" width="1134" height="1113"/>
+	<SubTexture name="iconnew white0008" x="5857" y="1157" width="1134" height="1113"/>
+	<SubTexture name="iconnew white0009" x="5857" y="1157" width="1134" height="1113"/>
+	<SubTexture name="icont basic0000" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="icont basic0001" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="icont basic0002" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="icont basic0003" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="icont basic0004" x="5055" y="0" width="82" height="87"/>
+	<SubTexture name="icont white0000" x="6996" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icont white0001" x="6996" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icont white0002" x="6996" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icont white0003" x="6996" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icont white0004" x="6996" y="1157" width="1111" height="1069" frameX="-39" frameY="-41" frameWidth="1189" frameHeight="1152"/>
+	<SubTexture name="icont white0005" x="0" y="2314" width="1189" height="1152"/>
+	<SubTexture name="icont white0006" x="0" y="2314" width="1189" height="1152"/>
+	<SubTexture name="icont white0007" x="0" y="2314" width="1189" height="1152"/>
+	<SubTexture name="icont white0008" x="0" y="2314" width="1189" height="1152"/>
+	<SubTexture name="icont white0009" x="0" y="2314" width="1189" height="1152"/>
+</TextureAtlas>

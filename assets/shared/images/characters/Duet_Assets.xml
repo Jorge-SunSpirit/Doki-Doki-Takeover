@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Duet_Assets.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Duet Idle0000" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0001" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0002" x="117" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0003" x="117" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0004" x="234" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0005" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0006" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0007" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0008" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0009" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0010" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0011" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0012" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0013" x="468" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0014" x="468" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0015" x="585" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0016" x="585" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0017" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0018" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0019" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0020" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0021" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0022" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Idle0023" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0000" x="702" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0001" x="702" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0002" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0003" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0004" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0005" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0006" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0007" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0008" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0009" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0010" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0011" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0012" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika DOWN NOTE0013" x="819" y="0" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0000" x="0" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0001" x="0" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0002" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0003" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0004" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0005" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0006" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0007" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0008" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0009" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0010" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0011" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0012" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika LEFT NOTE0013" x="117" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0000" x="234" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0001" x="234" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0002" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0003" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0004" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0005" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0006" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0007" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0008" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0009" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0010" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0011" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0012" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika RIGHT NOTE0013" x="351" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0000" x="468" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0001" x="468" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0002" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0003" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0004" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0005" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0006" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0007" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0008" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0009" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0010" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0011" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0012" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Monika UP NOTE0013" x="585" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0000" x="702" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0001" x="702" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0002" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0003" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0004" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0005" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0006" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0007" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0008" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0009" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0010" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0011" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0012" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai DOWN NOTE0013" x="819" y="132" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0000" x="0" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0001" x="0" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0002" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0003" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0004" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0005" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0006" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0007" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0008" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0009" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0010" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0011" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0012" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai LEFT NOTE0013" x="117" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0000" x="234" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0001" x="234" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0002" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0003" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0004" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0005" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0006" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0007" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0008" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0009" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0010" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0011" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0012" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai RIGHT NOTE0013" x="351" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0000" x="468" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0001" x="468" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0002" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0003" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0004" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0005" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0006" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0007" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0008" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0009" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0010" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0011" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0012" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="Duet Senpai UP NOTE0013" x="585" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0000" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0001" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0002" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0003" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0004" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0005" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0006" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0007" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0008" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0009" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0010" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0011" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0012" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene idle0013" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene transition0000" x="702" y="264" width="112" height="127"/>
+	<SubTexture name="cutscene transition0001" x="819" y="264" width="112" height="114" frameX="0" frameY="-14" frameWidth="112" frameHeight="128"/>
+	<SubTexture name="cutscene transition0002" x="0" y="396" width="112" height="117" frameX="0" frameY="-11" frameWidth="112" frameHeight="128"/>
+	<SubTexture name="cutscene transition0003" x="234" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0004" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0005" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0006" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0007" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0008" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0009" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0010" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0011" x="351" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0012" x="468" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0013" x="468" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0014" x="585" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0015" x="585" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0016" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0017" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0018" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0019" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0020" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0021" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0022" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0023" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0024" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0025" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0026" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0027" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0028" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0029" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0030" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0031" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0032" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0033" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0034" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0035" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0036" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0037" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0038" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0039" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0040" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0041" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0042" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0043" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0044" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0045" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0046" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0047" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0048" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0049" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0050" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0051" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0052" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0053" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0054" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0055" x="0" y="0" width="112" height="127"/>
+	<SubTexture name="cutscene transition0056" x="0" y="0" width="112" height="127"/>
+</TextureAtlas>
