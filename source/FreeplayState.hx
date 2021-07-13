@@ -84,7 +84,7 @@ class FreeplayState extends MusicBeatState
 				weekbeaten = 0;
 			}
 
-		for (i in 0...songs.length - weekbeaten)
+		for (i in 0...songs.length)
 		{
 			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
 			songText.isMenuItem = true;
@@ -269,7 +269,7 @@ class FreeplayState extends MusicBeatState
 			case 1:
 				if (curSelected == 3)
 					{
-						diffText.text = 'Your Reality';
+						diffText.text = 'YOUR REALITY';
 					}
 					else
 						{
@@ -293,8 +293,8 @@ class FreeplayState extends MusicBeatState
 		curSelected += change;
 
 		if (curSelected < 0)
-			curSelected = songs.length - weekbeaten - 1;
-		if (curSelected >= songs.length - weekbeaten)
+			curSelected = songs.length - 1;
+		if (curSelected >= songs.length)
 			curSelected = 0;
 
 		// selector.y = (70 * curSelected) + 30;

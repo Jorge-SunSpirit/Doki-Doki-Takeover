@@ -116,7 +116,7 @@ class DialogueBox extends FlxSpriteGroup
 		if (PlayState.SONG.song.toLowerCase()=='high school conflict' || PlayState.SONG.song.toLowerCase()=='bara no yume' || PlayState.SONG.song.toLowerCase()=='your demise')
 			{
 		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('weeb/monika');
+		portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
 		portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
 		portraitLeft.updateHitbox();
@@ -125,7 +125,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft.visible = false;
 			}
 		portraitRight = new FlxSprite(0, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('weeb/bf');
+		portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
 		portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
 		portraitRight.updateHitbox();
@@ -257,7 +257,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('weeb/monika');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
 					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitLeft.animation.play('enter');
 				}
@@ -267,7 +267,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('weeb/monikahappy');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monikahappy','monika');
 					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitLeft.animation.play('enter');
 				}
@@ -277,7 +277,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitRight.visible)
 				{
 					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('weeb/monikagasp');
+					portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikagasp','monika');
 					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitRight.animation.play('enter');
 				}
@@ -287,7 +287,7 @@ class DialogueBox extends FlxSpriteGroup
 					if (!portraitRight.visible)
 					{
 						portraitRight.visible = true;
-						portraitRight.frames = Paths.getSparrowAtlas('weeb/monikagaspleft');
+						portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikagaspleft','monika');
 						portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 						portraitRight.animation.play('enter');
 					}
@@ -297,7 +297,7 @@ class DialogueBox extends FlxSpriteGroup
 					if (!portraitRight.visible)
 						{
 							portraitRight.visible = true;
-							portraitRight.frames = Paths.getSparrowAtlas('weeb/monikahmm');
+							portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikahmm','monika');
 							portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 							portraitRight.animation.play('enter');
 						}
@@ -307,7 +307,7 @@ class DialogueBox extends FlxSpriteGroup
 					if (!portraitRight.visible)
 						{
 							portraitRight.visible = true;
-							portraitRight.frames = Paths.getSparrowAtlas('weeb/monikauhohright');
+							portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikauhohright','monika');
 							portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 							portraitRight.animation.play('enter');
 						}
@@ -317,7 +317,7 @@ class DialogueBox extends FlxSpriteGroup
 					if (!portraitRight.visible)
 						{
 							portraitRight.visible = true;
-							portraitRight.frames = Paths.getSparrowAtlas('weeb/monikauhohleft');
+							portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikauhohleft','monika');
 							portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 							portraitRight.animation.play('enter');
 						}
@@ -327,7 +327,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitRight.visible)
 				{
 					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('weeb/monikasad');
+					portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikasad','monika');
 					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitRight.animation.play('enter');
 				}
@@ -337,7 +337,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitRight.visible)
 				{
 					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('weeb/bf');
+					portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
 					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitRight.animation.play('enter');
 				}
@@ -347,7 +347,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitRight.visible)
 				{
 					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('weeb/bfwhat');
+					portraitRight.frames = Paths.getSparrowAtlas('dialogue/bfwhat','monika');
 					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitRight.animation.play('enter');
 				}
@@ -357,7 +357,7 @@ class DialogueBox extends FlxSpriteGroup
 					if (!portraitRight.visible)
 					{
 						portraitRight.visible = true;
-						portraitRight.frames = Paths.getSparrowAtlas('weeb/bfangry');
+						portraitRight.frames = Paths.getSparrowAtlas('dialogue/bfangry','monika');
 						portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 						portraitRight.animation.play('enter');
 					}
@@ -367,7 +367,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpai');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpai','monika');
 					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitLeft.animation.play('enter');
 				}
@@ -377,7 +377,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpaihappy');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpaihappy','monika');
 					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitLeft.animation.play('enter');
 				}
@@ -387,7 +387,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpaihmm');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpaihmm','monika');
 					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitLeft.animation.play('enter');
 				}
@@ -397,7 +397,7 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('weeb/whodis');
+					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/whodis','monika');
 					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 					portraitLeft.animation.play('enter');
 				}
