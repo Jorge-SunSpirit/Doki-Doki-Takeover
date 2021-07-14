@@ -51,6 +51,7 @@ class CreditDevMenu extends MusicBeatState
 	var newGaming2:FlxText;
 	var newInput:Bool = true;
 	var logo:FlxSprite;
+	var icon:FlxSprite;
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
@@ -98,7 +99,9 @@ class CreditDevMenu extends MusicBeatState
 		logo = new FlxSprite(-700, -359).loadGraphic(Paths.image('Credits_LeftSide'));
 		add(logo);
 
-
+		icon = new FlxSprite(-650, -370).loadGraphic(Paths.image('credits_logo'));
+		icon.scale.set(0.9, 0.9);
+		add(icon);
 		
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);

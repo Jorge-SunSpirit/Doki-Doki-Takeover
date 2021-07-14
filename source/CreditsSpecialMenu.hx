@@ -45,6 +45,7 @@ class CreditsSpecialMenu extends MusicBeatState
 	var newGaming2:FlxText;
 	var newInput:Bool = true;
 	var logo:FlxSprite;
+	var icon:FlxSprite;
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	var thank:FlxSprite;
@@ -91,6 +92,10 @@ class CreditsSpecialMenu extends MusicBeatState
 
 		logo = new FlxSprite(-700, -359).loadGraphic(Paths.image('Credits_LeftSide'));
 		add(logo);
+
+		icon = new FlxSprite(-650, -370).loadGraphic(Paths.image('credits_logo'));
+		icon.scale.set(0.9, 0.9);
+		add(icon);
 		
 	
 		thank = new FlxSprite(-380, -450).loadGraphic(Paths.image('ThanksIcon'));
