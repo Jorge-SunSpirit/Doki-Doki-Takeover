@@ -201,15 +201,31 @@ class Note extends FlxSprite
 
 		if (mustPress)
 		{
-			// The * 0.5 is so that it's easier to hit them too late, instead of too early
-			if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 1.5)
-				&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
-				canBeHit = true;
-			else
-				canBeHit = false;
+			switch (noteType)
+				{
+					case 2:
+						{
+							if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * .3) && strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * .2))
+								canBeHit = true;
+							else
+								canBeHit = false;
 
-			if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset * Conductor.timeScale && !wasGoodHit)
-				tooLate = true;
+							if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset * Conductor.timeScale && !wasGoodHit)
+								tooLate = true;
+						}
+					default:
+						{
+							// The * 0.5 is so that it's easier to hit them too late, instead of too early
+							if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 1.5) && strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
+								canBeHit = true;
+							else
+								canBeHit = false;
+
+							if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset * Conductor.timeScale && !wasGoodHit)
+								tooLate = true;
+						}
+				}
+			
 		}
 		else
 		{
