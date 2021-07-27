@@ -1,4 +1,4 @@
-![Logo](https://ayetsg.github.io/img/MonikaRebooted.png) 
+![Logo](https://cdn.discordapp.com/attachments/404826669971406867/869727046165729360/api.png) 
 ## Built on **[Kade Engine](https://github.com/KadeDev/Kade-Engine)**
 
 # Original Game Links
@@ -9,10 +9,10 @@ DDLC Links: **[DDLC Official Webiste](http://ddlc.moe) ⋅ [itch.io page](https:
 
 # Credits
 
-### Monika Full Week
+### Doki Doki Takeover
 - [AetherDX](https://twitter.com/AetherDX) and [Jorge_SunSpirit](https://twitter.com/Jorge_SunSpirit) - Programming
 - [SirDusterBuster](https://twitter.com/SirDusterBuster) and [TokyoGalaxyOG](https://twitter.com/TokyoGalaxyOG) - Art
-- [CelShader](https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ) and [Kallionic](https://youtube.com/kallionic) - Music
+- [CelShader](https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ), [Kallionic](https://youtube.com/kallionic), [Stardust Tunes](https://twitter.com/StardustTunes), [Clem](https://twitter.com/ClemO___O), [blufirecat](https://twitter.com/starrie_blu), [Saruky](https://twitter.com/Saruky__), [Matt$](https://twitter.com/matt_currency), [HPK](https://twitter.com/HighPoweredArt), - Music
 
 ### Special Thanks
 
