@@ -100,23 +100,8 @@ class VideoState extends MusicBeatState
 			GlobalVideo.get().play();
 		}
 		
-		/*if (useSound)
-		{*/
-			//vidSound = FlxG.sound.play(leSource.replace(".webm", ".ogg"));
-		
-			/*new FlxTimer().start(0.1, function(tmr:FlxTimer)
-			{*/
-				vidSound.time = vidSound.length * soundMultiplier;
-				/*new FlxTimer().start(1.2, function(tmr:FlxTimer)
-				{
-					if (useSound)
-					{
-						vidSound.time = vidSound.length * soundMultiplier;
-					}
-				}, 0);*/
-				doShit = true;
-			//}, 1);
-		//}
+			vidSound.time = vidSound.length * soundMultiplier;
+			doShit = true;
 		
 		if (autoPause && FlxG.sound.music != null && FlxG.sound.music.playing)
 		{
@@ -187,6 +172,10 @@ class VideoState extends MusicBeatState
 						{
 							
 						}
+					case 'your demise':
+						{
+							
+						}
 					default:
 						{
 							txt.text = pauseText;
@@ -206,6 +195,29 @@ class VideoState extends MusicBeatState
 
 		switch (PlayState.SONG.song.toLowerCase())
 			{
+				case 'your demise':
+					{
+						if (GlobalVideo.get().ended || GlobalVideo.get().stopped)
+							{
+								txt.visible = false;
+								GlobalVideo.get().hide();
+								GlobalVideo.get().stop();
+							}
+							
+							if (GlobalVideo.get().ended)
+							{
+								notDone = false;
+								FlxG.sound.music.volume = fuckingVolume;
+								txt.text = pauseText;
+								if (musicPaused)
+								{
+									musicPaused = false;
+									FlxG.sound.music.resume();
+								}
+								FlxG.autoPause = true;
+								FlxG.switchState(transClass);
+							}
+					}
 				case 'bara no yume':
 					{
 						if (GlobalVideo.get().ended || GlobalVideo.get().stopped)
