@@ -12,7 +12,7 @@ DDLC Links: **[DDLC Official Webiste](http://ddlc.moe) ⋅ [itch.io page](https:
 ### Doki Doki Takeover
 - [AetherDX](https://twitter.com/AetherDX) and [Jorge_SunSpirit](https://twitter.com/Jorge_SunSpirit) - Programming
 - [SirDusterBuster](https://twitter.com/SirDusterBuster) and [TokyoGalaxyOG](https://twitter.com/TokyoGalaxyOG) - Art
-- [CelShader](https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ), [Kallionic](https://youtube.com/kallionic), [Stardust Tunes](https://twitter.com/StardustTunes), [Clem](https://twitter.com/ClemO___O), [blufirecat](https://twitter.com/starrie_blu), [Saruky](https://twitter.com/Saruky__), [Matt$](https://twitter.com/matt_currency), [HPK](https://twitter.com/HighPoweredArt), - Music
+- [CelShader](https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ), [Kallionic](https://youtube.com/kallionic), [Stardust Tunes](https://twitter.com/StardustTunes), [Clem](https://twitter.com/ClemO___O), [blufirecat](https://twitter.com/starrie_blu), [Saruky](https://twitter.com/Saruky__), [Matt$](https://twitter.com/matt_currency), [HPK](https://twitter.com/HighPoweredArt) - Music
 - [Esther Christo, voice of Monika (as a bonus)](https://twitter.com/carimellevo)
 - [Miss Beepy, voice of Natsuki](https://twitter.com/MissBeepy)
 - [Loganne Digma, voice of Yuri](https://twitter.com/Loganne_Digma)
