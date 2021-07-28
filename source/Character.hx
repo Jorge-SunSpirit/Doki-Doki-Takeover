@@ -442,7 +442,6 @@ class Character extends FlxSprite
 				antialiasing = false;
 			
 			case 'natsuki':
-				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/Doki_Nat_Assets');
 				frames = tex;
 				animation.addByPrefix('idle', 'Nat Idle', 24);
@@ -453,9 +452,9 @@ class Character extends FlxSprite
 
 				addOffset('idle');
 				addOffset("singUP", 29, 0);
-				addOffset("singRIGHT", -28, 6);
+				addOffset("singRIGHT", -64, 6);
 				addOffset("singLEFT", -32, -32);
-				addOffset("singDOWN", 48, -6);
+				addOffset("singDOWN", 46, -6);
 
 				playAnim('idle');
 			

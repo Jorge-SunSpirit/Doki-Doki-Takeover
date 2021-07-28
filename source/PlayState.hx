@@ -437,10 +437,11 @@ class PlayState extends MusicBeatState
 					var posY = 200;
 
 					//finalebgmybeloved
-					var oldspace:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('finalebgmybeloved'));
+					oldspace = new FlxSprite(posX, posY).loadGraphic(Paths.image('finalebgmybeloved'));
 					oldspace.antialiasing = false;
 					oldspace.scale.set(1.65, 1.65);
 					oldspace.scrollFactor.set(0.1, 0.1);
+					oldspace.alpha = 0;
 					add(oldspace);
 
 					add(space = new FlxBackdrop(Paths.image('FinaleBG_1','monika')));
@@ -640,7 +641,7 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 200;
 				boyfriend.y += 260;
 				gf.x += 180;
-				gf.y += 300;
+				gf.y += 1000;
 			case 'dokiclubroom':
 				{
 					dad.y -= 0;
@@ -1769,6 +1770,7 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.pressed.O && FlxG.keys.pressed.P)
 			{
+				oldspace.alpha = 1;
 				remove(space);
 			}
 
