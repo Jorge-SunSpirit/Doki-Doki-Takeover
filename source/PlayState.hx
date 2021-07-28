@@ -488,6 +488,33 @@ class PlayState extends MusicBeatState
 	
 						add(stageCurtains);
 				}
+			case 'dokiclubroom':
+				{
+						defaultCamZoom = 0.9;
+						curStage = 'dokiclubroom';
+						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						add(bg);
+	
+						var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
+						stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+						stageFront.updateHitbox();
+						stageFront.antialiasing = true;
+						stageFront.scrollFactor.set(0.9, 0.9);
+						stageFront.active = false;
+						add(stageFront);
+	
+						var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
+						stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+						stageCurtains.updateHitbox();
+						stageCurtains.antialiasing = true;
+						stageCurtains.scrollFactor.set(1.3, 1.3);
+						stageCurtains.active = false;
+	
+						add(stageCurtains);
+				}
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -554,19 +581,8 @@ class PlayState extends MusicBeatState
 					tweenCamIn();
 				}
 
-			case "spooky":
-				dad.y += 200;
-			case "monster":
-				dad.y += 100;
-			case 'monster-christmas':
-				dad.y += 130;
 			case 'dad':
 				camPos.x += 400;
-			case 'pico':
-				camPos.x += 600;
-				dad.y += 300;
-			case 'parents-christmas':
-				dad.x -= 500;
 			case 'senpai':
 				dad.x += 150;
 				dad.y += 360;
@@ -587,11 +603,10 @@ class PlayState extends MusicBeatState
 				dad.x += 150;
 				dad.y += 360;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'spirit':
-				dad.x -= 150;
-				dad.y += 100;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-		}
+			case 'natsuki':
+				camPos.x += 400;
+				dad.y += 185;
+			}
 
 
 		
@@ -626,6 +641,16 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 260;
 				gf.x += 180;
 				gf.y += 300;
+			case 'dokiclubroom':
+				{
+					dad.y -= 0;
+					dad.x += 0;
+					boyfriend.x += 0;
+					boyfriend.y += 0;
+					gf.x += 0;
+					gf.y += 0;	
+				}
+
 		}
 
 		add(gf);

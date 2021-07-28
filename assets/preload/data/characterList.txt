@@ -7,3 +7,4 @@ monika
 duet
 monika-angry
 playablesenpai
+natsuki
