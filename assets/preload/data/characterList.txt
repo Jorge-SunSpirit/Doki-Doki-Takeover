@@ -8,3 +8,4 @@ duet
 monika-angry
 playablesenpai
 natsuki
+sayori

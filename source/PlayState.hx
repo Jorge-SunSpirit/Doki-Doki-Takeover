@@ -607,6 +607,9 @@ class PlayState extends MusicBeatState
 			case 'natsuki':
 				camPos.x += 400;
 				dad.y += 185;
+			case 'sayori':
+				camPos.x += 400;
+				dad.y += 120;
 			}
 
 

@@ -458,6 +458,24 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			
+			case 'sayori':
+				//and the blind forest
+				tex = Paths.getSparrowAtlas('characters/Doki_Sayo_Assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'Sayo Idle', 24);
+				animation.addByPrefix('singUP', 'Sayo Sing Note Up', 24);
+				animation.addByPrefix('singRIGHT', 'Sayo Sing Note Right', 24);
+				animation.addByPrefix('singDOWN', 'Sayo Sing Note Down', 24);
+				animation.addByPrefix('singLEFT', 'Sayo Sing Note Left', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -31, 43);
+				addOffset("singRIGHT", -92, -8);
+				addOffset("singLEFT", -22, -2);
+				addOffset("singDOWN", -54, -44);
+
+				playAnim('idle');
+
 		}
 
 		dance();

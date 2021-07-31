@@ -33,6 +33,7 @@ class HealthIcon extends FlxSprite
 		animation.add('gf-pixel', [16], 0, false, isPlayer);
 		animation.add('gf-doki', [16], 0, false, isPlayer);
 		animation.add('natsuki', [10, 11], 0, false, isPlayer);
+		animation.add('sayori', [10, 11], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)
