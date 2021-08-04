@@ -322,10 +322,12 @@ class StoryMenuState extends MusicBeatState
 												case 1:
 													trace('huh? VIDEO WORK');
 													FlxG.save.data.introwatched = true;
+													FlxG.sound.music.stop();
 													LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
 												case 2:
 													trace('huh? VIDEO WORK');
 													FlxG.save.data.introwatched = true;
+													FlxG.sound.music.stop();
 													LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
 											}
 										case true:
@@ -379,10 +381,12 @@ class StoryMenuState extends MusicBeatState
 															case 1:
 																trace('huh? VIDEO WORK');
 																FlxG.save.data.introwatched = true;
+																FlxG.sound.music.stop();
 																LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
 															case 2:
 																trace('huh? VIDEO WORK');
 																FlxG.save.data.introwatched = true;
+																FlxG.sound.music.stop();
 																LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
 														}
 													case true:

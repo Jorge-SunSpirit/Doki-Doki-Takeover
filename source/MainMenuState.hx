@@ -95,10 +95,10 @@ class MainMenuState extends MusicBeatState
 
 
 		//-700, =359
-		logo = new FlxSprite(-1000, -359).loadGraphic(Paths.image('Credits_LeftSide'));
+		logo = new FlxSprite(-900, -359).loadGraphic(Paths.image('Credits_LeftSide'));
 		add(logo);
 		if (firstStart)
-			FlxTween.tween(logo,{x: -700},1 ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+			FlxTween.tween(logo,{x: -700},1.2 ,{ease: FlxEase.elasticOut, onComplete: function(flxTween:FlxTween) 
 				{ 
 					finishedFunnyMove = true; 
 					changeItem();
@@ -107,7 +107,7 @@ class MainMenuState extends MusicBeatState
 			logo.x = -700;
 
 		//-600, -400
-		logoBl = new FlxSprite(-900, -400);
+		logoBl = new FlxSprite(-800, -400);
 		logoBl.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
 		logoBl.antialiasing = true;
 		logoBl.scale.set(0.5, 0.5);
@@ -116,7 +116,7 @@ class MainMenuState extends MusicBeatState
 		logoBl.updateHitbox();
 		add(logoBl);
 		if (firstStart)
-			FlxTween.tween(logoBl,{x: -600},1 ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+			FlxTween.tween(logoBl,{x: -600},1.2 ,{ease: FlxEase.elasticOut, onComplete: function(flxTween:FlxTween) 
 				{ 
 					finishedFunnyMove = true; 
 					changeItem();
@@ -147,7 +147,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
 			if (firstStart)
-				FlxTween.tween(menuItem,{x: 50},1 + (i * 0.2) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+				FlxTween.tween(menuItem,{x: 50},1.2 + (i * 0.2) ,{ease: FlxEase.elasticOut, onComplete: function(flxTween:FlxTween) 
 					{ 
 						finishedFunnyMove = true; 
 						changeItem();
