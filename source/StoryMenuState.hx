@@ -24,8 +24,10 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['High School Conflict', 'Bara No Yume', 'Your Demise']
-		//['Your Demise'] //singularsong testing :)
+		['High School Conflict', 'Bara No Yume', 'Your Demise'],
+		['erb'],
+		['erb'],
+		['epiphany']
 	];
 	var curDifficulty:Int = 1;
 
@@ -33,11 +35,17 @@ class StoryMenuState extends MusicBeatState
 
 	var weekCharacters:Array<Dynamic> = [
 		['senpai', 'bf', 'gf'],
+		['senpai', 'bf', 'gf'],
+		['senpai', 'bf', 'gf'],
+		['senpai', 'bf', 'gf']
 	];
 	
 
 	var weekNames:Array<String> = [
-		"Just Monika"
+		"Just Monika",
+		"Natsuki",
+		"Sayori",
+		"Yuri"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -115,15 +123,19 @@ class StoryMenuState extends MusicBeatState
 			// weekThing.updateHitbox();
 
 			// Needs an offset thingie
-			if (!weekUnlocked[i])
+			//if (!weekUnlocked[i])
+			//switch (curWeek)
+			switch (FlxG.save.data.yuriunlocked)
 			{
-				var lock:FlxSprite = new FlxSprite(weekThing.width + 10 + weekThing.x);
-				lock.frames = ui_tex;
-				lock.animation.addByPrefix('lock', 'lock');
-				lock.animation.play('lock');
-				lock.ID = i;
-				lock.antialiasing = true;
-				grpLocks.add(lock);
+				case false:
+					var lock:FlxSprite = new FlxSprite(weekThing.width + 10 + weekThing.x);
+					lock.frames = ui_tex;
+					lock.animation.addByPrefix('lock', 'lock');
+					lock.animation.play('lock');
+					lock.ID = 3;
+					lock.antialiasing = true;
+					grpLocks.add(lock);
+				case true:
 			}
 		}
 
@@ -172,7 +184,6 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.font = rankText.font;
 		txtTracklist.color = 0xFFe55777;
 		add(txtTracklist);
-		// add(rankText);
 		add(scoreText);
 		add(txtWeekTitle);
 
@@ -195,7 +206,20 @@ class StoryMenuState extends MusicBeatState
 
 		// FlxG.watch.addQuick('font', scoreText.font);
 
-		difficultySelectors.visible = weekUnlocked[curWeek];
+
+		switch (curWeek)
+			{
+				default: 
+					difficultySelectors.visible = true;
+				case 3:
+					switch (FlxG.save.data.yuriunlocked)
+							{
+								case false:
+									difficultySelectors.visible = false;
+								case true:
+							}
+			}
+		//difficultySelectors.visible = weekUnlocked[curWeek];
 
 		grpLocks.forEach(function(lock:FlxSprite)
 		{
@@ -254,41 +278,120 @@ class StoryMenuState extends MusicBeatState
 
 	function selectWeek()
 	{
-		if (weekUnlocked[curWeek])
-		{
-			if (stopspamming == false)
+		switch (curWeek)
 			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
+				default: 
+					{
+						if (stopspamming == false)
+						{
+							FlxG.sound.play(Paths.sound('confirmMenu'));
 
-				grpWeekText.members[curWeek].startFlashing();
-				grpWeekCharacters.members[1].animation.play('bfConfirm');
-				stopspamming = true;
+							grpWeekText.members[curWeek].startFlashing();
+							grpWeekCharacters.members[1].animation.play('bfConfirm');
+							stopspamming = true;
+						}
+
+						PlayState.storyPlaylist = weekData[curWeek];
+						PlayState.isStoryMode = true;
+						selectedWeek = true;
+
+						var diffic = "";
+
+						switch (curDifficulty)
+						{
+							case 0:
+								diffic = '-easy';
+							case 2:
+								diffic = '-hard';
+						}
+
+						PlayState.storyDifficulty = curDifficulty;
+
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+						PlayState.storyWeek = curWeek;
+						PlayState.campaignScore = 0;
+						new FlxTimer().start(1, function(tmr:FlxTimer)
+							{
+								switch (FlxG.save.data.introwatched)
+									{
+										case false:
+											switch (curWeek)
+											{
+												default:
+													LoadingState.loadAndSwitchState(new PlayState(), true);
+												case 1:
+													trace('huh? VIDEO WORK');
+													FlxG.save.data.introwatched = true;
+													LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
+												case 2:
+													trace('huh? VIDEO WORK');
+													FlxG.save.data.introwatched = true;
+													LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
+											}
+										case true:
+											LoadingState.loadAndSwitchState(new PlayState(), true);
+									}
+							});
+					}
+				case 3:
+					switch (FlxG.save.data.yuriunlocked)
+							{
+								case false:
+								case true:
+									{
+										if (stopspamming == false)
+										{
+											FlxG.sound.play(Paths.sound('confirmMenu'));
+				
+											grpWeekText.members[curWeek].startFlashing();
+											grpWeekCharacters.members[1].animation.play('bfConfirm');
+											stopspamming = true;
+										}
+				
+										PlayState.storyPlaylist = weekData[curWeek];
+										PlayState.isStoryMode = true;
+										selectedWeek = true;
+				
+										var diffic = "";
+				
+										switch (curDifficulty)
+										{
+											case 0:
+												diffic = '-easy';
+											case 2:
+												diffic = '-hard';
+										}
+				
+										PlayState.storyDifficulty = curDifficulty;
+				
+										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+										PlayState.storyWeek = curWeek;
+										PlayState.campaignScore = 0;
+										new FlxTimer().start(1, function(tmr:FlxTimer)
+										{
+											switch (FlxG.save.data.introwatched)
+												{
+													case false:
+														switch (curWeek)
+														{
+															default:
+																LoadingState.loadAndSwitchState(new PlayState(), true);
+															case 1:
+																trace('huh? VIDEO WORK');
+																FlxG.save.data.introwatched = true;
+																LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
+															case 2:
+																trace('huh? VIDEO WORK');
+																FlxG.save.data.introwatched = true;
+																LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
+														}
+													case true:
+														LoadingState.loadAndSwitchState(new PlayState(), true);
+												}
+										});
+									}
+							}
 			}
-
-			PlayState.storyPlaylist = weekData[curWeek];
-			PlayState.isStoryMode = true;
-			selectedWeek = true;
-
-			var diffic = "";
-
-			switch (curDifficulty)
-			{
-				case 0:
-					diffic = '-easy';
-				case 2:
-					diffic = '-hard';
-			}
-
-			PlayState.storyDifficulty = curDifficulty;
-
-			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-			PlayState.storyWeek = curWeek;
-			PlayState.campaignScore = 0;
-			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
-			});
-		}
 	}
 
 	function changeDifficulty(change:Int = 0):Void
@@ -345,10 +448,19 @@ class StoryMenuState extends MusicBeatState
 		for (item in grpWeekText.members)
 		{
 			item.targetY = bullShit - curWeek;
-			if (item.targetY == Std.int(0) && weekUnlocked[curWeek])
-				item.alpha = 1;
-			else
-				item.alpha = 0.6;
+			switch (curWeek)
+				{
+					default:
+						item.alpha = 1;
+					case 3:
+						switch (FlxG.save.data.yuriunlocked)
+							{
+								case false:
+									item.alpha = 0.6;
+								case true:
+							}
+				}
+			
 			bullShit++;
 		}
 

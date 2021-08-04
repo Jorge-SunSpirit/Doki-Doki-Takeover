@@ -293,12 +293,22 @@ class PlayState extends MusicBeatState
 
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
-			{
-				if (storyWeek == 0) {
-					detailsText = "Story Mode: Week Monika -";
-				} else {
-					detailsText = "Story Mode: Week " + storyWeek;
-				}
+			{	
+				switch (storyWeek)
+					{
+						case 0:
+							detailsText = "Story Mode: Week Monika -";
+						case 1:
+							detailsText = "Story Mode: Week Natsuki -";
+						case 2:
+							detailsText = "Story Mode: Week Sayori -";
+						case 3:
+							detailsText = "Story Mode: Week Yuri -";
+						case 4:
+							detailsText = "Story Mode: Week ??? -";
+						default:
+							detailsText = "Story Mode: Week Monika -";
+					}
 			}
 			else
 			{
@@ -353,6 +363,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('your demise/your-demiseDialogue'));
 				extra1 = CoolUtil.coolTextFile(Paths.txt('your demise/your-demiseEndDialogue'));
 				extra3 = CoolUtil.coolTextFile(Paths.txt('your demise/FinalCutsceneDialouge'));
+			case 'erb':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('erb/TestDialogue'));
 		}
 
 		trace(SONG.stage);
@@ -851,6 +863,10 @@ class PlayState extends MusicBeatState
 						} else {
 							DarkStart(doof);
 						}
+				case 'erb':
+					introcutscene(doof);
+				case 'epiphany':
+					funnyephiphinya(doof);	
 				default:
 					startCountdown();
 			}
@@ -861,6 +877,8 @@ class PlayState extends MusicBeatState
 			{
 				case 'your demise':
 					DarkStart(doof);
+				case 'epiphany':
+					funnyephiphinya(doof);
 				default:
 					startCountdown();
 			}
@@ -878,6 +896,13 @@ class PlayState extends MusicBeatState
 			add(whiteflash);
 			add(blackScreen);
 			remove(gf);
+			startCountdown();
+		}
+
+	function funnyephiphinya(?dialogueBox:DialogueBox):Void
+		{
+			remove(gf);
+			remove(boyfriend);
 			startCountdown();
 		}
 		
@@ -2531,22 +2556,20 @@ class PlayState extends MusicBeatState
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
 
-					switch (FlxG.save.data.monikabeaten)
-					{
-						case true:
-							{
-								FlxG.switchState(new StoryMenuState());
-							}
-						case false:
-							{
-								if (SONG.song.toLowerCase() == 'your demise') {
-									FlxG.switchState(new OutdatedSubState());
-									FlxG.save.data.monikabeaten = true;
-								} else {
-									FlxG.switchState(new StoryMenuState());
-								}
-							}
-					}
+					switch (PlayState.storyWeek)
+						{
+							case 1:
+							FlxG.save.data.natbeaten = true;
+							case 2:
+							FlxG.save.data.saybeaten = true;
+						}
+					
+					if (FlxG.save.data.natbeaten == true && FlxG.save.data.saybeaten == true)
+						{
+							FlxG.save.data.yuriunlocked = true;
+						}
+
+					FlxG.switchState(new StoryMenuState());
 
 					#if windows
 					if (luaModchart != null)

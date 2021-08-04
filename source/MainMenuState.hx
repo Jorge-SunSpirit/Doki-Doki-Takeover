@@ -6,6 +6,7 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxBackdrop;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -42,6 +43,8 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = ['story mode', 'freeplay'];
 	#end
 
+	public static var firstStart:Bool = true;
+	public static var finishedFunnyMove:Bool = false;
 	var newGaming:FlxText;
 	var newGaming2:FlxText;
 	var newInput:Bool = true;
@@ -91,10 +94,20 @@ class MainMenuState extends MusicBeatState
 		backdrop.velocity.set(-40, -40);
 
 
-		logo = new FlxSprite(-700, -359).loadGraphic(Paths.image('Credits_LeftSide'));
+		//-700, =359
+		logo = new FlxSprite(-1000, -359).loadGraphic(Paths.image('Credits_LeftSide'));
 		add(logo);
+		if (firstStart)
+			FlxTween.tween(logo,{x: -700},1 ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+				{ 
+					finishedFunnyMove = true; 
+					changeItem();
+				}});
+		else
+			logo.x = -700;
 
-		logoBl = new FlxSprite(-600, -400);
+		//-600, -400
+		logoBl = new FlxSprite(-900, -400);
 		logoBl.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
 		logoBl.antialiasing = true;
 		logoBl.scale.set(0.5, 0.5);
@@ -102,6 +115,14 @@ class MainMenuState extends MusicBeatState
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		add(logoBl);
+		if (firstStart)
+			FlxTween.tween(logoBl,{x: -600},1 ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+				{ 
+					finishedFunnyMove = true; 
+					changeItem();
+				}});
+		else
+			logoBl.x = -600;
 
 		fumo = new FlxSprite(-100, -250).loadGraphic(Paths.image('Fumo'));
 		fumo.scale.set(1, 1);
@@ -114,7 +135,7 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
-			var menuItem:FlxSprite = new FlxSprite(40, 390  + (i * 50));
+			var menuItem:FlxSprite = new FlxSprite(-350, 390  + (i * 50));
 			menuItem.frames = tex;
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
@@ -125,6 +146,14 @@ class MainMenuState extends MusicBeatState
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
+			if (firstStart)
+				FlxTween.tween(menuItem,{x: 50},1 + (i * 0.2) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+					{ 
+						finishedFunnyMove = true; 
+						changeItem();
+					}});
+			else
+				menuItem.x = 50;
 		}
 
 
@@ -172,10 +201,26 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
-			if (controls.BACK)
-			{
-				FlxG.switchState(new MainMenuState());
-			}
+			if (FlxG.keys.justPressed.O)
+				{
+					#if debug
+					trace('hello');
+					FlxG.save.data.saybeaten = true;
+					FlxG.save.data.natbeaten = true;
+					FlxG.save.data.introwatched = true;
+					FlxG.save.data.yuriunlocked = true;
+					#end
+				}
+			if (FlxG.keys.justPressed.P)
+				{
+					#if debug
+					trace('not beaten :(');
+					FlxG.save.data.saybeaten = false;
+					FlxG.save.data.natbeaten = false;
+					FlxG.save.data.introwatched = false;
+					FlxG.save.data.yuriunlocked = false;
+					#end
+				}
 
 			if (controls.ACCEPT)
 				{

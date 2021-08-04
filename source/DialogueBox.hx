@@ -38,18 +38,6 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		super();
 
-		switch (PlayState.SONG.song.toLowerCase())
-		{
-			case 'senpai':
-				FlxG.sound.playMusic(Paths.music('Lunchbox'), 0);
-				FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'high school conflict':
-				FlxG.sound.playMusic(Paths.music('Lunchbox'), 0);
-				FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'thorns':
-				FlxG.sound.playMusic(Paths.music('LunchboxScary'), 0);
-				FlxG.sound.music.fadeIn(1, 0, 0.8);
-		}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
 		bgFade.scrollFactor.set();
@@ -66,83 +54,90 @@ class DialogueBox extends FlxSpriteGroup
 		box = new FlxSprite(-20, 45);
 		
 		var hasDialog = false;
-		switch (PlayState.SONG.song.toLowerCase())
-		{
-			case 'senpai':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-pixel');
-				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
-				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
-			case 'high school conflict':
-					hasDialog = true;
-					box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-monika');
-					box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
-					box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
-			case 'bara no yume':
-					hasDialog = true;
-					FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
-					box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-monika');
-					box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
-					box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
-			case 'your demise':
-				    hasDialog = true;
-					box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-monika');
-					box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
-					box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
-			case 'roses':
-				hasDialog = true;
-				FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
-
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-senpaiMad');
-				box.animation.addByPrefix('normalOpen', 'SENPAI ANGRY IMPACT SPEECH', 24, false);
-				box.animation.addByIndices('normal', 'SENPAI ANGRY IMPACT SPEECH', [4], "", 24);
-
-			case 'thorns':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-evil');
-				box.animation.addByPrefix('normalOpen', 'Spirit Textbox spawn', 24, false);
-				box.animation.addByIndices('normal', 'Spirit Textbox spawn', [11], "", 24);
-
-				var face:FlxSprite = new FlxSprite(320, 170).loadGraphic(Paths.image('weeb/spiritFaceForward'));
-				face.setGraphicSize(Std.int(face.width * 6));
-				add(face);
-		}
+		switch (PlayState.SONG.noteStyle)
+			{
+				case 'pixel':
+					{
+						hasDialog = true;
+						box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-monika');
+						box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
+						box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
+					}
+				case 'normal':
+					{
+						hasDialog = true;
+						box.frames = Paths.getSparrowAtlas('dialogue/Text_Boxes');
+						box.animation.addByPrefix('normalOpen', 'Doki Dialogue Blank', 24, false);
+						box.animation.addByIndices('normal', 'Doki Dialogue Blank', [9], "", 24);
+						box.animation.addByPrefix('bf', 'Doki Dialogue BF', 24, false);
+						box.animation.addByPrefix('monika', 'Doki Dialogue Moni', 24, false);
+						box.animation.addByPrefix('natsuki', 'Doki Dialogue Natsu', 24, false);
+						box.animation.addByPrefix('sayori', 'Doki Dialogue Sayo', 24, false);
+						box.animation.addByPrefix('yuri', 'Doki Dialogue Yuri', 24, false);
+					}
+			}
 
 		this.dialogueList = dialogueList;
 		
 		if (!hasDialog)
 			return;
 
-		if (PlayState.SONG.song.toLowerCase()=='high school conflict' || PlayState.SONG.song.toLowerCase()=='bara no yume' || PlayState.SONG.song.toLowerCase()=='your demise')
+		switch (PlayState.SONG.noteStyle)
 			{
-		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
-		portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
+				case 'pixel':
+					{
+								portraitLeft = new FlxSprite(-20, 40);
+								portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
+								portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+								portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+								portraitLeft.updateHitbox();
+								portraitLeft.scrollFactor.set();
+								add(portraitLeft);
+								portraitLeft.visible = false;
+								portraitRight = new FlxSprite(0, 40);
+								portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
+								portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+								portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
+								portraitRight.updateHitbox();
+								portraitRight.scrollFactor.set();
+								add(portraitRight);
+								portraitRight.visible = false;
+					}
+				case 'normal':
+					{
+								portraitLeft = new FlxSprite(-20, 40);
+								portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
+								portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+								portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+								portraitLeft.updateHitbox();
+								portraitLeft.scrollFactor.set();
+								add(portraitLeft);
+								portraitLeft.visible = false;
+								portraitRight = new FlxSprite(0, 40);
+								portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
+								portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+								portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
+								portraitRight.updateHitbox();
+								portraitRight.scrollFactor.set();
+								add(portraitRight);
+								portraitRight.visible = false;
+					}
 			}
-		portraitRight = new FlxSprite(0, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
-		portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitRight.visible = false;
 		
 		box.animation.play('normalOpen');
-		box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
+		switch (PlayState.SONG.noteStyle)
+			{
+				case 'pixel':
+					box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
+				case 'normal':
+					box.y += 400;
+					box.setGraphicSize(Std.int(box.width * 1.2));
+			}
 		box.updateHitbox();
 		add(box);
 
 		box.screenCenter(X);
 		portraitLeft.screenCenter(X);
-			
-		handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('weeb/pixelUI/hand_textbox'));
-		add(handSelect);
 
 
 		if (!talkingRight)
@@ -150,20 +145,34 @@ class DialogueBox extends FlxSpriteGroup
 			// box.flipX = true;
 		}
 
-		dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
-		dropText.font = 'Pixel Arial 11 Bold';
-		dropText.color = 0xFFD89494;
-		add(dropText);
+		switch (PlayState.SONG.noteStyle)
+			{
+				case 'pixel':
+					{
+						dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
+						dropText.font = 'Pixel Arial 11 Bold';
+						dropText.color = 0xFFD89494;
+						add(dropText);
 
-		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
-		swagDialogue.font = 'Pixel Arial 11 Bold';
-		swagDialogue.color = 0xFF3F2021;
-		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
-		add(swagDialogue);
+						swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
+						swagDialogue.font = 'Pixel Arial 11 Bold';
+						swagDialogue.color = 0xFF3F2021;
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+						add(swagDialogue);
+					}
+				case 'normal':
+					{
+						swagDialogue = new FlxTypeText(220, 520, Std.int(FlxG.width * 0.67), "", 24);
+						swagDialogue.font = 'Aller';
+						swagDialogue.color = 0xFFFFFFFF;
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+						swagDialogue.setBorderStyle(OUTLINE, FlxColor.BLACK, 1, 1);
+						add(swagDialogue);
+					}
+			}
+		
 
 		dialogue = new Alphabet(0, 80, "", false, true);
-		// dialogue.x = 90;
-		// add(dialogue);
 	}
 
 	var dialogueOpened:Bool = false;
@@ -171,17 +180,11 @@ class DialogueBox extends FlxSpriteGroup
 
 	override function update(elapsed:Float)
 	{
-		// HARD CODING CUZ IM STUPDI
-		if (PlayState.SONG.song.toLowerCase() == 'roses')
-			portraitLeft.visible = false;
-		if (PlayState.SONG.song.toLowerCase() == 'thorns')
-		{
-			portraitLeft.color = FlxColor.BLACK;
-			swagDialogue.color = FlxColor.WHITE;
-			dropText.color = FlxColor.BLACK;
-		}
-
-		dropText.text = swagDialogue.text;
+		switch (PlayState.SONG.noteStyle)
+			{
+				case 'pixel':
+				dropText.text = swagDialogue.text;
+			}
 
 		if (box.animation.curAnim != null)
 		{
@@ -210,9 +213,6 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns')
-						FlxG.sound.music.fadeOut(2.2, 0);
-
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
 						box.alpha -= 1 / 5;
@@ -220,7 +220,11 @@ class DialogueBox extends FlxSpriteGroup
 						portraitLeft.visible = false;
 						portraitRight.visible = false;
 						swagDialogue.alpha -= 1 / 5;
-						dropText.alpha = swagDialogue.alpha;
+						switch (PlayState.SONG.noteStyle)
+							{
+								case 'pixel':
+									dropText.alpha = swagDialogue.alpha;
+							}	
 					}, 5);
 
 					new FlxTimer().start(1.2, function(tmr:FlxTimer)
@@ -248,160 +252,194 @@ class DialogueBox extends FlxSpriteGroup
 
 		swagDialogue.resetText(dialogueList[0]);
 		swagDialogue.start(0.04, true);
-
-		switch (curCharacter)
-		{
-			case 'monika':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
-					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitLeft.animation.play('enter');
-				}
-			case 'monikahappy':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monikahappy','monika');
-					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitLeft.animation.play('enter');
-				}
-			case 'monikagasp':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
-				{
-					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikagasp','monika');
-					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitRight.animation.play('enter');
-				}
-				case 'monikagaspleft':
-					portraitRight.visible = false;
-					portraitLeft.visible = false;
-					if (!portraitRight.visible)
+		switch (PlayState.SONG.noteStyle)
+			{
+				case 'pixel':
 					{
-						portraitRight.visible = true;
-						portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikagaspleft','monika');
-						portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-						portraitRight.animation.play('enter');
+						switch (curCharacter)
+							{
+								case 'monika':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitLeft.visible)
+									{
+										portraitLeft.visible = true;
+										portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
+										portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitLeft.animation.play('enter');
+									}
+								case 'monikahappy':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitLeft.visible)
+									{
+										portraitLeft.visible = true;
+										portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monikahappy','monika');
+										portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitLeft.animation.play('enter');
+									}
+								case 'monikagasp':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitRight.visible)
+									{
+										portraitRight.visible = true;
+										portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikagasp','monika');
+										portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitRight.animation.play('enter');
+									}
+									case 'monikagaspleft':
+										portraitRight.visible = false;
+										portraitLeft.visible = false;
+										if (!portraitRight.visible)
+										{
+											portraitRight.visible = true;
+											portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikagaspleft','monika');
+											portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+											portraitRight.animation.play('enter');
+										}
+									case 'monikahmm':
+										portraitRight.visible = false;
+										portraitLeft.visible = false;
+										if (!portraitRight.visible)
+											{
+												portraitRight.visible = true;
+												portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikahmm','monika');
+												portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+												portraitRight.animation.play('enter');
+											}
+									case 'monikauhoh':
+										portraitRight.visible = false;
+										portraitLeft.visible = false;
+										if (!portraitRight.visible)
+											{
+												portraitRight.visible = true;
+												portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikauhohright','monika');
+												portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+												portraitRight.animation.play('enter');
+											}
+								case 'monikauhohleft':
+										portraitRight.visible = false;
+										portraitLeft.visible = false;
+										if (!portraitRight.visible)
+											{
+												portraitRight.visible = true;
+												portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikauhohleft','monika');
+												portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+												portraitRight.animation.play('enter');
+											}
+								case 'monikasad':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitRight.visible)
+									{
+										portraitRight.visible = true;
+										portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikasad','monika');
+										portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitRight.animation.play('enter');
+									}
+								case 'bf':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitRight.visible)
+									{
+										portraitRight.visible = true;
+										portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
+										portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitRight.animation.play('enter');
+									}
+								case 'bfwhat':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitRight.visible)
+									{
+										portraitRight.visible = true;
+										portraitRight.frames = Paths.getSparrowAtlas('dialogue/bfwhat','monika');
+										portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitRight.animation.play('enter');
+									}
+								case 'bfangry':
+										portraitRight.visible = false;
+										portraitLeft.visible = false;
+										if (!portraitRight.visible)
+										{
+											portraitRight.visible = true;
+											portraitRight.frames = Paths.getSparrowAtlas('dialogue/bfangry','monika');
+											portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+											portraitRight.animation.play('enter');
+										}
+								case 'senpai':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitLeft.visible)
+									{
+										portraitLeft.visible = true;
+										portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpai','monika');
+										portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitLeft.animation.play('enter');
+									}
+								case 'senpaihappy':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitLeft.visible)
+									{
+										portraitLeft.visible = true;
+										portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpaihappy','monika');
+										portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitLeft.animation.play('enter');
+									}
+								case 'senpaihmm':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitLeft.visible)
+									{
+										portraitLeft.visible = true;
+										portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpaihmm','monika');
+										portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitLeft.animation.play('enter');
+									}
+								case 'whodis':
+									portraitRight.visible = false;
+									portraitLeft.visible = false;
+									if (!portraitLeft.visible)
+									{
+										portraitLeft.visible = true;
+										portraitLeft.frames = Paths.getSparrowAtlas('dialogue/whodis','monika');
+										portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+										portraitLeft.animation.play('enter');
+									}
+							}
 					}
-				case 'monikahmm':
-					portraitRight.visible = false;
-					portraitLeft.visible = false;
-					if (!portraitRight.visible)
-						{
-							portraitRight.visible = true;
-							portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikahmm','monika');
-							portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-							portraitRight.animation.play('enter');
-						}
-				case 'monikauhoh':
-					portraitRight.visible = false;
-					portraitLeft.visible = false;
-					if (!portraitRight.visible)
-						{
-							portraitRight.visible = true;
-							portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikauhohright','monika');
-							portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-							portraitRight.animation.play('enter');
-						}
-			case 'monikauhohleft':
-					portraitRight.visible = false;
-					portraitLeft.visible = false;
-					if (!portraitRight.visible)
-						{
-							portraitRight.visible = true;
-							portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikauhohleft','monika');
-							portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-							portraitRight.animation.play('enter');
-						}
-			case 'monikasad':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
-				{
-					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('dialogue/monikasad','monika');
-					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitRight.animation.play('enter');
-				}
-			case 'bf':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
-				{
-					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
-					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitRight.animation.play('enter');
-				}
-			case 'bfwhat':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
-				{
-					portraitRight.visible = true;
-					portraitRight.frames = Paths.getSparrowAtlas('dialogue/bfwhat','monika');
-					portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitRight.animation.play('enter');
-				}
-			case 'bfangry':
-					portraitRight.visible = false;
-					portraitLeft.visible = false;
-					if (!portraitRight.visible)
+				case 'normal':
 					{
-						portraitRight.visible = true;
-						portraitRight.frames = Paths.getSparrowAtlas('dialogue/bfangry','monika');
-						portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-						portraitRight.animation.play('enter');
+						switch (curCharacter)
+						{
+							case 'monika':
+								portraitRight.visible = false;
+								portraitLeft.visible = false;
+								box.animation.play('monika');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
+									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+									portraitLeft.animation.play('enter');
+								}
+							case 'bf':
+								portraitRight.visible = false;
+								portraitLeft.visible = false;
+								box.animation.play('bf');
+								if (!portraitRight.visible)
+								{
+									portraitRight.visible = true;
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
+									portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+									portraitRight.animation.play('enter');
+								}
+						}
 					}
-			case 'senpai':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpai','monika');
-					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitLeft.animation.play('enter');
-				}
-			case 'senpaihappy':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpaihappy','monika');
-					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitLeft.animation.play('enter');
-				}
-			case 'senpaihmm':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/senpaihmm','monika');
-					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitLeft.animation.play('enter');
-				}
-			case 'whodis':
-				portraitRight.visible = false;
-				portraitLeft.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.frames = Paths.getSparrowAtlas('dialogue/whodis','monika');
-					portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-					portraitLeft.animation.play('enter');
-				}
-		}
+			}
+					
 	}
 
 	function cleanDialog():Void
