@@ -425,6 +425,39 @@ class DialogueBox extends FlxSpriteGroup
 									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 									portraitLeft.animation.play('enter');
 								}
+							case 'natsuki':
+								portraitRight.visible = false;
+								portraitLeft.visible = false;
+								box.animation.play('natsuki');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
+									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+									portraitLeft.animation.play('enter');
+								}
+							case 'sayori':
+								portraitRight.visible = false;
+								portraitLeft.visible = false;
+								box.animation.play('sayori');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
+									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+									portraitLeft.animation.play('enter');
+								}
+							case 'yuri':
+								portraitRight.visible = false;
+								portraitLeft.visible = false;
+								box.animation.play('yuri');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
+									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+									portraitLeft.animation.play('enter');
+								}
 							case 'bf':
 								portraitRight.visible = false;
 								portraitLeft.visible = false;
