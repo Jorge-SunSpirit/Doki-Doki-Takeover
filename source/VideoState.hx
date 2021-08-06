@@ -64,12 +64,12 @@ class VideoState extends MusicBeatState
 		#end
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
-		var html5Text:String = "You Are Not Using HTML5...\nThe Video Didnt Load!";
+		var html5Text:String = "";
 		if (isHTML)
 		{
-			html5Text = "You Are Using HTML5!";
+			html5Text = "";
 		}
-		defaultText = "If Your On HTML5\nTap Anything...\nThe Bottom Text Indicates If You\nAre Using HTML5...\n\n" + html5Text;
+		defaultText = "" + html5Text;
 		txt = new FlxText(0, 0, FlxG.width,
 			defaultText,
 			32);

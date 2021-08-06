@@ -41,7 +41,7 @@ class HealthIcon extends FlxSprite
 			case 'bf-pixel' | 'bf-pixelangry' | 'senpai' | 'senpai-angry' | 'spirit' | 'gf-pixel' | 'monika':
 				antialiasing = false;
 		}
-
+		
 		scrollFactor.set();
 	}
 

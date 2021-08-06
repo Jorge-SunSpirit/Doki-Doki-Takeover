@@ -503,30 +503,26 @@ class PlayState extends MusicBeatState
 				}
 			case 'dokiclubroom':
 				{
-						defaultCamZoom = 0.9;
-						curStage = 'dokiclubroom';
-						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
-						bg.antialiasing = true;
-						bg.scrollFactor.set(0.9, 0.9);
-						bg.active = false;
-						add(bg);
+					var posX = -700;
+					var posY = -520;	
+
+					defaultCamZoom = 0.75;
+					curStage = 'dokiclubroom';
+
+					var closet:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('clubroom/DDLCfarbg','doki'));
+					closet.setGraphicSize(Std.int(closet.width * 1.6));
+					closet.updateHitbox();
+					closet.antialiasing = true;
+					closet.scrollFactor.set(0.9, 0.9);
+					add(closet);
 	
-						var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
-						stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
-						stageFront.updateHitbox();
-						stageFront.antialiasing = true;
-						stageFront.scrollFactor.set(0.9, 0.9);
-						stageFront.active = false;
-						add(stageFront);
-	
-						var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
-						stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-						stageCurtains.updateHitbox();
-						stageCurtains.antialiasing = true;
-						stageCurtains.scrollFactor.set(1.3, 1.3);
-						stageCurtains.active = false;
-	
-						add(stageCurtains);
+					var clubroom:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('clubroom/DDLCbg','doki'));
+					clubroom.setGraphicSize(Std.int(clubroom.width * 1.6));
+					clubroom.updateHitbox();
+					clubroom.antialiasing = true;
+					clubroom.scrollFactor.set(1, 0.9);
+					add(clubroom);
+
 				}
 			default:
 			{
@@ -618,10 +614,10 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'natsuki':
 				camPos.x += 400;
-				dad.y += 185;
+				dad.y += 175;
 			case 'sayori':
 				camPos.x += 400;
-				dad.y += 120;
+				dad.y += 110;
 			}
 
 
@@ -2132,6 +2128,8 @@ class PlayState extends MusicBeatState
 						}
 					case 'schoolEvil':
 						camFollow.x = boyfriend.getMidpoint().x - 200;
+						camFollow.y = boyfriend.getMidpoint().y - 200;
+					case 'dokiclubroom':
 						camFollow.y = boyfriend.getMidpoint().y - 200;
 				}
 			}
