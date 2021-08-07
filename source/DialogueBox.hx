@@ -7,6 +7,8 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.FlxKeyManager;
 import flixel.text.FlxText;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
@@ -17,6 +19,8 @@ class DialogueBox extends FlxSpriteGroup
 	var box:FlxSprite;
 
 	var curCharacter:String = '';
+
+	var expression:String = '';
 
 	var dialogue:Alphabet;
 	var dialogueList:Array<String> = [];
@@ -66,7 +70,7 @@ class DialogueBox extends FlxSpriteGroup
 				case 'normal':
 					{
 						hasDialog = true;
-						box.frames = Paths.getSparrowAtlas('dialogue/Text_Boxes');
+						box.frames = Paths.getSparrowAtlas('dialogue/Text_Boxes','doki');
 						box.animation.addByPrefix('normalOpen', 'Doki Dialogue Blank', 24, false);
 						box.animation.addByIndices('normal', 'Doki Dialogue Blank', [9], "", 24);
 						box.animation.addByPrefix('bf', 'Doki Dialogue BF', 24, false);
@@ -105,18 +109,21 @@ class DialogueBox extends FlxSpriteGroup
 					}
 				case 'normal':
 					{
-								portraitLeft = new FlxSprite(-20, 40);
-								portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
-								portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-								portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+								var posY = 50;
+
+								portraitLeft = new FlxSprite(200, posY);
+								portraitLeft.frames = Paths.getSparrowAtlas('dialogue/sayo_dialogue','doki');
+								portraitLeft.animation.addByPrefix('sayo', 'sayo', 24, false);
+								portraitLeft.setGraphicSize(Std.int(portraitLeft.width * 1));
 								portraitLeft.updateHitbox();
 								portraitLeft.scrollFactor.set();
 								add(portraitLeft);
 								portraitLeft.visible = false;
-								portraitRight = new FlxSprite(0, 40);
-								portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
-								portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-								portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
+
+								portraitRight = new FlxSprite(600, posY);
+								portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf_dialogue','doki');
+								portraitRight.animation.addByPrefix('bf', 'bf', 24, false);
+								portraitRight.setGraphicSize(Std.int(portraitRight.width * 1));
 								portraitRight.updateHitbox();
 								portraitRight.scrollFactor.set();
 								add(portraitRight);
@@ -137,7 +144,13 @@ class DialogueBox extends FlxSpriteGroup
 		add(box);
 
 		box.screenCenter(X);
-		portraitLeft.screenCenter(X);
+		switch (PlayState.SONG.noteStyle)
+			{
+				case 'default':
+
+				case 'pixel':
+					portraitLeft.screenCenter(X);
+			}
 
 
 		if (!talkingRight)
@@ -203,42 +216,42 @@ class DialogueBox extends FlxSpriteGroup
 
 		if (FlxG.keys.justPressed.ANY  && dialogueStarted == true)
 		{
-			remove(dialogue);
-				
-			FlxG.sound.play(Paths.sound('clickText'), 0.8);
+					remove(dialogue);
+						
+					FlxG.sound.play(Paths.sound('clickText'), 0.8);
 
-			if (dialogueList[1] == null && dialogueList[0] != null)
-			{
-				if (!isEnding)
-				{
-					isEnding = true;
-
-					new FlxTimer().start(0.2, function(tmr:FlxTimer)
+					if (dialogueList[1] == null && dialogueList[0] != null)
 					{
-						box.alpha -= 1 / 5;
-						bgFade.alpha -= 1 / 5 * 0.7;
-						portraitLeft.visible = false;
-						portraitRight.visible = false;
-						swagDialogue.alpha -= 1 / 5;
-						switch (PlayState.SONG.noteStyle)
+						if (!isEnding)
+						{
+							isEnding = true;
+
+							new FlxTimer().start(0.2, function(tmr:FlxTimer)
 							{
-								case 'pixel':
-									dropText.alpha = swagDialogue.alpha;
-							}	
-					}, 5);
+								box.alpha -= 1 / 5;
+								bgFade.alpha -= 1 / 5 * 0.7;
+								portraitLeft.visible = false;
+								portraitRight.visible = false;
+								swagDialogue.alpha -= 1 / 5;
+								switch (PlayState.SONG.noteStyle)
+									{
+										case 'pixel':
+											dropText.alpha = swagDialogue.alpha;
+									}	
+							}, 5);
 
-					new FlxTimer().start(1.2, function(tmr:FlxTimer)
+							new FlxTimer().start(1.2, function(tmr:FlxTimer)
+							{
+								finishThing();
+								kill();
+							});
+						}
+					}
+					else
 					{
-						finishThing();
-						kill();
-					});
-				}
-			}
-			else
-			{
-				dialogueList.remove(dialogueList[0]);
-				startDialogue();
-			}
+						dialogueList.remove(dialogueList[0]);
+						startDialogue();
+					}
 		}
 		
 		super.update(elapsed);
@@ -414,61 +427,145 @@ class DialogueBox extends FlxSpriteGroup
 					{
 						switch (curCharacter)
 						{
-							case 'monika':
-								portraitRight.visible = false;
-								portraitLeft.visible = false;
-								box.animation.play('monika');
-								if (!portraitLeft.visible)
-								{
-									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
-									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-									portraitLeft.animation.play('enter');
-								}
+							//Natsuki animations
 							case 'natsuki':
-								portraitRight.visible = false;
+								//very much placeholder and I hate it
 								portraitLeft.visible = false;
 								box.animation.play('natsuki');
 								if (!portraitLeft.visible)
 								{
 									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
-									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-									portraitLeft.animation.play('enter');
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/nat_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'nat_hmmph', 24, false);
+									portraitLeft.animation.play('play');
 								}
+
+							case 'natsuki_hmmph':
+								portraitLeft.visible = false;
+								box.animation.play('natsuki');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/nat_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'nat_hmmph', 24, false);
+									portraitLeft.animation.play('play');
+								}
+							
+							//Sayori animations
 							case 'sayori':
-								portraitRight.visible = false;
 								portraitLeft.visible = false;
 								box.animation.play('sayori');
 								if (!portraitLeft.visible)
 								{
 									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
-									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-									portraitLeft.animation.play('enter');
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/sayo_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'sayoneutral', 24, false);
+									portraitLeft.animation.play('play');
 								}
-							case 'yuri':
-								portraitRight.visible = false;
+							case 'sayori_ehh':
 								portraitLeft.visible = false;
-								box.animation.play('yuri');
+								box.animation.play('sayori');
 								if (!portraitLeft.visible)
 								{
 									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/monika','monika');
-									portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-									portraitLeft.animation.play('enter');
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/sayo_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'sayo_ehh', 24, false);
+									portraitLeft.animation.play('play');
 								}
+
+							//Boyfriend animations
 							case 'bf':
 								portraitRight.visible = false;
-								portraitLeft.visible = false;
 								box.animation.play('bf');
 								if (!portraitRight.visible)
 								{
 									portraitRight.visible = true;
-									portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf','monika');
-									portraitRight.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
-									portraitRight.animation.play('enter');
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf_dialogue','doki');
+									portraitRight.animation.addByPrefix('play', 'bfneutral', 24, false);
+									portraitRight.animation.play('play');
 								}
+							
+							case 'bfbeep':
+								portraitRight.visible = false;
+								box.animation.play('bf');
+								if (!portraitRight.visible)
+								{
+									portraitRight.visible = true;
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf_dialogue','doki');
+									portraitRight.animation.addByPrefix('play', 'bfbeep', 24, false);
+									portraitRight.animation.play('play');
+								}
+							
+							//extras
+							case 'hideright':
+								portraitRight.visible = false;
+								if (dialogueList[1] == null && dialogueList[0] != null)
+									{
+										if (!isEnding)
+										{
+											isEnding = true;
+						
+											new FlxTimer().start(0.2, function(tmr:FlxTimer)
+											{
+												box.alpha -= 1 / 5;
+												bgFade.alpha -= 1 / 5 * 0.7;
+												portraitLeft.visible = false;
+												portraitRight.visible = false;
+												swagDialogue.alpha -= 1 / 5;
+												switch (PlayState.SONG.noteStyle)
+													{
+														case 'pixel':
+															dropText.alpha = swagDialogue.alpha;
+													}	
+											}, 5);
+						
+											new FlxTimer().start(1.2, function(tmr:FlxTimer)
+											{
+												finishThing();
+												kill();
+											});
+										}
+									}
+									else
+									{
+										dialogueList.remove(dialogueList[0]);
+										startDialogue();
+									}
+
+							case 'hideleft':
+								portraitLeft.visible = false;
+								if (dialogueList[1] == null && dialogueList[0] != null)
+									{
+										if (!isEnding)
+										{
+											isEnding = true;
+						
+											new FlxTimer().start(0.2, function(tmr:FlxTimer)
+											{
+												box.alpha -= 1 / 5;
+												bgFade.alpha -= 1 / 5 * 0.7;
+												portraitLeft.visible = false;
+												portraitRight.visible = false;
+												swagDialogue.alpha -= 1 / 5;
+												switch (PlayState.SONG.noteStyle)
+													{
+														case 'pixel':
+															dropText.alpha = swagDialogue.alpha;
+													}	
+											}, 5);
+						
+											new FlxTimer().start(1.2, function(tmr:FlxTimer)
+											{
+												finishThing();
+												kill();
+											});
+										}
+									}
+									else
+									{
+										dialogueList.remove(dialogueList[0]);
+										startDialogue();
+									}
 						}
 					}
 			}
@@ -480,5 +577,6 @@ class DialogueBox extends FlxSpriteGroup
 		var splitName:Array<String> = dialogueList[0].split(":");
 		curCharacter = splitName[1];
 		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
+
 	}
 }
