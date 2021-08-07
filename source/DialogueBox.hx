@@ -114,7 +114,7 @@ class DialogueBox extends FlxSpriteGroup
 								portraitLeft = new FlxSprite(200, posY);
 								portraitLeft.frames = Paths.getSparrowAtlas('dialogue/sayo_dialogue','doki');
 								portraitLeft.animation.addByPrefix('sayo', 'sayo', 24, false);
-								portraitLeft.setGraphicSize(Std.int(portraitLeft.width * 1));
+								portraitLeft.setGraphicSize(Std.int(portraitLeft.width * .9));
 								portraitLeft.updateHitbox();
 								portraitLeft.scrollFactor.set();
 								add(portraitLeft);
@@ -123,7 +123,7 @@ class DialogueBox extends FlxSpriteGroup
 								portraitRight = new FlxSprite(600, posY);
 								portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf_dialogue','doki');
 								portraitRight.animation.addByPrefix('bf', 'bf', 24, false);
-								portraitRight.setGraphicSize(Std.int(portraitRight.width * 1));
+								portraitRight.setGraphicSize(Std.int(portraitRight.width * .9));
 								portraitRight.updateHitbox();
 								portraitRight.scrollFactor.set();
 								add(portraitRight);

@@ -1,9 +1,9 @@
-:bf:Howdy
+:sayori_ehh:"Why are you like this."
+:bf:...
+:bfbeep:"BEEP"
+:sayori:"Why can't you speak like a normal person"
 :hideright:
-:bfbeep:test
-:sayori:test
+:natsuki:"I know this is a test dialogue but like... cool.
 :hideleft:
-:sayori_ehh:test
-:natsuki_hmmph:test
-:hideleft:
-:hideright:
+:bf:"Forehead"
+
