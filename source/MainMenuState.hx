@@ -205,20 +205,22 @@ class MainMenuState extends MusicBeatState
 				{
 					#if debug
 					trace('hello');
-					FlxG.save.data.saybeaten = true;
+					FlxG.save.data.monibeaten = true;
+					FlxG.save.data.sayobeaten = true;
 					FlxG.save.data.natbeaten = true;
-					FlxG.save.data.introwatched = true;
-					FlxG.save.data.yuriunlocked = true;
+					FlxG.save.data.yuribeaten = true;
+					FlxG.save.data.extrabeaten = true;
 					#end
 				}
 			if (FlxG.keys.justPressed.P)
 				{
 					#if debug
 					trace('not beaten :(');
-					FlxG.save.data.saybeaten = false;
+					FlxG.save.data.monibeaten = false;
+					FlxG.save.data.sayobeaten = false;
 					FlxG.save.data.natbeaten = false;
-					FlxG.save.data.introwatched = false;
-					FlxG.save.data.yuriunlocked = false;
+					FlxG.save.data.yuribeaten = false;
+					FlxG.save.data.extrabeaten = false;
 					#end
 				}
 

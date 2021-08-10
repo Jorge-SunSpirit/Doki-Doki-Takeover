@@ -53,9 +53,7 @@ class DokiStoryState extends MusicBeatState
 	];
 
 	var txtWeekTitle:FlxText;
-
 	var txtTracklist:FlxText;
-	
 	var grpWeekText:FlxTypedGroup<MenuItem>;
 
 	var curSelected:Int = 0;
@@ -73,6 +71,16 @@ class DokiStoryState extends MusicBeatState
 	var logo:FlxSprite;
 	var songlist:FlxSprite;
 	var camFollow:FlxObject;
+
+
+
+	var story_moni:FlxSprite;
+	var story_sayo:FlxSprite;
+	var story_nat:FlxSprite;
+	var story_yuri:FlxSprite;
+	var story_secret:FlxSprite;
+	var story_secret2:FlxSprite;
+	var story_cursor:FlxSprite;
 
 	var backdrop:FlxBackdrop;
 	var logoBl:FlxSprite;
@@ -157,11 +165,83 @@ class DokiStoryState extends MusicBeatState
 		diff.visible = false;
 		add(diff);
 
+		/*var story_moni:FlxSprite;
+		var story_sayo:FlxSprite;
+		var story_nat:FlxSprite;
+		var story_yuri:FlxSprite;
+		var story_secret:FlxSprite;
+		var story_secret2:FlxSprite;*/
+
+		//second layer Y is 90
+
+		story_moni = new FlxSprite(-240, -160);
+		story_moni.frames = Paths.getSparrowAtlas('dokistory/moni_story');
+		story_moni.antialiasing = true;
+		story_moni.scale.set(1, 1);
+		story_moni.animation.addByPrefix('idle', 'Moni_idle', 24);
+		story_moni.animation.addByPrefix('selected', 'Moni_selected', 24);
+		story_moni.animation.play('idle');
+		story_moni.updateHitbox();
+		add(story_moni);
+
+		story_sayo = new FlxSprite(40, -160);
+		story_sayo.frames = Paths.getSparrowAtlas('dokistory/sayo_story');
+		story_sayo.antialiasing = true;
+		story_sayo.scale.set(1, 1);
+		story_sayo.animation.addByPrefix('idle', 'Sayo_idle', 24);
+		story_sayo.animation.addByPrefix('selected', 'Sayo_selected', 24);
+		story_sayo.animation.addByPrefix('locked', 'Sayo_Locked', 24);
+		story_sayo.animation.play('locked');
+		story_sayo.updateHitbox();
+		add(story_sayo);
+
+		story_nat = new FlxSprite(320, -160);
+		story_nat.frames = Paths.getSparrowAtlas('dokistory/nat_story');
+		story_nat.antialiasing = true;
+		story_nat.scale.set(1, 1);
+		story_nat.animation.addByPrefix('idle', 'Nat_idle', 24);
+		story_nat.animation.addByPrefix('selected', 'Nat_selected', 24);
+		story_nat.animation.addByPrefix('locked', 'Nat_Locked', 24);
+		story_nat.animation.play('locked');
+		story_nat.updateHitbox();
+		add(story_nat);
 
 
-		
+		story_yuri = new FlxSprite(-240, 40);
+		story_yuri.frames = Paths.getSparrowAtlas('dokistory/yuri_story');
+		story_yuri.antialiasing = true;
+		story_yuri.scale.set(1, 1);
+		story_yuri.animation.addByPrefix('idle', 'Yuri_idle', 24);
+		story_yuri.animation.addByPrefix('selected', 'Yuri_idle', 24);
+		story_yuri.animation.addByPrefix('locked', 'Yuri_Locked', 24);
+		story_yuri.animation.play('locked');
+		story_yuri.updateHitbox();
+		add(story_yuri);
 
-		
+		story_secret = new FlxSprite(40, 40);
+		story_secret.frames = Paths.getSparrowAtlas('dokistory/secret_story');
+		story_secret.antialiasing = true;
+		story_secret.scale.set(1, 1);
+		story_secret.animation.addByPrefix('idle', 'Moni_idle', 24);
+		story_secret.animation.addByPrefix('selected', 'Moni_selected', 24);
+		story_secret.animation.addByPrefix('locked', 'Blank_Locked', 24);
+		story_secret.animation.play('locked');
+		story_secret.updateHitbox();
+		add(story_secret);
+
+		story_secret2 = new FlxSprite(320, 40);
+		story_secret2.frames = Paths.getSparrowAtlas('dokistory/secret2_story');
+		story_secret2.antialiasing = true;
+		story_secret2.scale.set(1, 1);
+		story_secret2.animation.addByPrefix('idle', 'secret2_idle', 24);
+		story_secret2.animation.addByPrefix('selected', 'secret2_selected', 24);
+		story_secret2.animation.addByPrefix('locked', 'Blank_Locked', 24);
+		story_secret2.animation.play('locked');
+		story_secret2.updateHitbox();
+		add(story_secret2);
+
+		story_cursor = new FlxSprite(-240, -110).loadGraphic(Paths.image('dokistory/cursor'));
+		add(story_cursor);
 
 		FlxG.camera.follow(camFollow, null, 0.60 * (60 / FlxG.save.data.fpsCap));
 
@@ -176,6 +256,7 @@ class DokiStoryState extends MusicBeatState
 
 		changeItem();
 		updateText();
+		unlockedweeks();
 
 		super.create();
 	}
@@ -206,6 +287,69 @@ class DokiStoryState extends MusicBeatState
 
 			}
 		#end
+
+		switch (curSelected)
+			{
+				default: 
+					txtWeekTitle.visible = true;
+					txtTracklist.visible = true;
+				case 1:
+					if (FlxG.save.data.monibeaten == false)
+							{
+								trace("false");
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+				case 2:
+					if (FlxG.save.data.saybeaten == false)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+				case 3:
+					if (FlxG.save.data.natbeaten == false)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+				case 4:
+					if (FlxG.save.data.yuribeaten == false)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+				case 5:
+					if (FlxG.save.data.extrabeaten == false)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+			}
+
+		//if (FlxG.save.data.monibeaten == false )
+
+		switch (curSelected)
+			{
+				case 0:
+					story_cursor.x = -240;
+					story_cursor.y = -160;
+				case 1:
+					story_cursor.x = 40;
+					story_cursor.y = -160;
+				case 2:
+					story_cursor.x = 320;
+					story_cursor.y = -160;
+				case 3:
+					story_cursor.x = -240;
+					story_cursor.y = 40;
+				case 4:
+					story_cursor.x = 40;
+					story_cursor.y = 40;
+				case 5:
+					story_cursor.x = 320;
+					story_cursor.y = 40;
+
+			}
 
 		if (FlxG.sound.music.volume < 0.8)
 		{
@@ -250,15 +394,67 @@ class DokiStoryState extends MusicBeatState
 					
 								if (controls.ACCEPT)
 									{
-										FlxG.sound.play(Paths.sound('confirmMenu'));
-										diff.visible = true;
-										diffselect = true;
+										switch (curSelected)
+											{
+												default:
+													{
+														FlxG.sound.play(Paths.sound('confirmMenu'));
+														diff.visible = true;
+														diffselect = true;
+													}
+												case 1:
+													{
+														if (FlxG.save.data.monibeaten == true)
+															{
+																FlxG.sound.play(Paths.sound('confirmMenu'));
+																diff.visible = true;
+																diffselect = true;
+															}
+													}
+												case 2:
+													{
+														if (FlxG.save.data.sayobeaten == true)
+															{
+																FlxG.sound.play(Paths.sound('confirmMenu'));
+																diff.visible = true;
+																diffselect = true;
+															}
+													}	
+												case 3:
+													{
+														if (FlxG.save.data.natbeaten == true)
+															{
+																FlxG.sound.play(Paths.sound('confirmMenu'));
+																diff.visible = true;
+																diffselect = true;
+															}
+													}
+												case 4:
+													{
+														if (FlxG.save.data.yuribeaten == true)
+															{
+																FlxG.sound.play(Paths.sound('confirmMenu'));
+																diff.visible = true;
+																diffselect = true;
+															}
+													}
+												case 5:
+													{
+														if (FlxG.save.data.extrabeaten == true)
+															{
+																FlxG.sound.play(Paths.sound('confirmMenu'));
+																diff.visible = true;
+																diffselect = true;
+															}
+													}
+											}
 									}
 						}
 					case true:
 						{
 							if (controls.BACK)
 								{
+									FlxG.sound.play(Paths.sound('cancelMenu'));
 									diff.visible = false;
 									diffselect = false;
 								}
@@ -289,6 +485,7 @@ class DokiStoryState extends MusicBeatState
 
 		super.update(elapsed);
 	}
+
 
 	function changeDiff(change:Int = 0):Void
 		{
@@ -329,10 +526,27 @@ class DokiStoryState extends MusicBeatState
 								diffic = '-hard';
 						}
 
+			switch (curSelected)
+			{
+				case 0:
+					story_moni.animation.play('selected');
+				case 1:
+					story_sayo.animation.play('selected');
+				case 2:
+					story_nat.animation.play('selected');
+				case 3:
+					story_yuri.animation.play('selected');
+				case 4:
+					story_secret.animation.play('selected');
+				case 5:
+					story_secret2.animation.play('selected');
+
+			}
+
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			PlayState.storyWeek = curSelected;
 			PlayState.campaignScore = 0;
-			new FlxTimer().start(1, function(tmr:FlxTimer)
+			new FlxTimer().start(2, function(tmr:FlxTimer)
 				{
 					switch (curSelected)
 						{
@@ -387,6 +601,30 @@ class DokiStoryState extends MusicBeatState
 
 			updateText();
 			
+		}
+
+		function unlockedweeks()
+		{
+			if (FlxG.save.data.monibeaten == true)
+				{
+					story_sayo.animation.play('idle');
+				}
+			if (FlxG.save.data.sayobeaten == true)
+				{
+					story_nat.animation.play('idle');
+				}
+			if (FlxG.save.data.natbeaten == true)
+				{
+					story_yuri.animation.play('idle');
+				}
+			if (FlxG.save.data.yuribeaten == true)
+				{
+					story_secret.animation.play('idle');
+				}
+			if (FlxG.save.data.extrabeaten == true)
+				{
+					story_secret2.animation.play('idle');
+				}
 		}
 
 		function updateText()

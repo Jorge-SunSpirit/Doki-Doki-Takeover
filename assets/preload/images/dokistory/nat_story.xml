@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="nat_story.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nat_Locked" x="10" y="10" width="269" height="154"/>
+	<SubTexture name="Nat_idle" x="10" y="174" width="269" height="154"/>
+	<SubTexture name="Nat_selected" x="10" y="338" width="269" height="154"/>
+</TextureAtlas>

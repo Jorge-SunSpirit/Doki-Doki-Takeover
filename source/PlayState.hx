@@ -2568,15 +2568,16 @@ class PlayState extends MusicBeatState
 
 					switch (PlayState.storyWeek)
 						{
+							case 0:
+							FlxG.save.data.monibeaten = true;
 							case 1:
-							FlxG.save.data.natbeaten = true;
+							FlxG.save.data.sayobeaten = true;
 							case 2:
-							FlxG.save.data.saybeaten = true;
-						}
-					
-					if (FlxG.save.data.natbeaten == true && FlxG.save.data.saybeaten == true)
-						{
-							FlxG.save.data.yuriunlocked = true;
+							FlxG.save.data.natbeaten = true;
+							case 3:
+							FlxG.save.data.yuribeaten = true;
+							case 4:
+							FlxG.save.data.extrabeaten = true;
 						}
 
 					FlxG.switchState(new StoryMenuState());
