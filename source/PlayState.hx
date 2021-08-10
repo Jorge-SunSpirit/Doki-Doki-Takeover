@@ -365,6 +365,8 @@ class PlayState extends MusicBeatState
 				extra3 = CoolUtil.coolTextFile(Paths.txt('your demise/FinalCutsceneDialouge'));
 			case 'erb':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('erb/TestDialogue'));
+			case 'my sweets':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('my sweets/introdialogue'));
 		}
 
 		trace(SONG.stage);
@@ -848,6 +850,7 @@ class PlayState extends MusicBeatState
 		{
 			switch (curSong.toLowerCase())
 			{
+				//setting up intro dialogue for songs
 				case 'high school conflict':
 					introcutscene(doof);
 				case 'bara no yume':
@@ -860,6 +863,8 @@ class PlayState extends MusicBeatState
 							DarkStart(doof);
 						}
 				case 'erb':
+					introcutscene(doof);
+				case 'my sweets':
 					introcutscene(doof);
 				case 'epiphany':
 					funnyephiphinya(doof);	
@@ -1104,6 +1109,13 @@ class PlayState extends MusicBeatState
 								}
 							default:
 								{
+									switch (SONG.song.toLowerCase())
+										{
+											//play music :)
+											case "my sweets":
+												FlxG.sound.playMusic(Paths.music('natsc'), 0);
+											default:
+										}
 									remove(black);
 									new FlxTimer().start(1.2, function(godlike:FlxTimer)
 										{

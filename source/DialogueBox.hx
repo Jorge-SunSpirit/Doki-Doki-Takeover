@@ -497,6 +497,9 @@ class DialogueBox extends FlxSpriteGroup
 								}
 							
 							//extras
+							case 'glitch':
+								
+
 							case 'hideright':
 								portraitRight.visible = false;
 								if (dialogueList[1] == null && dialogueList[0] != null)

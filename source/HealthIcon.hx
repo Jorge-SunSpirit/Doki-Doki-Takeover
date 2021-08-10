@@ -34,6 +34,8 @@ class HealthIcon extends FlxSprite
 		animation.add('gf-doki', [16], 0, false, isPlayer);
 		animation.add('sayori', [32, 33], 0, false, isPlayer);
 		animation.add('natsuki', [34, 35], 0, false, isPlayer);
+		animation.add('yuri', [36, 37], 0, false, isPlayer);
+		animation.add('yuri-crazy', [38, 39], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)
