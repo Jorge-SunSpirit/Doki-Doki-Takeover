@@ -1,6 +1,7 @@
 bf
 bf-pixel
 bf-pixelangry
+bf-doki
 senpai
 senpai-angry
 monika

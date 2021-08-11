@@ -17,6 +17,7 @@ class HealthIcon extends FlxSprite
 
 		antialiasing = true;
 		animation.add('bf', [0, 1], 0, false, isPlayer);
+		animation.add('bf-doki', [0, 1], 0, false, isPlayer);
 		animation.add('bf-pixel', [21, 22], 0, false, isPlayer);
 		animation.add('bf-pixelangry', [21, 22], 0, false, isPlayer);
 		animation.add('face', [10, 11], 0, false, isPlayer);
@@ -32,6 +33,7 @@ class HealthIcon extends FlxSprite
 		animation.add('gf', [16], 0, false, isPlayer);
 		animation.add('gf-pixel', [16], 0, false, isPlayer);
 		animation.add('gf-doki', [16], 0, false, isPlayer);
+		animation.add('gf-realdoki', [16], 0, false, isPlayer);
 		animation.add('sayori', [32, 33], 0, false, isPlayer);
 		animation.add('natsuki', [34, 35], 0, false, isPlayer);
 		animation.add('yuri', [36, 37], 0, false, isPlayer);

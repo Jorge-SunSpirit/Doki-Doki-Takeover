@@ -300,11 +300,22 @@ class DokiStoryState extends MusicBeatState
 								txtWeekTitle.visible = false;
 								txtTracklist.visible = false;
 							}
+					if (FlxG.save.data.monibeaten == true)
+							{
+								trace("false");
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
+							}
 				case 2:
 					if (FlxG.save.data.saybeaten == false)
 							{
 								txtWeekTitle.visible = false;
 								txtTracklist.visible = false;
+							}
+					if (FlxG.save.data.saybeaten == true)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
 							}
 				case 3:
 					if (FlxG.save.data.natbeaten == false)
@@ -312,17 +323,32 @@ class DokiStoryState extends MusicBeatState
 								txtWeekTitle.visible = false;
 								txtTracklist.visible = false;
 							}
+					if (FlxG.save.data.natbeaten == true)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
+							}
 				case 4:
 					if (FlxG.save.data.yuribeaten == false)
 							{
 								txtWeekTitle.visible = false;
 								txtTracklist.visible = false;
 							}
+						if (FlxG.save.data.yuribeaten == true)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
+							}
 				case 5:
 					if (FlxG.save.data.extrabeaten == false)
 							{
 								txtWeekTitle.visible = false;
 								txtTracklist.visible = false;
+							}
+					if (FlxG.save.data.extrabeaten == true)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
 							}
 			}
 
