@@ -43,9 +43,10 @@ class OutdatedSubState extends MusicBeatState
 		add(kadeLogo);
 		
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
-			"You've completed the Monika Full Week!"
-			+ "\nA new song is now available in the freeplay menu!"
-			+ "\n\nWe hope you enjoy!\n\n",
+			"Welcome to Doki Doki Takeover!"
+			+ "\nThis is a sequel to the Monika Full Week mod"
+			+ "\n\nHave you played Monika Full Week?\n\n"
+			+ "\nEnter for Yes - Esc for No\n",
 			32);
 		
 		txt.setFormat("VCR OSD Mono", 32, FlxColor.fromRGB(200, 200, 200), CENTER);
@@ -80,9 +81,23 @@ class OutdatedSubState extends MusicBeatState
 
 	override function update(elapsed:Float)
 		{
+			if (controls.BACK)
+			{
+				FlxG.save.data.funnyquestionpopup = true;
+				FlxG.switchState(new MainMenuState());
+			}
 			if (controls.ACCEPT)
 			{
-				FlxG.switchState(new CreditsMenu());
+				FlxG.save.data.funnyquestionpopup = true;
+				FlxG.save.data.monibeaten = true;
+
+				//devonlystuff
+				FlxG.save.data.sayobeaten = true;
+				FlxG.save.data.natbeaten = true;
+				FlxG.save.data.yuribeaten = true;
+				FlxG.save.data.extrabeaten = true;
+
+				FlxG.switchState(new MainMenuState());
 			}
 		}
 }

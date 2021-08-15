@@ -296,13 +296,11 @@ class DokiStoryState extends MusicBeatState
 				case 1:
 					if (FlxG.save.data.monibeaten == false)
 							{
-								trace("false");
 								txtWeekTitle.visible = false;
 								txtTracklist.visible = false;
 							}
 					if (FlxG.save.data.monibeaten == true)
 							{
-								trace("false");
 								txtWeekTitle.visible = true;
 								txtTracklist.visible = true;
 							}
