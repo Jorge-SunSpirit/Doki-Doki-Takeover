@@ -35,9 +35,9 @@ class DokiStoryState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['High School Conflict', 'Bara No Yume', 'Your Demise'],
-		['erb'],
+		['My Confession'],
 		['My Sweets'],
-		['Obsession'],
+		['Deep Breaths','Obsession'],
 		['Reconciliation'],
 		['epiphany']
 	];
@@ -534,11 +534,21 @@ class DokiStoryState extends MusicBeatState
 
 	function goToState()
 		{
-			PlayState.storyPlaylist = weekData[curSelected];
+			if (FlxG.keys.pressed.E && FlxG.keys.pressed.R && FlxG.keys.pressed.B)
+				{
+					PlayState.storyPlaylist = ['erb'];
+					PlayState.storyDifficulty = 1;
+				}
+				else
+					{
+						PlayState.storyPlaylist = weekData[curSelected];
+						PlayState.storyDifficulty = curDifficulty;
+					}
+			
 			PlayState.isStoryMode = true;
 			selectedSomethin = true;
 			diffselect = false;
-			PlayState.storyDifficulty = curDifficulty;
+			
 
 			var diffic = "";
 

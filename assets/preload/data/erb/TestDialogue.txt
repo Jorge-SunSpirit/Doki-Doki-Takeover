@@ -1,9 +1,7 @@
-:sayori_ehh:"Why are you like this."
-:bf:...
-:bfbeep:"BEEP"
-:sayori:"Why can't you speak like a normal person"
+:sayori_ehh:"THE OG."
+:natsuki:"SUPERMAN!"
+:bfbeep:"BEEP!"
+:natsuki:"GOKU!"
 :hideright:
-:natsuki:"I know this is a test dialogue but like... cool.
-:hideleft:
-:bf:"Forehead"
+:natsuki:"BEGIN"
 
