@@ -33,6 +33,7 @@ class MainMenuState extends MusicBeatState
 	var curSelected:Int = 0;
 	public static var kadeEngineVer:String = "1.4.2" + nightly;
 	public static var nightly:String = "";
+	var show:String = "";
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
@@ -50,6 +51,7 @@ class MainMenuState extends MusicBeatState
 	var newInput:Bool = true;
 	var logo:FlxSprite;
 	var fumo:FlxSprite;
+	var menu_character:FlxSprite;
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
@@ -93,6 +95,55 @@ class MainMenuState extends MusicBeatState
 		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
 		backdrop.velocity.set(-40, -40);
 
+		var random = FlxG.random.float(0,100);
+			show = 'fumo';
+
+			if (random >= 10 && random <= 19)
+				{
+					trace ('senpai');
+					show = 'senpai';
+				}
+				
+			if (random >= 20 && random <= 29)
+				{
+					trace ('fumo');
+					show = 'fumo';
+				}
+			if (random >= 30 && random <= 39)
+				{
+					trace ('senpai');
+					show = 'senpai';
+				}
+			if (random >= 40 && random <= 49)
+				{
+					trace ('fumo');
+					show = 'fumo';
+				}
+			if (random >= 50 && random <= 59)
+				{
+					trace ('senpai');
+					show = 'senpai';
+				}
+			if (random >= 60 && random <= 69)
+				{
+					trace ('fumo');
+					show = 'fumo';
+				}
+			if (random >= 70 && random <= 79)
+				{
+					trace ('senpai');
+					show = 'senpai';
+				}
+			if (random >= 80 && random <= 89)
+				{
+					trace ('fumo');
+					show = 'fumo';
+				}
+			if (random >= 90 && random <= 99)
+				{
+					trace ('senpai');
+					show = 'senpai';
+				}
 
 		//-700, =359
 		logo = new FlxSprite(-900, -359).loadGraphic(Paths.image('Credits_LeftSide'));
@@ -124,10 +175,35 @@ class MainMenuState extends MusicBeatState
 		else
 			logoBl.x = -600;
 
+		/*
 		fumo = new FlxSprite(-100, -250).loadGraphic(Paths.image('Fumo'));
 		fumo.scale.set(1, 1);
 		add(fumo);
+		*/
 		
+		switch (show)
+			{
+				case 'fumo':
+					menu_character = new FlxSprite(0, -200);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/fumo');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(1, 1);
+					menu_character.animation.addByPrefix('play', 'cirno_fumo', 24);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'senpai':
+					menu_character = new FlxSprite(-100, -250);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/Senpai');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.9, .9);
+					menu_character.animation.addByPrefix('play', 'senpai_microphone', 24);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+			}
+
+
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -201,6 +277,13 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
+			if (FlxG.keys.justPressed.I)
+				{
+					#if debug
+					FlxG.switchState(new MainMenuState());
+					#end
+				}
+
 			if (FlxG.keys.justPressed.O)
 				{
 					#if debug
@@ -268,6 +351,7 @@ class MainMenuState extends MusicBeatState
 		});
 	}
 
+
 	function goToState()
 		{
 			var daChoice:String = optionShit[curSelected];
@@ -276,7 +360,6 @@ class MainMenuState extends MusicBeatState
 				{
 					case 'story mode':
 						FlxG.switchState(new DokiStoryState());
-						//FlxG.switchState(new StoryMenuState());
 						trace("Story Menu Selected");
 					case 'freeplay':
 						FlxG.switchState(new FreeplayState());
