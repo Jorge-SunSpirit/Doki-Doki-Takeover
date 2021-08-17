@@ -427,6 +427,19 @@ class DialogueBox extends FlxSpriteGroup
 					{
 						switch (curCharacter)
 						{
+							//Yuri animations
+							case 'yuri':
+								//very much placeholder and I hate it
+								portraitLeft.visible = false;
+								box.animation.play('yuri');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/yuri_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'yurineutral', 24, false);
+									portraitLeft.animation.play('play');
+								}
+							
 							//Natsuki animations
 							case 'natsuki':
 								//very much placeholder and I hate it
@@ -437,6 +450,18 @@ class DialogueBox extends FlxSpriteGroup
 									portraitLeft.visible = true;
 									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/nat_dialogue','doki');
 									portraitLeft.animation.addByPrefix('play', 'nat_hmmph', 24, false);
+									portraitLeft.animation.play('play');
+								}
+
+							case 'natsuki_angy':
+								//very much placeholder and I hate it
+								portraitLeft.visible = false;
+								box.animation.play('natsuki');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/nat_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'nat_angy', 24, false);
 									portraitLeft.animation.play('play');
 								}
 
@@ -462,6 +487,18 @@ class DialogueBox extends FlxSpriteGroup
 									portraitLeft.animation.addByPrefix('play', 'sayoneutral', 24, false);
 									portraitLeft.animation.play('play');
 								}
+							
+							case 'sayori_happ':
+								portraitLeft.visible = false;
+								box.animation.play('sayori');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/sayo_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'sayo_happ', 24, false);
+									portraitLeft.animation.play('play');
+								}
+							
 							case 'sayori_ehh':
 								portraitLeft.visible = false;
 								box.animation.play('sayori');

@@ -2,5 +2,7 @@
 <TextureAtlas imagePath="nat_dialogue.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="nat_hmmph" x="10" y="10" width="500" height="500"/>
+	<SubTexture name="nat_angy" x="10" y="10" width="500" height="500"/>
+	<SubTexture name="nat_hmmph" x="520" y="10" width="500" height="500"/>
+	<SubTexture name="natneutral" x="1030" y="10" width="500" height="500"/>
 </TextureAtlas>

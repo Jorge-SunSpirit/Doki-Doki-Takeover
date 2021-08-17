@@ -6,4 +6,5 @@
 :natsuki:"I know this is a test dialogue but like... bruh.
 :hideleft:
 :bf:"Forehead"
+:sayori_happ:"I can't believe this"
 

@@ -365,6 +365,8 @@ class PlayState extends MusicBeatState
 				extra3 = CoolUtil.coolTextFile(Paths.txt('your demise/FinalCutsceneDialouge'));
 			case 'erb':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('erb/TestDialogue'));
+			case 'my confession':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('my confession/IntroDialogue'));
 			case 'my sweets':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('my sweets/introdialogue'));
 		}
@@ -866,6 +868,8 @@ class PlayState extends MusicBeatState
 						}
 				case 'erb':
 					introcutscene(doof);
+				case 'my confession':
+					introcutscene(doof);
 				case 'my sweets':
 					introcutscene(doof);
 				case 'epiphany':
@@ -1114,8 +1118,11 @@ class PlayState extends MusicBeatState
 									switch (SONG.song.toLowerCase())
 										{
 											//play music :)
+											case "my confession":
+												FlxG.sound.playMusic(Paths.music('sayoc'), 1);
 											case "my sweets":
-												FlxG.sound.playMusic(Paths.music('natsc'), 0);
+												trace('hello world');
+												FlxG.sound.playMusic(Paths.music('natsc'), 1);
 											default:
 										}
 									remove(black);

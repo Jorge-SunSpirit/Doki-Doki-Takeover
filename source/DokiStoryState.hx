@@ -305,12 +305,12 @@ class DokiStoryState extends MusicBeatState
 								txtTracklist.visible = true;
 							}
 				case 2:
-					if (FlxG.save.data.saybeaten == false)
+					if (FlxG.save.data.sayobeaten == false)
 							{
 								txtWeekTitle.visible = false;
 								txtTracklist.visible = false;
 							}
-					if (FlxG.save.data.saybeaten == true)
+					if (FlxG.save.data.sayobeaten == true)
 							{
 								txtWeekTitle.visible = true;
 								txtTracklist.visible = true;
@@ -548,7 +548,7 @@ class DokiStoryState extends MusicBeatState
 			PlayState.isStoryMode = true;
 			selectedSomethin = true;
 			diffselect = false;
-			
+
 
 			var diffic = "";
 

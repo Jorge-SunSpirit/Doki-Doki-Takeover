@@ -3,5 +3,6 @@
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="sayo_ehh" x="10" y="10" width="500" height="500"/>
-	<SubTexture name="sayoneutral" x="520" y="10" width="500" height="500"/>
+	<SubTexture name="sayo_happ" x="520" y="10" width="500" height="500"/>
+	<SubTexture name="sayoneutral" x="1030" y="10" width="500" height="500"/>
 </TextureAtlas>
