@@ -74,6 +74,7 @@ class DialogueBox extends FlxSpriteGroup
 						box.animation.addByPrefix('normalOpen', 'Doki Dialogue Blank', 24, false);
 						box.animation.addByIndices('normal', 'Doki Dialogue Blank', [9], "", 24);
 						box.animation.addByPrefix('bf', 'Doki Dialogue BF', 24, false);
+						box.animation.addByPrefix('gf', 'Doki Dialogue GF', 24, false);
 						box.animation.addByPrefix('monika', 'Doki Dialogue Moni', 24, false);
 						box.animation.addByPrefix('natsuki', 'Doki Dialogue Natsu', 24, false);
 						box.animation.addByPrefix('sayori', 'Doki Dialogue Sayo', 24, false);
@@ -175,11 +176,12 @@ class DialogueBox extends FlxSpriteGroup
 					}
 				case 'normal':
 					{
-						swagDialogue = new FlxTypeText(220, 520, Std.int(FlxG.width * 0.67), "", 24);
+						swagDialogue = new FlxTypeText(220, 520, Std.int(FlxG.width * 0.67), "", 28);
 						swagDialogue.font = 'Aller';
 						swagDialogue.color = 0xFFFFFFFF;
 						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 						swagDialogue.setBorderStyle(OUTLINE, FlxColor.BLACK, 1, 1);
+						swagDialogue.antialiasing = true;
 						add(swagDialogue);
 					}
 			}
@@ -440,6 +442,18 @@ class DialogueBox extends FlxSpriteGroup
 									portraitLeft.animation.play('play');
 								}
 							
+							case 'yuri_ehh':
+								//very much placeholder and I hate it
+								portraitLeft.visible = false;
+								box.animation.play('yuri');
+								if (!portraitLeft.visible)
+								{
+									portraitLeft.visible = true;
+									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/yuri_dialogue','doki');
+									portraitLeft.animation.addByPrefix('play', 'yuri_ehh', 24, false);
+									portraitLeft.animation.play('play');
+								}
+							
 							//Natsuki animations
 							case 'natsuki':
 								//very much placeholder and I hate it
@@ -530,6 +544,18 @@ class DialogueBox extends FlxSpriteGroup
 									portraitRight.visible = true;
 									portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf_dialogue','doki');
 									portraitRight.animation.addByPrefix('play', 'bfbeep', 24, false);
+									portraitRight.animation.play('play');
+								}
+
+
+							case 'gf':
+								portraitRight.visible = false;
+								box.animation.play('gf');
+								if (!portraitRight.visible)
+								{
+									portraitRight.visible = true;
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/gf_dialogue','doki');
+									portraitRight.animation.addByPrefix('play', 'gfneutral', 24, false);
 									portraitRight.animation.play('play');
 								}
 							

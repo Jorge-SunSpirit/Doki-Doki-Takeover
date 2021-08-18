@@ -368,7 +368,11 @@ class PlayState extends MusicBeatState
 			case 'my confession':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('my confession/IntroDialogue'));
 			case 'my sweets':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('my sweets/introdialogue'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('my sweets/IntroDialogue'));
+			case 'deep breaths':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('deep breaths/IntroDialogue'));
+			case 'obsession':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('obsession/IntroDialogue'));
 		}
 
 		trace(SONG.stage);
@@ -624,6 +628,9 @@ class PlayState extends MusicBeatState
 			case 'sayori':
 				camPos.x += 400;
 				dad.y += 110;
+			case 'yuri':
+				camPos.x += 400;
+				dad.y += 80;
 			}
 
 
@@ -872,6 +879,10 @@ class PlayState extends MusicBeatState
 					introcutscene(doof);
 				case 'my sweets':
 					introcutscene(doof);
+				case 'deep breaths':
+					introcutscene(doof);
+				case 'obsession':
+					introcutscene(doof);
 				case 'epiphany':
 					funnyephiphinya(doof);	
 				default:
@@ -1118,6 +1129,10 @@ class PlayState extends MusicBeatState
 									switch (SONG.song.toLowerCase())
 										{
 											//play music :)
+											case "deep breaths":
+												FlxG.sound.playMusic(Paths.music('yuric'), 1);
+											case "obsession":
+												FlxG.sound.playMusic(Paths.music('yuric'), 1);
 											case "my confession":
 												FlxG.sound.playMusic(Paths.music('sayoc'), 1);
 											case "my sweets":

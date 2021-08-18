@@ -522,20 +522,20 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'yuri':
-				//https://www.youtube.com/watch?v=0MW9Nrg_kZU
-				tex = Paths.getSparrowAtlas('characters/Doki_Sayo_Assets');
+				//on ice
+				tex = Paths.getSparrowAtlas('characters/Doki_Yuri_Assets');
 				frames = tex;
-				animation.addByPrefix('idle', 'Sayo Idle', 24);
-				animation.addByPrefix('singUP', 'Sayo Sing Note Up', 24);
-				animation.addByPrefix('singRIGHT', 'Sayo Sing Note Right', 24);
-				animation.addByPrefix('singDOWN', 'Sayo Sing Note Down', 24);
-				animation.addByPrefix('singLEFT', 'Sayo Sing Note Left', 24);
+				animation.addByPrefix('idle', 'Yuri Idle', 24);
+				animation.addByPrefix('singUP', 'Yuri Sing Note Up', 24);
+				animation.addByPrefix('singRIGHT', 'Yuri Sing Note Right', 24);
+				animation.addByPrefix('singDOWN', 'Yuri Sing Note Down', 24);
+				animation.addByPrefix('singLEFT', 'Yuri Sing Note Left', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -31, 43);
-				addOffset("singRIGHT", -92, -8);
-				addOffset("singLEFT", -22, -2);
-				addOffset("singDOWN", -54, -44);
+				addOffset("singUP", 7, 17);
+				addOffset("singRIGHT", 5, 0);
+				addOffset("singLEFT", 10, 0);
+				addOffset("singDOWN", 47, 20);
 
 				playAnim('idle');
 		}
