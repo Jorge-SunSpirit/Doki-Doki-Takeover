@@ -368,7 +368,7 @@ class PlayState extends MusicBeatState
 			case 'my confession':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('my confession/IntroDialogue'));
 			case 'my sweets':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('my sweets/IntroDialogue'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('my sweets/introdialogue'));
 			case 'deep breaths':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('deep breaths/IntroDialogue'));
 			case 'obsession':
@@ -1738,6 +1738,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+
 		#if !debug
 		perfectMode = false;
 		#end

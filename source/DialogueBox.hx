@@ -78,7 +78,7 @@ class DialogueBox extends FlxSpriteGroup
 						box.animation.addByPrefix('monika', 'Doki Dialogue Moni', 24, false);
 						box.animation.addByPrefix('natsuki', 'Doki Dialogue Natsu', 24, false);
 						box.animation.addByPrefix('sayori', 'Doki Dialogue Sayo', 24, false);
-						box.animation.addByPrefix('yuri', 'Doki Dialogue Yuri', 24, false);
+						box.animation.addByPrefix('yuri', 'Doki Dialogue Yuri0', 24, false);
 					}
 			}
 
