@@ -221,43 +221,47 @@ class DialogueBox extends FlxSpriteGroup
 					remove(dialogue);
 						
 					FlxG.sound.play(Paths.sound('clickText'), 0.8);
-
-					if (dialogueList[1] == null && dialogueList[0] != null)
-					{
-						if (!isEnding)
-						{
-							isEnding = true;
-
-							new FlxTimer().start(0.2, function(tmr:FlxTimer)
-							{
-								box.alpha -= 1 / 5;
-								bgFade.alpha -= 1 / 5 * 0.7;
-								portraitLeft.visible = false;
-								portraitRight.visible = false;
-								swagDialogue.alpha -= 1 / 5;
-								switch (PlayState.SONG.noteStyle)
-									{
-										case 'pixel':
-											dropText.alpha = swagDialogue.alpha;
-									}	
-							}, 5);
-
-							new FlxTimer().start(1.2, function(tmr:FlxTimer)
-							{
-								finishThing();
-								kill();
-							});
-						}
-					}
-					else
-					{
-						dialogueList.remove(dialogueList[0]);
-						startDialogue();
-					}
+					enddialogue();
 		}
 		
 		super.update(elapsed);
 	}
+
+	function enddialogue()
+		{
+			if (dialogueList[1] == null && dialogueList[0] != null)
+				{
+					if (!isEnding)
+					{
+						isEnding = true;
+	
+						new FlxTimer().start(0.2, function(tmr:FlxTimer)
+						{
+							box.alpha -= 1 / 5;
+							bgFade.alpha -= 1 / 5 * 0.7;
+							portraitLeft.visible = false;
+							portraitRight.visible = false;
+							swagDialogue.alpha -= 1 / 5;
+							switch (PlayState.SONG.noteStyle)
+								{
+									case 'pixel':
+										dropText.alpha = swagDialogue.alpha;
+								}	
+						}, 5);
+	
+						new FlxTimer().start(1.2, function(tmr:FlxTimer)
+						{
+							finishThing();
+							kill();
+						});
+					}
+				}
+				else
+				{
+					dialogueList.remove(dialogueList[0]);
+					startDialogue();
+				}
+		}
 
 	var isEnding:Bool = false;
 
@@ -565,73 +569,13 @@ class DialogueBox extends FlxSpriteGroup
 
 							case 'hideright':
 								portraitRight.visible = false;
-								if (dialogueList[1] == null && dialogueList[0] != null)
-									{
-										if (!isEnding)
-										{
-											isEnding = true;
-						
-											new FlxTimer().start(0.2, function(tmr:FlxTimer)
-											{
-												box.alpha -= 1 / 5;
-												bgFade.alpha -= 1 / 5 * 0.7;
-												portraitLeft.visible = false;
-												portraitRight.visible = false;
-												swagDialogue.alpha -= 1 / 5;
-												switch (PlayState.SONG.noteStyle)
-													{
-														case 'pixel':
-															dropText.alpha = swagDialogue.alpha;
-													}	
-											}, 5);
-						
-											new FlxTimer().start(1.2, function(tmr:FlxTimer)
-											{
-												finishThing();
-												kill();
-											});
-										}
-									}
-									else
-									{
-										dialogueList.remove(dialogueList[0]);
-										startDialogue();
-									}
+								enddialogue();
 
 							case 'hideleft':
 								portraitLeft.visible = false;
-								if (dialogueList[1] == null && dialogueList[0] != null)
-									{
-										if (!isEnding)
-										{
-											isEnding = true;
-						
-											new FlxTimer().start(0.2, function(tmr:FlxTimer)
-											{
-												box.alpha -= 1 / 5;
-												bgFade.alpha -= 1 / 5 * 0.7;
-												portraitLeft.visible = false;
-												portraitRight.visible = false;
-												swagDialogue.alpha -= 1 / 5;
-												switch (PlayState.SONG.noteStyle)
-													{
-														case 'pixel':
-															dropText.alpha = swagDialogue.alpha;
-													}	
-											}, 5);
-						
-											new FlxTimer().start(1.2, function(tmr:FlxTimer)
-											{
-												finishThing();
-												kill();
-											});
-										}
-									}
-									else
-									{
-										dialogueList.remove(dialogueList[0]);
-										startDialogue();
-									}
+								enddialogue();
+								
+								
 						}
 					}
 			}
