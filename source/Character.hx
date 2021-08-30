@@ -69,10 +69,12 @@ class Character extends FlxSprite
 				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
 				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('countdown', 'GF countdown', 24, false);
 
 				addOffset('sad', -2, -2);
 				addOffset('danceLeft', 0, -9);
 				addOffset('danceRight', 0, -9);
+				addOffset('countdown', 0, -9);
 
 				playAnim('danceRight');
 
@@ -507,19 +509,25 @@ class Character extends FlxSprite
 				//and the blind forest
 				tex = Paths.getSparrowAtlas('characters/Doki_Sayo_Assets');
 				frames = tex;
-				animation.addByPrefix('idle', 'Sayo Idle', 24);
+				animation.addByIndices('danceLeft', 'Sayo Idle nrw test', [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceRight', 'Sayo Idle nrw test', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "", 24, false);
+				//animation.addByPrefix('idle', 'Sayo Idle', 24);
 				animation.addByPrefix('singUP', 'Sayo Sing Note Up', 24);
 				animation.addByPrefix('singRIGHT', 'Sayo Sing Note Right', 24);
 				animation.addByPrefix('singDOWN', 'Sayo Sing Note Down', 24);
 				animation.addByPrefix('singLEFT', 'Sayo Sing Note Left', 24);
+				animation.addByPrefix('nara', 'Sayo Nara animated', 24);
 
-				addOffset('idle');
+				addOffset('danceLeft');
+				addOffset('danceRight');
 				addOffset("singUP", -31, 43);
 				addOffset("singRIGHT", -92, -8);
 				addOffset("singLEFT", -22, -2);
 				addOffset("singDOWN", -54, -44);
 
-				playAnim('idle');
+				addOffset('nara', -21, 1);
+
+				playAnim('danceRight');
 
 			case 'yuri':
 				//on ice
@@ -547,7 +555,7 @@ class Character extends FlxSprite
 			flipX = !flipX;
 
 			// Doesn't flip for BF, since his are already in the right place???
-			if (!curCharacter.startsWith('bf') && cur Character != "playablesenpai")
+			if (!curCharacter.startsWith('bf') && !curCharacter.startsWith("playablesenpai"))
 			{
 				// var animArray
 				var oldRight = animation.getByName('singRIGHT').frames;
@@ -609,7 +617,7 @@ class Character extends FlxSprite
 		{
 			switch (curCharacter)
 			{
-				case 'gf':
+				case 'gf' | 'gf-realdoki' | 'gf-pixel' | 'gf-doki' | 'nogf-pixel':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
@@ -620,58 +628,14 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 
-				case 'gf-realdoki':
-					if (!animation.curAnim.name.startsWith('hair'))
-					{
-						danced = !danced;
+				case 'sayori':
+					danced = !danced;
 
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
-					}
-
-				case 'gf-car':
-					if (!animation.curAnim.name.startsWith('hair'))
-					{
-						danced = !danced;
-
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
-					}
-				case 'gf-pixel':
-					if (!animation.curAnim.name.startsWith('hair'))
-					{
-						danced = !danced;
-
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
-					}
-				case 'gf-doki':
-					if (!animation.curAnim.name.startsWith('hair'))
-					{
-						danced = !danced;
-
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
-					}
-				case 'nogf-pixel':
-					if (!animation.curAnim.name.startsWith('hair'))
-					{
-						danced = !danced;
-
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
-					}
-
+					if (danced)
+						playAnim('danceRight');
+					else
+						playAnim('danceLeft');
+				
 				case 'spooky':
 					danced = !danced;
 

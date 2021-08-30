@@ -234,6 +234,9 @@ class DialogueBox extends FlxSpriteGroup
 					if (!isEnding)
 					{
 						isEnding = true;
+
+						if (FlxG.sound.music != null)
+							FlxG.sound.music.fadeOut(0.5, 0);
 	
 						new FlxTimer().start(0.2, function(tmr:FlxTimer)
 						{
@@ -564,6 +567,12 @@ class DialogueBox extends FlxSpriteGroup
 								}
 							
 							//extras
+							case 'startmusic':
+								FlxG.sound.playMusic(Paths.music(dialogueList[0], 'shared'));
+								enddialogue();
+							case 'endmusic':
+								FlxG.sound.music.stop();
+								enddialogue();
 							case 'glitch':
 								
 

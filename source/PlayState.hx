@@ -70,6 +70,8 @@ class PlayState extends MusicBeatState
 
 	public static var showCutscene:Bool = true;
 
+	var midsongcutscene:Bool = false;
+
 	public static var curStage:String = '';
 	public static var SONG:SwagSong;
 	public static var isStoryMode:Bool = false;
@@ -165,6 +167,7 @@ class PlayState extends MusicBeatState
 	public var extra2:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 	public var extra3:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
+	var vignette:FlxSprite;
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
 	var oldspace:FlxSprite;
@@ -512,7 +515,14 @@ class PlayState extends MusicBeatState
 			case 'dokiclubroom':
 				{
 					var posX = -700;
-					var posY = -520;	
+					var posY = -520;
+					
+					vignette = new FlxSprite(posX, posY).loadGraphic(Paths.image('vignette','doki'));
+					vignette.scrollFactor.set();
+					vignette.x = 0;
+					vignette.y = 0;
+					vignette.cameras = [camHUD];
+					vignette.alpha = 0;
 
 					defaultCamZoom = 0.75;
 					curStage = 'dokiclubroom';
@@ -1048,7 +1058,7 @@ class PlayState extends MusicBeatState
 							dad.playAnim('cutscenetransition');
 							new FlxTimer().start(1.2, function(godlike:FlxTimer)
 							{
-								dad.playAnim('idle');
+								dad.dance();
 								startCountdown();
 							});
 					}
@@ -1126,7 +1136,7 @@ class PlayState extends MusicBeatState
 								}
 							default:
 								{
-									switch (SONG.song.toLowerCase())
+									/*switch (SONG.song.toLowerCase())
 										{
 											//play music :)
 											case "deep breaths":
@@ -1139,7 +1149,7 @@ class PlayState extends MusicBeatState
 												trace('hello world');
 												FlxG.sound.playMusic(Paths.music('natsc'), 1);
 											default:
-										}
+										}*/
 									remove(black);
 									new FlxTimer().start(1.2, function(godlike:FlxTimer)
 										{
@@ -1168,6 +1178,8 @@ class PlayState extends MusicBeatState
 
 	function startCountdown():Void
 	{
+		midsongcutscene = true;
+		
 		showCutscene = false;
 		inCutscene = false;
 
@@ -1192,7 +1204,7 @@ class PlayState extends MusicBeatState
 
 		startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 		{
-			dad.playAnim('idle');
+			dad.dance();
 			gf.dance();
 			boyfriend.playAnim('idle');
 
@@ -1327,6 +1339,7 @@ class PlayState extends MusicBeatState
 
 	function startSong():Void
 	{
+		midsongcutscene == true;
 		startingSong = false;
 		songStarted = true;
 		previousFrameTime = FlxG.game.ticks;
@@ -2539,6 +2552,7 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		midsongcutscene = false;
 		if (!loadRep)
 			rep.SaveReplay(saveNotes);
 		else
@@ -3533,31 +3547,63 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (SONG.song.toLowerCase() == 'your demise')
+		if (midsongcutscene == true)
 			{
-				switch (curStep)
-				{
-					case 132:
-						boyfriend.visible = true;
-						dad.visible = true;
-						remove(blackScreen);
-
-						new FlxTimer().start(0.03, function(tmr:FlxTimer)
-							{
-								whiteflash.alpha -= 0.15;
-								if (whiteflash.alpha > 0)
+				if (SONG.song.toLowerCase() == 'my confession')
+					{
+						switch (curStep)
+						{
+							case 480:
+								gf.playAnim('countdown');
+							
+							case 752:
+								add(vignette);
+								FlxTween.tween(FlxG.camera, {zoom: 1.6}, 1.5, {
+									ease: FlxEase.expoOut
+								});
+								new FlxTimer().start(0, function(tmr:FlxTimer)
 									{
-										tmr.reset(0.03);
-									}
-									else
-										{
-											remove(whiteflash);
-										}
-							});
-					
-					case 889:
-						FlxG.camera.fade(FlxColor.BLACK, 2, false);
-				}
+										vignette.alpha += 1 / 5;
+									}, 5);
+								dad.playAnim('nara');
+							
+							case 767:
+								FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {
+									ease: FlxEase.expoOut
+								});
+								new FlxTimer().start(0, function(tmr:FlxTimer)
+									{
+										vignette.alpha -= 1 / 5;
+									}, 5);
+						}
+					}
+		
+				if (SONG.song.toLowerCase() == 'your demise')
+					{
+						switch (curStep)
+						{
+							case 132:
+								boyfriend.visible = true;
+								dad.visible = true;
+								remove(blackScreen);
+		
+								new FlxTimer().start(0.03, function(tmr:FlxTimer)
+									{
+										whiteflash.alpha -= 0.15;
+										if (whiteflash.alpha > 0)
+											{
+												tmr.reset(0.03);
+											}
+											else
+												{
+													remove(whiteflash);
+												}
+									});
+							
+							case 889:
+								FlxG.camera.fade(FlxColor.BLACK, 2, false);
+						}
+					}
 			}
 
 		// yes this updates every step.
@@ -3606,7 +3652,14 @@ class PlayState extends MusicBeatState
 
 			// Dad doesnt interupt his own notes
 			if (SONG.notes[Math.floor(curStep / 16)].mustHitSection)
-				dad.playAnim('idle');
+				{
+					//if (!dad.animation.curAnim.name.startsWith('nara') && dad.animation.curAnim.finished || !dad.animation.curAnim.name.startsWith('sing') && dad.animation.curAnim.finished)
+
+					if (!dad.animation.curAnim.name.startsWith('nara') && dad.animation.curAnim.finished || !dad.animation.curAnim.name.startsWith('sing') && dad.animation.curAnim.finished)
+						{
+							dad.dance();
+						}
+				}
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 		wiggleShit.update(Conductor.crochet);
@@ -3630,7 +3683,8 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
-		if (curBeat % gfSpeed == 0)
+		//|| curBeat % gfSpeed == 0
+		if (!gf.animation.curAnim.name.startsWith('countdown') && gf.animation.curAnim.finished || curBeat % gfSpeed == 0 && gf.animation.curAnim.finished)
 		{
 			gf.dance();
 		}
@@ -3639,12 +3693,10 @@ class PlayState extends MusicBeatState
 		{
 			boyfriend.playAnim('idle');
 		}
-		
-		if (!dad.animation.curAnim.name.startsWith("sing"))
-		{
-			dad.playAnim('idle');
-		}
-
+		if ((!dad.animation.curAnim.name.startsWith('sing') || !dad.animation.curAnim.name.startsWith('nara')) && dad.animation.curAnim.finished)
+			{
+				dad.dance();
+			}
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
 		{
 			boyfriend.playAnim('hey', true);
@@ -3661,50 +3713,6 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'mall':
-				if(FlxG.save.data.distractions){
-					upperBoppers.animation.play('bop', true);
-					bottomBoppers.animation.play('bop', true);
-					santa.animation.play('idle', true);
-				}
-
-			case 'limo':
-				if(FlxG.save.data.distractions){
-					grpLimoDancers.forEach(function(dancer:BackgroundDancer)
-						{
-							dancer.dance();
-						});
-		
-						if (FlxG.random.bool(10) && fastCarCanDrive)
-							fastCarDrive();
-				}
-			case "philly":
-				if(FlxG.save.data.distractions){
-					if (!trainMoving)
-						trainCooldown += 1;
-	
-					if (curBeat % 4 == 0)
-					{
-						phillyCityLights.forEach(function(light:FlxSprite)
-						{
-							light.visible = false;
-						});
-	
-						curLight = FlxG.random.int(0, phillyCityLights.length - 1);
-	
-						phillyCityLights.members[curLight].visible = true;
-						// phillyCityLights.members[curLight].alpha = 1;
-				}
-
-				}
-
-				if (curBeat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
-				{
-					if(FlxG.save.data.distractions){
-						trainCooldown = FlxG.random.int(-4, 0);
-						trainStart();
-					}
-				}
 		}
 
 		if (isHalloween && FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningOffset)
