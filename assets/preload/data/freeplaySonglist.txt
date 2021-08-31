@@ -6,5 +6,6 @@ My Confession:sayori:2
 my sweets:natsuki:3
 Deep Breaths:yuri:4
 Obsession:yuri:4
-Reconciliation:monika:1
+Reconciliation:monika:5
+crucify:yuri:6
 Epiphany:monika-angry:1

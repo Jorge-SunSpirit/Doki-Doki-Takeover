@@ -168,6 +168,7 @@ class PlayState extends MusicBeatState
 	public var extra3:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
 	var vignette:FlxSprite;
+	var staticshock:FlxSprite;
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
 	var oldspace:FlxSprite;
@@ -524,6 +525,18 @@ class PlayState extends MusicBeatState
 					vignette.cameras = [camHUD];
 					vignette.alpha = 0;
 
+					staticshock = new FlxSprite(posX, posY);
+					staticshock.frames = Paths.getSparrowAtlas('clubroom/staticshock','doki');
+					staticshock.animation.addByPrefix('idle', 'hueh', 24, true);
+					staticshock.animation.play('idle');
+					staticshock.scrollFactor.set();
+					staticshock.x = 0;
+					staticshock.y = 0;
+					staticshock.cameras = [camHUD];
+					staticshock.alpha = .6;
+					staticshock.blend = SUBTRACT;
+					staticshock.visible = false;
+
 					defaultCamZoom = 0.75;
 					curStage = 'dokiclubroom';
 
@@ -689,13 +702,12 @@ class PlayState extends MusicBeatState
 		}
 
 		add(gf);
-
-		// Shitty layering but whatev it works LOL
-		if (curStage == 'limo')
-			add(limo);
-
 		add(dad);
 		add(boyfriend);
+
+		// Shitty layering but whatev it works LOL
+
+		
 		if (loadRep)
 		{
 			FlxG.watch.addQuick('rep rpesses',repPresses);
@@ -864,6 +876,9 @@ class PlayState extends MusicBeatState
 		kadeEngineWatermark.cameras = [camHUD];
 		if (loadRep)
 			replayTxt.cameras = [camHUD];
+
+		if (curStage == 'dokiclubroom')
+			add(staticshock);
 
 		startingSong = true;
 		
@@ -3557,8 +3572,9 @@ class PlayState extends MusicBeatState
 								gf.playAnim('countdown');
 							
 							case 752:
+								staticshock.visible = true;
 								add(vignette);
-								FlxTween.tween(FlxG.camera, {zoom: 1.6}, 1.5, {
+								FlxTween.tween(FlxG.camera, {zoom: 1.8}, 1, {
 									ease: FlxEase.expoOut
 								});
 								new FlxTimer().start(0, function(tmr:FlxTimer)
@@ -3568,6 +3584,8 @@ class PlayState extends MusicBeatState
 								dad.playAnim('nara');
 							
 							case 767:
+								camZooming = false;
+								staticshock.visible = false;
 								FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {
 									ease: FlxEase.expoOut
 								});
@@ -3575,6 +3593,9 @@ class PlayState extends MusicBeatState
 									{
 										vignette.alpha -= 1 / 5;
 									}, 5);
+							case 774:
+								camZooming = true;
+
 						}
 					}
 		
@@ -3686,6 +3707,7 @@ class PlayState extends MusicBeatState
 		//|| curBeat % gfSpeed == 0
 		if (!gf.animation.curAnim.name.startsWith('countdown') && gf.animation.curAnim.finished || curBeat % gfSpeed == 0 && gf.animation.curAnim.finished)
 		{
+			//when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
 		}
 
