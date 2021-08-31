@@ -111,13 +111,13 @@ class MainMenuState extends MusicBeatState
 				}
 			if (random >= 30 && random <= 39)
 				{
-					trace ('senpai');
-					show = 'senpai';
+					trace ('sunnat');
+					show = 'sunnat';
 				}
 			if (random >= 40 && random <= 49)
 				{
-					trace ('fumo');
-					show = 'fumo';
+					trace ('sunnat');
+					show = 'sunnat';
 				}
 			if (random >= 50 && random <= 59)
 				{
@@ -126,8 +126,8 @@ class MainMenuState extends MusicBeatState
 				}
 			if (random >= 60 && random <= 69)
 				{
-					trace ('fumo');
-					show = 'fumo';
+					trace ('sunnat');
+					show = 'sunnat';
 				}
 			if (random >= 70 && random <= 79)
 				{
@@ -136,8 +136,8 @@ class MainMenuState extends MusicBeatState
 				}
 			if (random >= 80 && random <= 89)
 				{
-					trace ('fumo');
-					show = 'fumo';
+					trace ('sunnat');
+					show = 'sunnat';
 				}
 			if (random >= 90 && random <= 99)
 				{
@@ -198,6 +198,15 @@ class MainMenuState extends MusicBeatState
 					menu_character.antialiasing = true;
 					menu_character.scale.set(.9, .9);
 					menu_character.animation.addByPrefix('play', 'senpai_microphone', 24);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'sunnat':
+					menu_character = new FlxSprite(-280, -120);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/sunnat_menu');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.8, .8);
+					menu_character.animation.addByPrefix('play', 'sunday right', 24);
 					menu_character.updateHitbox();
 					menu_character.animation.play('play');
 					add(menu_character);

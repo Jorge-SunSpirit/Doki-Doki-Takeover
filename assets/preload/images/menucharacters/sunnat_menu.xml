@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sunnat_menu.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sunday right0000" x="10" y="10" width="888" height="488" frameX="-142" frameY="0" frameWidth="1178" frameHeight="581"/>
+	<SubTexture name="sunday right0001" x="908" y="10" width="888" height="512" frameX="-142" frameY="0" frameWidth="1178" frameHeight="581"/>
+	<SubTexture name="sunday right0002" x="1806" y="10" width="884" height="512" frameX="-142" frameY="0" frameWidth="1178" frameHeight="581"/>
+	<SubTexture name="sunday right0003" x="2700" y="10" width="995" height="556" frameX="-84" frameY="0" frameWidth="1178" frameHeight="581"/>
+	<SubTexture name="sunday right0004" x="10" y="576" width="995" height="556" frameX="-84" frameY="0" frameWidth="1178" frameHeight="581"/>
+	<SubTexture name="sunday right0005" x="1015" y="576" width="1178" height="581"/>
+</TextureAtlas>
