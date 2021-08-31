@@ -176,6 +176,10 @@ class PlayState extends MusicBeatState
 	var phillyTrain:FlxSprite;
 	var trainSound:FlxSound;
 	var camend:FlxObject;
+
+	var lights_front:FlxSprite;
+	var deskfront:FlxSprite;
+
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
@@ -537,6 +541,12 @@ class PlayState extends MusicBeatState
 					staticshock.blend = SUBTRACT;
 					staticshock.visible = false;
 
+					deskfront = new FlxSprite(posX, posY).loadGraphic(Paths.image('clubroom/DesksFront','doki'));
+					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
+					deskfront.updateHitbox();
+					deskfront.antialiasing = true;
+					deskfront.scrollFactor.set(1.3, 0.9);
+
 					defaultCamZoom = 0.75;
 					curStage = 'dokiclubroom';
 
@@ -553,6 +563,78 @@ class PlayState extends MusicBeatState
 					clubroom.antialiasing = true;
 					clubroom.scrollFactor.set(1, 0.9);
 					add(clubroom);
+				}
+			
+			case 'dokifestival':
+				{
+					var posX = -700;
+					var posY = -520;
+					
+					vignette = new FlxSprite(posX, posY).loadGraphic(Paths.image('vignette','doki'));
+					vignette.scrollFactor.set();
+					vignette.x = 0;
+					vignette.y = 0;
+					vignette.cameras = [camHUD];
+					vignette.alpha = 0;
+
+					staticshock = new FlxSprite(posX, posY);
+					staticshock.frames = Paths.getSparrowAtlas('clubroom/staticshock','doki');
+					staticshock.animation.addByPrefix('idle', 'hueh', 24, true);
+					staticshock.animation.play('idle');
+					staticshock.scrollFactor.set();
+					staticshock.x = 0;
+					staticshock.y = 0;
+					staticshock.cameras = [camHUD];
+					staticshock.alpha = .6;
+					staticshock.blend = SUBTRACT;
+					staticshock.visible = false;
+
+					defaultCamZoom = 0.75;
+					curStage = 'dokifestival';
+
+					lights_front = new FlxSprite(-605, 565);
+					lights_front.frames = Paths.getSparrowAtlas('festival/lights_front','doki');
+					lights_front.animation.addByPrefix('idle', 'Lights front', 24, true);
+					lights_front.animation.play('idle');
+					lights_front.setGraphicSize(Std.int(lights_front.width * 1.6));
+					lights_front.antialiasing = true;
+					lights_front.scrollFactor.set(1.1, 0.9);
+
+					deskfront = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/DesksFestival','doki'));
+					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
+					deskfront.updateHitbox();
+					deskfront.antialiasing = true;
+					deskfront.scrollFactor.set(1.3, 0.9);
+
+					var closet:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FarBack','doki'));
+					closet.setGraphicSize(Std.int(closet.width * 1.6));
+					closet.updateHitbox();
+					closet.antialiasing = true;
+					closet.scrollFactor.set(0.9, 0.9);
+					add(closet);
+	
+					var clubroom:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/MainBG','doki'));
+					clubroom.setGraphicSize(Std.int(clubroom.width * 1.6));
+					clubroom.updateHitbox();
+					clubroom.antialiasing = true;
+					clubroom.scrollFactor.set(1, 0.9);
+					add(clubroom);
+
+					var lights_back:FlxSprite = new FlxSprite(390, 179);
+					lights_back.frames = Paths.getSparrowAtlas('festival/lights_back','doki');
+					lights_back.animation.addByPrefix('idle', 'lights back', 24, true);
+					lights_back.setGraphicSize(Std.int(lights_back.width * 1.6));
+					lights_back.animation.play('idle');
+					lights_back.antialiasing = true;
+					lights_back.scrollFactor.set(1, 0.9);
+					add(lights_back);
+
+					var banner:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FestivalBanner','doki'));
+					banner.setGraphicSize(Std.int(banner.width * 1.6));
+					banner.updateHitbox();
+					banner.antialiasing = true;
+					banner.scrollFactor.set(1, 0.9);
+					add(banner);
 
 				}
 			default:
@@ -698,6 +780,15 @@ class PlayState extends MusicBeatState
 					gf.x += 0;
 					gf.y += 0;	
 				}
+			case 'dokifestival':
+				{
+					dad.y -= 0;
+					dad.x += 0;
+					boyfriend.x += 0;
+					boyfriend.y += 0;
+					gf.x += 0;
+					gf.y += 0;	
+				}
 
 		}
 
@@ -706,6 +797,18 @@ class PlayState extends MusicBeatState
 		add(boyfriend);
 
 		// Shitty layering but whatev it works LOL
+		//thanks ninja muffin :)
+			if (curStage == 'dokiclubroom' || curStage == 'dokifestival')
+				{
+					add(deskfront);
+					if (curStage == 'dokifestival')
+						{
+							boyfriend.color = 0x5B5B5B;
+							dad.color = 0x5B5B5B;
+							gf.color = 0x5B5B5B;
+							add(lights_front);
+						}
+				}
 
 		
 		if (loadRep)
@@ -877,7 +980,7 @@ class PlayState extends MusicBeatState
 		if (loadRep)
 			replayTxt.cameras = [camHUD];
 
-		if (curStage == 'dokiclubroom')
+		if (curStage == 'dokiclubroom' || curStage == 'dokifestival')
 			add(staticshock);
 
 		startingSong = true;
@@ -2195,6 +2298,8 @@ class PlayState extends MusicBeatState
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
 					case 'dokiclubroom':
+						camFollow.y = boyfriend.getMidpoint().y - 200;
+					case 'dokifestival':
 						camFollow.y = boyfriend.getMidpoint().y - 200;
 				}
 			}
@@ -3686,7 +3791,7 @@ class PlayState extends MusicBeatState
 		wiggleShit.update(Conductor.crochet);
 
 		// HARDCODING FOR MILF ZOOMS!
-		if (curSong.toLowerCase() == 'milf' && curBeat >= 168 && curBeat < 200 && camZooming && FlxG.camera.zoom < 1.35)
+		if (curSong.toLowerCase() == 'my sweets' && curBeat >= 512 && curBeat < 640 && camZooming && FlxG.camera.zoom < 1.35)
 		{
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
