@@ -814,6 +814,16 @@ class ChartingState extends MusicBeatState
 			LoadingState.loadAndSwitchState(new PlayState());
 		}
 
+		if (FlxG.keys.justPressed.ESCAPE)
+		{
+			lastSection = curSection;
+	
+			PlayState.SONG = _song;
+			FlxG.sound.music.stop();
+			vocals.stop();
+			LoadingState.loadAndSwitchState(new FreeplayState());
+		}
+
 		if (FlxG.keys.justPressed.E)
 		{
 			changeNoteSustain(Conductor.stepCrochet);

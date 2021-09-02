@@ -167,6 +167,7 @@ class FreeplayState extends MusicBeatState
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;
 		var accepted = controls.ACCEPT;
+		var charting = FlxG.keys.justPressed.SEVEN;
 
 		if (upP)
 		{
@@ -201,18 +202,27 @@ class FreeplayState extends MusicBeatState
 		}
 
 		if (accepted)
-		{
-			var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
+			loadSong();
+		else if (charting)
+			loadSong(true);
+	}
 
-			trace(poop);
+	function loadSong(isCharting:Bool = false)
+	{
+		var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
 
-			PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
-			PlayState.isStoryMode = false;
-			PlayState.storyDifficulty = curDifficulty;
-			PlayState.storyWeek = songs[curSelected].week;
-			trace('CUR WEEK' + PlayState.storyWeek);
+		trace(poop);
+
+		PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
+		PlayState.isStoryMode = false;
+		PlayState.storyDifficulty = curDifficulty;
+		PlayState.storyWeek = songs[curSelected].week;
+		trace('CUR WEEK' + PlayState.storyWeek);
+
+		if (isCharting)
+			LoadingState.loadAndSwitchState(new ChartingState());
+		else
 			LoadingState.loadAndSwitchState(new PlayState());
-		}
 	}
 
 	function changeDiff(change:Int = 0)
@@ -240,23 +250,20 @@ class FreeplayState extends MusicBeatState
 
 		switch (curDifficulty)
 		{
-
 			case 0:
-				diffText.text = "EASY";
+				diffText.text = 'EASY';
 			case 1:
-				if (curSelected == 3)
-					{
+				switch (songs[curSelected].songName.toLowerCase())
+				{
+					case 'your reality':
 						diffText.text = 'YOUR REALITY';
-					}
-					else
-						{
-							diffText.text = 'NORMAL';
-						}
+					default:
+						diffText.text = 'NORMAL';
+				}
 			case 2:
-				diffText.text = "HARD";
+				diffText.text = 'HARD';
 		}
 	}
-
 
 	function changeSelection(change:Int = 0)
 	{
