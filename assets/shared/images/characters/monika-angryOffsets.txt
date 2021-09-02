@@ -1,0 +1,9 @@
+idle 0 0
+singUP 0 0
+singRIGHT 0 0
+singLEFT 0 0
+singDOWN 0 0
+singUP-alt 60 -6
+singRIGHT-alt 60 -6
+singLEFT-alt 60 -6
+singDOWN-alt 60 -6

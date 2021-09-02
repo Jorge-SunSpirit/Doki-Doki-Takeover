@@ -1,0 +1,11 @@
+idle 0 0
+singUP 0 0
+singRIGHT 0 0
+singLEFT 0 0
+singDOWN 0 0
+singUP-alt 0 0
+singRIGHT-alt 0 0
+singLEFT-alt 0 0
+singDOWN-alt 0 0
+cutsceneidle 0 0
+cutscenetransition 0 0

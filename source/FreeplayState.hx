@@ -39,7 +39,7 @@ class FreeplayState extends MusicBeatState
 	override function create()
 	{
 		//if (FlxG.save.data.weekbeaten = true)
-		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
+		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/freeplaySonglist'));
 		//var initSonglist = CoolUtil.coolTextFile(Paths.txt('smile'));
 
 			

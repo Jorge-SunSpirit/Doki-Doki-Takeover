@@ -1,0 +1,12 @@
+idle 50 200
+singUP 55 237
+singRIGHT 50 200
+singLEFT 90 200
+singDOWN 64 200
+singUPmiss 55 237
+singRIGHTmiss 50 200
+singLEFTmiss 90 200
+singDOWNmiss 64 200
+firstDeath 50 -100
+deathLoop 50 -100
+deathConfirm 50 -100

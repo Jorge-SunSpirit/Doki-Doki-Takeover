@@ -362,25 +362,25 @@ class PlayState extends MusicBeatState
 		switch (SONG.song.toLowerCase())
 		{
 		    case 'high school conflict':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('high school conflict/high-school-conflictDialogue'));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('high school conflict/high-school-conflictEndDialogue')); 
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictDialogue'));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictEndDialogue')); 
 			case 'bara no yume':
-				extra1 = CoolUtil.coolTextFile(Paths.txt('bara no yume/bara no yume-Dialogue'));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('bara no yume/bara no yume-EndDialogue')); 
+				extra1 = CoolUtil.coolTextFile(Paths.txt('data/bara no yume/bara no yume-Dialogue'));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/bara no yume/bara no yume-EndDialogue')); 
 			case 'your demise':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('your demise/your-demiseDialogue'));
-				extra1 = CoolUtil.coolTextFile(Paths.txt('your demise/your-demiseEndDialogue'));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('your demise/FinalCutsceneDialouge'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseDialogue'));
+				extra1 = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseEndDialogue'));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/your demise/FinalCutsceneDialouge'));
 			case 'erb':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('erb/TestDialogue'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/erb/TestDialogue'));
 			case 'my confession':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('my confession/IntroDialogue'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my confession/IntroDialogue'));
 			case 'my sweets':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('my sweets/introdialogue'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my sweets/introdialogue'));
 			case 'deep breaths':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('deep breaths/IntroDialogue'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue'));
 			case 'obsession':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('obsession/IntroDialogue'));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue'));
 		}
 
 		trace(SONG.stage);
