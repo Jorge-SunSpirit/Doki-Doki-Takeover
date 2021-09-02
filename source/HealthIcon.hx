@@ -1,52 +1,67 @@
 package;
 
+import flixel.FlxG;
 import flixel.FlxSprite;
+import lime.utils.Assets;
+
+using StringTools;
 
 class HealthIcon extends FlxSprite
 {
+	public var char:String = 'bf';
+	public var isPlayer:Bool = false;
+	public var isOldIcon:Bool = false;
+
 	/**
 	 * Used for FreeplayState! If you use it elsewhere, prob gonna annoying
 	 */
 	public var sprTracker:FlxSprite;
 
-	public function new(char:String = 'bf', isPlayer:Bool = false)
+	public function new(?char:String = 'bf', ?isPlayer:Bool = false)
 	{
 		super();
-		
-		loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 
-		antialiasing = true;
-		animation.add('bf', [0, 1], 0, false, isPlayer);
-		animation.add('bf-doki', [0, 1], 0, false, isPlayer);
-		animation.add('bf-pixel', [21, 22], 0, false, isPlayer);
-		animation.add('bf-pixelangry', [21, 22], 0, false, isPlayer);
-		animation.add('face', [10, 11], 0, false, isPlayer);
-		animation.add('dad', [12, 13], 0, false, isPlayer);
-		animation.add('senpai', [30, 30], 0, false, isPlayer);
-		animation.add('playablesenpai', [30, 30], 0, false, isPlayer);
-		animation.add('senpai-angry', [31, 31], 0, false, isPlayer);
-		animation.add('monika', [24, 25], 0, false, isPlayer);
-		animation.add('monika-senpai', [26, 27], 0, false, isPlayer);
-		animation.add('monika-angry', [28, 29], 0, false, isPlayer);
-		animation.add('duet', [26, 27], 0, false, isPlayer);
-		animation.add('bf-old', [14, 15], 0, false, isPlayer);
-		animation.add('gf', [16], 0, false, isPlayer);
-		animation.add('gf-pixel', [16], 0, false, isPlayer);
-		animation.add('gf-doki', [16], 0, false, isPlayer);
-		animation.add('gf-realdoki', [16], 0, false, isPlayer);
-		animation.add('sayori', [32, 33], 0, false, isPlayer);
-		animation.add('natsuki', [34, 35], 0, false, isPlayer);
-		animation.add('yuri', [36, 37], 0, false, isPlayer);
-		animation.add('yuri-crazy', [38, 39], 0, false, isPlayer);
-		animation.play(char);
+		this.char = char;
+		this.isPlayer = isPlayer;
 
-		switch(char)
-		{
-			case 'bf-pixel' | 'bf-pixelangry' | 'senpai' | 'senpai-angry' | 'spirit' | 'gf-pixel' | 'monika':
-				antialiasing = false;
-		}
-		
+		isPlayer = isOldIcon = false;
+
+		changeIcon(char);
 		scrollFactor.set();
+	}
+
+	public function swapOldIcon()
+	{
+		(isOldIcon = !isOldIcon) ? changeIcon('bf-old') : changeIcon(char);
+	}
+
+	public function changeIcon(char:String)
+	{
+		switch (char)
+		{
+			case 'bf-pixel' | 'bf-old' | 'monika-angry' | 'yuri-crazy':
+				// lol
+			case 'bf-pixelangry':
+				char = 'bf-pixel';
+			case 'playablesenpai':
+				char = 'senpai';
+				flipX = true;
+			default:
+				char = char.split("-")[0];
+		}
+
+		if (!Assets.exists(Paths.image('icons/icon-' + char)))
+			char = 'bf';
+
+		loadGraphic(Paths.image('icons/icon-' + char), true, 150, 150);
+
+		if (char.endsWith('-pixel') || char.startsWith('senpai') || char.endsWith('senpai') || char.startsWith('spirit') || char.startsWith('monika') || char.startsWith('duet'))
+			antialiasing = false
+		else
+			antialiasing = FlxG.save.data.antialiasing;
+
+		animation.add(char, [0, 1], 0, false, isPlayer);
+		animation.play(char);
 	}
 
 	override function update(elapsed:Float)
