@@ -58,7 +58,7 @@ class HealthIcon extends FlxSprite
 		if (char.endsWith('-pixel') || char.startsWith('senpai') || char.endsWith('senpai') || char.startsWith('spirit') || char.startsWith('monika') || char.startsWith('duet'))
 			antialiasing = false
 		else
-			antialiasing = FlxG.save.data.antialiasing;
+			antialiasing = true;
 
 		animation.add(char, [0, 1], 0, false, isPlayer);
 		animation.play(char);
