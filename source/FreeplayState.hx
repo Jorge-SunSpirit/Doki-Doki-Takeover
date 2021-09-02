@@ -178,23 +178,26 @@ class FreeplayState extends MusicBeatState
 			changeSelection(1);
 		}
 
-		if (curSelected == 3)
-			{
-				goku = true;
-				changeDiff(1 - curDifficulty);
-			}
-		
-		if (curSelected != 3 && goku == true)
-			{
-				goku = false;
-				changeDiff(4);
-			}
+		switch (songs[curSelected].songName.toLowerCase())
+		{
+			case 'your reality':
+				if (!goku)
+					goku = true;
 
+				curDifficulty = 1;
+				changeDiff();
+			default:
+				if (goku)
+				{
+					changeDiff();
+					goku = false;
+				}
 
-		if (controls.LEFT_P)
-			changeDiff(-1);
-		if (controls.RIGHT_P)
-			changeDiff(1);
+				if (controls.LEFT_P)
+					changeDiff(-1);
+				if (controls.RIGHT_P)
+					changeDiff(1);
+		}
 
 		if (controls.BACK)
 		{
@@ -229,20 +232,16 @@ class FreeplayState extends MusicBeatState
 	{
 		curDifficulty += change;
 
-		if (curSelected == 3)
-			{
-				if (curDifficulty < 1)
-					curDifficulty = 1;
-				if (curDifficulty > 1)
-					curDifficulty = 1;
-			}
-			else
-				{
-					if (curDifficulty < 0)
-						curDifficulty = 2;
-					if (curDifficulty > 2)
-						curDifficulty = 0;
-				}
+		switch (songs[curSelected].songName.toLowerCase())
+		{
+			case 'your reality':
+				curDifficulty = 1;
+			default:
+				if (curDifficulty < 0)
+					curDifficulty = 2;
+				if (curDifficulty > 2)
+					curDifficulty = 0;
+		}
 
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
