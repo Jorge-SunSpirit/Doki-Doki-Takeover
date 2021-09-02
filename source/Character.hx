@@ -543,7 +543,7 @@ class Character extends FlxSprite
 				addOffset('idle');
 				addOffset("singUP", 7, 17);
 				addOffset("singRIGHT", 5, 0);
-				addOffset("singLEFT", -8, 22);
+				addOffset("singLEFT", -8, -22);
 				addOffset("singDOWN", 47, -7);
 				addOffset("breath", 2, 24);
 

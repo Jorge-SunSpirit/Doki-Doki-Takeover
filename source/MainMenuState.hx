@@ -202,7 +202,7 @@ class MainMenuState extends MusicBeatState
 					menu_character.animation.play('play');
 					add(menu_character);
 				case 'sunnat':
-					menu_character = new FlxSprite(-280, -120);
+					menu_character = new FlxSprite(-300, -100);
 					menu_character.frames = Paths.getSparrowAtlas('menucharacters/sunnat_menu');
 					menu_character.antialiasing = true;
 					menu_character.scale.set(.8, .8);
