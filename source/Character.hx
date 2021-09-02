@@ -577,7 +577,7 @@ class Character extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		if (!curCharacter.startsWith('bf'))
+		if (this != PlayState.boyfriend)
 		{
 			if (animation.curAnim.name.startsWith('sing'))
 			{
