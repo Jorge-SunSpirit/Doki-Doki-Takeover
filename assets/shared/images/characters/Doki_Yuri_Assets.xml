@@ -55,6 +55,19 @@
 	<SubTexture name="Yuri Breath0050" x="3178" y="10" width="342" height="780"/>
 	<SubTexture name="Yuri Breath0051" x="3530" y="10" width="342" height="780"/>
 	<SubTexture name="Yuri Breath0052" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0053" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0054" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0055" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0056" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0057" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0058" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0059" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0060" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0061" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0062" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0063" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0064" x="10" y="10" width="342" height="780"/>
+	<SubTexture name="Yuri Breath0065" x="10" y="10" width="342" height="780"/>
 	<SubTexture name="Yuri Idle0000" x="10" y="800" width="336" height="755"/>
 	<SubTexture name="Yuri Idle0001" x="10" y="800" width="336" height="755"/>
 	<SubTexture name="Yuri Idle0002" x="356" y="800" width="336" height="755"/>
@@ -71,8 +84,8 @@
 	<SubTexture name="Yuri Idle0013" x="10" y="800" width="336" height="755"/>
 	<SubTexture name="Yuri Sing Note Down0000" x="2086" y="800" width="420" height="747"/>
 	<SubTexture name="Yuri Sing Note Down0001" x="2086" y="800" width="420" height="747"/>
-	<SubTexture name="Yuri Sing Note Down0002" x="2516" y="800" width="420" height="747"/>
-	<SubTexture name="Yuri Sing Note Down0003" x="2946" y="800" width="420" height="747"/>
+	<SubTexture name="Yuri Sing Note Down0002" x="2086" y="800" width="420" height="747"/>
+	<SubTexture name="Yuri Sing Note Down0003" x="2516" y="800" width="420" height="747"/>
 	<SubTexture name="Yuri Sing Note Down0004" x="2946" y="800" width="420" height="747"/>
 	<SubTexture name="Yuri Sing Note Down0005" x="2946" y="800" width="420" height="747"/>
 	<SubTexture name="Yuri Sing Note Down0006" x="2946" y="800" width="420" height="747"/>
@@ -84,6 +97,7 @@
 	<SubTexture name="Yuri Sing Note Down0012" x="2946" y="800" width="420" height="747"/>
 	<SubTexture name="Yuri Sing Note Down0013" x="2946" y="800" width="420" height="747"/>
 	<SubTexture name="Yuri Sing Note Down0014" x="2946" y="800" width="420" height="747"/>
+	<SubTexture name="Yuri Sing Note Down0015" x="2946" y="800" width="420" height="747"/>
 	<SubTexture name="Yuri Sing Note Left0000" x="3376" y="800" width="338" height="734"/>
 	<SubTexture name="Yuri Sing Note Left0001" x="3376" y="800" width="338" height="734"/>
 	<SubTexture name="Yuri Sing Note Left0002" x="3376" y="800" width="338" height="734"/>
@@ -107,7 +121,7 @@
 	<SubTexture name="Yuri Sing Note Right0014" x="1106" y="1565" width="364" height="756"/>
 	<SubTexture name="Yuri Sing Note Up0000" x="1480" y="1565" width="359" height="773"/>
 	<SubTexture name="Yuri Sing Note Up0001" x="1480" y="1565" width="359" height="773"/>
-	<SubTexture name="Yuri Sing Note Up0002" x="1849" y="1565" width="359" height="773"/>
+	<SubTexture name="Yuri Sing Note Up0002" x="1480" y="1565" width="359" height="773"/>
 	<SubTexture name="Yuri Sing Note Up0003" x="1849" y="1565" width="359" height="773"/>
 	<SubTexture name="Yuri Sing Note Up0004" x="1849" y="1565" width="359" height="773"/>
 	<SubTexture name="Yuri Sing Note Up0005" x="1849" y="1565" width="359" height="773"/>
@@ -119,4 +133,5 @@
 	<SubTexture name="Yuri Sing Note Up0011" x="1849" y="1565" width="359" height="773"/>
 	<SubTexture name="Yuri Sing Note Up0012" x="1849" y="1565" width="359" height="773"/>
 	<SubTexture name="Yuri Sing Note Up0013" x="1849" y="1565" width="359" height="773"/>
+	<SubTexture name="Yuri Sing Note Up0014" x="1849" y="1565" width="359" height="773"/>
 </TextureAtlas>
