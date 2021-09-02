@@ -3703,6 +3703,17 @@ class PlayState extends MusicBeatState
 
 						}
 					}
+
+				if (SONG.song.toLowerCase() == 'deep breaths')
+					{
+						switch (curStep)
+							{
+								case 138:
+									{
+										dad.playAnim('breath');
+									}
+							}
+					}
 		
 				if (SONG.song.toLowerCase() == 'your demise')
 					{
@@ -3779,9 +3790,7 @@ class PlayState extends MusicBeatState
 			// Dad doesnt interupt his own notes
 			if (SONG.notes[Math.floor(curStep / 16)].mustHitSection)
 				{
-					//if (!dad.animation.curAnim.name.startsWith('nara') && dad.animation.curAnim.finished || !dad.animation.curAnim.name.startsWith('sing') && dad.animation.curAnim.finished)
-
-					if (!dad.animation.curAnim.name.startsWith('nara') && dad.animation.curAnim.finished || !dad.animation.curAnim.name.startsWith('sing') && dad.animation.curAnim.finished)
+					if ((!dad.animation.curAnim.name.startsWith('nara') || !dad.animation.curAnim.name.startsWith('sing') || !dad.animation.curAnim.name.startsWith('breath')) && dad.animation.curAnim.finished)
 						{
 							dad.dance();
 						}
@@ -3820,7 +3829,7 @@ class PlayState extends MusicBeatState
 		{
 			boyfriend.playAnim('idle');
 		}
-		if ((!dad.animation.curAnim.name.startsWith('sing') || !dad.animation.curAnim.name.startsWith('nara')) && dad.animation.curAnim.finished)
+		if ((!dad.animation.curAnim.name.startsWith('sing') || !dad.animation.curAnim.name.startsWith('nara') || !dad.animation.curAnim.name.startsWith('breath')) && dad.animation.curAnim.finished)
 			{
 				dad.dance();
 			}

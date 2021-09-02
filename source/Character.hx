@@ -538,12 +538,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Yuri Sing Note Right', 24);
 				animation.addByPrefix('singDOWN', 'Yuri Sing Note Down', 24);
 				animation.addByPrefix('singLEFT', 'Yuri Sing Note Left', 24);
+				animation.addByPrefix('breath', 'Yuri Breath', 24);
 
 				addOffset('idle');
 				addOffset("singUP", 7, 17);
 				addOffset("singRIGHT", 5, 0);
-				addOffset("singLEFT", 10, 0);
-				addOffset("singDOWN", 47, 20);
+				addOffset("singLEFT", -8, 22);
+				addOffset("singDOWN", 47, -7);
+				addOffset("breath", 2, 24);
 
 				playAnim('idle');
 		}
