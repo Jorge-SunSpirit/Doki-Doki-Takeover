@@ -79,6 +79,7 @@ class DialogueBox extends FlxSpriteGroup
 						box.animation.addByPrefix('natsuki', 'Doki Dialogue Natsu', 24, false);
 						box.animation.addByPrefix('sayori', 'Doki Dialogue Sayo', 24, false);
 						box.animation.addByPrefix('yuri', 'Doki Dialogue Yuri0', 24, false);
+						box.antialiasing = true;
 					}
 			}
 
@@ -118,6 +119,7 @@ class DialogueBox extends FlxSpriteGroup
 								portraitLeft.setGraphicSize(Std.int(portraitLeft.width * .9));
 								portraitLeft.updateHitbox();
 								portraitLeft.scrollFactor.set();
+								portraitLeft.antialiasing = true;
 								add(portraitLeft);
 								portraitLeft.visible = false;
 
@@ -127,6 +129,7 @@ class DialogueBox extends FlxSpriteGroup
 								portraitRight.setGraphicSize(Std.int(portraitRight.width * .9));
 								portraitRight.updateHitbox();
 								portraitRight.scrollFactor.set();
+								portraitRight.antialiasing = true;
 								add(portraitRight);
 								portraitRight.visible = false;
 					}
