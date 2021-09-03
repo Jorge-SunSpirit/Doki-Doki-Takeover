@@ -22,10 +22,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		var daBf:String = '';
 		switch (PlayState.SONG.player1)
 		{
-			case 'bf-pixel':
-				stageSuffix = '-pixel';
-				daBf = 'bf-pixel-dead';
-			case 'bf-pixelangry':
+			case 'bf-pixel' | 'bf-pixelangry':
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
 			case 'playablesenpai':
@@ -56,6 +53,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (bf.curCharacter == "playablesenpai") {
 			//FlxG.camera.zoom = FlxG.camera.zoom - 0.25;
+			camFollow.setPosition(bf.getGraphicMidpoint().x - 74, bf.getGraphicMidpoint().y - 150);
 
 			FlxTween.tween(FlxG.camera, {zoom: FlxG.camera.zoom - 0.15}, 0.35, {
 				ease: FlxEase.quadOut
@@ -117,14 +115,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			isEnding = true;
 			bf.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
-			switch (PlayState.SONG.player1)
-				{
-					case 'playablesenpai':
-						FlxG.sound.play(Paths.music('gameOverEnd-senpai'));
-					default:
-						FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix));
-				}
-			//FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix));
+			FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix));
 
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)
 			{

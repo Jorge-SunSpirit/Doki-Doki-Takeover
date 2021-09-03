@@ -177,7 +177,12 @@ class AnimationDebug extends FlxState
 		textAnim.text = char.animation.curAnim.name;
 
 		if (FlxG.keys.justPressed.ESCAPE)
-			FlxG.switchState(new MainMenuState());
+		{
+			if (PlayState.isStoryMode)
+				FlxG.switchState(new DokiStoryState());
+			else
+				FlxG.switchState(new FreeplayState());
+		}
 
 		if (FlxG.keys.justPressed.ENTER)
 			FlxG.switchState(new PlayState());
