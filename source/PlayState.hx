@@ -3794,9 +3794,9 @@ class PlayState extends MusicBeatState
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 		wiggleShit.update(Conductor.crochet);
 
-		// HARDCODING FOR MILF ZOOMS!
 		if (curSong.toLowerCase() == 'my sweets' && curBeat >= 512 && curBeat < 640 && camZooming && FlxG.camera.zoom < 1.35)
 		{
+			trace('hey am i working');
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
 		}
