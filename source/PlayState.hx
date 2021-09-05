@@ -3669,12 +3669,23 @@ class PlayState extends MusicBeatState
 						switch (curStep)
 						{
 							case 480:
+								camZooming = false;
 								gf.playAnim('countdown');
+								FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoOut});
+							case 484:
+								FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1, {ease: FlxEase.expoOut});
+							case 488:
+								FlxTween.tween(FlxG.camera, {zoom: 1.4}, 1, {ease: FlxEase.expoOut});
+							case 492:
+								FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.expoOut});
+							case 496:
+								camZooming = true;
 							
 							case 752:
+								camZooming = false;
 								staticshock.visible = true;
 								add(vignette);
-								FlxTween.tween(FlxG.camera, {zoom: 1.8}, 1, {
+								FlxTween.tween(FlxG.camera, {zoom: 2}, 1, {
 									ease: FlxEase.expoOut
 								});
 								new FlxTimer().start(0, function(tmr:FlxTimer)
@@ -3683,10 +3694,9 @@ class PlayState extends MusicBeatState
 									}, 5);
 								dad.playAnim('nara');
 							
-							case 767:
-								camZooming = false;
+							case 768:
 								staticshock.visible = false;
-								FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {
+								FlxTween.tween(FlxG.camera, {zoom: 0.75}, 0.2, {
 									ease: FlxEase.expoOut
 								});
 								new FlxTimer().start(0, function(tmr:FlxTimer)
