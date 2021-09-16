@@ -57,7 +57,11 @@ class Character extends FlxSprite
 				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
 				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-				animation.addByPrefix('countdown', 'GF countdown', 24, false);
+				//animation.addByPrefix('countdown', 'GF countdown', 24, false);
+				animation.addByIndices('countdownThree', 'GF countdown', [0, 1, 2, 3, 4, 5, 6], "", 24, false);
+				animation.addByIndices('countdownTwo', 'GF countdown', [7, 8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
+				animation.addByIndices('countdownOne', 'GF countdown', [16, 17, 18, 19, 20, 21, 22, 23], "", 24, false);
+				animation.addByIndices('countdownGo', 'GF countdown', [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34], "", 24, false);
 
 				loadOffsetFile(curCharacter);
 
@@ -111,11 +115,11 @@ class Character extends FlxSprite
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST');
 				frames = tex;
-				animation.addByPrefix('idle', 'Dad idle dance', 24);
-				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
-				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
-				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
-				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
+				animation.addByPrefix('idle', 'Dad idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24, false);
 
 				loadOffsetFile(curCharacter);
 
@@ -376,11 +380,11 @@ class Character extends FlxSprite
 			case 'natsuki':
 				tex = Paths.getSparrowAtlas('characters/Doki_Nat_Assets');
 				frames = tex;
-				animation.addByPrefix('idle', 'Nat Idle', 24);
-				animation.addByPrefix('singUP', 'Nat Sing Note Up', 24);
-				animation.addByPrefix('singRIGHT', 'Nat Sing Note Right', 24);
-				animation.addByPrefix('singDOWN', 'Nat Sing Note DOWN', 24);
-				animation.addByPrefix('singLEFT', 'Nat Sing Note Left', 24);
+				animation.addByPrefix('idle', 'Nat Idle', 24, false);
+				animation.addByPrefix('singUP', 'Nat Sing Note Up', 24, false);
+				animation.addByPrefix('singRIGHT', 'Nat Sing Note Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Nat Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Nat Sing Note Left', 24, false);
 
 				loadOffsetFile(curCharacter);
 
@@ -392,12 +396,12 @@ class Character extends FlxSprite
 				frames = tex;
 				animation.addByIndices('danceLeft', 'Sayo Idle nrw test', [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
 				animation.addByIndices('danceRight', 'Sayo Idle nrw test', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "", 24, false);
-				//animation.addByPrefix('idle', 'Sayo Idle', 24);
-				animation.addByPrefix('singUP', 'Sayo Sing Note Up', 24);
-				animation.addByPrefix('singRIGHT', 'Sayo Sing Note Right', 24);
-				animation.addByPrefix('singDOWN', 'Sayo Sing Note Down', 24);
-				animation.addByPrefix('singLEFT', 'Sayo Sing Note Left', 24);
-				animation.addByPrefix('nara', 'Sayo Nara animated', 24);
+				//animation.addByPrefix('idle', 'Sayo Idle', 24, false);
+				animation.addByPrefix('singUP', 'Sayo Sing Note Up', 24, false);
+				animation.addByPrefix('singRIGHT', 'Sayo Sing Note Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Sayo Sing Note Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Sayo Sing Note Left', 24, false);
+				animation.addByPrefix('nara', 'Sayo Nara animated', 24, false);
 
 				loadOffsetFile(curCharacter);
 
@@ -407,12 +411,12 @@ class Character extends FlxSprite
 				//on ice
 				tex = Paths.getSparrowAtlas('characters/Doki_Yuri_Assets');
 				frames = tex;
-				animation.addByPrefix('idle', 'Yuri Idle', 24);
-				animation.addByPrefix('singUP', 'Yuri Sing Note Up', 24);
-				animation.addByPrefix('singRIGHT', 'Yuri Sing Note Right', 24);
-				animation.addByPrefix('singDOWN', 'Yuri Sing Note Down', 24);
-				animation.addByPrefix('singLEFT', 'Yuri Sing Note Left', 24);
-				animation.addByPrefix('breath', 'Yuri Breath', 24);
+				animation.addByPrefix('idle', 'Yuri Idle', 24, false);
+				animation.addByPrefix('singUP', 'Yuri Sing Note Up', 24, false);
+				animation.addByPrefix('singRIGHT', 'Yuri Sing Note Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Yuri Sing Note Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Yuri Sing Note Left', 24, false);
+				animation.addByPrefix('breath', 'Yuri Breath', 24, false);
 
 				loadOffsetFile(curCharacter);
 
@@ -509,12 +513,19 @@ class Character extends FlxSprite
 					}
 
 				case 'sayori':
-					danced = !danced;
+					if (animation.curAnim.name != 'nara')
+					{
+						danced = !danced;
 
-					if (danced)
-						playAnim('danceRight');
-					else
-						playAnim('danceLeft');
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+
+				case 'yuri':
+					if (animation.curAnim.name != 'breath')
+						playAnim('idle');
 
 				default:
 					playAnim('idle');

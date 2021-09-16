@@ -596,3 +596,23 @@ class BotPlay extends Option
 	private override function updateDisplay():String
 		return "BotPlay " + (FlxG.save.data.botplay ? "on" : "off");
 }
+
+class GFCountdownOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+	
+	public override function press():Bool
+	{
+		FlxG.save.data.gfCountdown = !FlxG.save.data.gfCountdown;
+		trace('Girlfriend Countdown: ' + FlxG.save.data.gfCountdown);
+		display = updateDisplay();
+		return true;
+	}
+	
+	private override function updateDisplay():String
+		return "Girlfriend Countdown " + (FlxG.save.data.gfCountdown ? "on" : "off");
+}

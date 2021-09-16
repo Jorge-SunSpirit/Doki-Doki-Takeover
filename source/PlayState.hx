@@ -1322,9 +1322,19 @@ class PlayState extends MusicBeatState
 
 		startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 		{
-			dad.dance();
-			gf.dance();
-			boyfriend.playAnim('idle');
+			if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki') {}
+			else if (swagCounter % gfSpeed == 0)
+				gf.dance();
+
+			if (swagCounter % 2 == 0)
+			{
+				if (!boyfriend.animation.curAnim.name.startsWith("sing"))
+					boyfriend.dance();
+				if (!dad.animation.curAnim.name.startsWith("sing"))
+					dad.dance();
+			}
+			else if (dad.curCharacter == 'sayori')
+				dad.dance();
 
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
 			introAssets.set('default', ['ready', "set", "go"]);
@@ -1365,6 +1375,8 @@ class PlayState extends MusicBeatState
 							{
 								FlxG.sound.play(Paths.sound('intro3' + altSuffix), 0.6);
 							}
+					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
+						gf.playAnim('countdownThree');
 				case 1:
 					var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 					ready.scrollFactor.set();
@@ -1390,6 +1402,8 @@ class PlayState extends MusicBeatState
 							{
 								FlxG.sound.play(Paths.sound('intro2' + altSuffix), 0.6);
 							}
+					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
+						gf.playAnim('countdownTwo');
 				case 2:
 					var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 					set.scrollFactor.set();
@@ -1414,6 +1428,8 @@ class PlayState extends MusicBeatState
 							{
 								FlxG.sound.play(Paths.sound('intro1' + altSuffix), 0.6);
 							}
+					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
+						gf.playAnim('countdownOne');
 				case 3:
 					var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 					go.scrollFactor.set();
@@ -1440,12 +1456,13 @@ class PlayState extends MusicBeatState
 							{
 								FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
 							}
-				case 4:
+					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
+						gf.playAnim('countdownGo');
 			}
 
 			swagCounter += 1;
 			// generateSong('fresh');
-		}, 5);
+		}, 4);
 	}
 
 	var previousFrameTime:Int = 0;
@@ -1470,6 +1487,15 @@ class PlayState extends MusicBeatState
 
 		FlxG.sound.music.onComplete = songOutro;
 		vocals.play();
+
+		// have them all dance when the song starts
+		gf.dance();
+		if (!boyfriend.animation.curAnim.name.startsWith("sing"))
+			boyfriend.dance();
+		if (!dad.animation.curAnim.name.startsWith("sing"))
+			dad.dance();
+		else if (dad.curCharacter == 'sayori')
+			dad.dance();
 
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
@@ -2309,22 +2335,15 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
 
-		if (curSong == 'Fresh')
+		// i thought this was cute
+		if (curSong == 'rain clouds')
 		{
 			switch (curBeat)
 			{
+				case 0:
+					gfSpeed = 2;
 				case 16:
-					camZooming = true;
-					gfSpeed = 2;
-				case 48:
 					gfSpeed = 1;
-				case 80:
-					gfSpeed = 2;
-				case 112:
-					gfSpeed = 1;
-				case 163:
-					// FlxG.sound.music.stop();
-					// FlxG.switchState(new TitleState());
 			}
 		}
 
@@ -3310,7 +3329,7 @@ class PlayState extends MusicBeatState
 				if (boyfriend.holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || FlxG.save.data.botplay))
 				{
 					if (boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
-						boyfriend.playAnim('idle');
+						boyfriend.dance();
 				}
 		 
 				playerStrums.forEach(function(spr:FlxSprite)
@@ -3670,15 +3689,19 @@ class PlayState extends MusicBeatState
 						{
 							case 480:
 								camZooming = false;
-								gf.playAnim('countdown');
+								gf.playAnim('countdownThree');
 								FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoOut});
 							case 484:
+								gf.playAnim('countdownTwo');
 								FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1, {ease: FlxEase.expoOut});
 							case 488:
+								gf.playAnim('countdownOne');
 								FlxTween.tween(FlxG.camera, {zoom: 1.4}, 1, {ease: FlxEase.expoOut});
 							case 492:
+								gf.playAnim('countdownGo');
 								FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.expoOut});
 							case 496:
+								gf.dance();
 								camZooming = true;
 							
 							case 752:
@@ -3792,14 +3815,15 @@ class PlayState extends MusicBeatState
 			// else
 			// Conductor.changeBPM(SONG.bpm);
 
-			// Dad doesnt interupt his own notes
-			if (SONG.notes[Math.floor(curStep / 16)].mustHitSection)
-				{
-					if ((!dad.animation.curAnim.name.startsWith('nara') || !dad.animation.curAnim.name.startsWith('sing') || !dad.animation.curAnim.name.startsWith('breath')) && dad.animation.curAnim.finished)
-						{
-							dad.dance();
-						}
-				}
+			if (curBeat % 2 == 0)
+			{
+				if (!dad.animation.curAnim.name.startsWith('sing'))
+					dad.dance();
+				if (!boyfriend.animation.curAnim.name.startsWith('sing'))
+					boyfriend.dance();
+			}
+			else if (dad.curCharacter == 'sayori')
+				dad.dance();
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 		wiggleShit.update(Conductor.crochet);
@@ -3823,21 +3847,12 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
-		//|| curBeat % gfSpeed == 0
-		if (!gf.animation.curAnim.name.startsWith('countdown') && gf.animation.curAnim.finished || curBeat % gfSpeed == 0 && gf.animation.curAnim.finished)
+		if (!gf.animation.curAnim.name.startsWith('countdown') && curBeat % gfSpeed == 0)
 		{
 			//when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
 		}
 
-		if (!boyfriend.animation.curAnim.name.startsWith("sing"))
-		{
-			boyfriend.playAnim('idle');
-		}
-		if ((!dad.animation.curAnim.name.startsWith('sing') || !dad.animation.curAnim.name.startsWith('nara') || !dad.animation.curAnim.name.startsWith('breath')) && dad.animation.curAnim.finished)
-			{
-				dad.dance();
-			}
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
 		{
 			boyfriend.playAnim('hey', true);
