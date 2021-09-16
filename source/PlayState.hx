@@ -1494,8 +1494,6 @@ class PlayState extends MusicBeatState
 			boyfriend.dance();
 		if (!dad.animation.curAnim.name.startsWith("sing"))
 			dad.dance();
-		else if (dad.curCharacter == 'sayori')
-			dad.dance();
 
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
