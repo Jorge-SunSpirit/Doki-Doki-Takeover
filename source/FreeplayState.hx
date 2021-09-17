@@ -46,11 +46,8 @@ class FreeplayState extends MusicBeatState
 		{
 			var data:Array<String> = initSonglist[i].split(':');
 
-			/*
-			// what do you mean you're always false :gone:
-			if (!FlxG.save.data.monikabeaten && data[0].toLowerCase() == 'your reality')
+			if (!FlxG.save.data.monibeaten && data[0].toLowerCase() == 'your reality')
 				continue;
-			*/
 
 			songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1]));
 		}
