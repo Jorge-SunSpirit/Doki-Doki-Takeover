@@ -9,8 +9,8 @@ https://gamebanana.com/mods/47364
 ===============
 
 Programming: 
-AetherDX - https://twitter.com/AetherDX
 Jorge_SunSpirit - https://twitter.com/Jorge_SunSpirit
+M&M - https://twitter.com/ActualMandM
 
 Art:
 SirDusterBuster - https://twitter.com/SirDusterBuster
