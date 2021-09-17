@@ -24,7 +24,6 @@ class FreeplayState extends MusicBeatState
 	var selector:FlxText;
 	var curSelected:Int = 0;
 	var curDifficulty:Int = 1;
-	var weekbeaten:Int = 1;
 	var goku:Bool = false;
 	var scoreText:FlxText;
 	var diffText:FlxText;
@@ -38,7 +37,6 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
-		//if (FlxG.save.data.weekbeaten = true)
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/freeplaySonglist'));
 		//var initSonglist = CoolUtil.coolTextFile(Paths.txt('smile'));
 
@@ -47,6 +45,13 @@ class FreeplayState extends MusicBeatState
 		for (i in 0...initSonglist.length)
 		{
 			var data:Array<String> = initSonglist[i].split(':');
+
+			/*
+			// what do you mean you're always false :gone:
+			if (!FlxG.save.data.monikabeaten && data[0].toLowerCase() == 'your reality')
+				continue;
+			*/
+
 			songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1]));
 		}
 
@@ -71,11 +76,6 @@ class FreeplayState extends MusicBeatState
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
-
-		if(FlxG.save.data.monikabeaten == true)
-			{
-				weekbeaten = 0;
-			}
 
 		for (i in 0...songs.length)
 		{
@@ -180,7 +180,7 @@ class FreeplayState extends MusicBeatState
 
 		switch (songs[curSelected].songName.toLowerCase())
 		{
-			case 'your reality':
+			case 'your reality' | 'erb':
 				if (!goku)
 					goku = true;
 
@@ -234,7 +234,7 @@ class FreeplayState extends MusicBeatState
 
 		switch (songs[curSelected].songName.toLowerCase())
 		{
-			case 'your reality':
+			case 'your reality' | 'erb':
 				curDifficulty = 1;
 			default:
 				if (curDifficulty < 0)
@@ -256,6 +256,8 @@ class FreeplayState extends MusicBeatState
 				{
 					case 'your reality':
 						diffText.text = 'YOUR REALITY';
+					case 'erb':
+						diffText.text = 'GOKU';
 					default:
 						diffText.text = 'NORMAL';
 				}
