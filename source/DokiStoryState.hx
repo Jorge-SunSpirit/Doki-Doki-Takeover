@@ -642,25 +642,30 @@ class DokiStoryState extends MusicBeatState
 		function unlockedweeks()
 		{
 			if (FlxG.save.data.monibeaten == true)
-				{
-					story_sayo.animation.play('idle');
-				}
+			{
+				FlxG.save.data.weekUnlocked = 2;
+				story_sayo.animation.play('idle');
+			}
 			if (FlxG.save.data.sayobeaten == true)
-				{
-					story_nat.animation.play('idle');
-				}
+			{
+				FlxG.save.data.weekUnlocked = 3;
+				story_nat.animation.play('idle');
+			}
 			if (FlxG.save.data.natbeaten == true)
-				{
-					story_yuri.animation.play('idle');
-				}
+			{
+				FlxG.save.data.weekUnlocked = 4;
+				story_yuri.animation.play('idle');
+			}
 			if (FlxG.save.data.yuribeaten == true)
-				{
-					story_secret.animation.play('idle');
-				}
+			{
+				FlxG.save.data.weekUnlocked = 5;
+				story_secret.animation.play('idle');
+			}
 			if (FlxG.save.data.extrabeaten == true)
-				{
-					story_secret2.animation.play('idle');
-				}
+			{
+				FlxG.save.data.weekUnlocked = 6;
+				story_secret2.animation.play('idle');
+			}
 		}
 
 		function updateText()

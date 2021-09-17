@@ -46,19 +46,11 @@ class FreeplayState extends MusicBeatState
 		{
 			var data:Array<String> = initSonglist[i].split(':');
 
-			// there's gotta be a better way to do this lol
 			if (!FlxG.save.data.monibeaten && data[0].toLowerCase() == 'your reality')
 				continue;
-			if (!FlxG.save.data.sayobeaten && (data[0].toLowerCase() == 'rain clouds' || data[0].toLowerCase() == 'my confession'))
-				continue;
-			if (!FlxG.save.data.natbeaten && data[0].toLowerCase() == 'my sweets')
-				continue;
-			if (!FlxG.save.data.yuribeaten && (data[0].toLowerCase() == 'deep breaths' || data[0].toLowerCase() == 'obsession'))
-				continue;
-			if (!FlxG.save.data.extrabeaten && data[0].toLowerCase() == 'reconciliation')
-				continue;
 
-			songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1]));
+			if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
+				songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1]));
 		}
 
 

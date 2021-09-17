@@ -75,6 +75,11 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 		}
 
+		if (!FlxG.save.data.monibeaten)
+			FlxG.save.data.weekUnlocked = 1;
+
+		trace("CURRENT WEEK: " + FlxG.save.data.weekUnlocked);
+
 		persistentUpdate = persistentDraw = true;
 		
 		var bg:FlxSprite = new FlxSprite(-80,-80).loadGraphic(Paths.image('menuBG'));
@@ -302,6 +307,7 @@ class MainMenuState extends MusicBeatState
 					FlxG.save.data.natbeaten = true;
 					FlxG.save.data.yuribeaten = true;
 					FlxG.save.data.extrabeaten = true;
+					FlxG.save.data.weekUnlocked = 10;
 					#end
 				}
 			if (FlxG.keys.justPressed.P)
@@ -313,6 +319,14 @@ class MainMenuState extends MusicBeatState
 					FlxG.save.data.natbeaten = false;
 					FlxG.save.data.yuribeaten = false;
 					FlxG.save.data.extrabeaten = false;
+					FlxG.save.data.weekUnlocked = 1;
+					#end
+				}
+			if (FlxG.keys.justPressed.H)
+				{
+					#if debug
+					FlxG.save.data.weekUnlocked += 1;
+					trace('week unlocked now ' + FlxG.save.data.weekUnlocked);
 					#end
 				}
 
