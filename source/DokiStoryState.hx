@@ -35,11 +35,11 @@ class DokiStoryState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['High School Conflict', 'Bara No Yume', 'Your Demise'],
-		['My Confession'],
+		['Rain Clouds', 'My Confession'],
 		['My Sweets'],
 		['Deep Breaths','Obsession'],
 		['Reconciliation'],
-		['epiphany']
+		['Beathoven (Natsuki Mix)', 'Crucify (Yuri Mix)', "It's Complicated (Sayori Mix)", 'Glitcher (Monika Mix)']
 	];
 	var curDifficulty:Int = 1;
 
@@ -48,8 +48,8 @@ class DokiStoryState extends MusicBeatState
 		"Sayori",
 		"Natsuki",
 		"Yuri",
-		"Monika Extra",
-		"???"
+		"Monika Part 2",
+		"The Festival"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -283,7 +283,8 @@ class DokiStoryState extends MusicBeatState
 				case 4:
 					trace("recon to the battlefield");
 				case 5:
-					trace("expurgation");
+					trace("Festival");
+					//trace("expurgation");
 
 			}
 		#end
@@ -345,8 +346,8 @@ class DokiStoryState extends MusicBeatState
 							}
 					if (FlxG.save.data.extrabeaten == true)
 							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
 							}
 			}
 
@@ -601,7 +602,8 @@ class DokiStoryState extends MusicBeatState
 								trace("monika extra Week Selected");
 							case 5:
 								LoadingState.loadAndSwitchState(new PlayState(), true);
-								trace("expurgation Week Selected");
+								//trace("expurgation Week Selected");
+								trace("Festival Week Selected");
 						}
 				});
 			

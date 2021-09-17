@@ -361,6 +361,7 @@ class PlayState extends MusicBeatState
 		//dialogue shit
 		switch (SONG.song.toLowerCase())
 		{
+			//week 1
 		    case 'high school conflict':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictDialogue'));
 				extra3 = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictEndDialogue')); 
@@ -371,16 +372,41 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseDialogue'));
 				extra1 = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseEndDialogue'));
 				extra3 = CoolUtil.coolTextFile(Paths.txt('data/your demise/FinalCutsceneDialouge'));
+			//hidden week
 			case 'erb':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/erb/TestDialogue'));
+			
+			//sayo week
+			case 'rain clouds':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/rain clouds/IntroDialogue'));
 			case 'my confession':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my confession/IntroDialogue'));
+			
+			//nat week
+			case 'baka':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/baka/introdialogue'));
 			case 'my sweets':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my sweets/introdialogue'));
+			
+			//Yuri Week
 			case 'deep breaths':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue'));
 			case 'obsession':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue'));
+
+			//Monika returns?!
+			case 'reconciliation':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/reconciliation/IntroDialogue'));
+			
+			//heck yeah it's the long awaited festival!
+			case 'crucify (yuri mix)':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/crucify (yuri mix)/IntroDialogue'));
+			case "it's complicated (sayori mix)":
+				dialogue = CoolUtil.coolTextFile(Paths.txt("data/it's complicated (sayori mix)/IntroDialogue"));
+			case 'glitcher (monika mix)':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/IntroDialogue'));
+			case "beathoven (natsuki mix)":
+				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue"));
 		}
 
 		trace(SONG.stage);
