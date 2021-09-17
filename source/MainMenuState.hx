@@ -291,44 +291,36 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
+			#if debug
 			if (FlxG.keys.justPressed.I)
-				{
-					#if debug
-					FlxG.switchState(new MainMenuState());
-					#end
-				}
+				FlxG.switchState(new MainMenuState());
 
 			if (FlxG.keys.justPressed.O)
-				{
-					#if debug
-					trace('hello');
-					FlxG.save.data.monibeaten = true;
-					FlxG.save.data.sayobeaten = true;
-					FlxG.save.data.natbeaten = true;
-					FlxG.save.data.yuribeaten = true;
-					FlxG.save.data.extrabeaten = true;
-					FlxG.save.data.weekUnlocked = 10;
-					#end
-				}
+			{
+				trace('hello');
+				FlxG.save.data.monibeaten = true;
+				FlxG.save.data.sayobeaten = true;
+				FlxG.save.data.natbeaten = true;
+				FlxG.save.data.yuribeaten = true;
+				FlxG.save.data.extrabeaten = true;
+				FlxG.save.data.weekUnlocked = 10;
+			}
 			if (FlxG.keys.justPressed.P)
-				{
-					#if debug
-					trace('not beaten :(');
-					FlxG.save.data.monibeaten = false;
-					FlxG.save.data.sayobeaten = false;
-					FlxG.save.data.natbeaten = false;
-					FlxG.save.data.yuribeaten = false;
-					FlxG.save.data.extrabeaten = false;
-					FlxG.save.data.weekUnlocked = 1;
-					#end
-				}
-			if (FlxG.keys.justPressed.H)
-				{
-					#if debug
-					FlxG.save.data.weekUnlocked += 1;
-					trace('week unlocked now ' + FlxG.save.data.weekUnlocked);
-					#end
-				}
+			{
+				trace('not beaten :(');
+				FlxG.save.data.monibeaten = false;
+				FlxG.save.data.sayobeaten = false;
+				FlxG.save.data.natbeaten = false;
+				FlxG.save.data.yuribeaten = false;
+				FlxG.save.data.extrabeaten = false;
+				FlxG.save.data.weekUnlocked = 1;
+			}
+			if (FlxG.keys.justPressed.U)
+			{
+				FlxG.save.data.weekUnlocked += 1;
+				trace('week unlocked now ' + FlxG.save.data.weekUnlocked);
+			}
+			#end
 
 			if (controls.ACCEPT)
 				{
