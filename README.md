@@ -38,5 +38,5 @@ DDLC Links: **[DDLC Official Webiste](http://ddlc.moe) ⋅ [itch.io page](https:
 - [Team Salvato](https://twitter.com/TeamSalvato) - Publishers of DDLC
 
 ### Kade Engine
-- [KadeDeveloper](https://twitter.com/KadeDeveloper) - Maintainer and lead programmer
+- [KadeDev](https://twitter.com/KadeDeveloper) - Maintainer and lead programmer
 - [The contributors](https://github.com/KadeDev/Kade-Engine/graphs/contributors)

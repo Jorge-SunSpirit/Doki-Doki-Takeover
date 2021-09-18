@@ -1,4 +1,4 @@
-Thanks for downloading Monika Full Week for Friday Night Funkin'!
+Thanks for downloading Friday Night Funkin': Doki Doki Takeover!
 
 !! Minor warning to those with epilepsy or issues regarding fast imagery and flashing lights during the mod's 3rd song. Play at your own discretion. !!
 
@@ -19,13 +19,19 @@ TokyoGalaxyOG - https://twitter.com/TokyoGalaxyOG
 Music:
 CelShader - https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ
 Kallionic - https://youtube.com/kallionic
+Stardust Tunes - https://twitter.com/StardustTunes
+Clem - https://twitter.com/ClemO___O
+blufirecat - https://twitter.com/starrie_blu
+Saruky - https://twitter.com/Saruky__
+Matt$ - https://twitter.com/matt_currency
+HPK - https://twitter.com/HighPoweredArt
 
 
 ===============
 SPECIAL THANKS
 ===============
 Blantados did Vocals and Charting for "Your Reality"! - https://www.youtube.com/channel/UC4rwJYVeDHxGKnFDhHz88ZQ
-Ash implemented Alt animations per note and helped with adding the ending song cutscenes! - https://gamebanana.com/members/1813477
+aśh implemented Alt animations per note and helped with adding the ending song cutscenes! - https://gamebanana.com/members/1813477
 Cval, Thank you for Charting the second song! - https://twitter.com/cval_brown
 Lumitic, the mad lad that actually knows how to code and helped with the project. - https://twitter.com/PeacefulLuma
 Zeexel32 really likes the fucking mcrib for some reason. - https://twitter.com/Zeexel32
@@ -35,16 +41,16 @@ foomfs for Thumbnail Design - https://twitter.com/foomfs
 =============
 OTHER CREDITS
 =============
-Friday Night Funkin' was created by ninjamuffin99, PhantomArcade, EvilSk8r, and KawaiSprite
+Friday Night Funkin' was created by ninjamuffin99, Phantom Arcade, evilsk8r, and Kawai Sprite
 https://twitter.com/ninja_muffin99
 https://twitter.com/phantomarcade3k
 https://twitter.com/evilsk8r
 https://twitter.com/kawaisprite
 
 
-Doki Doki literature is owned by Dan Salvato (https://twitter.com/dansalvato), and published by Team Salvato (https://twitter.com/TeamSalvato).
+Doki Doki Literature Club! is owned by Dan Salvato (https://twitter.com/dansalvato) and published by Team Salvato (https://twitter.com/TeamSalvato).
 https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/
 
-Monika Full Week is built off KadeEngine, maintained by KadeDeveloper and its contributors.
+Friday Night Funkin': Doki Doki Takeover is built off of Kade Engine, maintained by KadeDev and its contributors.
 https://twitter.com/KadeDeveloper
 https://github.com/KadeDev/Kade-Engine

@@ -86,7 +86,8 @@
 	
 	<assets path='example_mods' rename='mods' embed='false'/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
-	<assets path='art/monika-readme.txt' rename='monika_readme.txt'/>
+	<assets path='art/doki-readme.txt' rename='doki_readme.txt'/>
+	<assets path='LICENSE' rename='LICENSE.txt' />
 	<!-- <template path='mods' /> -->
 	
 	<!-- <assets path="CHANGELOG.md" rename='changelog.txt'/> -->
