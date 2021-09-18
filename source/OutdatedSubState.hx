@@ -90,12 +90,16 @@ class OutdatedSubState extends MusicBeatState
 			{
 				FlxG.save.data.funnyquestionpopup = true;
 				FlxG.save.data.monibeaten = true;
+				FlxG.save.data.weekUnlocked = 2;
 
+				#if debug
 				//devonlystuff
 				FlxG.save.data.sayobeaten = true;
 				FlxG.save.data.natbeaten = true;
 				FlxG.save.data.yuribeaten = true;
 				FlxG.save.data.extrabeaten = true;
+				FlxG.save.data.weekUnlocked = 10;
+				#end
 
 				FlxG.switchState(new MainMenuState());
 			}
