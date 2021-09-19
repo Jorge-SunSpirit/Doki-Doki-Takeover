@@ -3883,7 +3883,7 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
-		if ((!gf.animation.curAnim.name.startsWith('countdown') || !gf.animation.curAnim.name.startsWith('neck')) && curBeat % gfSpeed == 0)
+		if (!gf.animation.curAnim.name.startsWith('countdown') && !gf.animation.curAnim.name.startsWith('neck') && curBeat % gfSpeed == 0)
 		{
 			//when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
@@ -3893,11 +3893,7 @@ class PlayState extends MusicBeatState
 		{
 			switch (curBeat)
 			{
-				/*
-				TODO:
-				 - the lead into the lights cutting out, have static start to slowly fade in as Yuri is hitting the bad notes
-				 - GF to be looping in the neck break animation (why isn't this playing :pensive:)
-				*/
+				// TODO: the lead into the lights cutting out, have static start to slowly fade in as Yuri is hitting the bad notes
 				case 134:
 					defaultCamZoom = 1.2;
 					add(whiteflash);
