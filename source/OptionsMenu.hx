@@ -42,8 +42,7 @@ class OptionsMenu extends MusicBeatState
 			new RainbowFPSOption("Make the FPS Counter Rainbow (Only works with the FPS Counter toggled on and Flashing Lights toggled off)"),
 			new AccuracyOption("Display accuracy information."),
 			new NPSDisplayOption("Shows your current Notes Per Second."),
-			new SongPositionOption("Show the songs current position (as a bar)"),
-			new GFCountdownOption("Have Girlfriend count down before the song starts.")
+			new SongPositionOption("Show the songs current position (as a bar)")
 		]),
 		
 		new OptionCategory("Misc", [
@@ -69,6 +68,14 @@ class OptionsMenu extends MusicBeatState
 	override function create()
 	{
 		instance = this;
+
+		if (FlxG.save.data.sayobeaten == true)
+		{
+			options.push(new OptionCategory("Unlockables", [
+				new GFCountdownOption("Have Girlfriend count down before the song starts."),
+			]));
+		}
+
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
 
 		menuBG.color = 0xFFea71fd;

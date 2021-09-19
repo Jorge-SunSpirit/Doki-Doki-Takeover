@@ -190,6 +190,7 @@ class PlayState extends MusicBeatState
 	var space:FlxBackdrop;
 	var whiteflash:FlxSprite;
 	var blackScreen:FlxSprite;
+	var blackScreenBG:FlxSprite;
 
 	var altAnim:String = "";
 	var fc:Bool = true;
@@ -350,11 +351,15 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 		
-		whiteflash = new FlxSprite(-100, -100).makeGraphic(Std.int(FlxG.width * 100), Std.int(FlxG.height * 100), FlxColor.WHITE);
+		whiteflash = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 		whiteflash.scrollFactor.set();
 
-		blackScreen = new FlxSprite(-100, -100).makeGraphic(Std.int(FlxG.width * 100), Std.int(FlxG.height * 100), FlxColor.BLACK);
+		blackScreen = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 		blackScreen.scrollFactor.set();
+
+		blackScreenBG = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+		blackScreenBG.alpha = 0;
+		blackScreenBG.scrollFactor.set();
 
 		trace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: ' + Conductor.timeScale + '\nBotPlay : ' + FlxG.save.data.botplay);
 	
@@ -819,6 +824,11 @@ class PlayState extends MusicBeatState
 		}
 
 		add(gf);
+
+		// <3 layering
+		if (SONG.song.toLowerCase() == 'obsession')
+			add(blackScreenBG);
+
 		add(dad);
 		add(boyfriend);
 
@@ -961,12 +971,14 @@ class PlayState extends MusicBeatState
 		scoreTxt.scrollFactor.set();
 		if (offsetTesting)
 			scoreTxt.x += 300;
-		if(FlxG.save.data.botplay) scoreTxt.x = FlxG.width / 2 - 20;													  
+		if(FlxG.save.data.botplay) scoreTxt.x = FlxG.width / 2 - 20;
+		scoreTxt.antialiasing = true;
 		add(scoreTxt);
 
 		replayTxt = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		replayTxt.scrollFactor.set();
+		replayTxt.antialiasing = true;
 		if (loadRep)
 		{
 			add(replayTxt);
@@ -975,6 +987,7 @@ class PlayState extends MusicBeatState
 		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
 		botPlayState.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
+		botPlayState.antialiasing = true;
 		
 		if(FlxG.save.data.botplay && !loadRep) add(botPlayState);
 
@@ -993,6 +1006,8 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+		replayTxt.cameras = [camHUD];
+		botPlayState.cameras = [camHUD];
 		doof.cameras = [camHUD];
 		doof2.cameras = [camHUD];
 		doof3.cameras = [camHUD];
@@ -1095,6 +1110,8 @@ class PlayState extends MusicBeatState
 							//FlxG.sound.music.stop();
 							remove(strumLineNotes);
 							remove(scoreTxt);
+							remove(replayTxt);
+							remove(botPlayState);
 							remove(healthBarBG);
 							remove(healthBar);
 							remove(iconP1);
@@ -1138,6 +1155,8 @@ class PlayState extends MusicBeatState
 								FlxG.sound.music.stop();
 								remove(strumLineNotes);
 								remove(scoreTxt);
+								remove(replayTxt);
+								remove(botPlayState);
 								remove(healthBarBG);
 								remove(healthBar);
 								remove(iconP1);
@@ -1556,12 +1575,14 @@ class PlayState extends MusicBeatState
 			songName.cameras = [camHUD];
 		}
 		
+		/*
 		// Song check real quick
 		switch(curSong)
 		{
 			case 'Bopeebo' | 'Philly' | 'Blammed' | 'Cocoa' | 'Eggnog': allowedToHeadbang = true;
 			default: allowedToHeadbang = false;
 		}
+		*/
 		
 		#if windows
 		// Updating Discord Rich Presence (with Time Left)
@@ -2157,6 +2178,7 @@ class PlayState extends MusicBeatState
 
 		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null)
 		{
+			/*
 			// Make sure Girlfriend cheers only for certain songs
 			if(allowedToHeadbang)
 			{
@@ -2252,6 +2274,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 			}
+			*/
 			
 			#if windows
 			if (luaModchart != null)
@@ -2269,12 +2292,14 @@ class PlayState extends MusicBeatState
 					offsetY = luaModchart.getVar("followYOffset", "float");
 				}
 				#end
-				camFollow.setPosition(dad.getMidpoint().x + 150 + offsetX, dad.getMidpoint().y - 100 + offsetY);
+
+				if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && curBeat < 142))
+					camFollow.setPosition(dad.getMidpoint().x + 150 + offsetX, dad.getMidpoint().y - 100 + offsetY);
+
 				#if windows
 				if (luaModchart != null)
 					luaModchart.executeState('playerTwoTurn', []);
 				#end
-				// camFollow.setPosition(lucky.getMidpoint().x - 120, lucky.getMidpoint().y + 210);
 
 				switch (dad.curCharacter)
 				{
@@ -2313,7 +2338,9 @@ class PlayState extends MusicBeatState
 					offsetY = luaModchart.getVar("followYOffset", "float");
 				}
 				#end
-				camFollow.setPosition(boyfriend.getMidpoint().x - 100 + offsetX, boyfriend.getMidpoint().y - 100 + offsetY);
+
+				if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && curBeat < 142))
+					camFollow.setPosition(boyfriend.getMidpoint().x - 100 + offsetX, boyfriend.getMidpoint().y - 100 + offsetY);
 
 				#if windows
 				if (luaModchart != null)
@@ -2368,17 +2395,6 @@ class PlayState extends MusicBeatState
 					gfSpeed = 2;
 				case 16:
 					gfSpeed = 1;
-			}
-		}
-
-		if (curSong == 'Bopeebo')
-		{
-			switch (curBeat)
-			{
-				case 128, 129, 130:
-					vocals.volume = 0;
-					// FlxG.sound.music.stop();
-					// FlxG.switchState(new PlayState());
 			}
 		}
 
@@ -2536,48 +2552,26 @@ class PlayState extends MusicBeatState
 							if (SONG.notes[Math.floor(curStep / 16)].altAnim)
 								altAnim = '-alt';
 						}
+
 						if (daNote.noteType == 1)
 							altAnim = '-alt';
 
-						switch (daNote.noteType)
+						if (daNote.noteType != 2 || (daNote.noteType == 2 && curSong.toLowerCase() != "your demise"))
+						{
+							switch (Math.abs(daNote.noteData))
 							{
 								case 2:
-									{
-										if (curSong.toLowerCase() != "your demise")
-											{
-												switch (Math.abs(daNote.noteData))
-												{
-													case 2:
-														dad.playAnim('singUP' + altAnim, true);
-													case 3:
-														dad.playAnim('singRIGHT' + altAnim, true);
-													case 4:
-														dad.playAnim('idle' + altAnim, true);
-													case 1:
-														dad.playAnim('singDOWN' + altAnim, true);
-													case 0:
-														dad.playAnim('singLEFT' + altAnim, true);
-												}
-											}
-
-									}
-								default:
-									{
-										switch (Math.abs(daNote.noteData))
-										{
-											case 2:
-												dad.playAnim('singUP' + altAnim, true);
-											case 3:
-												dad.playAnim('singRIGHT' + altAnim, true);
-											case 4:
-												dad.playAnim('idle' + altAnim, true);
-											case 1:
-												dad.playAnim('singDOWN' + altAnim, true);
-											case 0:
-												dad.playAnim('singLEFT' + altAnim, true);
-										}
-									}
+									dad.playAnim('singUP' + altAnim, true);
+								case 3:
+									dad.playAnim('singRIGHT' + altAnim, true);
+								case 4:
+									dad.playAnim('idle' + altAnim, true);
+								case 1:
+									dad.playAnim('singDOWN' + altAnim, true);
+								case 0:
+									dad.playAnim('singLEFT' + altAnim, true);
 							}
+						}
 						
 						cpuStrums.forEach(function(spr:FlxSprite)
 						{
@@ -2825,6 +2819,7 @@ class PlayState extends MusicBeatState
 					trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
 					showCutscene = true;
 
+					/*
 					if (SONG.song.toLowerCase() == 'eggnog')
 						{
 							var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
@@ -2835,6 +2830,7 @@ class PlayState extends MusicBeatState
 		
 							FlxG.sound.play(Paths.sound('Lights_Shut_off'));
 						}
+					*/
 					
 					switch (SONG.song.toLowerCase())
 					{
@@ -3858,7 +3854,7 @@ class PlayState extends MusicBeatState
 			if (curBeat % 2 == 0)
 			{
 				if (!dad.animation.curAnim.name.startsWith('sing'))
-					dad.dance();
+					dad.dance(SONG.notes[Math.floor(curStep / 16)].altAnim);
 				if (!boyfriend.animation.curAnim.name.startsWith('sing'))
 					boyfriend.dance();
 			}
@@ -3887,10 +3883,63 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
-		if (!gf.animation.curAnim.name.startsWith('countdown') && curBeat % gfSpeed == 0)
+		if ((!gf.animation.curAnim.name.startsWith('countdown') || !gf.animation.curAnim.name.startsWith('neck')) && curBeat % gfSpeed == 0)
 		{
 			//when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
+		}
+
+		if (curSong.toLowerCase() == 'obsession')
+		{
+			switch (curBeat)
+			{
+				/*
+				TODO:
+				 - the lead into the lights cutting out, have static start to slowly fade in as Yuri is hitting the bad notes
+				 - GF to be looping in the neck break animation (why isn't this playing :pensive:)
+				*/
+				case 134:
+					defaultCamZoom = 1.2;
+					add(whiteflash);
+					add(blackScreen);
+					blackScreenBG.alpha = 0.95;
+					remove(deskfront);
+					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.8);
+					// health related stuff
+					healthBarBG.alpha = 0;
+					healthBar.alpha = 0;
+					iconP1.alpha = 0;
+					iconP2.alpha = 0;
+					scoreTxt.alpha = 0;
+				case 136:
+					// shit gets serious
+					iconP2.changeIcon('yuri-crazy');
+					health = 1;
+					gf.playAnim('neck', true);
+					boyfriend.x = dad.y + 125;
+				case 142:
+					remove(blackScreen);
+
+					new FlxTimer().start(0.1, function(tmr:FlxTimer)
+					{
+						whiteflash.alpha -= 0.15;
+
+						if (whiteflash.alpha > 0.3)
+							tmr.reset(0.1);
+					});
+
+					new FlxTimer().start(0.1, function(tmr:FlxTimer)
+					{
+						healthBarBG.alpha += 0.15;
+						healthBar.alpha += 0.15;
+						iconP1.alpha += 0.15;
+						iconP2.alpha += 0.15;
+						scoreTxt.alpha += 0.15;
+	
+						if (healthBarBG.alpha < 1)
+							tmr.reset(0.1);
+					});
+			}
 		}
 
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
