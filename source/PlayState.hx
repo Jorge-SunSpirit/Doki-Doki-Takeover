@@ -2543,7 +2543,23 @@ class PlayState extends MusicBeatState
 							{
 								case 2:
 									{
-										
+										if (curSong.toLowerCase() != "your demise")
+											{
+												switch (Math.abs(daNote.noteData))
+												{
+													case 2:
+														dad.playAnim('singUP' + altAnim, true);
+													case 3:
+														dad.playAnim('singRIGHT' + altAnim, true);
+													case 4:
+														dad.playAnim('idle' + altAnim, true);
+													case 1:
+														dad.playAnim('singDOWN' + altAnim, true);
+													case 0:
+														dad.playAnim('singLEFT' + altAnim, true);
+												}
+											}
+
 									}
 								default:
 									{
