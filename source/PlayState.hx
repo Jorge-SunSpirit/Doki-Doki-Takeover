@@ -3923,7 +3923,7 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
 				case 136:
 					// shit gets serious
-					iconP2.changeIcon('yuri-crazy');
+					yuriGoCrazy();
 					health = 1;
 					gf.playAnim('necksnap', true);
 					boyfriend.x = dad.y + 125;
@@ -3964,6 +3964,19 @@ class PlayState extends MusicBeatState
 				lightningStrikeShit();
 			}
 		}
+	}
+
+	function yuriGoCrazy()
+	{
+		// have to remove/add bf as well because layering :)
+		var olddadx = PlayState.dad.x;
+		var olddady = PlayState.dad.y;
+		remove(boyfriend);
+		remove(dad);
+		dad = new Character(olddadx, olddady, 'sayori');
+		add(dad);
+		add(boyfriend);
+		iconP2.changeIcon('yuri-crazy');
 	}
 
 	var curLight:Int = 0;
