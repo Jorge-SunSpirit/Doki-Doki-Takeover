@@ -3854,7 +3854,7 @@ class PlayState extends MusicBeatState
 			if (SONG.notes[Math.floor(curStep / 16)].changeBPM)
 			{
 				Conductor.changeBPM(SONG.notes[Math.floor(curStep / 16)].bpm);
-				FlxG.log.add('CHANGED BPM!');
+				FlxG.log.add('CHANGED BPM TO ' + SONG.notes[Math.floor(curStep / 16)].bpm);
 			}
 			// else
 			// Conductor.changeBPM(SONG.bpm);
@@ -3916,8 +3916,6 @@ class PlayState extends MusicBeatState
 					staticshock.visible = false;
 					add(whiteflash);
 					add(blackScreen);
-					add(vignette);
-					vignette.alpha = 0.6;
 					blackScreenBG.alpha = 0.9;
 					remove(deskfront);
 					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
@@ -3929,6 +3927,8 @@ class PlayState extends MusicBeatState
 					boyfriend.x = dad.y + 125;
 				case 142:
 					remove(blackScreen);
+					add(vignette);
+					vignette.alpha = 0.6;
 
 					new FlxTimer().start(0.1, function(tmr:FlxTimer)
 					{

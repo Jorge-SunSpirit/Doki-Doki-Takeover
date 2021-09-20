@@ -426,7 +426,5 @@ class MainMenuState extends MusicBeatState
 
 			if (show == 'fumo' && curBeat % 2 == 0)
 				menu_character.animation.play('play', true);
-
-			FlxG.log.add(curBeat);
 		}
 	}
