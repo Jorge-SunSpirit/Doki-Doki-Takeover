@@ -3918,7 +3918,7 @@ class PlayState extends MusicBeatState
 					add(blackScreen);
 					add(vignette);
 					vignette.alpha = 0.6;
-					blackScreenBG.alpha = 0.95;
+					blackScreenBG.alpha = 0.9;
 					remove(deskfront);
 					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
 				case 136:
