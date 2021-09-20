@@ -357,6 +357,12 @@ class PlayState extends MusicBeatState
 		blackScreen = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 		blackScreen.scrollFactor.set();
 
+		if (SONG.song.toLowerCase() == 'obsession')
+		{
+			whiteflash.cameras = [camHUD];
+			blackScreen.cameras = [camHUD];
+		}
+
 		blackScreenBG = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 		blackScreenBG.alpha = 0;
 		blackScreenBG.scrollFactor.set();
@@ -557,8 +563,10 @@ class PlayState extends MusicBeatState
 					vignette.scrollFactor.set();
 					vignette.x = 0;
 					vignette.y = 0;
-					vignette.cameras = [camHUD];
 					vignette.alpha = 0;
+
+					if (SONG.song.toLowerCase() != 'obsession')
+						vignette.cameras = [camHUD];
 
 					staticshock = new FlxSprite(posX, posY);
 					staticshock.frames = Paths.getSparrowAtlas('clubroom/staticshock','doki');
@@ -3893,20 +3901,26 @@ class PlayState extends MusicBeatState
 		{
 			switch (curBeat)
 			{
-				// TODO: the lead into the lights cutting out, have static start to slowly fade in as Yuri is hitting the bad notes
+				case 119:
+					staticshock.visible = true;
+					staticshock.alpha = 0;
+					new FlxTimer().start(1, function(tmr:FlxTimer)
+					{
+						staticshock.alpha += 0.1;
+	
+						if (staticshock.alpha < 1)
+							tmr.reset(1);
+					});
 				case 134:
 					defaultCamZoom = 1.2;
+					staticshock.visible = false;
 					add(whiteflash);
 					add(blackScreen);
+					add(vignette);
+					vignette.alpha = 0.6;
 					blackScreenBG.alpha = 0.95;
 					remove(deskfront);
-					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.8);
-					// health related stuff
-					healthBarBG.alpha = 0;
-					healthBar.alpha = 0;
-					iconP1.alpha = 0;
-					iconP2.alpha = 0;
-					scoreTxt.alpha = 0;
+					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
 				case 136:
 					// shit gets serious
 					iconP2.changeIcon('yuri-crazy');
@@ -3921,18 +3935,6 @@ class PlayState extends MusicBeatState
 						whiteflash.alpha -= 0.15;
 
 						if (whiteflash.alpha > 0.3)
-							tmr.reset(0.1);
-					});
-
-					new FlxTimer().start(0.1, function(tmr:FlxTimer)
-					{
-						healthBarBG.alpha += 0.15;
-						healthBar.alpha += 0.15;
-						iconP1.alpha += 0.15;
-						iconP2.alpha += 0.15;
-						scoreTxt.alpha += 0.15;
-	
-						if (healthBarBG.alpha < 1)
 							tmr.reset(0.1);
 					});
 			}

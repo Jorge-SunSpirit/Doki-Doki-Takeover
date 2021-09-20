@@ -69,7 +69,7 @@ class OptionsMenu extends MusicBeatState
 	{
 		instance = this;
 
-		if (FlxG.save.data.sayobeaten == true)
+		if (FlxG.save.data.sayobeaten)
 		{
 			options.push(new OptionCategory("Unlockables", [
 				new GFCountdownOption("Have Girlfriend count down before the song starts."),
