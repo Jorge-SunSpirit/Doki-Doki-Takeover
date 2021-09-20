@@ -3925,7 +3925,7 @@ class PlayState extends MusicBeatState
 					// shit gets serious
 					iconP2.changeIcon('yuri-crazy');
 					health = 1;
-					gf.playAnim('GF NECKSNAP', true);
+					gf.playAnim('necksnap', true);
 					boyfriend.x = dad.y + 125;
 				case 142:
 					remove(blackScreen);
