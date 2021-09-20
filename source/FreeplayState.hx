@@ -1,5 +1,6 @@
 package;
 
+import Song.SwagSong;
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -35,6 +36,20 @@ class FreeplayState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
+	public static var songData:Map<String,Array<SwagSong>> = [];
+
+	public static function loadDiff(diff:Int, name:String, array:Array<SwagSong>)
+		{
+			try 
+			{
+				array.push(Song.loadFromJson(Highscore.formatSong(name, diff), name));
+			}
+			catch(ex)
+			{
+				// do nada
+			}
+		}
+
 	override function create()
 	{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/freeplaySonglist'));
@@ -45,12 +60,19 @@ class FreeplayState extends MusicBeatState
 		for (i in 0...initSonglist.length)
 		{
 			var data:Array<String> = initSonglist[i].split(':');
+			var meta = new SongMetadata(data[0], Std.parseInt(data[2]), data[1]);
 
 			if (!FlxG.save.data.monibeaten && data[0].toLowerCase() == 'your reality')
 				continue;
 
 			if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
-				songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1]));
+				songs.push(meta);
+
+			var diffs = [];
+			loadDiff(0,meta.songName,diffs);
+			loadDiff(1,meta.songName,diffs);
+			loadDiff(2,meta.songName,diffs);
+			songData.set(meta.songName,diffs);
 		}
 
 
@@ -290,6 +312,16 @@ class FreeplayState extends MusicBeatState
 		#if PRELOAD_ALL
 		FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
 		#end
+
+		var hmm;
+			try
+			{
+				hmm = songData.get(songs[curSelected].songName)[curDifficulty];
+				if (hmm != null)
+					Conductor.changeBPM(hmm.bpm);
+			}
+			catch(ex)
+			{}
 
 		var bullShit:Int = 0;
 

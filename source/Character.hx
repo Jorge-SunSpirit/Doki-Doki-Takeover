@@ -57,11 +57,11 @@ class Character extends FlxSprite
 				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
 				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-				//animation.addByPrefix('countdown', 'GF countdown', 24, false);
 				animation.addByIndices('countdownThree', 'GF countdown', [0, 1, 2, 3, 4, 5, 6], "", 24, false);
 				animation.addByIndices('countdownTwo', 'GF countdown', [7, 8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
 				animation.addByIndices('countdownOne', 'GF countdown', [16, 17, 18, 19, 20, 21, 22, 23], "", 24, false);
 				animation.addByIndices('countdownGo', 'GF countdown', [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34], "", 24, false);
+				animation.addByPrefix('neck', 'GF countdown', 24, true);
 
 				loadOffsetFile(curCharacter);
 
@@ -495,7 +495,7 @@ class Character extends FlxSprite
 	/**
 	 * FOR GF DANCING SHIT
 	 */
-	public function dance()
+	public function dance(altAnim:Bool = false)
 	{
 		if (!debugMode)
 		{
@@ -525,10 +525,18 @@ class Character extends FlxSprite
 
 				case 'yuri':
 					if (animation.curAnim.name != 'breath')
-						playAnim('idle');
+					{
+						if (altAnim && animation.getByName('idle-alt') != null)
+							playAnim('idle-alt')
+						else
+							playAnim('idle');
+					}
 
 				default:
-					playAnim('idle');
+					if (altAnim && animation.getByName('idle-alt') != null)
+						playAnim('idle-alt')
+					else
+						playAnim('idle');
 			}
 		}
 	}

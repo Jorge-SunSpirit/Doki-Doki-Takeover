@@ -73,6 +73,7 @@ class MainMenuState extends MusicBeatState
 		if (!FlxG.sound.music.playing)
 		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			Conductor.changeBPM(102);
 		}
 
 		if (!FlxG.save.data.monibeaten)
@@ -167,7 +168,7 @@ class MainMenuState extends MusicBeatState
 		logoBl.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
 		logoBl.antialiasing = true;
 		logoBl.scale.set(0.5, 0.5);
-		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		add(logoBl);
@@ -193,7 +194,7 @@ class MainMenuState extends MusicBeatState
 					menu_character.frames = Paths.getSparrowAtlas('menucharacters/fumo');
 					menu_character.antialiasing = true;
 					menu_character.scale.set(1, 1);
-					menu_character.animation.addByPrefix('play', 'cirno_fumo', 24);
+					menu_character.animation.addByPrefix('play', 'cirno_fumo', 24, false);
 					menu_character.updateHitbox();
 					menu_character.animation.play('play');
 					add(menu_character);
@@ -313,6 +314,7 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.natbeaten = false;
 				FlxG.save.data.yuribeaten = false;
 				FlxG.save.data.extrabeaten = false;
+				FlxG.save.data.gfCountdown = false;
 				FlxG.save.data.weekUnlocked = 1;
 			}
 			if (FlxG.keys.justPressed.U)
@@ -359,6 +361,10 @@ class MainMenuState extends MusicBeatState
 						});
 				}
 		}
+
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
+
 		super.update(elapsed);
 		menuItems.forEach(function(spr:FlxSprite)
 		{
@@ -410,5 +416,17 @@ class MainMenuState extends MusicBeatState
 
 				spr.updateHitbox();
 			});
+		}
+
+	override function beatHit()
+		{
+			super.beatHit();
+		
+			logoBl.animation.play('bump', true);
+
+			if (show == 'fumo' && curBeat % 2 == 0)
+				menu_character.animation.play('play', true);
+
+			FlxG.log.add(curBeat);
 		}
 	}
