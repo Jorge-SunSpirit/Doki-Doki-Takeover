@@ -306,6 +306,23 @@ class Character extends FlxSprite
 
 				antialiasing = false;
 
+			case 'spirit':
+				frames = Paths.getPackerAtlas('characters/spirit');
+				animation.addByPrefix('idle', "idle spirit_", 24, false);
+				animation.addByPrefix('singUP', "up_", 24, false);
+				animation.addByPrefix('singRIGHT', "right_", 24, false);
+				animation.addByPrefix('singLEFT', "left_", 24, false);
+				animation.addByPrefix('singDOWN', "spirit down_", 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				setGraphicSize(Std.int(width * 6));
+				updateHitbox();
+
+				playAnim('idle');
+
+				antialiasing = false;
+
 			case 'monika':
 				frames = Paths.getSparrowAtlas('characters/monika');
 				animation.addByPrefix('idle', 'Monika Idle', 24, false);

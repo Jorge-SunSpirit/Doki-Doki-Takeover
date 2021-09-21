@@ -112,6 +112,8 @@ class PlayState extends MusicBeatState
 
 	private var vocals:FlxSound;
 
+	public static var spirit:Character;
+
 	public static var dad:Character;
 	public static var gf:Character;
 	public static var boyfriend:Boyfriend;
@@ -731,6 +733,8 @@ class PlayState extends MusicBeatState
 
 		dad = new Character(100, 100, SONG.player2);
 
+		spirit = new Character(100, 100, 'spirit');
+
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
 
 		switch (SONG.player2)
@@ -765,6 +769,12 @@ class PlayState extends MusicBeatState
 			case 'senpai-angry':
 				dad.x += 150;
 				dad.y += 360;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'spirit':
+				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+				add(evilTrail);
+				dad.x -= 150;
+				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'natsuki':
 				camPos.x += 400;
@@ -804,6 +814,8 @@ class PlayState extends MusicBeatState
 				gf.x += 180;
 				gf.y += 300;
 			case 'schoolEvil':
+				spirit.x = -150;
+				spirit.y = 250; 
 				dad.y -= 69;
 				dad.x += 300;
 				boyfriend.x += 200;
@@ -839,6 +851,14 @@ class PlayState extends MusicBeatState
 
 		add(dad);
 		add(boyfriend);
+
+		if (SONG.song.toLowerCase() == "dual demise")
+			{
+				trace('am I here? Probably');
+				var evilTrail = new FlxTrail(spirit, null, 4, 24, 0.3, 0.069);
+				add(evilTrail);
+				add(spirit);
+			}
 
 		// Shitty layering but whatev it works LOL
 		//thanks ninja muffin :)
@@ -1070,6 +1090,8 @@ class PlayState extends MusicBeatState
 		{
 			switch (curSong.toLowerCase())
 			{
+				case 'dual demise':
+					dualdemisecountdown();
 				case 'your demise':
 					DarkStart(doof);
 				case 'epiphany':
@@ -1085,6 +1107,11 @@ class PlayState extends MusicBeatState
 		super.create();
 	}
 	
+	function dualdemisecountdown(?dialogueBox:DialogueBox):Void
+		{
+			iconP2.changeIcon('dual-demise');
+			startCountdown();
+		}
 
 	function DarkStart(?dialogueBox:DialogueBox):Void
 		{
@@ -1384,6 +1411,10 @@ class PlayState extends MusicBeatState
 				if (!boyfriend.animation.curAnim.name.startsWith("sing"))
 					boyfriend.dance();
 				if (!dad.animation.curAnim.name.startsWith("sing"))
+					if (SONG.song.toLowerCase() == "dual demise")
+						{
+							spirit.dance();
+						}	
 					dad.dance();
 			}
 			else if (dad.curCharacter == 'sayori')
@@ -1546,6 +1577,10 @@ class PlayState extends MusicBeatState
 		if (!boyfriend.animation.curAnim.name.startsWith("sing"))
 			boyfriend.dance();
 		if (!dad.animation.curAnim.name.startsWith("sing"))
+			if (SONG.song.toLowerCase() == "dual demise")
+				{
+					spirit.dance();
+				}
 			dad.dance();
 
 		// Song duration in a float, useful for the time left feature
@@ -2313,22 +2348,29 @@ class PlayState extends MusicBeatState
 				{
 					case 'mom':
 						camFollow.y = dad.getMidpoint().y;
-					case 'senpai':
-						camFollow.y = dad.getMidpoint().y - 430;
-						camFollow.x = dad.getMidpoint().x - 100;
-					case 'senpai-angry':
-						camFollow.y = dad.getMidpoint().y - 430;
-						camFollow.x = dad.getMidpoint().x - 100;
-					case 'monika':
+					case 'senpai' | 'senpai-angry' | 'monika':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
 					case 'duet':
 						camFollow.y = dad.getMidpoint().y - 400;
 						camFollow.x = dad.getMidpoint().x + 0;
 					case 'monika-angry':
-						camFollow.y = dad.getMidpoint().y - 390;
-						camFollow.x = dad.getMidpoint().x - 350;
-						
+						switch (curSong.toLowerCase())
+						{
+							case "dual demise":
+								switch (SONG.notes[Math.floor(curStep / 16)].altAnim)
+									{
+										case true:
+											camFollow.y = dad.getMidpoint().y - 300;
+											camFollow.x = dad.getMidpoint().x - 430;
+										case false:
+											camFollow.y = dad.getMidpoint().y - 390;
+											camFollow.x = dad.getMidpoint().x - 350;
+									}
+							default:
+								camFollow.y = dad.getMidpoint().y - 390;
+								camFollow.x = dad.getMidpoint().x - 350;
+						}	
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -2558,29 +2600,115 @@ class PlayState extends MusicBeatState
 						if (SONG.notes[Math.floor(curStep / 16)] != null)
 						{
 							if (SONG.notes[Math.floor(curStep / 16)].altAnim)
-								altAnim = '-alt';
+								{
+									switch (curSong.toLowerCase())
+										{
+											case "dual demise":
+												{
+													switch (Math.abs(daNote.noteData))
+													{
+														case 2:
+															spirit.playAnim('singUP', true);
+														case 3:
+															spirit.playAnim('singRIGHT', true);
+														case 4:
+															spirit.playAnim('idle', true);
+														case 1:
+															spirit.playAnim('singDOWN', true);
+														case 0:
+															spirit.playAnim('singLEFT', true);
+													}
+												}
+											default:
+												altAnim = '-alt';
+										}
+								}
 						}
 
 						if (daNote.noteType == 1)
-							altAnim = '-alt';
-
-						if (daNote.noteType != 2 || (daNote.noteType == 2 && curSong.toLowerCase() != "your demise"))
-						{
-							switch (Math.abs(daNote.noteData))
 							{
-								case 2:
-									dad.playAnim('singUP' + altAnim, true);
-								case 3:
-									dad.playAnim('singRIGHT' + altAnim, true);
-								case 4:
-									dad.playAnim('idle' + altAnim, true);
-								case 1:
-									dad.playAnim('singDOWN' + altAnim, true);
-								case 0:
-									dad.playAnim('singLEFT' + altAnim, true);
+								switch (curSong.toLowerCase())
+									{
+										case "dual demise":
+												{
+													switch (Math.abs(daNote.noteData))
+													{
+														case 2:
+															spirit.playAnim('singUP', true);
+														case 3:
+															spirit.playAnim('singRIGHT', true);
+														case 4:
+															spirit.playAnim('idle', true);
+														case 1:
+															spirit.playAnim('singDOWN', true);
+														case 0:
+															spirit.playAnim('singLEFT', true);
+													}
+												}
+										default:
+											altAnim = '-alt';
+									}
 							}
-						}
 						
+						switch (daNote.noteType)
+							{
+								case 1:
+									{
+										if (curSong.toLowerCase() != "dual demise")
+										{
+											switch (Math.abs(daNote.noteData))
+											{
+												case 2:
+													dad.playAnim('singUP' + altAnim, true);
+												case 3:
+													dad.playAnim('singRIGHT' + altAnim, true);
+												case 4:
+													dad.playAnim('idle' + altAnim, true);
+												case 1:
+													dad.playAnim('singDOWN' + altAnim, true);
+												case 0:
+													dad.playAnim('singLEFT' + altAnim, true);
+											}
+										}
+									}
+								case 2:
+									{
+										if (curSong.toLowerCase() != "your demise")
+										{
+											switch (Math.abs(daNote.noteData))
+											{
+												case 2:
+													dad.playAnim('singUP' + altAnim, true);
+												case 3:
+													dad.playAnim('singRIGHT' + altAnim, true);
+												case 4:
+													dad.playAnim('idle' + altAnim, true);
+												case 1:
+													dad.playAnim('singDOWN' + altAnim, true);
+												case 0:
+													dad.playAnim('singLEFT' + altAnim, true);
+											}
+										}
+									}
+								default:
+									if (curSong.toLowerCase() != "dual demise" || (curSong.toLowerCase() == "dual demise" && !SONG.notes[Math.floor(curStep / 16)].altAnim))
+										{
+											switch (Math.abs(daNote.noteData))
+											{
+												case 2:
+													dad.playAnim('singUP' + altAnim, true);
+												case 3:
+													dad.playAnim('singRIGHT' + altAnim, true);
+												case 4:
+													dad.playAnim('idle' + altAnim, true);
+												case 1:
+													dad.playAnim('singDOWN' + altAnim, true);
+												case 0:
+													dad.playAnim('singLEFT' + altAnim, true);
+											}
+										}
+							}
+								
 						cpuStrums.forEach(function(spr:FlxSprite)
 						{
 							if (Math.abs(daNote.noteData) == spr.ID)
@@ -3784,6 +3912,8 @@ class PlayState extends MusicBeatState
 									{
 										dad.playAnim('breath');
 									}
+								case 148:
+									FlxG.sound.play(Paths.sound('exhale'));
 							}
 					}
 		
@@ -3859,6 +3989,9 @@ class PlayState extends MusicBeatState
 			// else
 			// Conductor.changeBPM(SONG.bpm);
 
+			if (SONG.notes[Math.floor(curStep / 16)].mustHitSection)
+				spirit.dance();
+
 			if (curBeat % 2 == 0)
 			{
 				if (!dad.animation.curAnim.name.startsWith('sing'))
@@ -3896,6 +4029,11 @@ class PlayState extends MusicBeatState
 			//when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
 		}
+
+		if (!spirit.animation.curAnim.name.startsWith("sing") && spirit.animation.curAnim.finished)
+			{
+				spirit.dance();
+			}
 
 		if (curSong.toLowerCase() == 'obsession')
 		{
