@@ -1416,8 +1416,11 @@ class PlayState extends MusicBeatState
 					boyfriend.dance();
 				if (!dad.animation.curAnim.name.startsWith("sing"))
 					dad.dance();
-				if (spirit != null && !spirit.animation.curAnim.name.startsWith("sing"))
-					spirit.dance();
+				if (curSong.toLowerCase() != "dual demise")
+					{
+						if (spirit != null && !spirit.animation.curAnim.name.startsWith("sing"))
+							spirit.dance();
+					}
 			}
 			else if (dad.curCharacter == 'sayori')
 				dad.dance();
