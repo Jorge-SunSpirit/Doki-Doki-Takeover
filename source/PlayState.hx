@@ -2357,8 +2357,8 @@ class PlayState extends MusicBeatState
 					case 'monika-angry':
 						if (spirit != null && SONG.notes[Math.floor(curStep / 16)].altAnim)
 						{
-							camFollow.y = dad.getMidpoint().y - 300;
-							camFollow.x = dad.getMidpoint().x - 430;
+							camFollow.y = spirit.getMidpoint().y;
+							camFollow.x = spirit.getMidpoint().x + 250;
 						}
 						else
 						{
