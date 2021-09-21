@@ -733,7 +733,8 @@ class PlayState extends MusicBeatState
 
 		dad = new Character(100, 100, SONG.player2);
 
-		spirit = new Character(100, 100, 'spirit');
+		if (SONG.song.toLowerCase() == 'dual demise')
+			spirit = new Character(100, 100, 'spirit');
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
 
@@ -814,8 +815,11 @@ class PlayState extends MusicBeatState
 				gf.x += 180;
 				gf.y += 300;
 			case 'schoolEvil':
-				spirit.x = -150;
-				spirit.y = 250; 
+				if (spirit != null)
+				{
+					spirit.x = -150;
+					spirit.y = 250;
+				}
 				dad.y -= 69;
 				dad.x += 300;
 				boyfriend.x += 200;
@@ -1411,11 +1415,9 @@ class PlayState extends MusicBeatState
 				if (!boyfriend.animation.curAnim.name.startsWith("sing"))
 					boyfriend.dance();
 				if (!dad.animation.curAnim.name.startsWith("sing"))
-					if (SONG.song.toLowerCase() == "dual demise")
-						{
-							spirit.dance();
-						}	
 					dad.dance();
+				if (spirit != null && !spirit.animation.curAnim.name.startsWith("sing"))
+					spirit.dance();
 			}
 			else if (dad.curCharacter == 'sayori')
 				dad.dance();
@@ -1577,11 +1579,9 @@ class PlayState extends MusicBeatState
 		if (!boyfriend.animation.curAnim.name.startsWith("sing"))
 			boyfriend.dance();
 		if (!dad.animation.curAnim.name.startsWith("sing"))
-			if (SONG.song.toLowerCase() == "dual demise")
-				{
-					spirit.dance();
-				}
 			dad.dance();
+		if (spirit != null && !spirit.animation.curAnim.name.startsWith("sing"))
+			spirit.dance();
 
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
@@ -2355,26 +2355,17 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 400;
 						camFollow.x = dad.getMidpoint().x + 0;
 					case 'monika-angry':
-						switch (curSong.toLowerCase())
+						if (spirit != null && SONG.notes[Math.floor(curStep / 16)].altAnim)
 						{
-							case "dual demise":
-								switch (SONG.notes[Math.floor(curStep / 16)].altAnim)
-									{
-										case true:
-											camFollow.y = dad.getMidpoint().y - 300;
-											camFollow.x = dad.getMidpoint().x - 430;
-										case false:
-											camFollow.y = dad.getMidpoint().y - 390;
-											camFollow.x = dad.getMidpoint().x - 350;
-									}
-							default:
-								camFollow.y = dad.getMidpoint().y - 390;
-								camFollow.x = dad.getMidpoint().x - 350;
-						}	
+							camFollow.y = dad.getMidpoint().y - 300;
+							camFollow.x = dad.getMidpoint().x - 430;
+						}
+						else
+						{
+							camFollow.y = dad.getMidpoint().y - 390;
+							camFollow.x = dad.getMidpoint().x - 350;
+						}
 				}
-
-				if (dad.curCharacter == 'mom')
-					vocals.volume = 1;
 			}
 
 			if (PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend.getMidpoint().x - 100)
@@ -3989,15 +3980,14 @@ class PlayState extends MusicBeatState
 			// else
 			// Conductor.changeBPM(SONG.bpm);
 
-			if (SONG.notes[Math.floor(curStep / 16)].mustHitSection)
-				spirit.dance();
-
 			if (curBeat % 2 == 0)
 			{
-				if (!dad.animation.curAnim.name.startsWith('sing'))
-					dad.dance(SONG.notes[Math.floor(curStep / 16)].altAnim);
 				if (!boyfriend.animation.curAnim.name.startsWith('sing'))
 					boyfriend.dance();
+				if (!dad.animation.curAnim.name.startsWith('sing'))
+					dad.dance(SONG.notes[Math.floor(curStep / 16)].altAnim);
+				if (spirit != null && !spirit.animation.curAnim.name.startsWith('sing'))
+					spirit.dance();
 			}
 			else if (dad.curCharacter == 'sayori')
 				dad.dance();
@@ -4029,11 +4019,6 @@ class PlayState extends MusicBeatState
 			//when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
 		}
-
-		if (!spirit.animation.curAnim.name.startsWith("sing") && spirit.animation.curAnim.finished)
-			{
-				spirit.dance();
-			}
 
 		if (curSong.toLowerCase() == 'obsession')
 		{
