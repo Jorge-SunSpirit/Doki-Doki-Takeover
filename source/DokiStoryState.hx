@@ -117,7 +117,7 @@ class DokiStoryState extends MusicBeatState
 		logo = new FlxSprite(-700, -359).loadGraphic(Paths.image('Credits_LeftSide'));
 		add(logo);
 
-		songlist = new FlxSprite(-700, -359).loadGraphic(Paths.image('dokistory/song_list_lazy_smile', 'preload', true, FlxG.save.data.locale));
+		songlist = new FlxSprite(-700, -359).loadGraphic(Paths.image('dokistory/song_list_lazy_smile', 'preload', true));
 		add(songlist);
 
 		//-600, -400
@@ -155,7 +155,7 @@ class DokiStoryState extends MusicBeatState
 		add(txtTracklist);
 
 		diff = new FlxSprite(-30, 200);
-		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties', 'preload', true, FlxG.save.data.locale);
+		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties', 'preload', true);
 		diff.antialiasing = true;
 		diff.scale.set(1, 1);
 		diff.animation.addByPrefix('easy', 'Easy', 24);

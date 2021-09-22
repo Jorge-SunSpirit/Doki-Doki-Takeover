@@ -378,50 +378,50 @@ class PlayState extends MusicBeatState
 		{
 			//week 1
 		    case 'high school conflict':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictDialogue', 'preload', true, FlxG.save.data.locale));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictEndDialogue', 'preload', true, FlxG.save.data.locale)); 
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictDialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/high school conflict/high-school-conflictEndDialogue', 'preload', true)); 
 			case 'bara no yume':
-				extra1 = CoolUtil.coolTextFile(Paths.txt('data/bara no yume/bara no yume-Dialogue', 'preload', true, FlxG.save.data.locale));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('data/bara no yume/bara no yume-EndDialogue', 'preload', true, FlxG.save.data.locale)); 
+				extra1 = CoolUtil.coolTextFile(Paths.txt('data/bara no yume/bara no yume-Dialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/bara no yume/bara no yume-EndDialogue', 'preload', true)); 
 			case 'your demise':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseDialogue', 'preload', true, FlxG.save.data.locale));
-				extra1 = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseEndDialogue', 'preload', true, FlxG.save.data.locale));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('data/your demise/FinalCutsceneDialouge', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseDialogue', 'preload', true));
+				extra1 = CoolUtil.coolTextFile(Paths.txt('data/your demise/your-demiseEndDialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/your demise/FinalCutsceneDialouge', 'preload', true));
 			//hidden week
 			case 'erb':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/erb/TestDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/erb/TestDialogue', 'preload', true));
 			
 			//sayo week
 			case 'rain clouds':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/rain clouds/IntroDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/rain clouds/IntroDialogue', 'preload', true));
 			case 'my confession':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my confession/IntroDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my confession/IntroDialogue', 'preload', true));
 			
 			//nat week
 			case 'baka':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/baka/introdialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/baka/introdialogue', 'preload', true));
 			case 'my sweets':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my sweets/introdialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my sweets/introdialogue', 'preload', true));
 			
 			//Yuri Week
 			case 'deep breaths':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue', 'preload', true));
 			case 'obsession':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue', 'preload', true));
 
 			//Monika returns?!
 			case 'reconciliation':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/reconciliation/IntroDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/reconciliation/IntroDialogue', 'preload', true));
 			
 			//heck yeah it's the long awaited festival!
 			case 'crucify (yuri mix)':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/crucify (yuri mix)/IntroDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/crucify (yuri mix)/IntroDialogue', 'preload', true));
 			case "it's complicated (sayori mix)":
-				dialogue = CoolUtil.coolTextFile(Paths.txt("data/it's complicated (sayori mix)/IntroDialogue", 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt("data/it's complicated (sayori mix)/IntroDialogue", 'preload', true));
 			case 'glitcher (monika mix)':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/IntroDialogue', 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/IntroDialogue', 'preload', true));
 			case "beathoven (natsuki mix)":
-				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue", 'preload', true, FlxG.save.data.locale));
+				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue", 'preload', true));
 		}
 
 		trace(SONG.stage);
