@@ -1416,11 +1416,8 @@ class PlayState extends MusicBeatState
 					boyfriend.dance();
 				if (!dad.animation.curAnim.name.startsWith("sing"))
 					dad.dance();
-				if (curSong.toLowerCase() != "dual demise")
-					{
-						if (spirit != null && !spirit.animation.curAnim.name.startsWith("sing"))
-							spirit.dance();
-					}
+				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith("sing"))
+					spirit.dance();
 			}
 			else if (dad.curCharacter == 'sayori')
 				dad.dance();
@@ -1583,7 +1580,7 @@ class PlayState extends MusicBeatState
 			boyfriend.dance();
 		if (!dad.animation.curAnim.name.startsWith("sing"))
 			dad.dance();
-		if (spirit != null && !spirit.animation.curAnim.name.startsWith("sing"))
+		if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith("sing"))
 			spirit.dance();
 
 		// Song duration in a float, useful for the time left feature
@@ -2358,7 +2355,7 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 400;
 						camFollow.x = dad.getMidpoint().x + 0;
 					case 'monika-angry':
-						if (spirit != null && SONG.notes[Math.floor(curStep / 16)].altAnim)
+						if (SONG.song.toLowerCase() == 'dual demise' && SONG.notes[Math.floor(curStep / 16)].altAnim)
 						{
 							camFollow.y = spirit.getMidpoint().y;
 							camFollow.x = spirit.getMidpoint().x + 250;
@@ -3989,7 +3986,7 @@ class PlayState extends MusicBeatState
 					boyfriend.dance();
 				if (!dad.animation.curAnim.name.startsWith('sing'))
 					dad.dance(SONG.notes[Math.floor(curStep / 16)].altAnim);
-				if (spirit != null && !spirit.animation.curAnim.name.startsWith('sing'))
+				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith('sing'))
 					spirit.dance();
 			}
 			else if (dad.curCharacter == 'sayori')
