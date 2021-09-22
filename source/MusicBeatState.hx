@@ -1,6 +1,6 @@
 package;
 
-#if windows
+#if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
 import flixel.tweens.FlxTween;

@@ -51,6 +51,6 @@ https://twitter.com/kawaisprite
 Doki Doki Literature Club! is owned by Dan Salvato (https://twitter.com/dansalvato) and published by Team Salvato (https://twitter.com/TeamSalvato).
 https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/
 
-Friday Night Funkin': Doki Doki Takeover is built off of Kade Engine, maintained by KadeDev and its contributors.
+Doki Doki Takeover is built off of Kade Engine, maintained by KadeDev and its contributors.
 https://twitter.com/KadeDeveloper
 https://github.com/KadeDev/Kade-Engine

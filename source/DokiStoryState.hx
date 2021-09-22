@@ -22,7 +22,7 @@ import lime.app.Application;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxGroup;
 
-#if windows
+#if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
 
@@ -93,7 +93,7 @@ class DokiStoryState extends MusicBeatState
 
 	override function create()
 	{
-		#if windows
+		#if FEATURE_DISCORD
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end

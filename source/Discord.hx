@@ -1,6 +1,6 @@
 package;
 
-#if windows
+#if FEATURE_DISCORD
 import Sys.sleep;
 import discord_rpc.DiscordRpc;
 
@@ -76,7 +76,7 @@ class DiscordClient
 			details: details,
 			state: state,
 			largeImageKey: 'rpc_logo',
-			largeImageText: "Friday Night Funkin': Monika Full Week Rebooted!",
+			largeImageText: "Friday Night Funkin': Doki Doki Takeover!",
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp : Std.int(startTimestamp / 1000),

@@ -25,7 +25,7 @@ import io.newgrounds.NG;
 import lime.app.Application;
 import openfl.Assets;
 
-#if windows
+#if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
 
@@ -67,7 +67,7 @@ class TitleState extends MusicBeatState
 		
 		PlayerSettings.init();
 
-		#if windows
+		#if FEATURE_DISCORD
 		DiscordClient.initialize();
 
 		Application.current.onExit.add (function (exitCode) {
