@@ -628,7 +628,7 @@ class Language extends Option
 	public override function press():Bool
 	{
 		trace("switch");
-		FlxG.switchState(new LocaleState());
+		FlxG.switchState(new LangSelectState());
 		return false;
 	}
 

@@ -12,7 +12,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
-class LocaleState extends MusicBeatSubstate
+class LangSelectState extends MusicBeatSubstate
 {
 	var textMenuItems:Array<String> = [];
 	var localeList:Array<String> = [];
@@ -108,8 +108,8 @@ class LocaleState extends MusicBeatSubstate
 								{
 									FlxFlicker.flicker(txt, 1, 0.06, false, false, function(flick:FlxFlicker)
 										{
-											FlxG.save.data.locale = localeList[curSelected];
-											trace('langauge set to ' + FlxG.save.data.locale);
+											FlxG.save.data.language = localeList[curSelected];
+											trace('langauge set to ' + FlxG.save.data.language);
 											FlxG.switchState(new MainMenuState());
 									});
 									}
@@ -117,8 +117,8 @@ class LocaleState extends MusicBeatSubstate
 								{
 									new FlxTimer().start(1, function(tmr:FlxTimer)
 									{
-										FlxG.save.data.locale = localeList[curSelected];
-										trace('langauge set to ' + FlxG.save.data.locale);
+										FlxG.save.data.language = localeList[curSelected];
+										trace('langauge set to ' + FlxG.save.data.language);
 										FlxG.switchState(new MainMenuState());
 									});
 								}

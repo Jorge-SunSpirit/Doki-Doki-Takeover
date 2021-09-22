@@ -5,8 +5,8 @@ class KadeEngineData
 {
     public static function initSave()
     {
-		if (FlxG.save.data.locale == null)
-			FlxG.save.data.locale = "en-US";
+		if (FlxG.save.data.language == null)
+			FlxG.save.data.language = "en-US";
 
 		if (FlxG.save.data.weekUnlocked == null)
 			FlxG.save.data.weekUnlocked = 1;

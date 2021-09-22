@@ -167,12 +167,12 @@ class DialogueBox extends FlxSpriteGroup
 				case 'pixel':
 					{
 						dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
-						dropText.font = 'Pixel Arial 11 Bold';
+						dropText.font = LangUtil.getFont('pixel');
 						dropText.color = 0xFFD89494;
 						add(dropText);
 
 						swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
-						swagDialogue.font = 'Pixel Arial 11 Bold';
+						swagDialogue.font = LangUtil.getFont('pixel');
 						swagDialogue.color = 0xFF3F2021;
 						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 						add(swagDialogue);
@@ -180,7 +180,7 @@ class DialogueBox extends FlxSpriteGroup
 				case 'normal':
 					{
 						swagDialogue = new FlxTypeText(220, 520, Std.int(FlxG.width * 0.67), "", 28);
-						swagDialogue.font = 'Aller';
+						swagDialogue.font = LangUtil.getFont('aller');
 						swagDialogue.color = 0xFFFFFFFF;
 						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 						swagDialogue.setBorderStyle(OUTLINE, FlxColor.BLACK, 1, 1);
