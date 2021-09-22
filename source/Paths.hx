@@ -65,9 +65,12 @@ class Paths
 		return getPath('data/$key.png', IMAGE, library);
 	}
 
-	inline static public function txt(key:String, ?library:String)
+	inline static public function txt(key:String, ?library:String, isLocale:Bool = false, locale:String = 'en-US')
 	{
-		return getPath('$key.txt', TEXT, library);
+		if (isLocale)
+			return getPath('locale/' + locale + '/$key.txt', TEXT, library);
+		else
+			return getPath('$key.txt', TEXT, library);
 	}
 
 	inline static public function xml(key:String, ?library:String)
@@ -105,9 +108,12 @@ class Paths
 		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
 	}
 
-	inline static public function image(key:String, ?library:String)
+	inline static public function image(key:String, ?library:String, isLocale:Bool = false, locale:String = 'en-US')
 	{
-		return getPath('images/$key.png', IMAGE, library);
+		if (isLocale)
+			return getPath('locale/' + locale + '/images/$key.png', IMAGE, library);
+		else
+			return getPath('images/$key.png', IMAGE, library);
 	}
 
 	inline static public function font(key:String)
@@ -115,9 +121,12 @@ class Paths
 		return 'assets/fonts/$key';
 	}
 
-	inline static public function getSparrowAtlas(key:String, ?library:String)
+	inline static public function getSparrowAtlas(key:String, ?library:String, isLocale:Bool = false, locale:String = 'en-US')
 	{
-		return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
+		if (isLocale)
+			return FlxAtlasFrames.fromSparrow(image(key, library, isLocale, locale), file('locale/' + locale + '/images/$key.xml', library));
+		else
+			return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
 	}
 
 	inline static public function getPackerAtlas(key:String, ?library:String)

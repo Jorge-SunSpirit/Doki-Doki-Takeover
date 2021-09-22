@@ -222,7 +222,7 @@ class MainMenuState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		var tex = Paths.getSparrowAtlas('credits_assets');
+		var tex = Paths.getSparrowAtlas('credits_assets', 'preload', true, FlxG.save.data.locale);
 
 		for (i in 0...optionShit.length)
 		{

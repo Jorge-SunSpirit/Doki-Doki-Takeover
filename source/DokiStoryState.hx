@@ -117,7 +117,7 @@ class DokiStoryState extends MusicBeatState
 		logo = new FlxSprite(-700, -359).loadGraphic(Paths.image('Credits_LeftSide'));
 		add(logo);
 
-		songlist = new FlxSprite(-700, -359).loadGraphic(Paths.image('dokistory/song_list_lazy_smile'));
+		songlist = new FlxSprite(-700, -359).loadGraphic(Paths.image('dokistory/song_list_lazy_smile', 'preload', true, FlxG.save.data.locale));
 		add(songlist);
 
 		//-600, -400
@@ -125,7 +125,7 @@ class DokiStoryState extends MusicBeatState
 		logoBl.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
 		logoBl.antialiasing = true;
 		logoBl.scale.set(0.5, 0.5);
-		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		add(logoBl);
@@ -155,7 +155,7 @@ class DokiStoryState extends MusicBeatState
 		add(txtTracklist);
 
 		diff = new FlxSprite(-30, 200);
-		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties');
+		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties', 'preload', true, FlxG.save.data.locale);
 		diff.antialiasing = true;
 		diff.scale.set(1, 1);
 		diff.animation.addByPrefix('easy', 'Easy', 24);
@@ -509,6 +509,9 @@ class DokiStoryState extends MusicBeatState
 			
 		}
 
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
+
 		super.update(elapsed);
 	}
 
@@ -686,4 +689,10 @@ class DokiStoryState extends MusicBeatState
 			txtTracklist.text += "\n";
 
 		}
+
+		override function beatHit()
+			{
+				super.beatHit();
+				logoBl.animation.play('bump', true);
+			}
 	}
