@@ -215,6 +215,8 @@ class PlayState extends MusicBeatState
 	public static var theFunne:Bool = true;
 	var funneEffect:FlxSprite;
 	var inCutscene:Bool = false;
+	var usedTimeTravel:Bool = false;
+	public static var cannotDie:Bool = false;
 	public static var repPresses:Int = 0;
 	public static var repReleases:Int = 0;
 
@@ -2180,6 +2182,43 @@ class PlayState extends MusicBeatState
 			#end
 		}
 
+		// Go 10 seconds into the future, credit: Shadow Mario#9396
+		if (FlxG.keys.justPressed.TWO && songStarted)
+		{
+			if (!usedTimeTravel && Conductor.songPosition + 10000 < FlxG.sound.music.length) 
+			{
+				usedTimeTravel = true;
+				if (!cannotDie)
+					trace("TIME TRAVELLED! BOYFRIEND IS NOW IMMORTAL");
+				cannotDie = true;
+
+				FlxG.sound.music.pause();
+				vocals.pause();
+				Conductor.songPosition += 10000;
+				notes.forEachAlive(function(daNote:Note)
+				{
+					if(daNote.strumTime - 500 < Conductor.songPosition) {
+						daNote.active = false;
+						daNote.visible = false;
+
+						daNote.kill();
+						notes.remove(daNote, true);
+						daNote.destroy();
+					}
+				});
+
+				FlxG.sound.music.time = Conductor.songPosition;
+				FlxG.sound.music.play();
+
+				vocals.time = Conductor.songPosition;
+				vocals.play();
+				new FlxTimer().start(0.5, function(tmr:FlxTimer)
+				{
+					usedTimeTravel = false;
+				});
+			}
+		}
+
 		#end
 
 		if (startingSong)
@@ -2439,7 +2478,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (health <= 0)
+		if (health <= 0 && !cannotDie)
 		{
 			boyfriend.stunned = true;
 
@@ -4036,10 +4075,9 @@ class PlayState extends MusicBeatState
 					});
 				case 134:
 					defaultCamZoom = 1.2;
-					staticshock.visible = false;
 					add(whiteflash);
 					add(blackScreen);
-					blackScreenBG.alpha = 0.9;
+					blackScreenBG.alpha = 0.8;
 					remove(deskfront);
 					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
 				case 136:
@@ -4052,12 +4090,13 @@ class PlayState extends MusicBeatState
 					remove(blackScreen);
 					add(vignette);
 					vignette.alpha = 0.6;
+					staticshock.alpha = 0.1;
 
 					new FlxTimer().start(0.1, function(tmr:FlxTimer)
 					{
 						whiteflash.alpha -= 0.15;
 
-						if (whiteflash.alpha > 0.3)
+						if (whiteflash.alpha > 0.15)
 							tmr.reset(0.1);
 					});
 			}

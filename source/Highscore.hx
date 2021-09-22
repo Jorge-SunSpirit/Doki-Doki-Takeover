@@ -20,7 +20,7 @@ class Highscore
 		NGio.postScore(score, song);
 		#end
 
-		if(!FlxG.save.data.botplay)
+		if(!FlxG.save.data.botplay && !PlayState.cannotDie)
 		{
 			if (songScores.exists(daSong))
 			{
@@ -39,7 +39,7 @@ class Highscore
 		NGio.postScore(score, "Week " + week);
 		#end
 
-		if(!FlxG.save.data.botplay)
+		if(!FlxG.save.data.botplay && !PlayState.cannotDie)
 		{
 			var daWeek:String = formatSong('week' + week, diff);
 
