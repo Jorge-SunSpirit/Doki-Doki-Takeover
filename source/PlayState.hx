@@ -3978,7 +3978,7 @@ class PlayState extends MusicBeatState
 		// yes this updates every step.
 		// yes this is bad
 		// but i'm doing it to update misses and accuracy
-		#if windows
+		#if FEATURE_DISCORD
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
 
