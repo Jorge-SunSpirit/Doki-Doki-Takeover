@@ -8,7 +8,7 @@ class LangUtil
 	{
 		var font:String = '';
 
-		switch (type)
+		switch (type.toLowerCase())
 		{
 			case 'aller':
 				switch (FlxG.save.data.language)
