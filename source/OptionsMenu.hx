@@ -7,11 +7,14 @@ import Controls.Control;
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.input.keyboard.FlxKey;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
 
@@ -19,41 +22,42 @@ class OptionsMenu extends MusicBeatState
 {
 	public static var instance:OptionsMenu;
 
+	var backdrop:FlxBackdrop;
+
 	var selector:FlxText;
 	var curSelected:Int = 0;
 
 	var options:Array<OptionCategory> = [
-		new OptionCategory("Gameplay", [
+		new OptionCategory(LangUtil.getString('catGameplay'), [
 			new KeyBindingsOption(controls),
-			new DownscrollOption("Change the layout of the strumline."),
-			new GhostTapOption("Ghost Tapping is when you tap a direction and it doesn't give you a miss."),
-			new Judgement("Customize your Hit Timings (LEFT or RIGHT)"),
+			new DownscrollOption(LangUtil.getString('descDownscroll')),
+			new GhostTapOption(LangUtil.getString('descGhostTap')),
+			new Judgement(LangUtil.getString('descJudgement')),
 			#if desktop
-			new FPSCapOption("Cap your FPS (Left for -10, Right for +10. SHIFT to go faster)"),
+			new FPSCapOption(LangUtil.getString('descFPSCap')),
 			#end
-			new ScrollSpeedOption("Change your scroll speed (Left for -0.1, right for +0.1. If it's at 1, it will be chart dependent)"),
-			new AccuracyDOption("Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)"),
-			new ResetButtonOption("Toggle pressing R to gameover."),
-			// new OffsetMenu("Get a note offset based off of your inputs!"),
-			new CustomizeGameplay("Drag'n'Drop Gameplay Modules around to your preference")
+			new ScrollSpeedOption(LangUtil.getString('descScroll')),
+			new AccuracyDOption(LangUtil.getString('descAccuracyMode')),
+			new ResetButtonOption(LangUtil.getString('descReset')),
+			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
-		new OptionCategory("Appearance", [
-			new DistractionsAndEffectsOption("Toggle stage distractions that can hinder your gameplay."),
-			new RainbowFPSOption("Make the FPS Counter Rainbow (Only works with the FPS Counter toggled on and Flashing Lights toggled off)"),
-			new AccuracyOption("Display accuracy information."),
-			new NPSDisplayOption("Shows your current Notes Per Second."),
-			new SongPositionOption("Show the songs current position (as a bar)")
+		new OptionCategory(LangUtil.getString('catAppearance'), [
+			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')),
+			new RainbowFPSOption(LangUtil.getString('descFPSRainbow')),
+			new AccuracyOption(LangUtil.getString('descAccuracy')),
+			new NPSDisplayOption(LangUtil.getString('descNPS')),
+			new SongPositionOption(LangUtil.getString('descPosition'))
 		]),
 		
-		new OptionCategory("Misc", [
+		new OptionCategory(LangUtil.getString('catMisc'), [
+			new FPSOption(LangUtil.getString('descFPSCount')),
 			#if desktop
-			new FPSOption("Toggle the FPS Counter"),
-			new ReplayOption("View replays"),
+			new ReplayOption(LangUtil.getString('descReplay')),
 			#end
-			new FlashingLightsOption("Toggle flashing lights that can cause epileptic seizures and strain."),
-			new WatermarkOption("Enable and disable all watermarks from the engine."),
-			new BotPlay("Showcase your charts and mods with autoplay."),
-			new Language("Change the language of the game!")
+			new FlashingLightsOption(LangUtil.getString('descFlashing')),
+			new WatermarkOption(LangUtil.getString('descWatermark')),
+			new BotPlay(LangUtil.getString('descBotplay')),
+			new Language(LangUtil.getString('descLanguage'))
 		])
 		
 	];
@@ -65,6 +69,7 @@ class OptionsMenu extends MusicBeatState
 	public static var versionShit:FlxText;
 
 	var currentSelectedCat:OptionCategory;
+	var blackBorder:FlxSprite;
 	
 	override function create()
 	{
@@ -72,8 +77,8 @@ class OptionsMenu extends MusicBeatState
 
 		if (FlxG.save.data.sayobeaten)
 		{
-			options.push(new OptionCategory("Unlockables", [
-				new GFCountdownOption("Have Girlfriend count down before the song starts."),
+			options.push(new OptionCategory(LangUtil.getString('catUnlock'), [
+				new GFCountdownOption(LangUtil.getString('descGFCountdown')),
 			]));
 		}
 
@@ -85,6 +90,9 @@ class OptionsMenu extends MusicBeatState
 		menuBG.screenCenter();
 		menuBG.antialiasing = true;
 		add(menuBG);
+
+		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
+		backdrop.velocity.set(-40, -40);
 
 		grpControls = new FlxTypedGroup<Alphabet>();
 		add(grpControls);
@@ -100,10 +108,19 @@ class OptionsMenu extends MusicBeatState
 
 		currentDescription = "none";
 
-		versionShit = new FlxText(5, FlxG.height - 18, 0, "Offset (Left, Right): " + FlxG.save.data.offset + " - Description - " + currentDescription, 12);
+		versionShit = new FlxText(5, FlxG.height + 40, 0, LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription, 12);
 		versionShit.scrollFactor.set();
-		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionShit.setFormat(LangUtil.getFont('vcr'), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		
+		blackBorder = new FlxSprite(-30,FlxG.height + 40).makeGraphic((Std.int(versionShit.width + 900)),Std.int(versionShit.height + 600),FlxColor.BLACK);
+		blackBorder.alpha = 0.5;
+
+		add(blackBorder);
+
 		add(versionShit);
+
+		FlxTween.tween(versionShit,{y: FlxG.height - 18},2,{ease: FlxEase.elasticInOut});
+		FlxTween.tween(blackBorder,{y: FlxG.height - 18},2, {ease: FlxEase.elasticInOut});
 
 		super.create();
 	}
@@ -192,7 +209,7 @@ class OptionsMenu extends MusicBeatState
 					else if (FlxG.keys.pressed.LEFT)
 						FlxG.save.data.offset -= 0.1;
 					
-					versionShit.text = "Offset (Left, Right, Shift for slow): " + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + " - Description - " + currentDescription;
+					versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription;
 				}
 			}
 			else
@@ -209,7 +226,7 @@ class OptionsMenu extends MusicBeatState
 				else if (FlxG.keys.pressed.LEFT)
 					FlxG.save.data.offset -= 0.1;
 				
-				versionShit.text = "Offset (Left, Right, Shift for slow): " + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + " - Description - " + currentDescription;
+				versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription;
 			}
 		
 
@@ -269,8 +286,8 @@ class OptionsMenu extends MusicBeatState
 		if (isCat)
 			currentDescription = currentSelectedCat.getOptions()[curSelected].getDescription();
 		else
-			currentDescription = "Please select a category";
-		versionShit.text = "Offset (Left, Right, Shift for slow): " + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + " - Description - " + currentDescription;
+			currentDescription = LangUtil.getString('cmnCategory');
+		versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription;
 
 		// selector.y = (70 * curSelected) + 30;
 

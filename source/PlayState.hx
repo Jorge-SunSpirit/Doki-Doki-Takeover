@@ -2504,7 +2504,7 @@ class PlayState extends MusicBeatState
 		}
  		if (FlxG.save.data.resetButton)
 		{
-			if(FlxG.keys.justPressed.R)
+			if (songStarted && FlxG.keys.justPressed.R)
 				{
 					boyfriend.stunned = true;
 

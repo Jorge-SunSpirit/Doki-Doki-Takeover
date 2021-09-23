@@ -438,6 +438,8 @@ class TitleState extends MusicBeatState
 	{
 		if (!skippedIntro)
 		{
+			trace('langauge set to ' + FlxG.save.data.language);
+
 			remove(ngSpr);
 
 			FlxG.camera.flash(FlxColor.WHITE, 4);

@@ -1,4 +1,3 @@
-:gf:"jaja soy una prueba"
-:bf:"Joder"
-:yuri:"DeepL moment"
+:gf:"haha I'm a test"
+:bf:"Fuck"
 

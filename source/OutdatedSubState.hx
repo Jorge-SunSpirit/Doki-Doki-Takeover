@@ -34,7 +34,7 @@ class OutdatedSubState extends MusicBeatState
 		bg.screenCenter();
 		add(bg);
 		
-		var kadeLogo:FlxSprite = new FlxSprite(FlxG.width, 0).loadGraphic(Paths.image('KadeEngineLogo'));
+		var kadeLogo:FlxSprite = new FlxSprite(FlxG.width, 0).loadGraphic(Paths.image('DokiTakeoverLogo'));
 		kadeLogo.scale.y = 0.3;
 		kadeLogo.scale.x = 0.3;
 		kadeLogo.x -= kadeLogo.frameHeight;

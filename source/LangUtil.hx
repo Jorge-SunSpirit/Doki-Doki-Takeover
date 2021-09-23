@@ -13,16 +13,12 @@ class LangUtil
 			case 'aller':
 				switch (FlxG.save.data.language)
 				{
-					case 'es-US':
-						font = 'VCR OSD Mono';
 					default:
 						font = 'Aller';
 				}
 			case 'riffic':
 				switch (FlxG.save.data.language)
 				{
-					case 'es-US':
-						font = 'VCR OSD Mono';
 					default:
 						font = 'Riffic Free Bold';
 				}
@@ -34,10 +30,35 @@ class LangUtil
 					default:
 						font = 'Pixel Arial 11 Bold';
 				}
+			case 'vcr':
+				switch (FlxG.save.data.language)
+				{
+					default:
+						font = 'VCR OSD Mono';
+				}
 			default:
 				font = 'VCR OSD Mono';
 		}
 		
 		return font;
 	}
+
+	public static function getString(identifier:String):String
+		{
+			var localeList:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
+
+			var string:String= '';
+
+			for (i in 0...localeList.length)
+			{
+				var data:Array<String> = localeList[i].split('::');
+
+				if (data[0] != identifier)
+					continue;
+				else
+					string = data[1];
+			}
+			
+			return string;
+		}
 }

@@ -71,8 +71,6 @@ class Option
 	public function right():Bool { return throw "stub!"; }
 }
 
-
-
 class KeyBindingsOption extends Option
 {
 	private var controls:Controls;
@@ -91,7 +89,7 @@ class KeyBindingsOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Key Bindings";
+		return LangUtil.getString('optKeyBindings');
 	}
 }
 
@@ -112,7 +110,7 @@ class DownscrollOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return FlxG.save.data.downscroll ? "Downscroll" : "Upscroll";
+		return FlxG.save.data.downscroll ? LangUtil.getString('optDownscroll') : LangUtil.getString('optUpscroll');
 	}
 }
 
@@ -133,7 +131,7 @@ class GhostTapOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return FlxG.save.data.ghost ? "Ghost Tapping" : "No Ghost Tapping";
+		return FlxG.save.data.ghost ? LangUtil.getString('optGhostTap') : LangUtil.getString('optNoGhostTap');
 	}
 }
 
@@ -153,7 +151,7 @@ class AccuracyOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Accuracy " + (!FlxG.save.data.accuracyDisplay ? "off" : "on");
+		return LangUtil.getString('optAccuracy') + ' ' + (FlxG.save.data.accuracyDisplay ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
@@ -173,7 +171,7 @@ class SongPositionOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Song Position " + (!FlxG.save.data.songPosition ? "off" : "on");
+		return LangUtil.getString('optPosition') + ' ' + (FlxG.save.data.songPosition ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
@@ -193,7 +191,7 @@ class DistractionsAndEffectsOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Distractions " + (!FlxG.save.data.distractions ? "off" : "on");
+		return LangUtil.getString('optDistract') + ' ' + (FlxG.save.data.distractions ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
@@ -213,7 +211,7 @@ class ResetButtonOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Reset Button " + (!FlxG.save.data.resetButton ? "off" : "on");
+		return LangUtil.getString('optReset') + ' ' + (FlxG.save.data.resetButton ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
@@ -233,14 +231,12 @@ class FlashingLightsOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Flashing Lights " + (!FlxG.save.data.flashing ? "off" : "on");
+		return LangUtil.getString('optFlashing') + ' ' + (FlxG.save.data.flashing ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
 class Judgement extends Option
 {
-	
-
 	public function new(desc:String)
 	{
 		super();
@@ -255,7 +251,7 @@ class Judgement extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Safe Frames";
+		return LangUtil.getString('optJudgement');
 	}
 
 	override function left():Bool {
@@ -268,11 +264,11 @@ class Judgement extends Option
 
 		Conductor.recalculateTimings();
 
-		OptionsMenu.versionShit.text = "Current Safe Frames: " + Conductor.safeFrames + " - Description - " + description + 
+		OptionsMenu.versionShit.text = LangUtil.getString('descCurJudgement') + ': ' + Conductor.safeFrames + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description + 
 		" - SIK: " + HelperFunctions.truncateFloat(45 * Conductor.timeScale, 0) +
 		"ms GD: " + HelperFunctions.truncateFloat(90 * Conductor.timeScale, 0) +
 		"ms BD: " + HelperFunctions.truncateFloat(135 * Conductor.timeScale, 0) + 
-		"ms SHT: " + HelperFunctions.truncateFloat(155 * Conductor.timeScale, 0) +
+		"ms NO: " + HelperFunctions.truncateFloat(155 * Conductor.timeScale, 0) +
 		"ms TOTAL: " + HelperFunctions.truncateFloat(Conductor.safeZoneOffset,0) + "ms";
 		return true;
 	}
@@ -287,11 +283,11 @@ class Judgement extends Option
 
 		Conductor.recalculateTimings();
 
-		OptionsMenu.versionShit.text = "Current Safe Frames: " + Conductor.safeFrames + " - Description - " + description + 
+		OptionsMenu.versionShit.text = LangUtil.getString('descCurJudgement') + ': ' + Conductor.safeFrames + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description + 
 		" - SIK: " + HelperFunctions.truncateFloat(44 * Conductor.timeScale, 0) +
 		"ms GD: " + HelperFunctions.truncateFloat(45 * Conductor.timeScale, 0) +
 		"ms BD: " + HelperFunctions.truncateFloat(90 * Conductor.timeScale, 0) + 
-		"ms SHT: " + HelperFunctions.truncateFloat(135 * Conductor.timeScale, 0) +
+		"ms NO: " + HelperFunctions.truncateFloat(135 * Conductor.timeScale, 0) +
 		"ms TOTAL: " + HelperFunctions.truncateFloat(Conductor.safeZoneOffset,0) + "ms";
 		return true;
 	}
@@ -315,11 +311,9 @@ class FPSOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "FPS Counter " + (!FlxG.save.data.fps ? "off" : "on");
+		return return LangUtil.getString('optFPSCount') + ' ' + (FlxG.save.data.fps ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
-
-
 
 class FPSCapOption extends Option
 {
@@ -337,7 +331,7 @@ class FPSCapOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "FPS Cap";
+		return LangUtil.getString('optFPSCap');
 	}
 	
 	override function right():Bool {
@@ -350,7 +344,9 @@ class FPSCapOption extends Option
 			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap + 10;
 		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 
-		OptionsMenu.versionShit.text = "Current FPS Cap: " + FlxG.save.data.fpsCap + " - Description - " + description;
+		OptionsMenu.versionShit.text = LangUtil.getString('descCurFPSCap') + ': ' + FlxG.save.data.fpsCap + 
+		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? 'Hz (' + LangUtil.getString('descRefreshRate') + ')' : "") 
+		+ ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
 
 		return true;
 	}
@@ -364,9 +360,9 @@ class FPSCapOption extends Option
 			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap - 10;
 		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 
-		OptionsMenu.versionShit.text = "Current FPS Cap: " + FlxG.save.data.fpsCap + 
-		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? "Hz (Refresh Rate)" : "") 
-		+ " - Description - " + description;
+		OptionsMenu.versionShit.text = LangUtil.getString('descCurFPSCap') + ': ' + FlxG.save.data.fpsCap + 
+		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? 'Hz (' + LangUtil.getString('descRefreshRate') + ')' : "") 
+		+ ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
 
 		return true;
 	}
@@ -389,7 +385,7 @@ class ScrollSpeedOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Scroll Speed";
+		return LangUtil.getString('optScroll');
 	}
 
 	override function right():Bool {
@@ -401,7 +397,7 @@ class ScrollSpeedOption extends Option
 		if (FlxG.save.data.scrollSpeed > 10)
 			FlxG.save.data.scrollSpeed = 10;
 
-		OptionsMenu.versionShit.text = "Current Scroll Speed: " + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1) + " - Description - " + description;
+		OptionsMenu.versionShit.text = LangUtil.getString('descCurScroll') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
 		return true;
 	}
 
@@ -415,7 +411,7 @@ class ScrollSpeedOption extends Option
 			FlxG.save.data.scrollSpeed = 10;
 
 
-		OptionsMenu.versionShit.text = "Current Scroll Speed: " + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1) + " - Description - " + description;
+		OptionsMenu.versionShit.text = LangUtil.getString('descCurScroll') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
 		return true;
 	}
 }
@@ -439,7 +435,7 @@ class RainbowFPSOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "FPS Rainbow " + (!FlxG.save.data.fpsRain ? "off" : "on");
+		return LangUtil.getString('optFPSRainbow') + ' ' + (FlxG.save.data.fpsRain ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
@@ -460,7 +456,7 @@ class NPSDisplayOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "NPS Display " + (!FlxG.save.data.npsDisplay ? "off" : "on");
+		return LangUtil.getString('optNPS') + ' ' + (FlxG.save.data.npsDisplay ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
@@ -481,7 +477,7 @@ class ReplayOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Load replays";
+		return LangUtil.getString('optReplay');
 	}
 }
 
@@ -502,7 +498,7 @@ class AccuracyDOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Accuracy Mode: " + (FlxG.save.data.accuracyMod == 0 ? "Accurate" : "Complex");
+		return LangUtil.getString('optAccuracyMode') + ' ' + (FlxG.save.data.accuracyMod == 0 ? LangUtil.getString('optAMAccurate') : LangUtil.getString('optAMComplex'));
 	}
 }
 
@@ -523,7 +519,7 @@ class CustomizeGameplay extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Customize Gameplay";
+		return LangUtil.getString('optCustomize');
 	}
 }
 
@@ -545,38 +541,10 @@ class WatermarkOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Watermarks " + (Main.watermarks ? "on" : "off");
+		return LangUtil.getString('optWatermark') + ' ' + (Main.watermarks ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
-class OffsetMenu extends Option
-{
-	public function new(desc:String)
-	{
-		super();
-		description = desc;
-	}
-
-	public override function press():Bool
-	{
-		trace("switch");
-		var poop:String = Highscore.formatSong("Tutorial", 1);
-
-		PlayState.SONG = Song.loadFromJson(poop, "Tutorial");
-		PlayState.isStoryMode = false;
-		PlayState.storyDifficulty = 0;
-		PlayState.storyWeek = 0;
-		PlayState.offsetTesting = true;
-		trace('CUR WEEK' + PlayState.storyWeek);
-		LoadingState.loadAndSwitchState(new PlayState());
-		return false;
-	}
-
-	private override function updateDisplay():String
-	{
-		return "Time your offset";
-	}
-}
 class BotPlay extends Option
 {
 	public function new(desc:String)
@@ -594,7 +562,7 @@ class BotPlay extends Option
 	}
 	
 	private override function updateDisplay():String
-		return "BotPlay " + (FlxG.save.data.botplay ? "on" : "off");
+		return LangUtil.getString('optBotplay') + ' ' + (FlxG.save.data.botplay ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 }
 
 class GFCountdownOption extends Option
@@ -614,7 +582,7 @@ class GFCountdownOption extends Option
 	}
 	
 	private override function updateDisplay():String
-		return "Girlfriend Countdown " + (FlxG.save.data.gfCountdown ? "on" : "off");
+		return LangUtil.getString('optGFCountdown') + ' ' + (FlxG.save.data.gfCountdown ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 }
 
 class Language extends Option
@@ -634,6 +602,6 @@ class Language extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Change Language";
+		return LangUtil.getString('optLanguage');
 	}
 }

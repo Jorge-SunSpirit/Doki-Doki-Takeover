@@ -61,6 +61,12 @@ class LangSelectState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
+			if (controls.BACK)
+			{
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				FlxG.switchState(new OptionsMenu());
+			}
+
 			if (controls.UP_P)
 				{
 					FlxG.sound.play(Paths.sound('scrollMenu'));
