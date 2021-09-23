@@ -275,9 +275,9 @@ class FreeplayState extends MusicBeatState
 				switch (songs[curSelected].songName.toLowerCase())
 				{
 					case 'your reality':
-						diffText.text = LangUtil.getString('sngYourReality');
+						diffText.text = 'YOUR REALITY';
 					case 'erb':
-						diffText.text = LangUtil.getString('sngERB');
+						diffText.text = 'GOKU';
 					default:
 						diffText.text = LangUtil.getString('cmnNormal');
 				}

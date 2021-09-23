@@ -77,6 +77,3 @@ msgNat::Natsuki's songs are now available in the Freeplay menu.
 msgYuri::Yuri's songs are now available in the Freeplay menu.
 msgExtra1::"Poems 'n Thorns" Unlocked!\nAccess the song in the Freeplay menu.
 msgExtra2::Epiphany\nunlocked.
-// SONG SPECIFIC
-sngYourReality::YOUR REALITY
-sngERB::GOKU
