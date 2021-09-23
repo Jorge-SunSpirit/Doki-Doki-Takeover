@@ -14,6 +14,7 @@ cmnOn::On
 cmnOff::Off
 cmnDesc::Description
 cmnOffset::Offset (Left, Right, Shift for slow)
+cmnAddOffset::Additive Offset (Left, Right)
 cmnCategory::Please select a category
 // CATEGORY
 catGameplay::Gameplay
@@ -45,6 +46,7 @@ optWatermark::Watermarks
 optGFCountdown::Girlfriend Countdown
 optLanguage::Change Language
 // DESCRIPTION
+descAddOffset::Adds value to global offset, per song.
 descDownscroll::Change the layout of the strumline.
 descGhostTap::Ghost Tapping is when you tap a direction and it doesn't give you a miss.
 descJudgement::Customize your Hit Timings (LEFT or RIGHT)
