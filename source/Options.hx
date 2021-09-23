@@ -151,7 +151,7 @@ class AccuracyOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return LangUtil.getString('optAccuracy') + ' ' + (FlxG.save.data.accuracyDisplay ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+		return LangUtil.getString('cmnAccuracy') + ' ' + (FlxG.save.data.accuracyDisplay ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 
@@ -562,7 +562,7 @@ class BotPlay extends Option
 	}
 	
 	private override function updateDisplay():String
-		return LangUtil.getString('optBotplay') + ' ' + (FlxG.save.data.botplay ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+		return LangUtil.getString('cmnBotplay') + ' ' + (FlxG.save.data.botplay ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 }
 
 class GFCountdownOption extends Option

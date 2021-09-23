@@ -6,10 +6,10 @@ using StringTools;
 
 class CoolUtil
 {
-	public static var difficultyArray:Array<String> = ['EASY', "NORMAL", "HARD"];
-
 	public static function difficultyString():String
 	{
+		var difficultyArray:Array<String> = [LangUtil.getString('cmnEasy'), LangUtil.getString('cmnNormal'), LangUtil.getString('cmnHard')];
+
 		return difficultyArray[PlayState.storyDifficulty];
 	}
 

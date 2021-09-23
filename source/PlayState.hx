@@ -2098,7 +2098,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.save.data.accuracyDisplay)
 			scoreTxt.text = Ratings.CalculateRanking(songScore,songScoreDef,nps,maxNPS,accuracy);
 		else
-			scoreTxt.text = 'Score:' + songScore;
+			scoreTxt.text = LangUtil.getString('cmnScore') + ':' + songScore;
 
 		if (FlxG.keys.justPressed.ENTER && startedCountdown && canPause)
 		{

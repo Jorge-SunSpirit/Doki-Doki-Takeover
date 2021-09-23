@@ -182,7 +182,7 @@ class FreeplayState extends MusicBeatState
 		if (Math.abs(lerpScore - intendedScore) <= 10)
 			lerpScore = intendedScore;
 
-		scoreText.text = "PERSONAL BEST:" + lerpScore;
+		scoreText.text = LangUtil.getString('cmnPB') + ":" + lerpScore;
 
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;
@@ -270,19 +270,19 @@ class FreeplayState extends MusicBeatState
 		switch (curDifficulty)
 		{
 			case 0:
-				diffText.text = 'EASY';
+				diffText.text = LangUtil.getString('cmnEasy');
 			case 1:
 				switch (songs[curSelected].songName.toLowerCase())
 				{
 					case 'your reality':
-						diffText.text = 'YOUR REALITY';
+						diffText.text = LangUtil.getString('sngYourReality');
 					case 'erb':
-						diffText.text = 'GOKU';
+						diffText.text = LangUtil.getString('sngERB');
 					default:
-						diffText.text = 'NORMAL';
+						diffText.text = LangUtil.getString('cmnNormal');
 				}
 			case 2:
-				diffText.text = 'HARD';
+				diffText.text = LangUtil.getString('cmnHard');
 		}
 	}
 

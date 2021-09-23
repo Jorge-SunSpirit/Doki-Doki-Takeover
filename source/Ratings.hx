@@ -5,8 +5,9 @@ class Ratings
     public static function GenerateLetterRank(accuracy:Float) // generate a letter ranking
     {
         var ranking:String = "N/A";
+
 		if(FlxG.save.data.botplay)
-			ranking = "BotPlay";
+			ranking = LangUtil.getString('cmnBotplay');
 
         if (PlayState.misses == 0 && PlayState.bads == 0 && PlayState.shits == 0 && PlayState.goods == 0) // Marvelous (SICK) Full Combo
             ranking = "(MFC)";
@@ -17,7 +18,7 @@ class Ratings
         else if (PlayState.misses < 10) // Single Digit Combo Breaks
             ranking = "(SDCB)";
         else
-            ranking = "(Clear)";
+            ranking = "(" + LangUtil.getString('cmnClear') + ")";
 
         // WIFE TIME :)))) (based on Wife3)
 
@@ -87,7 +88,7 @@ class Ratings
         if (accuracy == 0)
             ranking = "N/A";
 		else if(FlxG.save.data.botplay)
-			ranking = "BotPlay";
+			ranking = LangUtil.getString('cmnBotplay');
 
         return ranking;
     }
@@ -108,7 +109,7 @@ class Ratings
         // trace('Hit Info\nDifference: ' + noteDiff + '\nZone: ' + Conductor.safeZoneOffset * 1.5 + "\nTS: " + customTimeScale + "\nLate: " + 155 * customTimeScale);
 
 	if (FlxG.save.data.botplay)
-	    return "good"; // FUNNY
+	    return "sick";
 	    
         if (noteDiff > 166 * customTimeScale) // so god damn early its a miss
             return "miss";
@@ -132,10 +133,10 @@ class Ratings
     public static function CalculateRanking(score:Int,scoreDef:Int,nps:Int,maxNPS:Int,accuracy:Float):String
     {
         return 
-        (FlxG.save.data.npsDisplay ? "NPS: " + nps + " (Max " + maxNPS + ")" + (!FlxG.save.data.botplay ? " | " : "") : "") + (!FlxG.save.data.botplay ?	// NPS Toggle
-        "Score:" + (Conductor.safeFrames != 10 ? score + " (" + scoreDef + ")" : "" + score) + 									// Score
-        " | Combo Breaks:" + PlayState.misses + 																				// Misses/Combo Breaks
-        " | Accuracy:" + (FlxG.save.data.botplay ? "N/A" : HelperFunctions.truncateFloat(accuracy, 2) + " %") +  				// Accuracy
+        (FlxG.save.data.npsDisplay ? LangUtil.getString('cmnNPS') + ": " + nps + " (" + LangUtil.getString('cmnMaxNPS') + " " + maxNPS + ")" + (!FlxG.save.data.botplay ? " | " : "") : "") + (!FlxG.save.data.botplay ?	// NPS Toggle
+        LangUtil.getString('cmnScore') + ":" + (Conductor.safeFrames != 10 ? score + " (" + scoreDef + ")" : "" + score) + 									// Score
+        " | " + LangUtil.getString('cmnComboBreak') + ":" + PlayState.misses + 																				// Misses/Combo Breaks
+        " | " + LangUtil.getString('cmnAccuracy') + ":" + (FlxG.save.data.botplay ? "N/A" : HelperFunctions.truncateFloat(accuracy, 2) + " %") +  			// Accuracy
         " | " + GenerateLetterRank(accuracy) : ""); 																			// Letter Rank
     }
 }

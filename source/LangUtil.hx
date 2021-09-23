@@ -4,7 +4,7 @@ import flixel.FlxG;
 
 class LangUtil
 {
-	public static function getFont(type:String):String
+	public static function getFont(?type:String):String
 	{
 		var font:String = '';
 
@@ -30,14 +30,12 @@ class LangUtil
 					default:
 						font = 'Pixel Arial 11 Bold';
 				}
-			case 'vcr':
+			default:
 				switch (FlxG.save.data.language)
 				{
 					default:
 						font = 'VCR OSD Mono';
 				}
-			default:
-				font = 'VCR OSD Mono';
 		}
 		
 		return font;
@@ -47,7 +45,7 @@ class LangUtil
 		{
 			var localeList:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
 
-			var string:String= '';
+			var string:String = '';
 
 			for (i in 0...localeList.length)
 			{
@@ -59,6 +57,9 @@ class LangUtil
 					string = data[1];
 			}
 			
-			return string;
+			if (string == '')
+				return identifier;
+			else
+				return string;
 		}
 }

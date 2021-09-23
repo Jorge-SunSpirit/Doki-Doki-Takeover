@@ -1,4 +1,15 @@
 // COMMON
+cmnEasy::EASY
+cmnNormal::NORMAL
+cmnHard::HARD
+cmnPB::PERSONAL BEST
+cmnScore::Score
+cmnNPS::NPS
+cmnMaxNPS::Max
+cmnComboBreak::Combo Breaks
+cmnAccuracy::Accuracy
+cmnBotplay::Botplay
+cmnClear::Clear
 cmnOn::On
 cmnOff::Off
 cmnDesc::Description
@@ -15,7 +26,6 @@ optDownscroll::Downscroll
 optUpscroll::Upscroll
 optGhostTap::Ghost Tapping
 optNoGhostTap::No Ghost Tapping
-optAccuracy::Accuracy
 optPosition::Song Position
 optDistract::Distractions
 optReset::Reset Button
@@ -32,7 +42,6 @@ optAMAccurate::Accurate
 optAMComplex::Complex
 optCustomize::Customize Gameplay
 optWatermark::Watermarks
-optBotplay::Botplay
 optGFCountdown::Girlfriend Countdown
 optLanguage::Change Language
 // DESCRIPTION
@@ -60,3 +69,14 @@ descWatermark::Enable and disable all watermarks from the engine.
 descBotplay::Showcase your charts and mods with autoplay.
 descLanguage::Change the language of the game!
 descGFCountdown::Have Girlfriend count down before the song starts.
+// UNLOCK POPUPS
+msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
+msgSayo::Sayori's songs are now available in the Freeplay menu.
+msgGFCount::"Girlfriend Countdown" unlocked!\nToggle it in the Options menu.
+msgNat::Natsuki's songs are now available in the Freeplay menu.
+msgYuri::Yuri's songs are now available in the Freeplay menu.
+msgExtra1::"Poems 'n Thorns" Unlocked!\nAccess the song in the Freeplay menu.
+msgExtra2::Epiphany\nunlocked.
+// SONG SPECIFIC
+sngYourReality::YOUR REALITY
+sngERB::GOKU
