@@ -3,7 +3,6 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxBackdrop;
-import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.effects.FlxFlicker;
 import flixel.text.FlxText;
@@ -12,7 +11,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
-class LangSelectState extends MusicBeatSubstate
+class LangSelectState extends MusicBeatState
 {
 	var textMenuItems:Array<String> = [];
 	var localeList:Array<String> = [];
@@ -25,6 +24,8 @@ class LangSelectState extends MusicBeatSubstate
 
 	override function create()
 	{
+		persistentUpdate = persistentDraw = true;
+
 		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
 		backdrop.velocity.set(-40, -40);
 
@@ -98,13 +99,13 @@ class LangSelectState extends MusicBeatSubstate
 								ease: FlxEase.quadOut,
 									onComplete: function(twn:FlxTween)
 									{
-									txt.kill();
+										txt.kill();
 									}
 								});
-								}
-								else
+							}
+							else
 							{
-									if (FlxG.save.data.flashing)
+								if (FlxG.save.data.flashing)
 								{
 									FlxFlicker.flicker(txt, 1, 0.06, false, false, function(flick:FlxFlicker)
 										{
@@ -112,7 +113,7 @@ class LangSelectState extends MusicBeatSubstate
 											trace('langauge set to ' + FlxG.save.data.language);
 											FlxG.switchState(new MainMenuState());
 									});
-									}
+								}
 								else
 								{
 									new FlxTimer().start(1, function(tmr:FlxTimer)

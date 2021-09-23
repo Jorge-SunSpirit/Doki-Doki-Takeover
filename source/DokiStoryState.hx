@@ -30,7 +30,6 @@ using StringTools;
 
 class DokiStoryState extends MusicBeatState
 {
-	
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
@@ -41,16 +40,10 @@ class DokiStoryState extends MusicBeatState
 		['Reconciliation'],
 		['Beathoven (Natsuki Mix)', 'Crucify (Yuri Mix)', "It's Complicated (Sayori Mix)", 'Glitcher (Monika Mix)']
 	];
+
 	var curDifficulty:Int = 1;
 
-	var weekNames:Array<String> = [
-		"Just Monika",
-		"Sayori",
-		"Natsuki",
-		"Yuri",
-		"Monika Part 2",
-		"The Festival"
-	];
+	var weekNames:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/weekNames', 'preload', true));
 
 	var txtWeekTitle:FlxText;
 	var txtTracklist:FlxText;
