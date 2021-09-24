@@ -344,6 +344,8 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
 
+		camHUD.zoom = FlxG.save.data.zoom;
+
 		FlxCamera.defaultCameras = [camGame];
 
 		persistentUpdate = true;
@@ -563,22 +565,26 @@ class PlayState extends MusicBeatState
 					var posX = -700;
 					var posY = -520;
 					
-					vignette = new FlxSprite(posX, posY).loadGraphic(Paths.image('vignette','doki'));
+					vignette = new FlxSprite(0,0).loadGraphic(Paths.image('vignette','doki'));
+					vignette.setGraphicSize(Std.int(vignette.width / FlxG.save.data.zoom));
+					vignette.updateHitbox();
+					vignette.antialiasing = true;
+					vignette.screenCenter(XY);
 					vignette.scrollFactor.set();
-					vignette.x = 0;
-					vignette.y = 0;
 					vignette.alpha = 0;
 
 					if (SONG.song.toLowerCase() != 'obsession')
 						vignette.cameras = [camHUD];
 
-					staticshock = new FlxSprite(posX, posY);
+					staticshock = new FlxSprite(0,0);
 					staticshock.frames = Paths.getSparrowAtlas('clubroom/staticshock','doki');
+					staticshock.setGraphicSize(Std.int(staticshock.width / FlxG.save.data.zoom));
+					staticshock.updateHitbox();
+					staticshock.antialiasing = true;
+					staticshock.screenCenter(XY);
 					staticshock.animation.addByPrefix('idle', 'hueh', 24, true);
 					staticshock.animation.play('idle');
 					staticshock.scrollFactor.set();
-					staticshock.x = 0;
-					staticshock.y = 0;
 					staticshock.cameras = [camHUD];
 					staticshock.alpha = .6;
 					staticshock.blend = SUBTRACT;
@@ -2464,7 +2470,7 @@ class PlayState extends MusicBeatState
 		if (camZooming)
 		{
 			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, 0.95);
-			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, 0.95);
+			camHUD.zoom = FlxMath.lerp(FlxG.save.data.zoom, camHUD.zoom, 0.95);
 		}
 
 		FlxG.watch.addQuick("beatShit", curBeat);
