@@ -41,10 +41,16 @@ class LangSelectState extends MusicBeatState
 		grpOptionsTexts = new FlxTypedGroup<FlxText>();
 		add(grpOptionsTexts);
 
+		var titleText:FlxText = new FlxText(0, 20, 0, LangUtil.getString('optLanguage'));
+		titleText.setFormat(LangUtil.getFont('riffic'), 48, FlxColor.WHITE, CENTER);
+		titleText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 3);
+		titleText.screenCenter(X);
+		add(titleText);
+
 		for (i in 0...textMenuItems.length)
 		{
-			var optionText:FlxText = new FlxText(0, 20 + (i * 50), 0, textMenuItems[i], 32);
-			optionText.setFormat("Riffic Free Bold", 32, FlxColor.WHITE, CENTER);
+			var optionText:FlxText = new FlxText(0, titleText.height + 50 + (i * 50), 0, textMenuItems[i]);
+			optionText.setFormat(LangUtil.getFont('riffic'), 32, FlxColor.WHITE, CENTER);
 			optionText.screenCenter(X);
 			optionText.ID = i;
 			grpOptionsTexts.add(optionText);
@@ -64,7 +70,7 @@ class LangSelectState extends MusicBeatState
 			if (controls.BACK)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				FlxG.switchState(new OptionsMenu());
+				FlxG.switchState(new MainMenuState());
 			}
 
 			if (controls.UP_P)

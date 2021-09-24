@@ -38,11 +38,7 @@ class MainMenuState extends MusicBeatState
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
 
-	#if !switch
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'options'];
-	#else
-	var optionShit:Array<String> = ['story mode', 'freeplay'];
-	#end
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'options', 'language'];
 
 	public static var firstStart:Bool = true;
 	public static var finishedFunnyMove:Bool = false;
@@ -392,6 +388,8 @@ class MainMenuState extends MusicBeatState
 						trace("Credits Menu Selected");
 					case 'options':
 						FlxG.switchState(new OptionsMenu());
+					case 'language':
+						FlxG.switchState(new LangSelectState());
 				}
 		}
 
@@ -400,10 +398,10 @@ class MainMenuState extends MusicBeatState
 		{
 			curSelected += huh;
 
-			if (curSelected >= 4)
+			if (curSelected >= optionShit.length)
 				curSelected = 0;
 			if (curSelected < 0)
-				curSelected = 4 - 1;
+				curSelected = optionShit.length - 1;
 				
 			menuItems.forEach(function(spr:FlxSprite)
 			{

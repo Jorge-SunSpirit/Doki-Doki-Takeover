@@ -56,8 +56,7 @@ class OptionsMenu extends MusicBeatState
 			#end
 			new FlashingLightsOption(LangUtil.getString('descFlashing')),
 			new WatermarkOption(LangUtil.getString('descWatermark')),
-			new BotPlay(LangUtil.getString('descBotplay')),
-			new Language(LangUtil.getString('descLanguage'))
+			new BotPlay(LangUtil.getString('descBotplay'))
 		])
 		
 	];

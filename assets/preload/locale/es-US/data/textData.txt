@@ -69,7 +69,6 @@ descReplay::View replays
 descFlashing::Toggle flashing lights that can cause epileptic seizures and strain.
 descWatermark::Enable and disable all watermarks from the engine.
 descBotplay::Showcase your charts and mods with autoplay.
-descLanguage::Change the language of the game!
 descGFCountdown::Have Girlfriend count down before the song starts.
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
