@@ -1,0 +1,82 @@
+// COMMON
+cmnEasy::EASY
+cmnNormal::NORMAL
+cmnHard::HARD
+cmnPB::PERSONAL BEST
+cmnScore::Score
+cmnNPS::NPS
+cmnMaxNPS::Max
+cmnComboBreak::Combo Breaks
+cmnAccuracy::Accuracy
+cmnBotplay::Botplay
+cmnClear::Clear
+cmnOn::On
+cmnOff::Off
+cmnDesc::Description
+cmnOffset::Offset (Left, Right, Shift for slow)
+cmnAddOffset::Additive Offset (Left, Right)
+cmnCategory::Please select a category
+// CATEGORY
+catGameplay::Gameplay
+catAppearance::Appearance
+catMisc::Miscellaneous
+catUnlock::Unlockables
+// OPTIONS
+optKeyBindings::Key Bindings
+optDownscroll::Downscroll
+optUpscroll::Upscroll
+optGhostTap::Ghost Tapping
+optNoGhostTap::No Ghost Tapping
+optPosition::Song Position
+optDistract::Distractions
+optReset::Reset Button
+optFlashing::Flashing Lights
+optJudgement::Safe Frames
+optFPSCount::FPS Counter
+optFPSCap::FPS Cap
+optScroll::Scroll Speed
+optFPSRainbow::FPS Rainbow
+optNPS::NPS Display
+optReplay::Load Replays
+optAccuracyMode::Accuracy Mode
+optAMAccurate::Accurate
+optAMComplex::Complex
+optCustomize::Customize Gameplay
+optWatermark::Watermarks
+optGFCountdown::Girlfriend Countdown
+optLanguage::Language Select
+// DESCRIPTION
+descAddOffset::Adds value to global offset, per song.
+descKeyBindings::Change the keybindings of each note.
+descDownscroll::Change the layout of the strumline.
+descGhostTap::Ghost Tapping is when you tap a direction and it doesn't give you a miss.
+descJudgement::Customize your Hit Timings (LEFT or RIGHT)
+descCurJudgement::Current Safe Frames
+descFPSCap::Cap your FPS (Left for -10, Right for +10. SHIFT to go faster)
+descCurFPSCap::Current FPS Cap
+descRefreshRate::Refresh Rate
+descScroll::Change your scroll speed (Left for -0.1, right for +0.1. If it's at 1, it will be chart dependent)
+descCurScroll::Current Scroll Speed
+descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)
+descReset::Toggle pressing R to gameover.
+descCustomize::Drag'n'Drop Gameplay Modules around to your preference
+descCustomizeState::Click and drag around gameplay elements to customize their positions. Press R to reset. Q/E to change zoom. Press Escape to go back.
+descDistract::Toggle stage distractions that can hinder your gameplay.
+descFPSRainbow::Make the FPS Counter Rainbow (Only works with the FPS Counter toggled on and Flashing Lights toggled off)
+descAccuracy::Display accuracy information.
+descNPS::Shows your current Notes Per Second.
+descPosition::Show the songs current position (as a bar)
+descFPSCount::Toggle the FPS Counter
+descReplay::View replays
+descFlashing::Toggle flashing lights that can cause epileptic seizures and strain.
+descWatermark::Enable and disable all watermarks from the engine.
+descBotplay::Showcase your charts and mods with autoplay.
+descGFCountdown::Have Girlfriend count down before the song starts.
+// UNLOCK POPUPS
+msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
+msgSayo::Sayori's songs are now available in the Freeplay menu.
+msgGFCount::"Girlfriend Countdown" unlocked!\nToggle it in the Options menu.
+msgNat::Natsuki's songs are now available in the Freeplay menu.
+msgYuri::Yuri's songs are now available in the Freeplay menu.
+msgExtra1::"Poems 'n Thorns" Unlocked!\nAccess the song in the Freeplay menu.
+msgExtra2::Epiphany\nunlocked.

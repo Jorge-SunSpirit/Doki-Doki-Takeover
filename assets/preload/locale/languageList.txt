@@ -1,2 +1,4 @@
 English:en-US
 Spanish:es-US
+Russian:ru-RU
+Brazilian Portuguese:pt-BR

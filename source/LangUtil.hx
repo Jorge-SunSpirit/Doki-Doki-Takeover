@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxG;
 
+// for reference: https://www.techonthenet.com/js/language_tags.php
 class LangUtil
 {
 	public static var localeList:Array<String>;

@@ -127,7 +127,7 @@ class DokiStoryState extends MusicBeatState
 		add(menuItems);
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.05, 0, 0, "", 5);
-		txtWeekTitle.setFormat("Riffic Free Bold", 32, FlxColor.WHITE, CENTER);
+		txtWeekTitle.setFormat(LangUtil.getFont('riffic'), 32, FlxColor.WHITE, CENTER);
 		txtWeekTitle.alignment = CENTER;
 		txtWeekTitle.scale.set(1.2, 1.2);
 		txtWeekTitle.setBorderStyle(OUTLINE, 0xFFF860B0, 2, 1);
@@ -138,7 +138,7 @@ class DokiStoryState extends MusicBeatState
 		add(txtWeekTitle);
 
 		txtTracklist = new FlxText(FlxG.width * 0.01, 50, 0, "", 5);
-		txtTracklist.setFormat("Riffic Free Bold", 32, FlxColor.WHITE, CENTER);
+		txtTracklist.setFormat(LangUtil.getFont('riffic'), 32, FlxColor.WHITE, CENTER);
 		txtTracklist.alignment = CENTER;
 		txtTracklist.scale.set(.8, .8);
 		txtTracklist.setBorderStyle(OUTLINE, 0xFFFFB9DD, 3, 1);
