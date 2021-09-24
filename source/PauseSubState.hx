@@ -48,7 +48,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelInfo.text += PlayState.SONG.song;
 		levelInfo.antialiasing = true;
 		levelInfo.scrollFactor.set();
-		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
+		levelInfo.setFormat(LangUtil.getFont(), 32);
 		levelInfo.updateHitbox();
 		add(levelInfo);
 
@@ -56,7 +56,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.text += CoolUtil.difficultyString();
 		levelDifficulty.antialiasing = true;
 		levelDifficulty.scrollFactor.set();
-		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+		levelDifficulty.setFormat(LangUtil.getFont(), 32);
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
@@ -75,7 +75,7 @@ class PauseSubState extends MusicBeatSubstate
 		perSongOffset = new FlxText(5, FlxG.height - 18, 0, LangUtil.getString('cmnAddOffset') + ': ' + PlayState.songOffset + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + LangUtil.getString('descAddOffset'), 12);
 		perSongOffset.antialiasing = true;
 		perSongOffset.scrollFactor.set();
-		perSongOffset.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		perSongOffset.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		
 		#if cpp
 			add(perSongOffset);

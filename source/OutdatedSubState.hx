@@ -49,7 +49,7 @@ class OutdatedSubState extends MusicBeatState
 			+ "\nEnter for Yes - Esc for No\n",
 			32);
 		
-		txt.setFormat("VCR OSD Mono", 32, FlxColor.fromRGB(200, 200, 200), CENTER);
+		txt.setFormat(LangUtil.getFont(), 32, FlxColor.fromRGB(200, 200, 200), CENTER);
 		txt.borderColor = FlxColor.BLACK;
 		txt.borderSize = 3;
 		txt.borderStyle = FlxTextBorderStyle.OUTLINE;

@@ -23,6 +23,8 @@ class OptionsMenu extends MusicBeatState
 	public static var instance:OptionsMenu;
 
 	var backdrop:FlxBackdrop;
+	var logo:FlxSprite;
+	var logoBl:FlxSprite;
 
 	var selector:FlxText;
 	var curSelected:Int = 0;
@@ -64,7 +66,7 @@ class OptionsMenu extends MusicBeatState
 	public var acceptInput:Bool = true;
 
 	private var currentDescription:String = "";
-	private var grpControls:FlxTypedGroup<Alphabet>;
+	private var grpControls:FlxTypedGroup<FlxText>;
 	public static var versionShit:FlxText;
 
 	var currentSelectedCat:OptionCategory;
@@ -81,31 +83,35 @@ class OptionsMenu extends MusicBeatState
 			]));
 		}
 
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
-
-		menuBG.color = 0xFFea71fd;
-		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
-		menuBG.updateHitbox();
-		menuBG.screenCenter();
-		menuBG.antialiasing = true;
-		add(menuBG);
-
 		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
 		backdrop.velocity.set(-40, -40);
 
-		grpControls = new FlxTypedGroup<Alphabet>();
+		logo = new FlxSprite(-60, 0).loadGraphic(Paths.image('Credits_LeftSide'));
+		add(logo);
+
+		logoBl = new FlxSprite(40, -41);
+		logoBl.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
+		logoBl.antialiasing = true;
+		logoBl.scale.set(0.5, 0.5);
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
+		logoBl.animation.play('bump');
+		logoBl.updateHitbox();
+		add(logoBl);
+
+		grpControls = new FlxTypedGroup<FlxText>();
 		add(grpControls);
 
 		for (i in 0...options.length)
 		{
-			var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, options[i].getName(), true, false);
-			controlLabel.isMenuItem = true;
-			controlLabel.targetY = i;
+			var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
+			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+			controlLabel.setBorderStyle(OUTLINE, 0xFFFFCFFF, 2);
+			controlLabel.ID = i;
 			grpControls.add(controlLabel);
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
 		}
 
-		currentDescription = "none";
+		currentDescription = "N/A";
 
 		versionShit = new FlxText(5, FlxG.height + 40, 0, LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription, 12);
 		versionShit.scrollFactor.set();
@@ -129,8 +135,6 @@ class OptionsMenu extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
-
 		if (acceptInput)
 		{
 			if (controls.BACK && !isCat)
@@ -141,9 +145,10 @@ class OptionsMenu extends MusicBeatState
 				grpControls.clear();
 				for (i in 0...options.length)
 				{
-					var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, options[i].getName(), true, false);
-					controlLabel.isMenuItem = true;
-					controlLabel.targetY = i;
+					var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
+					controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+					controlLabel.setBorderStyle(OUTLINE, 0xFFFFCFFF, 2);
+					controlLabel.ID = i;
 					grpControls.add(controlLabel);
 					// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
 				}
@@ -238,8 +243,9 @@ class OptionsMenu extends MusicBeatState
 				{
 					if (currentSelectedCat.getOptions()[curSelected].press()) {
 						grpControls.remove(grpControls.members[curSelected]);
-						var ctrl:Alphabet = new Alphabet(0, (70 * curSelected) + 30, currentSelectedCat.getOptions()[curSelected].getDisplay(), true, false);
-						ctrl.isMenuItem = true;
+						var ctrl:FlxText = new FlxText(460, (50 * curSelected) + 20, 0, currentSelectedCat.getOptions()[curSelected].getDisplay());
+						ctrl.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+						ctrl.setBorderStyle(OUTLINE, 0xFFFFCFFF, 2);
 						grpControls.add(ctrl);
 					}
 				}
@@ -250,9 +256,10 @@ class OptionsMenu extends MusicBeatState
 					grpControls.clear();
 					for (i in 0...currentSelectedCat.getOptions().length)
 						{
-							var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, currentSelectedCat.getOptions()[i].getDisplay(), true, false);
-							controlLabel.isMenuItem = true;
-							controlLabel.targetY = i;
+							var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, currentSelectedCat.getOptions()[i].getDisplay());
+							controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+							controlLabel.setBorderStyle(OUTLINE, 0xFFFFCFFF, 2);
+							controlLabel.ID = i;
 							grpControls.add(controlLabel);
 							// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
 						}
@@ -262,17 +269,27 @@ class OptionsMenu extends MusicBeatState
 				changeSelection();
 			}
 		}
+
 		FlxG.save.flush();
+
+		grpControls.forEach(function(txt:FlxText)
+			{
+				txt.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+		
+				if (txt.ID == curSelected)
+					txt.setBorderStyle(OUTLINE, 0xFFFFCFFF, 2);
+			});
+
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
+
+		super.update(elapsed);
 	}
 
 	var isSettingControl:Bool = false;
 
 	function changeSelection(change:Int = 0)
 	{
-		#if !switch
-		// NGio.logEvent("Fresh");
-		#end
-		
 		FlxG.sound.play(Paths.sound("scrollMenu"), 0.4);
 
 		curSelected += change;
@@ -286,25 +303,13 @@ class OptionsMenu extends MusicBeatState
 			currentDescription = currentSelectedCat.getOptions()[curSelected].getDescription();
 		else
 			currentDescription = LangUtil.getString('cmnCategory');
+
 		versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription;
-
-		// selector.y = (70 * curSelected) + 30;
-
-		var bullShit:Int = 0;
-
-		for (item in grpControls.members)
-		{
-			item.targetY = bullShit - curSelected;
-			bullShit++;
-
-			item.alpha = 0.6;
-			// item.setGraphicSize(Std.int(item.width * 0.8));
-
-			if (item.targetY == 0)
-			{
-				item.alpha = 1;
-				// item.setGraphicSize(Std.int(item.width));
-			}
-		}
 	}
+
+	override function beatHit()
+		{
+			super.beatHit();
+			logoBl.animation.play('bump', true);
+		}
 }
