@@ -99,11 +99,11 @@ class GameplayCustomizeState extends MusicBeatState
 		FlxG.camera.zoom = 0.9;
 		FlxG.camera.focusOn(camFollow.getPosition());
 
-		strumLine = new FlxSprite(0, FlxG.save.data.strumline).makeGraphic(FlxG.width, 14);
+		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
 		strumLine.scrollFactor.set();
         strumLine.alpha = 0.4;
 
-        add(strumLine);
+        //add(strumLine);
 		
 		if (FlxG.save.data.downscroll)
 			strumLine.y = FlxG.height - 165;
