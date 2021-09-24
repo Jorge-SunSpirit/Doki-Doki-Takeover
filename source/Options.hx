@@ -75,9 +75,10 @@ class KeyBindingsOption extends Option
 {
 	private var controls:Controls;
 
-	public function new(controls:Controls)
+	public function new(desc:String, controls:Controls)
 	{
 		super();
+		description = desc;
 		this.controls = controls;
 	}
 

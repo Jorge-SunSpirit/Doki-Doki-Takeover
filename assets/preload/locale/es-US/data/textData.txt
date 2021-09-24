@@ -47,6 +47,7 @@ optGFCountdown::Girlfriend Countdown
 optLanguage::Language Select
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
+descKeyBindings::Change the keybindings of each note.
 descDownscroll::Change the layout of the strumline.
 descGhostTap::Ghost Tapping is when you tap a direction and it doesn't give you a miss.
 descJudgement::Customize your Hit Timings (LEFT or RIGHT)

@@ -565,30 +565,32 @@ class PlayState extends MusicBeatState
 					var posX = -700;
 					var posY = -520;
 					
-					vignette = new FlxSprite(0,0).loadGraphic(Paths.image('vignette','doki'));
-					vignette.setGraphicSize(Std.int(vignette.width / FlxG.save.data.zoom));
-					vignette.updateHitbox();
+					vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('vignette','doki'));
 					vignette.antialiasing = true;
-					vignette.screenCenter(XY);
 					vignette.scrollFactor.set();
 					vignette.alpha = 0;
 
 					if (SONG.song.toLowerCase() != 'obsession')
+					{
 						vignette.cameras = [camHUD];
+						vignette.setGraphicSize(Std.int(vignette.width / FlxG.save.data.zoom));
+						vignette.updateHitbox();
+						vignette.screenCenter(XY);
+					}
 
-					staticshock = new FlxSprite(0,0);
+					staticshock = new FlxSprite(0, 0);
 					staticshock.frames = Paths.getSparrowAtlas('clubroom/staticshock','doki');
-					staticshock.setGraphicSize(Std.int(staticshock.width / FlxG.save.data.zoom));
-					staticshock.updateHitbox();
 					staticshock.antialiasing = true;
-					staticshock.screenCenter(XY);
 					staticshock.animation.addByPrefix('idle', 'hueh', 24, true);
 					staticshock.animation.play('idle');
 					staticshock.scrollFactor.set();
-					staticshock.cameras = [camHUD];
 					staticshock.alpha = .6;
 					staticshock.blend = SUBTRACT;
 					staticshock.visible = false;
+					staticshock.cameras = [camHUD];
+					staticshock.setGraphicSize(Std.int(staticshock.width / FlxG.save.data.zoom));
+					staticshock.updateHitbox();
+					staticshock.screenCenter(XY);
 
 					deskfront = new FlxSprite(posX, posY).loadGraphic(Paths.image('clubroom/DesksFront','doki'));
 					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));

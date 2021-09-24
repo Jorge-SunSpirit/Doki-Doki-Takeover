@@ -29,7 +29,7 @@ class OptionsMenu extends MusicBeatState
 
 	var options:Array<OptionCategory> = [
 		new OptionCategory(LangUtil.getString('catGameplay'), [
-			new KeyBindingsOption(controls),
+			new KeyBindingsOption(LangUtil.getString('descKeyBindings'), controls),
 			new DownscrollOption(LangUtil.getString('descDownscroll')),
 			new GhostTapOption(LangUtil.getString('descGhostTap')),
 			new Judgement(LangUtil.getString('descJudgement')),
