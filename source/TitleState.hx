@@ -93,6 +93,8 @@ class TitleState extends MusicBeatState
 
 		KadeEngineData.initSave();
 
+		LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
+
 		Highscore.load();
 
 		if (FlxG.save.data.weekUnlocked != null)

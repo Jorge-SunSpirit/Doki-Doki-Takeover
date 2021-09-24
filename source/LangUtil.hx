@@ -4,6 +4,8 @@ import flixel.FlxG;
 
 class LangUtil
 {
+	public static var localeList:Array<String>;
+
 	public static function getFont(?type:String):String
 	{
 		var font:String = '';
@@ -43,8 +45,6 @@ class LangUtil
 
 	public static function getString(identifier:String):String
 		{
-			var localeList:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
-
 			var string:String = '';
 
 			for (i in 0...localeList.length)

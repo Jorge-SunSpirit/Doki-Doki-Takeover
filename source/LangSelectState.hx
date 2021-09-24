@@ -123,6 +123,7 @@ class LangSelectState extends MusicBeatState
 										{
 											FlxG.save.data.language = localeList[curSelected];
 											trace('langauge set to ' + FlxG.save.data.language);
+											LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
 											FlxG.switchState(new MainMenuState());
 									});
 								}
@@ -132,6 +133,7 @@ class LangSelectState extends MusicBeatState
 									{
 										FlxG.save.data.language = localeList[curSelected];
 										trace('langauge set to ' + FlxG.save.data.language);
+										LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
 										FlxG.switchState(new MainMenuState());
 									});
 								}
