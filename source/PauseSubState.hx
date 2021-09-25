@@ -205,7 +205,7 @@ class PauseSubState extends MusicBeatSubstate
 					if (PlayState.isStoryMode)
 						FlxG.switchState(new DokiStoryState());
 					else
-						FlxG.switchState(new FreeplayState());
+						FlxG.switchState(new DokiFreeplayState());
 			}
 		}
 
