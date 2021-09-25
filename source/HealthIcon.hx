@@ -55,8 +55,8 @@ class HealthIcon extends FlxSprite
 
 		loadGraphic(Paths.image('icons/icon-' + char), true, 150, 150);
 
-		if (char.endsWith('-pixel') || char.startsWith('senpai') || char.endsWith('senpai') || char.startsWith('spirit') || char.startsWith('monika')
-			|| char.startsWith('duet') || char.endsWith('demise'))
+		if (char.endsWith('-pixel') || char.startsWith('senpai') || char.endsWith('senpai') || char.startsWith('spirit') || char == 'monika'
+			|| char == 'monika-angry' || char.startsWith('duet') || char.endsWith('demise'))
 			antialiasing = false
 		else
 			antialiasing = true;
