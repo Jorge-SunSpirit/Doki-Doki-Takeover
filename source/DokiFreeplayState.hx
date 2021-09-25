@@ -485,6 +485,12 @@ class DokiFreeplayState extends MusicBeatState
 		{
 			curSelected += huh;
 
+			if (curSelected >= songs.length)
+				curSelected = 0;
+			if (curSelected < 0)
+				curSelected = songs.length - 1;
+
+
 			if ((curPage == 1 && !FlxG.save.data.monibeaten) || (curPage == 2 && !FlxG.save.data.extra2beaten))
 				{
 	
@@ -495,11 +501,6 @@ class DokiFreeplayState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
 					#end
 				}
-
-			if (curSelected >= songs.length)
-				curSelected = 0;
-			if (curSelected < 0)
-				curSelected = songs.length - 1;
 				
 			grpSongs.forEach(function(spr:FlxSprite)
 			{
