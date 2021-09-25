@@ -386,7 +386,8 @@ class MainMenuState extends MusicBeatState
 						FlxG.switchState(new DokiFreeplayState());
 						trace("Freeplay Menu Selected");
 					case 'credits':
-						FlxG.switchState(new FreeplayState());
+						// make this go to VideoState at some point
+						FlxG.switchState(new MainMenuState());
 						trace("Credits Menu Selected");
 					case 'options':
 						FlxG.switchState(new OptionsMenu());
