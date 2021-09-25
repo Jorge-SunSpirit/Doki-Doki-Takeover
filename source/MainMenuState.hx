@@ -38,7 +38,7 @@ class MainMenuState extends MusicBeatState
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
 
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options'];
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options', 'unlock'];
 
 	public static var firstStart:Bool = true;
 	public static var finishedFunnyMove:Bool = false;
@@ -389,6 +389,17 @@ class MainMenuState extends MusicBeatState
 						// make this go to VideoState at some point
 						FlxG.switchState(new MainMenuState());
 						trace("Credits Menu Selected");
+					case 'unlock':
+						trace('hello');
+						FlxG.save.data.monibeaten = true;
+						FlxG.save.data.sayobeaten = true;
+						FlxG.save.data.natbeaten = true;
+						FlxG.save.data.yuribeaten = true;
+						FlxG.save.data.extrabeaten = true;
+						FlxG.save.data.extra2beaten = true;
+						FlxG.save.data.unlockepip = true;
+						FlxG.save.data.weekUnlocked = 10;
+						FlxG.switchState(new DokiFreeplayState());
 					case 'options':
 						FlxG.switchState(new OptionsMenu());
 					case 'language':
