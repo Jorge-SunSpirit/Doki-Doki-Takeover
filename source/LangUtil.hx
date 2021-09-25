@@ -22,6 +22,8 @@ class LangUtil
 			case 'riffic':
 				switch (FlxG.save.data.language)
 				{
+					case 'ru-RU':
+						font = 'Ubuntu Bold';
 					default:
 						font = 'Riffic Free Bold';
 				}
