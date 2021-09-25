@@ -499,6 +499,16 @@ class DokiFreeplayState extends MusicBeatState
 				{
 					#if PRELOAD_ALL
 					FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
+
+					var hmm;
+					try
+					{
+						hmm = songData.get(songs[curSelected].songName)[curDifficulty];
+						if (hmm != null)
+							Conductor.changeBPM(hmm.bpm);
+					}
+					catch(ex)
+					{}
 					#end
 				}
 				
