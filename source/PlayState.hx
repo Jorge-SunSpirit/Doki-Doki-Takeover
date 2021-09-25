@@ -3036,7 +3036,7 @@ class PlayState extends MusicBeatState
 			else
 			{
 				trace('WENT BACK TO FREEPLAY??');
-				FlxG.switchState(new FreeplayState());
+				FlxG.switchState(new DokiFreeplayState());
 			}
 		}
 	}

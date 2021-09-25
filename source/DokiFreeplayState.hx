@@ -485,9 +485,16 @@ class DokiFreeplayState extends MusicBeatState
 		{
 			curSelected += huh;
 
-			#if PRELOAD_ALL
-			FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
-			#end
+			if ((curPage == 1 && !FlxG.save.data.monibeaten) || (curPage == 2 && !FlxG.save.data.extra2beaten))
+				{
+	
+				}
+				else
+				{
+					#if PRELOAD_ALL
+					FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
+					#end
+				}
 
 			if (curSelected >= songs.length)
 				curSelected = 0;
