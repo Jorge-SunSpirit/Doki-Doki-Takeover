@@ -38,7 +38,8 @@ class DokiStoryState extends MusicBeatState
 		['My Sweets'],
 		['Deep Breaths','Obsession'],
 		['Reconciliation'],
-		['Beathoven (Natsuki Mix)', 'Crucify (Yuri Mix)', "It's Complicated (Sayori Mix)", 'Glitcher (Monika Mix)']
+		["It's Complicated (Sayori Mix)"]
+		//['Beathoven (Natsuki Mix)', 'Crucify (Yuri Mix)', "It's Complicated (Sayori Mix)", 'Glitcher (Monika Mix)']
 	];
 
 	var curDifficulty:Int = 1;
@@ -662,6 +663,10 @@ class DokiStoryState extends MusicBeatState
 			{
 				FlxG.save.data.weekUnlocked = 6;
 				story_secret2.animation.play('idle');
+			}
+			if (FlxG.save.data.extra2beaten == true)
+			{
+				FlxG.save.data.weekUnlocked = 7;
 			}
 		}
 

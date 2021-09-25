@@ -300,6 +300,8 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.natbeaten = true;
 				FlxG.save.data.yuribeaten = true;
 				FlxG.save.data.extrabeaten = true;
+				FlxG.save.data.extra2beaten = true;
+				FlxG.save.data.unlockepip = true;
 				FlxG.save.data.weekUnlocked = 10;
 			}
 			if (FlxG.keys.justPressed.P)
@@ -310,7 +312,9 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.natbeaten = false;
 				FlxG.save.data.yuribeaten = false;
 				FlxG.save.data.extrabeaten = false;
+				FlxG.save.data.extra2beaten = false;
 				FlxG.save.data.gfCountdown = false;
+				FlxG.save.data.unlockepip = false;
 				FlxG.save.data.weekUnlocked = 1;
 			}
 			if (FlxG.keys.justPressed.U)
@@ -379,12 +383,10 @@ class MainMenuState extends MusicBeatState
 						FlxG.switchState(new DokiStoryState());
 						trace("Story Menu Selected");
 					case 'freeplay':
-						FlxG.switchState(new FreeplayState());
-
+						FlxG.switchState(new DokiFreeplayState());
 						trace("Freeplay Menu Selected");
 					case 'credits':
 						FlxG.switchState(new FreeplayState());
-
 						trace("Credits Menu Selected");
 					case 'options':
 						FlxG.switchState(new OptionsMenu());

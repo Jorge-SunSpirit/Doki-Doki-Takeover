@@ -2934,6 +2934,14 @@ class PlayState extends MusicBeatState
 							FlxG.save.data.yuribeaten = true;
 							case 4:
 							FlxG.save.data.extrabeaten = true;
+							case 5:
+								{
+									FlxG.save.data.extra2beaten = true;
+									if (storyDifficulty == 2)
+										{
+											FlxG.save.data.unlockepip = true;
+										}
+								}
 						}
 
 					FlxG.switchState(new DokiStoryState());

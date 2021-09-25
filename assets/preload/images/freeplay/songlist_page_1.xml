@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="songlist_page_1.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Baka idle0000" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0001" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0002" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0003" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0004" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0005" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0006" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0007" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka idle0008" x="10" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0000" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0001" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0002" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0003" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0004" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0005" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0006" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0007" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Baka selected0008" x="480" y="10" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0000" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0001" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0002" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0003" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0004" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0005" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0006" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0007" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume idle0008" x="10" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0000" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0001" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0002" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0003" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0004" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0005" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0006" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0007" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Bara No Yume selected0008" x="480" y="63" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0000" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0001" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0002" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0003" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0004" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0005" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0006" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0007" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) idle0008" x="10" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0000" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0001" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0002" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0003" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0004" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0005" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0006" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0007" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Beathoven (Natsuki Mix) selected0008" x="480" y="116" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0000" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0001" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0002" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0003" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0004" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0005" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0006" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0007" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) idle0008" x="10" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0000" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0001" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0002" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0003" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0004" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0005" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0006" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0007" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Crucify (Yuri Mix) selected0008" x="480" y="169" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0000" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0001" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0002" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0003" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0004" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0005" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0006" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0007" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths idle0008" x="10" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0000" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0001" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0002" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0003" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0004" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0005" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0006" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0007" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Deep Breaths selected0008" x="480" y="222" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0000" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0001" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0002" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0003" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0004" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0005" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0006" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0007" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise idle0008" x="10" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0000" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0001" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0002" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0003" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0004" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0005" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0006" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0007" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Dual Demise selected0008" x="480" y="275" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0000" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0001" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0002" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0003" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0004" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0005" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0006" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0007" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany idle0008" x="10" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0000" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0001" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0002" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0003" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0004" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0005" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0006" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0007" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Epiphany selected0008" x="480" y="328" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0000" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0001" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0002" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0003" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0004" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0005" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0006" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0007" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) idle0008" x="10" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0000" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0001" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0002" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0003" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0004" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0005" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0006" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0007" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="Glitcher (Monika Mix) selected0008" x="480" y="381" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0000" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0001" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0002" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0003" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0004" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0005" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0006" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0007" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict idle0008" x="10" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0000" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0001" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0002" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0003" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0004" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0005" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0006" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0007" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="High School Conflict selected0008" x="480" y="434" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0000" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0001" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0002" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0003" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0004" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0005" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0006" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0007" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) idle0008" x="10" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0000" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0001" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0002" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0003" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0004" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0005" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0006" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0007" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="It's Complicated (Sayori Mix) selected0008" x="480" y="487" width="460" height="43"/>
+	<SubTexture name="My Confession idle0000" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0001" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0002" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0003" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0004" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0005" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0006" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0007" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession idle0008" x="10" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0000" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0001" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0002" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0003" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0004" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0005" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0006" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0007" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Confession selected0008" x="480" y="540" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0000" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0001" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0002" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0003" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0004" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0005" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0006" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0007" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets idle0008" x="10" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0000" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0001" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0002" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0003" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0004" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0005" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0006" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0007" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="My Sweets selected0008" x="480" y="593" width="460" height="43"/>
+	<SubTexture name="Obsession idle0000" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0001" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0002" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0003" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0004" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0005" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0006" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0007" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession idle0008" x="10" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0000" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0001" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0002" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0003" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0004" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0005" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0006" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0007" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Obsession selected0008" x="480" y="646" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0000" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0001" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0002" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0003" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0004" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0005" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0006" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0007" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns idle0008" x="10" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0000" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0001" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0002" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0003" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0004" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0005" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0006" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0007" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Poems N Thorns selected0008" x="480" y="699" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0000" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0001" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0002" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0003" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0004" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0005" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0006" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0007" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds idle0008" x="10" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0000" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0001" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0002" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0003" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0004" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0005" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0006" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0007" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Rain Clouds selected0008" x="480" y="752" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0000" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0001" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0002" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0003" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0004" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0005" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0006" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0007" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation idle0008" x="10" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0000" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0001" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0002" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0003" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0004" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0005" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0006" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0007" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Reconciliation selected0008" x="480" y="805" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0000" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0001" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0002" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0003" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0004" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0005" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0006" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0007" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise idle0008" x="10" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0000" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0001" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0002" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0003" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0004" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0005" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0006" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0007" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Demise selected0008" x="480" y="858" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0000" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0001" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0002" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0003" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0004" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0005" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0006" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0007" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality idle0008" x="10" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0000" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0001" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0002" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0003" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0004" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0005" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0006" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0007" x="480" y="911" width="460" height="43"/>
+	<SubTexture name="Your Reality selected0008" x="480" y="911" width="460" height="43"/>
+</TextureAtlas>
