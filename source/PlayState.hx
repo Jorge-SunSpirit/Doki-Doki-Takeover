@@ -3207,7 +3207,8 @@ class PlayState extends MusicBeatState
 			if (currentTimingShown.alpha != 1)
 				currentTimingShown.alpha = 1;
 
-			if(!FlxG.save.data.botplay) add(currentTimingShown);
+			if (!FlxG.save.data.botplay && FlxG.save.data.accuracyDisplay)
+				add(currentTimingShown);
 			
 			var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 			comboSpr.screenCenter();
@@ -3362,7 +3363,7 @@ class PlayState extends MusicBeatState
 				];
 		 
 				// Prevent player input if botplay is on
-				if(FlxG.save.data.botplay)
+				if (FlxG.save.data.botplay)
 				{
 					holdArray = [false, false, false, false];
 					pressArray = [false, false, false, false];
@@ -3465,7 +3466,7 @@ class PlayState extends MusicBeatState
 									noteMiss(shit, null);
 						}
 
-					if(dontCheck && possibleNotes.length > 0 && FlxG.save.data.ghost && !FlxG.save.data.botplay)
+					if (dontCheck && possibleNotes.length > 0 && FlxG.save.data.ghost && !FlxG.save.data.botplay)
 					{
 						if (mashViolations > 4)
 						{
@@ -3481,43 +3482,39 @@ class PlayState extends MusicBeatState
 				
 				notes.forEachAlive(function(daNote:Note)
 				{
-					if(FlxG.save.data.downscroll && daNote.y > strumLine.y ||
+					if (FlxG.save.data.downscroll && daNote.y > strumLine.y ||
 					!FlxG.save.data.downscroll && daNote.y < strumLine.y)
 					{
 						// Force good note hit regardless if it's too late to hit it or not as a fail safe
-						if(FlxG.save.data.botplay && daNote.canBeHit && daNote.mustPress ||
+						if( FlxG.save.data.botplay && daNote.canBeHit && daNote.mustPress ||
 						FlxG.save.data.botplay && daNote.tooLate && daNote.mustPress)
 						{
-							if(loadRep)
+							if (loadRep)
 							{
 								//trace('ReplayNote ' + tmpRepNote.strumtime + ' | ' + tmpRepNote.direction);
-								if(rep.replay.songNotes.contains(HelperFunctions.truncateFloat(daNote.strumTime, 2)))
+								if (rep.replay.songNotes.contains(HelperFunctions.truncateFloat(daNote.strumTime, 2)))
 								{
-									if (daNote.noteType == 2)
-										{
-										}
-									else
-										{
-											goodNoteHit(daNote);
-											boyfriend.holdTimer = daNote.sustainLength;
-										}
-									
-								}
-							}else {
-								if (daNote.noteType == 2)
-									{
-									}
-								else
+									if (daNote.noteType != 2)
 									{
 										goodNoteHit(daNote);
 										boyfriend.holdTimer = daNote.sustainLength;
 									}
+									
+								}
+							}
+							else
+							{
+								if (daNote.noteType != 2)
+								{
+									goodNoteHit(daNote);
+									boyfriend.holdTimer = daNote.sustainLength;
+								}
 							}
 						}
 					}
 				});
 				
-				if (boyfriend.holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || FlxG.save.data.botplay))
+				if (boyfriend.holdTimer > Conductor.stepCrochet * 0.004 && (!holdArray.contains(true) || FlxG.save.data.botplay))
 				{
 					if (boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
 						boyfriend.dance();

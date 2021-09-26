@@ -363,13 +363,19 @@ class DokiFreeplayState extends MusicBeatState
 					changeDiff(1);
 				}
 
-			if (controls.ACCEPT && songs[curSelected].songName.toLowerCase() == 'your reality')
+			if (controls.ACCEPT && (songs[curSelected].songName.toLowerCase() == 'your reality'))
 				{
-					curDifficulty == 1;
+					curDifficulty = 1;
 					startsong();
 				}
 
-			if (controls.ACCEPT && songs[curSelected].songName.toLowerCase() != 'your reality')
+			if (controls.ACCEPT && (songs[curSelected].songName.toLowerCase() == 'epiphany'))
+				{
+					curDifficulty = 2;
+					startsong();
+				}
+
+			if (controls.ACCEPT && (songs[curSelected].songName.toLowerCase() != 'your reality' && songs[curSelected].songName.toLowerCase() != 'epiphany'))
 				{
 					if ((curPage == 1 && !FlxG.save.data.monibeaten) || (curPage == 2 && !FlxG.save.data.extra2beaten))
 					{
