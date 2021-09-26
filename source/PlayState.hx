@@ -2629,6 +2629,9 @@ class PlayState extends MusicBeatState
 														case 0:
 															spirit.playAnim('singLEFT', true);
 													}
+
+													if (dad.animation.curAnim.name.startsWith('sing'))
+														dad.dance();
 												}
 											default:
 												altAnim = '-alt';
@@ -2655,6 +2658,9 @@ class PlayState extends MusicBeatState
 														case 0:
 															spirit.playAnim('singLEFT', true);
 													}
+
+													if (dad.animation.curAnim.name.startsWith('sing'))
+														dad.dance();
 												}
 										default:
 											altAnim = '-alt';
