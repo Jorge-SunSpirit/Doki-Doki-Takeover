@@ -1432,8 +1432,6 @@ class PlayState extends MusicBeatState
 				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith("sing"))
 					spirit.dance();
 			}
-			else if (dad.curCharacter == 'sayori')
-				dad.dance();
 
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
 			introAssets.set('default', ['ready', "set", "go"]);
@@ -4014,13 +4012,11 @@ class PlayState extends MusicBeatState
 			{
 				if (!boyfriend.animation.curAnim.name.startsWith('sing'))
 					boyfriend.dance();
-				if (!dad.animation.curAnim.name.startsWith('sing'))
+				if (!dad.animation.curAnim.name.startsWith('sing') && dad.animation.curAnim.finished)
 					dad.dance(SONG.notes[Math.floor(curStep / 16)].altAnim);
-				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith('sing'))
+				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith('sing') && spirit.animation.curAnim.finished)
 					spirit.dance();
 			}
-			else if (dad.curCharacter == 'sayori')
-				dad.dance();
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 		wiggleShit.update(Conductor.crochet);

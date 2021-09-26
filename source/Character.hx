@@ -485,7 +485,7 @@ class Character extends FlxSprite
 				holdTimer += elapsed;
 			}
 
-			if (holdTimer >= Conductor.stepCrochet * 0.01)
+			if (holdTimer >= Conductor.stepCrochet * 0.006)
 			{
 				dance();
 				holdTimer = 0;
