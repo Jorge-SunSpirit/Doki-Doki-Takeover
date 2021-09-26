@@ -2164,7 +2164,7 @@ class PlayState extends MusicBeatState
 		}
 
 		// Go 10 seconds into the future, credit: Shadow Mario#9396
-		if (FlxG.keys.justPressed.TWO && songStarted)
+		if (FlxG.keys.justPressed.THREE && songStarted)
 		{
 			if (!usedTimeTravel && Conductor.songPosition + 10000 < FlxG.sound.music.length) 
 			{
@@ -2835,7 +2835,7 @@ class PlayState extends MusicBeatState
 
 
 		#if debug
-		if (FlxG.keys.justPressed.ONE)
+		if (FlxG.keys.justPressed.TWO)
 			songOutro();
 		#end
 	}
