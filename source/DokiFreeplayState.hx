@@ -281,7 +281,8 @@ class DokiFreeplayState extends MusicBeatState
 						iconArray[i].alpha = 0;
 					}
 				
-				iconArray[curSelected].alpha = 1;
+				if (iconArray.length > 0)
+					iconArray[curSelected].alpha = 1;
 			}
 
 		if (!selectedSomethin)
