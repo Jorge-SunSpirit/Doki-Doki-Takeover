@@ -820,7 +820,7 @@ class ChartingState extends MusicBeatState
 			PlayState.SONG = _song;
 			FlxG.sound.music.stop();
 			vocals.stop();
-			LoadingState.loadAndSwitchState(new FreeplayState());
+			LoadingState.loadAndSwitchState(new DokiFreeplayState());
 		}
 
 		if (FlxG.keys.justPressed.E)
