@@ -172,6 +172,7 @@ class DokiFreeplayState extends MusicBeatState
 				case 3:
 					bg = new FlxSprite().loadGraphic(Paths.image('freeplay/freeplaybook4'));
 			}
+		bg.antialiasing = true;
 		add(bg);
 		
 		for (i in 0...songs.length)
@@ -207,7 +208,6 @@ class DokiFreeplayState extends MusicBeatState
 		menu_character = new FlxSprite(40, 500);
 		menu_character.frames = Paths.getSparrowAtlas('freeplay/chibidorks');
 		menu_character.antialiasing = true;
-		menu_character.scale.set(1, 1);
 		menu_character.animation.addByPrefix('idle', 'FreeplayChibiIdle', 24, false);
 		menu_character.animation.addByPrefix('pop_off', 'FreeplayChibiCheer', 24, false);
 		menu_character.updateHitbox();
@@ -217,7 +217,6 @@ class DokiFreeplayState extends MusicBeatState
 		diff = new FlxSprite(453, 580);
 		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties', 'preload', true);
 		diff.antialiasing = true;
-		diff.scale.set(1, 1);
 		diff.animation.addByPrefix('easy', 'Easy', 24);
 		diff.animation.addByPrefix('normal', 'Normal', 24);
 		diff.animation.addByPrefix('hard', 'Hard', 24);
@@ -237,6 +236,7 @@ class DokiFreeplayState extends MusicBeatState
 					songText.y = 390;
 				}
 			songText.frames = tex;
+			songText.antialiasing = true;
 			songText.animation.addByPrefix('idle', songs[i].songName + " idle", 24);
 			songText.animation.addByPrefix('selected', songs[i].songName + " selected", 24);
 			songText.animation.play('idle');
