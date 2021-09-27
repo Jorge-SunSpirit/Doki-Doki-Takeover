@@ -62,7 +62,7 @@ class DokiFreeplayState extends MusicBeatState
 	override function create()
 	{
 		if (pageFlipped)
-			FlxG.sound.play(Paths.sound('scrollMenu'));
+			FlxG.sound.play(Paths.sound('flip_page'));
 
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page' + (curPage + 1)));
 
