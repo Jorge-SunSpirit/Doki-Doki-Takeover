@@ -1396,7 +1396,8 @@ class PlayState extends MusicBeatState
 
 			if (swagCounter % 2 == 0)
 			{
-				boyfriend.dance();
+				if (!boyfriend.animation.curAnim.name.endsWith('miss'))
+					boyfriend.dance();
 				dad.dance();
 				if (curSong.toLowerCase() == 'dual demise')
 					spirit.dance();
