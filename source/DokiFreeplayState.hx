@@ -29,6 +29,7 @@ class DokiFreeplayState extends MusicBeatState
 	var selector:FlxText;
 	var curSelected:Int = 0;
 	public static var curPage:Int = 0;
+	public static var pageFlipped:Bool = false;
 	var curDifficulty:Int = 1;
 	var goku:Bool = false;
 	var diffselect:Bool = false;
@@ -60,6 +61,9 @@ class DokiFreeplayState extends MusicBeatState
 
 	override function create()
 	{
+		if (pageFlipped)
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page' + (curPage + 1)));
 
 		for (i in 0...initSonglist.length)
@@ -128,7 +132,9 @@ class DokiFreeplayState extends MusicBeatState
 		menu_character.animation.addByPrefix('pop_off', 'FreeplayChibiCheer', 24, false);
 		menu_character.updateHitbox();
 		menu_character.animation.play('idle');
-		add(menu_character);
+
+		if (curPage != 3)
+			add(menu_character);
 
 		diff = new FlxSprite(453, 580);
 		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties', 'preload', true);
@@ -256,6 +262,7 @@ class DokiFreeplayState extends MusicBeatState
 								diff.visible = false;
 								diffselect = false;
 							case false:
+								DokiFreeplayState.pageFlipped = false;
 								DokiFreeplayState.curPage = 0;
 								FlxG.switchState(new MainMenuState());
 						}
@@ -326,6 +333,7 @@ class DokiFreeplayState extends MusicBeatState
 
 	function startsong()
 		{
+			DokiFreeplayState.pageFlipped = false;
 			DokiFreeplayState.curPage = 0;
 			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
@@ -448,6 +456,7 @@ class DokiFreeplayState extends MusicBeatState
 	
 	function changePage(huh:Int = 0)
 		{
+			pageFlipped = true;
 			curPage += huh;
 
 			if (!FlxG.save.data.unlockepip)
