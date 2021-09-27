@@ -485,18 +485,16 @@ class PlayState extends MusicBeatState
 					bgTrees.updateHitbox();
 					treeLeaves.updateHitbox();
 
-					if (SONG.song.toLowerCase() == "bara no yume")
+					if (SONG.song.toLowerCase() == "bara no yume" || SONG.song.toLowerCase() == "poems n thorns")
 					{
 						bgGirls = new BackgroundGirls(-600, 190);
 						bgGirls.scrollFactor.set(0.9, 0.9);
 			
 						bgGirls.setGraphicSize(Std.int(bgGirls.width * daPixelZoom));
 						bgGirls.updateHitbox();
-						if(FlxG.save.data.distractions)
-							{
-								add(bgGirls);
-								bgGirls.dance();
-							}
+
+						if (FlxG.save.data.distractions)
+							add(bgGirls);
 					}
 			}
 			case 'schoolEvil':
@@ -533,33 +531,6 @@ class PlayState extends MusicBeatState
 					stageFront.scrollFactor.set(1, 1);
 					add(stageFront);
 			}
-			case 'stage':
-				{
-						defaultCamZoom = 0.9;
-						curStage = 'stage';
-						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
-						bg.antialiasing = true;
-						bg.scrollFactor.set(0.9, 0.9);
-						bg.active = false;
-						add(bg);
-	
-						var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
-						stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
-						stageFront.updateHitbox();
-						stageFront.antialiasing = true;
-						stageFront.scrollFactor.set(0.9, 0.9);
-						stageFront.active = false;
-						add(stageFront);
-	
-						var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
-						stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-						stageCurtains.updateHitbox();
-						stageCurtains.antialiasing = true;
-						stageCurtains.scrollFactor.set(1.3, 1.3);
-						stageCurtains.active = false;
-	
-						add(stageCurtains);
-				}
 			case 'dokiclubroom':
 				{
 					var posX = -700;
@@ -1425,11 +1396,9 @@ class PlayState extends MusicBeatState
 
 			if (swagCounter % 2 == 0)
 			{
-				if (!boyfriend.animation.curAnim.name.startsWith("sing"))
-					boyfriend.dance();
-				if (!dad.animation.curAnim.name.startsWith("sing"))
-					dad.dance();
-				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith("sing"))
+				boyfriend.dance();
+				dad.dance();
+				if (curSong.toLowerCase() == 'dual demise')
 					spirit.dance();
 			}
 
@@ -4092,30 +4061,19 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
+		/*
+		if (curSong.toLowerCase() == 'epiphany')
 		{
-			boyfriend.playAnim('hey', true);
-		}
-
-		if (curBeat % 16 == 15 && SONG.song == 'Tutorial' && dad.curCharacter == 'gf' && curBeat > 16 && curBeat < 48)
+			switch (curBeat)
 			{
-				boyfriend.playAnim('hey', true);
-				dad.playAnim('cheer', true);
+				case 785:
+					FlxG.camera.fade(FlxColor.BLACK, 1, false);
 			}
+		}
+		*/
 
-		if (SONG.song.toLowerCase() == "bara no yume")
+		if (curSong.toLowerCase() == "bara no yume" || curSong.toLowerCase() == "poems n thorns")
 			bgGirls.dance();
-
-		switch (curStage)
-		{
-		}
-
-		if (isHalloween && FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningOffset)
-		{
-			if(FlxG.save.data.distractions){
-				lightningStrikeShit();
-			}
-		}
 	}
 
 	function yuriGoCrazy()
