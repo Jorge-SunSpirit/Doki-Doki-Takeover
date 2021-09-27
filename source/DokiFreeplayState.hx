@@ -60,97 +60,24 @@ class DokiFreeplayState extends MusicBeatState
 
 	override function create()
 	{
+		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page' + (curPage + 1)));
 
-		switch (curPage)
+		for (i in 0...initSonglist.length)
 			{
-				case 0:
-					var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page1'));
+				var data:Array<String> = initSonglist[i].split(':');
+				var meta = new SongMetadatatwo(data[0], Std.parseInt(data[2]), data[1]);
 
-					for (i in 0...initSonglist.length)
-						{
-							var data:Array<String> = initSonglist[i].split(':');
-							var meta = new SongMetadatatwo(data[0], Std.parseInt(data[2]), data[1]);
-				
-							if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
-								songs.push(meta);
-				
-							var diffs = [];
-							loadDiff(0,meta.songName,diffs);
-							loadDiff(1,meta.songName,diffs);
-							loadDiff(2,meta.songName,diffs);
-							songData.set(meta.songName,diffs);
-						}
-				case 1:
-					var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page2'));
-
-					for (i in 0...initSonglist.length)
-						{
-							var data:Array<String> = initSonglist[i].split(':');
-							var meta = new SongMetadatatwo(data[0], Std.parseInt(data[2]), data[1]);
-				
-							if (!FlxG.save.data.monibeaten && data[0].toLowerCase() == 'your reality')
-								continue;
-
-							if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
-								songs.push(meta);
-				
-							var diffs = [];
-							loadDiff(0,meta.songName,diffs);
-							loadDiff(1,meta.songName,diffs);
-							loadDiff(2,meta.songName,diffs);
-							songData.set(meta.songName,diffs);
-						}
-				case 2:
-					var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page3'));
-
-					for (i in 0...initSonglist.length)
-						{
-							var data:Array<String> = initSonglist[i].split(':');
-							var meta = new SongMetadatatwo(data[0], Std.parseInt(data[2]), data[1]);
-				
-							if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
-								songs.push(meta);
-				
-							var diffs = [];
-							loadDiff(0,meta.songName,diffs);
-							loadDiff(1,meta.songName,diffs);
-							loadDiff(2,meta.songName,diffs);
-							songData.set(meta.songName,diffs);
-						}
-				case 3:
-					var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page4'));
-
-					for (i in 0...initSonglist.length)
-						{
-							var data:Array<String> = initSonglist[i].split(':');
-							var meta = new SongMetadatatwo(data[0], Std.parseInt(data[2]), data[1]);
-				
-							if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
-								songs.push(meta);
-				
-							var diffs = [];
-							loadDiff(0,meta.songName,diffs);
-							loadDiff(1,meta.songName,diffs);
-							loadDiff(2,meta.songName,diffs);
-							songData.set(meta.songName,diffs);
-						}
-				default:
-					var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page1'));
-
-					for (i in 0...initSonglist.length)
-						{
-							var data:Array<String> = initSonglist[i].split(':');
-							var meta = new SongMetadatatwo(data[0], Std.parseInt(data[2]), data[1]);
-				
-							if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
-								songs.push(meta);
-				
-							var diffs = [];
-							loadDiff(0,meta.songName,diffs);
-							loadDiff(1,meta.songName,diffs);
-							loadDiff(2,meta.songName,diffs);
-							songData.set(meta.songName,diffs);
-						}
+				if (!FlxG.save.data.monibeaten && data[0].toLowerCase() == 'your reality')
+					continue;
+	
+				if ((Std.parseInt(data[2]) <= FlxG.save.data.weekUnlocked - 1) || (Std.parseInt(data[2]) == 1))
+					songs.push(meta);
+	
+				var diffs = [];
+				loadDiff(0,meta.songName,diffs);
+				loadDiff(1,meta.songName,diffs);
+				loadDiff(2,meta.songName,diffs);
+				songData.set(meta.songName,diffs);
 			}
 
 		#if FEATURE_DISCORD
@@ -159,19 +86,9 @@ class DokiFreeplayState extends MusicBeatState
 		#end
 
 		persistentUpdate = persistentDraw = true;
-		
-		
-		switch (curPage)
-			{
-				case 0:
-					bg = new FlxSprite().loadGraphic(Paths.image('freeplay/freeplaybook1'));
-				case 1:
-					bg = new FlxSprite().loadGraphic(Paths.image('freeplay/freeplaybook2'));
-				case 2:
-					bg = new FlxSprite().loadGraphic(Paths.image('freeplay/freeplaybook3'));
-				case 3:
-					bg = new FlxSprite().loadGraphic(Paths.image('freeplay/freeplaybook4'));
-			}
+
+		bg = new FlxSprite().loadGraphic(Paths.image('freeplay/freeplaybook' + (curPage + 1)));
+		bg.antialiasing = true;
 		add(bg);
 		
 		for (i in 0...songs.length)
@@ -207,7 +124,6 @@ class DokiFreeplayState extends MusicBeatState
 		menu_character = new FlxSprite(40, 500);
 		menu_character.frames = Paths.getSparrowAtlas('freeplay/chibidorks');
 		menu_character.antialiasing = true;
-		menu_character.scale.set(1, 1);
 		menu_character.animation.addByPrefix('idle', 'FreeplayChibiIdle', 24, false);
 		menu_character.animation.addByPrefix('pop_off', 'FreeplayChibiCheer', 24, false);
 		menu_character.updateHitbox();
@@ -217,7 +133,6 @@ class DokiFreeplayState extends MusicBeatState
 		diff = new FlxSprite(453, 580);
 		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties', 'preload', true);
 		diff.antialiasing = true;
-		diff.scale.set(1, 1);
 		diff.animation.addByPrefix('easy', 'Easy', 24);
 		diff.animation.addByPrefix('normal', 'Normal', 24);
 		diff.animation.addByPrefix('hard', 'Hard', 24);
@@ -237,6 +152,7 @@ class DokiFreeplayState extends MusicBeatState
 					songText.y = 390;
 				}
 			songText.frames = tex;
+			songText.antialiasing = true;
 			songText.animation.addByPrefix('idle', songs[i].songName + " idle", 24);
 			songText.animation.addByPrefix('selected', songs[i].songName + " selected", 24);
 			songText.animation.play('idle');
@@ -313,11 +229,6 @@ class DokiFreeplayState extends MusicBeatState
 					}
 			}
 
-			if (FlxG.keys.justPressed.SEVEN)
-				{
-					loadSong(true);
-				}
-
 			if (controls.LEFT_P && !diffselect)
 				{
 					//FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -363,13 +274,16 @@ class DokiFreeplayState extends MusicBeatState
 					changeDiff(1);
 				}
 
-			if (controls.ACCEPT && (songs[curSelected].songName.toLowerCase() == 'your reality'))
+			if (FlxG.keys.justPressed.SEVEN && diffselect)
+					loadSong(true);
+
+			if (controls.ACCEPT && songs[curSelected].songName.toLowerCase() == 'your reality')
 				{
 					curDifficulty = 1;
 					startsong();
 				}
 
-			if (controls.ACCEPT && (songs[curSelected].songName.toLowerCase() == 'epiphany'))
+			if (controls.ACCEPT && songs[curSelected].songName.toLowerCase() == 'epiphany')
 				{
 					curDifficulty = 2;
 					startsong();

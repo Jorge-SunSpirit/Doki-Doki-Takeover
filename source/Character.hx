@@ -261,7 +261,7 @@ class Character extends FlxSprite
 
 			case 'playablesenpai':
 				frames = Paths.getSparrowAtlas('characters/playablesenpai');
-				animation.addByPrefix('idle', 'Senpai Idle', 24, false);
+				animation.addByPrefix('idle', 'Senpai Idle', 24, true);
 				animation.addByPrefix('singUP', 'SENPAI UP NOTE', 24, false);
 				animation.addByPrefix('singLEFT', 'SENPAI LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT', 'SENPAI RIGHT NOTE', 24, false);
