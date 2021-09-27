@@ -2663,7 +2663,7 @@ class PlayState extends MusicBeatState
 									}
 								case 2:
 									{
-										if (curSong.toLowerCase() != "your demise")
+										if (curSong.toLowerCase() == "obsession" && curBeat <= 134)
 										{
 											switch (Math.abs(daNote.noteData))
 											{
