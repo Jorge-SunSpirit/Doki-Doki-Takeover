@@ -499,15 +499,10 @@ class Character extends FlxSprite
 				holdTimer += elapsed;
 			}
 
-			var dadVar:Float;
+			var dadVar:Float = 6;
 
-			switch (curCharacter)
-			{
-				case 'yuri-crazy':
-					dadVar = 4;
-				default:
-					dadVar = 6;
-			}
+			if (curCharacter == 'yuri-crazy')
+				dadVar = 4;
 
 			if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
 			{
