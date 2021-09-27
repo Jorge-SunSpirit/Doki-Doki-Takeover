@@ -438,6 +438,20 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
+			
+			case 'yuri-crazy':
+				//damn she crazy
+				tex = Paths.getSparrowAtlas('characters/Doki_Crazy_Yuri_Assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'Yuri Crazy Idle', 24, false);
+				animation.addByPrefix('singUP', 'Yuri Crazy Up', 24, false);
+				animation.addByPrefix('singRIGHT', 'Yuri Crazy Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Yuri Crazy Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Yuri Crazy Left', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
 		}
 
 		dance();

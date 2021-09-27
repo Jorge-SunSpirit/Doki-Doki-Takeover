@@ -767,6 +767,9 @@ class PlayState extends MusicBeatState
 			case 'yuri':
 				camPos.x += 400;
 				dad.y += 80;
+			case 'yuri-crazy':
+				camPos.x += 400;
+				dad.y += 80;
 			}
 
 
@@ -4084,7 +4087,7 @@ class PlayState extends MusicBeatState
 		var olddady = PlayState.dad.y;
 		remove(boyfriend);
 		remove(dad);
-		dad = new Character(olddadx, olddady, 'sayori');
+		dad = new Character(olddadx, olddady, 'yuri-crazy');
 		add(dad);
 		add(boyfriend);
 		iconP2.changeIcon('yuri-crazy');
