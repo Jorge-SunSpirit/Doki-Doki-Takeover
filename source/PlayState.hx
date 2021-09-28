@@ -2166,7 +2166,7 @@ class PlayState extends MusicBeatState
 
 				vocals.time = Conductor.songPosition;
 				vocals.play();
-				new FlxTimer().start(0.5, function(tmr:FlxTimer)
+				new FlxTimer().start(0.25, function(tmr:FlxTimer)
 				{
 					usedTimeTravel = false;
 				});
@@ -2317,97 +2317,98 @@ class PlayState extends MusicBeatState
 				luaModchart.setVar("mustHit",PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection);
 			#end
 
-			if (camFollow.x != dad.getMidpoint().x + 150 && !PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection)
+			if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && curBeat < 142))
 			{
-				var offsetX = 0;
-				var offsetY = 0;
-				#if windows
-				if (luaModchart != null)
-				{
-					offsetX = luaModchart.getVar("followXOffset", "float");
-					offsetY = luaModchart.getVar("followYOffset", "float");
-				}
-				#end
-
-				if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && curBeat < 142))
-					camFollow.setPosition(dad.getMidpoint().x + 150 + offsetX, dad.getMidpoint().y - 100 + offsetY);
-
-				#if windows
-				if (luaModchart != null)
-					luaModchart.executeState('playerTwoTurn', []);
-				#end
-
-				switch (dad.curCharacter)
-				{
-					case 'mom':
-						camFollow.y = dad.getMidpoint().y;
-					case 'senpai' | 'senpai-angry' | 'monika':
-						camFollow.y = dad.getMidpoint().y - 430;
-						camFollow.x = dad.getMidpoint().x - 100;
-					case 'duet':
-						camFollow.y = dad.getMidpoint().y - 400;
-						camFollow.x = dad.getMidpoint().x + 0;
-					case 'monika-angry':
-						if (SONG.song.toLowerCase() == 'dual demise' && SONG.notes[Math.floor(curStep / 16)].altAnim)
+				if (camFollow.x != dad.getMidpoint().x + 150 && !PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection)
+					{
+						var offsetX = 0;
+						var offsetY = 0;
+						#if windows
+						if (luaModchart != null)
 						{
-							camFollow.y = spirit.getMidpoint().y;
-							camFollow.x = spirit.getMidpoint().x + 250;
+							offsetX = luaModchart.getVar("followXOffset", "float");
+							offsetY = luaModchart.getVar("followYOffset", "float");
 						}
-						else
+						#end
+		
+						camFollow.setPosition(dad.getMidpoint().x + 150 + offsetX, dad.getMidpoint().y - 100 + offsetY);
+		
+						#if windows
+						if (luaModchart != null)
+							luaModchart.executeState('playerTwoTurn', []);
+						#end
+		
+						switch (dad.curCharacter)
 						{
-							camFollow.y = dad.getMidpoint().y - 390;
-							camFollow.x = dad.getMidpoint().x - 350;
+							case 'mom':
+								camFollow.y = dad.getMidpoint().y;
+							case 'senpai' | 'senpai-angry' | 'monika':
+								camFollow.y = dad.getMidpoint().y - 430;
+								camFollow.x = dad.getMidpoint().x - 100;
+							case 'duet':
+								camFollow.y = dad.getMidpoint().y - 400;
+								camFollow.x = dad.getMidpoint().x + 0;
+							case 'monika-angry':
+								if (SONG.song.toLowerCase() == 'dual demise' && SONG.notes[Math.floor(curStep / 16)].altAnim)
+								{
+									camFollow.y = spirit.getMidpoint().y;
+									camFollow.x = spirit.getMidpoint().x + 250;
+								}
+								else
+								{
+									camFollow.y = dad.getMidpoint().y - 390;
+									camFollow.x = dad.getMidpoint().x - 350;
+								}
 						}
-				}
-			}
-
-			if (PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend.getMidpoint().x - 100)
-			{
-				var offsetX = 0;
-				var offsetY = 0;
-				#if windows
-				if (luaModchart != null)
-				{
-					offsetX = luaModchart.getVar("followXOffset", "float");
-					offsetY = luaModchart.getVar("followYOffset", "float");
-				}
-				#end
-
-				if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && curBeat < 142))
-					camFollow.setPosition(boyfriend.getMidpoint().x - 100 + offsetX, boyfriend.getMidpoint().y - 100 + offsetY);
-
-				#if windows
-				if (luaModchart != null)
-					luaModchart.executeState('playerOneTurn', []);
-				#end
-
-				switch (curStage)
-				{
-					case 'limo':
-						camFollow.x = boyfriend.getMidpoint().x - 300;
-					case 'mall':
-						camFollow.y = boyfriend.getMidpoint().y - 200;
-					case 'school':
-						switch (curSong.toLowerCase())
+					}
+		
+					if (PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend.getMidpoint().x - 100)
+					{
+						var offsetX = 0;
+						var offsetY = 0;
+						#if windows
+						if (luaModchart != null)
 						{
-							case "your reality":
-								camFollow.x = boyfriend.getMidpoint().x - 500;
-								camFollow.y = boyfriend.getMidpoint().y - 600;
-							case "bara no yume":
+							offsetX = luaModchart.getVar("followXOffset", "float");
+							offsetY = luaModchart.getVar("followYOffset", "float");
+						}
+						#end
+		
+						camFollow.setPosition(boyfriend.getMidpoint().x - 100 + offsetX, boyfriend.getMidpoint().y - 100 + offsetY);
+		
+						#if windows
+						if (luaModchart != null)
+							luaModchart.executeState('playerOneTurn', []);
+						#end
+		
+						switch (curStage)
+						{
+							case 'limo':
 								camFollow.x = boyfriend.getMidpoint().x - 300;
+							case 'mall':
 								camFollow.y = boyfriend.getMidpoint().y - 200;
-							default:
+							case 'school':
+								switch (curSong.toLowerCase())
+								{
+									case "your reality":
+										camFollow.x = boyfriend.getMidpoint().x - 500;
+										camFollow.y = boyfriend.getMidpoint().y - 600;
+									case "bara no yume":
+										camFollow.x = boyfriend.getMidpoint().x - 300;
+										camFollow.y = boyfriend.getMidpoint().y - 200;
+									default:
+										camFollow.x = boyfriend.getMidpoint().x - 200;
+										camFollow.y = boyfriend.getMidpoint().y - 200;
+								}
+							case 'schoolEvil':
 								camFollow.x = boyfriend.getMidpoint().x - 200;
 								camFollow.y = boyfriend.getMidpoint().y - 200;
+							case 'dokiclubroom':
+								camFollow.y = boyfriend.getMidpoint().y - 200;
+							case 'dokifestival':
+								camFollow.y = boyfriend.getMidpoint().y - 200;
 						}
-					case 'schoolEvil':
-						camFollow.x = boyfriend.getMidpoint().x - 200;
-						camFollow.y = boyfriend.getMidpoint().y - 200;
-					case 'dokiclubroom':
-						camFollow.y = boyfriend.getMidpoint().y - 200;
-					case 'dokifestival':
-						camFollow.y = boyfriend.getMidpoint().y - 200;
-				}
+					}
 			}
 		}
 
@@ -4098,6 +4099,7 @@ class PlayState extends MusicBeatState
 		add(dad);
 		add(boyfriend);
 		iconP2.changeIcon('yuri-crazy');
+		//camFollow.setPosition((dad.getMidpoint().x + boyfriend.getMidpoint().x) / 2, dad.getMidpoint().y - 2); // THIS IS CONFUSING ME AAAAAAA
 	}
 
 	var curLight:Int = 0;
