@@ -2815,6 +2815,7 @@ class PlayState extends MusicBeatState
 
 	function songOutro():Void
 		{
+			midsongcutscene = false;
 			FlxG.sound.music.volume = 0;
 			vocals.volume = 0;
 			canPause = false;
@@ -4022,11 +4023,13 @@ class PlayState extends MusicBeatState
 			gf.dance();
 		}
 
-		if (curSong.toLowerCase() == 'obsession')
+		if (curSong.toLowerCase() == 'obsession' && midsongcutscene == true)
 		{
 			switch (curBeat)
 			{
 				case 119:
+					camZooming = false;
+					FlxTween.tween(FlxG.camera, {zoom: 1.5}, 10, {ease: FlxEase.linear});
 					staticshock.visible = true;
 					staticshock.alpha = 0;
 					new FlxTimer().start(1, function(tmr:FlxTimer)
@@ -4037,7 +4040,8 @@ class PlayState extends MusicBeatState
 							tmr.reset(1);
 					});
 				case 134:
-					defaultCamZoom = 1.2;
+					defaultCamZoom = 1.3;
+					camZooming = true;
 					add(whiteflash);
 					add(blackScreen);
 					blackScreenBG.alpha = 0.8;
@@ -4046,10 +4050,7 @@ class PlayState extends MusicBeatState
 				case 136:
 					// shit gets serious
 					yuriGoCrazy();
-					health = 1;
-					gf.playAnim('necksnap', true);
-					boyfriend.x = dad.y + 125;
-				case 142:
+				case 140:
 					remove(blackScreen);
 					add(vignette);
 					vignette.alpha = 0.6;
@@ -4062,6 +4063,7 @@ class PlayState extends MusicBeatState
 						if (whiteflash.alpha > 0.15)
 							tmr.reset(0.1);
 					});
+				//case what ever when Yuri right before yuri laughing, do an abrupt cut to black if you could
 			}
 		}
 
@@ -4083,8 +4085,13 @@ class PlayState extends MusicBeatState
 	function yuriGoCrazy()
 	{
 		// have to remove/add bf as well because layering :)
+		camFollow.y += 10;
 		var olddadx = PlayState.dad.x;
 		var olddady = PlayState.dad.y;
+		health = 1;
+		gf.playAnim('necksnap', true);
+		boyfriend.x = dad.y + 135;
+		boyfriend.y -= 50;
 		remove(boyfriend);
 		remove(dad);
 		dad = new Character(olddadx, olddady, 'yuri-crazy');
