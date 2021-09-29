@@ -2058,10 +2058,7 @@ class PlayState extends MusicBeatState
 
 			// 1 / 1000 chance for Gitaroo Man easter egg
 			if (FlxG.random.bool(0.5))
-			{
-				trace('GITAROO MAN EASTER EGG');
 				FlxG.switchState(new GitarooPause());
-			}
 			else
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		}
