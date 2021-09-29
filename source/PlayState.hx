@@ -92,7 +92,7 @@ class PlayState extends MusicBeatState
 
 	public static var noteBools:Array<Bool> = [false, false, false, false];
 
-	var halloweenLevel:Bool = false;
+	var yuriGoneCrazy:Bool = false;
 
 	var doof:DialogueBox;
 	var doof2:DialogueBox;
@@ -2314,7 +2314,7 @@ class PlayState extends MusicBeatState
 				luaModchart.setVar("mustHit",PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection);
 			#end
 
-			if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && curBeat < 142))
+			if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && !yuriGoneCrazy))
 			{
 				if (camFollow.x != dad.getMidpoint().x + 150 && !PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection)
 					{
@@ -2661,7 +2661,7 @@ class PlayState extends MusicBeatState
 									}
 								case 2:
 									{
-										if (curSong.toLowerCase() == "obsession" && curBeat <= 134)
+										if (curSong.toLowerCase() == "obsession" && !yuriGoneCrazy)
 										{
 											switch (Math.abs(daNote.noteData))
 											{
@@ -4021,7 +4021,7 @@ class PlayState extends MusicBeatState
 			gf.dance();
 		}
 
-		if (curSong.toLowerCase() == 'obsession' && midsongcutscene == true)
+		if (curSong.toLowerCase() == 'obsession' && midsongcutscene)
 		{
 			switch (curBeat)
 			{
@@ -4038,20 +4038,14 @@ class PlayState extends MusicBeatState
 							tmr.reset(1);
 					});
 				case 134:
-					defaultCamZoom = 1.3;
-					camZooming = true;
 					add(whiteflash);
 					add(blackScreen);
-					blackScreenBG.alpha = 0.8;
-					remove(deskfront);
 					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
 				case 136:
 					// shit gets serious
 					yuriGoCrazy();
 				case 140:
 					remove(blackScreen);
-					add(vignette);
-					vignette.alpha = 0.6;
 					staticshock.alpha = 0.1;
 
 					new FlxTimer().start(0.1, function(tmr:FlxTimer)
@@ -4082,8 +4076,13 @@ class PlayState extends MusicBeatState
 
 	function yuriGoCrazy()
 	{
-		// have to remove/add bf as well because layering :)
-		camFollow.y += 10;
+		yuriGoneCrazy = true;
+		// visual setup
+		defaultCamZoom = 1.3;
+		camZooming = true;
+		blackScreenBG.alpha = 0.8;
+		remove(deskfront);
+		// character setup
 		var olddadx = PlayState.dad.x;
 		var olddady = PlayState.dad.y;
 		health = 1;
@@ -4096,7 +4095,10 @@ class PlayState extends MusicBeatState
 		add(dad);
 		add(boyfriend);
 		iconP2.changeIcon('yuri-crazy');
-		//camFollow.setPosition((dad.getMidpoint().x + boyfriend.getMidpoint().x) / 2, dad.getMidpoint().y - 2); // THIS IS CONFUSING ME AAAAAAA
+		// vignette + camera setup
+		add(vignette);
+		vignette.alpha = 0.6;
+		camFollow.setPosition((dad.getMidpoint().x + boyfriend.getMidpoint().x) / 1.8, dad.getMidpoint().y - 50);
 	}
 
 	var curLight:Int = 0;
