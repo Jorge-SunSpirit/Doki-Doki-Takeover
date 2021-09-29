@@ -25,6 +25,7 @@ class GameplayCustomizeState extends MusicBeatState
     var front:FlxSprite;
 
     var sick:FlxSprite;
+    var numScore:FlxSprite;
 
     var text:FlxText;
     var blackBorder:FlxSprite;
@@ -44,9 +45,6 @@ class GameplayCustomizeState extends MusicBeatState
 		DiscordClient.changePresence("Customizing Gameplay Modules", null);
 		#end
 
-        sick = new FlxSprite().loadGraphic(Paths.image('sick','shared'));
-        sick.antialiasing = true;
-        sick.scrollFactor.set();
         background = new FlxSprite(-1000, -200).loadGraphic(Paths.image('stageback','shared'));
         curt = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains','shared'));
         front = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront','shared'));
@@ -90,8 +88,6 @@ class GameplayCustomizeState extends MusicBeatState
         add(bf);
         add(dad);
 
-        add(sick);
-
 		add(camFollow);
 
 		FlxG.camera.follow(camFollow, LOCKON, 0.01);
@@ -113,9 +109,33 @@ class GameplayCustomizeState extends MusicBeatState
 
 		playerStrums = new FlxTypedGroup<FlxSprite>();
 
-        sick.cameras = [camHUD];
+        sick = new FlxSprite().loadGraphic(Paths.image('sick','shared'));
+        sick.antialiasing = true;
+        sick.scrollFactor.set();
+        add(sick);
+
+        if (!FlxG.save.data.changedHit)
+        {
+            FlxG.save.data.changedHitX = defaultX;
+            FlxG.save.data.changedHitY = defaultY;
+        }
+    
+        sick.x = FlxG.save.data.changedHitX;
+        sick.y = FlxG.save.data.changedHitY;
+	
+        numScore = new FlxSprite().loadGraphic(Paths.image('num0'));
+        numScore.screenCenter();
+        numScore.x = sick.x + 36;
+        numScore.y = sick.y + 100;
+        numScore.antialiasing = true;
+        numScore.setGraphicSize(Std.int(numScore.width * 0.5));
+        numScore.updateHitbox();
+        add(numScore);
+
         strumLine.cameras = [camHUD];
         playerStrums.cameras = [camHUD];
+        sick.cameras = [camHUD];
+        numScore.cameras = [camHUD];
         
 		generateStaticArrows(0);
 		generateStaticArrows(1);
@@ -141,15 +161,6 @@ class GameplayCustomizeState extends MusicBeatState
 		FlxTween.tween(text,{y: FlxG.height - 18},2,{ease: FlxEase.elasticInOut});
 		FlxTween.tween(blackBorder,{y: FlxG.height - 18},2, {ease: FlxEase.elasticInOut});
 
-        if (!FlxG.save.data.changedHit)
-        {
-            FlxG.save.data.changedHitX = defaultX;
-            FlxG.save.data.changedHitY = defaultY;
-        }
-
-        sick.x = FlxG.save.data.changedHitX;
-        sick.y = FlxG.save.data.changedHitY;
-
         FlxG.mouse.visible = true;
     }
 
@@ -172,6 +183,8 @@ class GameplayCustomizeState extends MusicBeatState
         {
             sick.x = (FlxG.mouse.x - sick.width / 2) - 60;
             sick.y = (FlxG.mouse.y - sick.height) - 60;
+            numScore.x = sick.x + 36;
+            numScore.y = sick.y + 100;
         }
 
         for (i in playerStrums)
@@ -202,6 +215,8 @@ class GameplayCustomizeState extends MusicBeatState
         {
             sick.x = defaultX;
             sick.y = defaultY;
+            numScore.x = sick.x + 36;
+            numScore.y = sick.y + 100;
             FlxG.save.data.zoom = 1;
             camHUD.zoom = FlxG.save.data.zoom;
             FlxG.save.data.changedHitX = sick.x;
@@ -214,6 +229,12 @@ class GameplayCustomizeState extends MusicBeatState
             FlxG.mouse.visible = false;
             FlxG.sound.play(Paths.sound('cancelMenu'));
 			FlxG.switchState(new OptionsMenu());
+        }
+
+        if (FlxG.keys.justPressed.SPACE)
+        {
+            FlxG.camera.zoom += 0.015;
+            camHUD.zoom += 0.010;
         }
     }
 
@@ -230,9 +251,6 @@ class GameplayCustomizeState extends MusicBeatState
             dad.dance();
 
         gf.dance();
-
-        FlxG.camera.zoom += 0.015;
-        camHUD.zoom += 0.010;
     }
 
 

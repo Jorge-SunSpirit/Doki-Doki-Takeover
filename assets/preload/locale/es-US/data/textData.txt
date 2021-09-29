@@ -60,7 +60,7 @@ descCurScroll::Current Scroll Speed
 descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)
 descReset::Toggle pressing R to gameover.
 descCustomize::Drag'n'Drop Gameplay Modules around to your preference
-descCustomizeState::Click and drag around gameplay elements to customize their positions. Press R to reset. Q/E to change zoom. Press Escape to go back.
+descCustomizeState::Drag around the score to customize its position. R to reset. Q/E to change zoom. Space to quick zoom. Escape to exit.
 descDistract::Toggle stage distractions that can hinder your gameplay.
 descFPSRainbow::Make the FPS Counter Rainbow (Only works with the FPS Counter toggled on and Flashing Lights toggled off)
 descAccuracy::Display accuracy information.
