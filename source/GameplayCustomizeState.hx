@@ -37,6 +37,7 @@ class GameplayCustomizeState extends MusicBeatState
     var strumLineNotes:FlxTypedGroup<FlxSprite>;
     var playerStrums:FlxTypedGroup<FlxSprite>;
     private var camHUD:FlxCamera;
+	private var camGame:FlxCamera;
     
     public override function create() {
         #if FEATURE_DISCORD
@@ -44,27 +45,32 @@ class GameplayCustomizeState extends MusicBeatState
 		DiscordClient.changePresence("Customizing Gameplay Modules", null);
 		#end
 
-        background = new FlxSprite(-1000, -200).loadGraphic(Paths.image('stageback','shared'));
-        curt = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains','shared'));
+		background = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback','shared'));
         front = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront','shared'));
+        curt = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains','shared'));
         background.antialiasing = true;
-        curt.antialiasing = true;
         front.antialiasing = true;
-
-		//Conductor.changeBPM(102);
-		persistentUpdate = true;
+        curt.antialiasing = true;
 
         super.create();
 
-		camHUD = new FlxCamera();
+		camGame = new FlxCamera();
+        camHUD = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
+
+		FlxG.cameras.reset(camGame);
         FlxG.cameras.add(camHUD);
 
         camHUD.zoom = FlxG.save.data.zoom;
 
-        background.scrollFactor.set(0.9,0.9);
-        curt.scrollFactor.set(0.9,0.9);
-        front.scrollFactor.set(0.9,0.9);
+		FlxCamera.defaultCameras = [camGame];
+
+		persistentUpdate = true;
+		persistentDraw = true;
+
+        background.scrollFactor.set(0.9, 0.9);
+        front.scrollFactor.set(0.9, 0.9);
+        curt.scrollFactor.set(0.9, 0.9);
 
         add(background);
         add(front);
@@ -97,7 +103,6 @@ class GameplayCustomizeState extends MusicBeatState
 		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
 		strumLine.scrollFactor.set();
         strumLine.alpha = 0.4;
-
         //add(strumLine);
 		
 		if (FlxG.save.data.downscroll)
@@ -108,7 +113,7 @@ class GameplayCustomizeState extends MusicBeatState
 
 		playerStrums = new FlxTypedGroup<FlxSprite>();
 
-        sick = new FlxSprite().loadGraphic(Paths.image('sick','shared'));
+        sick = new FlxSprite().loadGraphic(Paths.image('sick', 'shared'));
 		sick.setGraphicSize(Std.int(sick.width * 0.7));
 		sick.antialiasing = true;
         sick.scrollFactor.set();
@@ -124,9 +129,9 @@ class GameplayCustomizeState extends MusicBeatState
         sick.x = FlxG.save.data.changedHitX;
         sick.y = FlxG.save.data.changedHitY;
 
-        strumLine.cameras = [camHUD];
-        playerStrums.cameras = [camHUD];
-        sick.cameras = [camHUD];
+		strumLine.cameras = [camHUD];
+		strumLineNotes.cameras = [camHUD];
+		sick.cameras = [camHUD];
         
 		generateStaticArrows(0);
 		generateStaticArrows(1);
@@ -139,7 +144,7 @@ class GameplayCustomizeState extends MusicBeatState
         blackBorder = new FlxSprite(-30,FlxG.height + 40).makeGraphic((Std.int(text.width + 900)),Std.int(text.height + 600),FlxColor.BLACK);
 		blackBorder.alpha = 0.5;
 
-        background.cameras = [camHUD];
+		blackBorder.cameras = [camHUD];
         text.cameras = [camHUD];
 
         text.scrollFactor.set();
