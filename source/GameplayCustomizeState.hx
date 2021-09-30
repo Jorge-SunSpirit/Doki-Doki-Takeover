@@ -25,7 +25,6 @@ class GameplayCustomizeState extends MusicBeatState
     var front:FlxSprite;
 
     var sick:FlxSprite;
-    var numScore:FlxSprite;
 
     var text:FlxText;
     var blackBorder:FlxSprite;
@@ -122,20 +121,10 @@ class GameplayCustomizeState extends MusicBeatState
     
         sick.x = FlxG.save.data.changedHitX;
         sick.y = FlxG.save.data.changedHitY;
-	
-        numScore = new FlxSprite().loadGraphic(Paths.image('num0'));
-        numScore.screenCenter();
-        numScore.x = sick.x + 36;
-        numScore.y = sick.y + 100;
-        numScore.antialiasing = true;
-        numScore.setGraphicSize(Std.int(numScore.width * 0.5));
-        numScore.updateHitbox();
-        add(numScore);
 
         strumLine.cameras = [camHUD];
         playerStrums.cameras = [camHUD];
         sick.cameras = [camHUD];
-        numScore.cameras = [camHUD];
         
 		generateStaticArrows(0);
 		generateStaticArrows(1);
@@ -183,8 +172,6 @@ class GameplayCustomizeState extends MusicBeatState
         {
             sick.x = (FlxG.mouse.x - sick.width / 2) - 60;
             sick.y = (FlxG.mouse.y - sick.height) - 60;
-            numScore.x = sick.x + 36;
-            numScore.y = sick.y + 100;
         }
 
         for (i in playerStrums)
@@ -211,12 +198,55 @@ class GameplayCustomizeState extends MusicBeatState
             FlxG.save.data.changedHit = true;
         }
 
+        if (FlxG.keys.justPressed.S)
+        {
+			var seperatedScore:Array<Int> = [];
+	
+			var comboSplit:Array<String> = (FlxG.random.int(0, 999) + "").split('');
+
+			if (comboSplit.length == 2)
+				seperatedScore.push(0); // make sure theres a 0 in front or it looks weird lol!
+
+			for(i in 0...comboSplit.length)
+			{
+				var str:String = comboSplit[i];
+				seperatedScore.push(Std.parseInt(str));
+			}
+	
+			var daLoop:Int = 0;
+			for (i in seperatedScore)
+			{
+				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('num' + Std.int(i)));
+				numScore.screenCenter();
+				numScore.x = sick.x + (43 * daLoop) - 50;
+				numScore.y = sick.y + 100;
+				numScore.cameras = [camHUD];
+				numScore.antialiasing = true;
+				numScore.setGraphicSize(Std.int(numScore.width * 0.5));
+				numScore.updateHitbox();
+	
+				numScore.acceleration.y = FlxG.random.int(200, 300);
+				numScore.velocity.y -= FlxG.random.int(140, 160);
+				numScore.velocity.x = FlxG.random.float(-5, 5);
+	
+				add(numScore);
+	
+				FlxTween.tween(numScore, {alpha: 0}, 0.2, {
+					onComplete: function(tween:FlxTween)
+					{
+						numScore.destroy();
+					},
+					startDelay: Conductor.crochet * 0.002
+				});
+	
+				daLoop++;
+			}
+        }
+
         if (FlxG.keys.justPressed.R)
         {
             sick.x = defaultX;
             sick.y = defaultY;
-            numScore.x = sick.x + 36;
-            numScore.y = sick.y + 100;
             FlxG.save.data.zoom = 1;
             camHUD.zoom = FlxG.save.data.zoom;
             FlxG.save.data.changedHitX = sick.x;
@@ -229,12 +259,6 @@ class GameplayCustomizeState extends MusicBeatState
             FlxG.mouse.visible = false;
             FlxG.sound.play(Paths.sound('cancelMenu'));
 			FlxG.switchState(new OptionsMenu());
-        }
-
-        if (FlxG.keys.justPressed.SPACE)
-        {
-            FlxG.camera.zoom += 0.015;
-            camHUD.zoom += 0.010;
         }
     }
 
@@ -251,6 +275,12 @@ class GameplayCustomizeState extends MusicBeatState
             dad.dance();
 
         gf.dance();
+
+		if (FlxG.keys.pressed.SPACE)
+		{
+			FlxG.camera.zoom += 0.015;
+			camHUD.zoom += 0.010;
+		}
     }
 
 

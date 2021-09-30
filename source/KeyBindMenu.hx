@@ -87,7 +87,7 @@ class KeyBindMenu extends FlxSubState
         blackBox = new FlxSprite(0,0).makeGraphic(FlxG.width,FlxG.height,FlxColor.BLACK);
         add(blackBox);
 
-        infoText = new FlxText(-10, 580, 1280, 'Current Mode: ${KeyBinds.gamepad ? 'GAMEPAD' : 'KEYBOARD'}. Press TAB to switch\n(${KeyBinds.gamepad ? 'RIGHT Trigger' : 'Escape'} to save, ${KeyBinds.gamepad ? 'LEFT Trigger' : 'Backspace'} to leave without saving. ${KeyBinds.gamepad ? 'START To change a keybind' : ''})', 72);
+		infoText = new FlxText(-10, 580, 1280, 'Just Monika.', 72);
 		infoText.scrollFactor.set(0, 0);
 		infoText.setFormat(LangUtil.getFont('riffic'), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, 0xFFFF7CFF);
 		infoText.borderSize = 2;
@@ -121,7 +121,10 @@ class KeyBindMenu extends FlxSubState
         if (frames <= 10)
             frames++;
 
-        infoText.text = 'Current Mode: ${KeyBinds.gamepad ? 'GAMEPAD' : 'KEYBOARD'}. Press TAB to switch\n(${KeyBinds.gamepad ? 'RIGHT Trigger' : 'Escape'} to save, ${KeyBinds.gamepad ? 'LEFT Trigger' : 'Backspace'} to leave without saving. ${KeyBinds.gamepad ? 'START To change a keybind' : ''})\n${lastKey != "" ? lastKey + " is blacklisted!" : ""}';
+        infoText.text = ${KeyBinds.gamepad ? LangUtil.getString('descKeyBindGPCurrent') : LangUtil.getString('descKeyBindKBCurrent')}
+			+ ' ' + LangUtil.getString('descKeyBindTAB')
+			+ '\n' + ${KeyBinds.gamepad ? LangUtil.getString('descKeyBindGPControls') : LangUtil.getString('descKeyBindKBControls')}
+			+ '\n' + ${lastKey != '' ? lastKey + ' ' + LangUtil.getString('descKeyBindBlacklist') : ''};
 
         switch(state){
 

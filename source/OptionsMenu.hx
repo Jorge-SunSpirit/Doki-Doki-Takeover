@@ -41,6 +41,7 @@ class OptionsMenu extends MusicBeatState
 			new ScrollSpeedOption(LangUtil.getString('descScroll')),
 			new AccuracyDOption(LangUtil.getString('descAccuracyMode')),
 			new ResetButtonOption(LangUtil.getString('descReset')),
+			new BotPlay(LangUtil.getString('descBotplay')),
 			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
 		new OptionCategory(LangUtil.getString('catAppearance'), [
@@ -57,8 +58,7 @@ class OptionsMenu extends MusicBeatState
 			new ReplayOption(LangUtil.getString('descReplay')),
 			#end
 			new FlashingLightsOption(LangUtil.getString('descFlashing')),
-			new WatermarkOption(LangUtil.getString('descWatermark')),
-			new BotPlay(LangUtil.getString('descBotplay'))
+			new WatermarkOption(LangUtil.getString('descWatermark'))
 		])
 		
 	];
@@ -291,7 +291,7 @@ class OptionsMenu extends MusicBeatState
 
 	function changeSelection(change:Int = 0)
 	{
-		FlxG.sound.play(Paths.sound("scrollMenu"), 0.4);
+		FlxG.sound.play(Paths.sound("scrollMenu"));
 
 		curSelected += change;
 
