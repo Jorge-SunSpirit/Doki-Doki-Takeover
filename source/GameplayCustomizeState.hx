@@ -109,8 +109,10 @@ class GameplayCustomizeState extends MusicBeatState
 		playerStrums = new FlxTypedGroup<FlxSprite>();
 
         sick = new FlxSprite().loadGraphic(Paths.image('sick','shared'));
-        sick.antialiasing = true;
+		sick.setGraphicSize(Std.int(sick.width * 0.7));
+		sick.antialiasing = true;
         sick.scrollFactor.set();
+		sick.updateHitbox();
         add(sick);
 
         if (!FlxG.save.data.changedHit)
@@ -202,10 +204,16 @@ class GameplayCustomizeState extends MusicBeatState
         {
 			var seperatedScore:Array<Int> = [];
 	
-			var comboSplit:Array<String> = (FlxG.random.int(0, 999) + "").split('');
+			var comboSplit:Array<String> = (FlxG.random.int(0, 420) + "").split('');
 
-			if (comboSplit.length == 2)
-				seperatedScore.push(0); // make sure theres a 0 in front or it looks weird lol!
+			// make sure theres a 0 in front or it looks weird lol!
+            if (comboSplit.length == 1)
+            {
+				seperatedScore.push(0);
+				seperatedScore.push(0);
+            }
+			else if (comboSplit.length == 2)
+				seperatedScore.push(0);
 
 			for(i in 0...comboSplit.length)
 			{
