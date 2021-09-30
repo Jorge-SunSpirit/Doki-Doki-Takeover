@@ -37,6 +37,7 @@ class OptionsMenu extends MusicBeatState
 			new Judgement(LangUtil.getString('descJudgement')),
 			#if desktop
 			new FPSCapOption(LangUtil.getString('descFPSCap')),
+			new ReplayOption(LangUtil.getString('descReplay')),
 			#end
 			new ScrollSpeedOption(LangUtil.getString('descScroll')),
 			new AccuracyDOption(LangUtil.getString('descAccuracyMode')),
@@ -45,22 +46,15 @@ class OptionsMenu extends MusicBeatState
 			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
 		new OptionCategory(LangUtil.getString('catAppearance'), [
-			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')),
+			new FPSOption(LangUtil.getString('descFPSCount')),
 			new RainbowFPSOption(LangUtil.getString('descFPSRainbow')),
+			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')),
+			new FlashingLightsOption(LangUtil.getString('descFlashing')),
 			new AccuracyOption(LangUtil.getString('descAccuracy')),
 			new NPSDisplayOption(LangUtil.getString('descNPS')),
-			new SongPositionOption(LangUtil.getString('descPosition'))
-		]),
-		
-		new OptionCategory(LangUtil.getString('catMisc'), [
-			new FPSOption(LangUtil.getString('descFPSCount')),
-			#if desktop
-			new ReplayOption(LangUtil.getString('descReplay')),
-			#end
-			new FlashingLightsOption(LangUtil.getString('descFlashing')),
+			new SongPositionOption(LangUtil.getString('descPosition')),
 			new WatermarkOption(LangUtil.getString('descWatermark'))
 		])
-		
 	];
 
 	public var acceptInput:Bool = true;
