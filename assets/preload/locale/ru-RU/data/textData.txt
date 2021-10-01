@@ -59,7 +59,7 @@ descCurScroll::Current Scroll Speed
 descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Millisecond Based)
 descReset::Toggle pressing R to game over.
 descCustomize::Customize parts of the gameplay HUD to your heart's content.
-descCustomizeState::Drag around the score to customize its position. R to reset. Q/E to change zoom. Space to zoom on beat. S to generate combo. Escape to exit.
+descCustomizeState::Drag around the score to customize its position. R to reset. Q/E to zoom. Space to pause cam zooming. C to generate combo. Escape to exit.
 descDistract::Toggle stage distractions that can hinder your gameplay.
 descFPSRainbow::Make the FPS counter display as a rainbow.
 descAccuracy::Display accuracy information.

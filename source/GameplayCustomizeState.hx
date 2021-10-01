@@ -205,7 +205,7 @@ class GameplayCustomizeState extends MusicBeatState
             FlxG.save.data.changedHit = true;
         }
 
-        if (FlxG.keys.justPressed.S)
+        if (FlxG.keys.justPressed.C)
         {
 			var seperatedScore:Array<Int> = [];
 	
@@ -289,7 +289,7 @@ class GameplayCustomizeState extends MusicBeatState
 
         gf.dance();
 
-		if (FlxG.keys.pressed.SPACE)
+		if (!FlxG.keys.pressed.SPACE)
 		{
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.010;
