@@ -401,7 +401,7 @@ class PlayState extends MusicBeatState
 			
 			//nat week
 			case 'baka':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/baka/introdialogue', 'preload', true));
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/baka/IntroDialogue', 'preload', true));
 			case 'my sweets':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my sweets/introdialogue', 'preload', true));
 			
