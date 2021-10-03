@@ -140,7 +140,7 @@ class FirstBootState extends MusicBeatState
 											LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
 											new FlxTimer().start(2, function(tmr:FlxTimer)
 												{
-													FlxG.sound.play(Paths.sound('flip_page'));
+													FlxG.sound.play(Paths.sound('flip_page', 'shared'));
 													bringinthenote();
 												});
 										});
@@ -154,7 +154,7 @@ class FirstBootState extends MusicBeatState
 										LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
 										new FlxTimer().start(2, function(tmr:FlxTimer)
 											{
-												FlxG.sound.play(Paths.sound('flip_page'));
+												FlxG.sound.play(Paths.sound('flip_page', 'shared'));
 												bringinthenote();
 											});
 									});
