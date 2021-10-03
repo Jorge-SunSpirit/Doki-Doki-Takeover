@@ -1438,25 +1438,29 @@ class PlayState extends MusicBeatState
 			{
 				case 0:
 					if (curStage.startsWith('schoolEvil'))
-						{
-							FlxG.sound.play(Paths.sound('intro3' + glitchSuffix), 0.6);
-						}
-						else
-							{
-								FlxG.sound.play(Paths.sound('intro3' + altSuffix), 0.6);
-							}
+						FlxG.sound.play(Paths.sound('intro3' + glitchSuffix), 0.6);
+					else
+						FlxG.sound.play(Paths.sound('intro3' + altSuffix), 0.6);
+
 					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
 						gf.playAnim('countdownThree');
 				case 1:
 					var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 					ready.scrollFactor.set();
+					ready.cameras = [camHUD];
+					
+					if (!curStage.startsWith('school'))
+					{
+						ready.setGraphicSize(Std.int(ready.width * 0.7));
+						ready.antialiasing = true;
+					}
+					else
+						ready.setGraphicSize(Std.int(ready.width * daPixelZoom * 0.7));
+					
 					ready.updateHitbox();
-
-					if (curStage.startsWith('school'))
-						ready.setGraphicSize(Std.int(ready.width * daPixelZoom));
-
 					ready.screenCenter();
 					add(ready);
+
 					FlxTween.tween(ready, {y: ready.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 						ease: FlxEase.cubeInOut,
 						onComplete: function(twn:FlxTween)
@@ -1464,25 +1468,31 @@ class PlayState extends MusicBeatState
 							ready.destroy();
 						}
 					});
+
 					if (curStage.startsWith('schoolEvil'))
-						{
-							FlxG.sound.play(Paths.sound('intro2' + glitchSuffix), 0.6);
-						}
-						else
-							{
-								FlxG.sound.play(Paths.sound('intro2' + altSuffix), 0.6);
-							}
+						FlxG.sound.play(Paths.sound('intro2' + glitchSuffix), 0.6);
+					else
+						FlxG.sound.play(Paths.sound('intro2' + altSuffix), 0.6);
+
 					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
 						gf.playAnim('countdownTwo');
 				case 2:
 					var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 					set.scrollFactor.set();
+					set.cameras = [camHUD];
 
-					if (curStage.startsWith('school'))
-						set.setGraphicSize(Std.int(set.width * daPixelZoom));
+					if (!curStage.startsWith('school'))
+					{
+						set.setGraphicSize(Std.int(set.width * 0.7));
+						set.antialiasing = true;
+					}
+					else
+						set.setGraphicSize(Std.int(set.width * daPixelZoom * 0.7));
 
+					set.updateHitbox();
 					set.screenCenter();
 					add(set);
+
 					FlxTween.tween(set, {y: set.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 						ease: FlxEase.cubeInOut,
 						onComplete: function(twn:FlxTween)
@@ -1490,27 +1500,31 @@ class PlayState extends MusicBeatState
 							set.destroy();
 						}
 					});
+
 					if (curStage.startsWith('schoolEvil'))
-						{
-							FlxG.sound.play(Paths.sound('intro1' + glitchSuffix), 0.6);
-						}
-						else
-							{
-								FlxG.sound.play(Paths.sound('intro1' + altSuffix), 0.6);
-							}
+						FlxG.sound.play(Paths.sound('intro1' + glitchSuffix), 0.6);
+					else
+						FlxG.sound.play(Paths.sound('intro1' + altSuffix), 0.6);
+
 					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
 						gf.playAnim('countdownOne');
 				case 3:
 					var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 					go.scrollFactor.set();
+					go.cameras = [camHUD];
 
-					if (curStage.startsWith('school'))
-						go.setGraphicSize(Std.int(go.width * daPixelZoom));
+					if (!curStage.startsWith('school'))
+					{
+						go.setGraphicSize(Std.int(go.width * 0.7));
+						go.antialiasing = true;
+					}
+					else
+						go.setGraphicSize(Std.int(go.width * daPixelZoom * 0.7));
 
 					go.updateHitbox();
-
 					go.screenCenter();
 					add(go);
+
 					FlxTween.tween(go, {y: go.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 						ease: FlxEase.cubeInOut,
 						onComplete: function(twn:FlxTween)
@@ -1518,14 +1532,12 @@ class PlayState extends MusicBeatState
 							go.destroy();
 						}
 					});
+
 					if (curStage.startsWith('schoolEvil'))
-						{
-							FlxG.sound.play(Paths.sound('introGo' + glitchSuffix), 0.6);
-						}
-						else
-							{
-								FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
-							}
+						FlxG.sound.play(Paths.sound('introGo' + glitchSuffix), 0.6);
+					else
+						FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
+
 					if (FlxG.save.data.gfCountdown && gf.curCharacter == 'gf-realdoki')
 						gf.playAnim('countdownGo');
 			}

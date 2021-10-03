@@ -185,16 +185,16 @@ class GameplayCustomizeState extends MusicBeatState
             i.y = strumLine.y;
         for (i in strumLineNotes)
             i.y = strumLine.y;
-
+        
         if (FlxG.keys.justPressed.Q)
         {
-            FlxG.save.data.zoom += 0.02;
+            FlxG.save.data.zoom -= 0.02;
             camHUD.zoom = FlxG.save.data.zoom;
         }
 
         if (FlxG.keys.justPressed.E)
         {
-            FlxG.save.data.zoom -= 0.02;
+            FlxG.save.data.zoom += 0.02;
             camHUD.zoom = FlxG.save.data.zoom;
         }
 
