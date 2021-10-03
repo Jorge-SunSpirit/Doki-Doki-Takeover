@@ -19,6 +19,7 @@ cmnCategory::Please select a category
 // CATEGORY
 catGameplay::Gameplay
 catAppearance::Appearance
+catCache::Caching
 catUnlock::Unlockables
 // OPTIONS
 optKeyBindings::Key Bindings
@@ -44,6 +45,10 @@ optCustomize::Customize Gameplay HUD
 optWatermark::Kade Engine Watermarks
 optGFCountdown::Girlfriend Countdown
 optLanguage::Language Select
+optCharacterCache::Character Caching
+optSongCache::Song Caching
+optMusicCache::Music Caching
+optSoundCache::SFX Caching
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -77,6 +82,10 @@ descKeyBindTAB::Press Tab to switch.
 descKeyBindKBControls::Escape to save, Backspace to leave without saving. Enter to change a keybind.
 descKeyBindGPControls::Right Trigger to save, Right Trigger to leave without saving. Start to change a keybind.
 descKeyBindBlacklist::is blacklisted!
+descCharacterCache::Reduce load times by caching every character on boot. (MAJOR MEMORY USAGE)
+descSongCache::Reduce load times by caching every song on boot. (MAJOR MEMORY USAGE)
+descMusicCache::Reduce load times by caching every music on boot. (MAJOR MEMORY USAGE)
+descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY USAGE)
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.

@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxG;
+import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
@@ -90,7 +91,8 @@ class Paths
 
 	static public function sound(key:String, ?library:String)
 	{
-		return getPath('sounds/$key.$SOUND_EXT', SOUND, library);
+		var result = getPath('sounds/$key.$SOUND_EXT', SOUND, library);
+		return doesSoundAssetExist(result) ? result : null;
 	}
 
 	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String)
@@ -100,17 +102,112 @@ class Paths
 
 	inline static public function music(key:String, ?library:String)
 	{
-		return getPath('music/$key.$SOUND_EXT', MUSIC, library);
+		var result = getPath('music/$key.$SOUND_EXT', MUSIC, library);
+		return doesSoundAssetExist(result) ? result : null;
 	}
 
 	inline static public function voices(song:String)
 	{
-		return 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
+		var result = 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
+		return doesSoundAssetExist(result) ? result : null;
 	}
 
 	inline static public function inst(song:String)
 	{
-		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
+		var result = 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
+		return doesSoundAssetExist(result) ? result : null;
+	}
+
+	static public function listSongsToCache()
+	{
+		// We need to query OpenFlAssets, not the file system, because of Polymod.
+		var soundAssets = OpenFlAssets.list(AssetType.MUSIC).concat(OpenFlAssets.list(AssetType.SOUND));
+
+		// TODO: Maybe rework this to pull from a text file rather than scan the list of assets.
+		var songNames = [];
+
+		for (sound in soundAssets)
+		{
+			// Parse end-to-beginning to support mods.
+			var path = sound.split('/');
+			path.reverse();
+
+			var fileName = path[0];
+			var songName = path[1];
+
+			if (path[2] != 'songs')
+				continue;
+
+			// Remove duplicates.
+			if (songNames.indexOf(songName) != -1)
+				continue;
+
+			songNames.push(songName);
+		}
+
+		return songNames;
+	}
+
+	static public function listAudioToCache(isSound:Bool)
+	{
+		// We need to query OpenFlAssets, not the file system, because of Polymod.
+		var soundAssets = OpenFlAssets.list(AssetType.MUSIC).concat(OpenFlAssets.list(AssetType.SOUND));
+
+		// TODO: Maybe rework this to pull from a text file rather than scan the list of assets.
+		var fileNames = [];
+
+		var folderName = 'music';
+
+		if (isSound)
+			folderName = 'sounds';
+
+		for (sound in soundAssets)
+		{
+			// Parse end-to-beginning to support mods.
+			var path = sound.split('/');
+			path.reverse();
+
+			var fileName = path[0];
+
+			if (path[1] != folderName)
+				continue;
+
+			// Remove duplicates.
+			if (fileNames.indexOf(fileName) != -1)
+				continue;
+
+			fileNames.push(fileName);
+		}
+
+		return fileNames;
+	}
+
+	static public function doesSoundAssetExist(path:String)
+	{
+		if (path == null || path == "")
+			return false;
+		return OpenFlAssets.exists(path, AssetType.SOUND) || OpenFlAssets.exists(path, AssetType.MUSIC);
+	}
+
+	static public function loadImage(key:String, ?library:String, isLocale:Bool = false):FlxGraphic
+	{
+		var path = image(key, library, isLocale);
+
+		if (Caching.bitmapData != null)
+		{
+			if (Caching.bitmapData.exists(key))
+				// Get data from cache.
+				return Caching.bitmapData.get(key);
+		}
+
+		if (OpenFlAssets.exists(path, IMAGE))
+		{
+			var bitmap = OpenFlAssets.getBitmapData(path);
+			return FlxGraphic.fromBitmapData(bitmap);
+		}
+		else
+			// Could not find image at path
+			return null;
 	}
 
 	inline static public function image(key:String, ?library:String, isLocale:Bool = false)
@@ -136,16 +233,16 @@ class Paths
 		if (isLocale)
 		{
 			if (OpenFlAssets.exists(file('locale/' + FlxG.save.data.language + '/images/$key.xml', library)))
-				return FlxAtlasFrames.fromSparrow(image(key, library, isLocale), file('locale/' + FlxG.save.data.language + '/images/$key.xml', library));
+				return FlxAtlasFrames.fromSparrow(loadImage(key, library, isLocale), file('locale/' + FlxG.save.data.language + '/images/$key.xml', library));
 			else
-				return FlxAtlasFrames.fromSparrow(image(key, library, isLocale), file('locale/en-US/images/$key.xml', library));
+				return FlxAtlasFrames.fromSparrow(loadImage(key, library, isLocale), file('locale/en-US/images/$key.xml', library));
 		}
 		else
-			return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
+			return FlxAtlasFrames.fromSparrow(loadImage(key, library), file('images/$key.xml', library));
 	}
 
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
-		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, library), file('images/$key.txt', library));
+		return FlxAtlasFrames.fromSpriteSheetPacker(loadImage(key, library), file('images/$key.txt', library));
 	}
 }
