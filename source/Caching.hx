@@ -36,18 +36,20 @@ class Caching extends MusicBeatState
 		PlayerSettings.init();
 		KadeEngineData.initSave();
 
+		LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
+
 		FlxG.mouse.visible = false;
 
 		FlxG.worldBounds.set(0, 0);
 
 		bitmapData = new Map<String, FlxGraphic>();
 
-		text = new FlxText(FlxG.width / 2, FlxG.height / 2 + 300, 0, "Caching...");
+		text = new FlxText(FlxG.width / 2, FlxG.height / 2 + 300, 0, LangUtil.getString('cmnCaching') + "...");
 		text.setFormat(LangUtil.getFont('riffic'), 42, FlxColor.WHITE, FlxTextAlign.CENTER);
 		text.alpha = 0;
 		text.antialiasing = true;
 
-		disableText = new FlxText(0, 34, 0, "(press D to disable next boot)");
+		disableText = new FlxText(0, 34, 0, LangUtil.getString('descDisableCaching'));
 		disableText.setFormat(LangUtil.getFont('aller'), 21, FlxColor.WHITE, FlxTextAlign.CENTER);
 		disableText.antialiasing = true;
 		disableText.alpha = 0.1;
@@ -66,14 +68,14 @@ class Caching extends MusicBeatState
 		// TODO: Refactor this to use OpenFlAssets.
 		#if sys
 		if (FlxG.save.data.cacheCharacters)
-        {
+		{
 			for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/shared/images/characters")))
 			{
 				if (!i.endsWith(".png"))
 					continue;
 				characters.push(i);
 			}
-        }
+		}
 
 		// TODO: Get the audio list from OpenFlAssets.
 		if (FlxG.save.data.cacheSongs)
@@ -102,7 +104,7 @@ class Caching extends MusicBeatState
 					var alpha = HelperFunctions.truncateFloat(done / toBeDone * 100, 2) / 100;
 					kadeLogo.alpha = alpha;
 					text.alpha = alpha;
-					text.text = "Caching... (" + done + "/" + toBeDone + ")";
+					text.text = LangUtil.getString('cmnCaching') + "... (" + done + "/" + toBeDone + ")";
 				}
 			}
 		});

@@ -55,11 +55,12 @@ class OptionsMenu extends MusicBeatState
 			new SongPositionOption(LangUtil.getString('descPosition')),
 			new WatermarkOption(LangUtil.getString('descWatermark'))
 		]),
-		new OptionCategory(LangUtil.getString('catCache'), [
+		new OptionCategory(LangUtil.getString('cmnCaching'), [
 			new CharacterCaching(LangUtil.getString('descCharacterCache')),
 			new SongCaching(LangUtil.getString('descSongCache')),
 			new MusicCaching(LangUtil.getString('descMusicCache')),
-			new SoundCaching(LangUtil.getString('descSoundCache'))
+			new SoundCaching(LangUtil.getString('descSoundCache')),
+			new CachingState(LangUtil.getString('descCaching'))
 		])
 	];
 

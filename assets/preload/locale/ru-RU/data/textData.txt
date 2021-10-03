@@ -16,10 +16,10 @@ cmnDesc::Description
 cmnOffset::Offset (Left, Right, Shift for slow)
 cmnAddOffset::Additive Offset (Left or Right)
 cmnCategory::Please select a category
+cmnCaching::Caching
 // CATEGORY
 catGameplay::Gameplay
 catAppearance::Appearance
-catCache::Caching
 catUnlock::Unlockables
 // OPTIONS
 optKeyBindings::Key Bindings
@@ -49,6 +49,7 @@ optCharacterCache::Character Caching
 optSongCache::Song Caching
 optMusicCache::Music Caching
 optSoundCache::SFX Caching
+optCaching::Start Caching
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -86,6 +87,8 @@ descCharacterCache::Reduce load times by caching every character on boot. (MAJOR
 descSongCache::Reduce load times by caching every song on boot. (MAJOR MEMORY USAGE)
 descMusicCache::Reduce load times by caching every music on boot. (MAJOR MEMORY USAGE)
 descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY USAGE)
+descCaching::Reduce load times after boot by loading the selected options above.
+descDisableCaching::(press D to disable next boot)
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.
