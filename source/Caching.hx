@@ -25,6 +25,8 @@ class Caching extends MusicBeatState
 
 	public static var bitmapData:Map<String, FlxGraphic>;
 
+	public static var afterBoot:Bool = false;
+
 	var characters = [];
 	var songs = [];
 	var music = [];
@@ -213,9 +215,16 @@ class Caching extends MusicBeatState
 
 		loaded = true;
 
-		if (!FlxG.save.data.funnyquestionpopup)
-			FlxG.switchState(new FirstBootState());
+		if (afterBoot)
+			FlxG.switchState(new MainMenuState());
 		else
-			FlxG.switchState(new TitleState());
+		{
+			afterBoot = true;
+
+			if (!FlxG.save.data.funnyquestionpopup)
+				FlxG.switchState(new FirstBootState());
+			else
+				FlxG.switchState(new TitleState());
+		}
 	}
 }
