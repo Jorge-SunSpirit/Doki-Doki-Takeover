@@ -673,6 +673,7 @@ class SoundCaching extends Option
 		return LangUtil.getString('optSoundCache') + ' ' + (FlxG.save.data.cacheSounds ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
+
 class CachingState extends Option
 {
 	public function new(desc:String)
