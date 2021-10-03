@@ -21,6 +21,7 @@ class FirstBootState extends MusicBeatState
 	var curSelected:Int = 0;
 
 	var backdrop:FlxBackdrop;
+	var bg:FlxSprite;
 	var funnynote:FlxSprite;
 
 	var grpOptionsTexts:FlxTypedGroup<FlxText>;
@@ -37,6 +38,13 @@ class FirstBootState extends MusicBeatState
 			textMenuItems.push(data[0]);
 			localeList.push(data[1]);
 		}
+
+		bg = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
+		bg.setGraphicSize(Std.int(bg.width * 1.1));
+		bg.updateHitbox();
+		bg.screenCenter();
+		bg.antialiasing = true;
+		add(bg);
 
 		grpOptionsTexts = new FlxTypedGroup<FlxText>();
 		add(grpOptionsTexts);
@@ -112,6 +120,7 @@ class FirstBootState extends MusicBeatState
 						{
 							if (curSelected != txt.ID)
 							{
+								FlxTween.tween(bg, {alpha: 0}, 1.3, {ease: FlxEase.quadOut,onComplete: function(twn:FlxTween){}});
 								FlxTween.tween(txt, {alpha: 0}, 1.3, {
 								ease: FlxEase.quadOut,
 									onComplete: function(twn:FlxTween)
@@ -129,8 +138,9 @@ class FirstBootState extends MusicBeatState
 											FlxG.save.data.language = localeList[curSelected];
 											trace('langauge set to ' + FlxG.save.data.language);
 											LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
-											new FlxTimer().start(1, function(tmr:FlxTimer)
+											new FlxTimer().start(2, function(tmr:FlxTimer)
 												{
+													FlxG.sound.play(Paths.sound('flip_page'));
 													bringinthenote();
 												});
 										});
@@ -142,8 +152,9 @@ class FirstBootState extends MusicBeatState
 										FlxG.save.data.language = localeList[curSelected];
 										trace('langauge set to ' + FlxG.save.data.language);
 										LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
-										new FlxTimer().start(1, function(tmr:FlxTimer)
+										new FlxTimer().start(2, function(tmr:FlxTimer)
 											{
+												FlxG.sound.play(Paths.sound('flip_page'));
 												bringinthenote();
 											});
 									});
