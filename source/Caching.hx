@@ -211,6 +211,9 @@ class Caching extends MusicBeatState
 
 		loaded = true;
 
-		FlxG.switchState(new TitleState());
+		if (!FlxG.save.data.funnyquestionpopup)
+			FlxG.switchState(new FirstBootState());
+		else
+			FlxG.switchState(new TitleState());
 	}
 }
