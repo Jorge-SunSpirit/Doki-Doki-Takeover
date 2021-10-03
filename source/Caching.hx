@@ -32,15 +32,8 @@ class Caching extends MusicBeatState
 
 	override function create()
 	{
-        #if !sys
-		FlxG.switchState(new TitleState());
-        return;
-        #end
-
 		FlxG.save.bind('dokitakeover', 'ddtoteam');
-
 		PlayerSettings.init();
-
 		KadeEngineData.initSave();
 
 		FlxG.mouse.visible = false;
@@ -81,7 +74,6 @@ class Caching extends MusicBeatState
 				characters.push(i);
 			}
         }
-		#end
 
 		// TODO: Get the audio list from OpenFlAssets.
 		if (FlxG.save.data.cacheSongs)
@@ -92,6 +84,7 @@ class Caching extends MusicBeatState
 
 		if (FlxG.save.data.cacheSounds)
 			sounds = Paths.listAudioToCache(true);
+		#end
 
 		toBeDone = Lambda.count(characters) + Lambda.count(songs) + Lambda.count(music) + Lambda.count(sounds);
 
@@ -142,6 +135,7 @@ class Caching extends MusicBeatState
 
 	function cache()
 	{
+		#if sys
 		trace("LOADING: " + toBeDone + " OBJECTS.");
 
 		for (i in characters)
@@ -213,6 +207,7 @@ class Caching extends MusicBeatState
 		}
 
 		trace("Finished caching!");
+		#end
 
 		loaded = true;
 

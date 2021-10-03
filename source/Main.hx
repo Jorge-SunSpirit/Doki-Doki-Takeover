@@ -29,9 +29,7 @@ class Main extends Sprite
 
 	public static function main():Void
 	{
-
 		// quick checks 
-
 		Lib.current.addChild(new Main());
 	}
 
@@ -73,6 +71,10 @@ class Main extends Sprite
 			gameHeight = Math.ceil(stageHeight / zoom);
 		}
 
+		#if !sys
+		initialState = TitleState;
+		#end
+
 		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
 
 		addChild(game);
@@ -102,7 +104,6 @@ class Main extends Sprite
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
 		toggleFPS(FlxG.save.data.fps);
-
 		#end
 	}
 

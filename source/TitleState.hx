@@ -85,13 +85,9 @@ class TitleState extends MusicBeatState
 		trace('NEWGROUNDS LOL');
 		#end
 
-		#if !sys
 		FlxG.save.bind('dokitakeover', 'ddtoteam');
-
 		PlayerSettings.init();
-
 		KadeEngineData.initSave();
-		#end
 
 		LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
 
