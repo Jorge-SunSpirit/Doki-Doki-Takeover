@@ -2431,7 +2431,7 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("stepShit", curStep);
 
 		// i thought this was cute
-		if (curSong == 'rain clouds')
+		if (curSong.toLowerCase() == 'rain clouds')
 		{
 			switch (curBeat)
 			{
