@@ -37,30 +37,31 @@ class OptionsMenu extends MusicBeatState
 			new Judgement(LangUtil.getString('descJudgement')),
 			#if desktop
 			new FPSCapOption(LangUtil.getString('descFPSCap')),
+			new ReplayOption(LangUtil.getString('descReplay')),
 			#end
 			new ScrollSpeedOption(LangUtil.getString('descScroll')),
 			new AccuracyDOption(LangUtil.getString('descAccuracyMode')),
 			new ResetButtonOption(LangUtil.getString('descReset')),
+			new BotPlay(LangUtil.getString('descBotplay')),
 			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
 		new OptionCategory(LangUtil.getString('catAppearance'), [
-			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')),
+			new FPSOption(LangUtil.getString('descFPSCount')),
 			new RainbowFPSOption(LangUtil.getString('descFPSRainbow')),
+			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')),
+			new FlashingLightsOption(LangUtil.getString('descFlashing')),
 			new AccuracyOption(LangUtil.getString('descAccuracy')),
 			new NPSDisplayOption(LangUtil.getString('descNPS')),
-			new SongPositionOption(LangUtil.getString('descPosition'))
+			new SongPositionOption(LangUtil.getString('descPosition')),
+			new WatermarkOption(LangUtil.getString('descWatermark'))
 		]),
-		
-		new OptionCategory(LangUtil.getString('catMisc'), [
-			new FPSOption(LangUtil.getString('descFPSCount')),
-			#if desktop
-			new ReplayOption(LangUtil.getString('descReplay')),
-			#end
-			new FlashingLightsOption(LangUtil.getString('descFlashing')),
-			new WatermarkOption(LangUtil.getString('descWatermark')),
-			new BotPlay(LangUtil.getString('descBotplay'))
+		new OptionCategory(LangUtil.getString('cmnCaching'), [
+			new CharacterCaching(LangUtil.getString('descCharacterCache')),
+			new SongCaching(LangUtil.getString('descSongCache')),
+			new MusicCaching(LangUtil.getString('descMusicCache')),
+			new SoundCaching(LangUtil.getString('descSoundCache')),
+			new CachingState(LangUtil.getString('descCaching'))
 		])
-		
 	];
 
 	public var acceptInput:Bool = true;
@@ -291,7 +292,7 @@ class OptionsMenu extends MusicBeatState
 
 	function changeSelection(change:Int = 0)
 	{
-		FlxG.sound.play(Paths.sound("scrollMenu"), 0.4);
+		FlxG.sound.play(Paths.sound("scrollMenu"));
 
 		curSelected += change;
 

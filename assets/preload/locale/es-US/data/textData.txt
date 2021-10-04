@@ -14,12 +14,12 @@ cmnOn::On
 cmnOff::Off
 cmnDesc::Description
 cmnOffset::Offset (Left, Right, Shift for slow)
-cmnAddOffset::Additive Offset (Left, Right)
+cmnAddOffset::Additive Offset (Left or Right)
 cmnCategory::Please select a category
+cmnCaching::Caching
 // CATEGORY
 catGameplay::Gameplay
 catAppearance::Appearance
-catMisc::Miscellaneous
 catUnlock::Unlockables
 // OPTIONS
 optKeyBindings::Key Bindings
@@ -35,43 +35,60 @@ optJudgement::Safe Frames
 optFPSCount::FPS Counter
 optFPSCap::FPS Cap
 optScroll::Scroll Speed
-optFPSRainbow::FPS Rainbow
+optFPSRainbow::Rainbow FPS Counter
 optNPS::NPS Display
 optReplay::Load Replays
 optAccuracyMode::Accuracy Mode
 optAMAccurate::Accurate
 optAMComplex::Complex
-optCustomize::Customize Gameplay
-optWatermark::Watermarks
+optCustomize::Customize Gameplay HUD
+optWatermark::Kade Engine Watermarks
 optGFCountdown::Girlfriend Countdown
 optLanguage::Language Select
+optCharacterCache::Character Caching
+optSongCache::Song Caching
+optMusicCache::Music Caching
+optSoundCache::SFX Caching
+optCaching::Start Caching
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
-descDownscroll::Change the layout of the strumline.
+descDownscroll::Change the direction of upcoming notes.
 descGhostTap::Ghost Tapping is when you tap a direction and it doesn't give you a miss.
-descJudgement::Customize your Hit Timings (LEFT or RIGHT)
+descJudgement::Customize the game's safe frames. (Left or Right)
 descCurJudgement::Current Safe Frames
-descFPSCap::Cap your FPS (Left for -10, Right for +10. SHIFT to go faster)
+descFPSCap::Set the game's FPS cap. (Left for -10, Right for +10. Shift to go faster)
 descCurFPSCap::Current FPS Cap
 descRefreshRate::Refresh Rate
-descScroll::Change your scroll speed (Left for -0.1, right for +0.1. If it's at 1, it will be chart dependent)
+descScroll::Change your scroll speed. (Left for -0.1, Right for +0.1. 1 will be chart default.)
 descCurScroll::Current Scroll Speed
-descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)
-descReset::Toggle pressing R to gameover.
-descCustomize::Drag'n'Drop Gameplay Modules around to your preference
-descCustomizeState::Click and drag around gameplay elements to customize their positions. Press R to reset. Q/E to change zoom. Press Escape to go back.
+descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Millisecond Based)
+descReset::Toggle pressing R to game over.
+descCustomize::Customize parts of the gameplay HUD to your heart's content.
+descCustomizeState::Drag around the score to customize its position. R to reset. Q/E to zoom. Space to pause cam zooming. C to generate combo. Escape to exit.
 descDistract::Toggle stage distractions that can hinder your gameplay.
-descFPSRainbow::Make the FPS Counter Rainbow (Only works with the FPS Counter toggled on and Flashing Lights toggled off)
+descFPSRainbow::Make the FPS counter display as a rainbow.
 descAccuracy::Display accuracy information.
-descNPS::Shows your current Notes Per Second.
-descPosition::Show the songs current position (as a bar)
-descFPSCount::Toggle the FPS Counter
-descReplay::View replays
+descNPS::Shows your current notes per second.
+descPosition::Show the songs current position. (as a bar)
+descFPSCount::Toggle the FPS counter.
+descReplay::View your previous gameplay.
 descFlashing::Toggle flashing lights that can cause epileptic seizures and strain.
-descWatermark::Enable and disable all watermarks from the engine.
+descWatermark::Show watermarks that come from Kade Engine.
 descBotplay::Showcase your charts and mods with autoplay.
 descGFCountdown::Have Girlfriend count down before the song starts.
+descKeyBindKBCurrent::Current Mode: Keyboard.
+descKeyBindGPCurrent::Current Mode: Gamepad.
+descKeyBindTAB::Press Tab to switch.
+descKeyBindKBControls::Escape to save, Backspace to leave without saving. Enter to change a keybind.
+descKeyBindGPControls::Right Trigger to save, Right Trigger to leave without saving. Start to change a keybind.
+descKeyBindBlacklist::is blacklisted!
+descCharacterCache::Reduce load times by caching every character on boot. (MAJOR MEMORY USAGE)
+descSongCache::Reduce load times by caching every song on boot. (MAJOR MEMORY USAGE)
+descMusicCache::Reduce load times by caching every music on boot. (MAJOR MEMORY USAGE)
+descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY USAGE)
+descCaching::Reduce load times after boot by loading the selected options above.
+descDisableCaching::(press D to disable next boot)
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.

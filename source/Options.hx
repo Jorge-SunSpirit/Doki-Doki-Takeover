@@ -585,3 +585,112 @@ class GFCountdownOption extends Option
 	private override function updateDisplay():String
 		return LangUtil.getString('optGFCountdown') + ' ' + (FlxG.save.data.gfCountdown ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 }
+
+class CharacterCaching extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.cacheCharacters = !FlxG.save.data.cacheCharacters;
+
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optCharacterCache') + ' ' + (FlxG.save.data.cacheCharacters ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
+
+class SongCaching extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.cacheSongs = !FlxG.save.data.cacheSongs;
+
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optSongCache') + ' ' + (FlxG.save.data.cacheSongs ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
+
+class MusicCaching extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.cacheMusic = !FlxG.save.data.cacheMusic;
+
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optMusicCache') + ' ' + (FlxG.save.data.cacheMusic ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
+
+class SoundCaching extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.cacheSounds = !FlxG.save.data.cacheSounds;
+
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optSoundCache') + ' ' + (FlxG.save.data.cacheSounds ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
+
+class CachingState extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		trace("switch");
+		FlxG.switchState(new Caching());
+		return false;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optCaching');
+	}
+}

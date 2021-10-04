@@ -340,7 +340,7 @@ class MainMenuState extends MusicBeatState
 									spr.kill();
 									}
 								});
-								}
+							}
 								else
 							{
 									if (FlxG.save.data.flashing)

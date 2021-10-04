@@ -84,6 +84,18 @@ class KadeEngineData
 		if (FlxG.save.data.zoom == null)
 			FlxG.save.data.zoom = 1;
 
+		if (FlxG.save.data.cacheCharacters == null)
+			FlxG.save.data.cacheCharacters = false;
+
+		if (FlxG.save.data.cacheSongs == null)
+			FlxG.save.data.cacheSongs = false;
+
+		if (FlxG.save.data.cacheMusic == null)
+			FlxG.save.data.cacheMusic = false;
+
+		if (FlxG.save.data.cacheSounds == null)
+			FlxG.save.data.cacheSounds = false;
+
 		Conductor.recalculateTimings();
 
 		Main.watermarks = FlxG.save.data.watermark;

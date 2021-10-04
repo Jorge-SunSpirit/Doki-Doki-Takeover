@@ -35,11 +35,10 @@ class DokiStoryState extends MusicBeatState
 	var weekData:Array<Dynamic> = [
 		['High School Conflict', 'Bara No Yume', 'Your Demise'],
 		['Rain Clouds', 'My Confession'],
-		['My Sweets'],
+		['My Sweets', 'Baka'],
 		['Deep Breaths','Obsession'],
 		['Reconciliation'],
-		["It's Complicated (Sayori Mix)"]
-		//['Beathoven (Natsuki Mix)', 'Crucify (Yuri Mix)', "It's Complicated (Sayori Mix)", 'Glitcher (Monika Mix)']
+		['Crucify (Yuri Mix)', 'Beathoven (Natsuki Mix)', "It's Complicated (Sayori Mix)", 'Glitcher (Monika Mix)']
 	];
 
 	var curDifficulty:Int = 1;

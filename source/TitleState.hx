@@ -56,12 +56,12 @@ class TitleState extends MusicBeatState
 			sys.FileSystem.createDirectory(Sys.getCwd() + "/assets/replays");
 		#end
 
+		/*
 		@:privateAccess
 		{
 			trace("Loaded " + openfl.Assets.getLibrary("default").assetsLoaded + " assets (DEFAULT)");
 		}
-		
-		PlayerSettings.init();
+		*/
 
 		#if FEATURE_DISCORD
 		DiscordClient.initialize();
@@ -86,7 +86,7 @@ class TitleState extends MusicBeatState
 		#end
 
 		FlxG.save.bind('dokitakeover', 'ddtoteam');
-
+		PlayerSettings.init();
 		KadeEngineData.initSave();
 
 		LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));

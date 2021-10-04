@@ -40,8 +40,7 @@
 
 	<classpath name="source" />
 
-	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
-	<assets path="assets/preload" rename="assets" exclude="*.mp3" unless="web"/>
+	<assets path="assets/preload" rename="assets"/>
 	
 	<!-- <define name="PRELOAD_ALL" /> -->
 	<define name="PRELOAD_ALL" unless="web" />
@@ -53,8 +52,8 @@
 		<library name="tutorial" preload="true" />
 		<library name="week1"    preload="true" />
 		<library name="week6"    preload="true" />
-		<library name="monika"    preload="true" />
-		<library name="doki"    preload="true" />
+		<library name="monika"   preload="true" />
+		<library name="doki"     preload="true" />
 	</section>
 	
 	<section if="NO_PRELOAD_ALL">
@@ -63,24 +62,17 @@
 		<library name="tutorial" preload="false" />
 		<library name="week1"    preload="false" />
 		<library name="week6"    preload="false" />
-		<library name="monika"    preload="false" />
-		<library name="doki"    preload="false" />
+		<library name="monika"   preload="false" />
+		<library name="doki"     preload="false" />
 	</section>
 	
-	<assets path="assets/songs"    library="songs"    exclude="*.ogg" if="web"/>
-	<assets path="assets/songs"    library="songs"    exclude="*.mp3" unless="web"/>
-	<assets path="assets/shared"   library="shared"   exclude="*.ogg" if="web"/>
-	<assets path="assets/shared"   library="shared"   exclude="*.mp3" unless="web"/>
-	<assets path="assets/tutorial" library="tutorial" exclude="*.ogg" if="web"/>
-	<assets path="assets/tutorial" library="tutorial" exclude="*.mp3" unless="web"/>
-	<assets path="assets/week1"    library="week1"    exclude="*.ogg" if="web"/>
-	<assets path="assets/week1"    library="week1"    exclude="*.mp3" unless="web"/>
-	<assets path="assets/week6"    library="week6"    exclude="*.ogg" if="web"/>
-	<assets path="assets/week6"    library="week6"    exclude="*.mp3" unless="web"/>
-	<assets path="assets/monika"    library="monika"    exclude="*.ogg" if="web"/>
-	<assets path="assets/monika"    library="monika"    exclude="*.mp3" unless="web"/>
-	<assets path="assets/doki"    library="doki"    exclude="*.ogg" if="web"/>
-	<assets path="assets/doki"    library="doki"    exclude="*.mp3" unless="web"/>
+	<assets path="assets/songs"    library="songs"/>
+	<assets path="assets/shared"   library="shared"/>
+	<assets path="assets/tutorial" library="tutorial"/>
+	<assets path="assets/week1"    library="week1"/>
+	<assets path="assets/week6"    library="week6"/>
+	<assets path="assets/monika"   library="monika"/>
+	<assets path="assets/doki"     library="doki"/>
 
 
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
