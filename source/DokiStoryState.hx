@@ -573,62 +573,20 @@ class DokiStoryState extends MusicBeatState
 			switch (curSelected)
 			{
 				case 1:
-					if (!FlxG.save.data.monibeaten)
-							{
-								trace('am I worked');
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.monibeaten)
-							{
-								trace('am I worked');
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
+					txtWeekTitle.visible = FlxG.save.data.monibeaten;
+					txtTracklist.visible = FlxG.save.data.monibeaten;
 				case 2:
-					if (!FlxG.save.data.sayobeaten)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.sayobeaten)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
+					txtWeekTitle.visible = FlxG.save.data.sayobeaten;
+					txtTracklist.visible = FlxG.save.data.sayobeaten;
 				case 3:
-					if (!FlxG.save.data.natbeaten)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.natbeaten)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
+					txtWeekTitle.visible = FlxG.save.data.natbeaten;
+					txtTracklist.visible = FlxG.save.data.natbeaten;
 				case 4:
-					if (!FlxG.save.data.yuribeaten)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-						if (FlxG.save.data.yuribeaten == true)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
+					txtWeekTitle.visible = FlxG.save.data.yuribeaten;
+					txtTracklist.visible = FlxG.save.data.yuribeaten;
 				case 5:
-					if (!FlxG.save.data.extrabeaten)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.extrabeaten)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = false;
-							}
+					txtWeekTitle.visible = FlxG.save.data.extrabeaten;
+					txtTracklist.visible = FlxG.save.data.extra2beaten;
 				default:
 					txtWeekTitle.visible = true;
 					txtTracklist.visible = true;
