@@ -114,6 +114,7 @@ class FirstBootState extends MusicBeatState
 		
 				if (controls.ACCEPT)
 				{
+					selectedsomething = true;
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					grpOptionsTexts.forEach(function(txt:FlxText)
@@ -167,7 +168,6 @@ class FirstBootState extends MusicBeatState
 
 	function bringinthenote()
 		{
-			selectedsomething = true;
 			funnynote = new FlxSprite(0, 0).loadGraphic(Paths.image('DDLCIntroWarning', 'preload', true));
 			funnynote.alpha = 0;
 			funnynote.screenCenter(X);

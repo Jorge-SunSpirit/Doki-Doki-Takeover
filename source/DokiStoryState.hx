@@ -285,70 +285,6 @@ class DokiStoryState extends MusicBeatState
 
 		switch (curSelected)
 			{
-				default: 
-					txtWeekTitle.visible = true;
-					txtTracklist.visible = true;
-				case 1:
-					if (FlxG.save.data.monibeaten == false)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.monibeaten == true)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
-				case 2:
-					if (FlxG.save.data.sayobeaten == false)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.sayobeaten == true)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
-				case 3:
-					if (FlxG.save.data.natbeaten == false)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.natbeaten == true)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
-				case 4:
-					if (FlxG.save.data.yuribeaten == false)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-						if (FlxG.save.data.yuribeaten == true)
-							{
-								txtWeekTitle.visible = true;
-								txtTracklist.visible = true;
-							}
-				case 5:
-					if (FlxG.save.data.extrabeaten == false)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-					if (FlxG.save.data.extrabeaten == true)
-							{
-								txtWeekTitle.visible = false;
-								txtTracklist.visible = false;
-							}
-			}
-
-		//if (FlxG.save.data.monibeaten == false )
-
-		switch (curSelected)
-			{
 				case 0:
 					story_cursor.x = -240;
 					story_cursor.y = -160;
@@ -633,6 +569,70 @@ class DokiStoryState extends MusicBeatState
 				curSelected = 6 - 1;
 
 			updateText();
+
+			switch (curSelected)
+			{
+				case 1:
+					if (!FlxG.save.data.monibeaten)
+							{
+								trace('am I worked');
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+					if (FlxG.save.data.monibeaten)
+							{
+								trace('am I worked');
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
+							}
+				case 2:
+					if (!FlxG.save.data.sayobeaten)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+					if (FlxG.save.data.sayobeaten)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
+							}
+				case 3:
+					if (!FlxG.save.data.natbeaten)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+					if (FlxG.save.data.natbeaten)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
+							}
+				case 4:
+					if (!FlxG.save.data.yuribeaten)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+						if (FlxG.save.data.yuribeaten == true)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = true;
+							}
+				case 5:
+					if (!FlxG.save.data.extrabeaten)
+							{
+								txtWeekTitle.visible = false;
+								txtTracklist.visible = false;
+							}
+					if (FlxG.save.data.extrabeaten)
+							{
+								txtWeekTitle.visible = true;
+								txtTracklist.visible = false;
+							}
+				default:
+					txtWeekTitle.visible = true;
+					txtTracklist.visible = true;
+			}
 			
 		}
 
