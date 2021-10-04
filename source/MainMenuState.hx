@@ -98,7 +98,7 @@ class MainMenuState extends MusicBeatState
 		backdrop.velocity.set(-40, -40);
 
 		var random = FlxG.random.float(0,100);
-			show = 'fumo';
+			show = 'senpai';
 
 			if (random >= 10 && random <= 19)
 				{
@@ -108,8 +108,8 @@ class MainMenuState extends MusicBeatState
 				
 			if (random >= 20 && random <= 29)
 				{
-					trace ('fumo');
-					show = 'fumo';
+					trace ('yuritabi');
+					show = 'yuritabi';
 				}
 			if (random >= 30 && random <= 39)
 				{
@@ -118,18 +118,18 @@ class MainMenuState extends MusicBeatState
 				}
 			if (random >= 40 && random <= 49)
 				{
-					trace ('sunnat');
-					show = 'sunnat';
-				}
-			if (random >= 50 && random <= 59)
-				{
 					trace ('senpai');
 					show = 'senpai';
 				}
-			if (random >= 60 && random <= 69)
+			if (random >= 50 && random <= 59)
 				{
 					trace ('sunnat');
 					show = 'sunnat';
+				}
+			if (random >= 60 && random <= 69)
+				{
+					trace ('yuritabi');
+					show = 'yuritabi';
 				}
 			if (random >= 70 && random <= 79)
 				{
@@ -141,10 +141,15 @@ class MainMenuState extends MusicBeatState
 					trace ('sunnat');
 					show = 'sunnat';
 				}
-			if (random >= 90 && random <= 99)
+			if (random >= 90 && random <= 98)
 				{
-					trace ('senpai');
-					show = 'senpai';
+					trace ('yuritabi');
+					show = 'yuritabi';
+				}
+			if (random >= 99 && random <=100)
+				{
+					trace ('fumo');
+					show = 'fumo';
 				}
 
 		//-700, =359
@@ -209,6 +214,15 @@ class MainMenuState extends MusicBeatState
 					menu_character.antialiasing = true;
 					menu_character.scale.set(.8, .8);
 					menu_character.animation.addByPrefix('play', 'sunday right', 24);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'yuritabi':
+					menu_character = new FlxSprite(-150, -270);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/tabiandyuri');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.77, .77);
+					menu_character.animation.addByPrefix('play', 'Tabi Yuri together hueh', 21);
 					menu_character.updateHitbox();
 					menu_character.animation.play('play');
 					add(menu_character);
