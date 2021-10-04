@@ -633,7 +633,7 @@ class DokiStoryState extends MusicBeatState
 			var stringThing:Array<String> = weekData[curSelected];
 
 			for (i in stringThing)
-				txtTracklist.text += "\n" + i;
+				txtTracklist.text += "\n" + i.split(" (")[0];
 
 			txtWeekTitle.text = weekNames[curSelected].toUpperCase();
 			txtTracklist.text = txtTracklist.text.toUpperCase();
