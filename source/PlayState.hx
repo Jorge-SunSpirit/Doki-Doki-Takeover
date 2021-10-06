@@ -402,6 +402,7 @@ class PlayState extends MusicBeatState
 			//nat week
 			case 'baka':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/baka/IntroDialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/baka/EndDialogue', 'preload', true));
 			case 'my sweets':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my sweets/introdialogue', 'preload', true));
 			
@@ -2077,6 +2078,7 @@ class PlayState extends MusicBeatState
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		}
 
+
 		if (FlxG.keys.justPressed.SEVEN)
 		{
 			#if FEATURE_DISCORD
@@ -2842,6 +2844,8 @@ class PlayState extends MusicBeatState
 						endcutscene(doof4);
 					case 'your demise':
 						endcutscene(doof2);
+					case 'baka':
+						endcutscene(doof4);
 					default:
 						endSong();
 				}
