@@ -574,7 +574,8 @@ class DialogueBox extends FlxSpriteGroup
 								FlxG.sound.playMusic(Paths.music(dialogueList[0], 'shared'));
 								enddialogue();
 							case 'endmusic':
-								FlxG.sound.music.stop();
+								if (FlxG.sound.music != null)
+									FlxG.sound.music.fadeOut(0.5, 0);
 								enddialogue();
 							case 'glitch':
 								
