@@ -588,6 +588,7 @@ class GFCountdownOption extends Option
 		return LangUtil.getString('optGFCountdown') + ' ' + (FlxG.save.data.gfCountdown ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 }
 
+#if FEATURE_CACHING
 class CharacterCaching extends Option
 {
 	public function new(desc:String)
@@ -696,3 +697,4 @@ class CachingState extends Option
 		return LangUtil.getString('optCaching');
 	}
 }
+#end

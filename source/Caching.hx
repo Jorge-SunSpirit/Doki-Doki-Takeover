@@ -1,3 +1,4 @@
+#if FEATURE_CACHING
 package;
 
 import openfl.utils.Assets as OpenFlAssets;
@@ -243,3 +244,4 @@ class Caching extends MusicBeatState
 		}
 	}
 }
+#end

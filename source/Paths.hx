@@ -193,12 +193,14 @@ class Paths
 	{
 		var path = image(key, library, isLocale);
 
+		#if FEATURE_CACHING
 		if (Caching.bitmapData != null)
 		{
 			if (Caching.bitmapData.exists(key))
 				// Get data from cache.
 				return Caching.bitmapData.get(key);
 		}
+		#end
 
 		if (OpenFlAssets.exists(path, IMAGE))
 		{

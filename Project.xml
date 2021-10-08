@@ -166,5 +166,7 @@
   <haxedef name="FEATURE_WEBM" if="windows" unless="hl" />
   <!-- Defines whether the Thread class can be used. -->
   <haxedef name="FEATURE_MULTITHREADING" if="cpp || hl" />
+  <!-- Defines whether Caching is enabled. Will cause issues on systems with limited memory. -->
+  <haxedef name="FEATURE_CACHING" if="desktop" unless="32bit || hl" />
 	
 </project>
