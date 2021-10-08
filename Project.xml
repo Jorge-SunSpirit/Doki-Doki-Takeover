@@ -161,9 +161,8 @@
 
 
 	<!-- <haxedef name="SKIP_TO_PLAYSTATE" if="debug" /> -->
-	<haxedef name="NG_LOGIN" if="newgrounds" />
 
   <!-- Defines whether the Discord client should be enabled. Only works on desktop. -->
-  <!-- <haxedef name="FEATURE_DISCORD" if="desktop" /> -->
+  <!-- <haxedef name="FEATURE_DISCORD" if="desktop" unless="hl"/> -->
 	
 </project>
