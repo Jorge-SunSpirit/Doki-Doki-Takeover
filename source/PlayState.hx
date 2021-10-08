@@ -3000,9 +3000,13 @@ class PlayState extends MusicBeatState
 								FlxG.sound.play(Paths.sound('awhellnaw'));	// THEY ON THAT SPUNCHBOB SHIT
 
 								new FlxTimer().start(1.3, function(timer:FlxTimer) {
+									#if FEATURE_WEBM
 									trace('cutscene successful');
 									LoadingState.loadAndSwitchState(new VideoState('assets/videos/monika/fakeout.webm', new PlayState()));
 									trace('huh what is this?');
+									#else
+									LoadingState.loadAndSwitchState(new PlayState());
+									#end
 								});
 							}
 						default:
