@@ -461,6 +461,7 @@ class NPSDisplayOption extends Option
 	}
 }
 
+#if FEATURE_FILESYSTEM
 class ReplayOption extends Option
 {
 	public function new(desc:String)
@@ -481,6 +482,7 @@ class ReplayOption extends Option
 		return LangUtil.getString('optReplay');
 	}
 }
+#end
 
 class AccuracyDOption extends Option
 {

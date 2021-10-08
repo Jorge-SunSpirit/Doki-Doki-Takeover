@@ -71,7 +71,7 @@ class Main extends Sprite
 			gameHeight = Math.ceil(stageHeight / zoom);
 		}
 
-		#if !sys
+		#if !FEATURE_FILESYSTEM
 		initialState = TitleState;
 		#end
 
@@ -79,9 +79,9 @@ class Main extends Sprite
 
 		addChild(game);
 
+		#if FEATURE_WEBM
 		var ourSource:String = "assets/videos/daWeirdVid/dontDelete.webm";
 
-		#if FEATURE_WEBM
 		#if web
 		var str1:String = "HTML CRAP";
 		var vHandler = new VideoHandler();

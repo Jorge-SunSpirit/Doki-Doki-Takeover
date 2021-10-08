@@ -28,7 +28,7 @@ import openfl.Assets;
 import Discord.DiscordClient;
 #end
 
-#if cpp
+#if FEATURE_MULTITHREADING
 import sys.thread.Thread;
 #end
 
@@ -288,16 +288,14 @@ class TitleState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
-				// Get current version of Kade Engine
-
-				switch (FlxG.save.data.funnyquestionpopup)
-					{
-						case true:
-							FlxG.switchState(new MainMenuState());
-						case false:
-							FlxG.switchState(new OutdatedSubState());
-					}
-					
+				if (!FlxG.save.data.funnyquestionpopup)
+					#if FEATURE_FILESYSTEM
+					FlxG.switchState(new OutdatedSubState());
+					#else
+					FlxG.switchState(new FirstBootState());
+					#end
+				else
+					FlxG.switchState(new MainMenuState());
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}

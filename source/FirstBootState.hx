@@ -78,7 +78,11 @@ class FirstBootState extends MusicBeatState
 				FlxTween.tween(funnynote, {alpha: 0}, 2, {ease: FlxEase.quadOut,onComplete: function(twn:FlxTween)
 					{
 					funnynote.kill();
+					#if FEATURE_FILESYSTEM
 					FlxG.switchState(new TitleState());
+					#else
+					FlxG.switchState(new OutdatedSubState());
+					#end
 					}
 				});
 			}

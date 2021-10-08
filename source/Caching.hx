@@ -96,6 +96,7 @@ class Caching extends MusicBeatState
 		add(text);
 		add(disableText);
 
+		#if FEATURE_MULTITHREADING
 		// update thread
 		sys.thread.Thread.create(() ->
 		{
@@ -116,6 +117,20 @@ class Caching extends MusicBeatState
 		{
 			cache();
 		});
+		#else
+		while (!loaded)
+		{
+			if (toBeDone != 0 && done != toBeDone)
+			{
+				var alpha = HelperFunctions.truncateFloat(done / toBeDone * 100, 2) / 100;
+				kadeLogo.alpha = alpha;
+				text.alpha = alpha;
+				text.text = LangUtil.getString('cmnCaching') + "... (" + done + "/" + toBeDone + ")";
+			}
+		}
+
+		cache();
+		#end
 
 		super.create();
 	}

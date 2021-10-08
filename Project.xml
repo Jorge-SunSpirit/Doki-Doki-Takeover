@@ -49,8 +49,6 @@
 	<section if="PRELOAD_ALL">
 		<library name="songs"    preload="true" />
 		<library name="shared"   preload="true" />
-		<library name="tutorial" preload="true" />
-		<library name="week1"    preload="true" />
 		<library name="week6"    preload="true" />
 		<library name="monika"   preload="true" />
 		<library name="doki"     preload="true" />
@@ -59,8 +57,6 @@
 	<section if="NO_PRELOAD_ALL">
 		<library name="songs"    preload="false" />
 		<library name="shared"   preload="false" />
-		<library name="tutorial" preload="false" />
-		<library name="week1"    preload="false" />
 		<library name="week6"    preload="false" />
 		<library name="monika"   preload="false" />
 		<library name="doki"     preload="false" />
@@ -68,8 +64,6 @@
 	
 	<assets path="assets/songs"    library="songs"/>
 	<assets path="assets/shared"   library="shared"/>
-	<assets path="assets/tutorial" library="tutorial"/>
-	<assets path="assets/week1"    library="week1"/>
 	<assets path="assets/week6"    library="week6"/>
 	<assets path="assets/monika"   library="monika"/>
 	<assets path="assets/doki"     library="doki"/>
@@ -97,7 +91,7 @@
 	<haxelib name="hscript" />
 	
 	<haxelib name="actuate" />
-	<haxelib name="extension-webm" unless="hl"/> <!-- Make sure to use https://github.com/KadeDev/extension-webm/ -->
+	<haxelib name="extension-webm" if="windows" unless="hl"/> <!-- Make sure to use https://github.com/KadeDev/extension-webm/ -->
 
 
 	<!--In case you want to use the ui package-->
@@ -170,5 +164,7 @@
   <haxedef name="FEATURE_LUAMODCHART" if="windows" unless="hl" />
   <!-- Defines whether WebM videos should be enabled. Currently only enabled on Windows. -->
   <haxedef name="FEATURE_WEBM" if="windows" unless="hl" />
+  <!-- Defines whether the Thread class can be used. -->
+  <haxedef name="FEATURE_MULTITHREADING" if="cpp || hl" />
 	
 </project>

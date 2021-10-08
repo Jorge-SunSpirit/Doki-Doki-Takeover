@@ -37,6 +37,8 @@ class OptionsMenu extends MusicBeatState
 			new Judgement(LangUtil.getString('descJudgement')),
 			#if desktop
 			new FPSCapOption(LangUtil.getString('descFPSCap')),
+			#end
+			#if FEATURE_FILESYSTEM
 			new ReplayOption(LangUtil.getString('descReplay')),
 			#end
 			new ScrollSpeedOption(LangUtil.getString('descScroll')),
@@ -55,6 +57,7 @@ class OptionsMenu extends MusicBeatState
 			new SongPositionOption(LangUtil.getString('descPosition')),
 			new WatermarkOption(LangUtil.getString('descWatermark'))
 		]),
+		#if FEATURE_FILESYSTEM
 		new OptionCategory(LangUtil.getString('cmnCaching'), [
 			new CharacterCaching(LangUtil.getString('descCharacterCache')),
 			new SongCaching(LangUtil.getString('descSongCache')),
@@ -62,6 +65,7 @@ class OptionsMenu extends MusicBeatState
 			new SoundCaching(LangUtil.getString('descSoundCache')),
 			new CachingState(LangUtil.getString('descCaching'))
 		])
+		#end
 	];
 
 	public var acceptInput:Bool = true;

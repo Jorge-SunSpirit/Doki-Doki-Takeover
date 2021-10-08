@@ -61,6 +61,14 @@ class DokiFreeplayState extends MusicBeatState
 
 	override function create()
 	{
+		#if !PRELOAD_ALL
+		if (!FlxG.sound.music.playing)
+		{
+			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			Conductor.changeBPM(102);
+		}
+		#end
+
 		if (pageFlipped)
 			FlxG.sound.play(Paths.sound('flip_page'));
 
