@@ -118,17 +118,6 @@ class Caching extends MusicBeatState
 			cache();
 		});
 		#else
-		while (!loaded)
-		{
-			if (toBeDone != 0 && done != toBeDone)
-			{
-				var alpha = HelperFunctions.truncateFloat(done / toBeDone * 100, 2) / 100;
-				kadeLogo.alpha = alpha;
-				text.alpha = alpha;
-				text.text = LangUtil.getString('cmnCaching') + "... (" + done + "/" + toBeDone + ")";
-			}
-		}
-
 		cache();
 		#end
 
@@ -224,9 +213,9 @@ class Caching extends MusicBeatState
 
 			done++;
 		}
+		#end
 
 		trace("Finished caching!");
-		#end
 
 		loaded = true;
 
