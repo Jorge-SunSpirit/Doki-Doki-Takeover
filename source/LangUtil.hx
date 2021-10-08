@@ -7,7 +7,7 @@ class LangUtil
 {
 	public static var localeList:Array<String>;
 
-	public static function getFont(?type:String):String
+	public static function getFont(type:String = 'vcr'):String
 	{
 		var font:String = '';
 

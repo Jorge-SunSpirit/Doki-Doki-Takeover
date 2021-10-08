@@ -1,3 +1,4 @@
+#if FEATURE_FILESYSTEM
 package;
 
 import Controls.KeyboardScheme;
@@ -12,9 +13,7 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
-#if sys
 import sys.io.File;
-#end
 
 class LoadReplayState extends MusicBeatState
 {
@@ -32,9 +31,7 @@ class LoadReplayState extends MusicBeatState
 	override function create()
 	{
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-        #if sys
 		controlsStrings = sys.FileSystem.readDirectory(Sys.getCwd() + "/assets/replays/");
-        #end
 		trace(controlsStrings);
 
         controlsStrings.sort(Reflect.compare);
@@ -195,3 +192,4 @@ class LoadReplayState extends MusicBeatState
 		}
 	}
 }
+#end

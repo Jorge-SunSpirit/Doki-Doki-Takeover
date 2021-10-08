@@ -1,7 +1,7 @@
 package;
 
 import openfl.utils.Assets as OpenFlAssets;
-#if sys
+#if FEATURE_FILESYSTEM
 import sys.FileSystem;
 #end
 import flixel.FlxG;
@@ -68,7 +68,7 @@ class Caching extends MusicBeatState
 		kadeLogo.alpha = 0;
 
 		// TODO: Refactor this to use OpenFlAssets.
-		#if sys
+		#if FEATURE_FILESYSTEM
 		if (FlxG.save.data.cacheCharacters)
 		{
 			for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/shared/images/characters")))
@@ -139,7 +139,7 @@ class Caching extends MusicBeatState
 
 	function cache()
 	{
-		#if sys
+		#if FEATURE_FILESYSTEM
 		trace("LOADING: " + toBeDone + " OBJECTS.");
 
 		for (i in characters)

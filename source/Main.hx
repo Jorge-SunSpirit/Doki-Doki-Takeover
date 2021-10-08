@@ -81,6 +81,7 @@ class Main extends Sprite
 
 		var ourSource:String = "assets/videos/daWeirdVid/dontDelete.webm";
 
+		#if FEATURE_WEBM
 		#if web
 		var str1:String = "HTML CRAP";
 		var vHandler = new VideoHandler();
@@ -91,7 +92,7 @@ class Main extends Sprite
 		GlobalVideo.setVid(vHandler);
 		vHandler.source(ourSource);
 		#elseif desktop
-		var str1:String = "WEBM SHIT"; 
+		var str1:String = "WEBM SHIT";
 		var webmHandle = new WebmHandler();
 		webmHandle.source(ourSource);
 		webmHandle.makePlayer();
@@ -99,12 +100,11 @@ class Main extends Sprite
 		addChild(webmHandle.webm);
 		GlobalVideo.setWebm(webmHandle);
 		#end
+		#end
 
-		#if !mobile
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
 		toggleFPS(FlxG.save.data.fps);
-		#end
 	}
 
 	var game:FlxGame;

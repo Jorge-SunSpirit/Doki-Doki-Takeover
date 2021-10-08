@@ -1,7 +1,7 @@
 package;
 
 import openfl.Lib;
-#if windows
+#if FEATURE_LUAMODCHART
 import llua.Lua;
 #end
 import Controls.Control;
@@ -78,7 +78,7 @@ class PauseSubState extends MusicBeatSubstate
 		perSongOffset.scrollFactor.set();
 		perSongOffset.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		
-		#if cpp
+		#if FEATURE_FILESYSTEM
 			add(perSongOffset);
 		#end
 
@@ -115,7 +115,7 @@ class PauseSubState extends MusicBeatSubstate
 		else if (downP)
 			changeSelection(1);
 		
-		#if cpp
+		#if FEATURE_FILESYSTEM
 			else if (leftP)
 			{
 				oldOffset = PlayState.songOffset;
@@ -224,7 +224,7 @@ class PauseSubState extends MusicBeatSubstate
 						FlxG.save.data.downscroll = false;
 					}
 					PlayState.loadRep = false;
-					#if windows
+					#if FEATURE_LUAMODCHART
 					if (PlayState.luaModchart != null)
 					{
 						PlayState.luaModchart.die();

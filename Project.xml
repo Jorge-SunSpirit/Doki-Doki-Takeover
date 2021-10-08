@@ -97,14 +97,14 @@
 	<haxelib name="hscript" />
 	
 	<haxelib name="actuate" />
-	<haxelib name="extension-webm"/> <!-- Make sure to use https://github.com/KadeDev/extension-webm/ -->
+	<haxelib name="extension-webm" unless="hl"/> <!-- Make sure to use https://github.com/KadeDev/extension-webm/ -->
 
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
-	<haxelib name="faxe" if='switch'/>
-	<haxelib name="discord_rpc" if="windows"/>
-	<haxelib name="linc_luajit" if="windows"/>
+	<!-- <haxelib name="faxe" if='switch'/>  -->
+	<haxelib name="discord_rpc" if="windows" unless="hl"/>
+	<haxelib name="linc_luajit" if="windows" unless="hl"/>
 
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
 
@@ -164,5 +164,11 @@
 
   <!-- Defines whether the Discord client should be enabled. Only works on desktop. -->
   <!-- <haxedef name="FEATURE_DISCORD" if="desktop" unless="hl"/> -->
+  <!-- Defines whether the file system can be read/written directly. Does not work in browser. -->
+  <haxedef name="FEATURE_FILESYSTEM" if="desktop" />
+  <!-- Defines whether Lua Modcharts should be enabled. Only works on Windows. -->
+  <haxedef name="FEATURE_LUAMODCHART" if="windows" unless="hl" />
+  <!-- Defines whether WebM videos should be enabled. Currently only enabled on Windows. -->
+  <haxedef name="FEATURE_WEBM" if="windows" unless="hl" />
 	
 </project>
