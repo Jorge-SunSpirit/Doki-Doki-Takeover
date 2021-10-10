@@ -1445,7 +1445,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.save.data.middleScroll)
 		{
 			laneunderlayOpponent.alpha = 0;
-			laneunderlay.x = playerStrums.members[0].x - 25;
+			laneunderlay.screenCenter(X);
 		}
 
 		#if FEATURE_LUAMODCHART
