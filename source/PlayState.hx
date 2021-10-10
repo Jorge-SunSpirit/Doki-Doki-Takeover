@@ -547,6 +547,9 @@ class PlayState extends MusicBeatState
 			}
 			case 'dokiclubroom':
 				{
+					defaultCamZoom = 0.75;
+					curStage = 'dokiclubroom';
+
 					var posX = -700;
 					var posY = -520;
 					
@@ -566,12 +569,14 @@ class PlayState extends MusicBeatState
 					sparkleBG = new FlxSprite(0, 0).loadGraphic(Paths.image('clubroom/YuriSparkleBG', 'doki'));
 					sparkleBG.visible = false;
 					sparkleBG.antialiasing = true;
-					sparkleBG.scrollFactor.set(0.9, 0.9);
+					sparkleBG.scrollFactor.set(0.1, 0);
+					sparkleBG.setGraphicSize(Std.int(sparkleBG.width / defaultCamZoom));
+					sparkleBG.updateHitbox();
 
 					sparkleFG = new FlxSprite(0, 0).loadGraphic(Paths.image('clubroom/YuriSparkleFG', 'doki'));
 					sparkleFG.antialiasing = true;
-					sparkleFG.scrollFactor.set(0.8, 0.8);
-					sparkleFG.setGraphicSize(Std.int(sparkleFG.width * 1.2));
+					sparkleFG.scrollFactor.set(0.1, 0);
+					sparkleFG.setGraphicSize(Std.int((sparkleFG.width * 1.2) / defaultCamZoom));
 					sparkleFG.updateHitbox();
 
 					bakaOverlay = new FlxSprite(0, 0);
@@ -583,13 +588,9 @@ class PlayState extends MusicBeatState
 					bakaOverlay.scrollFactor.set();
 					bakaOverlay.visible = false;
 					bakaOverlay.cameras = [camHUD];
-					bakaOverlay.setGraphicSize(Std.int((bakaOverlay.width * 1.8) / FlxG.save.data.zoom));
+					bakaOverlay.setGraphicSize(Std.int(FlxG.width / FlxG.save.data.zoom));
 					bakaOverlay.updateHitbox();
-					bakaOverlay.screenCenter(X);
-					bakaOverlay.y = (FlxG.height - bakaOverlay.height) - ((FlxG.width - bakaOverlay.width) / 2);
-
-					if (!FlxG.save.data.middleScroll && FlxG.save.data.downscroll && FlxG.save.data.zoom == 1)
-						bakaOverlay.y = (FlxG.height - bakaOverlay.height) - 41.25;
+					bakaOverlay.screenCenter(XY);
 
 					if (FlxG.save.data.distractions)
 						add(bakaOverlay);
@@ -613,9 +614,6 @@ class PlayState extends MusicBeatState
 					deskfront.updateHitbox();
 					deskfront.antialiasing = true;
 					deskfront.scrollFactor.set(1.3, 0.9);
-
-					defaultCamZoom = 0.75;
-					curStage = 'dokiclubroom';
 
 					var closet:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('clubroom/DDLCfarbg','doki'));
 					closet.setGraphicSize(Std.int(closet.width * 1.6));
@@ -1046,13 +1044,14 @@ class PlayState extends MusicBeatState
 		if (FlxG.save.data.downscroll)
 			kadeEngineWatermark.y = FlxG.height * 0.9 + 45;
 
-		scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20);
+		scoreTxt = new FlxText(0, healthBarBG.y + 50, 0, "", 20);
 		scoreTxt.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
+		scoreTxt.visible = executeModchart;
 		add(scoreTxt);
 
-		replayTxt = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
+		replayTxt = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		replayTxt.scrollFactor.set();
 		replayTxt.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
@@ -1060,7 +1059,7 @@ class PlayState extends MusicBeatState
 		if (loadRep) add(replayTxt);
 
 		// Literally copy-paste of the above, fu
-		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
+		botPlayState = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
 		botPlayState.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
 		botPlayState.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
@@ -2081,6 +2080,9 @@ class PlayState extends MusicBeatState
 			iconP1.swapOldIcon();
 
 		scoreTxt.screenCenter(X);
+
+		if (!scoreTxt.visible && !executeModchart)
+			scoreTxt.visible = true;
 
 		if (FlxG.keys.pressed.O && FlxG.keys.pressed.P && curStage == 'schoolEvil')
 		{
@@ -4101,26 +4103,44 @@ class PlayState extends MusicBeatState
 						if (bakaOverlay.alpha < 1)
 							tmr.reset(0.2);
 					});
-				case 32:
+				case 32 | 176:
 					bakaOverlay.animation.play('party rock is', true);
+				case 112 | 264:
+					bakaOverlay.alpha = 1;
+					new FlxTimer().start(0.2, function(tmr:FlxTimer)
+					{
+						bakaOverlay.alpha -= 0.1;
+
+						if (bakaOverlay.alpha > 0)
+							tmr.reset(0.2);
+					});
+				case 144:
+					bakaOverlay.animation.play('normal', true);	
+					bakaOverlay.alpha = 0;
+					new FlxTimer().start(0.2, function(tmr:FlxTimer)
+					{
+						bakaOverlay.alpha += 0.1;
+
+						if (bakaOverlay.alpha < 1)
+							tmr.reset(0.2);
+					});
 			}
 		}
 
-		if (curSong.toLowerCase() == 'deep breaths' && midsongcutscene)
+		if (curSong.toLowerCase() == 'deep breaths' && midsongcutscene && FlxG.save.data.distractions)
 		{
 			switch (curBeat)
 			{
 				case 104:
 					sparkleBG.screenCenter(XY);
 					sparkleFG.screenCenter(XY);
+					sparkleBG.x += (FlxG.width / 4);
+					sparkleFG.x = sparkleBG.x;
 					sparkleBG.visible = true;
 					add(sparkleFG);
 					add(pinkOverlay);
 					sparkleBG.velocity.set(-4, 0);
-					sparkleFG.velocity.set(-8, 0);
-				case 200:
-					sparkleBG.velocity.set(4, 0);
-					sparkleFG.velocity.set(8, 0);
+					sparkleFG.velocity.set(-16, 0);
 			}
 		}
 
