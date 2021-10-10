@@ -947,15 +947,12 @@ class PlayState extends MusicBeatState
 		if (FlxG.save.data.downscroll)
 			strumLine.y = FlxG.height - 165;
 
-		laneunderlayOpponent = new FlxSprite(0, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
-		laneunderlayOpponent.x += 70;
+		laneunderlayOpponent = new FlxSprite(70, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
 		laneunderlayOpponent.alpha = 1 - FlxG.save.data.laneTransparency;
 		laneunderlayOpponent.scrollFactor.set();
 		laneunderlayOpponent.screenCenter(Y);
 
-		laneunderlay = new FlxSprite(0, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
-		laneunderlay.x += 70;
-		laneunderlay.x += ((FlxG.width / 2) * 1);
+		laneunderlay = new FlxSprite(70 + (FlxG.width / 2), 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
 		laneunderlay.alpha = 1 - FlxG.save.data.laneTransparency;
 		laneunderlay.scrollFactor.set();
 		laneunderlay.screenCenter(Y);
