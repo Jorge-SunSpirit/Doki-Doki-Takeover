@@ -1027,13 +1027,8 @@ class PlayState extends MusicBeatState
 			kadeEngineWatermark.y = FlxG.height * 0.9 + 45;
 
 		scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20);
-		if (!FlxG.save.data.accuracyDisplay)
-			scoreTxt.x = healthBarBG.x + healthBarBG.width / 2;
 		scoreTxt.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		if (offsetTesting)
-			scoreTxt.x += 300;
-		if(FlxG.save.data.botplay) scoreTxt.x = FlxG.width / 2 - 20;
 		scoreTxt.antialiasing = true;
 		add(scoreTxt);
 
@@ -1041,17 +1036,16 @@ class PlayState extends MusicBeatState
 		replayTxt.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		replayTxt.scrollFactor.set();
 		replayTxt.antialiasing = true;
-		if (loadRep)
-		{
-			add(replayTxt);
-		}
+		replayTxt.screenCenter(X);
+		if (loadRep) add(replayTxt);
+
 		// Literally copy-paste of the above, fu
 		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
 		botPlayState.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
 		botPlayState.antialiasing = true;
-		
-		if(FlxG.save.data.botplay && !loadRep) add(botPlayState);
+		botPlayState.screenCenter(X);
+		if (FlxG.save.data.botplay && !loadRep) add(botPlayState);
 
 		iconP1 = new HealthIcon(SONG.player1, true);
 		iconP1.y = healthBar.y - (iconP1.height / 2);
@@ -1812,40 +1806,6 @@ class PlayState extends MusicBeatState
 							babyArrow.animation.add('pressed', [7, 11], 12, false);
 							babyArrow.animation.add('confirm', [15, 19], 24, false);
 					}
-				
-				case 'normal':
-					babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
-					babyArrow.animation.addByPrefix('green', 'arrowUP');
-					babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
-					babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
-					babyArrow.animation.addByPrefix('red', 'arrowRIGHT');
-	
-					babyArrow.antialiasing = true;
-					babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
-	
-					switch (Math.abs(i))
-					{
-						case 0:
-							babyArrow.x += Note.swagWidth * 0;
-							babyArrow.animation.addByPrefix('static', 'arrowLEFT');
-							babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
-						case 1:
-							babyArrow.x += Note.swagWidth * 1;
-							babyArrow.animation.addByPrefix('static', 'arrowDOWN');
-							babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
-						case 2:
-							babyArrow.x += Note.swagWidth * 2;
-							babyArrow.animation.addByPrefix('static', 'arrowUP');
-							babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
-						case 3:
-							babyArrow.x += Note.swagWidth * 3;
-							babyArrow.animation.addByPrefix('static', 'arrowRIGHT');
-							babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
-						}
 
 				default:
 					babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
@@ -1903,8 +1863,15 @@ class PlayState extends MusicBeatState
 			}
 
 			babyArrow.animation.play('static');
-			babyArrow.x += 50;
+			switch (SONG.noteStyle)
+			{
+				case 'pixel':
+					babyArrow.x += 101;
+				default:
+					babyArrow.x += 98;
+			}
 			babyArrow.x += ((FlxG.width / 2) * player);
+
 			
 			cpuStrums.forEach(function(spr:FlxSprite)
 			{					
@@ -2079,11 +2046,13 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.NINE)
 			iconP1.swapOldIcon();
 
-		if (FlxG.keys.pressed.O && FlxG.keys.pressed.P)
-			{
-				oldspace.alpha = 1;
-				remove(space);
-			}
+		scoreTxt.screenCenter(X);
+
+		if (FlxG.keys.pressed.O && FlxG.keys.pressed.P && curStage == 'schoolEvil')
+		{
+			oldspace.alpha = 1;
+			remove(space);
+		}
 
 		switch (curStage)
 		{
