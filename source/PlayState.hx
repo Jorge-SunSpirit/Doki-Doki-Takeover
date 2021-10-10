@@ -575,7 +575,7 @@ class PlayState extends MusicBeatState
 					bakaOverlay.frames = Paths.getSparrowAtlas('clubroom/BakaBGDoodles', 'doki');
 					bakaOverlay.antialiasing = true;
 					bakaOverlay.animation.addByPrefix('normal', 'Normal Overlay', 24, true);
-					bakaOverlay.animation.addByPrefix('party rockers', 'Rock Overlay', 24, true);
+					bakaOverlay.animation.addByPrefix('party rock is', 'Rock Overlay', 24, true);
 					bakaOverlay.animation.play('normal');
 					bakaOverlay.scrollFactor.set();
 					bakaOverlay.visible = false;
@@ -4068,7 +4068,7 @@ class PlayState extends MusicBeatState
 							tmr.reset(0.2);
 					});
 				case 32:
-					bakaOverlay.animation.play('party rockers', true);
+					bakaOverlay.animation.play('party rock is', true);
 			}
 		}
 
