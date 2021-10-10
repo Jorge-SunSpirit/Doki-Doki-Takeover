@@ -169,6 +169,10 @@ class PlayState extends MusicBeatState
 	public var extra2:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 	public var extra3:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
+	var sparkleFG:FlxSprite;
+	var sparkleBG:FlxSprite;
+	var pinkOverlay:FlxSprite;
+	var bakaOverlay:FlxSprite;
 	var vignette:FlxSprite;
 	var staticshock:FlxSprite;
 	var halloweenBG:FlxSprite;
@@ -363,6 +367,12 @@ class PlayState extends MusicBeatState
 		blackScreen = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 		blackScreen.scrollFactor.set();
 
+		pinkOverlay = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
+			-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, 0xFFF281F2);
+		pinkOverlay.alpha = 0.2;
+		pinkOverlay.blend = SCREEN;
+		pinkOverlay.scrollFactor.set();
+
 		if (SONG.song.toLowerCase() == 'obsession')
 		{
 			whiteflash.cameras = [camHUD];
@@ -550,6 +560,39 @@ class PlayState extends MusicBeatState
 						vignette.screenCenter(XY);
 					}
 
+					sparkleBG = new FlxSprite(0, 0).loadGraphic(Paths.image('clubroom/YuriSparkleBG', 'doki'));
+					sparkleBG.visible = false;
+					sparkleBG.antialiasing = true;
+					sparkleBG.scrollFactor.set(0.9, 0.9);
+					sparkleBG.screenCenter(XY);
+
+					sparkleFG = new FlxSprite(0, 0).loadGraphic(Paths.image('clubroom/YuriSparkleFG', 'doki'));
+					sparkleFG.antialiasing = true;
+					sparkleFG.scrollFactor.set(0.8, 0.8);
+					sparkleFG.setGraphicSize(Std.int(sparkleFG.width * 1.2));
+					sparkleFG.updateHitbox();
+					sparkleFG.screenCenter(XY);
+
+					bakaOverlay = new FlxSprite(0, 0);
+					bakaOverlay.frames = Paths.getSparrowAtlas('clubroom/BakaBGDoodles', 'doki');
+					bakaOverlay.antialiasing = true;
+					bakaOverlay.animation.addByPrefix('normal', 'Normal Overlay', 24, true);
+					bakaOverlay.animation.addByPrefix('party rockers', 'Rock Overlay', 24, true);
+					bakaOverlay.animation.play('normal');
+					bakaOverlay.scrollFactor.set();
+					bakaOverlay.visible = false;
+					bakaOverlay.cameras = [camHUD];
+					bakaOverlay.setGraphicSize(Std.int((bakaOverlay.width * 1.8) / FlxG.save.data.zoom));
+					bakaOverlay.updateHitbox();
+					bakaOverlay.screenCenter(X);
+					bakaOverlay.y = (FlxG.height - bakaOverlay.height) - ((FlxG.width - bakaOverlay.width) / 2);
+
+					if (FlxG.save.data.downscroll && FlxG.save.data.zoom == 1)
+						bakaOverlay.y = (FlxG.height - bakaOverlay.height) - 41.25;
+
+					if (FlxG.save.data.distractions)
+						add(bakaOverlay);
+
 					staticshock = new FlxSprite(0, 0);
 					staticshock.frames = Paths.getSparrowAtlas('clubroom/staticshock','doki');
 					staticshock.antialiasing = true;
@@ -586,6 +629,8 @@ class PlayState extends MusicBeatState
 					clubroom.antialiasing = true;
 					clubroom.scrollFactor.set(1, 0.9);
 					add(clubroom);
+
+					add(sparkleBG);
 				}
 			
 			case 'dokifestival':
@@ -4037,6 +4082,36 @@ class PlayState extends MusicBeatState
 		{
 			//when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
+		}
+
+		if (curSong.toLowerCase() == 'baka' && midsongcutscene)
+		{
+			switch (curBeat)
+			{
+				case 16:
+					bakaOverlay.visible = true;
+					bakaOverlay.alpha = 0;
+					new FlxTimer().start(0.2, function(tmr:FlxTimer)
+					{
+						bakaOverlay.alpha += 0.1;
+	
+						if (bakaOverlay.alpha < 1)
+							tmr.reset(0.2);
+					});
+				case 32:
+					bakaOverlay.animation.play('party rockers', true);
+			}
+		}
+
+		if (curSong.toLowerCase() == 'deep breaths' && midsongcutscene)
+		{
+			switch (curBeat)
+			{
+				case 104:
+					sparkleBG.visible = true;
+					add(sparkleFG);
+					add(pinkOverlay);
+			}
 		}
 
 		if (curSong.toLowerCase() == 'obsession' && midsongcutscene)
