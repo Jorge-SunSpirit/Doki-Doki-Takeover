@@ -4089,7 +4089,7 @@ class PlayState extends MusicBeatState
 			gf.dance();
 		}
 
-		if (curSong.toLowerCase() == 'baka' && midsongcutscene)
+		if (curSong.toLowerCase() == 'baka' && midsongcutscene && FlxG.save.data.distractions)
 		{
 			switch (curBeat)
 			{
