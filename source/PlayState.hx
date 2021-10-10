@@ -585,7 +585,7 @@ class PlayState extends MusicBeatState
 					bakaOverlay.screenCenter(X);
 					bakaOverlay.y = (FlxG.height - bakaOverlay.height) - ((FlxG.width - bakaOverlay.width) / 2);
 
-					if (FlxG.save.data.downscroll && FlxG.save.data.zoom == 1)
+					if (!FlxG.save.data.middleScroll && FlxG.save.data.downscroll && FlxG.save.data.zoom == 1)
 						bakaOverlay.y = (FlxG.height - bakaOverlay.height) - 41.25;
 
 					if (FlxG.save.data.distractions)
@@ -1850,7 +1850,8 @@ class PlayState extends MusicBeatState
 			{
 				babyArrow.y -= 10;
 				babyArrow.alpha = 0;
-				FlxTween.tween(babyArrow, {y: babyArrow.y + 10, alpha: 1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
+				if (!FlxG.save.data.middleScroll || executeModchart || player == 1)
+					FlxTween.tween(babyArrow, {y: babyArrow.y + 10, alpha: 1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
 			}
 
 			babyArrow.ID = i;
@@ -1873,6 +1874,8 @@ class PlayState extends MusicBeatState
 			}
 			babyArrow.x += ((FlxG.width / 2) * player);
 
+			if (FlxG.save.data.middleScroll && !executeModchart)
+				babyArrow.x -= 320;
 			
 			cpuStrums.forEach(function(spr:FlxSprite)
 			{					
@@ -2775,8 +2778,9 @@ class PlayState extends MusicBeatState
 							daNote.angle = strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].angle;
 						daNote.alpha = strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].alpha;
 					}
-					
-					
+
+					if (!daNote.mustPress && FlxG.save.data.middleScroll && !executeModchart)
+						daNote.alpha = 0;
 
 					if (daNote.isSustainNote)
 						daNote.x += daNote.width / 2 + 17;

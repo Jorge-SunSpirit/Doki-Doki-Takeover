@@ -54,6 +54,7 @@ class OptionsMenu extends MusicBeatState
 			new FlashingLightsOption(LangUtil.getString('descFlashing')),
 			new AccuracyOption(LangUtil.getString('descAccuracy')),
 			new NPSDisplayOption(LangUtil.getString('descNPS')),
+			new MiddleScrollOption(LangUtil.getString('descMiddleScroll')),
 			new SongPositionOption(LangUtil.getString('descPosition')),
 			new WatermarkOption(LangUtil.getString('descWatermark'))
 		]),

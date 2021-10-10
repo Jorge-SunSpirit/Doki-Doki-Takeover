@@ -96,6 +96,9 @@ class KadeEngineData
 		if (FlxG.save.data.cacheSounds == null)
 			FlxG.save.data.cacheSounds = false;
 
+		if (FlxG.save.data.middleScroll == null)
+			FlxG.save.data.middleScroll = false;
+
 		Conductor.recalculateTimings();
 
 		Main.watermarks = FlxG.save.data.watermark;

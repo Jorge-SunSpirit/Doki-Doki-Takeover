@@ -36,6 +36,8 @@ class GameplayCustomizeState extends MusicBeatState
     var strumLine:FlxSprite;
     var strumLineNotes:FlxTypedGroup<FlxSprite>;
     var playerStrums:FlxTypedGroup<FlxSprite>;
+	var cpuStrums:FlxTypedGroup<FlxSprite>;
+
     private var camHUD:FlxCamera;
 	private var camGame:FlxCamera;
     
@@ -112,6 +114,7 @@ class GameplayCustomizeState extends MusicBeatState
 		add(strumLineNotes);
 
 		playerStrums = new FlxTypedGroup<FlxSprite>();
+		cpuStrums = new FlxTypedGroup<FlxSprite>();
 
         sick = new FlxSprite().loadGraphic(Paths.image('sick', 'shared'));
 		sick.setGraphicSize(Std.int(sick.width * 0.7));
@@ -296,9 +299,7 @@ class GameplayCustomizeState extends MusicBeatState
 		}
     }
 
-
     // ripped from play state cuz im lazy
-    
 	private function generateStaticArrows(player:Int):Void
         {
             for (i in 0...4)
@@ -340,13 +341,28 @@ class GameplayCustomizeState extends MusicBeatState
                 babyArrow.scrollFactor.set();
     
                 babyArrow.ID = i;
-    
-                if (player == 1)
-                    playerStrums.add(babyArrow);
+
+			    switch (player)
+			    {
+			    	case 0:
+			    		if (FlxG.save.data.middleScroll)
+			    			babyArrow.visible = false;
+					    cpuStrums.add(babyArrow);
+			    	case 1:
+			    		playerStrums.add(babyArrow);
+			    }
     
                 babyArrow.animation.play('static');
 			    babyArrow.x += 98;
                 babyArrow.x += ((FlxG.width / 2) * player);
+
+		    	if (FlxG.save.data.middleScroll)
+		    		babyArrow.x -= 320;
+
+			    cpuStrums.forEach(function(spr:FlxSprite)
+			    {
+			    	spr.centerOffsets(); // CPU arrows start out slightly off-center
+			    });
     
                 strumLineNotes.add(babyArrow);
             }

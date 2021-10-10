@@ -50,6 +50,8 @@ optSongCache::Song Caching
 optMusicCache::Music Caching
 optSoundCache::SFX Caching
 optCaching::Start Caching
+optMiddleScrollOn::Middle Scroll
+optMiddleScrollOff::Right Side Scroll
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -89,11 +91,13 @@ descMusicCache::Reduce load times by caching every music on boot. (MAJOR MEMORY 
 descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY USAGE)
 descCaching::Reduce load times after boot by loading the selected options above.
 descDisableCaching::(press D to disable next boot)
+descMiddleScroll::Put your lane in the center or on the right.
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.
 msgGFCount::"Girlfriend Countdown" unlocked!\nToggle it in the Options menu.
 msgNat::Natsuki's songs are now available in the Freeplay menu.
 msgYuri::Yuri's songs are now available in the Freeplay menu.
-msgExtra1::"Poems 'n Thorns" Unlocked!\nAccess the song in the Freeplay menu.
-msgExtra2::Epiphany\nunlocked.
+msgExtra1::"Poems 'n Thorns" unlocked!\nAccess the song in the Freeplay menu.
+msgExtra2::"Dual Demise" unlocked!\nAccess the song in the Freeplay menu.
+msgExtra3::Epiphany\nunlocked.
