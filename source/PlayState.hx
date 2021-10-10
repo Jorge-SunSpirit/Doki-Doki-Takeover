@@ -564,14 +564,12 @@ class PlayState extends MusicBeatState
 					sparkleBG.visible = false;
 					sparkleBG.antialiasing = true;
 					sparkleBG.scrollFactor.set(0.9, 0.9);
-					sparkleBG.screenCenter(XY);
 
 					sparkleFG = new FlxSprite(0, 0).loadGraphic(Paths.image('clubroom/YuriSparkleFG', 'doki'));
 					sparkleFG.antialiasing = true;
 					sparkleFG.scrollFactor.set(0.8, 0.8);
 					sparkleFG.setGraphicSize(Std.int(sparkleFG.width * 1.2));
 					sparkleFG.updateHitbox();
-					sparkleFG.screenCenter(XY);
 
 					bakaOverlay = new FlxSprite(0, 0);
 					bakaOverlay.frames = Paths.getSparrowAtlas('clubroom/BakaBGDoodles', 'doki');
@@ -4108,9 +4106,16 @@ class PlayState extends MusicBeatState
 			switch (curBeat)
 			{
 				case 104:
+					sparkleBG.screenCenter(XY);
+					sparkleFG.screenCenter(XY);
 					sparkleBG.visible = true;
 					add(sparkleFG);
 					add(pinkOverlay);
+					sparkleBG.velocity.set(-4, 0);
+					sparkleFG.velocity.set(-8, 0);
+				case 200:
+					sparkleBG.velocity.set(4, 0);
+					sparkleFG.velocity.set(8, 0);
 			}
 		}
 
