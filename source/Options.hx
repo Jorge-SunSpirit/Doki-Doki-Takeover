@@ -48,6 +48,7 @@ class Option
 	private var description:String = "";
 	private var display:String;
 	private var acceptValues:Bool = false;
+
 	public final function getDisplay():String
 	{
 		return display;
@@ -63,10 +64,10 @@ class Option
 		return description;
 	}
 
-	
 	// Returns whether the label is to be updated.
 	public function press():Bool { return throw "stub!"; }
 	private function updateDisplay():String { return throw "stub!"; }
+	public function getValue():String { return throw "stub!"; }
 	public function left():Bool { return throw "stub!"; }
 	public function right():Bool { return throw "stub!"; }
 }
@@ -255,6 +256,24 @@ class Judgement extends Option
 		return LangUtil.getString('optJudgement');
 	}
 
+	override function getValue():String
+	{
+		return LangUtil.getString('descCurJudgement')
+			+ ': '
+			+ Conductor.safeFrames
+			+ " - SIK: "
+			+ HelperFunctions.truncateFloat(45 * Conductor.timeScale, 0)
+			+ "ms GD: "
+			+ HelperFunctions.truncateFloat(90 * Conductor.timeScale, 0)
+			+ "ms BD: "
+			+ HelperFunctions.truncateFloat(135 * Conductor.timeScale, 0)
+			+ "ms NO: "
+			+ HelperFunctions.truncateFloat(155 * Conductor.timeScale, 0)
+			+ "ms TOTAL: "
+			+ HelperFunctions.truncateFloat(Conductor.safeZoneOffset, 0)
+			+ "ms";
+	}
+
 	override function left():Bool {
 
 		if (Conductor.safeFrames == 1)
@@ -264,13 +283,6 @@ class Judgement extends Option
 		FlxG.save.data.frames = Conductor.safeFrames;
 
 		Conductor.recalculateTimings();
-
-		OptionsMenu.versionShit.text = LangUtil.getString('descCurJudgement') + ': ' + Conductor.safeFrames + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description + 
-		" - SIK: " + HelperFunctions.truncateFloat(45 * Conductor.timeScale, 0) +
-		"ms GD: " + HelperFunctions.truncateFloat(90 * Conductor.timeScale, 0) +
-		"ms BD: " + HelperFunctions.truncateFloat(135 * Conductor.timeScale, 0) + 
-		"ms NO: " + HelperFunctions.truncateFloat(155 * Conductor.timeScale, 0) +
-		"ms TOTAL: " + HelperFunctions.truncateFloat(Conductor.safeZoneOffset,0) + "ms";
 		return true;
 	}
 
@@ -283,13 +295,6 @@ class Judgement extends Option
 		FlxG.save.data.frames = Conductor.safeFrames;
 
 		Conductor.recalculateTimings();
-
-		OptionsMenu.versionShit.text = LangUtil.getString('descCurJudgement') + ': ' + Conductor.safeFrames + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description + 
-		" - SIK: " + HelperFunctions.truncateFloat(44 * Conductor.timeScale, 0) +
-		"ms GD: " + HelperFunctions.truncateFloat(45 * Conductor.timeScale, 0) +
-		"ms BD: " + HelperFunctions.truncateFloat(90 * Conductor.timeScale, 0) + 
-		"ms NO: " + HelperFunctions.truncateFloat(135 * Conductor.timeScale, 0) +
-		"ms TOTAL: " + HelperFunctions.truncateFloat(Conductor.safeZoneOffset,0) + "ms";
 		return true;
 	}
 }
@@ -334,6 +339,14 @@ class FPSCapOption extends Option
 	{
 		return LangUtil.getString('optFPSCap');
 	}
+
+	override function getValue():String
+	{
+		return LangUtil.getString('descCurFPSCap')
+			+ ': '
+			+ FlxG.save.data.fpsCap
+			+ (FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? 'Hz (' + LangUtil.getString('descRefreshRate') + ')' : "");
+	}
 	
 	override function right():Bool {
 		if (FlxG.save.data.fpsCap >= 290)
@@ -344,11 +357,6 @@ class FPSCapOption extends Option
 		else
 			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap + 10;
 		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
-
-		OptionsMenu.versionShit.text = LangUtil.getString('descCurFPSCap') + ': ' + FlxG.save.data.fpsCap + 
-		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? 'Hz (' + LangUtil.getString('descRefreshRate') + ')' : "") 
-		+ ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
-
 		return true;
 	}
 
@@ -360,10 +368,6 @@ class FPSCapOption extends Option
 		else
 			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap - 10;
 		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
-
-		OptionsMenu.versionShit.text = LangUtil.getString('descCurFPSCap') + ': ' + FlxG.save.data.fpsCap + 
-		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? 'Hz (' + LangUtil.getString('descRefreshRate') + ')' : "") 
-		+ ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
 
 		return true;
 	}
@@ -389,6 +393,13 @@ class ScrollSpeedOption extends Option
 		return LangUtil.getString('optScroll');
 	}
 
+	override function getValue():String
+	{
+		return LangUtil.getString('descCurScroll')
+			+ ': '
+			+ HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed, 1);
+	}
+
 	override function right():Bool {
 		FlxG.save.data.scrollSpeed += 0.1;
 
@@ -397,8 +408,6 @@ class ScrollSpeedOption extends Option
 
 		if (FlxG.save.data.scrollSpeed > 10)
 			FlxG.save.data.scrollSpeed = 10;
-
-		OptionsMenu.versionShit.text = LangUtil.getString('descCurScroll') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
 		return true;
 	}
 
@@ -410,9 +419,6 @@ class ScrollSpeedOption extends Option
 
 		if (FlxG.save.data.scrollSpeed > 10)
 			FlxG.save.data.scrollSpeed = 10;
-
-
-		OptionsMenu.versionShit.text = LangUtil.getString('descCurScroll') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + description;
 		return true;
 	}
 }
@@ -717,5 +723,57 @@ class MiddleScrollOption extends Option
 	private override function updateDisplay():String
 	{
 		return (FlxG.save.data.middleScroll ? LangUtil.getString('optMiddleScrollOn') : LangUtil.getString('optMiddleScrollOff'));
+	}
+}
+
+class LaneUnderlayOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+		acceptValues = true;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.laneUnderlay = !FlxG.save.data.laneUnderlay;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return (FlxG.save.data.laneUnderlay ? LangUtil.getString('optLaneUnderwayOn') : LangUtil.getString('optLaneUnderwayOff'));
+	}
+
+	override function right():Bool
+	{
+		FlxG.save.data.laneTransparency += 0.1;
+
+		if (FlxG.save.data.laneTransparency < 0)
+			FlxG.save.data.laneTransparency = 0;
+
+		if (FlxG.save.data.laneTransparency > 1)
+			FlxG.save.data.laneTransparency = 1;
+		return true;
+	}
+
+	override function getValue():String
+	{
+		return LangUtil.getString('descLaneUnderwayControl') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.laneTransparency, 1);
+	}
+
+	override function left():Bool
+	{
+		FlxG.save.data.laneTransparency -= 0.1;
+
+		if (FlxG.save.data.laneTransparency < 0)
+			FlxG.save.data.laneTransparency = 0;
+
+		if (FlxG.save.data.laneTransparency > 1)
+			FlxG.save.data.laneTransparency = 1;
+
+		return true;
 	}
 }

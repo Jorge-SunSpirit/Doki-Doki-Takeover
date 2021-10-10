@@ -99,6 +99,12 @@ class KadeEngineData
 		if (FlxG.save.data.middleScroll == null)
 			FlxG.save.data.middleScroll = false;
 
+		if (FlxG.save.data.laneUnderlay == null)
+			FlxG.save.data.laneUnderlay = false;
+
+		if (FlxG.save.data.laneTransparency == null)
+			FlxG.save.data.laneTransparency = 0.5;
+
 		Conductor.recalculateTimings();
 
 		Main.watermarks = FlxG.save.data.watermark;

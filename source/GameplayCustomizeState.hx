@@ -33,6 +33,9 @@ class GameplayCustomizeState extends MusicBeatState
     var dad:Character;
     var gf:Character;
 
+	public var laneunderlay:FlxSprite;
+	public var laneunderlayOpponent:FlxSprite;
+
     var strumLine:FlxSprite;
     var strumLineNotes:FlxTypedGroup<FlxSprite>;
     var playerStrums:FlxTypedGroup<FlxSprite>;
@@ -110,6 +113,27 @@ class GameplayCustomizeState extends MusicBeatState
 		if (FlxG.save.data.downscroll)
 			strumLine.y = FlxG.height - 165;
 
+		laneunderlayOpponent = new FlxSprite(0, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
+		laneunderlayOpponent.x += 70;
+		laneunderlayOpponent.alpha = 1 - FlxG.save.data.laneTransparency;
+		laneunderlayOpponent.scrollFactor.set();
+		laneunderlayOpponent.screenCenter(Y);
+		laneunderlayOpponent.cameras = [camHUD];
+
+		laneunderlay = new FlxSprite(0, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
+		laneunderlay.x += 70;
+		laneunderlay.x += ((FlxG.width / 2) * 1);
+		laneunderlay.alpha = 1 - FlxG.save.data.laneTransparency;
+		laneunderlay.scrollFactor.set();
+		laneunderlay.screenCenter(Y);
+		laneunderlay.cameras = [camHUD];
+
+		if (FlxG.save.data.laneUnderlay)
+		{
+			add(laneunderlayOpponent);
+			add(laneunderlay);
+		}
+
 		strumLineNotes = new FlxTypedGroup<FlxSprite>();
 		add(strumLineNotes);
 
@@ -138,6 +162,12 @@ class GameplayCustomizeState extends MusicBeatState
         
 		generateStaticArrows(0);
 		generateStaticArrows(1);
+
+		if (FlxG.save.data.middleScroll)
+		{
+			laneunderlayOpponent.alpha = 0;
+			laneunderlay.x = playerStrums.members[0].x - 25;
+		}
 
         text = new FlxText(5, FlxG.height + 40, 0, LangUtil.getString('descCustomizeState'), 12);
         text.antialiasing = true;

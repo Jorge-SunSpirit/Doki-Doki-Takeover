@@ -54,6 +54,7 @@ class OptionsMenu extends MusicBeatState
 			new FlashingLightsOption(LangUtil.getString('descFlashing')),
 			new AccuracyOption(LangUtil.getString('descAccuracy')),
 			new NPSDisplayOption(LangUtil.getString('descNPS')),
+			new LaneUnderlayOption(LangUtil.getString('descLaneUnderway')),
 			new MiddleScrollOption(LangUtil.getString('descMiddleScroll')),
 			new SongPositionOption(LangUtil.getString('descPosition')),
 			new WatermarkOption(LangUtil.getString('descWatermark'))
@@ -221,6 +222,11 @@ class OptionsMenu extends MusicBeatState
 					
 					versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription;
 				}
+				if (currentSelectedCat.getOptions()[curSelected].getAccept())
+					versionShit.text = currentSelectedCat.getOptions()[curSelected].getValue() + ' - ' + LangUtil.getString('cmnDesc') + ' - '  + currentDescription;
+				else
+					versionShit.text = LangUtil.getString('cmnOffset') + ': ' +  HelperFunctions.truncateFloat(FlxG.save.data.offset, 2)
+						+  ' - ' + LangUtil.getString('cmnDesc') + ' - '  + currentDescription;
 			}
 			else
 			{
@@ -239,7 +245,6 @@ class OptionsMenu extends MusicBeatState
 				versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription;
 			}
 		
-
 			if (controls.RESET)
 					FlxG.save.data.offset = 0;
 
@@ -310,13 +315,24 @@ class OptionsMenu extends MusicBeatState
 			currentDescription = currentSelectedCat.getOptions()[curSelected].getDescription();
 		else
 			currentDescription = LangUtil.getString('cmnCategory');
-
-		versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset,2) + ' - ' + LangUtil.getString('cmnDesc') + ' - ' + currentDescription;
+		if (isCat)
+		{
+			if (currentSelectedCat.getOptions()[curSelected].getAccept())
+				versionShit.text = currentSelectedCat.getOptions()[curSelected].getValue() + ' - ' + LangUtil.getString('cmnDesc') + ' - '  + currentDescription;
+			else
+				versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset, 2) + ' - '
+					+ LangUtil.getString('cmnDesc') + ' - '  
+					+ currentDescription;
+		}
+		else
+			versionShit.text = LangUtil.getString('cmnOffset') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.offset, 2) + ' - '
+				+ LangUtil.getString('cmnDesc') + ' - '  
+				+ currentDescription;
 	}
 
 	override function beatHit()
-		{
-			super.beatHit();
-			logoBl.animation.play('bump', true);
-		}
+	{
+		super.beatHit();
+		logoBl.animation.play('bump', true);
+	}
 }

@@ -52,6 +52,8 @@ optSoundCache::SFX Caching
 optCaching::Start Caching
 optMiddleScrollOn::Middle Scroll
 optMiddleScrollOff::Right Side Scroll
+optLaneUnderwayOn::Lane Underlay
+optLaneUnderwayOff::No Lane Underlay
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -92,6 +94,8 @@ descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY 
 descCaching::Reduce load times after boot by loading the selected options above.
 descDisableCaching::(press D to disable next boot)
 descMiddleScroll::Put your lane in the center or on the right.
+descLaneUnderway::Toggles lane underlay.
+descLaneUnderwayControl::Current Lane Underlay transparency
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.
