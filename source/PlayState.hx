@@ -4144,12 +4144,12 @@ class PlayState extends MusicBeatState
 				case 200 | 288:
 					sparkleBG.alpha = 1;
 					sparkleFG.alpha = 1;
-					pinkOverlay.alpha = 1;
+					pinkOverlay.alpha = 0.2;
 					new FlxTimer().start(0.3, function(tmr:FlxTimer)
 					{
 						sparkleBG.alpha -= 0.1;
 						sparkleFG.alpha -= 0.1;
-						pinkOverlay.alpha -= 0.1;
+						pinkOverlay.alpha -= 0.02;
 
 						if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
 							tmr.reset(0.3);
@@ -4157,7 +4157,7 @@ class PlayState extends MusicBeatState
 				case 232:
 					sparkleBG.alpha = 1;
 					sparkleFG.alpha = 1;
-					pinkOverlay.alpha = 1;
+					pinkOverlay.alpha = 0.2;
 			}
 		}
 
