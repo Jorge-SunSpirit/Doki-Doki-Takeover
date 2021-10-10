@@ -4141,23 +4141,36 @@ class PlayState extends MusicBeatState
 					sparkleBG.visible = true;
 					add(sparkleFG);
 					add(pinkOverlay);
-				case 200 | 288:
+				case 200:
 					sparkleBG.alpha = 1;
 					sparkleFG.alpha = 1;
 					pinkOverlay.alpha = 0.2;
-					new FlxTimer().start(0.3, function(tmr:FlxTimer)
+					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
 						sparkleBG.alpha -= 0.1;
 						sparkleFG.alpha -= 0.1;
 						pinkOverlay.alpha -= 0.02;
 
 						if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
-							tmr.reset(0.3);
+							tmr.reset(0.2);
 					});
 				case 232:
 					sparkleBG.alpha = 1;
 					sparkleFG.alpha = 1;
 					pinkOverlay.alpha = 0.2;
+				case 288:
+					sparkleBG.alpha = 1;
+					sparkleFG.alpha = 1;
+					pinkOverlay.alpha = 0.2;
+					new FlxTimer().start(0.35, function(tmr:FlxTimer)
+					{
+						sparkleBG.alpha -= 0.1;
+						sparkleFG.alpha -= 0.1;
+						pinkOverlay.alpha -= 0.02;
+
+						if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
+							tmr.reset(0.35);
+					});
 			}
 		}
 
