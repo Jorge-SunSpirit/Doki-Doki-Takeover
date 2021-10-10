@@ -979,7 +979,7 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.save.data.songPosition) // I dont wanna talk about this code :(
 			{
-				songPosBG = new FlxSprite(0, 10).loadGraphic(Paths.image('healthBar'));
+				songPosBG = new FlxSprite(0, 10).makeGraphic(600, 20, FlxColor.BLACK);
 				if (FlxG.save.data.downscroll)
 					songPosBG.y = FlxG.height * 0.9 + 45; 
 				songPosBG.screenCenter(X);
@@ -999,11 +999,12 @@ class PlayState extends MusicBeatState
 					songName.y -= 3;
 				songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 				songName.scrollFactor.set();
+				songName.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
 				songName.cameras = [camHUD];
 				add(songName);
 			}
 
-		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
+		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).makeGraphic(600, 20, FlxColor.BLACK);
 		if (FlxG.save.data.downscroll)
 			healthBarBG.y = 50;
 		healthBarBG.screenCenter(X);
@@ -1029,13 +1030,13 @@ class PlayState extends MusicBeatState
 		scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20);
 		scoreTxt.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		scoreTxt.antialiasing = true;
+		scoreTxt.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
 		add(scoreTxt);
 
 		replayTxt = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		replayTxt.scrollFactor.set();
-		replayTxt.antialiasing = true;
+		replayTxt.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
 		replayTxt.screenCenter(X);
 		if (loadRep) add(replayTxt);
 
@@ -1043,7 +1044,7 @@ class PlayState extends MusicBeatState
 		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
 		botPlayState.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
-		botPlayState.antialiasing = true;
+		botPlayState.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
 		botPlayState.screenCenter(X);
 		if (FlxG.save.data.botplay && !loadRep) add(botPlayState);
 
@@ -3191,6 +3192,7 @@ class PlayState extends MusicBeatState
 			currentTimingShown.borderColor = FlxColor.BLACK;
 			currentTimingShown.text = msTiming + "ms";
 			currentTimingShown.size = 20;
+			currentTimingShown.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
 
 			if (msTiming >= 0.03 && offsetTesting)
 			{
