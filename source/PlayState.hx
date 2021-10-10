@@ -10,7 +10,6 @@ import flixel.graphics.FlxGraphic;
 import openfl.utils.AssetManifest;
 import openfl.utils.AssetLibrary;
 import flixel.system.FlxAssets;
-import flixel.addons.display.FlxBackdrop;
 import lime.app.Application;
 import lime.media.AudioContext;
 import lime.media.AudioManager;
@@ -26,6 +25,7 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.FlxSubState;
+import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.effects.FlxTrail;
 import flixel.addons.effects.FlxTrailArea;
@@ -172,8 +172,8 @@ class PlayState extends MusicBeatState
 	public var extra2:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 	public var extra3:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
-	var sparkleFG:FlxSprite;
-	var sparkleBG:FlxSprite;
+	var sparkleFG:FlxBackdrop;
+	var sparkleBG:FlxBackdrop;
 	var pinkOverlay:FlxSprite;
 	var bakaOverlay:FlxSprite;
 	var vignette:FlxSprite;
@@ -519,6 +519,11 @@ class PlayState extends MusicBeatState
 					var posX = 50;
 					var posY = 200;
 
+					var spaceBG:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
+						-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, 0xFF220707);
+					add(spaceBG);
+					spaceBG.scrollFactor.set();
+
 					//finalebgmybeloved
 					oldspace = new FlxSprite(posX, posY).loadGraphic(Paths.image('finalebgmybeloved'));
 					oldspace.antialiasing = false;
@@ -527,11 +532,11 @@ class PlayState extends MusicBeatState
 					oldspace.alpha = 0;
 					add(oldspace);
 
-					add(space = new FlxBackdrop(Paths.image('FinaleBG_1','monika')));
+					space = new FlxBackdrop(Paths.image('FinaleBG_1','monika'), 0.1, 0.1);
 					space.velocity.set(-10, 0);
 					space.antialiasing = false;
-					space.scrollFactor.set(0.1, 0.1);
 					space.scale.set(1.65, 1.65);
+					add(space);
 
 					var bg:FlxSprite = new FlxSprite(70, posY).loadGraphic(Paths.image('FinaleBG_2','monika'));
 					bg.antialiasing = false;
@@ -566,18 +571,19 @@ class PlayState extends MusicBeatState
 						vignette.screenCenter(XY);
 					}
 
-					sparkleBG = new FlxSprite(0, 0).loadGraphic(Paths.image('clubroom/YuriSparkleBG', 'doki'));
+					// antialiasing doesn't work on backdrops *sniffles*
+					sparkleBG = new FlxBackdrop(Paths.image('clubroom/YuriSparkleBG', 'doki'), 0.1, 0, true, false);
+					sparkleBG.velocity.set(-16, 0);
 					sparkleBG.visible = false;
-					sparkleBG.antialiasing = true;
-					sparkleBG.scrollFactor.set(0.1, 0);
 					sparkleBG.setGraphicSize(Std.int(sparkleBG.width / defaultCamZoom));
 					sparkleBG.updateHitbox();
+					sparkleBG.screenCenter(XY);
 
-					sparkleFG = new FlxSprite(0, 0).loadGraphic(Paths.image('clubroom/YuriSparkleFG', 'doki'));
-					sparkleFG.antialiasing = true;
-					sparkleFG.scrollFactor.set(0.1, 0);
+					sparkleFG = new FlxBackdrop(Paths.image('clubroom/YuriSparkleFG', 'doki'), 0.1, 0, true, false);
+					sparkleFG.velocity.set(-48, 0);
 					sparkleFG.setGraphicSize(Std.int((sparkleFG.width * 1.2) / defaultCamZoom));
 					sparkleFG.updateHitbox();
+					sparkleFG.screenCenter(XY);
 
 					bakaOverlay = new FlxSprite(0, 0);
 					bakaOverlay.frames = Paths.getSparrowAtlas('clubroom/BakaBGDoodles', 'doki');
@@ -4132,15 +4138,26 @@ class PlayState extends MusicBeatState
 			switch (curBeat)
 			{
 				case 104:
-					sparkleBG.screenCenter(XY);
-					sparkleFG.screenCenter(XY);
-					sparkleBG.x += (FlxG.width / 4);
-					sparkleFG.x = sparkleBG.x;
 					sparkleBG.visible = true;
 					add(sparkleFG);
 					add(pinkOverlay);
-					sparkleBG.velocity.set(-4, 0);
-					sparkleFG.velocity.set(-16, 0);
+				case 200 | 288:
+					sparkleBG.alpha = 1;
+					sparkleFG.alpha = 1;
+					pinkOverlay.alpha = 1;
+					new FlxTimer().start(0.3, function(tmr:FlxTimer)
+					{
+						sparkleBG.alpha -= 0.1;
+						sparkleFG.alpha -= 0.1;
+						pinkOverlay.alpha -= 0.1;
+
+						if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
+							tmr.reset(0.3);
+					});
+				case 232:
+					sparkleBG.alpha = 1;
+					sparkleFG.alpha = 1;
+					pinkOverlay.alpha = 1;
 			}
 		}
 
