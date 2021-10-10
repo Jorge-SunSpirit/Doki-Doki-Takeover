@@ -335,6 +335,7 @@ class GameplayCustomizeState extends MusicBeatState
                         babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
                         babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
                 }
+
                 babyArrow.updateHitbox();
                 babyArrow.scrollFactor.set();
     
@@ -344,7 +345,7 @@ class GameplayCustomizeState extends MusicBeatState
                     playerStrums.add(babyArrow);
     
                 babyArrow.animation.play('static');
-                babyArrow.x += 50;
+			    babyArrow.x += 98;
                 babyArrow.x += ((FlxG.width / 2) * player);
     
                 strumLineNotes.add(babyArrow);
