@@ -4114,7 +4114,7 @@ class PlayState extends MusicBeatState
 					defaultCamZoom = 0.9;
 				case 48:
 					defaultCamZoom = 0.75;
-					camGame.shake(0.002, 4.37); // ends at 56, need to do this a better way so it adjusts with bpm
+					camGame.shake(0.002, (Conductor.stepCrochet / 32));
 				case 112 | 264:
 					bakaOverlay.alpha = 1;
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
