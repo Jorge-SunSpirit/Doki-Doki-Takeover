@@ -4097,6 +4097,7 @@ class PlayState extends MusicBeatState
 
 		if (curSong.toLowerCase() == 'baka' && midsongcutscene && FlxG.save.data.distractions)
 		{
+			//camGame.shake(0.05, 2);
 			switch (curBeat)
 			{
 				case 16:
