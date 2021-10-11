@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Howdy, It's me Jorge! I keep calling this dork Senpai for some reason and I have no regret cause it makes my friends suffer :) -->
+<TextureAtlas imagePath="mc_dialogue.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="mc_camera" x="10" y="10" width="500" height="500"/>
+	<SubTexture name="mc_happy" x="520" y="10" width="500" height="500"/>
+	<SubTexture name="mc_neutral" x="1030" y="10" width="500" height="500"/>
+	<SubTexture name="mc_sigh" x="10" y="520" width="500" height="500"/>
+</TextureAtlas>

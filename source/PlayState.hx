@@ -317,15 +317,17 @@ class PlayState extends MusicBeatState
 				switch (storyWeek)
 					{
 						case 0:
-							detailsText = "Story Mode: Week Monika -";
+							detailsText = "Story Mode: Monika Week -";
 						case 1:
-							detailsText = "Story Mode: Week Natsuki -";
+							detailsText = "Story Mode: Sayori Week -";
 						case 2:
-							detailsText = "Story Mode: Week Sayori -";
+							detailsText = "Story Mode: Natsuki Week -";
 						case 3:
-							detailsText = "Story Mode: Week Yuri -";
+							detailsText = "Story Mode: Yuri Week -";
 						case 4:
-							detailsText = "Story Mode: Week ??? -";
+							detailsText = "Story Mode: ??? -";
+						case 5:
+							detailsText = "Story Mode: ??? -";
 						default:
 							detailsText = "Story Mode: Week Monika -";
 					}
@@ -821,6 +823,9 @@ class PlayState extends MusicBeatState
 			case 'yuri-crazy':
 				camPos.x += 400;
 				dad.y += 80;
+			case 'monika-real':
+				camPos.x += 400;
+				dad.y += 60;
 			}
 
 

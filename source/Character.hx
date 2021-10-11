@@ -452,6 +452,21 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
+
+			case 'monika-real':
+				//I love my wife - SirDuSterBuster
+				tex = Paths.getSparrowAtlas('characters/Doki_MonikaNonPixel_Assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'Monika Returns Idle', 24, false);
+				animation.addByPrefix('singUP', 'Monika Returns Up', 24, false);
+				animation.addByPrefix('singRIGHT', 'Monika Returns Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Monika Returns Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Monika Returns Left', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				setGraphicSize(Std.int(width * .9));
+				playAnim('idle');
 		}
 
 		dance();

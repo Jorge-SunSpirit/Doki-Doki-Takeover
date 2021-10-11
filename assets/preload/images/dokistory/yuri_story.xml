@@ -2,6 +2,30 @@
 <TextureAtlas imagePath="yuri_story.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Yuri_Locked" x="10" y="10" width="269" height="154"/>
-	<SubTexture name="Yuri_idle" x="10" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_Locked" x="10" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_idle0000" x="289" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_idle0001" x="289" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_idle0002" x="289" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_idle0003" x="568" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_idle0004" x="10" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_idle0005" x="10" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_idle0006" x="289" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_idle0007" x="289" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_idle0008" x="289" y="10" width="269" height="154"/>
+	<SubTexture name="yuri_selected0000" x="289" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_selected0001" x="289" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_selected0002" x="568" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_selected0003" x="568" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_selected0004" x="10" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0005" x="10" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0006" x="289" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0007" x="289" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0008" x="568" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0009" x="568" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0010" x="568" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0011" x="568" y="338" width="269" height="154"/>
+	<SubTexture name="yuri_selected0012" x="289" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_selected0013" x="289" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_selected0014" x="289" y="174" width="269" height="154"/>
+	<SubTexture name="yuri_selected0015" x="289" y="174" width="269" height="154"/>
 </TextureAtlas>

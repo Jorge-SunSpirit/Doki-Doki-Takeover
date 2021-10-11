@@ -39,7 +39,7 @@ class HealthIcon extends FlxSprite
 	{
 		switch (char)
 		{
-			case 'bf-pixel' | 'bf-old' | 'monika-angry' | 'yuri-crazy' | 'dual-demise' | 'monika-return':
+			case 'bf-pixel' | 'bf-old' | 'monika-angry' | 'yuri-crazy' | 'dual-demise' | 'monika-real':
 				// lol
 			case 'bf-pixelangry':
 				char = 'bf-pixel';

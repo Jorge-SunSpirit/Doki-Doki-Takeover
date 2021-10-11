@@ -171,8 +171,8 @@ class DokiStoryState extends MusicBeatState
 		story_moni.frames = Paths.getSparrowAtlas('dokistory/moni_story');
 		story_moni.antialiasing = true;
 		story_moni.scale.set(1, 1);
-		story_moni.animation.addByPrefix('idle', 'Moni_idle', 24);
-		story_moni.animation.addByPrefix('selected', 'Moni_selected', 24);
+		story_moni.animation.addByPrefix('idle', 'moni_idle', 20);
+		story_moni.animation.addByPrefix('selected', 'moni_selected', 24, false);
 		story_moni.animation.play('idle');
 		story_moni.updateHitbox();
 		add(story_moni);
@@ -181,9 +181,9 @@ class DokiStoryState extends MusicBeatState
 		story_sayo.frames = Paths.getSparrowAtlas('dokistory/sayo_story');
 		story_sayo.antialiasing = true;
 		story_sayo.scale.set(1, 1);
-		story_sayo.animation.addByPrefix('idle', 'Sayo_idle', 24);
-		story_sayo.animation.addByPrefix('selected', 'Sayo_selected', 24);
-		story_sayo.animation.addByPrefix('locked', 'Sayo_Locked', 24);
+		story_sayo.animation.addByPrefix('idle', 'sayo_idle', 20);
+		story_sayo.animation.addByPrefix('selected', 'sayo_selected', 24, false);
+		story_sayo.animation.addByPrefix('locked', 'sayo_Locked', 24, false);
 		story_sayo.animation.play('locked');
 		story_sayo.updateHitbox();
 		add(story_sayo);
@@ -192,9 +192,9 @@ class DokiStoryState extends MusicBeatState
 		story_nat.frames = Paths.getSparrowAtlas('dokistory/nat_story');
 		story_nat.antialiasing = true;
 		story_nat.scale.set(1, 1);
-		story_nat.animation.addByPrefix('idle', 'Nat_idle', 24);
-		story_nat.animation.addByPrefix('selected', 'Nat_selected', 24);
-		story_nat.animation.addByPrefix('locked', 'Nat_Locked', 24);
+		story_nat.animation.addByPrefix('idle', 'natsuki_idle', 20);
+		story_nat.animation.addByPrefix('selected', 'natsuki_selected', 24, false);
+		story_nat.animation.addByPrefix('locked', 'natsuki_Locked', 24, false);
 		story_nat.animation.play('locked');
 		story_nat.updateHitbox();
 		add(story_nat);
@@ -204,9 +204,9 @@ class DokiStoryState extends MusicBeatState
 		story_yuri.frames = Paths.getSparrowAtlas('dokistory/yuri_story');
 		story_yuri.antialiasing = true;
 		story_yuri.scale.set(1, 1);
-		story_yuri.animation.addByPrefix('idle', 'Yuri_idle', 24);
-		story_yuri.animation.addByPrefix('selected', 'Yuri_idle', 24);
-		story_yuri.animation.addByPrefix('locked', 'Yuri_Locked', 24);
+		story_yuri.animation.addByPrefix('idle', 'yuri_selected', 20);
+		story_yuri.animation.addByPrefix('selected', 'yuri_idle', 24, false);
+		story_yuri.animation.addByPrefix('locked', 'yuri_Locked', 24, false);
 		story_yuri.animation.play('locked');
 		story_yuri.updateHitbox();
 		add(story_yuri);
@@ -215,9 +215,9 @@ class DokiStoryState extends MusicBeatState
 		story_secret.frames = Paths.getSparrowAtlas('dokistory/secret_story');
 		story_secret.antialiasing = true;
 		story_secret.scale.set(1, 1);
-		story_secret.animation.addByPrefix('idle', 'Moni_idle', 24);
-		story_secret.animation.addByPrefix('selected', 'Moni_selected', 24);
-		story_secret.animation.addByPrefix('locked', 'Blank_Locked', 24);
+		story_secret.animation.addByPrefix('idle', 'duster_idle', 20);
+		story_secret.animation.addByPrefix('selected', 'duster_selected', 24, false);
+		story_secret.animation.addByPrefix('locked', 'blank_locked', 24, false);
 		story_secret.animation.play('locked');
 		story_secret.updateHitbox();
 		add(story_secret);
@@ -226,9 +226,10 @@ class DokiStoryState extends MusicBeatState
 		story_secret2.frames = Paths.getSparrowAtlas('dokistory/secret2_story');
 		story_secret2.antialiasing = true;
 		story_secret2.scale.set(1, 1);
-		story_secret2.animation.addByPrefix('idle', 'secret2_idle', 24);
-		story_secret2.animation.addByPrefix('selected', 'secret2_selected', 24);
-		story_secret2.animation.addByPrefix('locked', 'Blank_Locked', 24);
+		story_secret2.animation.addByPrefix('idle', 'mc_idle', 20);
+		story_secret2.animation.addByPrefix('hidden_idle', 'mc_hiddenidle', 20);
+		story_secret2.animation.addByPrefix('selected', 'mc_selected', 24, false);
+		story_secret2.animation.addByPrefix('locked', 'blank_locked', 24, false);
 		story_secret2.animation.play('locked');
 		story_secret2.updateHitbox();
 		add(story_secret2);
@@ -285,21 +286,63 @@ class DokiStoryState extends MusicBeatState
 		switch (curSelected)
 			{
 				case 0:
+					story_moni.animation.paused = false;
+					story_sayo.animation.paused = true;
+					story_nat.animation.paused = true;
+					story_yuri.animation.paused = true;
+					story_secret.animation.paused = true;
+					story_secret2.animation.paused = true;
+
 					story_cursor.x = -240;
 					story_cursor.y = -160;
 				case 1:
+					story_moni.animation.paused = true;
+					story_sayo.animation.paused = false;
+					story_nat.animation.paused = true;
+					story_yuri.animation.paused = true;
+					story_secret.animation.paused = true;
+					story_secret2.animation.paused = true;
+
 					story_cursor.x = 40;
 					story_cursor.y = -160;
 				case 2:
+					story_moni.animation.paused = true;
+					story_sayo.animation.paused = true;
+					story_nat.animation.paused = false;
+					story_yuri.animation.paused = true;
+					story_secret.animation.paused = true;
+					story_secret2.animation.paused = true;
+
 					story_cursor.x = 320;
 					story_cursor.y = -160;
 				case 3:
+					story_moni.animation.paused = true;
+					story_sayo.animation.paused = true;
+					story_nat.animation.paused = true;
+					story_yuri.animation.paused = false;
+					story_secret.animation.paused = true;
+					story_secret2.animation.paused = true;
+
 					story_cursor.x = -240;
 					story_cursor.y = 40;
 				case 4:
+					story_moni.animation.paused = true;
+					story_sayo.animation.paused = true;
+					story_nat.animation.paused = true;
+					story_yuri.animation.paused = true;
+					story_secret.animation.paused = false;
+					story_secret2.animation.paused = true;
+
 					story_cursor.x = 40;
 					story_cursor.y = 40;
 				case 5:
+					story_moni.animation.paused = true;
+					story_sayo.animation.paused = true;
+					story_nat.animation.paused = true;
+					story_yuri.animation.paused = true;
+					story_secret.animation.paused = true;
+					story_secret2.animation.paused = false;
+
 					story_cursor.x = 320;
 					story_cursor.y = 40;
 
@@ -506,7 +549,10 @@ class DokiStoryState extends MusicBeatState
 				case 4:
 					story_secret.animation.play('selected');
 				case 5:
-					story_secret2.animation.play('selected');
+					if (FlxG.save.data.extra2beaten == true)
+						{
+						story_secret2.animation.play('selected');
+						}
 
 			}
 
@@ -618,11 +664,12 @@ class DokiStoryState extends MusicBeatState
 			if (FlxG.save.data.extrabeaten == true)
 			{
 				FlxG.save.data.weekUnlocked = 6;
-				story_secret2.animation.play('idle');
+				story_secret2.animation.play('hidden_idle');
 			}
 			if (FlxG.save.data.extra2beaten == true)
 			{
 				FlxG.save.data.weekUnlocked = 7;
+				story_secret2.animation.play('idle');
 			}
 		}
 

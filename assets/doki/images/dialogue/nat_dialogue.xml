@@ -4,5 +4,6 @@
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="nat_angy" x="10" y="10" width="500" height="500"/>
 	<SubTexture name="nat_hmmph" x="520" y="10" width="500" height="500"/>
-	<SubTexture name="natneutral" x="1030" y="10" width="500" height="500"/>
+	<SubTexture name="nat_what" x="1030" y="10" width="500" height="500"/>
+	<SubTexture name="natneutral" x="10" y="520" width="500" height="500"/>
 </TextureAtlas>
