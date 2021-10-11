@@ -4097,7 +4097,6 @@ class PlayState extends MusicBeatState
 
 		if (curSong.toLowerCase() == 'baka' && midsongcutscene && FlxG.save.data.distractions)
 		{
-			//camGame.shake(0.05, 2);
 			switch (curBeat)
 			{
 				case 16:
@@ -4110,8 +4109,12 @@ class PlayState extends MusicBeatState
 						if (bakaOverlay.alpha < 1)
 							tmr.reset(0.2);
 					});
-				case 32 | 176:
+				case 32:
 					bakaOverlay.animation.play('party rock is', true);
+					defaultCamZoom = 0.9;
+				case 48:
+					defaultCamZoom = 0.75;
+					camGame.shake(0.002, 4.37); // ends at 56, need to do this a better way so it adjusts with bpm
 				case 112 | 264:
 					bakaOverlay.alpha = 1;
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
@@ -4131,6 +4134,8 @@ class PlayState extends MusicBeatState
 						if (bakaOverlay.alpha < 1)
 							tmr.reset(0.2);
 					});
+				case 176:
+					bakaOverlay.animation.play('party rock is', true);
 			}
 		}
 
