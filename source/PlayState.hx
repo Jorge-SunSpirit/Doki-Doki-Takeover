@@ -136,6 +136,7 @@ class PlayState extends MusicBeatState
 	public static var cpuStrums:FlxTypedGroup<FlxSprite> = null;
 
 	private var camZooming:Bool = false;
+	private var camFocus:Bool = true;
 	private var curSong:String = "";
 
 	private var gfSpeed:Int = 1;
@@ -2390,7 +2391,7 @@ class PlayState extends MusicBeatState
 				luaModchart.setVar("mustHit",PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection);
 			#end
 
-			if (curSong.toLowerCase() != 'obsession' || (curSong.toLowerCase() == 'obsession' && !yuriGoneCrazy))
+			if (camFocus)
 			{
 				if (camFollow.x != dad.getMidpoint().x + 150 && !PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection)
 					{
@@ -3936,6 +3937,7 @@ class PlayState extends MusicBeatState
 						{
 							case 480:
 								camZooming = false;
+								camFocus = false;
 								camFollow.setPosition(boyfriend.getMidpoint().x - 300, boyfriend.getMidpoint().y - 500);
 								gf.playAnim('countdownThree');
 								camtween = FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoOut});
@@ -3955,6 +3957,7 @@ class PlayState extends MusicBeatState
 							case 496:
 								gf.dance();
 								camZooming = true;
+								camFocus = true;
 							
 							case 752:
 								camZooming = false;
@@ -4250,6 +4253,7 @@ class PlayState extends MusicBeatState
 		// visual setup
 		defaultCamZoom = 1.3;
 		camZooming = true;
+		camFocus = false;
 		blackScreenBG.alpha = 0.8;
 		remove(deskfront);
 		// character setup
