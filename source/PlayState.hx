@@ -189,6 +189,17 @@ class PlayState extends MusicBeatState
 
 	var lights_front:FlxSprite;
 	var deskfront:FlxSprite;
+	var closet:FlxSprite;
+	var clubroom:FlxSprite;
+	var lights_back:FlxSprite;
+	var banner:FlxSprite;
+
+	var fgTrees:FlxSprite;
+	var bgSky:FlxSprite;
+	var bgSchool:FlxSprite;
+	var bgStreet:FlxSprite;
+	var bgTrees:FlxSprite;
+	var treeLeaves:FlxSprite;
 
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
@@ -414,6 +425,7 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/rain clouds/IntroDialogue', 'preload', true));
 			case 'my confession':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/my confession/IntroDialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/my confession/EndDialogue', 'preload', true));
 			
 			//nat week
 			case 'baka':
@@ -427,6 +439,7 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue', 'preload', true));
 			case 'obsession':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue', 'preload', true));
 
 			//Monika returns?!
 			case 'reconciliation':
@@ -439,6 +452,7 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt("data/it's complicated (sayori mix)/IntroDialogue", 'preload', true));
 			case 'glitcher (monika mix)':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/IntroDialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/EndDialogue', 'preload', true));
 			case "beathoven (natsuki mix)":
 				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue", 'preload', true));
 		}
@@ -713,6 +727,127 @@ class PlayState extends MusicBeatState
 					add(banner);
 
 				}
+			
+			case 'dokiglitcher':
+				{
+					var posX = -700;
+					var posY = -520;
+					
+					defaultCamZoom = 0.75;
+					curStage = 'dokiglitcher';
+
+					lights_front = new FlxSprite(-605, 565);
+					lights_front.frames = Paths.getSparrowAtlas('festival/lights_front','doki');
+					lights_front.animation.addByPrefix('idle', 'Lights front', 24, true);
+					lights_front.animation.play('idle');
+					lights_front.setGraphicSize(Std.int(lights_front.width * 1.6));
+					lights_front.antialiasing = true;
+					lights_front.scrollFactor.set(1.1, 0.9);
+
+					deskfront = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/DesksFestival','doki'));
+					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
+					deskfront.updateHitbox();
+					deskfront.antialiasing = true;
+					deskfront.scrollFactor.set(1.3, 0.9);
+
+					closet = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FarBack','doki'));
+					closet.setGraphicSize(Std.int(closet.width * 1.6));
+					closet.updateHitbox();
+					closet.antialiasing = true;
+					closet.scrollFactor.set(0.9, 0.9);
+					add(closet);
+	
+					clubroom = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/MainBG','doki'));
+					clubroom.setGraphicSize(Std.int(clubroom.width * 1.6));
+					clubroom.updateHitbox();
+					clubroom.antialiasing = true;
+					clubroom.scrollFactor.set(1, 0.9);
+					add(clubroom);
+
+					lights_back = new FlxSprite(390, 179);
+					lights_back.frames = Paths.getSparrowAtlas('festival/lights_back','doki');
+					lights_back.animation.addByPrefix('idle', 'lights back', 24, true);
+					lights_back.setGraphicSize(Std.int(lights_back.width * 1.6));
+					lights_back.animation.play('idle');
+					lights_back.antialiasing = true;
+					lights_back.scrollFactor.set(1, 0.9);
+					add(lights_back);
+
+					banner = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FestivalBanner','doki'));
+					banner.setGraphicSize(Std.int(banner.width * 1.6));
+					banner.updateHitbox();
+					banner.antialiasing = true;
+					banner.scrollFactor.set(1, 0.9);
+					add(banner);
+
+					//school stuff :(
+					
+						var repositionShitx = -428;
+						var repositionShity = -155;
+	
+						bgSky = new FlxSprite(repositionShitx, repositionShity + 0).loadGraphic(Paths.image('weeb/weebSky','week6'));
+						bgSky.scrollFactor.set(0.1, 0.1);
+						add(bgSky);
+	
+						bgSchool = new FlxSprite(repositionShitx, repositionShity + 0).loadGraphic(Paths.image('weeb/weebSchool','week6'));
+						bgSchool.scrollFactor.set(0.6, 0.90);
+						add(bgSchool);
+	
+						bgStreet = new FlxSprite(repositionShitx, repositionShity).loadGraphic(Paths.image('weeb/weebStreet','week6'));
+						bgStreet.scrollFactor.set(0.95, 0.95);
+						add(bgStreet);
+	
+						fgTrees = new FlxSprite(repositionShitx + 170, repositionShity + 130).loadGraphic(Paths.image('weeb/weebTreesBack','week6'));
+						fgTrees.scrollFactor.set(0.9, 0.9);
+						add(fgTrees);
+	
+						bgTrees = new FlxSprite(repositionShitx - 380, repositionShity + -800);
+						var treetex = Paths.getPackerAtlas('weeb/weebTrees','week6');
+						bgTrees.frames = treetex;
+						bgTrees.animation.add('treeLoop', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 12);
+						bgTrees.animation.play('treeLoop');
+						bgTrees.scrollFactor.set(0.85, 0.85);
+						add(bgTrees);
+	
+						treeLeaves = new FlxSprite(repositionShitx, repositionShity + -40);
+						treeLeaves.frames = Paths.getSparrowAtlas('weeb/petals','week6');
+						treeLeaves.animation.addByPrefix('leaves', 'PETALS ALL', 24, true);
+						treeLeaves.animation.play('leaves');
+						treeLeaves.scrollFactor.set(0.85, 0.85);
+						add(treeLeaves);
+	
+						var widShit = Std.int(bgSky.width * 7);
+	
+						bgSky.setGraphicSize(widShit);
+						bgSchool.setGraphicSize(widShit);
+						bgStreet.setGraphicSize(widShit);
+						bgTrees.setGraphicSize(Std.int(widShit * 1.4));
+						fgTrees.setGraphicSize(Std.int(widShit * 0.8));
+						treeLeaves.setGraphicSize(widShit);
+	
+						fgTrees.updateHitbox();
+						bgSky.updateHitbox();
+						bgSchool.updateHitbox();
+						bgStreet.updateHitbox();
+						bgTrees.updateHitbox();
+						treeLeaves.updateHitbox();
+
+						fgTrees.visible = false;
+						bgSky.visible = false;
+						bgSchool.visible = false;
+						bgStreet.visible = false;
+						bgTrees.visible = false;
+						treeLeaves.visible = false;
+
+						lights_front.visible = true;
+						deskfront.visible = true;
+						closet.visible = true;
+						clubroom.visible = true;
+						lights_back.visible = true;
+						banner.visible = true;
+	
+
+				}
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -793,7 +928,10 @@ class PlayState extends MusicBeatState
 			case 'monika':
 				dad.x += 150;
 				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+				if (SONG.song.toLowerCase() == 'glitcher (monika mix)')
+					camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y + 200);
+				else
+					camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'duet':
 				dad.x += 150;
 				dad.y += 380;
@@ -867,16 +1005,7 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 260;
 				gf.x += 180;
 				gf.y += 1000;
-			case 'dokiclubroom':
-				{
-					dad.y -= 0;
-					dad.x += 0;
-					boyfriend.x += 0;
-					boyfriend.y += 0;
-					gf.x += 0;
-					gf.y += 0;	
-				}
-			case 'dokifestival':
+			case 'dokifestival' | 'dokiglitcher' | 'dokiclubroom':
 				{
 					dad.y -= 0;
 					dad.x += 0;
@@ -907,14 +1036,14 @@ class PlayState extends MusicBeatState
 
 		// Shitty layering but whatev it works LOL
 		//thanks ninja muffin :)
-			if (curStage == 'dokiclubroom' || curStage == 'dokifestival')
+			if (curStage == 'dokiclubroom' || curStage == 'dokifestival'|| curStage == 'dokiglitcher')
 				{
 					add(deskfront);
-					if (curStage == 'dokifestival')
+					if (curStage == 'dokifestival' || curStage == 'dokiglitcher')
 						{
-							boyfriend.color = 0x5B5B5B;
-							dad.color = 0x5B5B5B;
-							gf.color = 0x5B5B5B;
+							boyfriend.color = 0x828282;
+							dad.color = 0x828282;
+							gf.color = 0x828282;
 							add(lights_front);
 						}
 				}
@@ -1129,16 +1258,36 @@ class PlayState extends MusicBeatState
 						}
 				case 'erb':
 					introcutscene(doof);
-				case 'my confession':
+				
+				//addin stuff for dokis
+				case 'baka':
 					introcutscene(doof);
 				case 'my sweets':
 					introcutscene(doof);
+				
+				case 'rain clouds':
+					introcutscene(doof);
+				case 'my confession':
+					introcutscene(doof);
+
+				
 				case 'deep breaths':
 					introcutscene(doof);
 				case 'obsession':
 					introcutscene(doof);
-				case 'epiphany':
-					funnyephiphinya(doof);	
+				
+				case 'reconciliation':
+					introcutscene(doof);
+
+				case 'beathoven (natsuki mix)':
+					introcutscene(doof);
+				case 'cruify (yuri mix)':
+					introcutscene(doof);
+				case "it's complicated (sayori mix)":
+					introcutscene(doof);
+				case 'glitcher (monika mix)':
+					introcutscene(doof);
+				
 				default:
 					startCountdown();
 			}
@@ -1152,7 +1301,12 @@ class PlayState extends MusicBeatState
 				case 'your demise':
 					DarkStart(doof);
 				case 'epiphany':
-					funnyephiphinya(doof);
+					if (showCutscene)
+						{
+							funnyephiphinya(doof);
+						} else {
+							epipdarkstart(doof);
+						}
 				default:
 					startCountdown();
 			}
@@ -1177,12 +1331,28 @@ class PlayState extends MusicBeatState
 			remove(gf);
 			startCountdown();
 		}
+	
+	function epipdarkstart(?dialogueBox:DialogueBox):Void
+		{
+			remove(gf);
+			remove(boyfriend);
+			startCountdown();
+		}
 
 	function funnyephiphinya(?dialogueBox:DialogueBox):Void
 		{
 			remove(gf);
 			remove(boyfriend);
-			startCountdown();
+			new FlxTimer().start(1.2, function(godlike:FlxTimer)
+				{
+					if (dialogueBox != null)
+						{
+							inCutscene = true;
+							add(dialogueBox);
+						}
+						else
+							startCountdown();
+				});
 		}
 		
 	function endcutscene(?dialogueBox:DialogueBox):Void
@@ -1401,20 +1571,6 @@ class PlayState extends MusicBeatState
 								}
 							default:
 								{
-									/*switch (SONG.song.toLowerCase())
-										{
-											//play music :)
-											case "deep breaths":
-												FlxG.sound.playMusic(Paths.music('yuric'), 1);
-											case "obsession":
-												FlxG.sound.playMusic(Paths.music('yuric'), 1);
-											case "my confession":
-												FlxG.sound.playMusic(Paths.music('sayoc'), 1);
-											case "my sweets":
-												trace('hello world');
-												FlxG.sound.playMusic(Paths.music('natsc'), 1);
-											default:
-										}*/
 									remove(black);
 									new FlxTimer().start(1.2, function(godlike:FlxTimer)
 										{
@@ -2092,6 +2248,11 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.NINE)
 			iconP1.swapOldIcon();
 
+		if (FlxG.keys.justPressed.O && curStage == 'dokiglitcher')
+			gopixel();
+		if (FlxG.keys.justPressed.P && curStage == 'dokiglitcher')
+			becomefumo();
+
 		scoreTxt.screenCenter(X);
 
 		if (!scoreTxt.visible && !executeModchart)
@@ -2481,6 +2642,16 @@ class PlayState extends MusicBeatState
 								camFollow.y = boyfriend.getMidpoint().y - 200;
 							case 'dokifestival':
 								camFollow.y = boyfriend.getMidpoint().y - 200;
+							case 'dokiglitcher':
+								if (boyfriend.curCharacter == 'bf-pixel')
+									{
+										camFollow.x = boyfriend.getMidpoint().x - 200;
+										camFollow.y = boyfriend.getMidpoint().y - 200;
+									}
+								else
+									{
+										camFollow.y = boyfriend.getMidpoint().y - 200;
+									}		
 						}
 					}
 			}
@@ -2906,7 +3077,13 @@ class PlayState extends MusicBeatState
 						endcutscene(doof4);
 					case 'your demise':
 						endcutscene(doof2);
+					case 'my confession':
+						endcutscene(doof4);
 					case 'baka':
+						endcutscene(doof4);
+					case 'obsession':
+						endcutscene(doof4);
+					case 'glitcher (monika mix)':
 						endcutscene(doof4);
 					default:
 						endSong();
@@ -4026,6 +4203,16 @@ class PlayState extends MusicBeatState
 								FlxG.camera.fade(FlxColor.BLACK, 2, false);
 						}
 					}
+				if (SONG.song.toLowerCase() == 'glitcher (monika mix)')
+					{
+						switch (curStep)
+							{
+								case 575 | 1087 | 1358 | 1390 | 1422 | 1454:
+									gopixel();
+								case 832 | 1344 | 1374 | 1406 | 1438 | 1469:
+									becomefumo();
+							}
+					}
 			}
 
 		// yes this updates every step.
@@ -4274,6 +4461,73 @@ class PlayState extends MusicBeatState
 		vignette.alpha = 0.6;
 		camFollow.setPosition((dad.getMidpoint().x + boyfriend.getMidpoint().x) / 1.8, dad.getMidpoint().y - 50);
 	}
+
+	function gopixel()
+		{
+			//gf pixel x 675 y 402
+			//bf pixel x 911 y 610
+			//monika pixel x 351 y 436
+
+			defaultCamZoom = 1;
+			remove(boyfriend);
+			remove(dad);
+			remove(gf);
+			dad = new Character(351, 436, 'monika');
+			boyfriend = new Boyfriend(911, 610, 'bf-pixel');
+			gf = new Character(675, 402, 'gf-pixel');
+
+			add(gf);
+			add(boyfriend);
+			add(dad);
+
+			fgTrees.visible = true;
+			bgSky.visible = true;
+			bgSchool.visible = true;
+			bgStreet.visible = true;
+			bgTrees.visible = true;
+			treeLeaves.visible = true;
+
+			lights_front.visible = false;
+			deskfront.visible = false;
+			closet.visible = false;
+			clubroom.visible = false;
+			lights_back.visible = false;
+			banner.visible = false;
+		}
+	function becomefumo()
+		{
+			//gf x 400 y 130
+			//bf x 770 y 450
+			//dad x 100 y 160
+			defaultCamZoom = 0.75;
+			remove(boyfriend);
+			remove(dad);
+			remove(gf);
+			dad = new Character(100, 160, 'monika-real');
+			boyfriend = new Boyfriend(770, 450, 'bf');
+			gf = new Character(400, 130, 'gf');
+
+			boyfriend.color = 0x828282;
+			dad.color = 0x828282;
+			gf.color = 0x828282;
+
+			add(gf);
+			add(boyfriend);
+			add(dad);
+			fgTrees.visible = false;
+			bgSky.visible = false;
+			bgSchool.visible = false;
+			bgStreet.visible = false;
+			bgTrees.visible = false;
+			treeLeaves.visible = false;
+
+			lights_front.visible = true;
+			deskfront.visible = true;
+			closet.visible = true;
+			clubroom.visible = true;
+			lights_back.visible = true;
+			banner.visible = true;
+		}
 
 	var curLight:Int = 0;
 }

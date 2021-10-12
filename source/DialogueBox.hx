@@ -11,6 +11,7 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+import flixel.addons.effects.chainable.FlxGlitchEffect;
 
 using StringTools;
 
@@ -35,6 +36,8 @@ class DialogueBox extends FlxSpriteGroup
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
+
+	var glitch:FlxGlitchEffect;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
@@ -184,7 +187,7 @@ class DialogueBox extends FlxSpriteGroup
 						swagDialogue = new FlxTypeText(220, 520, Std.int(FlxG.width * 0.67), "", 28);
 						swagDialogue.font = LangUtil.getFont('aller');
 						swagDialogue.color = 0xFFFFFFFF;
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.3)];
 						swagDialogue.setBorderStyle(OUTLINE, FlxColor.BLACK, 1, 1);
 						swagDialogue.antialiasing = true;
 						add(swagDialogue);
@@ -779,7 +782,12 @@ class DialogueBox extends FlxSpriteGroup
 									FlxG.sound.music.fadeOut(0.5, 0);
 								enddialogue();
 							case 'glitch':
-								
+								glitch = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
+								glitch.active = true;
+								new FlxTimer().start(5, function(tmr:FlxTimer)
+									{
+										glitch.active = false;
+									});
 
 							case 'hideright':
 								portraitRight.visible = false;

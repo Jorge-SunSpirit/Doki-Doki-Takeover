@@ -32,4 +32,7 @@
 :sayori_neutral:Hid right
 :hideleft:
 :bf_neutral:hid left
+:bf_beep:We gonna glitch!
+:glitch:
+:bf_think:yeah yeah we did that
 
