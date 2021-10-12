@@ -49,17 +49,12 @@ class FirstBootState extends MusicBeatState
 		grpOptionsTexts = new FlxTypedGroup<FlxText>();
 		add(grpOptionsTexts);
 
-		/*var titleText:FlxText = new FlxText(0, 20, 0, LangUtil.getString('optLanguage'));
-		titleText.setFormat(LangUtil.getFont('riffic'), 48, FlxColor.WHITE, CENTER);
-		titleText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 3);
-		titleText.screenCenter(X);
-		add(titleText);*/
-
 		for (i in 0...textMenuItems.length)
 		{
 			var optionText:FlxText = new FlxText(0, 50 + (i * 50), 0, textMenuItems[i]);
 			optionText.setFormat(LangUtil.getFont('riffic'), 32, FlxColor.WHITE, CENTER);
 			optionText.screenCenter(X);
+			optionText.antialiasing = true;
 			optionText.ID = i;
 			grpOptionsTexts.add(optionText);
 		}

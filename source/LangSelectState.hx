@@ -45,6 +45,7 @@ class LangSelectState extends MusicBeatState
 		titleText.setFormat(LangUtil.getFont('riffic'), 48, FlxColor.WHITE, CENTER);
 		titleText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 3);
 		titleText.screenCenter(X);
+		titleText.antialiasing = true;
 		add(titleText);
 
 		for (i in 0...textMenuItems.length)
@@ -52,6 +53,7 @@ class LangSelectState extends MusicBeatState
 			var optionText:FlxText = new FlxText(0, titleText.height + 50 + (i * 50), 0, textMenuItems[i]);
 			optionText.setFormat(LangUtil.getFont('riffic'), 32, FlxColor.WHITE, CENTER);
 			optionText.screenCenter(X);
+			optionText.antialiasing = true;
 			optionText.ID = i;
 			grpOptionsTexts.add(optionText);
 		}
