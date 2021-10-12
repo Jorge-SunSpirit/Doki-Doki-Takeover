@@ -206,7 +206,7 @@ class PlayState extends MusicBeatState
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
-
+	var camtween:FlxTween;
 	var talking:Bool = true;
 	var songScore:Int = 0;
 	var songScoreDef:Int = 0;
@@ -3936,17 +3936,22 @@ class PlayState extends MusicBeatState
 						{
 							case 480:
 								camZooming = false;
+								camFollow.setPosition(boyfriend.getMidpoint().x - 300, boyfriend.getMidpoint().y - 500);
 								gf.playAnim('countdownThree');
-								FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoOut});
+								camtween = FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoOut});
 							case 484:
+								camtween.cancel();
 								gf.playAnim('countdownTwo');
-								FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1, {ease: FlxEase.expoOut});
+								camtween = FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1, {ease: FlxEase.expoOut});
 							case 488:
+								camtween.cancel();
 								gf.playAnim('countdownOne');
-								FlxTween.tween(FlxG.camera, {zoom: 1.4}, 1, {ease: FlxEase.expoOut});
+								camtween = FlxTween.tween(FlxG.camera, {zoom: 1.4}, 1, {ease: FlxEase.expoOut});
 							case 492:
+								camFollow.setPosition(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 200);
+								camtween.cancel();
 								gf.playAnim('countdownGo');
-								FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.expoOut});
+								camtween = FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.expoOut});
 							case 496:
 								gf.dance();
 								camZooming = true;
