@@ -1025,6 +1025,7 @@ class PlayState extends MusicBeatState
 				var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20,songPosBG.y,0,SONG.song, 16);
 				if (FlxG.save.data.downscroll)
 					songName.y -= 3;
+				songName.screenCenter(X);
 				songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 				songName.scrollFactor.set();
 				songName.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
