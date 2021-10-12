@@ -1281,7 +1281,7 @@ class PlayState extends MusicBeatState
 
 				case 'beathoven (natsuki mix)':
 					introcutscene(doof);
-				case 'cruify (yuri mix)':
+				case 'crucify  (yuri mix)':
 					introcutscene(doof);
 				case "it's complicated (sayori mix)":
 					introcutscene(doof);
@@ -2248,11 +2248,6 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.NINE)
 			iconP1.swapOldIcon();
 
-		if (FlxG.keys.justPressed.O && curStage == 'dokiglitcher')
-			gopixel();
-		if (FlxG.keys.justPressed.P && curStage == 'dokiglitcher')
-			becomefumo();
-
 		scoreTxt.screenCenter(X);
 
 		if (!scoreTxt.visible && !executeModchart)
@@ -2358,6 +2353,11 @@ class PlayState extends MusicBeatState
 			}
 			#end
 		}
+
+		if (FlxG.keys.justPressed.O && curStage == 'dokiglitcher')
+			gopixel();
+		if (FlxG.keys.justPressed.P && curStage == 'dokiglitcher')
+			becomefumo();
 
 		if (FlxG.keys.justPressed.ZERO)
 		{
