@@ -3938,7 +3938,7 @@ class PlayState extends MusicBeatState
 							case 480:
 								camZooming = false;
 								camFocus = false;
-								camFollow.setPosition(boyfriend.getMidpoint().x - 300, boyfriend.getMidpoint().y - 500);
+								camFollow.setPosition(gf.getMidpoint().x, gf.getMidpoint().y - 100);
 								gf.playAnim('countdownThree');
 								camtween = FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoOut});
 							case 484:
@@ -3950,7 +3950,6 @@ class PlayState extends MusicBeatState
 								gf.playAnim('countdownOne');
 								camtween = FlxTween.tween(FlxG.camera, {zoom: 1.4}, 1, {ease: FlxEase.expoOut});
 							case 492:
-								camFollow.setPosition(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 200);
 								camtween.cancel();
 								gf.playAnim('countdownGo');
 								camtween = FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.expoOut});
