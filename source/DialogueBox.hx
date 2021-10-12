@@ -80,6 +80,7 @@ class DialogueBox extends FlxSpriteGroup
 						box.animation.addByPrefix('natsuki', 'Doki Dialogue Natsu', 24, false);
 						box.animation.addByPrefix('sayori', 'Doki Dialogue Sayo', 24, false);
 						box.animation.addByPrefix('yuri', 'Doki Dialogue Yuri0', 24, false);
+						box.animation.addByPrefix('mc', 'Doki Dialogue Protag', 24, false);
 						box.antialiasing = true;
 					}
 			}
@@ -539,7 +540,7 @@ class DialogueBox extends FlxSpriteGroup
 								}
 							
 							//Natsuki animations
-							case 'natsuki_netural':
+							case 'natsuki_neutral':
 								portraitLeft.visible = false;
 								box.animation.play('natsuki');
 								if (!portraitLeft.visible)
@@ -644,44 +645,44 @@ class DialogueBox extends FlxSpriteGroup
 
 							//MC animations wait I mean senpai
 							case 'mc_neutral':
-								portraitLeft.visible = false;
-								box.animation.play('sayori');
-								if (!portraitLeft.visible)
+								portraitRight.visible = false;
+								box.animation.play('mc');
+								if (!portraitRight.visible)
 								{
-									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
-									portraitLeft.animation.addByPrefix('play', 'mc_neutral', 24, false);
-									portraitLeft.animation.play('play');
+									portraitRight.visible = true;
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
+									portraitRight.animation.addByPrefix('play', 'mc_neutral', 24, false);
+									portraitRight.animation.play('play');
 								}
 							case 'mc_camera':
-								portraitLeft.visible = false;
-								box.animation.play('sayori');
-								if (!portraitLeft.visible)
+								portraitRight.visible = false;
+								box.animation.play('mc');
+								if (!portraitRight.visible)
 								{
-									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
-									portraitLeft.animation.addByPrefix('play', 'mc_camera', 24, false);
-									portraitLeft.animation.play('play');
+									portraitRight.visible = true;
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
+									portraitRight.animation.addByPrefix('play', 'mc_camera', 24, false);
+									portraitRight.animation.play('play');
 								}
 							case 'mc_happy':
-								portraitLeft.visible = false;
-								box.animation.play('sayori');
-								if (!portraitLeft.visible)
+								portraitRight.visible = false;
+								box.animation.play('mc');
+								if (!portraitRight.visible)
 								{
-									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
-									portraitLeft.animation.addByPrefix('play', 'mc_happy', 24, false);
-									portraitLeft.animation.play('play');
+									portraitRight.visible = true;
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
+									portraitRight.animation.addByPrefix('play', 'mc_happy', 24, false);
+									portraitRight.animation.play('play');
 								}
 							case 'mc_sigh':
-								portraitLeft.visible = false;
-								box.animation.play('sayori');
-								if (!portraitLeft.visible)
+								portraitRight.visible = false;
+								box.animation.play('mc');
+								if (!portraitRight.visible)
 								{
-									portraitLeft.visible = true;
-									portraitLeft.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
-									portraitLeft.animation.addByPrefix('play', 'mc_sigh', 24, false);
-									portraitLeft.animation.play('play');
+									portraitRight.visible = true;
+									portraitRight.frames = Paths.getSparrowAtlas('dialogue/mc_dialogue','doki');
+									portraitRight.animation.addByPrefix('play', 'mc_sigh', 24, false);
+									portraitRight.animation.play('play');
 								}
 
 							//Boyfriend animations
@@ -738,7 +739,7 @@ class DialogueBox extends FlxSpriteGroup
 
 
 							//GF animations
-							case 'gf':
+							case 'gf_neutral':
 								portraitRight.visible = false;
 								box.animation.play('gf');
 								if (!portraitRight.visible)
