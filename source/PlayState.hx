@@ -458,6 +458,9 @@ class PlayState extends MusicBeatState
 				extra3 = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/EndDialogue', 'preload', true));
 			case "beathoven (natsuki mix)":
 				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue", 'preload', true));
+
+			case "epiphany":
+				dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 		}
 
 		trace(SONG.stage);
