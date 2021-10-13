@@ -904,6 +904,21 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf';
 		}
 
+		#if !FEATURE_CACHING
+		if (SONG.song.toLowerCase().startsWith('glitcher') && FlxG.save.data.distractions)
+		#else
+		if (SONG.song.toLowerCase().startsWith('glitcher') && FlxG.save.data.distractions && !FlxG.save.data.cacheCharacters)
+		#end
+		{
+			trace('preloading pixel characters since caching is disabled');
+			dad = new Character(100, 100, 'monika');
+			boyfriend = new Boyfriend(770, 450, 'bf-pixel');
+			gf = new Character(400, 130, 'gf-pixel');
+			remove(boyfriend);
+			remove(dad);
+			remove(gf);
+		}
+
 		gf = new Character(400, 130, gfVersion);
 		gf.scrollFactor.set(0.95, 0.95);
 
