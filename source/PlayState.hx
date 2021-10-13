@@ -1160,7 +1160,7 @@ class PlayState extends MusicBeatState
 				songName.screenCenter(X);
 				songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 				songName.scrollFactor.set();
-				songName.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
+				songName.antialiasing = !SONG.noteStyle.startsWith('pixel');
 				songName.cameras = [camHUD];
 				add(songName);
 			}
@@ -1191,14 +1191,14 @@ class PlayState extends MusicBeatState
 		scoreTxt = new FlxText(0, healthBarBG.y + 50, 0, "", 20);
 		scoreTxt.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		scoreTxt.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
+		scoreTxt.antialiasing = !SONG.noteStyle.startsWith('pixel');
 		scoreTxt.visible = executeModchart;
 		add(scoreTxt);
 
 		replayTxt = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		replayTxt.scrollFactor.set();
-		replayTxt.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
+		replayTxt.antialiasing = !SONG.noteStyle.startsWith('pixel');
 		replayTxt.screenCenter(X);
 		if (loadRep) add(replayTxt);
 
@@ -1206,7 +1206,7 @@ class PlayState extends MusicBeatState
 		botPlayState = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
 		botPlayState.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
-		botPlayState.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
+		botPlayState.antialiasing = !SONG.noteStyle.startsWith('pixel');
 		botPlayState.screenCenter(X);
 		if (FlxG.save.data.botplay && !loadRep) add(botPlayState);
 
@@ -1606,8 +1606,8 @@ class PlayState extends MusicBeatState
 		showCutscene = false;
 		inCutscene = false;
 
-		generateStaticArrows(0);
-		generateStaticArrows(1);
+		generateStaticArrows(0, SONG.noteStyle);
+		generateStaticArrows(1, SONG.noteStyle);
 
 		if (FlxG.save.data.middleScroll)
 		{
@@ -1889,6 +1889,11 @@ class PlayState extends MusicBeatState
 		var daBeats:Int = 0; // Not exactly representative of 'daBeats' lol, just how much it has looped
 		for (section in noteData)
 		{
+			var noteStyle:String = SONG.noteStyle;
+
+			if (section.altAnim && curStage == "dokiglitcher")
+				noteStyle = 'pixel';
+
 			var coolSection:Int = Std.int(section.lengthInSteps / 4);
 
 			for (songNotes in section.sectionNotes)
@@ -1912,7 +1917,7 @@ class PlayState extends MusicBeatState
 					oldNote = null;
 				
 				var daType = songNotes[3];
-				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, false, daType);
+				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, false, daType, noteStyle);
 				swagNote.sustainLength = songNotes[2];
 				
 				swagNote.scrollFactor.set(0, 0);
@@ -1926,7 +1931,7 @@ class PlayState extends MusicBeatState
 				{
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
 
-					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteData, oldNote, true, daType);
+					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteData, oldNote, true, daType, noteStyle);
 					sustainNote.scrollFactor.set();
 					unspawnNotes.push(sustainNote);
 
@@ -1964,7 +1969,7 @@ class PlayState extends MusicBeatState
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1.strumTime, Obj2.strumTime);
 	}
 
-	private function generateStaticArrows(player:Int):Void
+	private function generateStaticArrows(player:Int, noteStyle:String, tweenIn:Bool = true):Void
 	{
 		if (FlxG.save.data.laneUnderlay)
 		{
@@ -1977,7 +1982,7 @@ class PlayState extends MusicBeatState
 			// FlxG.log.add(i);
 			var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
 
-			switch (SONG.noteStyle)
+			switch (noteStyle)
 			{
 				case 'pixel':
 					babyArrow.loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 17, 17);
@@ -2052,7 +2057,7 @@ class PlayState extends MusicBeatState
 			babyArrow.updateHitbox();
 			babyArrow.scrollFactor.set();
 
-			if (!isStoryMode)
+			if (!isStoryMode && tweenIn)
 			{
 				babyArrow.y -= 10;
 				babyArrow.alpha = 0;
@@ -2961,7 +2966,7 @@ class PlayState extends MusicBeatState
 							{
 								spr.animation.play('confirm', true);
 							}
-							if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
+							if (spr.animation.curAnim.name == 'confirm' && !SONG.noteStyle.startsWith('pixel'))
 							{
 								spr.centerOffsets();
 								spr.offset.x -= 13;
@@ -3294,6 +3299,9 @@ class PlayState extends MusicBeatState
 	var timeShown = 0;
 	var currentTimingShown:FlxText = null;
 
+	var pixelShitPart1:String = "";
+	var pixelShitPart2:String = '';
+
 	private function popUpScore(daNote:Note):Void
 		{
 			var noteDiff:Float = Math.abs(Conductor.songPosition - daNote.strumTime);
@@ -3383,10 +3391,7 @@ class PlayState extends MusicBeatState
 					daRating = 'bad';
 			 */
 	
-			var pixelShitPart1:String = "";
-			var pixelShitPart2:String = '';
-	
-			if (curStage.startsWith('school'))
+			if (SONG.noteStyle == 'pixel')
 			{
 				pixelShitPart1 = 'weeb/pixelUI/';
 				pixelShitPart2 = '-pixel';
@@ -3428,7 +3433,7 @@ class PlayState extends MusicBeatState
 			currentTimingShown.borderColor = FlxColor.BLACK;
 			currentTimingShown.text = msTiming + "ms";
 			currentTimingShown.size = 20;
-			currentTimingShown.antialiasing = !PlayState.SONG.noteStyle.startsWith('pixel');
+			currentTimingShown.antialiasing = !SONG.noteStyle.startsWith('pixel');
 
 			if (msTiming >= 0.03 && offsetTesting)
 			{
@@ -4500,6 +4505,18 @@ class PlayState extends MusicBeatState
 			add(boyfriend);
 			add(dad);
 
+			// thank u bbpanzu/Sunday mod!
+			remove(strumLineNotes);
+			strumLineNotes = new FlxTypedGroup<FlxSprite>();
+			strumLineNotes.cameras = [camHUD];
+			add(strumLineNotes);
+
+			generateStaticArrows(0, 'pixel', false);
+			generateStaticArrows(1, 'pixel', false);
+
+			pixelShitPart1 = 'weeb/pixelUI/';
+			pixelShitPart2 = '-pixel';
+
 			fgTrees.visible = true;
 			bgSky.visible = true;
 			bgSchool.visible = true;
@@ -4544,6 +4561,18 @@ class PlayState extends MusicBeatState
 			add(gf);
 			add(boyfriend);
 			add(dad);
+
+			remove(strumLineNotes);
+			strumLineNotes = new FlxTypedGroup<FlxSprite>();
+			strumLineNotes.cameras = [camHUD];
+			add(strumLineNotes);
+
+			generateStaticArrows(0, SONG.noteStyle, false);
+			generateStaticArrows(1, SONG.noteStyle, false);
+
+			pixelShitPart1 = '';
+			pixelShitPart2 = '';
+
 			fgTrees.visible = false;
 			bgSky.visible = false;
 			bgSchool.visible = false;

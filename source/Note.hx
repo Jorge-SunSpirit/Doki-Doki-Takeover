@@ -24,6 +24,7 @@ class Note extends FlxSprite
 	public var sustainLength:Float = 0;
 	public var isSustainNote:Bool = false;
 	public var noteType:Int = 0;
+	public var noteStyle:String = '';
 
 	public var noteScore:Float = 1;
 
@@ -35,12 +36,14 @@ class Note extends FlxSprite
 
 	public var rating:String = "shit";
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?noteType:Int = 0)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?noteType:Int = 0, noteStyle:String = 'normal')
 	{
 		super();
 
 		if (prevNote == null)
 			prevNote = this;
+
+		this.noteStyle = noteStyle;
 		this.noteType = noteType;
 		this.prevNote = prevNote;
 		isSustainNote = sustainNote;
@@ -50,14 +53,14 @@ class Note extends FlxSprite
 		y -= 2000;
 		this.strumTime = strumTime;
 
-		if (this.strumTime < 0 )
+		if (this.strumTime < 0)
 			this.strumTime = 0;
 
 		this.noteData = noteData;
 
 		var daStage:String = PlayState.curStage;
 
-		switch (PlayState.SONG.noteStyle)
+		switch (noteStyle)
 		{
 			case 'pixel':
 				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels','week6'), true, 17, 17);

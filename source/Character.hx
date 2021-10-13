@@ -331,11 +331,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Monika RIGHT NOTE', 24, false);
 				animation.addByPrefix('singDOWN', 'Monika DOWN NOTE', 24, false);
 
-				animation.addByPrefix('idle-alt', 'Angry Senpai Idle', 24, false);
-				animation.addByPrefix('singUP-alt', 'Angry Senpai UP NOTE', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'Angry Senpai DOWN NOTE', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'Angry Senpai LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'Angry Senpai RIGHT NOTE', 24, false);
+				animation.addByPrefix('idle-alt', 'Monika Idle', 24, false);
+				animation.addByPrefix('singUP-alt', 'Monika UP NOTE', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Monika DOWN NOTE', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Monika LEFT NOTE', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Monika RIGHT NOTE', 24, false);
 
 				loadOffsetFile(curCharacter);
 
@@ -462,6 +462,12 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Monika Returns Right', 24, false);
 				animation.addByPrefix('singDOWN', 'Monika Returns Down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monika Returns Left', 24, false);
+
+				animation.addByPrefix('idle-alt', 'Monika Returns Idle', 24, false);
+				animation.addByPrefix('singUP-alt', 'Monika Returns Up', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Monika Returns Right', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Monika Returns Down', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Monika Returns Left', 24, false);
 
 				loadOffsetFile(curCharacter);
 
