@@ -4224,9 +4224,9 @@ class PlayState extends MusicBeatState
 					{
 						switch (curStep)
 							{
-								case 575 | 1087 | 1358 | 1390 | 1422 | 1454:
+								case 576 | 1087 | 1359 | 1391 | 1423 | 1455:
 									gopixel();
-								case 832 | 1344 | 1374 | 1406 | 1438 | 1469:
+								case 832 | 1343 | 1375 | 1407 | 1439 | 1471:
 									becomefumo();
 							}
 					}
