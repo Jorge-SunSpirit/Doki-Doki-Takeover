@@ -4489,6 +4489,13 @@ class PlayState extends MusicBeatState
 			iconP1.changeIcon('bf-pixel');
 			iconP2.changeIcon('monika');
 
+			if (FlxG.save.data.songPosition)
+				songName.antialiasing = false;
+
+			scoreTxt.antialiasing = false;
+			replayTxt.antialiasing = false;
+			botPlayState.antialiasing = false;
+
 			add(gf);
 			add(boyfriend);
 			add(dad);
@@ -4526,6 +4533,13 @@ class PlayState extends MusicBeatState
 			boyfriend.color = 0x828282;
 			dad.color = 0x828282;
 			gf.color = 0x828282;
+
+			if (FlxG.save.data.songPosition)
+				songName.antialiasing = true;
+
+			scoreTxt.antialiasing = true;
+			replayTxt.antialiasing = true;
+			botPlayState.antialiasing = true;
 
 			add(gf);
 			add(boyfriend);
