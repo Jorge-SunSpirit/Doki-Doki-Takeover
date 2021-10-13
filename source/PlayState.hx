@@ -4476,6 +4476,9 @@ class PlayState extends MusicBeatState
 			boyfriend = new Boyfriend(911, 610, 'bf-pixel');
 			gf = new Character(675, 402, 'gf-pixel');
 
+			iconP1.changeIcon('bf-pixel');
+			iconP2.changeIcon('monika');
+
 			add(gf);
 			add(boyfriend);
 			add(dad);
@@ -4503,9 +4506,12 @@ class PlayState extends MusicBeatState
 			remove(boyfriend);
 			remove(dad);
 			remove(gf);
-			dad = new Character(100, 160, 'monika-real');
-			boyfriend = new Boyfriend(770, 450, 'bf');
-			gf = new Character(400, 130, 'gf');
+			dad = new Character(100, 160, SONG.player2);
+			boyfriend = new Boyfriend(770, 450, SONG.player1);
+			gf = new Character(400, 130, SONG.gfVersion);
+
+			iconP1.changeIcon(SONG.player1);
+			iconP2.changeIcon(SONG.player2);
 
 			boyfriend.color = 0x828282;
 			dad.color = 0x828282;
