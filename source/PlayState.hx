@@ -1090,11 +1090,13 @@ class PlayState extends MusicBeatState
 		laneunderlayOpponent.alpha = 1 - FlxG.save.data.laneTransparency;
 		laneunderlayOpponent.scrollFactor.set();
 		laneunderlayOpponent.screenCenter(Y);
+		laneunderlayOpponent.visible = false;
 
 		laneunderlay = new FlxSprite(70 + (FlxG.width / 2), 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
 		laneunderlay.alpha = 1 - FlxG.save.data.laneTransparency;
 		laneunderlay.scrollFactor.set();
 		laneunderlay.screenCenter(Y);
+		laneunderlay.visible = false;
 
 		if (FlxG.save.data.laneUnderlay)
 		{
@@ -1964,6 +1966,12 @@ class PlayState extends MusicBeatState
 
 	private function generateStaticArrows(player:Int):Void
 	{
+		if (FlxG.save.data.laneUnderlay)
+		{
+			laneunderlayOpponent.visible = true;
+			laneunderlay.visible = true;
+		}
+
 		for (i in 0...4)
 		{
 			// FlxG.log.add(i);
