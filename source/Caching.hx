@@ -95,7 +95,9 @@ class Caching extends MusicBeatState
 
 		add(kadeLogo);
 		add(text);
-		add(disableText);
+
+		if (!afterBoot)
+			add(disableText);
 
 		#if FEATURE_MULTITHREADING
 		// update thread
@@ -140,7 +142,7 @@ class Caching extends MusicBeatState
 
 	override function update(elapsed)
 	{
-		if (FlxG.keys.justPressed.D)
+		if (FlxG.keys.justPressed.D && !afterBoot)
 		{
 			trace('disabled caching for next time');
 			FlxG.save.data.cacheCharacters = false;
