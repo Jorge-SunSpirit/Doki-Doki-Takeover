@@ -2057,6 +2057,8 @@ class PlayState extends MusicBeatState
 			switch (player)
 			{
 				case 0:
+					if (FlxG.save.data.middleScroll)
+						babyArrow.visible = false;
 					cpuStrums.add(babyArrow);
 				case 1:
 					playerStrums.add(babyArrow);

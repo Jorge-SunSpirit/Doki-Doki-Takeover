@@ -209,6 +209,8 @@ class DialogueBox extends FlxSpriteGroup
 	var dialogueOpened:Bool = false;
 	var dialogueStarted:Bool = false;
 
+	var stopspamming:Bool = false;
+
 	override function update(elapsed:Float)
 	{
 		switch (PlayState.SONG.noteStyle)
@@ -232,8 +234,9 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (FlxG.keys.justPressed.ESCAPE)
+		if (FlxG.keys.justPressed.ESCAPE && !stopspamming)
 			{
+				stopspamming = true;
 				remove(dialogue);
 				dialogueStarted = false;
 				isEnding = true;
