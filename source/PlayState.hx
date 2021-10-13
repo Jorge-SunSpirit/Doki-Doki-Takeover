@@ -134,6 +134,7 @@ class PlayState extends MusicBeatState
 	public static var strumLineNotes:FlxTypedGroup<FlxSprite> = null;
 	public static var playerStrums:FlxTypedGroup<FlxSprite> = null;
 	public static var cpuStrums:FlxTypedGroup<FlxSprite> = null;
+	var isPixelUI:Bool = false;
 
 	private var camZooming:Bool = false;
 	private var camFocus:Bool = true;
@@ -265,6 +266,8 @@ class PlayState extends MusicBeatState
 	override public function create()
 	{
 		instance = this;
+
+		isPixelUI = SONG.noteStyle.startsWith('pixel');
 		
 		if (FlxG.save.data.fpsCap > 290)
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(800);
@@ -2078,7 +2081,7 @@ class PlayState extends MusicBeatState
 			}
 
 			babyArrow.animation.play('static');
-			switch (SONG.noteStyle)
+			switch (noteStyle)
 			{
 				case 'pixel':
 					babyArrow.x += 101;
@@ -2966,7 +2969,7 @@ class PlayState extends MusicBeatState
 							{
 								spr.animation.play('confirm', true);
 							}
-							if (spr.animation.curAnim.name == 'confirm' && !SONG.noteStyle.startsWith('pixel'))
+							if (spr.animation.curAnim.name == 'confirm' && !isPixelUI)
 							{
 								spr.centerOffsets();
 								spr.offset.x -= 13;
@@ -3299,7 +3302,7 @@ class PlayState extends MusicBeatState
 	var timeShown = 0;
 	var currentTimingShown:FlxText = null;
 
-	var pixelShitPart1:String = "";
+	var pixelShitPart1:String = '';
 	var pixelShitPart2:String = '';
 
 	private function popUpScore(daNote:Note):Void
@@ -3391,10 +3394,15 @@ class PlayState extends MusicBeatState
 					daRating = 'bad';
 			 */
 	
-			if (SONG.noteStyle == 'pixel')
+			if (isPixelUI)
 			{
 				pixelShitPart1 = 'weeb/pixelUI/';
 				pixelShitPart2 = '-pixel';
+			}
+			else
+			{
+				pixelShitPart1 = '';
+				pixelShitPart2 = '';
 			}
 	
 			rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
@@ -3433,7 +3441,7 @@ class PlayState extends MusicBeatState
 			currentTimingShown.borderColor = FlxColor.BLACK;
 			currentTimingShown.text = msTiming + "ms";
 			currentTimingShown.size = 20;
-			currentTimingShown.antialiasing = !SONG.noteStyle.startsWith('pixel');
+			currentTimingShown.antialiasing = !isPixelUI;
 
 			if (msTiming >= 0.03 && offsetTesting)
 			{
@@ -3479,7 +3487,7 @@ class PlayState extends MusicBeatState
 			currentTimingShown.velocity.x += comboSpr.velocity.x;
 			if(!FlxG.save.data.botplay) add(rating);
 	
-			if (!curStage.startsWith('school'))
+			if (!isPixelUI)
 			{
 				rating.setGraphicSize(Std.int(rating.width * 0.7));
 				rating.antialiasing = true;
@@ -3522,7 +3530,7 @@ class PlayState extends MusicBeatState
 				numScore.y = rating.y + 100;
 				numScore.cameras = [camHUD];
 
-				if (!curStage.startsWith('school'))
+				if (!isPixelUI)
 				{
 					numScore.antialiasing = true;
 					numScore.setGraphicSize(Std.int(numScore.width * 0.5));
@@ -3779,7 +3787,7 @@ class PlayState extends MusicBeatState
 					if (!holdArray[spr.ID])
 						spr.animation.play('static');
 		 
-					if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
+					if (spr.animation.curAnim.name == 'confirm' && !isPixelUI)
 					{
 						spr.centerOffsets();
 						spr.offset.x -= 13;
@@ -4506,6 +4514,7 @@ class PlayState extends MusicBeatState
 			add(dad);
 
 			// thank u bbpanzu/Sunday mod!
+			isPixelUI = true;
 			remove(strumLineNotes);
 			strumLineNotes = new FlxTypedGroup<FlxSprite>();
 			strumLineNotes.cameras = [camHUD];
@@ -4513,9 +4522,6 @@ class PlayState extends MusicBeatState
 
 			generateStaticArrows(0, 'pixel', false);
 			generateStaticArrows(1, 'pixel', false);
-
-			pixelShitPart1 = 'weeb/pixelUI/';
-			pixelShitPart2 = '-pixel';
 
 			fgTrees.visible = true;
 			bgSky.visible = true;
@@ -4562,6 +4568,7 @@ class PlayState extends MusicBeatState
 			add(boyfriend);
 			add(dad);
 
+			isPixelUI = false;
 			remove(strumLineNotes);
 			strumLineNotes = new FlxTypedGroup<FlxSprite>();
 			strumLineNotes.cameras = [camHUD];
@@ -4569,9 +4576,6 @@ class PlayState extends MusicBeatState
 
 			generateStaticArrows(0, SONG.noteStyle, false);
 			generateStaticArrows(1, SONG.noteStyle, false);
-
-			pixelShitPart1 = '';
-			pixelShitPart2 = '';
 
 			fgTrees.visible = false;
 			bgSky.visible = false;
