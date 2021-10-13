@@ -1281,7 +1281,7 @@ class PlayState extends MusicBeatState
 
 				case 'beathoven (natsuki mix)':
 					introcutscene(doof);
-				case 'crucify  (yuri mix)':
+				case 'crucify (yuri mix)':
 					introcutscene(doof);
 				case "it's complicated (sayori mix)":
 					introcutscene(doof);
