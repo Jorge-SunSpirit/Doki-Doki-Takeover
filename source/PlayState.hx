@@ -1894,7 +1894,7 @@ class PlayState extends MusicBeatState
 		{
 			var noteStyle:String = SONG.noteStyle;
 
-			if (section.altAnim && curStage == "dokiglitcher")
+			if (section.altAnim && curStage == "dokiglitcher" && FlxG.save.data.distractions)
 				noteStyle = 'pixel';
 
 			var coolSection:Int = Std.int(section.lengthInSteps / 4);
@@ -2662,14 +2662,12 @@ class PlayState extends MusicBeatState
 								camFollow.y = boyfriend.getMidpoint().y - 200;
 							case 'dokiglitcher':
 								if (boyfriend.curCharacter == 'bf-pixel')
-									{
-										camFollow.x = boyfriend.getMidpoint().x - 200;
-										camFollow.y = boyfriend.getMidpoint().y - 200;
-									}
+								{
+									camFollow.x = boyfriend.getMidpoint().x - 200;
+									camFollow.y = boyfriend.getMidpoint().y - 200;
+								}
 								else
-									{
-										camFollow.y = boyfriend.getMidpoint().y - 200;
-									}		
+									camFollow.y = boyfriend.getMidpoint().y - 200;
 						}
 					}
 			}
@@ -4129,9 +4127,9 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (midsongcutscene == true)
+		if (midsongcutscene)
 			{
-				if (SONG.song.toLowerCase() == 'my confession')
+				if (curSong.toLowerCase() == 'my confession')
 					{
 						switch (curStep)
 						{
@@ -4187,7 +4185,7 @@ class PlayState extends MusicBeatState
 						}
 					}
 
-				if (SONG.song.toLowerCase() == 'deep breaths')
+				if (curSong.toLowerCase() == 'deep breaths')
 					{
 						switch (curStep)
 							{
@@ -4200,7 +4198,7 @@ class PlayState extends MusicBeatState
 							}
 					}
 		
-				if (SONG.song.toLowerCase() == 'your demise')
+				if (curSong.toLowerCase() == 'your demise')
 					{
 						switch (curStep)
 						{
@@ -4213,20 +4211,16 @@ class PlayState extends MusicBeatState
 									{
 										whiteflash.alpha -= 0.15;
 										if (whiteflash.alpha > 0)
-											{
-												tmr.reset(0.03);
-											}
-											else
-												{
-													remove(whiteflash);
-												}
+											tmr.reset(0.03);
+										else
+											remove(whiteflash);
 									});
 							
 							case 889:
 								FlxG.camera.fade(FlxColor.BLACK, 2, false);
 						}
 					}
-				if (SONG.song.toLowerCase() == 'glitcher (monika mix)')
+				if (curSong.toLowerCase().startsWith('glitcher') && FlxG.save.data.distractions)
 					{
 						switch (curStep)
 							{
@@ -4319,139 +4313,140 @@ class PlayState extends MusicBeatState
 			gf.dance();
 		}
 
-		if (curSong.toLowerCase() == 'baka' && midsongcutscene && FlxG.save.data.distractions)
+		if (midsongcutscene)
 		{
-			switch (curBeat)
+			if (curSong.toLowerCase() == 'baka' && FlxG.save.data.distractions)
 			{
-				case 16:
-					bakaOverlay.visible = true;
-					bakaOverlay.alpha = 0;
-					new FlxTimer().start(0.2, function(tmr:FlxTimer)
-					{
-						bakaOverlay.alpha += 0.1;
-	
-						if (bakaOverlay.alpha < 1)
-							tmr.reset(0.2);
-					});
-				case 32:
-					bakaOverlay.animation.play('party rock is', true);
-					defaultCamZoom = 0.9;
-				case 48:
-					defaultCamZoom = 0.75;
-					camGame.shake(0.002, (Conductor.stepCrochet / 32));
-				case 112 | 264:
-					bakaOverlay.alpha = 1;
-					new FlxTimer().start(0.2, function(tmr:FlxTimer)
-					{
-						bakaOverlay.alpha -= 0.1;
+				switch (curBeat)
+				{
+					case 16:
+						bakaOverlay.visible = true;
+						bakaOverlay.alpha = 0;
+						new FlxTimer().start(0.2, function(tmr:FlxTimer)
+						{
+							bakaOverlay.alpha += 0.1;
 
-						if (bakaOverlay.alpha > 0)
-							tmr.reset(0.2);
-					});
-				case 144:
-					bakaOverlay.animation.play('normal', true);	
-					bakaOverlay.alpha = 0;
-					new FlxTimer().start(0.2, function(tmr:FlxTimer)
-					{
-						bakaOverlay.alpha += 0.1;
+							if (bakaOverlay.alpha < 1)
+								tmr.reset(0.2);
+						});
+					case 32:
+						bakaOverlay.animation.play('party rock is', true);
+						defaultCamZoom = 0.9;
+					case 48:
+						defaultCamZoom = 0.75;
+						camGame.shake(0.002, (Conductor.stepCrochet / 32));
+					case 112 | 264:
+						bakaOverlay.alpha = 1;
+						new FlxTimer().start(0.2, function(tmr:FlxTimer)
+						{
+							bakaOverlay.alpha -= 0.1;
 
-						if (bakaOverlay.alpha < 1)
-							tmr.reset(0.2);
-					});
-				case 176:
-					bakaOverlay.animation.play('party rock is', true);
+							if (bakaOverlay.alpha > 0)
+								tmr.reset(0.2);
+						});
+					case 144:
+						bakaOverlay.animation.play('normal', true);
+						bakaOverlay.alpha = 0;
+						new FlxTimer().start(0.2, function(tmr:FlxTimer)
+						{
+							bakaOverlay.alpha += 0.1;
+
+							if (bakaOverlay.alpha < 1)
+								tmr.reset(0.2);
+						});
+					case 176:
+						bakaOverlay.animation.play('party rock is', true);
+				}
+			}
+
+			if (curSong.toLowerCase() == 'deep breaths' && FlxG.save.data.distractions)
+			{
+				switch (curBeat)
+				{
+					case 104:
+						sparkleBG.visible = true;
+						add(sparkleFG);
+						add(pinkOverlay);
+					case 200:
+						sparkleBG.alpha = 1;
+						sparkleFG.alpha = 1;
+						pinkOverlay.alpha = 0.2;
+						new FlxTimer().start(0.2, function(tmr:FlxTimer)
+						{
+							sparkleBG.alpha -= 0.1;
+							sparkleFG.alpha -= 0.1;
+							pinkOverlay.alpha -= 0.02;
+
+							if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
+								tmr.reset(0.2);
+						});
+					case 232:
+						sparkleBG.alpha = 1;
+						sparkleFG.alpha = 1;
+						pinkOverlay.alpha = 0.2;
+					case 288:
+						sparkleBG.alpha = 1;
+						sparkleFG.alpha = 1;
+						pinkOverlay.alpha = 0.2;
+						new FlxTimer().start(0.35, function(tmr:FlxTimer)
+						{
+							sparkleBG.alpha -= 0.1;
+							sparkleFG.alpha -= 0.1;
+							pinkOverlay.alpha -= 0.02;
+
+							if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
+								tmr.reset(0.35);
+						});
+				}
+			}
+
+			if (curSong.toLowerCase() == 'obsession')
+			{
+				switch (curBeat)
+				{
+					case 119:
+						camZooming = false;
+						FlxTween.tween(FlxG.camera, {zoom: 1.5}, 10, {ease: FlxEase.linear});
+						staticshock.visible = true;
+						staticshock.alpha = 0;
+						new FlxTimer().start(1, function(tmr:FlxTimer)
+						{
+							staticshock.alpha += 0.1;
+
+							if (staticshock.alpha < 1)
+								tmr.reset(1);
+						});
+					case 134:
+						add(whiteflash);
+						add(blackScreen);
+						FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
+					case 136:
+						// shit gets serious
+						yuriGoCrazy();
+					case 140:
+						remove(blackScreen);
+						staticshock.alpha = 0.1;
+
+						new FlxTimer().start(0.1, function(tmr:FlxTimer)
+						{
+							whiteflash.alpha -= 0.15;
+
+							if (whiteflash.alpha > 0.15)
+								tmr.reset(0.1);
+						});
+						// case what ever when Yuri right before yuri laughing, do an abrupt cut to black if you could
+				}
+			}
+
+			if (curSong.toLowerCase() == 'epiphany')
+			{
+				switch (curBeat)
+				{
+					case 785:
+						FlxG.camera.fade(FlxColor.BLACK, 1, false);
+				}
 			}
 		}
-
-		if (curSong.toLowerCase() == 'deep breaths' && midsongcutscene && FlxG.save.data.distractions)
-		{
-			switch (curBeat)
-			{
-				case 104:
-					sparkleBG.visible = true;
-					add(sparkleFG);
-					add(pinkOverlay);
-				case 200:
-					sparkleBG.alpha = 1;
-					sparkleFG.alpha = 1;
-					pinkOverlay.alpha = 0.2;
-					new FlxTimer().start(0.2, function(tmr:FlxTimer)
-					{
-						sparkleBG.alpha -= 0.1;
-						sparkleFG.alpha -= 0.1;
-						pinkOverlay.alpha -= 0.02;
-
-						if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
-							tmr.reset(0.2);
-					});
-				case 232:
-					sparkleBG.alpha = 1;
-					sparkleFG.alpha = 1;
-					pinkOverlay.alpha = 0.2;
-				case 288:
-					sparkleBG.alpha = 1;
-					sparkleFG.alpha = 1;
-					pinkOverlay.alpha = 0.2;
-					new FlxTimer().start(0.35, function(tmr:FlxTimer)
-					{
-						sparkleBG.alpha -= 0.1;
-						sparkleFG.alpha -= 0.1;
-						pinkOverlay.alpha -= 0.02;
-
-						if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
-							tmr.reset(0.35);
-					});
-			}
-		}
-
-		if (curSong.toLowerCase() == 'obsession' && midsongcutscene)
-		{
-			switch (curBeat)
-			{
-				case 119:
-					camZooming = false;
-					FlxTween.tween(FlxG.camera, {zoom: 1.5}, 10, {ease: FlxEase.linear});
-					staticshock.visible = true;
-					staticshock.alpha = 0;
-					new FlxTimer().start(1, function(tmr:FlxTimer)
-					{
-						staticshock.alpha += 0.1;
-	
-						if (staticshock.alpha < 1)
-							tmr.reset(1);
-					});
-				case 134:
-					add(whiteflash);
-					add(blackScreen);
-					FlxG.sound.play(Paths.sound('Lights_Shut_off'), 0.7);
-				case 136:
-					// shit gets serious
-					yuriGoCrazy();
-				case 140:
-					remove(blackScreen);
-					staticshock.alpha = 0.1;
-
-					new FlxTimer().start(0.1, function(tmr:FlxTimer)
-					{
-						whiteflash.alpha -= 0.15;
-
-						if (whiteflash.alpha > 0.15)
-							tmr.reset(0.1);
-					});
-				//case what ever when Yuri right before yuri laughing, do an abrupt cut to black if you could
-			}
-		}
-
-		/*
-		if (curSong.toLowerCase() == 'epiphany')
-		{
-			switch (curBeat)
-			{
-				case 785:
-					FlxG.camera.fade(FlxColor.BLACK, 1, false);
-			}
-		}
-		*/
 
 		if (curSong.toLowerCase() == "bara no yume" || curSong.toLowerCase() == "poems n thorns")
 			bgGirls.dance();
