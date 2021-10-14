@@ -2,10 +2,11 @@
 <TextureAtlas imagePath="sayo_dialogue.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="sayo_ehh" x="10" y="10" width="500" height="500"/>
-	<SubTexture name="sayo_grumpy" x="520" y="10" width="500" height="500"/>
-	<SubTexture name="sayo_happ" x="1030" y="10" width="500" height="500"/>
-	<SubTexture name="sayo_ooh" x="10" y="520" width="500" height="500"/>
-	<SubTexture name="sayo_yeah" x="520" y="520" width="500" height="500"/>
-	<SubTexture name="sayoneutral" x="1030" y="520" width="500" height="500"/>
+	<SubTexture name="sayo_concern" x="10" y="10" width="500" height="500"/>
+	<SubTexture name="sayo_ehh" x="520" y="10" width="500" height="500"/>
+	<SubTexture name="sayo_grumpy" x="1030" y="10" width="500" height="500"/>
+	<SubTexture name="sayo_happ" x="10" y="520" width="500" height="500"/>
+	<SubTexture name="sayo_ooh" x="520" y="520" width="500" height="500"/>
+	<SubTexture name="sayo_yeah" x="1030" y="520" width="500" height="500"/>
+	<SubTexture name="sayoneutral" x="10" y="1030" width="500" height="500"/>
 </TextureAtlas>

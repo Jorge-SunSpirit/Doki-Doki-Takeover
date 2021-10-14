@@ -1081,7 +1081,7 @@ class PlayState extends MusicBeatState
 			// FlxG.watch.addQuick('Queued',inputsQueued);
 		}
 
-		var doof:DialogueBox = new DialogueBox(false, dialogue);
+		doof = new DialogueBox(false, dialogue);
 		// doof.x += 70;
 		// doof.y = FlxG.height * 0.5;
 		doof.scrollFactor.set();
@@ -1091,9 +1091,9 @@ class PlayState extends MusicBeatState
 		doof2.scrollFactor.set();
 		doof2.finishThing = postdialoguecutscene;
 
-		doof3 = new DialogueBox(false, extra2);
+		doof3 = new DialogueBox(true, extra3);
 		doof3.scrollFactor.set();
-		//doof3.finishThing = demiseendtwotwo;
+		doof3.finishThing = endSong;
 
 		doof4 = new DialogueBox(false, extra3);
 		doof4.scrollFactor.set();
@@ -1380,35 +1380,34 @@ class PlayState extends MusicBeatState
 		
 	function endcutscene(?dialogueBox:DialogueBox):Void
 		{
-			switch(curSong.toLowerCase())
-				{
-					case "your demise":
-						{
-							camZooming = false;
-							inCutscene = true;
-							startedCountdown = false;
-							generatedMusic = false;
-							canPause = false;
-							FlxG.sound.music.pause();
-							vocals.pause();
-							vocals.stop();
-							//FlxG.sound.music.stop();
-							remove(strumLineNotes);
-							remove(scoreTxt);
-							remove(replayTxt);
-							remove(botPlayState);
-							remove(healthBarBG);
-							remove(healthBar);
-							remove(iconP1);
-							remove(iconP2);
-							remove(kadeEngineWatermark);
-							remove(songPosBG);
-							remove(songPosBar);
-							remove(songName);
-							remove(laneunderlayOpponent);
-							remove(laneunderlay);
-						}
-				}
+
+				if (curSong.toLowerCase() == "your demise")
+					{
+						camZooming = false;
+						inCutscene = true;
+						startedCountdown = false;
+						generatedMusic = false;
+						canPause = false;
+						FlxG.sound.music.pause();
+						vocals.pause();
+						vocals.stop();
+						//FlxG.sound.music.stop();
+						remove(strumLineNotes);
+						remove(scoreTxt);
+						remove(replayTxt);
+						remove(botPlayState);
+						remove(healthBarBG);
+						remove(healthBar);
+						remove(iconP1);
+						remove(iconP2);
+						remove(kadeEngineWatermark);
+						remove(songPosBG);
+						remove(songPosBar);
+						remove(songName);
+						remove(laneunderlayOpponent);
+						remove(laneunderlay);
+					}
+					
 					inCutscene = true;
 					camZooming = false;
 					startedCountdown = false;
@@ -1527,6 +1526,8 @@ class PlayState extends MusicBeatState
 				{
 					var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 					black.scrollFactor.set();
+
+
 		
 					switch (SONG.song.toLowerCase())
 						{
@@ -1550,7 +1551,7 @@ class PlayState extends MusicBeatState
 		
 							case "bara no yume":
 								{
-									FlxG.sound.play(Paths.sound('ANGRY'));
+									FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
 									dad.playAnim('cutsceneidle');
 									remove(black);
 		
@@ -3112,9 +3113,11 @@ class PlayState extends MusicBeatState
 					case 'your demise':
 						endcutscene(doof2);
 					case 'my confession':
-						endcutscene(doof4);
+						DialogueBox.isPixel = true;
+						endcutscene(doof3);
 					case 'baka':
-						endcutscene(doof4);
+						DialogueBox.isPixel = true;
+						endcutscene(doof3);
 					case 'obsession':
 						endcutscene(doof4);
 					case 'glitcher (monika mix)':
