@@ -152,23 +152,23 @@ class DialogueBox extends FlxSpriteGroup
 
 			if (PlayState.SONG.noteStyle == 'pixel' || isPixel)
 				{
-					dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
+					dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.8), "", 32);
 					dropText.font = LangUtil.getFont('pixel');
 					dropText.color = 0xFFD89494;
 					add(dropText);
 
-					swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
+					swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.8), "", 32);
 					swagDialogue.font = LangUtil.getFont('pixel');
 					swagDialogue.color = 0xFF3F2021;
-					swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+					swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
 					add(swagDialogue);
 				}
 			else
 				{
-					swagDialogue = new FlxTypeText(220, 520, Std.int(FlxG.width * 0.67), "", 28);
+					swagDialogue = new FlxTypeText(220, 520, Std.int(FlxG.width * 0.87), "", 28);
 					swagDialogue.font = LangUtil.getFont('aller');
 					swagDialogue.color = 0xFFFFFFFF;
-					swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.3)];
+					swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
 					swagDialogue.setBorderStyle(OUTLINE, FlxColor.BLACK, 1, 1);
 					swagDialogue.antialiasing = true;
 					add(swagDialogue);
@@ -472,7 +472,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					//Yuri animations
 					case 'yuri_neutral':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('yuri');
 						if (!portraitLeft.visible)
@@ -484,7 +484,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'yuri_ehh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('yuri');
 						if (!portraitLeft.visible)
@@ -496,7 +496,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'yuri_blush':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('yuri');
 						if (!portraitLeft.visible)
@@ -508,7 +508,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'yuri_crazy':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('yuri');
 						if (!portraitLeft.visible)
@@ -520,7 +520,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'yuri_smile':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('yuri');
 						if (!portraitLeft.visible)
@@ -532,7 +532,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'yuri_ahh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('yuri');
 						if (!portraitLeft.visible)
@@ -546,7 +546,7 @@ class DialogueBox extends FlxSpriteGroup
 					
 					//Natsuki animations
 					case 'natsuki_neutral':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('natsuki');
 						if (!portraitLeft.visible)
@@ -558,7 +558,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'natsuki_angy':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('natsuki');
 						if (!portraitLeft.visible)
@@ -570,7 +570,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'natsuki_hmmph':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('natsuki');
 						if (!portraitLeft.visible)
@@ -582,7 +582,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'natsuki_what':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('natsuki');
 						if (!portraitLeft.visible)
@@ -594,7 +594,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'natsuki_wah':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('natsuki');
 						if (!portraitLeft.visible)
@@ -608,7 +608,7 @@ class DialogueBox extends FlxSpriteGroup
 					
 					//Sayori animations
 					case 'sayori_neutral':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('sayori');
 						if (!portraitLeft.visible)
@@ -620,7 +620,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'sayori_happ':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('sayori');
 						if (!portraitLeft.visible)
@@ -632,7 +632,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'sayori_ehh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('sayori');
 						if (!portraitLeft.visible)
@@ -644,7 +644,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'sayori_grumpy':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('sayori');
 						if (!portraitLeft.visible)
@@ -656,7 +656,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'sayori_ooh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('sayori');
 						if (!portraitLeft.visible)
@@ -668,7 +668,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'sayori_yeah':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('sayori');
 						if (!portraitLeft.visible)
@@ -680,7 +680,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'sayori_concern':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('sayori');
 						if (!portraitLeft.visible)
@@ -694,7 +694,7 @@ class DialogueBox extends FlxSpriteGroup
 
 					//Monika anims
 					case 'monika_neutral':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('monika');
 						if (!portraitLeft.visible)
@@ -706,7 +706,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'monika_upset':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('monika');
 						if (!portraitLeft.visible)
@@ -718,7 +718,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'monika_eeh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('monika');
 						if (!portraitLeft.visible)
@@ -730,7 +730,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'monika_ahh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('monika');
 						if (!portraitLeft.visible)
@@ -742,7 +742,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = false;
 						}
 					case 'monika_ahaha':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('MoniText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('monika');
 						if (!portraitLeft.visible)
@@ -756,7 +756,7 @@ class DialogueBox extends FlxSpriteGroup
 
 					//MC animations wait I mean senpai
 					case 'mc_neutral':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('mc');
 						if (!portraitRight.visible)
@@ -767,7 +767,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'mc_camera':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('mc');
 						if (!portraitRight.visible)
@@ -778,7 +778,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'mc_happy':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('mc');
 						if (!portraitRight.visible)
@@ -789,7 +789,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'mc_sigh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('mc');
 						if (!portraitRight.visible)
@@ -802,7 +802,7 @@ class DialogueBox extends FlxSpriteGroup
 
 					//Boyfriend animations
 					case 'bf_neutral':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('bf');
 						if (!portraitRight.visible)
@@ -813,7 +813,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'bf_beep':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('bf');
 						if (!portraitRight.visible)
@@ -824,7 +824,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'bf_yeah':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('bf');
 						if (!portraitRight.visible)
@@ -835,7 +835,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'bf_yeah_left':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.8)];
 						portraitLeft.visible = false;
 						box.animation.play('bf');
 						if (!portraitLeft.visible)
@@ -847,7 +847,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.flipX = true;
 						}
 					case 'bf_think':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('bf');
 						if (!portraitRight.visible)
@@ -858,7 +858,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'bf_scared':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('bf');
 						if (!portraitRight.visible)
@@ -872,7 +872,7 @@ class DialogueBox extends FlxSpriteGroup
 
 					//GF animations
 					case 'gf_neutral':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('gf');
 						if (!portraitRight.visible)
@@ -883,7 +883,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'gf_giggle':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('gf');
 						if (!portraitRight.visible)
@@ -894,7 +894,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'gf_scared':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('gf');
 						if (!portraitRight.visible)
@@ -905,7 +905,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'gf_yeah':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('gf');
 						if (!portraitRight.visible)
@@ -916,7 +916,7 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.play('play');
 						}
 					case 'gf_ehh':
-						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.3)];
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.8)];
 						portraitRight.visible = false;
 						box.animation.play('gf');
 						if (!portraitRight.visible)
