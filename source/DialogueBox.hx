@@ -12,6 +12,7 @@ import flixel.tweens.FlxEase;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.addons.effects.chainable.FlxGlitchEffect;
+import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
@@ -940,7 +941,15 @@ class DialogueBox extends FlxSpriteGroup
 							FlxG.sound.music.fadeOut(0.5, 0);
 						enddialogue();
 					case 'glitch':
-						//Fuck glitch, I have no idea how to approach this atm
+						/*
+						glitch = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
+						glitch.apply(OpenFlAssets.getBitmapData(Paths.image('dialogue/Text_Boxes', 'doki')));
+						glitch.active = true;
+						new FlxTimer().start(5, function(tmr:FlxTimer)
+						{
+							glitch.active = false;
+						});
+						*/
 
 					case 'autoskip':
 						canSkip = false;
@@ -953,7 +962,13 @@ class DialogueBox extends FlxSpriteGroup
 					case 'hideleft':
 						portraitLeft.visible = false;
 						enddialogue();
-						
+					
+					case 'crash':
+						#if FEATURE_FILESYSTEM
+						Sys.exit(0);
+						#else
+						//MAKE THIS "CRASH" ON OTHER PLATFORMS by going to blank state
+						#end
 						
 				}
 			}
