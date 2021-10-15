@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.text.FlxTypeText;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.FlxKeyManager;
@@ -967,7 +968,9 @@ class DialogueBox extends FlxSpriteGroup
 						#if FEATURE_FILESYSTEM
 						Sys.exit(0);
 						#else
-						//MAKE THIS "CRASH" ON OTHER PLATFORMS by going to blank state
+						FlxTransitionableState.skipNextTransOut = true;
+						FlxTransitionableState.skipNextTransIn = true;
+						FlxG.switchState(new BlankState());
 						#end
 						
 				}
