@@ -24,6 +24,7 @@ class DialogueBox extends FlxSpriteGroup
 	var dialogue:Alphabet;
 	var dialogueList:Array<String> = [];
 	public static var isPixel:Bool = false;
+	var canSkip:Bool = true;
 
 	// SECOND DIALOGUE FOR THE PIXEL SHIT INSTEAD???
 	var swagDialogue:FlxTypeText;
@@ -215,14 +216,14 @@ class DialogueBox extends FlxSpriteGroup
 
 		if (FlxG.keys.justPressed.ESCAPE && !stopspamming)
 			{
+				isEnding = true;
 				stopspamming = true;
 				remove(dialogue);
 				dialogueStarted = false;
-				isEnding = true;
 				endinstantly();
 			}
 
-		if (FlxG.keys.justPressed.ANY && !FlxG.keys.justPressed.ESCAPE && dialogueStarted == true)
+		if (FlxG.keys.justPressed.ANY && dialogueStarted && canSkip)
 		{
 					remove(dialogue);
 						
@@ -235,8 +236,9 @@ class DialogueBox extends FlxSpriteGroup
 
 	function endinstantly()
 		{
-			dialogueList.remove(dialogueList[0]);
+			canSkip = false;
 			isEnding = true;
+			dialogueList.remove(dialogueList[0]);
 
 			if (FlxG.sound.music != null)
 				FlxG.sound.music.fadeOut(0.5, 0);
@@ -265,10 +267,12 @@ class DialogueBox extends FlxSpriteGroup
 
 	function enddialogue()
 		{
+			canSkip = true;
 			if (dialogueList[1] == null && dialogueList[0] != null)
 				{
 					if (!isEnding)
 					{
+						canSkip = false;
 						isEnding = true;
 
 						if (FlxG.sound.music != null)
@@ -937,6 +941,10 @@ class DialogueBox extends FlxSpriteGroup
 						enddialogue();
 					case 'glitch':
 						//Fuck glitch, I have no idea how to approach this atm
+
+					case 'autoskip':
+						canSkip = false;
+						swagDialogue.completeCallback = enddialogue;
 
 					case 'hideright':
 						portraitRight.visible = false;

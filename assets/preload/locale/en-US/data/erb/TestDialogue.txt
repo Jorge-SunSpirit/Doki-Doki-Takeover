@@ -1,5 +1,6 @@
 :startmusic:cutscene_jargon_shmargon
 :yuri_neutral:Yuri's neutral expression
+:autoskip:Test yes hello AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 :yuri_ehh:Yuri's ehh expression
 :yuri_blush:Yuri do be blushin tho
 :yuri_crazy:Damn that Yuri is crazy
