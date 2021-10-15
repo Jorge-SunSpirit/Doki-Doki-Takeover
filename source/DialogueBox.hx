@@ -309,9 +309,11 @@ class DialogueBox extends FlxSpriteGroup
 		}
 
 	var isEnding:Bool = false;
+	var isCommand:Bool = false;
 
 	function startDialogue():Void
 	{
+		isCommand = false;
 		cleanDialog();
 
 		swagDialogue.resetText(dialogueList[0]);
@@ -942,6 +944,7 @@ class DialogueBox extends FlxSpriteGroup
 							FlxG.sound.music.fadeOut(0.5, 0);
 						enddialogue();
 					case 'glitch':
+						isCommand = true;
 						/*
 						glitch = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
 						glitch.apply(OpenFlAssets.getBitmapData(Paths.image('dialogue/Text_Boxes', 'doki')));
@@ -970,12 +973,14 @@ class DialogueBox extends FlxSpriteGroup
 						#else
 						FlxTransitionableState.skipNextTransOut = true;
 						FlxTransitionableState.skipNextTransIn = true;
-						FlxG.switchState(new BlankState());
+						FlxG.switchState(new CrashState());
 						#end
 						
 				}
 			}
-					
+
+		if (dialogueList[0] == '' && !isCommand)
+			enddialogue();
 	}
 
 	function cleanDialog():Void
@@ -983,6 +988,5 @@ class DialogueBox extends FlxSpriteGroup
 		var splitName:Array<String> = dialogueList[0].split(":");
 		curCharacter = splitName[1];
 		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
-
 	}
 }
