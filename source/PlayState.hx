@@ -4352,10 +4352,14 @@ class PlayState extends MusicBeatState
 						});
 					case 32:
 						bakaOverlay.animation.play('party rock is', true);
-						defaultCamZoom = 0.9;
-					case 48:
-						defaultCamZoom = 0.75;
+						defaultCamZoom = 1.2;
 						camGame.shake(0.002, (Conductor.stepCrochet / 32));
+					case 40:
+						camFocus = false;
+						camFollow.setPosition(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
+					case 48:
+						camFocus = true;
+						defaultCamZoom = 0.75;
 					case 112 | 264:
 						bakaOverlay.alpha = 1;
 						new FlxTimer().start(0.2, function(tmr:FlxTimer)
