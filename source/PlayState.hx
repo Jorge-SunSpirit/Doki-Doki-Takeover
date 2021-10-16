@@ -855,6 +855,37 @@ class PlayState extends MusicBeatState
 	
 
 				}
+			case 'clubroomevil':
+				{
+						curStage = 'clubroomevil';
+
+						defaultCamZoom = 0.8;
+						var scale = 1;
+						var posX = -250;
+						var posY = -167;
+
+						var spaceBG:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, 0xFF220707);
+						add(spaceBG);
+						spaceBG.scrollFactor.set();
+
+						space = new FlxBackdrop(Paths.image('bigmonika/Sky', 'doki'), 0.1, 0.1);
+						space.velocity.set(-10, 0);
+						space.antialiasing = false;
+						//space.scale.set(1.65, 1.65);
+						add(space);
+
+						var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('bigmonika/BG', 'doki'));
+						bg.antialiasing = false;
+						//bg.scale.set(2.3, 2.3);
+						bg.scrollFactor.set(0.4, 0.6);
+						add(bg);
+
+						var stageFront:FlxSprite = new FlxSprite(-332, -77).loadGraphic(Paths.image('bigmonika/FG', 'doki'));
+						stageFront.antialiasing = false;
+						//stageFront.scale.set(1.5, 1.5);
+						stageFront.scrollFactor.set(1, 1);
+						add(stageFront);
+				}
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -987,6 +1018,10 @@ class PlayState extends MusicBeatState
 			case 'monika-real':
 				camPos.x += 400;
 				dad.y += 60;
+			case 'bigmonika':
+				dad.x += 0;
+				dad.y += 0;
+				camPos.set(dad.getGraphicMidpoint().x - 100, dad.getGraphicMidpoint().y - 200);
 			}
 
 
@@ -1036,6 +1071,12 @@ class PlayState extends MusicBeatState
 					gf.x += 0;
 					gf.y += 0;	
 				}
+			case 'clubroomevil':
+				dad.x = 16;
+				dad.y = -139; 
+				boyfriend.x = 16;
+				boyfriend.y = -139; 
+				gf.y = 2000;
 
 		}
 
@@ -2636,6 +2677,9 @@ class PlayState extends MusicBeatState
 									camFollow.y = dad.getMidpoint().y - 390;
 									camFollow.x = dad.getMidpoint().x - 350;
 								}
+							case 'bigmonika':
+								camFollow.y = dad.getMidpoint().y - 75;
+								camFollow.x = dad.getMidpoint().x;
 						}
 					}
 		
@@ -3359,6 +3403,11 @@ class PlayState extends MusicBeatState
 						switch(daRating)
 							{
 								case 'shit' | 'bad' | 'good' | 'sick':
+									if (curSong.toLowerCase() == 'epiphany')
+										{
+											if (FlxG.random.bool(0.1))
+												GameOverSubstate.crashdeath = true;
+										}
 									health -= 100;
 							}
 					default:
@@ -4472,8 +4521,10 @@ class PlayState extends MusicBeatState
 			{
 				switch (curBeat)
 				{
-					case 785:
-						FlxG.camera.fade(FlxColor.BLACK, 1, false);
+					case 776:
+						dad.playAnim('lastNOTE');
+					case 790:
+						FlxG.camera.fade(FlxColor.BLACK, .7, false);
 				}
 			}
 		}

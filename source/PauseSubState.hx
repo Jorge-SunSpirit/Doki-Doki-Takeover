@@ -217,6 +217,7 @@ class PauseSubState extends MusicBeatSubstate
 				case "Restart Song":
 					FlxG.resetState();
 				case "Exit to menu":
+					PlayState.showCutscene = true;
 					if(PlayState.loadRep)
 					{
 						FlxG.save.data.botplay = false;

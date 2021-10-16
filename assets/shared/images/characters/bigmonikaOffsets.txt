@@ -1,0 +1,6 @@
+idle 0 0
+singDOWN 1 -48
+singUP 0 14
+singRIGHT 0 0
+singLEFT 1 -14
+lastNOTE 95 34

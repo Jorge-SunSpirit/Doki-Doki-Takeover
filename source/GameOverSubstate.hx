@@ -15,6 +15,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	var camFollow:FlxObject;
 
 	var stageSuffix:String = "";
+	public static var crashdeath:Bool = false;
 
 	public function new(x:Float, y:Float)
 	{
@@ -30,6 +31,13 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = 'playablesenpai';
 			default:
 				daBf = 'bf';
+		}
+
+		switch (PlayState.SONG.player2)
+		{
+			case 'bigmonika':
+				stageSuffix = '';
+				daBf = 'bigmonika-dead';
 		}
 
 		super();
@@ -60,22 +68,25 @@ class GameOverSubstate extends MusicBeatSubstate
 			});
 		}
 
-		bf.playAnim('firstDeath');
+		if (!crashdeath)
+			bf.playAnim('firstDeath');
+		else
+			bf.playAnim('crashDeath');
 	}
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
-		if (controls.ACCEPT)
+		if (controls.ACCEPT && !crashdeath)
 		{
 			endBullshit();
 		}
 
-		if (controls.BACK)
+		if (controls.BACK && !crashdeath)
 		{
 			FlxG.sound.music.stop();
-
+			PlayState.showCutscene = true;
 			if (PlayState.isStoryMode)
 				FlxG.switchState(new DokiStoryState());
 			else
@@ -83,12 +94,25 @@ class GameOverSubstate extends MusicBeatSubstate
 			PlayState.loadRep = false;
 		}
 
-		if (bf.animation.curAnim.name == 'firstDeath' && bf.animation.curAnim.curFrame == 12)
+		if (bf.animation.curAnim.name == 'crashDeath' && bf.animation.finished)
+			{
+				new FlxTimer().start(1.3, function(timer:FlxTimer) {
+				#if FEATURE_FILESYSTEM
+				Sys.exit(0);
+				#else
+				FlxTransitionableState.skipNextTransOut = true;
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxG.switchState(new CrashState());
+				#end
+				});
+			}
+		
+		if (bf.animation.curAnim.name == 'firstDeath' && bf.animation.curAnim.curFrame == 12 && !crashdeath)
 		{
 			FlxG.camera.follow(camFollow, LOCKON, 0.01);
 		}
 
-		if (bf.animation.curAnim.name == 'firstDeath' && bf.animation.curAnim.finished)
+		if (bf.animation.curAnim.name == 'firstDeath' && bf.animation.curAnim.finished && !crashdeath)
 		{
 			FlxG.sound.playMusic(Paths.music('gameOver' + stageSuffix));
 		}

@@ -473,6 +473,34 @@ class Character extends FlxSprite
 
 				setGraphicSize(Std.int(width * .9));
 				playAnim('idle');
+			
+			case 'bigmonika':
+				frames = Paths.getSparrowAtlas('characters/big_monikia_base');
+				animation.addByPrefix('idle', 'Big Monika Idle', 24, false);
+				animation.addByPrefix('singUP', 'Big Monika Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Big Monika Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Big Monika Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Big Monika Right', 24, false);
+				animation.addByPrefix('lastNOTE', 'Big Monika Last Note', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+				updateHitbox();
+			case 'bigmonika-dead':
+				frames = Paths.getSparrowAtlas('characters/big_monikia_death');
+				animation.addByPrefix('singUP', "Big Monika Retry Start", 24, false);
+				animation.addByPrefix('firstDeath', 'Big Monika Retry Start', 24, false);
+				animation.addByPrefix('deathLoop', 'Big Monika Retry Loop', 24, true);
+				animation.addByPrefix('deathConfirm', 'Big Monika Retry End', 24, false);
+				animation.addByPrefix('crashDeath', 'Big Monika SCARY', 24, false);
+				animation.play('firstDeath');
+
+				loadOffsetFile(curCharacter);
+
+				flipX = true;
+				playAnim('firstDeath');
+				updateHitbox();
 		}
 
 		dance();
@@ -482,7 +510,7 @@ class Character extends FlxSprite
 			flipX = !flipX;
 
 			// Doesn't flip for BF, since his are already in the right place???
-			if (!curCharacter.startsWith('bf') && !curCharacter.startsWith("playablesenpai"))
+			if (!curCharacter.startsWith('bf') && !curCharacter.startsWith("playablesenpai") && !curCharacter.startsWith("bigmonika-dead"))
 			{
 				// var animArray
 				var oldRight = animation.getByName('singRIGHT').frames;
@@ -577,6 +605,15 @@ class Character extends FlxSprite
 
 				case 'yuri':
 					if (animation.curAnim.name != 'breath')
+					{
+						if (altAnim && animation.getByName('idle-alt') != null)
+							playAnim('idle-alt')
+						else
+							playAnim('idle');
+					}
+				
+				case 'bigmonika':
+					if (animation.curAnim.name != 'lastNOTE')
 					{
 						if (altAnim && animation.getByName('idle-alt') != null)
 							playAnim('idle-alt')

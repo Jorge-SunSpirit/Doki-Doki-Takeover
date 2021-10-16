@@ -1,0 +1,4 @@
+deathLoop 1 -36
+deathConfirm 0 -36
+firstDeath 0 0
+crashDeath 208 316
