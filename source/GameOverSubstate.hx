@@ -51,7 +51,10 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollow = new FlxObject(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y, 1, 1);
 		add(camFollow);
 
-		FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+		if (!crashdeath)
+			{
+				FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+			}
 		Conductor.changeBPM(100);
 
 		// FlxG.camera.followLerp = 1;
@@ -71,7 +74,10 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (!crashdeath)
 			bf.playAnim('firstDeath');
 		else
-			bf.playAnim('crashDeath');
+			{
+				FlxG.sound.play(Paths.sound('JarringMonikaSound'));
+				bf.playAnim('crashDeath');
+			}	
 	}
 
 	override function update(elapsed:Float)
@@ -96,7 +102,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (bf.animation.curAnim.name == 'crashDeath' && bf.animation.finished)
 			{
-				new FlxTimer().start(1.3, function(timer:FlxTimer) {
+				new FlxTimer().start(.5, function(timer:FlxTimer) {
 				#if FEATURE_FILESYSTEM
 				Sys.exit(0);
 				#else
