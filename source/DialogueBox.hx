@@ -13,6 +13,7 @@ import flixel.tweens.FlxEase;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.addons.effects.chainable.FlxGlitchEffect;
+import flixel.addons.effects.chainable.FlxEffectSprite;
 import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
@@ -38,8 +39,6 @@ class DialogueBox extends FlxSpriteGroup
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
-
-	var glitch:FlxGlitchEffect;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
@@ -944,16 +943,26 @@ class DialogueBox extends FlxSpriteGroup
 							FlxG.sound.music.fadeOut(0.5, 0);
 						enddialogue();
 					case 'glitch':
+						canSkip = false;
 						isCommand = true;
-						/*
-						glitch = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
-						glitch.apply(OpenFlAssets.getBitmapData(Paths.image('dialogue/Text_Boxes', 'doki')));
-						glitch.active = true;
+
+						// Apparently we can apply it to the entire screen? https://haxeflixel.com/documentation/polish/
+						var boxGlitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
+						var boxEffect:FlxEffectSprite = new FlxEffectSprite(box, [boxGlitchEffect]);
+
+						boxEffect.setGraphicSize(Std.int(boxEffect.width * 1.2));
+						boxEffect.updateHitbox();
+						boxEffect.setPosition(box.x, box.y);
+						boxGlitchEffect.active = true;
+
+						add(boxEffect);
+
 						new FlxTimer().start(5, function(tmr:FlxTimer)
 						{
-							glitch.active = false;
+							boxGlitchEffect.active = false;
+							remove(boxEffect);
+							enddialogue();
 						});
-						*/
 
 					case 'autoskip':
 						canSkip = false;
