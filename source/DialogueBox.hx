@@ -957,7 +957,9 @@ class DialogueBox extends FlxSpriteGroup
 
 						add(boxEffect);
 
-						new FlxTimer().start(5, function(tmr:FlxTimer)
+						FlxG.sound.play(Paths.sound('JarringMonikaSound'), 1);
+
+						new FlxTimer().start(1, function(tmr:FlxTimer)
 						{
 							boxGlitchEffect.active = false;
 							remove(boxEffect);
