@@ -267,7 +267,8 @@ class PlayState extends MusicBeatState
 	{
 		instance = this;
 
-		isPixelUI = SONG.noteStyle.startsWith('pixel');
+		if (SONG.noteStyle != null)
+			isPixelUI = SONG.noteStyle.startsWith('pixel');
 		
 		if (FlxG.save.data.fpsCap > 290)
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(800);
@@ -1181,7 +1182,7 @@ class PlayState extends MusicBeatState
 				songName.screenCenter(X);
 				songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 				songName.scrollFactor.set();
-				songName.antialiasing = !SONG.noteStyle.startsWith('pixel');
+			songName.antialiasing = !isPixelUI;
 				songName.cameras = [camHUD];
 				add(songName);
 			}
@@ -1212,14 +1213,14 @@ class PlayState extends MusicBeatState
 		scoreTxt = new FlxText(0, healthBarBG.y + 50, 0, "", 20);
 		scoreTxt.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		scoreTxt.antialiasing = !SONG.noteStyle.startsWith('pixel');
+		scoreTxt.antialiasing = !isPixelUI;
 		scoreTxt.visible = executeModchart;
 		add(scoreTxt);
 
 		replayTxt = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		replayTxt.scrollFactor.set();
-		replayTxt.antialiasing = !SONG.noteStyle.startsWith('pixel');
+		replayTxt.antialiasing = !isPixelUI;
 		replayTxt.screenCenter(X);
 		if (loadRep) add(replayTxt);
 
@@ -1227,7 +1228,7 @@ class PlayState extends MusicBeatState
 		botPlayState = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
 		botPlayState.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
-		botPlayState.antialiasing = !SONG.noteStyle.startsWith('pixel');
+		botPlayState.antialiasing = !isPixelUI;
 		botPlayState.screenCenter(X);
 		if (FlxG.save.data.botplay && !loadRep) add(botPlayState);
 
