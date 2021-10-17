@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.text.FlxTypeText;
 import flixel.addons.transition.FlxTransitionableState;
+import flixel.addons.plugin.screengrab.FlxScreenGrab;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.FlxKeyManager;
@@ -14,7 +15,6 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.addons.effects.chainable.FlxGlitchEffect;
 import flixel.addons.effects.chainable.FlxEffectSprite;
-import openfl.geom.Point;
 import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
@@ -216,7 +216,7 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (FlxG.keys.justPressed.ESCAPE && !stopspamming)
+		if (FlxG.keys.justPressed.ESCAPE && !stopspamming && canSkip)
 			{
 				isEnding = true;
 				stopspamming = true;
@@ -947,28 +947,21 @@ class DialogueBox extends FlxSpriteGroup
 						canSkip = false;
 						isCommand = true;
 
-						var screen:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT);
-						var waveEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
-						var waveSprite:FlxEffectSprite = new FlxEffectSprite(screen, [waveEffect]);
-						add(waveSprite);
+						var screenHUD:FlxSprite = new FlxSprite();
+						screenHUD.pixels = FlxScreenGrab.grab().bitmapData;
+						var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
+						var glitchSprite:FlxEffectSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
+						add(glitchSprite);
 
-						screen.drawFrame();
-						var screenPixels = screen.framePixels;
-	
-						if (FlxG.renderBlit)
-							screenPixels.copyPixels(FlxG.camera.buffer, FlxG.camera.buffer.rect, new Point());
-						else
-							screenPixels.draw(FlxG.camera.canvas);
-
-						waveEffect.active = true;
+						glitchEffect.active = true;
 
 						FlxG.sound.play(Paths.sound('glitchin'));
 
 						new FlxTimer().start(0.5, function(tmr:FlxTimer)
 						{
-							waveEffect.active = false;
-							remove(waveSprite);
-							remove(screen);
+							glitchEffect.active = false;
+							remove(glitchSprite);
+							remove(screenHUD);
 							enddialogue();
 						});
 
@@ -995,6 +988,8 @@ class DialogueBox extends FlxSpriteGroup
 						
 				}
 			}
+
+		skipText.visible = canSkip;
 
 		if (dialogueList[0] == '' && !isCommand)
 			enddialogue();
