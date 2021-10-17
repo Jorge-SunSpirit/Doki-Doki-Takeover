@@ -1,7 +1,12 @@
 :sayori_yeah:"Yuri, your singing voice is amazing! Sing again, sing again! I wanna hear!"
 :natsuki_what:"Hrk-!"
 :sayori_neutral:"Are you ok, Natsuki?"
-:natsuki_what:"Bleh… I'm not feeling so gooooooooooooooooooooooo-"
+:natsuki_what:"Bleh… I'm not feeling so gooooooooooo-"
+:autoskip:"oooooooooooooooooo"
+:autoskip:"ooooooo"
+:autoskip:"ooooooo"
+:glitch:
+:natsuki_what:"Bleh… I'm not feeling so good."
 :natsuki_what:"I'm not feeling so good."
 :sayori_ehh:"Ah- I’m gonna walk Natsuki to the nurse’s office."
 :sayori_neutral:"Y-you guys have fun singing though!"
