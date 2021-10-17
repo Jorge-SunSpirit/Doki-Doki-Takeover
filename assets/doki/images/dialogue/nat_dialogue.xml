@@ -4,7 +4,12 @@
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="nat_angy" x="10" y="10" width="500" height="500"/>
 	<SubTexture name="nat_hmmph" x="520" y="10" width="500" height="500"/>
-	<SubTexture name="nat_wah" x="1030" y="10" width="500" height="500"/>
-	<SubTexture name="nat_what" x="10" y="520" width="500" height="500"/>
-	<SubTexture name="natneutral" x="520" y="520" width="500" height="500"/>
+	<SubTexture name="nat_sick.png" x="1030" y="10" width="500" height="500"/>
+	<SubTexture name="nat_spook0000" x="10" y="520" width="500" height="500"/>
+	<SubTexture name="nat_spook0001" x="10" y="520" width="500" height="500"/>
+	<SubTexture name="nat_spook0002" x="520" y="520" width="500" height="500"/>
+	<SubTexture name="nat_spook0003" x="520" y="520" width="500" height="500"/>
+	<SubTexture name="nat_wah" x="1030" y="520" width="500" height="500"/>
+	<SubTexture name="nat_what" x="10" y="1030" width="500" height="500"/>
+	<SubTexture name="natneutral" x="520" y="1030" width="500" height="500"/>
 </TextureAtlas>

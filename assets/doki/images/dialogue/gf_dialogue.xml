@@ -5,6 +5,10 @@
 	<SubTexture name="gf_ehh" x="10" y="10" width="500" height="500"/>
 	<SubTexture name="gf_giggle" x="520" y="10" width="500" height="500"/>
 	<SubTexture name="gf_scared" x="1030" y="10" width="500" height="500"/>
-	<SubTexture name="gf_yeah" x="10" y="520" width="500" height="500"/>
-	<SubTexture name="gfneutral" x="520" y="520" width="500" height="500"/>
+	<SubTexture name="gf_spook0000" x="10" y="520" width="500" height="500"/>
+	<SubTexture name="gf_spook0001" x="10" y="520" width="500" height="500"/>
+	<SubTexture name="gf_spook0002" x="520" y="520" width="500" height="500"/>
+	<SubTexture name="gf_spook0003" x="520" y="520" width="500" height="500"/>
+	<SubTexture name="gf_yeah" x="1030" y="520" width="500" height="500"/>
+	<SubTexture name="gfneutral" x="10" y="1030" width="500" height="500"/>
 </TextureAtlas>

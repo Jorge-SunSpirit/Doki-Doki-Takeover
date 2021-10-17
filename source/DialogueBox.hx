@@ -39,6 +39,7 @@ class DialogueBox extends FlxSpriteGroup
 	var skipText:FlxText;
 
 	public var finishThing:Void->Void;
+	var backgroundImage:FlxSprite;
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
@@ -79,12 +80,14 @@ class DialogueBox extends FlxSpriteGroup
 					box.frames = Paths.getSparrowAtlas('dialogue/Text_Boxes','doki');
 					box.animation.addByPrefix('normalOpen', 'Doki Dialogue Blank', 24, false);
 					box.animation.addByIndices('normal', 'Doki Dialogue Blank', [9], "", 24);
+					box.animation.addByPrefix('blankbox', 'Doki Dialogue noone', 24, false);
 					box.animation.addByPrefix('bf', 'Doki Dialogue BF', 24, false);
 					box.animation.addByPrefix('gf', 'Doki Dialogue GF', 24, false);
 					box.animation.addByPrefix('monika', 'Doki Dialogue Moni', 24, false);
 					box.animation.addByPrefix('natsuki', 'Doki Dialogue Natsu', 24, false);
 					box.animation.addByPrefix('sayori', 'Doki Dialogue Sayo', 24, false);
 					box.animation.addByPrefix('yuri', 'Doki Dialogue Yuri0', 24, false);
+					box.animation.addByPrefix('yuri_glitch', 'Doki Dialogue Yuri Glitch', 24, false);
 					box.animation.addByPrefix('mc', 'Doki Dialogue Protag', 24, false);
 					box.antialiasing = true;
 				}
@@ -138,7 +141,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitRight.visible = false;
 				}
 		
-		box.animation.play('normalOpen');
+			box.animation.play('normalOpen');
 			if (PlayState.SONG.noteStyle == 'pixel' || isPixel)
 				{
 					box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
@@ -148,6 +151,13 @@ class DialogueBox extends FlxSpriteGroup
 					box.y += 400;
 					box.setGraphicSize(Std.int(box.width * 1.2));
 				}
+
+		backgroundImage = new FlxSprite();
+		backgroundImage.x = 0;
+		backgroundImage.y = 0;
+		add(backgroundImage);
+		backgroundImage.visible = false;
+		
 		box.updateHitbox();
 		add(box);
 
@@ -548,7 +558,7 @@ class DialogueBox extends FlxSpriteGroup
 					case 'yuri_crazy':
 						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
 						portraitLeft.visible = false;
-						box.animation.play('yuri');
+						box.animation.play('yuri_glitch');
 						if (!portraitLeft.visible)
 						{
 							portraitLeft.visible = true;
@@ -579,6 +589,26 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/yuri_dialogue','doki');
 							portraitLeft.animation.addByPrefix('play', 'yuri_ahh', 24, false);
 							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+					case 'yuri_ahaha':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('yuri');
+						if (!portraitLeft.visible)
+						{
+							portraitLeft.visible = true;
+							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/yuri_dialogue','doki');
+							portraitLeft.animation.addByPrefix('play', 'yuri_ahaha', 24, false);
+							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+					case 'yuri_gone':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('YuriText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('yuri');
+						if (!portraitLeft.visible)
+						{
 							portraitLeft.flipX = false;
 						}
 					
@@ -641,6 +671,38 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/nat_dialogue','doki');
 							portraitLeft.animation.addByPrefix('play', 'nat_wah', 24, false);
 							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+					case 'natsuki_spook':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('natsuki');
+						if (!portraitLeft.visible)
+						{
+							portraitLeft.visible = true;
+							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/nat_dialogue','doki');
+							portraitLeft.animation.addByPrefix('play', 'nat_spook', 24, true);
+							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+					case 'natsuki_sick':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('natsuki');
+						if (!portraitLeft.visible)
+						{
+							portraitLeft.visible = true;
+							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/nat_dialogue','doki');
+							portraitLeft.animation.addByPrefix('play', 'nat_sick', 24, false);
+							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+					case 'natsuki_gone':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('NatText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('natsuki');
+						if (!portraitLeft.visible)
+						{
 							portraitLeft.flipX = false;
 						}
 					
@@ -727,6 +789,14 @@ class DialogueBox extends FlxSpriteGroup
 							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/sayo_dialogue','doki');
 							portraitLeft.animation.addByPrefix('play', 'sayo_concern', 24, false);
 							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+					case 'sayori_gone':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('SayoText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('sayori');
+						if (!portraitLeft.visible)
+						{
 							portraitLeft.flipX = false;
 						}
 
@@ -964,6 +1034,64 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.addByPrefix('play', 'gf_ehh', 24, false);
 							portraitRight.animation.play('play');
 						}
+					case 'gf_spook':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.8)];
+						portraitRight.visible = false;
+						box.animation.play('gf');
+						if (!portraitRight.visible)
+						{
+							portraitRight.visible = true;
+							portraitRight.frames = Paths.getSparrowAtlas('dialogue/gf_dialogue','doki');
+							portraitRight.animation.addByPrefix('play', 'gf_spook', 24, true);
+							portraitRight.animation.play('play');
+						}
+					case 'gf_gone':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('GFText'), 0.8)];
+						portraitRight.visible = false;
+						box.animation.play('gf');
+					
+					//all of em
+					case 'all_neutral':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('blankbox');
+						if (!portraitLeft.visible)
+						{
+							portraitLeft.visible = true;
+							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/all_dialogue','doki');
+							portraitLeft.animation.addByPrefix('play', 'all_neutral', 24, false);
+							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+					case 'all_gasp':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('blankbox');
+						if (!portraitLeft.visible)
+						{
+							portraitLeft.visible = true;
+							portraitLeft.frames = Paths.getSparrowAtlas('dialogue/all_dialogue','doki');
+							portraitLeft.animation.addByPrefix('play', 'all_gasp', 24, false);
+							portraitLeft.animation.play('play');
+							portraitLeft.flipX = false;
+						}
+
+					//No one is there except pink box
+					case 'no_one_left':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
+						portraitLeft.visible = false;
+						box.animation.play('blankbox');
+						if (!portraitLeft.visible)
+						{
+							portraitLeft.flipX = false;
+						}
+					case 'no_one_right':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
+						portraitRight.visible = false;
+						box.animation.play('blankbox');
+						if (!portraitRight.visible)
+						{
+						}
 					
 					//extras
 					case 'startmusic':
@@ -999,6 +1127,14 @@ class DialogueBox extends FlxSpriteGroup
 						FlxTransitionableState.skipNextTransIn = true;
 						FlxG.switchState(new CrashState());
 						#end
+
+					case 'showbackgroundimage':
+						backgroundImage.loadGraphic(Paths.image('dialogue/bgs/' + dialogueList[0],'doki'));
+						enddialogue();
+						backgroundImage.visible = true;
+					case 'hidebackground':
+						enddialogue();
+						backgroundImage.visible = false;
 						
 				}
 			}

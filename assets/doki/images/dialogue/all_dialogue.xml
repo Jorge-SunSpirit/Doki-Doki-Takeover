@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="all_dialogue.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="all_gasp" x="10" y="10" width="706" height="500"/>
+	<SubTexture name="all_neutral" x="726" y="10" width="706" height="500"/>
+</TextureAtlas>

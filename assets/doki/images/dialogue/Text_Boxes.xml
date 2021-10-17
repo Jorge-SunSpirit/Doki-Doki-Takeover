@@ -56,4 +56,5 @@
 	<SubTexture name="Doki Dialogue Yuri Glitch0002" x="840" y="1403" width="854" height="196"/>
 	<SubTexture name="Doki Dialogue Yuri Glitch0003" x="840" y="1403" width="854" height="196"/>
 	<SubTexture name="Doki Dialogue Yuri Glitch0004" x="840" y="1403" width="854" height="196"/>
+	<SubTexture name="Doki Dialogue noone0000" x="840" y="607" width="820" height="189"/>
 </TextureAtlas>

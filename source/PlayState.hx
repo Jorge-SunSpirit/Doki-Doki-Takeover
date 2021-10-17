@@ -3399,7 +3399,7 @@ class PlayState extends MusicBeatState
 								case 'shit' | 'bad' | 'good' | 'sick':
 									if (curSong.toLowerCase() == 'epiphany')
 										{
-											if (FlxG.random.bool(0.5))
+											if (FlxG.random.bool(2))
 												GameOverSubstate.crashdeath = true;
 										}
 									health -= 100;
