@@ -989,8 +989,6 @@ class DialogueBox extends FlxSpriteGroup
 				}
 			}
 
-		skipText.visible = canSkip;
-
 		if (dialogueList[0] == '' && !isCommand)
 			enddialogue();
 	}
