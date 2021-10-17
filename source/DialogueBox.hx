@@ -14,6 +14,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.addons.effects.chainable.FlxGlitchEffect;
 import flixel.addons.effects.chainable.FlxEffectSprite;
+import openfl.geom.Point;
 import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
@@ -946,23 +947,28 @@ class DialogueBox extends FlxSpriteGroup
 						canSkip = false;
 						isCommand = true;
 
-						// Apparently we can apply it to the entire screen? https://haxeflixel.com/documentation/polish/
-						var boxGlitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
-						var boxEffect:FlxEffectSprite = new FlxEffectSprite(box, [boxGlitchEffect]);
+						var screen:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT);
+						var waveEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
+						var waveSprite:FlxEffectSprite = new FlxEffectSprite(screen, [waveEffect]);
+						add(waveSprite);
 
-						boxEffect.setGraphicSize(Std.int(boxEffect.width * 1.2));
-						boxEffect.updateHitbox();
-						boxEffect.setPosition(box.x, box.y);
-						boxGlitchEffect.active = true;
+						screen.drawFrame();
+						var screenPixels = screen.framePixels;
+	
+						if (FlxG.renderBlit)
+							screenPixels.copyPixels(FlxG.camera.buffer, FlxG.camera.buffer.rect, new Point());
+						else
+							screenPixels.draw(FlxG.camera.canvas);
 
-						add(boxEffect);
+						waveEffect.active = true;
 
-						FlxG.sound.play(Paths.sound('JarringMonikaSound'), 1);
+						FlxG.sound.play(Paths.sound('glitchin'));
 
-						new FlxTimer().start(1, function(tmr:FlxTimer)
+						new FlxTimer().start(0.5, function(tmr:FlxTimer)
 						{
-							boxGlitchEffect.active = false;
-							remove(boxEffect);
+							waveEffect.active = false;
+							remove(waveSprite);
+							remove(screen);
 							enddialogue();
 						});
 
