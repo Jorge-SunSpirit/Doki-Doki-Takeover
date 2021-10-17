@@ -864,24 +864,20 @@ class PlayState extends MusicBeatState
 						var posX = -250;
 						var posY = -167;
 
-						var spaceBG:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, 0xFF220707);
-						add(spaceBG);
-						spaceBG.scrollFactor.set();
-
 						space = new FlxBackdrop(Paths.image('bigmonika/Sky', 'doki'), 0.1, 0.1);
 						space.velocity.set(-10, 0);
-						space.antialiasing = false;
+						space.antialiasing = true;
 						//space.scale.set(1.65, 1.65);
 						add(space);
 
 						var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('bigmonika/BG', 'doki'));
-						bg.antialiasing = false;
+						bg.antialiasing = true;
 						//bg.scale.set(2.3, 2.3);
 						bg.scrollFactor.set(0.4, 0.6);
 						add(bg);
 
 						var stageFront:FlxSprite = new FlxSprite(-332, -77).loadGraphic(Paths.image('bigmonika/FG', 'doki'));
-						stageFront.antialiasing = false;
+						stageFront.antialiasing = true;
 						//stageFront.scale.set(1.5, 1.5);
 						stageFront.scrollFactor.set(1, 1);
 						add(stageFront);
