@@ -472,6 +472,34 @@ class DialogueBox extends FlxSpriteGroup
 								portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
 								portraitLeft.animation.play('enter');
 							}
+
+						// copy-pasted extras from regular dialogue
+						case 'startmusic':
+							FlxG.sound.playMusic(Paths.music(dialogueList[0], 'shared'));
+							enddialogue();
+						case 'endmusic':
+							if (FlxG.sound.music != null)
+								FlxG.sound.music.fadeOut(0.5, 0);
+							enddialogue();
+						case 'glitch':
+							canSkip = false;
+							isCommand = true;
+
+							funnyGlitch();
+
+						case 'autoskip':
+							canSkip = false;
+							swagDialogue.completeCallback = enddialogue;
+
+						case 'crash':
+							#if FEATURE_FILESYSTEM
+							Sys.exit(0);
+							#else
+							FlxTransitionableState.skipNextTransOut = true;
+							FlxTransitionableState.skipNextTransIn = true;
+							FlxG.switchState(new CrashState());
+							#end
+
 					}
 			}
 		else
@@ -947,23 +975,7 @@ class DialogueBox extends FlxSpriteGroup
 						canSkip = false;
 						isCommand = true;
 
-						var screenHUD:FlxSprite = new FlxSprite();
-						screenHUD.pixels = FlxScreenGrab.grab().bitmapData;
-						var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
-						var glitchSprite:FlxEffectSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
-						add(glitchSprite);
-
-						glitchEffect.active = true;
-
-						FlxG.sound.play(Paths.sound('glitchin'));
-
-						new FlxTimer().start(0.5, function(tmr:FlxTimer)
-						{
-							glitchEffect.active = false;
-							remove(glitchSprite);
-							remove(screenHUD);
-							enddialogue();
-						});
+						funnyGlitch();
 
 					case 'autoskip':
 						canSkip = false;
@@ -998,5 +1010,26 @@ class DialogueBox extends FlxSpriteGroup
 		var splitName:Array<String> = dialogueList[0].split(":");
 		curCharacter = splitName[1];
 		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
+	}
+
+	function funnyGlitch():Void
+	{
+		var screenHUD:FlxSprite = new FlxSprite();
+		screenHUD.pixels = FlxScreenGrab.grab().bitmapData;
+		var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
+		var glitchSprite:FlxEffectSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
+		add(glitchSprite);
+
+		glitchEffect.active = true;
+
+		FlxG.sound.play(Paths.sound('glitchin'));
+
+		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		{
+			glitchEffect.active = false;
+			remove(glitchSprite);
+			remove(screenHUD);
+			enddialogue();
+		});
 	}
 }

@@ -1217,7 +1217,7 @@ class PlayState extends MusicBeatState
 				songName.screenCenter(X);
 				songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 				songName.scrollFactor.set();
-			songName.antialiasing = !isPixelUI;
+				songName.antialiasing = !isPixelUI;
 				songName.cameras = [camHUD];
 				add(songName);
 			}
