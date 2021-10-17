@@ -4,7 +4,9 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.text.FlxTypeText;
 import flixel.addons.transition.FlxTransitionableState;
+#if sys
 import flixel.addons.plugin.screengrab.FlxScreenGrab;
+#end
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.FlxKeyManager;
@@ -1014,6 +1016,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	function funnyGlitch():Void
 	{
+		#if sys
 		var screenHUD:FlxSprite = new FlxSprite();
 		screenHUD.pixels = FlxScreenGrab.grab().bitmapData;
 		var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
@@ -1021,14 +1024,17 @@ class DialogueBox extends FlxSpriteGroup
 		add(glitchSprite);
 
 		glitchEffect.active = true;
+		#end
 
 		FlxG.sound.play(Paths.sound('glitchin'));
 
 		new FlxTimer().start(0.5, function(tmr:FlxTimer)
 		{
+			#if sys
 			glitchEffect.active = false;
 			remove(glitchSprite);
 			remove(screenHUD);
+			#end
 			enddialogue();
 		});
 	}
