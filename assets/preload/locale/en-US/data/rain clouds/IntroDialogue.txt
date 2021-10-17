@@ -10,16 +10,16 @@
 :yuri_smile:"Sounds like you’re already very excited about our new guests. You haven’t even asked for their names yet-"
 :sayori_ehh:"Ah, right! Eheh, silly me. What’re your names, new literature club attendees?"
 :bf_beep:"Beep skee!"
-:gf_neutral:*happy gesture*
+:gf_yeah:*happy gesture*
 :sayori_happ:"You two are boyfriend and girlfriend? Aww, you two are so cute together!!!"
 :natsuki_neutral:"...that’s cute and all, but like, what are your names?"
 :bf_beep:"Beep skee!"
-:gf_neutral:*another happy gesture*
+:gf_yeah:*another happy gesture*
 :natsuki_angy:"Yes, we know that you guys are dating! We wanna know your NAMES!"
 :bf_neutral:"Bee dee skee dep!"
 :natsuki_hmmph:"...I don’t like them already."
 :natsuki_hmmph:"They’re already messing with me!"
-:yuri_neutral:"Natsuki! Not so harsh…"
+:yuri_ehh:"Natsuki! Not so harsh…"
 :natsuki_hmmph:"Hmph"
 :sayori_ehh:"Eheheh… I’m sorry about that. If you don’t want to tell us your names, that’s ok!"
 :sayori_happ:"I’m Sayori!"
@@ -31,7 +31,7 @@
 :yuri_neutral:"...you really want to sing with us?"
 :yuri_blush:"I’m… not sure how comfortable I’d feel doing that-"
 :bf_beep:"Skee dep doop!"
-:yuri_blush:"Wh-what do you mean I have to?!"
+:yuri_aah:"Wh-what do you mean I have to?!"
 :hideright:
 :sayori_neutral:"You know, we’ve been working so hard on writing and poems lately. I think having a fun singing session with everyone is the perfect break we all need!"
 :yuri_blush:"-!"
