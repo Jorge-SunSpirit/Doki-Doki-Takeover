@@ -558,7 +558,6 @@ class PlayState extends MusicBeatState
 
 					space = new FlxBackdrop(Paths.image('FinaleBG_1','monika'), 0.1, 0.1);
 					space.velocity.set(-10, 0);
-					space.antialiasing = false;
 					space.scale.set(1.65, 1.65);
 					add(space);
 
@@ -866,7 +865,6 @@ class PlayState extends MusicBeatState
 
 						space = new FlxBackdrop(Paths.image('bigmonika/Sky', 'doki'), 0.1, 0.1);
 						space.velocity.set(-10, 0);
-						space.antialiasing = true;
 						//space.scale.set(1.65, 1.65);
 						add(space);
 
