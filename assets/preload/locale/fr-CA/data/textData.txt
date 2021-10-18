@@ -1,0 +1,107 @@
+// COMMON
+cmnEasy::FACILE
+cmnNormal::NORMAL
+cmnHard::DIFFICILE
+cmnPB::RECORD PERSONNEL
+cmnScore::Score
+cmnNPS::NPS
+cmnMaxNPS::Max
+cmnComboBreak::Breaks de Combo 
+cmnAccuracy::Précision
+cmnBotplay::Botplay
+cmnClear::Clear
+cmnOn::On
+cmnOff::Off
+cmnDesc::Description
+cmnOffset::Offset (Gauche, Droit, Shift pour plus lentement)
+cmnAddOffset::Offset Additif (Gauche ou Droit)
+cmnCategory::Selectionez une Catégorie
+cmnCaching::Caching
+// Catégorie
+catGameplay::Gameplay
+catAppearance::Apparence
+catUnlock::Récompenses
+// OPTIONS
+optKeyBindings::Raccourcis clavier
+optDownscroll::Défilement vers le Bas
+optUpscroll::Défilement vers le Haut
+optGhostTap::Tappement Fantôme
+optNoGhostTap::Aucun Tappement Fantôme
+optPosition::Position de chansons
+optDistract::Distractions
+optReset::Bouton Reset
+optFlashing::Lumières Clignotantes
+optJudgement::Frames Safe
+optFPSCount::Compteur FPS
+optFPSCap::Cap de FPS
+optScroll::Vitesse de Défilement
+optFPSRainbow::Compteur FPS arc-en-ciel
+optNPS::Affichage NPS
+optReplay::Charger les Rediffusions
+optAccuracyMode::Mode de Précision
+optAMAccurate::Précision
+optAMComplex::Complexe
+optCustomize::Personnaliser le HUD de Gameplay
+optWatermark::Watermarks de Kade Engine 
+optGFCountdown::Compte à Rebours de Copine
+optLanguage::Selection de la Langue
+optCharacterCache::Mise en Cache des Personnages
+optSongCache::Mise en Cache des Chansons
+optMusicCache::Mise en Cache de la Musique
+optSoundCache::Mise en Cache des SFX
+optCaching::Démarrer la Mise en Cache
+optMiddleScrollOn::Scrolling du Millieu
+optMiddleScrollOff::Scrolling du Coté Droit
+optLaneUnderwayOn::Underlay de la Voie
+optLaneUnderwayOff::Aucun Underlay de la Voie
+// DESCRIPTION
+descAddOffset::Ajoute de la valeur au décalage global, par chanson.
+descKeyBindings::Changer les racourcis de chaques notes.
+descDownscroll::Changer la direction des notes à venir.
+descGhostTap::Tappement Fantôme est lorsque vous appuyez sur une direction et que cela ne vous fait pas rater.
+descJudgement::Personnalisez les safe frames du jeu. (Gauche ou Droit)
+descCurJudgement::Safe Frames Actuels
+descFPSCap::Définir la limite de FPS du jeu. (Gauche pour -10, Droit pour +10. Shift pour aller plus vite)
+descCurFPSCap::Cap FPS Actuel
+descRefreshRate::Fréquence de rafraîchissement
+descScroll::Modifiez votre vitesse de défilement. (Gauche pour -0.1, Droit pour +0.1. 1 sera la valeur de base.)
+descCurScroll::Vitesse de défilement actuelle
+descAccuracyMode::Modifier la façon dont la précision est calculée. (Précision = Simple, Complexe = Par Milisecondes)
+descReset::Appuis de la touche R pour terminer la partie.
+descCustomize::Personnalisez les parties du gameplay HUD à votre guise.
+descCustomizeState::Faites glisser la partition pour personnaliser sa position. R pour réinitialiser. Q/E pour zoomer. Espace pour mettre le zoom de caméra sur pause. C pour généré un combo. Échap pour quitter.
+descDistract::Activation des distractions de scène.
+descFPSRainbow::Fait en sorte que le compteur FPS s'affiche sous la forme d'un arc-en-ciel.
+descAccuracy::Afficher les informations de précision.
+descNPS::Affiche vos notes actuelles par seconde.
+descPosition::Afficher la position actuelle des chansons. (par une barre)
+descFPSCount::Activation du compteur FPS.
+descReplay::Affichez vos parties précédentes.
+descFlashing::Activation des lumières clignotantes qui peuvent provoquer des crises d'épilepsie et des tensions.
+descWatermark::Montre les watermarks de Kade Engine.
+descBotplay::Présentez vos charts et vos mods avec la lecture automatique.
+descGFCountdown::Demandez à Copine faire un compte à rebours avant que la chanson commence.
+descKeyBindKBCurrent::Mode actuel : Clavier.
+descKeyBindGPCurrent::Mode actuel : Manette de Jeu.
+descKeyBindTAB::Appuyez sur Tab pour changer.
+descKeyBindKBControls::Échap pour enregistrer, Retour partir sans enregistrer. Enter pour modifier un raccourci clavier.
+descKeyBindGPControls::Gâchette droite pour enregistrer, Gâchette droite pour quitter sans enregistrer. Start pour modifier un raccourci clavier.
+descKeyBindBlacklist::est sur liste noire !
+descCharacterCache::Réduisez les temps de chargement en mettant en cache chaques personnages au démarrage. (UTILISATION MAJEURE DE LA MÉMOIRE)
+descSongCache::Réduisez les temps de chargement en mettant en cache chaques chansons au démarrage. (UTILISATION MAJEURE DE LA MÉMOIRE)
+descMusicCache::Réduisez les temps de chargement en mettant en cache chaques musiques au démarrage. (UTILISATION MAJEURE DE LA MÉMOIRE)
+descSoundCache::Réduisez les temps de chargement en mettant en cache chaques sons au démarrage. (UTILISATION MAJEURE DE LA MÉMOIRE)
+descCaching::Réduisez les temps de chargement après le démarrage en chargeant les options sélectionnées ci-dessus.
+descDisableCaching::(appuyez sur D pour désactiver le prochain démarrage)
+descMiddleScroll::Mettez votre voie au centre ou à droite.
+descLaneUnderway::Active la sous-couche de voie.
+descLaneUnderwayControl::Transparence du calque sous-jacent de la voie actuelle
+// UNLOCK POPUPS
+msgMoni::"Your Reality" Débloqué!\nAccédez à la chanson dans le menu Freeplay.
+msgSayo::Les chansons de Sayori sont désormais disponibles dans le menu Freeplay.
+msgGFCount::"Girlfriend Countdown" Débloqué!\nActivez le dans le menu Options.
+msgNat::Les chansons de Natsuki sont maintenant disponibles dans le menu Freeplay.
+msgYuri::Les chansons de Yuri sont maintenant disponibles dans le menu Freeplay.
+msgExtra1::"Poems 'n Thorns" Débloqué!\nAccédez à la chanson dans le menu Freeplay.
+msgExtra2::"Dual Demise" Débloqué!\nAccédez à la chanson dans le menu Freeplay.
+msgExtra3::Epiphany\nDébloqué.
