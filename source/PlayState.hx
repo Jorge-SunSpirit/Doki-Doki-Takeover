@@ -465,7 +465,10 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue", 'preload', true));
 
 			case "epiphany":
-				dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
+				if (CoolUtil.isRecording())
+					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue-OBS", 'preload', true));
+				else
+					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 		}
 
 		trace(SONG.stage);
