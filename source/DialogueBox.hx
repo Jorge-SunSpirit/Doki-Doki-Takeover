@@ -44,6 +44,8 @@ class DialogueBox extends FlxSpriteGroup
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
 
+	var blackscreen:FlxSprite;
+
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
 
@@ -198,6 +200,8 @@ class DialogueBox extends FlxSpriteGroup
 		add(skipText);
 		
 
+		blackscreen = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+		blackscreen.alpha = 0;
 		dialogue = new Alphabet(0, 80, "", false, true);
 	}
 
@@ -511,6 +515,23 @@ class DialogueBox extends FlxSpriteGroup
 							FlxTransitionableState.skipNextTransIn = true;
 							FlxG.switchState(new CrashState());
 							#end
+						case 'showbackgroundimage':
+							backgroundImage.loadGraphic(Paths.image('dialogue/bgs/' + dialogueList[0],'doki'));
+							enddialogue();
+							backgroundImage.visible = true;
+						case 'hidebackground':
+							enddialogue();
+							backgroundImage.visible = false;
+
+						case 'fadeout':
+							canSkip = false;
+							add(blackscreen);
+							blackscreen.alpha = 0.1;
+							FlxTween.tween(blackscreen, {alpha: 1}, 5, {ease: FlxEase.expoOut,
+							onComplete: function(twn:FlxTween)
+								{
+									endinstantly();
+								}});
 
 					}
 			}
@@ -1135,6 +1156,14 @@ class DialogueBox extends FlxSpriteGroup
 					case 'hidebackground':
 						enddialogue();
 						backgroundImage.visible = false;
+					
+					case 'fadeout':
+						canSkip = false;
+						FlxTween.tween(blackscreen, {alpha: 1}, 5, {ease: FlxEase.expoOut,
+							onComplete: function(twn:FlxTween)
+								{
+									endinstantly();
+								}});
 						
 				}
 			}

@@ -54,7 +54,10 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (!crashdeath)
 			{
-				FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+				if (PlayState.SONG.player2 == 'bigmonika')
+					FlxG.sound.play(Paths.sound('fnf_loss_sfx-bigmonika'));
+				else
+					FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
 			}
 		Conductor.changeBPM(100);
 

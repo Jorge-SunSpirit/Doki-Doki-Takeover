@@ -98,6 +98,7 @@ class PlayState extends MusicBeatState
 	var doof2:DialogueBox;
 	var doof3:DialogueBox;
 	var doof4:DialogueBox;
+	var doof5:DialogueBox;
 
 	var songLength:Float = 0;
 	var kadeEngineWatermark:FlxText;
@@ -173,6 +174,7 @@ class PlayState extends MusicBeatState
 	public var extra1:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 	public var extra2:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 	public var extra3:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
+	public var extra4:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
 	var sparkleFG:FlxBackdrop;
 	var sparkleBG:FlxBackdrop;
@@ -394,7 +396,7 @@ class PlayState extends MusicBeatState
 		pinkOverlay.blend = SCREEN;
 		pinkOverlay.scrollFactor.set();
 
-		if (SONG.song.toLowerCase() == 'obsession')
+		if (SONG.song.toLowerCase() == 'obsession' ||	SONG.song.toLowerCase() == 'my confession')
 		{
 			whiteflash.cameras = [camHUD];
 			blackScreen.cameras = [camHUD];
@@ -443,7 +445,9 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue', 'preload', true));
 			case 'obsession':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue', 'preload', true));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue', 'preload', true));
+				extra1 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue1', 'preload', true));
+				extra4 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue2', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue3', 'preload', true));
 
 			//Monika returns?!
 			case 'reconciliation':
@@ -1127,6 +1131,7 @@ class PlayState extends MusicBeatState
 		doof2.scrollFactor.set();
 		doof2.finishThing = postdialoguecutscene;
 
+		//DOOF3 is used for pixel dialogue
 		doof3 = new DialogueBox(true, extra3);
 		doof3.scrollFactor.set();
 		doof3.finishThing = endSong;
@@ -1134,6 +1139,12 @@ class PlayState extends MusicBeatState
 		doof4 = new DialogueBox(false, extra3);
 		doof4.scrollFactor.set();
 		doof4.finishThing = endSong;
+
+		//DOOF5 is post dialogue cutscene except Pixel
+		doof5 = new DialogueBox(true, extra4);
+		doof5.scrollFactor.set();
+		doof5.finishThing = obsessionending;
+
 
 		Conductor.songPosition = -5000;
 		
@@ -1416,34 +1427,11 @@ class PlayState extends MusicBeatState
 		
 	function endcutscene(?dialogueBox:DialogueBox):Void
 		{
-
-				if (curSong.toLowerCase() == "your demise")
-					{
-						camZooming = false;
-						inCutscene = true;
-						startedCountdown = false;
-						generatedMusic = false;
-						canPause = false;
-						FlxG.sound.music.pause();
-						vocals.pause();
-						vocals.stop();
-						//FlxG.sound.music.stop();
-						remove(strumLineNotes);
-						remove(scoreTxt);
-						remove(replayTxt);
-						remove(botPlayState);
-						remove(healthBarBG);
-						remove(healthBar);
-						remove(iconP1);
-						remove(iconP2);
-						remove(kadeEngineWatermark);
-						remove(songPosBG);
-						remove(songPosBar);
-						remove(songName);
-						remove(laneunderlayOpponent);
-						remove(laneunderlay);
-					}
-					
+			switch (curSong.toLowerCase())
+			{
+				case 'my confession' | 'baka':
+					vocals.pause();
+					FlxG.sound.music.pause();
 					inCutscene = true;
 					camZooming = false;
 					startedCountdown = false;
@@ -1451,22 +1439,167 @@ class PlayState extends MusicBeatState
 					canPause = false;
 					vocals.stop();
 					vocals.volume = 0;
+
+
+					add(blackScreen);
+					blackScreen.alpha = 0.1;
+					FlxTween.tween(blackScreen, {alpha: 1}, 5, {ease: FlxEase.expoOut,
+					onComplete: function(twn:FlxTween)
+						{
+							remove(strumLineNotes);
+							remove(scoreTxt);
+							remove(replayTxt);
+							remove(botPlayState);
+							remove(healthBarBG);
+							remove(healthBar);
+							remove(iconP1);
+							remove(iconP2);
+							remove(kadeEngineWatermark);
+							remove(songPosBG);
+							remove(songPosBar);
+							remove(songName);
+							remove(laneunderlayOpponent);
+							remove(laneunderlay);
+							
+							//todo make this per song instead of all songs when images are done
+							var imageBG:FlxSprite= new FlxSprite(0, 0);
+							switch (curSong.toLowerCase())
+								{
+									case 'my confession':
+										imageBG.loadGraphic(Paths.image('dialogue/bgs/ending1','doki'));
+									case 'baka':
+										imageBG.loadGraphic(Paths.image('dialogue/bgs/ending2','doki'));
+								}
+							imageBG.antialiasing = false;
+							imageBG.scrollFactor.set();
+							imageBG.cameras = [camHUD];
+							imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.save.data.zoom));
+							imageBG.updateHitbox();
+							imageBG.screenCenter(XY);
+							add(imageBG);
+
+							
+							FlxTween.tween(blackScreen, {alpha: 0}, 5, {ease: FlxEase.expoOut,
+							onComplete: function(twn:FlxTween)
+								{
+									if (dialogueBox != null)
+										{
+											camFollow.setPosition(dad.getMidpoint().x + 50, boyfriend.getMidpoint().y - 300);
+											add(dialogueBox);
+										}
+									else
+										{
+											endSong();
+										}
+								}});
+						}
+					});
+				default:
+					vocals.pause();
+					remove(strumLineNotes);
+					remove(scoreTxt);
+					remove(replayTxt);
+					remove(botPlayState);
+					remove(healthBarBG);
+					remove(healthBar);
+					remove(iconP1);
+					remove(iconP2);
+					remove(kadeEngineWatermark);
+					remove(songPosBG);
+					remove(songPosBar);
+					remove(songName);
+					remove(laneunderlayOpponent);
+					remove(laneunderlay);
+					FlxG.sound.music.pause();
+					inCutscene = true;
+					camZooming = false;
+					startedCountdown = false;
+					generatedMusic = false;
+					canPause = false;
+					vocals.stop();
+					vocals.volume = 0;
+					
 					if (dialogueBox != null)
-				{
-					camFollow.setPosition(dad.getMidpoint().x + 50, boyfriend.getMidpoint().y - 300);
-					add(dialogueBox);
-				}
-			else
-				{
-					endSong();
-				}
+						{
+							camFollow.setPosition(dad.getMidpoint().x + 50, boyfriend.getMidpoint().y - 300);
+							add(dialogueBox);
+						}
+					else
+						{
+							endSong();
+						}
+
+			}	
 			trace(inCutscene);
 		}
+
+		function obsessionending():Void
+			{
+				//Currently this is tupid and renders over the pixel dialogue box atm. Either me or M&M can fix this tomorrow 10/07/2021
+
+				if (!loadRep)
+					rep.SaveReplay(saveNotes);
+				else
+				{
+					FlxG.save.data.botplay = false;
+					FlxG.save.data.scrollSpeed = 1;
+					FlxG.save.data.downscroll = false;
+				}
+				if (FlxG.save.data.fpsCap > 290)
+					(cast (Lib.current.getChildAt(0), Main)).setFPSCap(290);
+				#if FEATURE_LUAMODCHART
+				if (luaModchart != null)
+				{
+					luaModchart.die();
+					luaModchart = null;
+				}
+				#end
+				if (SONG.validScore)
+					{
+						#if !switch
+						Highscore.saveScore(SONG.song, Math.round(songScore), storyDifficulty);
+						#end
+					}
+				if (SONG.validScore)
+						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
+
+				FlxG.save.flush();
+				FlxG.save.data.yuribeaten = true;
+				campaignScore += Math.round(songScore);
+				
+				//Do what ever idk
+				remove(blackScreen);
+
+				//Play animation for monika's magical girl transformation into HD here
+
+				endcutscene(doof4);
+			}
 	
 		function postdialoguecutscene():Void
 			{
 				switch(curSong.toLowerCase())
 					{
+						case "obsession":
+							{
+								//Currently this is tupid and renders over the pixel dialogue box atm. Either me or M&M can fix this tomorrow 10/07/2021
+								var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3','doki'));
+								imageBG.antialiasing = false;
+								imageBG.scrollFactor.set();
+								imageBG.cameras = [camHUD];
+								imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.save.data.zoom));
+								imageBG.updateHitbox();
+								imageBG.screenCenter(XY);
+								add(imageBG);
+
+								add(blackScreen);
+								blackScreen.alpha = 1;
+
+								FlxTween.tween(blackScreen, {alpha: 0}, 3, {ease: FlxEase.expoOut,
+								onComplete: function(twn:FlxTween)
+									{
+										endcutscene(doof5);
+									}});
+							}
 						case "your demise":
 							{
 								camZooming = false;
@@ -3162,7 +3295,7 @@ class PlayState extends MusicBeatState
 						DialogueBox.isPixel = true;
 						endcutscene(doof3);
 					case 'obsession':
-						endcutscene(doof4);
+						endcutscene(doof2);
 					case 'glitcher (monika mix)':
 						endcutscene(doof4);
 					default:
