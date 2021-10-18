@@ -1177,10 +1177,7 @@ class DialogueBox extends FlxSpriteGroup
 		var splitName:Array<String> = dialogueList[0].split(":");
 		curCharacter = splitName[1];
 		#if FEATURE_FILESYSTEM
-		if (CoolUtil.isRecording())
-			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', Sys.environment()["USERNAME"]);
-		else
-			dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
+		dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', Sys.environment()["USERNAME"]);
 		#else
 		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
 		#end
