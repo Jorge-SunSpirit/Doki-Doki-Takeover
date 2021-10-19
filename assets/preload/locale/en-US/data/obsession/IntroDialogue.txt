@@ -1,16 +1,17 @@
 :sayori_yeah:"Yuri, your singing voice is amazing! Sing again, sing again! I wanna hear!"
 :natsuki_what:"Hrk-!"
 :sayori_neutral:"Are you ok, Natsuki?"
-:natsuki_what:
+:natsuki_sick:
 :autoskip:"Bleh… I'm not feeling so gooooooooooo-"
-:autoskip:"oooooooooooooooooooooooooooooooooooooooo"
+:autoskip:"oooooooooooooooooooooooo"
 :autoskip:"ooooooooooooooooooooooo"
 :autoskip:"ooooooo"
 :autoskip:"ooooooo"
 :autoskip:"ooo"
 :autoskip:"ooo"
+:natsuki_spook:
 :glitch:
-:natsuki_what:"I'm not feeling so good."
+:natsuki_sick:"I'm not feeling so good."
 :sayori_ehh:"Ah- I’m gonna walk Natsuki to the nurse’s office."
 :sayori_neutral:"Y-you guys have fun singing though!"
 :sayori_ehh:"Eheh-"
@@ -18,5 +19,5 @@
 :yuri_smile:"Singing is much nicer than I thought."
 :yuri_smile:"Its a nice alternative means to… release my emotions."
 :yuri_smile:"Let’s sing again. Right now."
-:yuri_smile:"Hahhhh…-"
+:yuri_ahaha:"Hahhhh…-"
 :bf_scared:"..."

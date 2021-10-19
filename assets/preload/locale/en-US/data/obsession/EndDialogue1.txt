@@ -4,6 +4,39 @@
 :yuri_crazy:"Hahaha!"
 :gf_scared: -!
 :bf_scared: -!
-:showbackgroundimage:evil2
 :sayori_ehh:"Eheheh… you weren't supposed to see that."
+:glitch:
+:showbackgroundimage:evil1
+:sayori_gone:"I appreciate you sticking around for so long to sing with us."
+:sayori_gone:"You've made us the happiest we've been in so long."
+:glitch:
+:sayori_gone:"Especially after what Monika did to us."
+:bf_hmph:"Bep-!"
+:sayori_gone:"Does her name ring a bell?"
+:sayori_gone:"that must mean-"
+:sayori_gone:"You must've been the one who deleted her!"
+:sayori_gone:"Ahaha, then you must be the one who brought us all back too!"
+:bf_hmph:"Dee le bep skee doo-!"
+:bf_hmph:(Translation) "Hold up, I didn't-!"
+:sayori_gone:"I knew you and that "girlfriend" of yours weren't from around here. Your data is so much different."
+:sayori_gone:"Eheheh, what even is a .xml, anyways?"
+:sayori_gone:"In fact, you two never existed on this computer until just a few moments ago when we first saw you."
+:sayori_gone:"Could you have done the impossible?"
+:sayori_gone:"Have you broke through to the digital world from the real world?"
+:glitch:
+:sayori_gone:"Have you defied all logic and science, just for us?"
+:sayori_gone:"Ahahaha, you really have made us so happy."
+:sayori_gone:"Now that you're finally here, we can all be happy and sing together."
+:sayori_gone:"Forever."
+:glitch:
+:showbackgroundimage:evil2
+:natsuki_gone:"..."
+:sayori_gone:"Forever."
+:yuri_gone:"..."
+:sayori_gone:"Forever."
+:glitch:
+:showbackgroundimage:evil3
+:gf_gone:"..."
+:sayori_gone:"Forever."
+:bf_scared:*terrified beep boop noises*
 :fadeout:
