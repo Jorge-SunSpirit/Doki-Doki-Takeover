@@ -97,11 +97,11 @@ descMiddleScroll::Put your lane in the center or on the right.
 descLaneUnderway::Toggles lane underlay.
 descLaneUnderwayControl::Current Lane Underlay transparency
 // UNLOCK POPUPS
-msgMoni::"Your Reality" Unlocked!\nAccess the song in the Freeplay menu.
+msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.
-msgGFCount::"Girlfriend Countdown" unlocked!\nToggle it in the Options menu.
+msgGFCount::"Girlfriend Countdown" unlocked!{NL}Toggle it in the Options menu.
 msgNat::Natsuki's songs are now available in the Freeplay menu.
 msgYuri::Yuri's songs are now available in the Freeplay menu.
-msgExtra1::"Poems 'n Thorns" unlocked!\nAccess the song in the Freeplay menu.
-msgExtra2::"Dual Demise" unlocked!\nAccess the song in the Freeplay menu.
-msgExtra3::Epiphany\nunlocked.
+msgExtra1::"Poems 'n Thorns" unlocked!{NL}Access the song in the Freeplay menu.
+msgExtra2::"Dual Demise" unlocked!{NL}Access the song in the Freeplay menu.
+msgExtra3::Epiphany{NL}unlocked.

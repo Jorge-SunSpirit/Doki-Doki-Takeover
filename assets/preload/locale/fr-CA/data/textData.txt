@@ -97,11 +97,11 @@ descMiddleScroll::Mettez votre voie au centre ou à droite.
 descLaneUnderway::Active la sous-couche de voie.
 descLaneUnderwayControl::Transparence du calque sous-jacent de la voie actuelle
 // UNLOCK POPUPS
-msgMoni::"Your Reality" Débloqué!\nAccédez à la chanson dans le menu Freeplay.
+msgMoni::"Your Reality" Débloqué!{NL}Accédez à la chanson dans le menu Freeplay.
 msgSayo::Les chansons de Sayori sont désormais disponibles dans le menu Freeplay.
-msgGFCount::"Girlfriend Countdown" Débloqué!\nActivez le dans le menu Options.
+msgGFCount::"Girlfriend Countdown" Débloqué!{NL}Activez le dans le menu Options.
 msgNat::Les chansons de Natsuki sont maintenant disponibles dans le menu Freeplay.
 msgYuri::Les chansons de Yuri sont maintenant disponibles dans le menu Freeplay.
-msgExtra1::"Poems 'n Thorns" Débloqué!\nAccédez à la chanson dans le menu Freeplay.
-msgExtra2::"Dual Demise" Débloqué!\nAccédez à la chanson dans le menu Freeplay.
-msgExtra3::Epiphany\nDébloqué.
+msgExtra1::"Poems 'n Thorns" Débloqué!{NL}Accédez à la chanson dans le menu Freeplay.
+msgExtra2::"Dual Demise" Débloqué!{NL}Accédez à la chanson dans le menu Freeplay.
+msgExtra3::Epiphany{NL}Débloqué.

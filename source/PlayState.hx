@@ -3396,6 +3396,9 @@ class PlayState extends MusicBeatState
 								}
 						}
 
+					DokiStoryState.showPopUp = true;
+					DokiStoryState.popupWeek = PlayState.storyWeek;
+
 					FlxG.switchState(new DokiStoryState());
 
 					#if FEATURE_LUAMODCHART

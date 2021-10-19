@@ -24,7 +24,13 @@ class PopupMessage extends MusicBeatSubstate
 
 		var popupTextLines:Array<String> = popupText.trim().split('{NL}');
 
-		//DokiStoryState.instance.acceptInput = false;
+		if (isGlitched)
+		{
+			if (FlxG.sound.music != null)
+				FlxG.sound.music.stop();
+		}
+
+		DokiStoryState.instance.acceptInput = false;
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 
@@ -44,12 +50,11 @@ class PopupMessage extends MusicBeatSubstate
 
 		for (i in 0...popupTextLines.length)
 		{
-			var text:FlxText = new FlxText(0, box.y + 50 + (i * 50), box.width * 0.95, popupTextLines[i]);
+			var text:FlxText = new FlxText(0, box.y + 72 + (i * 42), box.width * 0.95, popupTextLines[i]);
 			text.setFormat(LangUtil.getFont('aller'), 32, FlxColor.BLACK, FlxTextAlign.CENTER);
 			text.screenCenter(X);
 			text.x -= offsetX;
 			text.antialiasing = true;
-			text.ID = i;
 			grpText.add(text);
 		}
 	}
@@ -59,7 +64,17 @@ class PopupMessage extends MusicBeatSubstate
         if (FlxG.keys.justPressed.ENTER)
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'));
-			//DokiStoryState.instance.acceptInput = true;
+
+			if (DokiStoryState.popupWeek == 1 || DokiStoryState.popupWeek == 5)
+				DokiStoryState.secondaryPopUp = true;
+
+			if (!FlxG.sound.music.playing)
+			{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				Conductor.changeBPM(102);
+			}
+
+			DokiStoryState.instance.acceptInput = true;
 			close();
 		}
 

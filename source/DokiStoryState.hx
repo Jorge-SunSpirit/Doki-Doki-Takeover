@@ -65,7 +65,9 @@ class DokiStoryState extends MusicBeatState
 	var songlist:FlxSprite;
 	var camFollow:FlxObject;
 
-
+	public static var showPopUp:Bool = false;
+	public static var popupWeek:Int = 0;
+	public static var secondaryPopUp:Bool = false;
 
 	var story_moni:FlxSprite;
 	var story_sayo:FlxSprite;
@@ -89,6 +91,8 @@ class DokiStoryState extends MusicBeatState
 
 	override function create()
 	{
+		instance = this;
+
 		#if FEATURE_DISCORD
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
@@ -285,7 +289,58 @@ class DokiStoryState extends MusicBeatState
 					//trace("expurgation");
 
 			}
+		
+		// popup test
+		if (FlxG.keys.justPressed.ONE && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
+		if (FlxG.keys.justPressed.TWO && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgSayo')));
+		if (FlxG.keys.justPressed.THREE && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgGFCount')));
+		if (FlxG.keys.justPressed.FOUR && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgNat')));
+		if (FlxG.keys.justPressed.FIVE && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
+		if (FlxG.keys.justPressed.SIX && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
+		if (FlxG.keys.justPressed.SEVEN && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+		if (FlxG.keys.justPressed.EIGHT && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
 		#end
+
+		if (showPopUp)
+		{
+			switch (popupWeek)
+			{
+				default:
+					openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
+				case 1:
+					openSubState(new PopupMessage(LangUtil.getString('msgSayo')));
+				case 2:
+					openSubState(new PopupMessage(LangUtil.getString('msgNat')));
+				case 3:
+					openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
+				case 4:
+					openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
+				case 5:
+					openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+			}
+			showPopUp = false;
+		}
+
+		if (secondaryPopUp)
+		{
+			switch (popupWeek)
+			{
+				default:
+					openSubState(new PopupMessage(LangUtil.getString('msgGFCount')));
+				case 5:
+					openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
+			}
+			popupWeek = 0;
+			secondaryPopUp = false;
+		}
 
 		switch (curSelected)
 			{
@@ -359,9 +414,6 @@ class DokiStoryState extends MusicBeatState
 
 		if (!selectedSomethin && acceptInput)
 		{
-			if (FlxG.keys.justPressed.SEVEN)
-				openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
-
 			switch (diffselect)
 				{
 					case false:
