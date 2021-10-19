@@ -5,19 +5,23 @@
 :gf_scared: -!
 :bf_scared: -!
 :sayori_ehh:"Eheheh… you weren't supposed to see that."
+:hideright:
 :glitch:
 :showbackgroundimage:evil1
+:startmusic:ghost
 :sayori_gone:"I appreciate you sticking around for so long to sing with us."
 :sayori_gone:"You've made us the happiest we've been in so long."
 :glitch:
 :sayori_gone:"Especially after what Monika did to us."
 :bf_hmph:"Bep-!"
+:hideright:
 :sayori_gone:"Does her name ring a bell?"
 :sayori_gone:"that must mean-"
 :sayori_gone:"You must've been the one who deleted her!"
 :sayori_gone:"Ahaha, then you must be the one who brought us all back too!"
-:bf_hmph:"Dee le bep skee doo-!"
-:bf_hmph:(Translation) "Hold up, I didn't-!"
+:bf_scared:"Dee le bep skee doo-!"
+:bf_scared:(Translation) "Hold up, I didn't-!"
+:hideright:
 :sayori_gone:"I knew you and that "girlfriend" of yours weren't from around here. Your data is so much different."
 :sayori_gone:"Eheheh, what even is a .xml, anyways?"
 :sayori_gone:"In fact, you two never existed on this computer until just a few moments ago when we first saw you."
@@ -39,4 +43,3 @@
 :gf_gone:"..."
 :sayori_gone:"Forever."
 :bf_scared:*terrified beep boop noises*
-:fadeout:
