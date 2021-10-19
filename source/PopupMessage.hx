@@ -22,7 +22,7 @@ class PopupMessage extends MusicBeatSubstate
 	{
 		super();
 
-		var popupTextLines:Array<String> = popupText.trim().split('\n');
+		var popupTextLines:Array<String> = popupText.trim().split('{NL}');
 
 		//DokiStoryState.instance.acceptInput = false;
 
@@ -44,7 +44,7 @@ class PopupMessage extends MusicBeatSubstate
 
 		for (i in 0...popupTextLines.length)
 		{
-			var text:FlxText = new FlxText(0, box.y + 50 + (i * 50), 0, popupTextLines[i]);
+			var text:FlxText = new FlxText(0, box.y + 50 + (i * 50), box.width * 0.95, popupTextLines[i]);
 			text.setFormat(LangUtil.getFont('aller'), 32, FlxColor.BLACK, FlxTextAlign.CENTER);
 			text.screenCenter(X);
 			text.x -= offsetX;
