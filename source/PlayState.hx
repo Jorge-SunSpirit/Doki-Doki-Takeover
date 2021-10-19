@@ -1304,6 +1304,7 @@ class PlayState extends MusicBeatState
 		doof2.cameras = [camHUD];
 		doof3.cameras = [camHUD];
 		doof4.cameras = [camHUD];
+		doof5.cameras = [camHUD];
 		kadeEngineWatermark.cameras = [camHUD];
 		if (loadRep)
 			replayTxt.cameras = [camHUD];
@@ -1584,12 +1585,10 @@ class PlayState extends MusicBeatState
 					{
 						case "obsession":
 							{
-								//Currently this is tupid and renders over the pixel dialogue box atm. Either me or M&M can fix this tomorrow 10/07/2021
 								var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3','doki'));
-								imageBG.antialiasing = false;
+								imageBG.antialiasing = true;
 								imageBG.scrollFactor.set();
-								imageBG.cameras = [camHUD];
-								imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.save.data.zoom));
+								imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
 								imageBG.updateHitbox();
 								imageBG.screenCenter(XY);
 								add(imageBG);
