@@ -30,6 +30,7 @@ class DialogueBox extends FlxSpriteGroup
 	var dialogue:Alphabet;
 	var dialogueList:Array<String> = [];
 	public static var isPixel:Bool = false;
+	public static var isEpiphany:Bool = false;
 	var canSkip:Bool = true;
 
 	// SECOND DIALOGUE FOR THE PIXEL SHIT INSTEAD???
@@ -278,6 +279,7 @@ class DialogueBox extends FlxSpriteGroup
 			new FlxTimer().start(1.2, function(tmr:FlxTimer)
 			{
 				isPixel = false;
+				isEpiphany = false;
 				finishThing();
 				kill();
 			});
@@ -312,6 +314,7 @@ class DialogueBox extends FlxSpriteGroup
 						new FlxTimer().start(1.2, function(tmr:FlxTimer)
 						{
 							isPixel = false;
+							isEpiphany = false;
 							finishThing();
 							kill();
 						});
@@ -1177,12 +1180,12 @@ class DialogueBox extends FlxSpriteGroup
 		var splitName:Array<String> = dialogueList[0].split(":");
 		curCharacter = splitName[1];
 		#if FEATURE_FILESYSTEM
-		if (CoolUtil.isRecording())
-			dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
-		else
+		if (isEpiphany)
 			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', Sys.environment()["USERNAME"]);
+		else
+			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', 'Player');
 		#else
-		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
+		dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', 'Player');
 		#end
 	}
 

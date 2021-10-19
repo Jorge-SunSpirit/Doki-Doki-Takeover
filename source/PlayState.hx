@@ -468,7 +468,11 @@ class PlayState extends MusicBeatState
 				if (CoolUtil.isRecording())
 					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue-OBS", 'preload', true));
 				else
+				{
+					DialogueBox.isEpiphany = true;
 					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
+				}
+					
 		}
 
 		trace(SONG.stage);
