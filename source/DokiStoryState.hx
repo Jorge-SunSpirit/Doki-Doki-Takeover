@@ -84,6 +84,7 @@ class DokiStoryState extends MusicBeatState
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
 
+	public static var instance:DokiStoryState;
 	public var acceptInput:Bool = true;
 
 	override function create()
@@ -358,6 +359,9 @@ class DokiStoryState extends MusicBeatState
 
 		if (!selectedSomethin && acceptInput)
 		{
+			if (FlxG.keys.pressed.SEVEN)
+				openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
+
 			switch (diffselect)
 				{
 					case false:
