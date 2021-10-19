@@ -24,12 +24,6 @@ class PopupMessage extends MusicBeatSubstate
 
 		var popupTextLines:Array<String> = popupText.trim().split('{NL}');
 
-		if (isGlitched)
-		{
-			if (FlxG.sound.music != null)
-				FlxG.sound.music.stop();
-		}
-
 		DokiStoryState.instance.acceptInput = false;
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -38,12 +32,23 @@ class PopupMessage extends MusicBeatSubstate
 		background.alpha = 0.5;
 		add(background);
 
-		// this needs to be an actual sprite for the glitched variant
-		box = new FlxSprite(0, 0).makeGraphic(612, 308, 0xFFFBE5EE);
+		box = new FlxSprite(0, 0);
+		box.frames = Paths.getSparrowAtlas('dokistory/popup', 'preload');
+		box.animation.addByPrefix('normal', 'normal');
+		box.animation.addByPrefix('glitch', 'glitch');
+		box.animation.play('normal');
+		box.antialiasing = true;
 		box.screenCenter(XY);
 		box.x -= offsetX;
 		box.y -= offsetY;
 		add(box);
+
+		if (isGlitched)
+		{
+			if (FlxG.sound.music != null)
+				FlxG.sound.music.stop();
+			box.animation.play('glitch');
+		}
 
 		grpText = new FlxTypedGroup<FlxText>();
 		add(grpText);

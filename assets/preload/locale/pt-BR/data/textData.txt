@@ -99,7 +99,7 @@ descLaneUnderwayControl::Transparência atual do Underlay da pista
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Desbloqueado!{NL}Acesse a música no menu de Freeplay.
 msgSayo::As músicas de Sayori agora estão disponíveis no menu de Freeplay.
-msgGFCount::"Contagem da Girlfriend" desbloqueada!{NL}Ative/Desative nas opções!
+msgGFCount::"Contagem da Girlfriend"{NL}desbloqueada! Ative/Desative nas opções!
 msgNat::As músicas de Natsuki agora estão disponíveis no menu de Freeplay.
 msgYuri::As músicas de Yuri agora estão disponíveis no menu de Freeplay.
 msgExtra1::"Poems 'n Thorns" desbloqueado!{NL}Acesse a música no menu de Freeplay.
