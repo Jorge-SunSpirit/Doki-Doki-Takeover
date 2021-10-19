@@ -55,6 +55,8 @@ class KeyBindMenu extends FlxSubState
 
     var state:String = "select";
 
+	var acceptInput:Bool = false;
+
 	override function create()
 	{	
 
@@ -102,7 +104,10 @@ class KeyBindMenu extends FlxSubState
 
         FlxTween.tween(keyTextDisplay, {alpha: 1}, 1, {ease: FlxEase.expoInOut});
         FlxTween.tween(infoText, {alpha: 1}, 1.4, {ease: FlxEase.expoInOut});
-        FlxTween.tween(blackBox, {alpha: 0.7}, 1, {ease: FlxEase.expoInOut});
+		FlxTween.tween(blackBox, {alpha: 0.7}, 1, {ease: FlxEase.expoInOut, onComplete: function(flx:FlxTween)
+		{
+			acceptInput = true;
+        }});
 
         OptionsMenu.instance.acceptInput = false;
 
@@ -125,131 +130,143 @@ class KeyBindMenu extends FlxSubState
 			+ '\n' + ${KeyBinds.gamepad ? LangUtil.getString('descKeyBindGPControls') : LangUtil.getString('descKeyBindKBControls')}
 			+ '\n' + ${lastKey != '' ? lastKey + ' ' + LangUtil.getString('descKeyBindBlacklist') : ''};
 
-        switch(state){
+		if (acceptInput)
+        {
+			switch (state)
+			{
+				case "select":
+					if (FlxG.keys.justPressed.UP)
+					{
+						FlxG.sound.play(Paths.sound('scrollMenu'));
+						changeItem(-1);
+					}
 
-            case "select":
-                if (FlxG.keys.justPressed.UP)
-                {
-                    FlxG.sound.play(Paths.sound('scrollMenu'));
-                    changeItem(-1);
-                }
+					if (FlxG.keys.justPressed.DOWN)
+					{
+						FlxG.sound.play(Paths.sound('scrollMenu'));
+						changeItem(1);
+					}
 
-                if (FlxG.keys.justPressed.DOWN)
-                {
-                    FlxG.sound.play(Paths.sound('scrollMenu'));
-                    changeItem(1);
-                }
+					if (FlxG.keys.justPressed.TAB)
+					{
+						KeyBinds.gamepad = !KeyBinds.gamepad;
+						textUpdate();
+					}
 
-                if (FlxG.keys.justPressed.TAB)
-                {
-                    KeyBinds.gamepad = !KeyBinds.gamepad;
-                    textUpdate();
-                }
+					if (FlxG.keys.justPressed.ENTER)
+					{
+						FlxG.sound.play(Paths.sound('scrollMenu'));
+						state = "input";
+					}
+					else if (FlxG.keys.justPressed.ESCAPE)
+					{
+						quit();
+					}
+					else if (FlxG.keys.justPressed.BACKSPACE)
+					{
+						reset();
+					}
+					if (gamepad != null) // GP Logic
+					{
+						if (gamepad.justPressed.DPAD_UP)
+						{
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeItem(-1);
+							textUpdate();
+						}
+						if (gamepad.justPressed.DPAD_DOWN)
+						{
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeItem(1);
+							textUpdate();
+						}
 
-                if (FlxG.keys.justPressed.ENTER){
-                    FlxG.sound.play(Paths.sound('scrollMenu'));
-                    state = "input";
-                }
-                else if(FlxG.keys.justPressed.ESCAPE){
-                    quit();
-                }
-                else if (FlxG.keys.justPressed.BACKSPACE){
-                    reset();
-                }
-                if (gamepad != null) // GP Logic
-                {
-                    if (gamepad.justPressed.DPAD_UP)
-                    {
-                        FlxG.sound.play(Paths.sound('scrollMenu'));
-                        changeItem(-1);
-                        textUpdate();
-                    }
-                    if (gamepad.justPressed.DPAD_DOWN)
-                    {
-                        FlxG.sound.play(Paths.sound('scrollMenu'));
-                        changeItem(1);
-                        textUpdate();
-                    }
+						if (gamepad.justPressed.START && frames > 10)
+						{
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							state = "input";
+						}
+						else if (gamepad.justPressed.LEFT_TRIGGER)
+						{
+							quit();
+						}
+						else if (gamepad.justPressed.RIGHT_TRIGGER)
+						{
+							reset();
+						}
+					}
 
-                    if (gamepad.justPressed.START && frames > 10){
-                        FlxG.sound.play(Paths.sound('scrollMenu'));
-                        state = "input";
-                    }
-                    else if(gamepad.justPressed.LEFT_TRIGGER){
-                        quit();
-                    }
-                    else if (gamepad.justPressed.RIGHT_TRIGGER){
-                        reset();
-                    }
-                }
+				case "input":
+					if (KeyBinds.gamepad)
+					{
+						tempKey = gpKeys[curSelected];
+						gpKeys[curSelected] = "?";
+					}
+					else
+					{
+						tempKey = keys[curSelected];
+						keys[curSelected] = "?";
+					}
+					textUpdate();
+					state = "waiting";
 
-            case "input":
-                if (KeyBinds.gamepad) {
-                    tempKey = gpKeys[curSelected];
-                    gpKeys[curSelected] = "?";
-                } else {
-                    tempKey = keys[curSelected];
-                    keys[curSelected] = "?";
-                }
-                textUpdate();
-                state = "waiting";
+				case "waiting":
+					if (gamepad != null && KeyBinds.gamepad) // GP Logic
+					{
+						if (FlxG.keys.justPressed.ESCAPE)
+						{ // just in case you get stuck
+							gpKeys[curSelected] = tempKey;
+							state = "select";
+							FlxG.sound.play(Paths.sound('confirmMenu'));
+						}
 
-            case "waiting":
-                if (gamepad != null && KeyBinds.gamepad) // GP Logic
-                {
-                    if(FlxG.keys.justPressed.ESCAPE){ // just in case you get stuck
-                        gpKeys[curSelected] = tempKey;
-                        state = "select";
-                        FlxG.sound.play(Paths.sound('confirmMenu'));
-                    }
+						if (gamepad.justPressed.START)
+						{
+							addKeyGamepad(defaultKeys[curSelected]);
+							save();
+							state = "select";
+						}
 
-                    if (gamepad.justPressed.START)
-                    {
-                        addKeyGamepad(defaultKeys[curSelected]);
-                        save();
-                        state = "select";
-                    }
+						if (gamepad.justPressed.ANY)
+						{
+							trace(gamepad.firstJustPressedID());
+							addKeyGamepad(gamepad.firstJustPressedID());
+							save();
+							state = "select";
+							textUpdate();
+						}
+					}
+					else
+					{
+						if (FlxG.keys.justPressed.ESCAPE)
+						{
+							keys[curSelected] = tempKey;
+							state = "select";
+							FlxG.sound.play(Paths.sound('confirmMenu'));
+						}
+						else if (FlxG.keys.justPressed.ENTER)
+						{
+							addKey(defaultKeys[curSelected]);
+							save();
+							state = "select";
+						}
+						else if (FlxG.keys.justPressed.ANY)
+						{
+							addKey(FlxG.keys.getIsDown()[0].ID.toString());
+							save();
+							state = "select";
+						}
+					}
 
-                    if (gamepad.justPressed.ANY)
-                    {
-                        trace(gamepad.firstJustPressedID());
-                        addKeyGamepad(gamepad.firstJustPressedID());
-                        save();
-                        state = "select";
-                        textUpdate();
-                    }
+				case "exiting":
 
-                }
-                else
-                {
-                    if(FlxG.keys.justPressed.ESCAPE){
-                        keys[curSelected] = tempKey;
-                        state = "select";
-                        FlxG.sound.play(Paths.sound('confirmMenu'));
-                    }
-                    else if(FlxG.keys.justPressed.ENTER){
-                        addKey(defaultKeys[curSelected]);
-                        save();
-                        state = "select";
-                    }
-                    else if(FlxG.keys.justPressed.ANY){
-                        addKey(FlxG.keys.getIsDown()[0].ID.toString());
-                        save();
-                        state = "select";
-                    }
-                }
+				default:
+					state = "select";
+			}
 
-
-            case "exiting":
-
-
-            default:
-                state = "select";
-
+			if (FlxG.keys.justPressed.ANY)
+				textUpdate();
         }
-
-        if(FlxG.keys.justPressed.ANY)
-			textUpdate();
 
 		super.update(elapsed);
 		
@@ -316,10 +333,12 @@ class KeyBindMenu extends FlxSubState
 
         save();
 
-        OptionsMenu.instance.acceptInput = true;
-
         FlxTween.tween(keyTextDisplay, {alpha: 0}, 1, {ease: FlxEase.expoInOut});
-        FlxTween.tween(blackBox, {alpha: 0}, 1.1, {ease: FlxEase.expoInOut, onComplete: function(flx:FlxTween){close();}});
+		FlxTween.tween(blackBox, {alpha: 0}, 1.1, {ease: FlxEase.expoInOut, onComplete: function(flx:FlxTween)
+		{
+			OptionsMenu.instance.acceptInput = true; 
+            close();
+        }});
         FlxTween.tween(infoText, {alpha: 0}, 1, {ease: FlxEase.expoInOut});
     }
 

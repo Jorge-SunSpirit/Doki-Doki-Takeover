@@ -97,11 +97,11 @@ descMiddleScroll::Ponha sua pista para o centro ou para a direita.
 descLaneUnderway::Ativa/desativa underlay de pista.
 descLaneUnderwayControl::Transparência atual do Underlay da pista
 // UNLOCK POPUPS
-msgMoni::"Your Reality" Desbloqueado!\nAcesse a música no menu de Freeplay.
+msgMoni::"Your Reality" Desbloqueado!{NL}Acesse a música no menu de Freeplay.
 msgSayo::As músicas de Sayori agora estão disponíveis no menu de Freeplay.
-msgGFCount::"Contagem da Girlfriend" desbloqueada!\nAtive/Desative nas opções!
+msgGFCount::"Contagem da Girlfriend"{NL}desbloqueada! Ative/Desative nas opções!
 msgNat::As músicas de Natsuki agora estão disponíveis no menu de Freeplay.
 msgYuri::As músicas de Yuri agora estão disponíveis no menu de Freeplay.
-msgExtra1::"Poems 'n Thorns" desbloqueado!\nAcesse a música no menu de Freeplay.
-msgExtra2::"Dual Demise" desbloqueado!\nAcesse a música no menu de Freeplay.
-msgExtra3::Epifania\ndesbloqueada.
+msgExtra1::"Poems 'n Thorns" desbloqueado!{NL}Acesse a música no menu de Freeplay.
+msgExtra2::"Dual Demise" desbloqueado!{NL}Acesse a música no menu de Freeplay.
+msgExtra3::Epifania{NL}desbloqueada.

@@ -65,20 +65,26 @@ class Note extends FlxSprite
 			case 'pixel':
 				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels','week6'), true, 17, 17);
 
-				if (noteType == 2)
-					{
+				switch (noteType)
+				{
+					/*case 1:
+						//Testing exclusively for chart stuff to seperate alt notes from normal notes visually
+						animation.add('greenScroll', [2]);
+						animation.add('redScroll', [3]);
+						animation.add('blueScroll', [1]);
+						animation.add('purpleScroll', [0]);*/
+					case 2:
 						animation.add('greenScroll', [22]);
 						animation.add('redScroll', [23]);
 						animation.add('blueScroll', [21]);
 						animation.add('purpleScroll', [20]);
-					}
-				else
-					{
+					default:
 						animation.add('greenScroll', [6]);
 						animation.add('redScroll', [7]);
 						animation.add('blueScroll', [5]);
 						animation.add('purpleScroll', [4]);
-					}
+				}
+					
 
 				if (isSustainNote)
 				{
@@ -102,6 +108,12 @@ class Note extends FlxSprite
 
 				switch (noteType)
 					{
+						/*case 1:
+							//Testing exclusively for chart stuff to seperate alt notes from normal notes visually
+							animation.addByPrefix('greenScroll', 'arrowLEFT');
+							animation.addByPrefix('redScroll', 'arrowLEFT');
+							animation.addByPrefix('blueScroll', 'arrowLEFT');
+							animation.addByPrefix('purpleScroll', 'arrowLEFT');*/
 						case 2:
 							animation.addByPrefix('greenScroll', 'markov green0');
 							animation.addByPrefix('redScroll', 'markov red0');
