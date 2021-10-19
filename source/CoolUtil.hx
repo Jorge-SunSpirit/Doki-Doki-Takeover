@@ -42,7 +42,7 @@ class CoolUtil
 
 		return isOBS;
 		#else
-		return true;
+		return false;
 		#end
 	}
 
