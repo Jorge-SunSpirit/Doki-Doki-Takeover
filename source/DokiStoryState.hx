@@ -359,7 +359,7 @@ class DokiStoryState extends MusicBeatState
 
 		if (!selectedSomethin && acceptInput)
 		{
-			if (FlxG.keys.pressed.SEVEN)
+			if (FlxG.keys.justPressed.SEVEN)
 				openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
 
 			switch (diffselect)

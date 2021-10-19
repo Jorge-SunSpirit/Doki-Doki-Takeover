@@ -4,60 +4,62 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import flixel.text.FlxText;
+import flixel.group.FlxGroup.FlxTypedGroup;
+
+using StringTools;
 
 class PopupMessage extends MusicBeatSubstate
 {
 	var background:FlxSprite;
-	var boxOutline:FlxSprite;
 	var box:FlxSprite;
-    var text:FlxText;
-    var okay:FlxText;
 
-	public function new(popupText:String)
+	var offsetX:Float = (FlxG.width / 2);
+	var offsetY:Float = (FlxG.height / 2);
+
+	var grpText:FlxTypedGroup<FlxText>;
+
+	public function new(popupText:String, ?isGlitched:Bool = false)
 	{
 		super();
 
+		var popupTextLines:Array<String> = popupText.trim().split('\n');
+
+		//DokiStoryState.instance.acceptInput = false;
+
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 
-		background = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+		background = new FlxSprite(-offsetX, -offsetY).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 		background.alpha = 0.5;
 		add(background);
 
 		// this needs to be an actual sprite for the glitched variant
-        boxOutline = new FlxSprite(0, 0).makeGraphic(626, 320, 0xFFF5BEDA);
-		boxOutline.screenCenter(XY);
-		add(boxOutline);
-
 		box = new FlxSprite(0, 0).makeGraphic(612, 308, 0xFFFBE5EE);
-        box.screenCenter(XY);
+		box.screenCenter(XY);
+		box.x -= offsetX;
+		box.y -= offsetY;
 		add(box);
 
-		text = new FlxText(0, 0, 1280, popupText, 72);
-		text.scrollFactor.set(0, 0);
-		text.setFormat(LangUtil.getFont('aller'), 42, FlxColor.BLACK, FlxTextAlign.CENTER);
-        text.screenCenter(X);
-		text.antialiasing = true;
-		add(text);
+		grpText = new FlxTypedGroup<FlxText>();
+		add(grpText);
 
-		okay = new FlxText(0, 0, 1280, "OK", 72);
-		okay.scrollFactor.set(0, 0);
-		okay.setFormat(LangUtil.getFont('riffic'), 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, 0xFFB75798);
-        okay.screenCenter(X);
-		okay.antialiasing = true;
-		add(okay);
+		for (i in 0...popupTextLines.length)
+		{
+			var text:FlxText = new FlxText(0, box.y + 50 + (i * 50), 0, popupTextLines[i]);
+			text.setFormat(LangUtil.getFont('aller'), 32, FlxColor.BLACK, FlxTextAlign.CENTER);
+			text.screenCenter(X);
+			text.x -= offsetX;
+			text.antialiasing = true;
+			text.ID = i;
+			grpText.add(text);
+		}
 	}
 
 	override function update(elapsed:Float)
 	{
-		/*
-		if (DokiStoryState.instance.acceptInput)
-			DokiStoryState.instance.acceptInput = false;
-		*/
-
         if (FlxG.keys.justPressed.ENTER)
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'));
-			// DokiStoryState.instance.acceptInput = true;
+			//DokiStoryState.instance.acceptInput = true;
 			close();
 		}
 
