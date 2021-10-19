@@ -84,6 +84,8 @@ class DokiStoryState extends MusicBeatState
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
 
+	public var acceptInput:Bool = true;
+
 	override function create()
 	{
 		#if FEATURE_DISCORD
@@ -354,7 +356,7 @@ class DokiStoryState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		if (!selectedSomethin)
+		if (!selectedSomethin && acceptInput)
 		{
 			switch (diffselect)
 				{

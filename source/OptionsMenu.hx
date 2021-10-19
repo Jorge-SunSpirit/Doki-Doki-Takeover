@@ -83,6 +83,8 @@ class OptionsMenu extends MusicBeatState
 	{
 		instance = this;
 
+		persistentUpdate = persistentDraw = true;
+
 		if (FlxG.save.data.sayobeaten)
 		{
 			options.push(new OptionCategory(LangUtil.getString('catUnlock'), [
