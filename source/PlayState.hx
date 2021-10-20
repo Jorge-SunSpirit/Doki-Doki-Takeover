@@ -3321,6 +3321,7 @@ class PlayState extends MusicBeatState
 						DialogueBox.isPixel = true;
 						endcutscene(doof3);
 					case 'obsession':
+						remove(whiteflash);
 						staticshock.visible = false;
 						endcutscene(doof2);
 					case 'glitcher (monika mix)':
