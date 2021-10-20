@@ -3321,6 +3321,7 @@ class PlayState extends MusicBeatState
 						DialogueBox.isPixel = true;
 						endcutscene(doof3);
 					case 'obsession':
+						staticshock.visible = false;
 						endcutscene(doof2);
 					case 'glitcher (monika mix)':
 						endcutscene(doof4);
@@ -3351,9 +3352,6 @@ class PlayState extends MusicBeatState
 			FlxG.save.data.scrollSpeed = 1;
 			FlxG.save.data.downscroll = false;
 		}
-
-		if (curSong.toLowerCase() == 'obsession')
-			staticshock.visible = false;
 
 		if (FlxG.save.data.fpsCap > 290)
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(290);
