@@ -359,7 +359,10 @@ class DokiStoryState extends MusicBeatState
 				default:
 					openSubState(new PopupMessage(LangUtil.getString('msgGFCount')));
 				case 5:
-					openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
+					if (FlxG.save.data.unlockepip)
+						openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
+					else
+						secondaryPopUp = false;
 			}
 		}
 

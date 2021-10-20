@@ -328,6 +328,12 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.extra2beaten = false;
 				FlxG.save.data.gfCountdown = false;
 				FlxG.save.data.unlockepip = false;
+				FlxG.save.data.monipopup = false;
+				FlxG.save.data.sayopopup = false;
+				FlxG.save.data.natpopup = false;
+				FlxG.save.data.yuripopup = false;
+				FlxG.save.data.extra1popup = false;
+				FlxG.save.data.extra2popup = false;
 				FlxG.save.data.weekUnlocked = 1;
 			}
 			if (FlxG.keys.justPressed.U)
