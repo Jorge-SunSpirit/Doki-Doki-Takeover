@@ -1387,7 +1387,9 @@ class PlayState extends MusicBeatState
 				case 'your demise':
 					DarkStart(doof);
 				case 'epiphany':
-					//iconP1.changeIcon('player');
+					#if FEATURE_ICON
+					iconP1.changeIcon('player');
+					#end
 					if (showCutscene)
 						{
 							funnyephiphinya(doof);
