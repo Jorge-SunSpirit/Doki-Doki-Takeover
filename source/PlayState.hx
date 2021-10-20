@@ -3321,6 +3321,7 @@ class PlayState extends MusicBeatState
 						DialogueBox.isPixel = true;
 						endcutscene(doof3);
 					case 'obsession':
+						FlxG.save.data.yuribeaten = true;
 						remove(whiteflash);
 						staticshock.visible = false;
 						endcutscene(doof2);
@@ -3405,8 +3406,6 @@ class PlayState extends MusicBeatState
 							FlxG.save.data.sayobeaten = true;
 							case 2:
 							FlxG.save.data.natbeaten = true;
-							case 3:
-							FlxG.save.data.yuribeaten = true;
 							case 4:
 							FlxG.save.data.extrabeaten = true;
 							case 5:

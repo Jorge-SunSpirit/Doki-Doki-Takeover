@@ -331,11 +331,6 @@ class DokiStoryState extends MusicBeatState
 						openSubState(new PopupMessage(LangUtil.getString('msgNat')));
 					else
 						showPopUp = false;
-				case 3:
-					if (!FlxG.save.data.yuripopup)
-						openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
-					else
-						showPopUp = false;
 				case 4:
 					if (!FlxG.save.data.extra1popup)
 						openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
@@ -365,6 +360,9 @@ class DokiStoryState extends MusicBeatState
 						secondaryPopUp = false;
 			}
 		}
+
+		if (FlxG.save.data.yuribeaten && !FlxG.save.data.yuripopup)
+			openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
 
 		switch (curSelected)
 			{
