@@ -26,7 +26,7 @@ class PopupMessage extends MusicBeatSubstate
 
 		DokiStoryState.instance.acceptInput = false;
 
-		FlxG.sound.play(Paths.sound('scrollMenu'));
+		// FlxG.sound.play(Paths.sound('scrollMenu'));
 
 		background = new FlxSprite(-offsetX, -offsetY).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 		background.alpha = 0.5;
@@ -69,8 +69,14 @@ class PopupMessage extends MusicBeatSubstate
         if (FlxG.keys.justPressed.ENTER)
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'));
+			DokiStoryState.showPopUp = false;
 
-			if (DokiStoryState.popupWeek == 1 || DokiStoryState.popupWeek == 5)
+			if (DokiStoryState.secondaryPopUp)
+			{
+				DokiStoryState.popupWeek = 0;
+				DokiStoryState.secondaryPopUp = false;
+			}
+			else if (DokiStoryState.popupWeek == 1 || DokiStoryState.popupWeek == 5)
 				DokiStoryState.secondaryPopUp = true;
 
 			if (!FlxG.sound.music.playing)

@@ -309,7 +309,7 @@ class DokiStoryState extends MusicBeatState
 			openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
 		#end
 
-		if (showPopUp)
+		if (showPopUp && !secondaryPopUp)
 		{
 			switch (popupWeek)
 			{
@@ -326,10 +326,9 @@ class DokiStoryState extends MusicBeatState
 				case 5:
 					openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
 			}
-			showPopUp = false;
 		}
 
-		if (secondaryPopUp)
+		if (!showPopUp && secondaryPopUp)
 		{
 			switch (popupWeek)
 			{
@@ -338,8 +337,6 @@ class DokiStoryState extends MusicBeatState
 				case 5:
 					openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
 			}
-			popupWeek = 0;
-			secondaryPopUp = false;
 		}
 
 		switch (curSelected)
