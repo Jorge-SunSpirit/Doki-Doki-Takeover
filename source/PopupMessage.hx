@@ -85,6 +85,22 @@ class PopupMessage extends MusicBeatSubstate
 				Conductor.changeBPM(102);
 			}
 
+			switch (DokiStoryState.popupWeek)
+			{
+				default:
+					FlxG.save.data.monipopup = true;
+				case 1:
+					FlxG.save.data.sayopopup = true;
+				case 2:
+					FlxG.save.data.natpopup = true;
+				case 3:
+					FlxG.save.data.yuripopup = true;
+				case 4:
+					FlxG.save.data.extra1popup = true;
+				case 5:
+					FlxG.save.data.extra2popup = true;
+			}
+
 			DokiStoryState.instance.acceptInput = true;
 			close();
 		}

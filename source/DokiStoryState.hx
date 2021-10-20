@@ -314,17 +314,41 @@ class DokiStoryState extends MusicBeatState
 			switch (popupWeek)
 			{
 				default:
-					openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
+					if (!FlxG.save.data.monipopup)
+						openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
+					else
+						showPopUp = false;
 				case 1:
-					openSubState(new PopupMessage(LangUtil.getString('msgSayo')));
+					if (!FlxG.save.data.sayopopup)
+						openSubState(new PopupMessage(LangUtil.getString('msgSayo')));
+					else
+					{
+						showPopUp = false;
+						secondaryPopUp = false;
+					}
 				case 2:
-					openSubState(new PopupMessage(LangUtil.getString('msgNat')));
+					if (!FlxG.save.data.natpopup)
+						openSubState(new PopupMessage(LangUtil.getString('msgNat')));
+					else
+						showPopUp = false;
 				case 3:
-					openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
+					if (!FlxG.save.data.yuripopup)
+						openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
+					else
+						showPopUp = false;
 				case 4:
-					openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
+					if (!FlxG.save.data.extra1popup)
+						openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
+					else
+						showPopUp = false;
 				case 5:
-					openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+					if (!FlxG.save.data.extra2popup)
+						openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+					else
+					{
+						showPopUp = false;
+						secondaryPopUp = false;
+					}
 			}
 		}
 

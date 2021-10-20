@@ -32,6 +32,7 @@ class DialogueBox extends FlxSpriteGroup
 	public static var isPixel:Bool = false;
 	public static var isEpiphany:Bool = false;
 	var canSkip:Bool = true;
+	var canFullSkip:Bool = true;
 
 	// SECOND DIALOGUE FOR THE PIXEL SHIT INSTEAD???
 	var swagDialogue:FlxTypeText;
@@ -235,7 +236,7 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (FlxG.keys.justPressed.ESCAPE && !stopspamming && canSkip)
+		if (FlxG.keys.justPressed.ESCAPE && !stopspamming && canSkip && canFullSkip)
 			{
 				isEnding = true;
 				stopspamming = true;
@@ -537,6 +538,11 @@ class DialogueBox extends FlxSpriteGroup
 								{
 									endinstantly();
 								}});
+
+						case 'disableskip':
+							skipText.visible = false;
+							canFullSkip = false;
+							enddialogue();
 
 					}
 			}
@@ -1169,6 +1175,11 @@ class DialogueBox extends FlxSpriteGroup
 								{
 									endinstantly();
 								}});
+
+					case 'disableskip':
+						skipText.visible = false;
+						canFullSkip = false;
+						enddialogue();
 						
 				}
 			}
