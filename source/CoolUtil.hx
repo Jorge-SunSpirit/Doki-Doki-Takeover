@@ -1,8 +1,11 @@
 package;
 
+import openfl.display.BitmapData;
 import lime.utils.Assets;
+import flixel.graphics.FlxGraphic;
 #if FEATURE_FILESYSTEM
 import sys.io.Process;
+import sys.FileSystem;
 #end
 
 using StringTools;
@@ -10,10 +13,12 @@ using StringTools;
 class CoolUtil
 {
 	public static var programList:Array<String> = [
-		'obs', // obs64, obs32, streamlabs obs, streamlabs obs32
+		'obs32',
+		'obs64',
+		'streamlabs obs',
 		'bdcam',
 		'fraps',
-		'xsplit', // c# program
+		'xsplit', // TIL c# program
 		'hycam2' // hueh
 	];
 
@@ -26,7 +31,7 @@ class CoolUtil
 
 	public static function isRecording():Bool
 	{
-		#if FEATURE_FILESYSTEM
+		#if FEATURE_OBS
 		var taskList:Process = new Process('tasklist', []);
 		var readableList:String = taskList.stdout.readAll().toString().toLowerCase();
 		var isOBS:Bool = false;
@@ -43,6 +48,21 @@ class CoolUtil
 		return isOBS;
 		#else
 		return false;
+		#end
+	}
+
+	public static function grabUserIcon():FlxGraphic
+	{
+		#if FEATURE_ICON
+		if (FileSystem.exists(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg'))
+		{
+			var avatar = BitmapData.fromFile(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg');
+			return FlxGraphic.fromBitmapData(avatar);
+		}
+		else
+			return Paths.loadImage('icons/icon-player', 'shared');
+		#else
+		return null;
 		#end
 	}
 

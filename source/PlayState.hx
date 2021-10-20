@@ -162,6 +162,7 @@ class PlayState extends MusicBeatState
 
 	private var iconP1:HealthIcon;
 	private var iconP2:HealthIcon;
+	private var iconSubtract:Int = 0;
 	public var camHUD:FlxCamera;
 	private var camGame:FlxCamera;
 
@@ -469,6 +470,10 @@ class PlayState extends MusicBeatState
 					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue-OBS", 'preload', true));
 				else
 				{
+					#if FEATURE_ICON
+					if (FileSystem.exists(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg'))
+						iconSubtract = 25;
+					#end
 					DialogueBox.isEpiphany = true;
 					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 				}
@@ -1267,8 +1272,6 @@ class PlayState extends MusicBeatState
 		scoreTxt.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.antialiasing = !isPixelUI;
-		scoreTxt.visible = executeModchart;
-		add(scoreTxt);
 
 		replayTxt = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
@@ -1289,9 +1292,14 @@ class PlayState extends MusicBeatState
 		iconP1.y = healthBar.y - (iconP1.height / 2);
 		add(iconP1);
 
+		iconP1.y += iconSubtract;
+
 		iconP2 = new HealthIcon(SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
+
+		// layering due to 'player' icon
+		add(scoreTxt);
 
 		strumLineNotes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -1379,6 +1387,7 @@ class PlayState extends MusicBeatState
 				case 'your demise':
 					DarkStart(doof);
 				case 'epiphany':
+					//iconP1.changeIcon('player');
 					if (showCutscene)
 						{
 							funnyephiphinya(doof);
@@ -1421,16 +1430,21 @@ class PlayState extends MusicBeatState
 		{
 			remove(gf);
 			remove(boyfriend);
+			healthBar.visible = false;
+			healthBarBG.visible = false;
+			iconP1.visible = false;
+			iconP2.visible = false;
+			scoreTxt.visible = false;
 			new FlxTimer().start(1.2, function(godlike:FlxTimer)
+			{
+				if (dialogueBox != null)
 				{
-					if (dialogueBox != null)
-						{
-							inCutscene = true;
-							add(dialogueBox);
-						}
-						else
-							startCountdown();
-				});
+					inCutscene = true;
+					add(dialogueBox);
+				}
+				else
+					startCountdown();
+			});
 		}
 		
 	function endcutscene(?dialogueBox:DialogueBox):Void
@@ -1802,6 +1816,15 @@ class PlayState extends MusicBeatState
 		
 		showCutscene = false;
 		inCutscene = false;
+
+		if (curSong.toLowerCase() == 'epiphany')
+		{
+			healthBar.visible = true;
+			healthBarBG.visible = true;
+			iconP1.visible = true;
+			iconP2.visible = true;
+			scoreTxt.visible = true;
+		}
 
 		generateStaticArrows(0, SONG.noteStyle);
 		generateStaticArrows(1, SONG.noteStyle);
@@ -2457,13 +2480,10 @@ class PlayState extends MusicBeatState
 				maxNPS = nps;
 		}
 
-		if (FlxG.keys.justPressed.NINE)
+		if (FlxG.keys.justPressed.NINE && curSong.toLowerCase() != 'epiphany')
 			iconP1.swapOldIcon();
 
 		scoreTxt.screenCenter(X);
-
-		if (!scoreTxt.visible && !executeModchart)
-			scoreTxt.visible = true;
 
 		if (FlxG.keys.pressed.O && FlxG.keys.pressed.P && curStage == 'schoolEvil')
 		{
@@ -2530,15 +2550,15 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.50)));
-		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.50)));
+		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width - (iconSubtract * 2), 0.5)));
+		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.5)));
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
 		var iconOffset:Int = 26;
 
-		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
+		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset + iconSubtract);
 		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
 
 		if (health > 2)
@@ -3399,6 +3419,7 @@ class PlayState extends MusicBeatState
 					DokiStoryState.showPopUp = true;
 					DokiStoryState.popupWeek = PlayState.storyWeek;
 
+					showCutscene = true;
 					FlxG.switchState(new DokiStoryState());
 
 					#if FEATURE_LUAMODCHART
@@ -3492,6 +3513,7 @@ class PlayState extends MusicBeatState
 			else
 			{
 				trace('WENT BACK TO FREEPLAY??');
+				showCutscene = true;
 				FlxG.switchState(new DokiFreeplayState());
 			}
 		}
@@ -4659,6 +4681,16 @@ class PlayState extends MusicBeatState
 				{
 					case 776:
 						dad.playAnim('lastNOTE');
+					case 788:
+						new FlxTimer().start(0.05, function(tmr:FlxTimer)
+						{
+							iconP2.alpha -= 0.15;
+
+							if (iconP2.alpha > 0)
+								tmr.reset(0.05);
+							else
+								iconP2.visible = false;
+						});
 					case 790:
 						FlxG.camera.fade(FlxColor.BLACK, .7, false);
 				}
