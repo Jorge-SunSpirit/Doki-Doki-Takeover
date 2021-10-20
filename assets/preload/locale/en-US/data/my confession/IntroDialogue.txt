@@ -10,4 +10,5 @@
 :hideright:
 :endmusic:
 :sayori_neutral:"After all-"
+:glitch:
 :sayori_neutral:"I AM the Club President."

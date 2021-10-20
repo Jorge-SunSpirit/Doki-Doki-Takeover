@@ -31,7 +31,7 @@
 :yuri_neutral:"...you really want to sing with us?"
 :yuri_blush:"I’m… not sure how comfortable I’d feel doing that-"
 :bf_beep:"Skee dep doop!"
-:yuri_aah:"Wh-what do you mean I have to?!"
+:yuri_blush:"Wh-what do you mean I have to?!"
 :hideright:
 :sayori_neutral:"You know, we’ve been working so hard on writing and poems lately. I think having a fun singing session with everyone is the perfect break we all need!"
 :yuri_blush:"-!"
