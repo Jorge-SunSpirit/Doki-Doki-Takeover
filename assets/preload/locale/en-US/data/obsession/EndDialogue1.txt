@@ -27,7 +27,9 @@
 :sayori_gone:"In fact, you two never existed on this computer until just a few moments ago when we first saw you."
 :sayori_gone:"Could you have done the impossible?"
 :sayori_gone:"Have you broke through to the digital world from the real world?"
+:showbackgroundimage:evilcutin
 :glitch:
+:showbackgroundimage:evil1
 :sayori_gone:"Have you defied all logic and science, just for us?"
 :sayori_gone:"Ahahaha, you really have made us so happy."
 :sayori_gone:"Now that you're finally here, we can all be happy and sing together."
