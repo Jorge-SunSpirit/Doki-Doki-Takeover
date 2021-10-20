@@ -41,6 +41,7 @@ class PopupMessage extends MusicBeatSubstate
 		box.screenCenter(XY);
 		box.x -= offsetX;
 		box.y -= offsetY;
+		box.offset.set(-71);
 		add(box);
 
 		if (isGlitched)
@@ -48,6 +49,7 @@ class PopupMessage extends MusicBeatSubstate
 			if (FlxG.sound.music != null)
 				FlxG.sound.music.stop();
 			box.animation.play('glitch');
+			box.offset.set(-35.5);
 		}
 
 		grpText = new FlxTypedGroup<FlxText>();
@@ -55,7 +57,7 @@ class PopupMessage extends MusicBeatSubstate
 
 		for (i in 0...popupTextLines.length)
 		{
-			var text:FlxText = new FlxText(0, box.y + 72 + (i * 42), box.width * 0.95, popupTextLines[i]);
+			var text:FlxText = new FlxText(0, box.y + 72 + (i * 42), box.frameWidth * 0.95, popupTextLines[i]);
 			text.setFormat(LangUtil.getFont('aller'), 32, FlxColor.BLACK, FlxTextAlign.CENTER);
 			text.screenCenter(X);
 			text.x -= offsetX;
