@@ -496,6 +496,9 @@ class DialogueBox extends FlxSpriteGroup
 							}
 
 						// copy-pasted extras from regular dialogue
+						case 'playsound':
+							FlxG.sound.play(Paths.sound(dialogueList[0], 'shared'));
+							enddialogue();
 						case 'startmusic':
 							FlxG.sound.playMusic(Paths.music(dialogueList[0], 'shared'));
 							enddialogue();
@@ -1126,6 +1129,9 @@ class DialogueBox extends FlxSpriteGroup
 						}
 					
 					//extras
+					case 'playsound':
+						FlxG.sound.play(Paths.sound(dialogueList[0], 'shared'));
+						enddialogue();
 					case 'startmusic':
 						FlxG.sound.playMusic(Paths.music(dialogueList[0], 'shared'));
 						enddialogue();
