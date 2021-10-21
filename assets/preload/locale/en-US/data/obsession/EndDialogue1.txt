@@ -28,6 +28,7 @@
 :sayori_gone:"Could you have done the impossible?"
 :sayori_gone:"Have you broke through to the digital world from the real world?"
 :showbackgroundimage:evilcutin
+:autoskip:"..."
 :glitch:
 :showbackgroundimage:evil1
 :sayori_gone:"Have you defied all logic and science, just for us?"
@@ -45,3 +46,4 @@
 :gf_gone:"..."
 :sayori_gone:"Forever."
 :bf_scared:*terrified beep boop noises*
+:fadeout:"..."

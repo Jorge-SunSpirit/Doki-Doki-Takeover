@@ -99,6 +99,12 @@ class DialogueBox extends FlxSpriteGroup
 				}
 
 		this.dialogueList = dialogueList;
+
+		backgroundImage = new FlxSprite();
+		backgroundImage.x = 0;
+		backgroundImage.y = 0;
+		add(backgroundImage);
+		backgroundImage.visible = false;
 		
 		if (!hasDialog)
 			return;
@@ -157,12 +163,6 @@ class DialogueBox extends FlxSpriteGroup
 					box.y += 400;
 					box.setGraphicSize(Std.int(box.width * 1.2));
 				}
-
-		backgroundImage = new FlxSprite();
-		backgroundImage.x = 0;
-		backgroundImage.y = 0;
-		add(backgroundImage);
-		backgroundImage.visible = false;
 		
 		box.updateHitbox();
 		add(box);
@@ -204,7 +204,8 @@ class DialogueBox extends FlxSpriteGroup
 		add(skipText);
 		
 
-		blackscreen = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+		blackscreen = new FlxSprite().makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), FlxColor.BLACK);
+		blackscreen.scrollFactor.set();
 		blackscreen.alpha = 0;
 		dialogue = new Alphabet(0, 80, "", false, true);
 	}
@@ -535,10 +536,11 @@ class DialogueBox extends FlxSpriteGroup
 						case 'fadeout':
 							canSkip = false;
 							add(blackscreen);
-							blackscreen.alpha = 0.1;
+							blackscreen.alpha = 0;
 							FlxTween.tween(blackscreen, {alpha: 1}, 5, {ease: FlxEase.expoOut,
 							onComplete: function(twn:FlxTween)
 								{
+									trace("Did I work?");
 									endinstantly();
 								}});
 
@@ -1011,6 +1013,17 @@ class DialogueBox extends FlxSpriteGroup
 							portraitRight.animation.addByPrefix('play', 'bf_scared', 24, false);
 							portraitRight.animation.play('play');
 						}
+					case 'bf_hmph':
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('BFText'), 0.8)];
+						portraitRight.visible = false;
+						box.animation.play('bf');
+						if (!portraitRight.visible)
+						{
+							portraitRight.visible = true;
+							portraitRight.frames = Paths.getSparrowAtlas('dialogue/bf_dialogue','doki');
+							portraitRight.animation.addByPrefix('play', 'bf_hmph', 24, false);
+							portraitRight.animation.play('play');
+						}
 
 
 					//GF animations
@@ -1176,11 +1189,14 @@ class DialogueBox extends FlxSpriteGroup
 					
 					case 'fadeout':
 						canSkip = false;
+						add(blackscreen);
+						blackscreen.alpha = 0;
 						FlxTween.tween(blackscreen, {alpha: 1}, 5, {ease: FlxEase.expoOut,
-							onComplete: function(twn:FlxTween)
-								{
-									endinstantly();
-								}});
+						onComplete: function(twn:FlxTween)
+							{
+								trace("Did I work?");
+								endinstantly();
+							}});
 
 					case 'disableskip':
 						skipText.visible = false;
