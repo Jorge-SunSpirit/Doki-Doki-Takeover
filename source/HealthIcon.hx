@@ -48,9 +48,12 @@ class HealthIcon extends FlxSprite
 				if (isEpiphany)
 				{
 					loadGraphic(CoolUtil.grabUserIcon());
-					animation.add(char, [0, 1], 0, false, !isPlayer);
-					animation.play(char);
-					return;
+					if (sys.FileSystem.exists(CoolUtil.pfpPath))
+					{
+						animation.add(char, [0, 1], 0, false, !isPlayer);
+						animation.play(char);
+						return;
+					}
 				}
 				#end
 			case 'bf-pixelangry':

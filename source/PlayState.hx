@@ -485,7 +485,10 @@ class PlayState extends MusicBeatState
 						DialogueBox.isEpiphany = true;
 						#if FEATURE_ICON
 						HealthIcon.isEpiphany = true;
-						iconSubtract = 25;
+						iconP1 = new HealthIcon('player');
+						remove(iconP1);
+						if (FileSystem.exists(CoolUtil.pfpPath))
+							iconSubtract = 25;
 						#end
 						dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 					}
