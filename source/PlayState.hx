@@ -3450,6 +3450,7 @@ class PlayState extends MusicBeatState
 						endcutscene(doof3);
 					case 'obsession':
 						FlxG.save.data.yuribeaten = true;
+						FlxG.save.flush();
 						remove(whiteflash);
 						staticshock.visible = false;
 						endcutscene(doof2);
