@@ -483,8 +483,10 @@ class PlayState extends MusicBeatState
 					else
 					{
 						DialogueBox.isEpiphany = true;
+						#if FEATURE_ICON
 						HealthIcon.isEpiphany = true;
 						iconSubtract = 25;
+						#end
 						dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 					}
 				}
@@ -492,8 +494,10 @@ class PlayState extends MusicBeatState
 					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 		}
 
+		#if FEATURE_ICON
 		if (!showCutscene && SONG.song.toLowerCase() == 'epiphany' && HealthIcon.isEpiphany && FileSystem.exists(CoolUtil.pfpPath))
 			iconSubtract = 25;
+		#end
 
 		trace(SONG.stage);
 
