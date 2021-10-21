@@ -466,19 +466,24 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue", 'preload', true));
 
 			case "epiphany":
-				if (CoolUtil.isRecording())
-					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue-OBS", 'preload', true));
-				else
+				if (showCutscene)
 				{
-					#if FEATURE_ICON
-					if (FileSystem.exists(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg'))
+					if (CoolUtil.isRecording())
+						dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue-OBS", 'preload', true));
+					else
+					{
+						DialogueBox.isEpiphany = true;
+						HealthIcon.isEpiphany = true;
 						iconSubtract = 25;
-					#end
-					DialogueBox.isEpiphany = true;
-					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
+						dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
+					}
 				}
-					
+				else
+					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 		}
+
+		if (!showCutscene && SONG.song.toLowerCase() == 'epiphany' && HealthIcon.isEpiphany && FileSystem.exists(CoolUtil.pfpPath))
+			iconSubtract = 25;
 
 		trace(SONG.stage);
 
@@ -1337,11 +1342,9 @@ class PlayState extends MusicBeatState
 					introcutscene(doof2);
 				case 'your demise':
 					if (showCutscene)
-						{
-							introcutscene(doof);
-						} else {
-							DarkStart(doof);
-						}
+						introcutscene(doof);
+					else
+						DarkStart(doof);
 				case 'erb':
 					introcutscene(doof);
 				
@@ -1391,11 +1394,9 @@ class PlayState extends MusicBeatState
 					iconP1.changeIcon('player');
 					#end
 					if (showCutscene)
-						{
-							funnyephiphinya(doof);
-						} else {
-							epipdarkstart(doof);
-						}
+						funnyephiphinya(doof);
+					else
+						epipdarkstart(doof);
 				default:
 					startCountdown();
 			}
@@ -2482,7 +2483,7 @@ class PlayState extends MusicBeatState
 				maxNPS = nps;
 		}
 
-		if (FlxG.keys.justPressed.NINE && curSong.toLowerCase() != 'epiphany')
+		if (FlxG.keys.justPressed.NINE && !HealthIcon.isEpiphany)
 			iconP1.swapOldIcon();
 
 		scoreTxt.screenCenter(X);
@@ -3356,6 +3357,9 @@ class PlayState extends MusicBeatState
 			FlxG.save.data.scrollSpeed = 1;
 			FlxG.save.data.downscroll = false;
 		}
+
+		if (HealthIcon.isEpiphany)
+			HealthIcon.isEpiphany = false;
 
 		if (FlxG.save.data.fpsCap > 290)
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(290);

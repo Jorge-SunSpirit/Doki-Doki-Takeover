@@ -12,6 +12,8 @@ class HealthIcon extends FlxSprite
 	public var isPlayer:Bool = false;
 	public var isOldIcon:Bool = false;
 
+	public static var isEpiphany:Bool = false;
+
 	/**
 	 * Used for FreeplayState! If you use it elsewhere, prob gonna annoying
 	 */
@@ -43,7 +45,7 @@ class HealthIcon extends FlxSprite
 				// lol
 			case 'player':
 				#if FEATURE_ICON
-				if (!CoolUtil.isRecording())
+				if (isEpiphany)
 				{
 					loadGraphic(CoolUtil.grabUserIcon());
 					animation.add(char, [0, 1], 0, false, !isPlayer);

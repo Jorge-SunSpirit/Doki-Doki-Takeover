@@ -22,6 +22,9 @@ class CoolUtil
 		'hycam2' // hueh
 	];
 
+	public static var pfpPath:String = '';
+	public static var grabbedPfp:Bool = false;
+
 	public static function difficultyString():String
 	{
 		var difficultyArray:Array<String> = [LangUtil.getString('cmnEasy'), LangUtil.getString('cmnNormal'), LangUtil.getString('cmnHard')];
@@ -54,9 +57,16 @@ class CoolUtil
 	public static function grabUserIcon():FlxGraphic
 	{
 		#if FEATURE_ICON
-		if (FileSystem.exists(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg'))
+		if (!grabbedPfp)
 		{
-			var avatar = BitmapData.fromFile(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg');
+			if (FileSystem.exists(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg'))
+				pfpPath = Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg';
+			grabbedPfp = true;
+		}
+
+		if (FileSystem.exists(pfpPath))
+		{
+			var avatar = BitmapData.fromFile(pfpPath);
 			return FlxGraphic.fromBitmapData(avatar);
 		}
 		else
