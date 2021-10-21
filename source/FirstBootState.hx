@@ -66,6 +66,9 @@ class FirstBootState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		if (FlxG.sound.music != null && FlxG.sound.music.volume > 0)
+			FlxG.sound.music.volume -= 0.25 * FlxG.elapsed;
+
 		super.update(elapsed);
 
 		if (controls.ACCEPT && selectedSomethin && !selectedsomething)
@@ -73,7 +76,7 @@ class FirstBootState extends MusicBeatState
 				FlxTween.tween(funnynote, {alpha: 0}, 2, {ease: FlxEase.quadOut,onComplete: function(twn:FlxTween)
 					{
 					funnynote.kill();
-					#if FEATURE_FILESYSTEM
+					#if FEATURE_CACHING
 					FlxG.switchState(new TitleState());
 					#else
 					FlxG.switchState(new OutdatedSubState());

@@ -66,8 +66,11 @@ class OptionsMenu extends MusicBeatState
 			new MusicCaching(LangUtil.getString('descMusicCache')),
 			new SoundCaching(LangUtil.getString('descSoundCache')),
 			new CachingState(LangUtil.getString('descCaching'))
-		])
+		]),
 		#end
+		new OptionCategory(LangUtil.getString('catSave'), [
+			new ResetSave(LangUtil.getString('descReset'))
+		])
 	];
 
 	public var acceptInput:Bool = true;

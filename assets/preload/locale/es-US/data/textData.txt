@@ -21,6 +21,7 @@ cmnCaching::Caching
 catGameplay::Gameplay
 catAppearance::Appearance
 catUnlock::Unlockables
+catSave::Save
 // OPTIONS
 optKeyBindings::Key Bindings
 optDownscroll::Downscroll
@@ -54,6 +55,8 @@ optMiddleScrollOn::Middle Scroll
 optMiddleScrollOff::Right Side Scroll
 optLaneUnderwayOn::Lane Underlay
 optLaneUnderwayOff::No Lane Underlay
+optReset::Reset Save File
+optResetConfirm::Confirm Reset Save File
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -96,6 +99,7 @@ descDisableCaching::(press D to disable next boot)
 descMiddleScroll::Put your lane in the center or on the right.
 descLaneUnderway::Toggles lane underlay.
 descLaneUnderwayControl::Current Lane Underlay transparency
+descReset::Reset your save file to its defaults.
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.

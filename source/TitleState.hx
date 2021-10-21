@@ -289,7 +289,7 @@ class TitleState extends MusicBeatState
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
 				if (!FlxG.save.data.funnyquestionpopup)
-					#if FEATURE_FILESYSTEM
+					#if FEATURE_CACHING
 					FlxG.switchState(new OutdatedSubState());
 					#else
 					FlxG.switchState(new FirstBootState());

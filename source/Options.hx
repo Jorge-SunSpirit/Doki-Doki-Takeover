@@ -777,3 +777,98 @@ class LaneUnderlayOption extends Option
 		return true;
 	}
 }
+
+class ResetSave extends Option
+{
+	var confirm:Bool = false;
+
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		if (!confirm)
+		{
+			confirm = true;
+			display = updateDisplay();
+			return true;
+		}
+
+		FlxG.save.data.language = null;
+		FlxG.save.data.weekUnlocked = null;
+		FlxG.save.data.newInput = null;
+		FlxG.save.data.downscroll = null;
+		FlxG.save.data.dfjk = null;
+		FlxG.save.data.accuracyDisplay = null;
+		FlxG.save.data.offset = null;
+		FlxG.save.data.songPosition = null;
+		FlxG.save.data.fps = null;
+		FlxG.save.data.changedHit = null;
+		FlxG.save.data.fpsRain = null;
+		FlxG.save.data.fpsCap = null;
+		FlxG.save.data.scrollSpeed = null;
+		FlxG.save.data.npsDisplay = null;
+		FlxG.save.data.frames = null;
+		FlxG.save.data.accuracyMod = null;
+		FlxG.save.data.watermark = null;
+		FlxG.save.data.ghost = null;
+		FlxG.save.data.distractions = null;
+		FlxG.save.data.flashing = null;
+		FlxG.save.data.resetButton = null;
+		FlxG.save.data.botplay = null;
+		FlxG.save.data.gfCountdown = null;
+		FlxG.save.data.zoom = null;
+		FlxG.save.data.cacheCharacters = null;
+		FlxG.save.data.cacheSongs = null;
+		FlxG.save.data.cacheMusic = null;
+		FlxG.save.data.cacheSounds = null;
+		FlxG.save.data.middleScroll = null;
+		FlxG.save.data.laneUnderlay = null;
+		FlxG.save.data.laneTransparency = null;
+		FlxG.save.data.monibeaten = null;
+		FlxG.save.data.sayobeaten = null;
+		FlxG.save.data.natbeaten = null;
+		FlxG.save.data.yuribeaten = null;
+		FlxG.save.data.extrabeaten = null;
+		FlxG.save.data.extra2beaten = null;
+		FlxG.save.data.gfCountdown = null;
+		FlxG.save.data.unlockepip = null;
+		FlxG.save.data.monipopup = null;
+		FlxG.save.data.sayopopup = null;
+		FlxG.save.data.natpopup = null;
+		FlxG.save.data.yuripopup = null;
+		FlxG.save.data.extra1popup = null;
+		FlxG.save.data.extra2popup = null;
+		FlxG.save.data.funnyquestionpopup = null;
+		FlxG.save.data.upBind = null;
+		FlxG.save.data.downBind = null;
+		FlxG.save.data.leftBind = null;
+		FlxG.save.data.rightBind = null;
+		FlxG.save.data.gpupBind = null;
+		FlxG.save.data.gpdownBind = null;
+		FlxG.save.data.gpleftBind = null;
+		FlxG.save.data.gprightBind = null;
+
+		FlxG.save.flush();
+
+		#if FEATURE_FILESYSTEM
+		Sys.exit(0);
+		#else
+		FlxTransitionableState.skipNextTransOut = true;
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxG.switchState(new CrashState());
+		#end
+
+		confirm = false;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return confirm ? LangUtil.getString('optResetConfirm') : LangUtil.getString('optReset');
+	}
+}
