@@ -207,6 +207,14 @@ class PlayState extends MusicBeatState
 	var bgTrees:FlxSprite;
 	var treeLeaves:FlxSprite;
 
+	//Howdy I hate this :)
+	var monika:FlxSprite;
+	var sayori:FlxSprite;
+	var yuri:FlxSprite;
+	var natsuki:FlxSprite;
+	var protag:FlxSprite;
+
+
 	var imageBG:FlxSprite;
 
 	var limo:FlxSprite;
@@ -453,6 +461,7 @@ class PlayState extends MusicBeatState
 			case 'deep breaths':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue', 'preload', true));
 			case 'obsession':
+				preintro = CoolUtil.coolTextFile(Paths.txt('data/obsession/preintroDialogue', 'preload', true));
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue', 'preload', true));
 				extra1 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue1', 'preload', true));
 				extra4 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue2', 'preload', true));
@@ -696,6 +705,104 @@ class PlayState extends MusicBeatState
 					clubroom.scrollFactor.set(1, 0.9);
 					add(clubroom);
 
+					//Time to add these BG dorks
+
+					monika = new FlxSprite(0, 0);
+					monika.frames = Paths.getSparrowAtlas('bgdoki/monika', 'doki');
+					monika.animation.addByPrefix('idle', "Moni BG", 24, false);
+					monika.antialiasing = FlxG.save.data.antialiasing;
+					monika.scrollFactor.set(1, 0.9);
+					monika.setGraphicSize(Std.int(monika.width * .7));
+					monika.updateHitbox();
+
+					sayori = new FlxSprite(0, 0);
+					sayori.frames = Paths.getSparrowAtlas('bgdoki/sayori', 'doki');
+					sayori.animation.addByPrefix('idle', "Sayori BG", 24, false);
+					sayori.antialiasing = FlxG.save.data.antialiasing;
+					sayori.scrollFactor.set(1, 0.9);
+					sayori.setGraphicSize(Std.int(sayori.width * .7));
+					sayori.updateHitbox();
+
+					natsuki = new FlxSprite(0, 0);
+					natsuki.frames = Paths.getSparrowAtlas('bgdoki/natsuki', 'doki');
+					natsuki.animation.addByPrefix('idle', "Natsu BG", 24, false);
+					natsuki.antialiasing = FlxG.save.data.antialiasing;
+					natsuki.scrollFactor.set(1, 0.9);
+					natsuki.setGraphicSize(Std.int(natsuki.width * .7));
+					natsuki.updateHitbox();
+
+					protag = new FlxSprite(0, 0);
+					protag.frames = Paths.getSparrowAtlas('bgdoki/protag', 'doki');
+					protag.animation.addByPrefix('idle', "Protag-kun BG", 24, false);
+					protag.antialiasing = FlxG.save.data.antialiasing;
+					protag.scrollFactor.set(1, 0.9);
+					protag.setGraphicSize(Std.int(protag.width * .7));
+					protag.updateHitbox();
+
+					yuri = new FlxSprite(0, 0);
+					yuri.frames = Paths.getSparrowAtlas('bgdoki/yuri', 'doki');
+					yuri.animation.addByPrefix('idle', "Yuri BG", 24, false);
+					yuri.antialiasing = FlxG.save.data.antialiasing;
+					yuri.scrollFactor.set(1, 0.9);
+					yuri.setGraphicSize(Std.int(yuri.width * .7));
+					yuri.updateHitbox();
+
+					switch (SONG.song.toLowerCase())
+					{
+						case "rain clouds" | "my confession":
+							{
+								//Sayori week
+								add(yuri);
+								yuri.x = 130;
+								yuri.y = 176;
+								add(natsuki);
+								natsuki.x = 1088;
+								natsuki.y = 275;
+							}
+						case "baka" | "my sweets":
+							{
+								add(yuri);
+								yuri.x = 130;
+								yuri.y = 176;
+								add(sayori);
+								sayori.x = 1050;
+								sayori.y = 250;
+							}
+						case "deep breaths":
+							{
+								add(sayori);
+								sayori.x = -49;
+								sayori.y = 247;
+								add(natsuki);
+								natsuki.x = 1044;
+								natsuki.y = 290;
+							}
+						case "obsession":
+							{
+								if (isStoryMode)
+									{
+										add(sayori);
+										sayori.x = -49;
+										sayori.y = 247;
+										add(natsuki);
+										natsuki.x = 1044;
+										natsuki.y = 290;
+									}
+							}
+						case "reconciliation":
+							{
+								add(sayori);
+								sayori.x = 134;
+								sayori.y = 246;
+								add(natsuki);
+								natsuki.x = 1044;
+								natsuki.y = 290;
+								add(yuri);
+								yuri.x = -74;
+								yuri.y = 176;
+							}
+					}
+
 					add(sparkleBG);
 				}
 			
@@ -763,6 +870,118 @@ class PlayState extends MusicBeatState
 					lights_back.scrollFactor.set(1, 0.9);
 					add(lights_back);
 
+					//Time to add these BG dorks
+
+					monika = new FlxSprite(0, 0);
+					monika.frames = Paths.getSparrowAtlas('bgdoki/monika', 'doki');
+					monika.animation.addByPrefix('idle', "Moni BG", 24, false);
+					monika.antialiasing = FlxG.save.data.antialiasing;
+					monika.scrollFactor.set(1, 0.9);
+					monika.setGraphicSize(Std.int(monika.width * .7));
+					monika.updateHitbox();
+					monika.color = 0x828282;
+
+					sayori = new FlxSprite(0, 0);
+					sayori.frames = Paths.getSparrowAtlas('bgdoki/sayori', 'doki');
+					sayori.animation.addByPrefix('idle', "Sayori BG", 24, false);
+					sayori.antialiasing = FlxG.save.data.antialiasing;
+					sayori.scrollFactor.set(1, 0.9);
+					sayori.setGraphicSize(Std.int(sayori.width * .7));
+					sayori.updateHitbox();
+					sayori.color = 0x828282;
+
+					natsuki = new FlxSprite(0, 0);
+					natsuki.frames = Paths.getSparrowAtlas('bgdoki/natsuki', 'doki');
+					natsuki.animation.addByPrefix('idle', "Natsu BG", 24, false);
+					natsuki.antialiasing = FlxG.save.data.antialiasing;
+					natsuki.scrollFactor.set(1, 0.9);
+					natsuki.setGraphicSize(Std.int(natsuki.width * .7));
+					natsuki.updateHitbox();
+					natsuki.color = 0x828282;
+
+					protag = new FlxSprite(0, 0);
+					protag.frames = Paths.getSparrowAtlas('bgdoki/protag', 'doki');
+					protag.animation.addByPrefix('idle', "Protag-kun BG", 24, false);
+					protag.antialiasing = FlxG.save.data.antialiasing;
+					protag.scrollFactor.set(1, 0.9);
+					protag.setGraphicSize(Std.int(protag.width * .7));
+					protag.updateHitbox();
+					protag.color = 0x828282;
+
+					yuri = new FlxSprite(0, 0);
+					yuri.frames = Paths.getSparrowAtlas('bgdoki/yuri', 'doki');
+					yuri.animation.addByPrefix('idle', "Yuri BG", 24, false);
+					yuri.antialiasing = FlxG.save.data.antialiasing;
+					yuri.scrollFactor.set(1, 0.9);
+					yuri.setGraphicSize(Std.int(yuri.width * .7));
+					yuri.updateHitbox();
+					yuri.color = 0x828282;
+
+					switch (SONG.song.toLowerCase())
+					{
+						case "beathoven (natsuki mix)":
+							{
+								//Sayori week
+								add(yuri);
+								yuri.x = 1044;
+								yuri.y = 178;
+								add(sayori);
+								sayori.x = -49;
+								sayori.y = 247;
+								add(protag);
+								protag.x = 379;
+								protag.y = 152;
+								add(monika);
+								monika.x = 1207;
+								monika.y = 173;
+							}
+						case "crucify (yuri mix)":
+							{
+								add(natsuki);
+								natsuki.x = 1044;
+								natsuki.y = 290;
+								add(sayori);
+								sayori.x = -49;
+								sayori.y = 247;
+								add(protag);
+								protag.x = 379;
+								protag.y = 152;
+								add(monika);
+								monika.x = 1207;
+								monika.y = 173;
+							}
+						case "it's complicated (sayori mix)":
+							{
+								add(yuri);
+								yuri.x = -74;
+								yuri.y = 176;
+								add(protag);
+								protag.x = 379;
+								protag.y = 152;
+								add(monika);
+								monika.x = 1207;
+								monika.y = 173;
+								add(natsuki);
+								natsuki.x = 1044;
+								natsuki.y = 290;
+							}
+						case "glitcher (monika mix)":
+							{
+								add(natsuki);
+								natsuki.x = 1247;
+								natsuki.y = 303;
+								add(sayori);
+								sayori.x = -49;
+								sayori.y = 247;
+								add(protag);
+								protag.x = 150;
+								protag.y = 152;
+								add(yuri);
+								yuri.x = 1044;
+								yuri.y = 178;
+							}
+					}
+
 					var banner:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FestivalBanner','doki'));
 					banner.setGraphicSize(Std.int(banner.width * 1.6));
 					banner.updateHitbox();
@@ -816,6 +1035,72 @@ class PlayState extends MusicBeatState
 					lights_back.antialiasing = true;
 					lights_back.scrollFactor.set(1, 0.9);
 					add(lights_back);
+
+					//Time to add these BG dorks
+
+					monika = new FlxSprite(0, 0);
+					monika.frames = Paths.getSparrowAtlas('bgdoki/monika', 'doki');
+					monika.animation.addByPrefix('idle', "Moni BG", 24, false);
+					monika.antialiasing = FlxG.save.data.antialiasing;
+					monika.scrollFactor.set(1, 0.9);
+					monika.setGraphicSize(Std.int(monika.width * .7));
+					monika.updateHitbox();
+					monika.color = 0x828282;
+
+					sayori = new FlxSprite(0, 0);
+					sayori.frames = Paths.getSparrowAtlas('bgdoki/sayori', 'doki');
+					sayori.animation.addByPrefix('idle', "Sayori BG", 24, false);
+					sayori.antialiasing = FlxG.save.data.antialiasing;
+					sayori.scrollFactor.set(1, 0.9);
+					sayori.setGraphicSize(Std.int(sayori.width * .7));
+					sayori.updateHitbox();
+					sayori.color = 0x828282;
+
+					natsuki = new FlxSprite(0, 0);
+					natsuki.frames = Paths.getSparrowAtlas('bgdoki/natsuki', 'doki');
+					natsuki.animation.addByPrefix('idle', "Natsu BG", 24, false);
+					natsuki.antialiasing = FlxG.save.data.antialiasing;
+					natsuki.scrollFactor.set(1, 0.9);
+					natsuki.setGraphicSize(Std.int(natsuki.width * .7));
+					natsuki.updateHitbox();
+					natsuki.color = 0x828282;
+
+					protag = new FlxSprite(0, 0);
+					protag.frames = Paths.getSparrowAtlas('bgdoki/protag', 'doki');
+					protag.animation.addByPrefix('idle', "Protag-kun BG", 24, false);
+					protag.antialiasing = FlxG.save.data.antialiasing;
+					protag.scrollFactor.set(1, 0.9);
+					protag.setGraphicSize(Std.int(protag.width * .7));
+					protag.updateHitbox();
+					protag.color = 0x828282;
+
+					yuri = new FlxSprite(0, 0);
+					yuri.frames = Paths.getSparrowAtlas('bgdoki/yuri', 'doki');
+					yuri.animation.addByPrefix('idle', "Yuri BG", 24, false);
+					yuri.antialiasing = FlxG.save.data.antialiasing;
+					yuri.scrollFactor.set(1, 0.9);
+					yuri.setGraphicSize(Std.int(yuri.width * .7));
+					yuri.updateHitbox();
+					yuri.color = 0x828282;
+
+					switch (SONG.song.toLowerCase())
+					{
+						case "glitcher (monika mix)":
+							{
+								add(natsuki);
+								natsuki.x = 1247;
+								natsuki.y = 303;
+								add(sayori);
+								sayori.x = -49;
+								sayori.y = 247;
+								add(protag);
+								protag.x = 150;
+								protag.y = 152;
+								add(yuri);
+								yuri.x = 1044;
+								yuri.y = 178;
+							}
+					}
 
 					banner = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FestivalBanner','doki'));
 					banner.setGraphicSize(Std.int(banner.width * 1.6));
@@ -1394,7 +1679,7 @@ class PlayState extends MusicBeatState
 				case 'deep breaths':
 					introcutscene(doof);
 				case 'obsession':
-					introcutscene(doof);
+					introcutscene(doof6);
 				
 				case 'reconciliation':
 					introcutscene(doof);
@@ -1673,6 +1958,22 @@ class PlayState extends MusicBeatState
 			{
 				switch(curSong.toLowerCase())
 					{
+						case "obsession":
+							{
+								add(blackScreen);
+								blackScreen.alpha = 0;
+								FlxTween.tween(blackScreen, {alpha: 1}, 1, {ease: FlxEase.expoOut,
+									onComplete: function(twn:FlxTween)
+										{
+											remove(sayori);
+											remove(natsuki);
+											FlxTween.tween(blackScreen, {alpha: 0}, 3, {ease: FlxEase.expoInOut,
+											onComplete: function(twn:FlxTween)
+												{
+													introcutscene(doof);
+												}});
+										}});
+							}
 						case "glitcher (monika mix)":
 							{
 								var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/festivalend','doki'));
@@ -4670,6 +4971,59 @@ class PlayState extends MusicBeatState
 			camHUD.zoom += 0.03;
 		}
 
+		switch (SONG.song.toLowerCase())
+					{
+						case "rain clouds" | "my confession":
+							{
+								yuri.animation.play('idle');
+								natsuki.animation.play('idle');
+							}
+						case "baka" | "my sweets":
+							{
+								yuri.animation.play('idle');
+								sayori.animation.play('idle');
+							}
+						case "deep breaths" | "obsession":
+							{
+								sayori.animation.play('idle');
+								natsuki.animation.play('idle');
+							}
+						case "reconciliation":
+							{
+								sayori.animation.play('idle');
+								yuri.animation.play('idle');
+								natsuki.animation.play('idle');
+							}
+						case "beathoven (natsuki mix)":
+							{
+								sayori.animation.play('idle');
+								yuri.animation.play('idle');
+								monika.animation.play('idle');
+								protag.animation.play('idle');
+							}
+						case "crucify (yuri mix)":
+							{
+								sayori.animation.play('idle');
+								natsuki.animation.play('idle');
+								monika.animation.play('idle');
+								protag.animation.play('idle');
+							}
+						case "it's complicated (sayori mix)":
+							{
+								yuri.animation.play('idle');
+								natsuki.animation.play('idle');
+								monika.animation.play('idle');
+								protag.animation.play('idle');
+							}
+						case "glitcher (monika mix)":
+							{
+								sayori.animation.play('idle');
+								yuri.animation.play('idle');
+								natsuki.animation.play('idle');
+								protag.animation.play('idle');
+							}
+					}
+
 		iconP1.setGraphicSize(Std.int(iconP1.width + 30));
 		iconP2.setGraphicSize(Std.int(iconP2.width + 30));
 
@@ -4895,6 +5249,11 @@ class PlayState extends MusicBeatState
 			add(boyfriend);
 			add(dad);
 
+			natsuki.visible  = false;
+			sayori.visible = false;
+			protag.visible  = false;
+			yuri.visible  = false;
+
 			// thank u bbpanzu/Sunday mod!
 			isPixelUI = true;
 			remove(strumLineNotes);
@@ -4938,6 +5297,11 @@ class PlayState extends MusicBeatState
 			boyfriend.color = 0x828282;
 			dad.color = 0x828282;
 			gf.color = 0x828282;
+
+			natsuki.visible = true;
+			sayori.visible = true;
+			protag.visible  = true;
+			yuri.visible  = true;
 
 			if (FlxG.save.data.songPosition)
 				songName.antialiasing = true;

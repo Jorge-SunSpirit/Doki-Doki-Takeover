@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="protag.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Protag-kun BG0000" x="10" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0001" x="10" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0002" x="369" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0003" x="369" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0004" x="728" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0005" x="728" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0006" x="1087" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0007" x="1087" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0008" x="1446" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0009" x="1446" y="10" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0010" x="10" y="863" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0011" x="10" y="863" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0012" x="10" y="863" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0013" x="10" y="863" width="349" height="843"/>
+	<SubTexture name="Protag-kun BG0014" x="10" y="863" width="349" height="843"/>
+</TextureAtlas>
