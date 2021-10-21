@@ -3483,8 +3483,7 @@ class PlayState extends MusicBeatState
 			FlxG.save.data.downscroll = false;
 		}
 
-		if (HealthIcon.isEpiphany)
-			HealthIcon.isEpiphany = false;
+		HealthIcon.isEpiphany = false;
 
 		if (FlxG.save.data.fpsCap > 290)
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(290);

@@ -96,6 +96,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (controls.BACK && !crashdeath)
 		{
 			FlxG.sound.music.stop();
+			HealthIcon.isEpiphany = false;
 			PlayState.showCutscene = true;
 			if (PlayState.isStoryMode)
 				FlxG.switchState(new DokiStoryState());

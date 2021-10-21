@@ -815,6 +815,9 @@ class ChartingState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
+			HealthIcon.isEpiphany = false;
+			PlayState.showCutscene = true;
+
 			lastSection = curSection;
 	
 			PlayState.SONG = _song;
