@@ -99,6 +99,7 @@ class PlayState extends MusicBeatState
 	var doof3:DialogueBox;
 	var doof4:DialogueBox;
 	var doof5:DialogueBox;
+	var doof6:DialogueBox;
 
 	var songLength:Float = 0;
 	var kadeEngineWatermark:FlxText;
@@ -176,6 +177,7 @@ class PlayState extends MusicBeatState
 	public var extra2:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 	public var extra3:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 	public var extra4:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
+	public var preintro:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
 	var sparkleFG:FlxBackdrop;
 	var sparkleBG:FlxBackdrop;
@@ -205,6 +207,8 @@ class PlayState extends MusicBeatState
 	var bgTrees:FlxSprite;
 	var treeLeaves:FlxSprite;
 
+	var imageBG:FlxSprite;
+
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
@@ -216,6 +220,7 @@ class PlayState extends MusicBeatState
 	var whiteflash:FlxSprite;
 	var blackScreen:FlxSprite;
 	var blackScreenBG:FlxSprite;
+	var blackScreentwo:FlxSprite;
 
 	var altAnim:String = "";
 	var fc:Bool = true;
@@ -407,6 +412,9 @@ class PlayState extends MusicBeatState
 		blackScreenBG.alpha = 0;
 		blackScreenBG.scrollFactor.set();
 
+		blackScreentwo = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+		blackScreentwo.scrollFactor.set();
+
 		trace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: ' + Conductor.timeScale + '\nBotPlay : ' + FlxG.save.data.botplay);
 	
 		//dialogue shit
@@ -456,12 +464,14 @@ class PlayState extends MusicBeatState
 			
 			//heck yeah it's the long awaited festival!
 			case 'crucify (yuri mix)':
+				preintro = CoolUtil.coolTextFile(Paths.txt('data/crucify (yuri mix)/preintroDialogue', 'preload', true));
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/crucify (yuri mix)/IntroDialogue', 'preload', true));
 			case "it's complicated (sayori mix)":
 				dialogue = CoolUtil.coolTextFile(Paths.txt("data/it's complicated (sayori mix)/IntroDialogue", 'preload', true));
 			case 'glitcher (monika mix)':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/IntroDialogue', 'preload', true));
-				extra3 = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/EndDialogue', 'preload', true));
+				extra1 = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/EndDialogue', 'preload', true));
+				extra3 = CoolUtil.coolTextFile(Paths.txt('data/glitcher (monika mix)/EndDialogue_2', 'preload', true));
 			case "beathoven (natsuki mix)":
 				dialogue = CoolUtil.coolTextFile(Paths.txt("data/beathoven (natsuki mix)/IntroDialogue", 'preload', true));
 
@@ -1104,6 +1114,13 @@ class PlayState extends MusicBeatState
 		add(dad);
 		add(boyfriend);
 
+		if (SONG.song.toLowerCase() == 'obsession')
+			{
+				add(blackScreentwo);
+				blackScreentwo.visible = false;
+			}
+			
+
 		if (SONG.song.toLowerCase() == "dual demise")
 			{
 				trace('am I here? Probably');
@@ -1162,6 +1179,12 @@ class PlayState extends MusicBeatState
 		doof5.scrollFactor.set();
 		doof5.finishThing = obsessionending;
 
+		//Small preintro dialogue
+		doof6 = new DialogueBox(false, preintro);
+		doof6.scrollFactor.set();
+		doof6.finishThing = postdialoguecutscene;
+
+		//Ngl probably hella unoptomized but I'm hoping for the best 
 
 		Conductor.songPosition = -5000;
 		
@@ -1317,6 +1340,7 @@ class PlayState extends MusicBeatState
 		botPlayState.cameras = [camHUD];
 		laneunderlayOpponent.cameras = [camHUD];
 		laneunderlay.cameras = [camHUD];
+		doof6.cameras = [camHUD];
 		doof.cameras = [camHUD];
 		doof2.cameras = [camHUD];
 		doof3.cameras = [camHUD];
@@ -1371,7 +1395,7 @@ class PlayState extends MusicBeatState
 				case 'beathoven (natsuki mix)':
 					introcutscene(doof);
 				case 'crucify (yuri mix)':
-					introcutscene(doof);
+					preintrocutscene(doof6);
 				case "it's complicated (sayori mix)":
 					introcutscene(doof);
 				case 'glitcher (monika mix)':
@@ -1599,11 +1623,80 @@ class PlayState extends MusicBeatState
 
 				endcutscene(doof4);
 			}
+		
+		function preintrocutscene(?dialogueBox:DialogueBox):Void
+			{
+				switch (SONG.song.toLowerCase())
+				{
+					case "crucify (yuri mix)":
+						healthBarBG.visible = false;
+						kadeEngineWatermark.visible = false;
+						healthBar.visible = false;
+						iconP1.visible = false;
+						iconP2.visible = false;
+						scoreTxt.visible = false;
+
+						imageBG = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/festivalbeginning','doki'));
+						imageBG.antialiasing = true;
+						imageBG.scrollFactor.set();
+						imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
+						imageBG.updateHitbox();
+						imageBG.screenCenter(XY);
+						add(imageBG);
+
+				}
+				add(blackScreen);
+				blackScreen.alpha = 1;
+
+				FlxTween.tween(blackScreen, {alpha: 0}, 3, {ease: FlxEase.expoOut,
+				onComplete: function(twn:FlxTween)
+					{
+						remove(blackScreen);
+						if (dialogueBox != null)
+							{
+								inCutscene = true;
+								add(dialogueBox);
+							}
+							else
+								startCountdown();
+					}});
+			}
 	
 		function postdialoguecutscene():Void
 			{
 				switch(curSong.toLowerCase())
 					{
+						case "glitcher (monika mix)":
+							{
+								var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/festivalend','doki'));
+								imageBG.antialiasing = true;
+								imageBG.scrollFactor.set();
+								imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
+								imageBG.updateHitbox();
+								imageBG.screenCenter(XY);
+								add(imageBG);
+								imageBG.visible = false;
+
+								add(blackScreen);
+								blackScreen.alpha = 0;
+
+								FlxTween.tween(blackScreen, {alpha: 1}, 3, {ease: FlxEase.expoOut,
+									onComplete: function(twn:FlxTween)
+										{
+											imageBG.visible = true;
+
+											FlxTween.tween(blackScreen, {alpha: 0}, 2, {ease: FlxEase.expoOut,
+											onComplete: function(twn:FlxTween)
+												{
+													endcutscene(doof4);
+												}});
+										}});
+							}
+						case "crucify (yuri mix)":
+							{
+								//This works for intro and ending so might as well use it :)
+								introcutscene(doof);
+							}
 						case "obsession":
 							{
 								var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3','doki'));
@@ -1616,10 +1709,12 @@ class PlayState extends MusicBeatState
 
 								add(blackScreen);
 								blackScreen.alpha = 1;
+								blackScreentwo.visible = false;
 
-								FlxTween.tween(blackScreen, {alpha: 0}, 3, {ease: FlxEase.expoOut,
+								FlxTween.tween(blackScreen, {alpha: 0}, 2, {ease: FlxEase.expoOut,
 								onComplete: function(twn:FlxTween)
 									{
+										remove(blackScreen);
 										endcutscene(doof5);
 									}});
 							}
@@ -1693,7 +1788,6 @@ class PlayState extends MusicBeatState
 														endscenetwo.animation.play('idle');
 														FlxG.camera.fade(FlxColor.BLACK, 3, true, function()
 															{
-																camHUD.visible = true;
 																camFollow.setPosition(dad.getMidpoint().x + 100, boyfriend.getMidpoint().y - 250);
 																endcutscene(doof4);
 	
@@ -1719,10 +1813,37 @@ class PlayState extends MusicBeatState
 					var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 					black.scrollFactor.set();
 
-
-		
 					switch (SONG.song.toLowerCase())
 						{
+							case "crucify (yuri mix)":
+								{
+									add(blackScreen);
+									blackScreen.alpha = 0;
+									FlxTween.tween(blackScreen, {alpha: 1}, 5, {ease: FlxEase.expoOut,
+										onComplete: function(twn:FlxTween)
+											{
+												healthBarBG.visible = true;
+												kadeEngineWatermark.visible = true;
+												healthBar.visible = true;
+												iconP1.visible = true;
+												iconP2.visible = true;
+												scoreTxt.visible = true;
+
+												remove(imageBG);
+												FlxTween.tween(blackScreen, {alpha: 0}, 3, {ease: FlxEase.expoOut,
+													onComplete: function(twn:FlxTween)
+														{
+															remove(blackScreen);
+															if (dialogueBox != null)
+																{
+																	inCutscene = true;
+																	add(dialogueBox);
+																}
+																else
+																	startCountdown();
+														}});
+											}});
+								}
 							case "your demise":
 								{
 									remove(gf);
@@ -3329,7 +3450,7 @@ class PlayState extends MusicBeatState
 						staticshock.visible = false;
 						endcutscene(doof2);
 					case 'glitcher (monika mix)':
-						endcutscene(doof4);
+						endcutscene(doof2);
 					default:
 						endSong();
 				}
@@ -4668,7 +4789,7 @@ class PlayState extends MusicBeatState
 					case 136:
 						// shit gets serious
 						yuriGoCrazy();
-					case 140:
+					case 141:
 						remove(blackScreen);
 						staticshock.alpha = 0.1;
 
@@ -4680,6 +4801,8 @@ class PlayState extends MusicBeatState
 								tmr.reset(0.1);
 						});
 						// case what ever when Yuri right before yuri laughing, do an abrupt cut to black if you could
+					case 211:
+						blackScreentwo.visible = true;
 				}
 			}
 
