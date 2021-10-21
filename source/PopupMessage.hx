@@ -49,7 +49,7 @@ class PopupMessage extends MusicBeatSubstate
 			if (FlxG.sound.music != null)
 				FlxG.sound.music.stop();
 			box.animation.play('glitch');
-			box.offset.set(-35.5);
+			box.offset.set(0);
 		}
 
 		grpText = new FlxTypedGroup<FlxText>();
