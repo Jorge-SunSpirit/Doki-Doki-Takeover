@@ -69,7 +69,7 @@ class OptionsMenu extends MusicBeatState
 		]),
 		#end
 		new OptionCategory(LangUtil.getString('catSave'), [
-			new ResetSave(LangUtil.getString('descReset'))
+			new ResetSave(LangUtil.getString('descSaveReset'))
 		])
 	];
 

@@ -869,6 +869,6 @@ class ResetSave extends Option
 
 	private override function updateDisplay():String
 	{
-		return confirm ? LangUtil.getString('optResetConfirm') : LangUtil.getString('optReset');
+		return confirm ? LangUtil.getString('optSaveResetConfirm') : LangUtil.getString('optSaveReset');
 	}
 }
