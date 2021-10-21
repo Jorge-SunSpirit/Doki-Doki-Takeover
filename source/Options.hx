@@ -7,6 +7,7 @@ import Controls.KeyboardScheme;
 import flixel.FlxG;
 import openfl.display.FPS;
 import openfl.Lib;
+import flixel.addons.transition.FlxTransitionableState;
 
 class OptionCategory
 {
