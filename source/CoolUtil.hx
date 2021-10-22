@@ -70,9 +70,9 @@ class CoolUtil
 			return FlxGraphic.fromBitmapData(avatar);
 		}
 		else
-			return Paths.loadImage('icons/icon-player', 'shared');
+			return Paths.loadImage('icons/icon-bf', 'shared');
 		#else
-		return null;
+		return Paths.loadImage('icons/icon-bf', 'shared');
 		#end
 	}
 
