@@ -710,7 +710,7 @@ class PlayState extends MusicBeatState
 					monika = new FlxSprite(0, 0);
 					monika.frames = Paths.getSparrowAtlas('bgdoki/monika', 'doki');
 					monika.animation.addByPrefix('idle', "Moni BG", 24, false);
-					monika.antialiasing = FlxG.save.data.antialiasing;
+					monika.antialiasing = true;
 					monika.scrollFactor.set(1, 0.9);
 					monika.setGraphicSize(Std.int(monika.width * .7));
 					monika.updateHitbox();
@@ -718,7 +718,7 @@ class PlayState extends MusicBeatState
 					sayori = new FlxSprite(0, 0);
 					sayori.frames = Paths.getSparrowAtlas('bgdoki/sayori', 'doki');
 					sayori.animation.addByPrefix('idle', "Sayori BG", 24, false);
-					sayori.antialiasing = FlxG.save.data.antialiasing;
+					sayori.antialiasing = true;
 					sayori.scrollFactor.set(1, 0.9);
 					sayori.setGraphicSize(Std.int(sayori.width * .7));
 					sayori.updateHitbox();
@@ -726,7 +726,7 @@ class PlayState extends MusicBeatState
 					natsuki = new FlxSprite(0, 0);
 					natsuki.frames = Paths.getSparrowAtlas('bgdoki/natsuki', 'doki');
 					natsuki.animation.addByPrefix('idle', "Natsu BG", 24, false);
-					natsuki.antialiasing = FlxG.save.data.antialiasing;
+					natsuki.antialiasing = true;
 					natsuki.scrollFactor.set(1, 0.9);
 					natsuki.setGraphicSize(Std.int(natsuki.width * .7));
 					natsuki.updateHitbox();
@@ -734,7 +734,7 @@ class PlayState extends MusicBeatState
 					protag = new FlxSprite(0, 0);
 					protag.frames = Paths.getSparrowAtlas('bgdoki/protag', 'doki');
 					protag.animation.addByPrefix('idle', "Protag-kun BG", 24, false);
-					protag.antialiasing = FlxG.save.data.antialiasing;
+					protag.antialiasing = true;
 					protag.scrollFactor.set(1, 0.9);
 					protag.setGraphicSize(Std.int(protag.width * .7));
 					protag.updateHitbox();
@@ -742,7 +742,7 @@ class PlayState extends MusicBeatState
 					yuri = new FlxSprite(0, 0);
 					yuri.frames = Paths.getSparrowAtlas('bgdoki/yuri', 'doki');
 					yuri.animation.addByPrefix('idle', "Yuri BG", 24, false);
-					yuri.antialiasing = FlxG.save.data.antialiasing;
+					yuri.antialiasing = true;
 					yuri.scrollFactor.set(1, 0.9);
 					yuri.setGraphicSize(Std.int(yuri.width * .7));
 					yuri.updateHitbox();
@@ -875,7 +875,7 @@ class PlayState extends MusicBeatState
 					monika = new FlxSprite(0, 0);
 					monika.frames = Paths.getSparrowAtlas('bgdoki/monika', 'doki');
 					monika.animation.addByPrefix('idle', "Moni BG", 24, false);
-					monika.antialiasing = FlxG.save.data.antialiasing;
+					monika.antialiasing = true;
 					monika.scrollFactor.set(1, 0.9);
 					monika.setGraphicSize(Std.int(monika.width * .7));
 					monika.updateHitbox();
@@ -884,7 +884,7 @@ class PlayState extends MusicBeatState
 					sayori = new FlxSprite(0, 0);
 					sayori.frames = Paths.getSparrowAtlas('bgdoki/sayori', 'doki');
 					sayori.animation.addByPrefix('idle', "Sayori BG", 24, false);
-					sayori.antialiasing = FlxG.save.data.antialiasing;
+					sayori.antialiasing = true;
 					sayori.scrollFactor.set(1, 0.9);
 					sayori.setGraphicSize(Std.int(sayori.width * .7));
 					sayori.updateHitbox();
@@ -893,7 +893,7 @@ class PlayState extends MusicBeatState
 					natsuki = new FlxSprite(0, 0);
 					natsuki.frames = Paths.getSparrowAtlas('bgdoki/natsuki', 'doki');
 					natsuki.animation.addByPrefix('idle', "Natsu BG", 24, false);
-					natsuki.antialiasing = FlxG.save.data.antialiasing;
+					natsuki.antialiasing = true;
 					natsuki.scrollFactor.set(1, 0.9);
 					natsuki.setGraphicSize(Std.int(natsuki.width * .7));
 					natsuki.updateHitbox();
@@ -902,7 +902,7 @@ class PlayState extends MusicBeatState
 					protag = new FlxSprite(0, 0);
 					protag.frames = Paths.getSparrowAtlas('bgdoki/protag', 'doki');
 					protag.animation.addByPrefix('idle', "Protag-kun BG", 24, false);
-					protag.antialiasing = FlxG.save.data.antialiasing;
+					protag.antialiasing = true;
 					protag.scrollFactor.set(1, 0.9);
 					protag.setGraphicSize(Std.int(protag.width * .7));
 					protag.updateHitbox();
@@ -911,7 +911,7 @@ class PlayState extends MusicBeatState
 					yuri = new FlxSprite(0, 0);
 					yuri.frames = Paths.getSparrowAtlas('bgdoki/yuri', 'doki');
 					yuri.animation.addByPrefix('idle', "Yuri BG", 24, false);
-					yuri.antialiasing = FlxG.save.data.antialiasing;
+					yuri.antialiasing = true;
 					yuri.scrollFactor.set(1, 0.9);
 					yuri.setGraphicSize(Std.int(yuri.width * .7));
 					yuri.updateHitbox();
@@ -1041,7 +1041,7 @@ class PlayState extends MusicBeatState
 					monika = new FlxSprite(0, 0);
 					monika.frames = Paths.getSparrowAtlas('bgdoki/monika', 'doki');
 					monika.animation.addByPrefix('idle', "Moni BG", 24, false);
-					monika.antialiasing = FlxG.save.data.antialiasing;
+					monika.antialiasing = true;
 					monika.scrollFactor.set(1, 0.9);
 					monika.setGraphicSize(Std.int(monika.width * .7));
 					monika.updateHitbox();
@@ -1050,7 +1050,7 @@ class PlayState extends MusicBeatState
 					sayori = new FlxSprite(0, 0);
 					sayori.frames = Paths.getSparrowAtlas('bgdoki/sayori', 'doki');
 					sayori.animation.addByPrefix('idle', "Sayori BG", 24, false);
-					sayori.antialiasing = FlxG.save.data.antialiasing;
+					sayori.antialiasing = true;
 					sayori.scrollFactor.set(1, 0.9);
 					sayori.setGraphicSize(Std.int(sayori.width * .7));
 					sayori.updateHitbox();
@@ -1059,7 +1059,7 @@ class PlayState extends MusicBeatState
 					natsuki = new FlxSprite(0, 0);
 					natsuki.frames = Paths.getSparrowAtlas('bgdoki/natsuki', 'doki');
 					natsuki.animation.addByPrefix('idle', "Natsu BG", 24, false);
-					natsuki.antialiasing = FlxG.save.data.antialiasing;
+					natsuki.antialiasing = true;
 					natsuki.scrollFactor.set(1, 0.9);
 					natsuki.setGraphicSize(Std.int(natsuki.width * .7));
 					natsuki.updateHitbox();
@@ -1068,7 +1068,7 @@ class PlayState extends MusicBeatState
 					protag = new FlxSprite(0, 0);
 					protag.frames = Paths.getSparrowAtlas('bgdoki/protag', 'doki');
 					protag.animation.addByPrefix('idle', "Protag-kun BG", 24, false);
-					protag.antialiasing = FlxG.save.data.antialiasing;
+					protag.antialiasing = true;
 					protag.scrollFactor.set(1, 0.9);
 					protag.setGraphicSize(Std.int(protag.width * .7));
 					protag.updateHitbox();
@@ -1077,7 +1077,7 @@ class PlayState extends MusicBeatState
 					yuri = new FlxSprite(0, 0);
 					yuri.frames = Paths.getSparrowAtlas('bgdoki/yuri', 'doki');
 					yuri.animation.addByPrefix('idle', "Yuri BG", 24, false);
-					yuri.antialiasing = FlxG.save.data.antialiasing;
+					yuri.antialiasing = true;
 					yuri.scrollFactor.set(1, 0.9);
 					yuri.setGraphicSize(Std.int(yuri.width * .7));
 					yuri.updateHitbox();
