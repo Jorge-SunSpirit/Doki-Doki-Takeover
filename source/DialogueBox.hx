@@ -173,12 +173,12 @@ class DialogueBox extends FlxSpriteGroup
 
 			if (PlayState.SONG.noteStyle == 'pixel' || isPixel)
 				{
-					dropText = new FlxText(242, 502, Std.int(box.width * 0.6), "", 32);
+					dropText = new FlxText(242, 502, Std.int(box.width * 0.6), "", 42);
 					dropText.font = LangUtil.getFont('pixel');
 					dropText.color = 0xFFD89494;
 					add(dropText);
 
-					swagDialogue = new FlxTypeText(240, 500, Std.int(box.width * 0.6), "", 32);
+					swagDialogue = new FlxTypeText(240, 500, Std.int(box.width * 0.6), "", 42);
 					swagDialogue.font = LangUtil.getFont('pixel');
 					swagDialogue.color = 0xFF3F2021;
 					swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];

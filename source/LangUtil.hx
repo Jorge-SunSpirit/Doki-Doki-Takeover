@@ -32,10 +32,8 @@ class LangUtil
 			case 'pixel':
 				switch (FlxG.save.data.language)
 				{
-					case 'es-US':
-						font = 'VCR OSD Mono';
 					default:
-						font = 'Pixel Arial 11 Bold';
+						font = 'LanaPixel';
 				}
 			default:
 				switch (FlxG.save.data.language)
