@@ -795,6 +795,24 @@ class PlayState extends MusicBeatState
 								}
 						}
 					}
+					else
+					{
+						switch (SONG.song.toLowerCase())
+						{
+							case "obsession":
+								{
+									if (isStoryMode)
+									{
+										add(sayori);
+										sayori.x = -49;
+										sayori.y = 247;
+										add(natsuki);
+										natsuki.x = 1044;
+										natsuki.y = 290;
+									}
+								}
+						}
+					}
 
 					add(sparkleBG);
 				}
