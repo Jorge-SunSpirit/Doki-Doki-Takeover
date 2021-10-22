@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="minusmonikapixel.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MinusMonika_gif0000" x="10" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0001" x="10" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0002" x="794" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0003" x="794" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0004" x="1578" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0005" x="1578" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0006" x="1578" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0007" x="1578" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0008" x="1578" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0009" x="1578" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0010" x="2362" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0011" x="2362" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0012" x="3146" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0013" x="3146" y="10" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0014" x="10" y="927" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0015" x="10" y="927" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0016" x="10" y="927" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0017" x="10" y="927" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0018" x="10" y="927" width="774" height="907"/>
+	<SubTexture name="MinusMonika_gif0019" x="10" y="927" width="774" height="907"/>
+</TextureAtlas>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="monika.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Moni BG0000" x="10" y="10" width="597" height="811"/>
+	<SubTexture name="Moni BG0001" x="10" y="10" width="597" height="811"/>
+	<SubTexture name="Moni BG0002" x="617" y="10" width="597" height="811"/>
+	<SubTexture name="Moni BG0003" x="617" y="10" width="597" height="811"/>
+	<SubTexture name="Moni BG0004" x="1224" y="10" width="597" height="811"/>
+	<SubTexture name="Moni BG0005" x="1224" y="10" width="597" height="811"/>
+	<SubTexture name="Moni BG0006" x="10" y="831" width="597" height="811"/>
+	<SubTexture name="Moni BG0007" x="10" y="831" width="597" height="811"/>
+	<SubTexture name="Moni BG0008" x="617" y="831" width="597" height="811"/>
+	<SubTexture name="Moni BG0009" x="617" y="831" width="597" height="811"/>
+	<SubTexture name="Moni BG0010" x="617" y="831" width="597" height="811"/>
+	<SubTexture name="Moni BG0011" x="617" y="831" width="597" height="811"/>
+</TextureAtlas>

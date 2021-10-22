@@ -96,56 +96,86 @@ class MainMenuState extends MusicBeatState
 		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
 		backdrop.velocity.set(-40, -40);
 
-		var random = FlxG.random.float(0,100);
-			show = 'senpai';
-
-			if (random >= 10 && random <= 19)
+		var random = FlxG.random.float(0,200);
+			//show = 'senpai';
+			trace(random);
+			if (!FlxG.save.data.extrabeaten)
 				{
-					trace ('senpai');
-					show = 'senpai';
+					trace ('together1');
+					show = 'together1';
+				}
+			else
+				{
+					trace ('together');
+					show = 'together';
+				}
+			if (random >= 20 && random <= 40)
+				{
+					trace ('yuri');
+					show = 'yuri';
 				}
 				
-			if (random >= 20 && random <= 29)
+			if (random >= 41 && random <= 60)
 				{
-					trace ('yuritabi');
-					show = 'yuritabi';
+					trace ('natsuki');
+					show = 'natsuki';
 				}
-			if (random >= 30 && random <= 39)
+			if (random >= 61 && random <= 80)
 				{
-					trace ('sunnat');
-					show = 'sunnat';
+					trace ('sayori');
+					show = 'sayori';
 				}
-			if (random >= 40 && random <= 49)
+			if (random >= 81 && random <= 100 && FlxG.save.data.extrabeaten)
 				{
-					trace ('senpai');
-					show = 'senpai';
+					trace ('monika');
+					show = 'monika';
 				}
-			if (random >= 50 && random <= 59)
+			if (random >= 81 && random <= 100 && !FlxG.save.data.extrabeaten)
 				{
-					trace ('sunnat');
-					show = 'sunnat';
+					trace ('pixelmonika');
+					show = 'pixelmonika';
 				}
-			if (random >= 60 && random <= 69)
-				{
-					trace ('yuritabi');
-					show = 'yuritabi';
-				}
-			if (random >= 70 && random <= 79)
+			if (random >= 101 && random <= 120)
 				{
 					trace ('senpai');
 					show = 'senpai';
 				}
-			if (random >= 80 && random <= 89)
+			if (random >= 121 && random <= 130)
 				{
 					trace ('sunnat');
 					show = 'sunnat';
 				}
-			if (random >= 90 && random <= 98)
+			if (random >= 131 && random <= 140)
 				{
 					trace ('yuritabi');
 					show = 'yuritabi';
 				}
-			if (random >= 99 && random <=100)
+			if (random >= 141 && random <= 150)
+				{
+					trace ('minusmonikapixel');
+					show = 'minusmonikapixel';
+				}
+			if (random >= 151 && random <= 160 && FlxG.save.data.extrabeaten)
+				{
+					trace ('akimonika');
+					show = 'akimonika';
+				}
+			if (random >= 161 && random <= 170)
+				{
+					trace ('cyrixstatic');
+					show = 'cyrixstatic';
+				}
+			if (random >= 171 && random <= 180)
+				{
+					trace ('zipori');
+					show = 'zipori';
+				}
+			if (random >= 181 && random <= 200 && FlxG.save.data.extra2beaten)
+				{
+					trace ('protag');
+					show = 'protag';
+				}
+			if (random >= 98 && random <=100)
 				{
 					trace ('fumo');
 					show = 'fumo';
@@ -222,6 +252,114 @@ class MainMenuState extends MusicBeatState
 					menu_character.antialiasing = true;
 					menu_character.scale.set(.77, .77);
 					menu_character.animation.addByPrefix('play', 'Tabi Yuri together hueh', 21);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'pixelmonika':
+					menu_character = new FlxSprite(-40, -240);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/pixelmonika');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'Monika_Neutral_gif', 24, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'minusmonikapixel':
+					menu_character = new FlxSprite(-40, -280);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/minusmonikapixel');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'MinusMonika_gif', 24, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'yuri':
+					menu_character = new FlxSprite(20, -230);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/yuri');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'Yuri BG', 24, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'sayori':
+					menu_character = new FlxSprite(20, -180);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/sayori');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'Sayori BG', 24, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'natsuki':
+					menu_character = new FlxSprite(0, -140);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/natsuki');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'Natsu BG', 24, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'monika':
+					menu_character = new FlxSprite(-70, -250);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/monika');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'Moni BG', 24, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'protag':
+					menu_character = new FlxSprite(20, -250);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/protag');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'Protag-kun BG', 24, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'akimonika':
+					menu_character = new FlxSprite(-70, -270);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/akihamoniduo');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.77, .77);
+					menu_character.animation.addByPrefix('play', 'Moni Akiha Menu', 21, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'cyrixstatic':
+					menu_character = new FlxSprite(-150, -270);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/cyrixstaticmenu');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.77, .77);
+					menu_character.animation.addByPrefix('play', 'Cyrix-Static Menu', 21);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'together':
+					menu_character = new FlxSprite(-170, -320);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/dokitogether');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.7, .7);
+					menu_character.animation.addByPrefix('play', 'Doki together club', 21, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'together1':
+					menu_character = new FlxSprite(-150, -310);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/dokitogetheralt');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.77, .77);
+					menu_character.animation.addByPrefix('play', 'Doki together club', 21, false);
+					menu_character.updateHitbox();
+					menu_character.animation.play('play');
+					add(menu_character);
+				case 'zipori':
+					menu_character = new FlxSprite(-100, -270);
+					menu_character.frames = Paths.getSparrowAtlas('menucharacters/sayozip');
+					menu_character.antialiasing = true;
+					menu_character.scale.set(.8, .8);
+					menu_character.animation.addByPrefix('play', 'Sayo Zipper Menu', 24, false);
 					menu_character.updateHitbox();
 					menu_character.animation.play('play');
 					add(menu_character);
@@ -455,7 +593,7 @@ class MainMenuState extends MusicBeatState
 		
 			logoBl.animation.play('bump', true);
 
-			if (show == 'fumo' && curBeat % 2 == 0)
+			if ((show == 'protag' || show == 'fumo' || show == 'zipori' || show == 'together1' || show == 'together' || show == 'akimonika' || show == 'monika' || show == 'yuri' || show == 'natsuki' || show == 'sayori' || show == 'pixelmonika' || show == 'minusmonikapixel') && curBeat % 2 == 0)
 				menu_character.animation.play('play', true);
 		}
 	}
