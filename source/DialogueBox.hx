@@ -237,7 +237,7 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (FlxG.keys.justPressed.ESCAPE && !stopspamming && canSkip && canFullSkip)
+		if (FlxG.keys.justPressed.ESCAPE && !stopspamming && canSkip && canFullSkip && dialogueStarted)
 			{
 				isEnding = true;
 				stopspamming = true;
