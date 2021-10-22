@@ -100,6 +100,7 @@ descMiddleScroll::Put your lane in the center or on the right.
 descLaneUnderway::Toggles lane underlay.
 descLaneUnderwayControl::Current Lane Underlay transparency
 descSaveReset::Reset your save file to its defaults.
+descDialogueSkip::Press ESCAPE to skip the dialogue.
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.

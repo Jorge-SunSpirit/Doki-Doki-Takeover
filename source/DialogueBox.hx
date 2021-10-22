@@ -195,12 +195,12 @@ class DialogueBox extends FlxSpriteGroup
 					add(swagDialogue);
 				}
 
-		skipText = new FlxText(5, 695, 640, "Press ESCAPE to skip the dialogue.\n", 40);
+		skipText = new FlxText(5, 695, 640, LangUtil.getString('descDialogueSkip'), 40);
 		skipText.scrollFactor.set(0, 0);
-		skipText.font = 'VCR OSD Mono';
-		skipText.setFormat(20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		skipText.setFormat(LangUtil.getFont(), 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		skipText.borderSize = 2;
 		skipText.borderQuality = 1;
+		skipText.antialiasing = true;
 		add(skipText);
 		
 
