@@ -16,6 +16,8 @@ class LangUtil
 			case 'aller':
 				switch (FlxG.save.data.language)
 				{
+					case 'ru-RU':
+						font = 'Ubuntu Bold';
 					default:
 						font = 'Aller';
 				}
@@ -38,6 +40,8 @@ class LangUtil
 			default:
 				switch (FlxG.save.data.language)
 				{
+					case 'ru-RU':
+						font = 'Ubuntu Bold';
 					default:
 						font = 'VCR OSD Mono';
 				}

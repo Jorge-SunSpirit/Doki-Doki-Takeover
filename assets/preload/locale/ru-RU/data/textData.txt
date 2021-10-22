@@ -1,111 +1,111 @@
 // COMMON
-cmnEasy::EASY
-cmnNormal::NORMAL
-cmnHard::HARD
-cmnPB::PERSONAL BEST
-cmnScore::Score
-cmnNPS::NPS
-cmnMaxNPS::Max
-cmnComboBreak::Combo Breaks
-cmnAccuracy::Accuracy
+cmnEasy::ЛЕГКО
+cmnNormal::СРЕДНЕ
+cmnHard::СЛОЖНО
+cmnPB::ЛУЧШИЙ СЧЁТ
+cmnScore::Счёт
+cmnNPS::НВС
+cmnMaxNPS::Макс.
+cmnComboBreak::Проваленные комбо
+cmnAccuracy::Точность
 cmnBotplay::Botplay
-cmnClear::Clear
-cmnOn::On
-cmnOff::Off
-cmnDesc::Description
-cmnOffset::Offset (Left, Right, Shift for slow)
-cmnAddOffset::Additive Offset (Left or Right)
-cmnCategory::Please select a category
-cmnCaching::Caching
+cmnClear::Чистые попадания
+cmnOn::Вкл.
+cmnOff::Выкл.
+cmnDesc::Описание
+cmnOffset::Задержка (Влево, Вправо, Shift чтобы замедлить)
+cmnAddOffset::Доп. задержка (Влево или вправо)
+cmnCategory::Пожалуйста, выберите категорию
+cmnCaching::Кэшинг
 // CATEGORY
-catGameplay::Gameplay
-catAppearance::Appearance
-catUnlock::Unlockables
-catSave::Save
+catGameplay::Игровой процесс
+catAppearance::Внешний вид
+catUnlock::Разблокируемый контент
+catSave::Сохранения
 // OPTIONS
-optKeyBindings::Key Bindings
+optKeyBindings::Назначения клавиш
 optDownscroll::Downscroll
 optUpscroll::Upscroll
-optGhostTap::Ghost Tapping
-optNoGhostTap::No Ghost Tapping
-optPosition::Song Position
-optDistract::Distractions
-optReset::Reset Button
-optFlashing::Flashing Lights
-optJudgement::Safe Frames
-optFPSCount::FPS Counter
-optFPSCap::FPS Cap
-optScroll::Scroll Speed
-optFPSRainbow::Rainbow FPS Counter
-optNPS::NPS Display
-optReplay::Load Replays
-optAccuracyMode::Accuracy Mode
-optAMAccurate::Accurate
-optAMComplex::Complex
-optCustomize::Customize Gameplay HUD
-optWatermark::Kade Engine Watermarks
-optGFCountdown::Girlfriend Countdown
-optLanguage::Language Select
-optCharacterCache::Character Caching
-optSongCache::Song Caching
-optMusicCache::Music Caching
-optSoundCache::SFX Caching
-optCaching::Start Caching
+optGhostTap::Ghost Tapping 
+optNoGhostTap::Без Ghost Tapping
+optPosition::Шкала песни
+optDistract::Отвлекающие елементы
+optReset::Кнопка перезапуска
+optFlashing::Мерцающие цвета
+optJudgement::Безопасные кадры
+optFPSCount::Счетчик ФПС
+optFPSCap::Лимит ФПС
+optScroll::Скорость прокрутки
+optFPSRainbow::Радужный счетчик ФПС
+optNPS::Показ НВС
+optReplay::Посмотреть реплей
+optAccuracyMode::Режим точности
+optAMAccurate::Точный
+optAMComplex::Сложный
+optCustomize::Изменить интерфейс во время игры
+optWatermark::Водяные знаки Kade Engine
+optGFCountdown::Отсчёт Девушки
+optLanguage::Выбор языка
+optCharacterCache::Кэширование персонажей
+optSongCache::Кэширование песен
+optMusicCache::Кэширование музыки
+optSoundCache::Кэширование звуковых эффектов
+optCaching::Начать кэширование
 optMiddleScrollOn::Middle Scroll
 optMiddleScrollOff::Right Side Scroll
 optLaneUnderwayOn::Lane Underlay
-optLaneUnderwayOff::No Lane Underlay
-optSaveReset::Reset Save File
-optSaveResetConfirm::Confirm Reset Save File
+optLaneUnderwayOff::Без Lane Underlay
+optSaveReset::Обнулить файл сохранения
+optSaveResetConfirm::Подтвердить обнуление?
 // DESCRIPTION
-descAddOffset::Adds value to global offset, per song.
-descKeyBindings::Change the keybindings of each note.
-descDownscroll::Change the direction of upcoming notes.
-descGhostTap::Ghost Tapping is when you tap a direction and it doesn't give you a miss.
-descJudgement::Customize the game's safe frames. (Left or Right)
-descCurJudgement::Current Safe Frames
-descFPSCap::Set the game's FPS cap. (Left for -10, Right for +10. Shift to go faster)
-descCurFPSCap::Current FPS Cap
-descRefreshRate::Refresh Rate
-descScroll::Change your scroll speed. (Left for -0.1, Right for +0.1. 1 will be chart default.)
-descCurScroll::Current Scroll Speed
-descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Millisecond Based)
-descReset::Toggle pressing R to game over.
-descCustomize::Customize parts of the gameplay HUD to your heart's content.
-descCustomizeState::Drag around the score to customize its position. R to reset. Q/E to zoom. Space to pause cam zooming. C to generate combo. Escape to exit.
-descDistract::Toggle stage distractions that can hinder your gameplay.
-descFPSRainbow::Make the FPS counter display as a rainbow.
-descAccuracy::Display accuracy information.
-descNPS::Shows your current notes per second.
-descPosition::Show the songs current position. (as a bar)
-descFPSCount::Toggle the FPS counter.
-descReplay::View your previous gameplay.
-descFlashing::Toggle flashing lights that can cause epileptic seizures and strain.
-descWatermark::Show watermarks that come from Kade Engine.
-descBotplay::Showcase your charts and mods with autoplay.
-descGFCountdown::Have Girlfriend count down before the song starts.
-descKeyBindKBCurrent::Current Mode: Keyboard.
-descKeyBindGPCurrent::Current Mode: Gamepad.
-descKeyBindTAB::Press Tab to switch.
-descKeyBindKBControls::Escape to save, Backspace to leave without saving. Enter to change a keybind.
-descKeyBindGPControls::Right Trigger to save, Right Trigger to leave without saving. Start to change a keybind.
-descKeyBindBlacklist::is blacklisted!
-descCharacterCache::Reduce load times by caching every character on boot. (MAJOR MEMORY USAGE)
-descSongCache::Reduce load times by caching every song on boot. (MAJOR MEMORY USAGE)
-descMusicCache::Reduce load times by caching every music on boot. (MAJOR MEMORY USAGE)
-descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY USAGE)
-descCaching::Reduce load times after boot by loading the selected options above.
-descDisableCaching::(press D to disable next boot)
-descMiddleScroll::Put your lane in the center or on the right.
-descLaneUnderway::Toggles lane underlay.
-descLaneUnderwayControl::Current Lane Underlay transparency
-descSaveReset::Reset your save file to its defaults.
+descAddOffset::Добавляет задержку к нотам, применяется ко всем песням.
+descKeyBindings::Сменить назначения клавиш для каждой ноты.
+descDownscroll::Меняет направление появляющихся нот (Downscroll - сверху, Upscroll - снизу).
+descGhostTap::Ghost Tapping - когда вы нажимаете на ноту и вам не засчитывается промах.
+descJudgement::Изменить кол-во безопасных кадров. (Влево или вправо)
+descCurJudgement::Текущее кол-во безопасных кадров.
+descFPSCap::Поставить лимит на количество кадров в секунду. (Влево - 10, Вправо +10. Shift чтобы ускориться)
+descCurFPSCap::Текущий лимит кадров в секунду.
+descRefreshRate::Частота обновления.
+descScroll::Изменить скорость прокрутки нот. (Влево -0.1, Вправо +0.1. Если поставить 1, будет установлена скорость по умолчанию.)
+descCurScroll::Текущая скорость прокрутки.
+descAccuracyMode::Поменять способ вычисления точности. (Точный = Простой метод, Сложный = Основывается на милисекундах)
+descReset::Включает возможность нажать на R чтобы получить гейм овер.
+descCustomize::Меняйте положение элементов интерфейса сколько душа пожелает.
+descCustomizeState::Перетаскивайте счёт, чтобы изменить его позицию. R чтобы вернуть его на место. Q/E - приблизить/отдалить. Пробел чтобы остановить приближение камеры. C чтобы сгенерировать комбо. Escape - выход.
+descDistract::Включает отвлекающие элементы, влияющие на игровой процесс.
+descFPSRainbow::Счетчик кадров в секунду будет мигать, как радуга. Красивенько!
+descAccuracy::Показывает информацию о точности.
+descNPS::Показывает количество НВС (Нот в секунду)
+descPosition::Показывает текущий прогресс песни. (Ввиде шкалы)
+descFPSCount::Включить счетчик кадров в секунду.
+descReplay::Показывает вашу прошлую игру.
+descFlashing::Включает или выключает мерцающие цвета которые могут вызвать эпилепсию или судороги. 
+descWatermark::Показывает водяные знаки Kade Engine.
+descBotplay::Если эта опция включена, за вас будет играть бот. 
+descGFCountdown::Если эта опция включена, Девушка будет отсчитывать "3, 2, 1" перед песней.
+descKeyBindKBCurrent::Текущий ввод: Клавиатура.
+descKeyBindGPCurrent::Текущий ввод: Джойстик.
+descKeyBindTAB::Нажмите TAB чтобы переключить.
+descKeyBindKBControls::Escape чтобы сохранить настройки, Backspace чтобы выйти без сохранения. Enter чтобы сменить назначение клавиши.
+descKeyBindGPControls::Правый триггер чтобы сохранить настройки, Левый Триггер чтобы выйти без сохранения. Кнопка "Старт" чтобы сменить назначение клавиши.
+descKeyBindBlacklist::в черном списке!
+descCharacterCache::Уменьшает время загрузки при старте игры, кэшируя персонажей. (ИСПОЛЬЗУЕТ МНОГО ОПЕРАТИВНОЙ ПАМЯТИ!)
+descSongCache::Уменьшает время загрузки при старте игры, кэшируя каждую песню. (ИСПОЛЬЗУЕТ МНОГО ОПЕРАТИВНОЙ ПАМЯТИ!)
+descMusicCache::Уменьшает время загрузки при старте игры, кэшируя музыку в меню и т.д. (ИСПОЛЬЗУЕТ МНОГО ОПЕРАТИВНОЙ ПАМЯТИ!)
+descSoundCache::Уменьшает время загрузки при старте игры, кэшируя каждый звуковой эффект. (ИСПОЛЬЗУЕТ МНОГО ОПЕРАТИВНОЙ ПАМЯТИ!)
+descCaching::Вы можете уменьшить время загрузки игры, переключая опции в этом меню.
+descDisableCaching::(нажмите D чтобы отключить при следующей загрузке)
+descMiddleScroll::Ставит линию прокрутки нот в середину.
+descLaneUnderway::Включает фон для линии прокрутки нот.
+descLaneUnderwayControl::Текущий уровень прозрачности фона для линии прокрутки нот.
+descSaveReset::Полностью обнуляет ваш файл сохранения.
 // UNLOCK POPUPS
-msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
-msgSayo::Sayori's songs are now available in the Freeplay menu.
-msgGFCount::"Girlfriend Countdown" unlocked!{NL}Toggle it in the Options menu.
-msgNat::Natsuki's songs are now available in the Freeplay menu.
-msgYuri::Yuri's songs are now available in the Freeplay menu.
-msgExtra1::"Poems 'n Thorns" unlocked!{NL}Access the song in the Freeplay menu.
-msgExtra2::"Dual Demise" unlocked!{NL}Access the song in the Freeplay menu.
-msgExtra3::Epiphany{NL}unlocked.
+msgMoni::Песня "Your Reality"{NL}Разблокирована! Вы можете найти ее в меню свободной игры.
+msgSayo::Песни Сайори теперь доступны в меню свободной игры!
+msgGFCount::"Отсчёт Девушки" разблокирован!{NL}Переключайте его в меню опций.
+msgNat::Песни Натсуки теперь доступны в меню свободной игры!
+msgYuri::Песни Юри теперь доступны в меню свободной игры!
+msgExtra1::Песня "Poems 'n Thorns"{NL}разблокирована! Вы можете найти ее в меню свободной игры.
+msgExtra2::Песня "Dual Demise"{NL}разблокирована! Вы можете найти ее в меню свободной игры.
+msgExtra3::Богоявление{NL}разблокировано.
