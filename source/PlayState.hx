@@ -3794,6 +3794,17 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		if (curSong.toLowerCase() == 'obsession' && isStoryMode)
+		{
+			#if FEATURE_FILESYSTEM
+			Sys.exit(0);
+			#else
+			FlxTransitionableState.skipNextTransOut = true;
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxG.switchState(new CrashState());
+			#end
+		}
+
 		midsongcutscene = false;
 
 		if (!loadRep)
