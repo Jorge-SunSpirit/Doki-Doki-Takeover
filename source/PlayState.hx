@@ -4952,7 +4952,7 @@ class PlayState extends MusicBeatState
 				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith('sing'))
 					spirit.dance();
 			}
-			else if (dad.curCharacter == 'sayori' && !dad.animation.curAnim.name.startsWith('sing') && curBeat % gfSpeed == 0)
+			else if (dad.curCharacter == 'sayori' && !dad.animation.curAnim.name.startsWith('sing'))
 				dad.dance(SONG.notes[Math.floor(curStep / 16)].altAnim);
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
@@ -4971,58 +4971,14 @@ class PlayState extends MusicBeatState
 			camHUD.zoom += 0.03;
 		}
 
-		switch (SONG.song.toLowerCase())
-					{
-						case "rain clouds" | "my confession":
-							{
-								yuri.animation.play('idle');
-								natsuki.animation.play('idle');
-							}
-						case "baka" | "my sweets":
-							{
-								yuri.animation.play('idle');
-								sayori.animation.play('idle');
-							}
-						case "deep breaths" | "obsession":
-							{
-								sayori.animation.play('idle');
-								natsuki.animation.play('idle');
-							}
-						case "reconciliation":
-							{
-								sayori.animation.play('idle');
-								yuri.animation.play('idle');
-								natsuki.animation.play('idle');
-							}
-						case "beathoven (natsuki mix)":
-							{
-								sayori.animation.play('idle');
-								yuri.animation.play('idle');
-								monika.animation.play('idle');
-								protag.animation.play('idle');
-							}
-						case "crucify (yuri mix)":
-							{
-								sayori.animation.play('idle');
-								natsuki.animation.play('idle');
-								monika.animation.play('idle');
-								protag.animation.play('idle');
-							}
-						case "it's complicated (sayori mix)":
-							{
-								yuri.animation.play('idle');
-								natsuki.animation.play('idle');
-								monika.animation.play('idle');
-								protag.animation.play('idle');
-							}
-						case "glitcher (monika mix)":
-							{
-								sayori.animation.play('idle');
-								yuri.animation.play('idle');
-								natsuki.animation.play('idle');
-								protag.animation.play('idle');
-							}
-					}
+		if (curStage.startsWith('doki') && curBeat % 2 == 0)
+		{
+			monika.animation.play('idle', true);
+			sayori.animation.play('idle', true);
+			natsuki.animation.play('idle', true);
+			protag.animation.play('idle', true);
+			yuri.animation.play('idle', true);
+		}
 
 		iconP1.setGraphicSize(Std.int(iconP1.width + 30));
 		iconP2.setGraphicSize(Std.int(iconP2.width + 30));
