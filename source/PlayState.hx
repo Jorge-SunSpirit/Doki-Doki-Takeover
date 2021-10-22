@@ -233,6 +233,8 @@ class PlayState extends MusicBeatState
 	var altAnim:String = "";
 	var fc:Bool = true;
 
+	var isintro:Bool = true;
+
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	var camtween:FlxTween;
@@ -461,6 +463,7 @@ class PlayState extends MusicBeatState
 			case 'deep breaths':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/deep breaths/IntroDialogue', 'preload', true));
 			case 'obsession':
+				//Obsession really takes advantage of all of the DOOF's with the exception of doof3
 				preintro = CoolUtil.coolTextFile(Paths.txt('data/obsession/preintroDialogue', 'preload', true));
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/obsession/IntroDialogue', 'preload', true));
 				extra1 = CoolUtil.coolTextFile(Paths.txt('data/obsession/EndDialogue1', 'preload', true));
@@ -1655,7 +1658,7 @@ class PlayState extends MusicBeatState
 			add(staticshock);
 
 		startingSong = true;
-		
+		isintro = true;
 		if (isStoryMode)
 		{
 			switch (curSong.toLowerCase())
@@ -1967,22 +1970,6 @@ class PlayState extends MusicBeatState
 			{
 				switch(curSong.toLowerCase())
 					{
-						case "obsession":
-							{
-								add(blackScreen);
-								blackScreen.alpha = 0;
-								FlxTween.tween(blackScreen, {alpha: 1}, 1, {ease: FlxEase.expoOut,
-									onComplete: function(twn:FlxTween)
-										{
-											remove(sayori);
-											remove(natsuki);
-											FlxTween.tween(blackScreen, {alpha: 0}, 3, {ease: FlxEase.expoInOut,
-											onComplete: function(twn:FlxTween)
-												{
-													introcutscene(doof);
-												}});
-										}});
-							}
 						case "glitcher (monika mix)":
 							{
 								var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/festivalend','doki'));
@@ -2016,24 +2003,44 @@ class PlayState extends MusicBeatState
 							}
 						case "obsession":
 							{
-								var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3','doki'));
-								imageBG.antialiasing = true;
-								imageBG.scrollFactor.set();
-								imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
-								imageBG.updateHitbox();
-								imageBG.screenCenter(XY);
-								add(imageBG);
-
-								add(blackScreen);
-								blackScreen.alpha = 1;
-								blackScreentwo.visible = false;
-
-								FlxTween.tween(blackScreen, {alpha: 0}, 2, {ease: FlxEase.expoOut,
-								onComplete: function(twn:FlxTween)
+								if (!isintro)
 									{
-										remove(blackScreen);
-										endcutscene(doof5);
-									}});
+										var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3','doki'));
+										imageBG.antialiasing = true;
+										imageBG.scrollFactor.set();
+										imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
+										imageBG.updateHitbox();
+										imageBG.screenCenter(XY);
+										add(imageBG);
+
+										add(blackScreen);
+										blackScreen.alpha = 1;
+										blackScreentwo.visible = false;
+
+										FlxTween.tween(blackScreen, {alpha: 0}, 2, {ease: FlxEase.expoOut,
+										onComplete: function(twn:FlxTween)
+											{
+												remove(blackScreen);
+												endcutscene(doof5);
+											}});
+									}
+								else
+									{
+										add(blackScreen);
+										blackScreen.alpha = 0;
+										FlxTween.tween(blackScreen, {alpha: 1}, 1, {ease: FlxEase.expoOut,
+											onComplete: function(twn:FlxTween)
+												{
+													remove(sayori);
+													remove(natsuki);
+													FlxTween.tween(blackScreen, {alpha: 0}, 3, {ease: FlxEase.expoInOut,
+													onComplete: function(twn:FlxTween)
+														{
+															introcutscene(doof);
+														}});
+												}});
+									}
+								
 							}
 						case "your demise":
 							{
@@ -3740,6 +3747,7 @@ class PlayState extends MusicBeatState
 
 	function songOutro():Void
 		{
+			isintro = false;
 			midsongcutscene = false;
 			FlxG.sound.music.volume = 0;
 			vocals.volume = 0;
