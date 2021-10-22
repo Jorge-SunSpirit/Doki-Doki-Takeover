@@ -747,39 +747,41 @@ class PlayState extends MusicBeatState
 					yuri.setGraphicSize(Std.int(yuri.width * .7));
 					yuri.updateHitbox();
 
-					switch (SONG.song.toLowerCase())
+					if (FlxG.save.data.distractions)
 					{
-						case "rain clouds" | "my confession":
-							{
-								//Sayori week
-								add(yuri);
-								yuri.x = 130;
-								yuri.y = 176;
-								add(natsuki);
-								natsuki.x = 1088;
-								natsuki.y = 275;
-							}
-						case "baka" | "my sweets":
-							{
-								add(yuri);
-								yuri.x = 130;
-								yuri.y = 176;
-								add(sayori);
-								sayori.x = 1050;
-								sayori.y = 250;
-							}
-						case "deep breaths":
-							{
-								add(sayori);
-								sayori.x = -49;
-								sayori.y = 247;
-								add(natsuki);
-								natsuki.x = 1044;
-								natsuki.y = 290;
-							}
-						case "obsession":
-							{
-								if (isStoryMode)
+						switch (SONG.song.toLowerCase())
+						{
+							case "rain clouds" | "my confession":
+								{
+									// Sayori week
+									add(yuri);
+									yuri.x = 130;
+									yuri.y = 176;
+									add(natsuki);
+									natsuki.x = 1088;
+									natsuki.y = 275;
+								}
+							case "baka" | "my sweets":
+								{
+									add(yuri);
+									yuri.x = 130;
+									yuri.y = 176;
+									add(sayori);
+									sayori.x = 1050;
+									sayori.y = 250;
+								}
+							case "deep breaths":
+								{
+									add(sayori);
+									sayori.x = -49;
+									sayori.y = 247;
+									add(natsuki);
+									natsuki.x = 1044;
+									natsuki.y = 290;
+								}
+							case "obsession":
+								{
+									if (isStoryMode)
 									{
 										add(sayori);
 										sayori.x = -49;
@@ -788,19 +790,20 @@ class PlayState extends MusicBeatState
 										natsuki.x = 1044;
 										natsuki.y = 290;
 									}
-							}
-						case "reconciliation":
-							{
-								add(sayori);
-								sayori.x = 134;
-								sayori.y = 246;
-								add(natsuki);
-								natsuki.x = 1044;
-								natsuki.y = 290;
-								add(yuri);
-								yuri.x = -74;
-								yuri.y = 176;
-							}
+								}
+							case "reconciliation":
+								{
+									add(sayori);
+									sayori.x = 134;
+									sayori.y = 246;
+									add(natsuki);
+									natsuki.x = 1044;
+									natsuki.y = 290;
+									add(yuri);
+									yuri.x = -74;
+									yuri.y = 176;
+								}
+						}
 					}
 
 					add(sparkleBG);
@@ -917,69 +920,72 @@ class PlayState extends MusicBeatState
 					yuri.updateHitbox();
 					yuri.color = 0x828282;
 
-					switch (SONG.song.toLowerCase())
+					if (FlxG.save.data.distractions)
 					{
-						case "beathoven (natsuki mix)":
-							{
-								//Sayori week
-								add(yuri);
-								yuri.x = 1044;
-								yuri.y = 178;
-								add(sayori);
-								sayori.x = -49;
-								sayori.y = 247;
-								add(protag);
-								protag.x = 379;
-								protag.y = 152;
-								add(monika);
-								monika.x = 1207;
-								monika.y = 173;
-							}
-						case "crucify (yuri mix)":
-							{
-								add(natsuki);
-								natsuki.x = 1044;
-								natsuki.y = 290;
-								add(sayori);
-								sayori.x = -49;
-								sayori.y = 247;
-								add(protag);
-								protag.x = 379;
-								protag.y = 152;
-								add(monika);
-								monika.x = 1207;
-								monika.y = 173;
-							}
-						case "it's complicated (sayori mix)":
-							{
-								add(yuri);
-								yuri.x = -74;
-								yuri.y = 176;
-								add(protag);
-								protag.x = 379;
-								protag.y = 152;
-								add(monika);
-								monika.x = 1207;
-								monika.y = 173;
-								add(natsuki);
-								natsuki.x = 1044;
-								natsuki.y = 290;
-							}
-						case "glitcher (monika mix)":
-							{
-								add(natsuki);
-								natsuki.x = 1247;
-								natsuki.y = 303;
-								add(sayori);
-								sayori.x = -49;
-								sayori.y = 247;
-								add(protag);
-								protag.x = 150;
-								protag.y = 152;
-								add(yuri);
-								yuri.x = 1044;
-								yuri.y = 178;
-							}
+						switch (SONG.song.toLowerCase())
+						{
+							case "beathoven (natsuki mix)":
+								{
+									// Sayori week
+									add(yuri);
+									yuri.x = 1044;
+									yuri.y = 178;
+									add(sayori);
+									sayori.x = -49;
+									sayori.y = 247;
+									add(protag);
+									protag.x = 379;
+									protag.y = 152;
+									add(monika);
+									monika.x = 1207;
+									monika.y = 173;
+								}
+							case "crucify (yuri mix)":
+								{
+									add(natsuki);
+									natsuki.x = 1044;
+									natsuki.y = 290;
+									add(sayori);
+									sayori.x = -49;
+									sayori.y = 247;
+									add(protag);
+									protag.x = 379;
+									protag.y = 152;
+									add(monika);
+									monika.x = 1207;
+									monika.y = 173;
+								}
+							case "it's complicated (sayori mix)":
+								{
+									add(yuri);
+									yuri.x = -74;
+									yuri.y = 176;
+									add(protag);
+									protag.x = 379;
+									protag.y = 152;
+									add(monika);
+									monika.x = 1207;
+									monika.y = 173;
+									add(natsuki);
+									natsuki.x = 1044;
+									natsuki.y = 290;
+								}
+							case "glitcher (monika mix)":
+								{
+									add(natsuki);
+									natsuki.x = 1247;
+									natsuki.y = 303;
+									add(sayori);
+									sayori.x = -49;
+									sayori.y = 247;
+									add(protag);
+									protag.x = 150;
+									protag.y = 152;
+									add(yuri);
+									yuri.x = 1044;
+									yuri.y = 178;
+								}
+						}
 					}
 
 					var banner:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FestivalBanner','doki'));
@@ -1083,23 +1089,26 @@ class PlayState extends MusicBeatState
 					yuri.updateHitbox();
 					yuri.color = 0x828282;
 
-					switch (SONG.song.toLowerCase())
+					if (FlxG.save.data.distractions)
 					{
-						case "glitcher (monika mix)":
-							{
-								add(natsuki);
-								natsuki.x = 1247;
-								natsuki.y = 303;
-								add(sayori);
-								sayori.x = -49;
-								sayori.y = 247;
-								add(protag);
-								protag.x = 150;
-								protag.y = 152;
-								add(yuri);
-								yuri.x = 1044;
-								yuri.y = 178;
-							}
+						switch (SONG.song.toLowerCase())
+						{
+							case "glitcher (monika mix)":
+								{
+									add(natsuki);
+									natsuki.x = 1247;
+									natsuki.y = 303;
+									add(sayori);
+									sayori.x = -49;
+									sayori.y = 247;
+									add(protag);
+									protag.x = 150;
+									protag.y = 152;
+									add(yuri);
+									yuri.x = 1044;
+									yuri.y = 178;
+								}
+						}
 					}
 
 					banner = new FlxSprite(posX, posY).loadGraphic(Paths.image('festival/FestivalBanner','doki'));
