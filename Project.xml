@@ -170,7 +170,5 @@
   <haxedef name="FEATURE_CACHING" if="desktop" unless="32bit || hl" />
   <!-- Defines whether OBS or other recording software can be detected. Only works on Windows. -->
   <haxedef name="FEATURE_OBS" if="windows" />
-  <!-- Defines whether the player's Windows profile picture can be used. Only works on Windows. -->
-  <!-- <haxedef name="FEATURE_ICON" if="windows" /> -->
 	
 </project>
