@@ -83,7 +83,7 @@ class DialogueBox extends FlxSpriteGroup
 			else
 				{
 					hasDialog = true;
-					box.frames = Paths.getSparrowAtlas('dialogue/Text_Boxes','doki');
+					box.frames = Paths.getSparrowAtlas('dialogue/Text_Boxes', 'preload', true);
 					box.animation.addByPrefix('normalOpen', 'Doki Dialogue Blank', 24, false);
 					box.animation.addByIndices('normal', 'Doki Dialogue Blank', [9], "", 24);
 					box.animation.addByPrefix('blankbox', 'Doki Dialogue noone', 24, false);

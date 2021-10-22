@@ -21,6 +21,7 @@ cmnCaching::Caching
 catGameplay::Gameplay
 catAppearance::Apariencia
 catUnlock::Desbloqueables
+catSave::Guardar
 // OPTIONS
 optKeyBindings::Asignación de Teclas
 optDownscroll::Downscroll
@@ -54,6 +55,8 @@ optMiddleScrollOn::Middle Scroll
 optMiddleScrollOff::Scroll a la Derecha
 optLaneUnderwayOn::Subrallado de Carril
 optLaneUnderwayOff::Sin Subrallado de Carril
+optSaveReset::Reiniciar Datos de Guardado
+optSaveResetConfirm::Confirmar Reinicio de Datos de Guardado
 // DESCRIPTION
 descAddOffset::Añade un valor al desplazamiento global, por canción.
 descKeyBindings::Cambiar las teclas de cada nota.
@@ -96,6 +99,7 @@ descDisableCaching::(pulsa D para desactivar el siguiente inicio)
 descMiddleScroll::Reubica las letras al medio o a la derecha.
 descLaneUnderway::Alterna el lane underlay.
 descLaneUnderwayControl::Transparencia del Lane Underlay actual.
+descSaveReset::Reinicia tu partida guardada a una predeterminada.
 // UNLOCK POPUPS
 msgMoni:: Desbloqueaste "Your Reality"{NL}Accede a la canción desde el menú de freeplay.
 msgSayo::Las canciones de Sayori ahora están disponibles en el  menú de Freeplay.
