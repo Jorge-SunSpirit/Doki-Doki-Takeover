@@ -1,15 +1,14 @@
-:monikauhohleft:There... No more distractions.
+:monikauhohleft:Listo... No más distracciones.
 :bfwhat:SKEE DEP!
-:bfwhat:(Translation) GIRLFRIEND!
-:monika:Let's get back to singing, shall we?
+:bfwhat:(Traducción) GIRLFRIEND!
+:monika:Volvamos a cantar, ¿sí?
 :bfangry:...
 :monikagaspleft:Hmm?
-:bfangry:*agressive bee bop noises*
-:monikagaspleft:Oh... her.
-:monika:Hey, let's not worry about her, ok?
-:monika:C'mon, I've got a very special song I've wanted to sing!
-:bfangry:*continuation of angry bee bops*
+:bfangry:*sonidos de beep bop agresivos*
+:monikagaspleft:Oh... ella.
+:monika:Oye, no nos preocupemos por ella, ¿vale?
+:monika:¡Vamos, tengo una canción muy especial que quería cantar!
+:bfangry:*continuación de bee bops agresivos*
 :monikagaspleft:...
 :monikahmm:...
-:monikahmm:One more song.
-:dad:Beware the Notes of Markov.
+:monikahmm:Una canción más.

@@ -1,4 +1,4 @@
-:startmusic:natoc
+:startmusic:natsc
 :natsuki_wah:"Hah! Could you keep up with that one?"
 :bf_neutral:"Dee boo skeet~"
 :gf_giggle:*giggling*

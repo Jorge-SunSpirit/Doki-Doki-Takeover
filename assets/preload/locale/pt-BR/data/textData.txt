@@ -21,6 +21,7 @@ cmnCaching::Caching
 catGameplay::Gameplay
 catAppearance::Aparência
 catUnlock::Desbloqueáveis
+catSave::Salvar
 // OPTIONS
 optKeyBindings::Teclas
 optDownscroll::Downscroll
@@ -54,6 +55,8 @@ optMiddleScrollOn::Middle Scroll
 optMiddleScrollOff::Scroll do Lado Direito
 optLaneUnderwayOn::Underlay de Pista
 optLaneUnderwayOff::Sem Underlay de Pista
+optSaveReset::Resetar Seu Save File
+optSaveResetConfirm::Confirmar Resetar Save File
 // DESCRIPTION
 descAddOffset::Adiciona valor ao offset global, por música.
 descKeyBindings::Muda as teclas de cada seta.
@@ -96,6 +99,8 @@ descDisableCaching::(pressione D para desabilitar após iniciar o jogo na próxi
 descMiddleScroll::Ponha sua pista para o centro ou para a direita.
 descLaneUnderway::Ativa/desativa underlay de pista.
 descLaneUnderwayControl::Transparência atual do Underlay da pista
+descSaveReset::Resete seu save para o padrão.
+descDialogueSkip::Pressione ESCAPE para pular o diálogo.
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Desbloqueado!{NL}Acesse a música no menu de Freeplay.
 msgSayo::As músicas de Sayori agora estão disponíveis no menu de Freeplay.
