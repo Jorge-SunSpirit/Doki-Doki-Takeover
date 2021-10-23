@@ -1,4 +1,4 @@
-:monika_neutral:"There were a lot of songs that would've worked for me to sing."
-:monika_ahh:"I'm happy that you even cataloged all our songs too."
-:monika_ahh:"But this one in particular… it felt like something people would want me to sing."
-:monika_neutral:"I think it's the name."
+:monika_neutral:"Había muchas canciones que me habrían servido para cantar."
+:monika_ahh:"Me alegro de que incluso hayas catalogado todas nuestras canciones también."
+:monika_ahh:"Pero esta en particular... se sentía como algo que la gente querría que cantara."
+:monika_neutral:"Creo que es el nombre."

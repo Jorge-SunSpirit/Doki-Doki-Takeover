@@ -1,4 +1,4 @@
-:natsuki_hmmph:"I'm going to be honest."
-:natsuki_hmmph:"There were way too many songs in that list you gave us, and I didn't want to sift through every single one."
-:natsuki_neutral:"This song had a picture of a cute cat as the album art though, so naturally I went with that one."
-:natsuki_angy:"Cue the music!"
+:natsuki_hmmph:"Voy a ser sincera."
+:natsuki_hmmph:"Había demasiadas canciones en la lista que nos diste, y no quería examinarlas todas."
+:natsuki_neutral:"Sin embargo, esta canción tenía la imagen de un lindo gato como portada del álbum, así que naturalmente me quedé con ella."
+:natsuki_angy:"¡Que empiece la música!"
