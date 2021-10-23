@@ -40,7 +40,6 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options', 'unlock'];
 
 	public static var firstStart:Bool = true;
-	public static var finishedFunnyMove:Bool = false;
 	var newGaming:FlxText;
 	var newGaming2:FlxText;
 	var newInput:Bool = true;
@@ -188,7 +187,7 @@ class MainMenuState extends MusicBeatState
 		if (firstStart)
 			FlxTween.tween(logo,{x: -700},1.2 ,{ease: FlxEase.elasticOut, onComplete: function(flxTween:FlxTween) 
 				{ 
-					finishedFunnyMove = true; 
+					firstStart = false;
 					changeItem();
 				}});
 		else
@@ -206,7 +205,7 @@ class MainMenuState extends MusicBeatState
 		if (firstStart)
 			FlxTween.tween(logoBl,{x: -600},1.2 ,{ease: FlxEase.elasticOut, onComplete: function(flxTween:FlxTween) 
 				{ 
-					finishedFunnyMove = true; 
+					firstStart = false;
 					changeItem();
 				}});
 		else
@@ -388,7 +387,7 @@ class MainMenuState extends MusicBeatState
 			if (firstStart)
 				FlxTween.tween(menuItem,{x: 50},1.2 + (i * 0.2) ,{ease: FlxEase.elasticOut, onComplete: function(flxTween:FlxTween) 
 					{ 
-						finishedFunnyMove = true; 
+						firstStart = false;
 						changeItem();
 					}});
 			else

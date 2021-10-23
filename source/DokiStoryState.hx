@@ -56,8 +56,6 @@ class DokiStoryState extends MusicBeatState
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
 
-	public static var firstStart:Bool = true;
-	public static var finishedFunnyMove:Bool = false;
 	var newGaming:FlxText;
 	var newGaming2:FlxText;
 	var newInput:Bool = true;
@@ -468,6 +466,7 @@ class DokiStoryState extends MusicBeatState
 					
 								if (controls.BACK)
 									{
+										acceptInput = false;
 										FlxG.sound.play(Paths.sound('cancelMenu'));
 										FlxG.switchState(new MainMenuState());
 									}

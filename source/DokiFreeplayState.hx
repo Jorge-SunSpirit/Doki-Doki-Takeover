@@ -185,6 +185,7 @@ class DokiFreeplayState extends MusicBeatState
 		}
 
 	var selectedSomethin:Bool = false;
+	var stopSpamming:Bool = false;
 
 	override function update(elapsed:Float)
 	{
@@ -215,7 +216,7 @@ class DokiFreeplayState extends MusicBeatState
 					iconArray[curSelected].alpha = 1;
 			}
 
-		if (!selectedSomethin)
+		if (!selectedSomethin && !stopSpamming)
 		{
 			if (controls.UP_P && !diffselect && curPage != 3)
 			{
@@ -272,6 +273,8 @@ class DokiFreeplayState extends MusicBeatState
 							case false:
 								DokiFreeplayState.pageFlipped = false;
 								DokiFreeplayState.curPage = 0;
+								stopSpamming = true; 
+								FlxG.sound.play(Paths.sound('cancelMenu'));
 								FlxG.switchState(new MainMenuState());
 						}
 					
