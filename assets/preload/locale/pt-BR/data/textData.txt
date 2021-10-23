@@ -109,4 +109,4 @@ msgNat::As músicas de Natsuki agora estão disponíveis no menu de Freeplay.
 msgYuri::As músicas de Yuri agora estão disponíveis no menu de Freeplay.
 msgExtra1::"Poems 'n Thorns" desbloqueado!{NL}Acesse a música no menu de Freeplay.
 msgExtra2::"Dual Demise" desbloqueado!{NL}Acesse a música no menu de Freeplay.
-msgExtra3::Epifania{NL}desbloqueada.
+msgExtra3::Epiphany{NL}desbloqueada.
