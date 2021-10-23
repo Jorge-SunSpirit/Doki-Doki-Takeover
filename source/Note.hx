@@ -63,7 +63,7 @@ class Note extends FlxSprite
 		switch (noteStyle)
 		{
 			case 'pixel':
-				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels', 'week6'), true, 17, 17);
+				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels','week6'), true, 17, 17);
 
 				switch (noteType)
 				{
@@ -72,7 +72,7 @@ class Note extends FlxSprite
 						animation.add('greenScroll', [2]);
 						animation.add('redScroll', [3]);
 						animation.add('blueScroll', [1]);
-						animation.add('purpleScroll', [0]); */
+						animation.add('purpleScroll', [0]);*/
 					case 2:
 						animation.add('greenScroll', [22]);
 						animation.add('redScroll', [23]);
@@ -84,10 +84,11 @@ class Note extends FlxSprite
 						animation.add('blueScroll', [5]);
 						animation.add('purpleScroll', [4]);
 				}
+					
 
 				if (isSustainNote)
 				{
-					loadGraphic(Paths.image('weeb/pixelUI/arrowEnds', 'week6'), true, 7, 6);
+					loadGraphic(Paths.image('weeb/pixelUI/arrowEnds','week6'), true, 7, 6);
 
 					animation.add('purpleholdend', [4]);
 					animation.add('greenholdend', [6]);
@@ -106,45 +107,46 @@ class Note extends FlxSprite
 				frames = Paths.getSparrowAtlas('NOTE_assets');
 
 				switch (noteType)
-				{
-					/*case 1:
-						//Testing exclusively for chart stuff to seperate alt notes from normal notes visually
-						animation.addByPrefix('greenScroll', 'arrowLEFT');
-						animation.addByPrefix('redScroll', 'arrowLEFT');
-						animation.addByPrefix('blueScroll', 'arrowLEFT');
-						animation.addByPrefix('purpleScroll', 'arrowLEFT'); */
-					case 2:
-						animation.addByPrefix('greenScroll', 'markov green0');
-						animation.addByPrefix('redScroll', 'markov red0');
-						animation.addByPrefix('blueScroll', 'markov blue0');
-						animation.addByPrefix('purpleScroll', 'markov purple0');
+					{
+						/*case 1:
+							//Testing exclusively for chart stuff to seperate alt notes from normal notes visually
+							animation.addByPrefix('greenScroll', 'arrowLEFT');
+							animation.addByPrefix('redScroll', 'arrowLEFT');
+							animation.addByPrefix('blueScroll', 'arrowLEFT');
+							animation.addByPrefix('purpleScroll', 'arrowLEFT');*/
+						case 2:
+							animation.addByPrefix('greenScroll', 'markov green0');
+							animation.addByPrefix('redScroll', 'markov red0');
+							animation.addByPrefix('blueScroll', 'markov blue0');
+							animation.addByPrefix('purpleScroll', 'markov purple0');
 
-						animation.addByPrefix('purpleholdend', 'markov pruple end hold');
-						animation.addByPrefix('greenholdend', 'markov green hold end');
-						animation.addByPrefix('redholdend', 'markov red hold end');
-						animation.addByPrefix('blueholdend', 'markov blue hold end');
+							animation.addByPrefix('purpleholdend', 'markov pruple end hold');
+							animation.addByPrefix('greenholdend', 'markov green hold end');
+							animation.addByPrefix('redholdend', 'markov red hold end');
+							animation.addByPrefix('blueholdend', 'markov blue hold end');
 
-						animation.addByPrefix('purplehold', 'markov purple hold piece');
-						animation.addByPrefix('greenhold', 'markov green hold piece');
-						animation.addByPrefix('redhold', 'markov red hold piece');
-						animation.addByPrefix('bluehold', 'markov blue hold piece');
+							animation.addByPrefix('purplehold', 'markov purple hold piece');
+							animation.addByPrefix('greenhold', 'markov green hold piece');
+							animation.addByPrefix('redhold', 'markov red hold piece');
+							animation.addByPrefix('bluehold', 'markov blue hold piece');
 
-					default:
-						animation.addByPrefix('greenScroll', 'green0');
-						animation.addByPrefix('redScroll', 'red0');
-						animation.addByPrefix('blueScroll', 'blue0');
-						animation.addByPrefix('purpleScroll', 'purple0');
+						default:
+							animation.addByPrefix('greenScroll', 'green0');
+							animation.addByPrefix('redScroll', 'red0');
+							animation.addByPrefix('blueScroll', 'blue0');
+							animation.addByPrefix('purpleScroll', 'purple0');
 
-						animation.addByPrefix('purpleholdend', 'pruple end hold');
-						animation.addByPrefix('greenholdend', 'green hold end');
-						animation.addByPrefix('redholdend', 'red hold end');
-						animation.addByPrefix('blueholdend', 'blue hold end');
+							animation.addByPrefix('purpleholdend', 'pruple end hold');
+							animation.addByPrefix('greenholdend', 'green hold end');
+							animation.addByPrefix('redholdend', 'red hold end');
+							animation.addByPrefix('blueholdend', 'blue hold end');
 
-						animation.addByPrefix('purplehold', 'purple hold piece');
-						animation.addByPrefix('greenhold', 'green hold piece');
-						animation.addByPrefix('redhold', 'red hold piece');
-						animation.addByPrefix('bluehold', 'blue hold piece');
-				}
+							animation.addByPrefix('purplehold', 'purple hold piece');
+							animation.addByPrefix('greenhold', 'green hold piece');
+							animation.addByPrefix('redhold', 'red hold piece');
+							animation.addByPrefix('bluehold', 'blue hold piece');
+
+					}
 
 				setGraphicSize(Std.int(width * 0.7));
 				updateHitbox();
@@ -172,7 +174,7 @@ class Note extends FlxSprite
 		// we make sure its downscroll and its a SUSTAIN NOTE (aka a trail, not a note)
 		// and flip it so it doesn't look weird.
 		// THIS DOESN'T FUCKING FLIP THE NOTE, CONTRIBUTERS DON'T JUST COMMENT THIS OUT JESUS
-		if (FlxG.save.data.downscroll && sustainNote)
+		if (FlxG.save.data.downscroll && sustainNote) 
 			flipY = true;
 
 		if (isSustainNote && prevNote != null)
@@ -215,7 +217,8 @@ class Note extends FlxSprite
 						prevNote.animation.play('redhold');
 				}
 
-				if (FlxG.save.data.scrollSpeed != 1)
+				
+				if(FlxG.save.data.scrollSpeed != 1)
 					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * FlxG.save.data.scrollSpeed;
 				else
 					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * PlayState.SONG.speed;
@@ -232,31 +235,30 @@ class Note extends FlxSprite
 		if (mustPress)
 		{
 			switch (noteType)
-			{
-				case 2:
-					{
-						if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * .3)
-							&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * .2))
-							canBeHit = true;
-						else
-							canBeHit = false;
+				{
+					case 2:
+						{
+							if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * .3) && strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * .2))
+								canBeHit = true;
+							else
+								canBeHit = false;
 
-						if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset * Conductor.timeScale && !wasGoodHit)
-							tooLate = true;
-					}
-				default:
-					{
-						// The * 0.5 is so that it's easier to hit them too late, instead of too early
-						if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 1.5)
-							&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
-							canBeHit = true;
-						else
-							canBeHit = false;
+							if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset * Conductor.timeScale && !wasGoodHit)
+								tooLate = true;
+						}
+					default:
+						{
+							// The * 0.5 is so that it's easier to hit them too late, instead of too early
+							if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 1.5) && strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
+								canBeHit = true;
+							else
+								canBeHit = false;
 
-						if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset * Conductor.timeScale && !wasGoodHit)
-							tooLate = true;
-					}
-			}
+							if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset * Conductor.timeScale && !wasGoodHit)
+								tooLate = true;
+						}
+				}
+			
 		}
 		else
 		{

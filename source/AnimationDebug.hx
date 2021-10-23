@@ -15,6 +15,7 @@ import openfl.net.FileReference;
 /**
 	*DEBUG MODE
  */
+
 using StringTools;
 
 class AnimationDebug extends FlxState

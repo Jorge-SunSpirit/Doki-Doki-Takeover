@@ -16,7 +16,6 @@ class GameOverSubstate extends MusicBeatSubstate
 	var camFollow:FlxObject;
 
 	var stageSuffix:String = "";
-
 	public static var crashdeath:Bool = false;
 
 	public function new(x:Float, y:Float)
@@ -54,12 +53,12 @@ class GameOverSubstate extends MusicBeatSubstate
 		add(camFollow);
 
 		if (!crashdeath)
-		{
-			if (PlayState.SONG.player2 == 'bigmonika')
-				FlxG.sound.play(Paths.sound('fnf_loss_sfx-bigmonika'));
-			else
-				FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
-		}
+			{
+				if (PlayState.SONG.player2 == 'bigmonika')
+					FlxG.sound.play(Paths.sound('fnf_loss_sfx-bigmonika'));
+				else
+					FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+			}
 		Conductor.changeBPM(100);
 
 		// FlxG.camera.followLerp = 1;
@@ -67,9 +66,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.camera.scroll.set();
 		FlxG.camera.target = null;
 
-		if (bf.curCharacter == "playablesenpai")
-		{
-			// FlxG.camera.zoom = FlxG.camera.zoom - 0.25;
+		if (bf.curCharacter == "playablesenpai") {
+			//FlxG.camera.zoom = FlxG.camera.zoom - 0.25;
 			camFollow.setPosition(bf.getGraphicMidpoint().x - 74, bf.getGraphicMidpoint().y - 150);
 
 			FlxTween.tween(FlxG.camera, {zoom: FlxG.camera.zoom - 0.15}, 0.35, {
@@ -80,10 +78,10 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (!crashdeath)
 			bf.playAnim('firstDeath');
 		else
-		{
-			FlxG.sound.play(Paths.sound('JarringMonikaSound'));
-			bf.playAnim('crashDeath');
-		}
+			{
+				FlxG.sound.play(Paths.sound('JarringMonikaSound'));
+				bf.playAnim('crashDeath');
+			}	
 	}
 
 	override function update(elapsed:Float)
@@ -108,9 +106,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		}
 
 		if (bf.animation.curAnim.name == 'crashDeath' && bf.animation.finished)
-		{
-			new FlxTimer().start(.5, function(timer:FlxTimer)
 			{
+				new FlxTimer().start(.5, function(timer:FlxTimer) {
 				#if FEATURE_FILESYSTEM
 				Sys.exit(0);
 				#else
@@ -118,9 +115,9 @@ class GameOverSubstate extends MusicBeatSubstate
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxG.switchState(new CrashState());
 				#end
-			});
-		}
-
+				});
+			}
+		
 		if (bf.animation.curAnim.name == 'firstDeath' && bf.animation.curAnim.curFrame == 12 && !crashdeath)
 		{
 			FlxG.camera.follow(camFollow, LOCKON, 0.01);

@@ -1,5 +1,3 @@
 package;
 
-class CrashState extends MusicBeatState
-{
-}
+class CrashState extends MusicBeatState {}

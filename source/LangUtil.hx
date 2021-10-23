@@ -44,27 +44,27 @@ class LangUtil
 						font = 'VCR OSD Mono';
 				}
 		}
-
+		
 		return font;
 	}
 
 	public static function getString(identifier:String):String
-	{
-		var string:String = '';
-
-		for (i in 0...localeList.length)
 		{
-			var data:Array<String> = localeList[i].split('::');
+			var string:String = '';
 
-			if (data[0] != identifier)
-				continue;
+			for (i in 0...localeList.length)
+			{
+				var data:Array<String> = localeList[i].split('::');
+
+				if (data[0] != identifier)
+					continue;
+				else
+					string = data[1];
+			}
+			
+			if (string == '')
+				return identifier;
 			else
-				string = data[1];
+				return string;
 		}
-
-		if (string == '')
-			return identifier;
-		else
-			return string;
-	}
 }

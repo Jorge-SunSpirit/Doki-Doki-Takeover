@@ -172,7 +172,7 @@ class Caching extends MusicBeatState
 			done++;
 		}
 
-		for (i in songs)
+        for (i in songs)
 		{
 			trace('Caching song "$i"...');
 			var inst = Paths.inst(i);
@@ -196,7 +196,7 @@ class Caching extends MusicBeatState
 			done++;
 		}
 
-		for (i in music)
+        for (i in music)
 		{
 			var replaced = i.replace(".ogg", "");
 			trace('Caching music "$replaced"...');

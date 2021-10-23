@@ -33,7 +33,7 @@ class Main extends Sprite
 
 	public static function main():Void
 	{
-		// quick checks
+		// quick checks 
 		Lib.current.addChild(new Main());
 	}
 
@@ -111,8 +111,7 @@ class Main extends Sprite
 
 	var fpsCounter:FPS;
 
-	public function toggleFPS(fpsEnabled:Bool):Void
-	{
+	public function toggleFPS(fpsEnabled:Bool):Void {
 		fpsCounter.visible = fpsEnabled;
 	}
 

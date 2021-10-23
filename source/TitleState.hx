@@ -23,9 +23,11 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import openfl.Assets;
+
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
+
 #if FEATURE_MULTITHREADING
 import sys.thread.Thread;
 #end
@@ -54,19 +56,19 @@ class TitleState extends MusicBeatState
 		#end
 
 		/*
-			@:privateAccess
-			{
-				trace("Loaded " + openfl.Assets.getLibrary("default").assetsLoaded + " assets (DEFAULT)");
-			}
-		 */
+		@:privateAccess
+		{
+			trace("Loaded " + openfl.Assets.getLibrary("default").assetsLoaded + " assets (DEFAULT)");
+		}
+		*/
 
 		#if FEATURE_DISCORD
 		DiscordClient.initialize();
 
-		Application.current.onExit.add(function(exitCode)
-		{
+		Application.current.onExit.add (function (exitCode) {
 			DiscordClient.shutdown();
-		});
+		 });
+		 
 		#end
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
@@ -140,15 +142,16 @@ class TitleState extends MusicBeatState
 		persistentUpdate = true;
 
 		/*
-			var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-			// bg.antialiasing = true;
-			// bg.setGraphicSize(Std.int(bg.width * 0.6));
-			// bg.updateHitbox();
-			add(bg);
-		 */
-
+		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		// bg.antialiasing = true;
+		// bg.setGraphicSize(Std.int(bg.width * 0.6));
+		// bg.updateHitbox();
+		add(bg);
+		*/
+		
 		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
 		backdrop.velocity.set(-40, -40);
+
 
 		logoBl = new FlxSprite(0, 0);
 		logoBl.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
@@ -396,7 +399,7 @@ class TitleState extends MusicBeatState
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
 			case 13:
-			// addMoreText('Doki');
+				//addMoreText('Doki');
 			// credTextShit.visible = true;
 			case 14:
 				addMoreText('Doki');

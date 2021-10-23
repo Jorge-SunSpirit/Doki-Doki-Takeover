@@ -92,11 +92,11 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('danceRight');
-
+	
 				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
 				antialiasing = false;
-
+	
 			case 'gf-doki':
 				tex = Paths.getSparrowAtlas('characters/gfdoki');
 				frames = tex;
@@ -124,7 +124,7 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
-
+			
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND');
 				frames = tex;
@@ -198,7 +198,7 @@ class Character extends FlxSprite
 				antialiasing = false;
 
 				flipX = true;
-
+			
 			case 'bf-pixelangry':
 				frames = Paths.getSparrowAtlas('characters/bfPixelangry');
 				animation.addByPrefix('idle', 'BF IDLE', 24, false);
@@ -210,21 +210,21 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
-
+	
 				loadOffsetFile(curCharacter);
-
+	
 				setGraphicSize(Std.int(width * 6));
 				updateHitbox();
-
+	
 				playAnim('idle');
-
+	
 				width -= 100;
 				height -= 100;
-
+	
 				antialiasing = false;
-
+	
 				flipX = true;
-
+				
 			case 'bf-pixel-dead':
 				frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');
 				animation.addByPrefix('singUP', "BF Dies pixel", 24, false);
@@ -275,18 +275,18 @@ class Character extends FlxSprite
 				animation.addByPrefix('deathLoop', "senpai retry", 24, true);
 				animation.addByPrefix('deathConfirm', "RETRY CONFIRM", 24, false);
 
-				// I'M TILTED I HAD T OMODIDFY SENPAI'S STUPD PECKIN SPRITE SHEET JUST SO HE DIES WITHOUT CRASHING THE GAME, IF I DIDN'T HAVE LUMATIC ON MY SIDE I WOULD OF LOST IT HOURS AGO SO THANK YOU STUPID CODE FOR NOT WORKING SMILE
-				// Lumatic says "Jorge and Senpai have a big forehead tho"
+				//I'M TILTED I HAD T OMODIDFY SENPAI'S STUPD PECKIN SPRITE SHEET JUST SO HE DIES WITHOUT CRASHING THE GAME, IF I DIDN'T HAVE LUMATIC ON MY SIDE I WOULD OF LOST IT HOURS AGO SO THANK YOU STUPID CODE FOR NOT WORKING SMILE
+				//Lumatic says "Jorge and Senpai have a big forehead tho"
 
 				loadOffsetFile(curCharacter);
-
+	
 				setGraphicSize(Std.int(width * 6));
 				updateHitbox();
 
 				flipX = true;
-
+	
 				playAnim('idle');
-
+	
 				antialiasing = false;
 
 			case 'senpai-angry':
@@ -344,8 +344,8 @@ class Character extends FlxSprite
 				updateHitbox();
 
 				antialiasing = false;
-
-			// Duet_Assets
+			
+				//Duet_Assets
 			case 'duet':
 				frames = Paths.getSparrowAtlas('characters/Duet_Assets');
 				animation.addByPrefix('idle', 'Duet Idle', 24, false);
@@ -392,7 +392,7 @@ class Character extends FlxSprite
 				updateHitbox();
 
 				antialiasing = false;
-
+			
 			case 'natsuki':
 				tex = Paths.getSparrowAtlas('characters/Doki_Nat_Assets');
 				frames = tex;
@@ -405,14 +405,14 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
-
+			
 			case 'sayori':
-				// and the blind forest
+				//and the blind forest
 				tex = Paths.getSparrowAtlas('characters/Doki_Sayo_Assets');
 				frames = tex;
 				animation.addByIndices('danceLeft', 'Sayo Idle nrw test', [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
 				animation.addByIndices('danceRight', 'Sayo Idle nrw test', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "", 24, false);
-				// animation.addByPrefix('idle', 'Sayo Idle', 24, false);
+				//animation.addByPrefix('idle', 'Sayo Idle', 24, false);
 				animation.addByPrefix('singUP', 'Sayo Sing Note Up', 24, false);
 				animation.addByPrefix('singRIGHT', 'Sayo Sing Note Right', 24, false);
 				animation.addByPrefix('singDOWN', 'Sayo Sing Note Down', 24, false);
@@ -424,7 +424,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 
 			case 'yuri':
-				// on ice
+				//on ice
 				tex = Paths.getSparrowAtlas('characters/Doki_Yuri_Assets');
 				frames = tex;
 				animation.addByPrefix('idle', 'Yuri Idle', 24, false);
@@ -437,9 +437,9 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
-
+			
 			case 'yuri-crazy':
-				// damn she crazy
+				//damn she crazy
 				tex = Paths.getSparrowAtlas('characters/Doki_Crazy_Yuri_Assets');
 				frames = tex;
 				animation.addByPrefix('idle', 'Yuri Crazy Idle', 24, false);
@@ -453,7 +453,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'monika-real':
-				// I love my wife - SirDuSterBuster
+				//I love my wife - SirDuSterBuster
 				tex = Paths.getSparrowAtlas('characters/Doki_MonikaNonPixel_Assets');
 				frames = tex;
 				animation.addByPrefix('idle', 'Monika Returns Idle', 24, false);
@@ -471,7 +471,7 @@ class Character extends FlxSprite
 
 				setGraphicSize(Std.int(width * .9));
 				playAnim('idle');
-
+			
 			case 'bigmonika':
 				frames = Paths.getSparrowAtlas('characters/big_monikia_base');
 				animation.addByPrefix('idle', 'Big Monika Idle', 24, false);
@@ -609,7 +609,7 @@ class Character extends FlxSprite
 						else
 							playAnim('idle');
 					}
-
+				
 				case 'bigmonika':
 					if (animation.curAnim.name != 'lastNOTE')
 					{
