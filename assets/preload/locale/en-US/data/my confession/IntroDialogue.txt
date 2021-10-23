@@ -5,7 +5,7 @@
 :sayori_ehh:"Eheh, did I do a good job?"
 :gf_neutral:*Happy gesture*
 :bf_beep:"Beep!"
-:sayori_happ:"Aww, i'm so happy you two are enjoying your time here!"
+:sayori_happ:"Aww, I'm so happy you two are enjoying your time here!"
 :sayori_happ:"It's my duty to make sure everyone in the club has bright happy smiles."
 :hideright:
 :endmusic:

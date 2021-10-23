@@ -11,7 +11,7 @@
 :sayori_ehh:"Ah, right! Eheh, silly me. What’re your names, new literature club attendees?"
 :bf_beep:"Beep skee!"
 :gf_yeah:*happy gesture*
-:sayori_happ:"You two are boyfriend and girlfriend? Aww, you two are so cute together!!!"
+:sayori_happ:"You two are Boyfriend and Girlfriend? Aww, you two are so cute together!!!"
 :natsuki_neutral:"...that’s cute and all, but like, what are your names?"
 :bf_beep:"Beep skee!"
 :gf_yeah:*another happy gesture*
@@ -20,7 +20,7 @@
 :natsuki_hmmph:"...I don’t like them already."
 :natsuki_hmmph:"They’re already messing with me!"
 :yuri_ehh:"Natsuki! Not so harsh…"
-:natsuki_hmmph:"Hmph"
+:natsuki_hmmph:"Hmph."
 :sayori_ehh:"Eheheh… I’m sorry about that. If you don’t want to tell us your names, that’s ok!"
 :sayori_happ:"I’m Sayori!"
 :sayori_neutral:"That lovely lavender lady over there is Yuri, and Natsuki is the one who’s real sassy today."
