@@ -551,7 +551,11 @@ class MainMenuState extends MusicBeatState
 						trace("Freeplay Menu Selected");
 					case 'credits':
 						// make VideoState work for this
+						#if FEATURE_WEBM
+						FlxG.switchState(new VideoState('assets/videos/credits/credits.webm', new MainMenuState()));
+						#else
 						FlxG.switchState(new MainMenuState());
+						#end
 						trace("Credits Menu Selected");
 					case 'unlock':
 						trace('hello');
