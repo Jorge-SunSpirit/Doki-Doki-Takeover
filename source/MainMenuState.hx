@@ -454,7 +454,13 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.extrabeaten = true;
 				FlxG.save.data.extra2beaten = true;
 				FlxG.save.data.unlockepip = true;
-				FlxG.save.data.weekUnlocked = 10;
+				FlxG.save.data.monipopup = true;
+				FlxG.save.data.sayopopup = true;
+				FlxG.save.data.natpopup = true;
+				FlxG.save.data.yuripopup = true;
+				FlxG.save.data.extra1popup = true;
+				FlxG.save.data.extra2popup = true;
+				FlxG.save.data.weekUnlocked = 7;
 			}
 			if (FlxG.keys.justPressed.P)
 			{
@@ -544,7 +550,7 @@ class MainMenuState extends MusicBeatState
 						FlxG.switchState(new DokiFreeplayState());
 						trace("Freeplay Menu Selected");
 					case 'credits':
-						// make this go to VideoState at some point
+						// make VideoState work for this
 						FlxG.switchState(new MainMenuState());
 						trace("Credits Menu Selected");
 					case 'unlock':
@@ -556,7 +562,13 @@ class MainMenuState extends MusicBeatState
 						FlxG.save.data.extrabeaten = true;
 						FlxG.save.data.extra2beaten = true;
 						FlxG.save.data.unlockepip = true;
-						FlxG.save.data.weekUnlocked = 10;
+						FlxG.save.data.monipopup = true;
+						FlxG.save.data.sayopopup = true;
+						FlxG.save.data.natpopup = true;
+						FlxG.save.data.yuripopup = true;
+						FlxG.save.data.extra1popup = true;
+						FlxG.save.data.extra2popup = true;
+						FlxG.save.data.weekUnlocked = 7;
 						FlxG.switchState(new DokiFreeplayState());
 					case 'options':
 						FlxG.switchState(new OptionsMenu());
