@@ -10,8 +10,6 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
-
-
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
@@ -36,26 +34,24 @@ class FreeplayState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
-	public static var songData:Map<String,Array<SwagSong>> = [];
+	public static var songData:Map<String, Array<SwagSong>> = [];
 
 	public static function loadDiff(diff:Int, name:String, array:Array<SwagSong>)
+	{
+		try
 		{
-			try 
-			{
-				array.push(Song.loadFromJson(Highscore.formatSong(name, diff), name));
-			}
-			catch(ex)
-			{
-				// do nada
-			}
+			array.push(Song.loadFromJson(Highscore.formatSong(name, diff), name));
 		}
+		catch (ex)
+		{
+			// do nada
+		}
+	}
 
 	override function create()
 	{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/freeplaySonglist'));
-		//var initSonglist = CoolUtil.coolTextFile(Paths.txt('smile'));
-
-			
+		// var initSonglist = CoolUtil.coolTextFile(Paths.txt('smile'));
 
 		for (i in 0...initSonglist.length)
 		{
@@ -69,17 +65,16 @@ class FreeplayState extends MusicBeatState
 				songs.push(meta);
 
 			var diffs = [];
-			loadDiff(0,meta.songName,diffs);
-			loadDiff(1,meta.songName,diffs);
-			loadDiff(2,meta.songName,diffs);
-			songData.set(meta.songName,diffs);
+			loadDiff(0, meta.songName, diffs);
+			loadDiff(1, meta.songName, diffs);
+			loadDiff(2, meta.songName, diffs);
+			songData.set(meta.songName, diffs);
 		}
 
-
-		 #if FEATURE_DISCORD
-		 // Updating Discord Rich Presence
-		 DiscordClient.changePresence("In the Freeplay Menu", null);
-		 #end
+		#if FEATURE_DISCORD
+		// Updating Discord Rich Presence
+		DiscordClient.changePresence("In the Freeplay Menu", null);
+		#end
 
 		var isDebug:Bool = false;
 
@@ -143,7 +138,6 @@ class FreeplayState extends MusicBeatState
 		// add(selector);
 
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
-
 
 		super.create();
 	}
@@ -309,14 +303,15 @@ class FreeplayState extends MusicBeatState
 		#end
 
 		var hmm;
-			try
-			{
-				hmm = songData.get(songs[curSelected].songName)[curDifficulty];
-				if (hmm != null)
-					Conductor.changeBPM(hmm.bpm);
-			}
-			catch(ex)
-			{}
+		try
+		{
+			hmm = songData.get(songs[curSelected].songName)[curDifficulty];
+			if (hmm != null)
+				Conductor.changeBPM(hmm.bpm);
+		}
+		catch (ex)
+		{
+		}
 
 		var bullShit:Int = 0;
 

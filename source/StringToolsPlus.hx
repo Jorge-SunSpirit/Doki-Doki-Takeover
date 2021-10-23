@@ -15,7 +15,7 @@ class StringToolsPlus
 		{
 			sData = StringTools.replace(sData, subData[i], byData[i]);
 		}
-		
+
 		return sData;
 	}
 }
