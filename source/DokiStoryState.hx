@@ -34,7 +34,7 @@ class DokiStoryState extends MusicBeatState
 		['High School Conflict', 'Bara No Yume', 'Your Demise'],
 		['Rain Clouds', 'My Confession'],
 		['My Sweets', 'Baka'],
-		// ['Deep Breaths','Obsession'],
+		// ['Deep Breaths', 'Obsession'],
 		['Obsession'],
 		['Reconciliation'],
 		[

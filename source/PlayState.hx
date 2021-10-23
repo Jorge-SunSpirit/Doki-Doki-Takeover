@@ -1674,12 +1674,14 @@ class PlayState extends MusicBeatState
 		botPlayState.cameras = [camHUD];
 		laneunderlayOpponent.cameras = [camHUD];
 		laneunderlay.cameras = [camHUD];
+		/* pain
 		doof6.cameras = [camHUD];
 		doof.cameras = [camHUD];
 		doof2.cameras = [camHUD];
 		doof3.cameras = [camHUD];
 		doof4.cameras = [camHUD];
 		doof5.cameras = [camHUD];
+		*/
 		kadeEngineWatermark.cameras = [camHUD];
 		if (loadRep)
 			replayTxt.cameras = [camHUD];
@@ -1785,6 +1787,7 @@ class PlayState extends MusicBeatState
 
 	function funnyephiphinya(?dialogueBox:DialogueBox):Void
 	{
+		doof.cameras = [camHUD];
 		remove(gf);
 		remove(boyfriend);
 		healthBar.visible = false;
@@ -1792,6 +1795,8 @@ class PlayState extends MusicBeatState
 		iconP1.visible = false;
 		iconP2.visible = false;
 		scoreTxt.visible = false;
+		replayTxt.visible = false;
+		botPlayState.visible = false;
 		new FlxTimer().start(1.2, function(godlike:FlxTimer)
 		{
 			if (dialogueBox != null)
@@ -1825,6 +1830,8 @@ class PlayState extends MusicBeatState
 					ease: FlxEase.expoOut,
 					onComplete: function(twn:FlxTween)
 					{
+						FlxG.camera.zoom = 1;
+						camHUD.visible = false;
 						remove(strumLineNotes);
 						remove(scoreTxt);
 						remove(replayTxt);
@@ -1851,8 +1858,8 @@ class PlayState extends MusicBeatState
 						}
 						imageBG.antialiasing = false;
 						imageBG.scrollFactor.set();
-						imageBG.cameras = [camHUD];
-						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.save.data.zoom));
+						//imageBG.cameras = [camHUD];
+						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 						imageBG.updateHitbox();
 						imageBG.screenCenter(XY);
 						add(imageBG);
@@ -1874,7 +1881,50 @@ class PlayState extends MusicBeatState
 						});
 					}
 				});
+			case 'your demise':
+				FlxG.camera.zoom = 1;
+				camHUD.visible = false;
+				remove(dad);
+				remove(boyfriend);
+				FlxG.camera.fade(FlxColor.BLACK, 0, true);
+				add(blackScreen);
+				blackScreen.alpha = 1;
+				vocals.pause();
+				remove(strumLineNotes);
+				remove(scoreTxt);
+				remove(replayTxt);
+				remove(botPlayState);
+				remove(healthBarBG);
+				remove(healthBar);
+				remove(iconP1);
+				remove(iconP2);
+				remove(kadeEngineWatermark);
+				remove(songPosBG);
+				remove(songPosBar);
+				remove(songName);
+				remove(laneunderlayOpponent);
+				remove(laneunderlay);
+				FlxG.sound.music.pause();
+				inCutscene = true;
+				camZooming = false;
+				startedCountdown = false;
+				generatedMusic = false;
+				canPause = false;
+				vocals.stop();
+				vocals.volume = 0;
+
+				if (dialogueBox != null)
+				{
+					camFollow.setPosition(dad.getMidpoint().x + 50, boyfriend.getMidpoint().y - 300);
+					add(dialogueBox);
+				}
+				else
+				{
+					endSong();
+				}
 			default:
+				FlxG.camera.zoom = 1;
+				camHUD.visible = false;
 				vocals.pause();
 				remove(strumLineNotes);
 				remove(scoreTxt);
@@ -1914,6 +1964,8 @@ class PlayState extends MusicBeatState
 
 	function obsessionending():Void
 	{
+		FlxG.camera.zoom = 1;
+		camHUD.visible = false;
 		if (!loadRep)
 			rep.SaveReplay(saveNotes);
 		else
@@ -1948,12 +2000,13 @@ class PlayState extends MusicBeatState
 		remove(blackScreen);
 
 		// Play animation for monika's magical girl transformation into HD here
-
 		endcutscene(doof4);
 	}
 
 	function preintrocutscene(?dialogueBox:DialogueBox):Void
 	{
+		FlxG.camera.zoom = 1;
+		camHUD.visible = false;
 		switch (SONG.song.toLowerCase())
 		{
 			case "crucify (yuri mix)":
@@ -1963,11 +2016,13 @@ class PlayState extends MusicBeatState
 				iconP1.visible = false;
 				iconP2.visible = false;
 				scoreTxt.visible = false;
+				replayTxt.visible = false;
+				botPlayState.visible = false;
 
 				imageBG = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/festivalbeginning', 'doki'));
 				imageBG.antialiasing = true;
 				imageBG.scrollFactor.set();
-				imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
+				imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 				imageBG.updateHitbox();
 				imageBG.screenCenter(XY);
 				add(imageBG);
@@ -1991,8 +2046,12 @@ class PlayState extends MusicBeatState
 		});
 	}
 
+	var isObsessionIntro:Bool = false;
+
 	function postdialoguecutscene():Void
 	{
+		FlxG.camera.zoom = 1;
+		camHUD.visible = false;
 		switch (curSong.toLowerCase())
 		{
 			case "glitcher (monika mix)":
@@ -2000,7 +2059,7 @@ class PlayState extends MusicBeatState
 					var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/festivalend', 'doki'));
 					imageBG.antialiasing = true;
 					imageBG.scrollFactor.set();
-					imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
+					imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 					imageBG.updateHitbox();
 					imageBG.screenCenter(XY);
 					add(imageBG);
@@ -2037,7 +2096,7 @@ class PlayState extends MusicBeatState
 						var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3', 'doki'));
 						imageBG.antialiasing = true;
 						imageBG.scrollFactor.set();
-						imageBG.setGraphicSize(Std.int(imageBG.width / defaultCamZoom));
+						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 						imageBG.updateHitbox();
 						imageBG.screenCenter(XY);
 						add(imageBG);
@@ -2057,12 +2116,22 @@ class PlayState extends MusicBeatState
 					}
 					else
 					{
+						healthBar.visible = false;
+						healthBarBG.visible = false;
+						iconP1.visible = false;
+						iconP2.visible = false;
+						scoreTxt.visible = false;
+						replayTxt.visible = false;
+						botPlayState.visible = false;
+						camHUD.visible = true;
 						add(blackScreen);
 						blackScreen.alpha = 0;
 						FlxTween.tween(blackScreen, {alpha: 1}, 1, {
 							ease: FlxEase.expoOut,
 							onComplete: function(twn:FlxTween)
 							{
+								isObsessionIntro = true;
+								doof.cameras = [camHUD];
 								remove(sayori);
 								remove(natsuki);
 								FlxTween.tween(blackScreen, {alpha: 0}, 3, {
@@ -2105,7 +2174,7 @@ class PlayState extends MusicBeatState
 					var endsceneone:FlxSprite = new FlxSprite();
 					endsceneone.frames = Paths.getSparrowAtlas('cutscene/End1', 'monika');
 					endsceneone.animation.addByPrefix('idle', 'Endscene', 24, false);
-					endsceneone.setGraphicSize(Std.int(endsceneone.width * 1.12));
+					endsceneone.setGraphicSize(Std.int(endsceneone.width / FlxG.camera.zoom));
 					endsceneone.scrollFactor.set();
 					endsceneone.updateHitbox();
 					endsceneone.screenCenter();
@@ -2113,7 +2182,7 @@ class PlayState extends MusicBeatState
 					var endscenetwo:FlxSprite = new FlxSprite();
 					endscenetwo.frames = Paths.getSparrowAtlas('cutscene/monikasenpaistanding', 'monika');
 					endscenetwo.animation.addByPrefix('idle', 'Endscenetwo', 24, false);
-					endscenetwo.setGraphicSize(Std.int(endscenetwo.width * 1.12));
+					endscenetwo.setGraphicSize(Std.int(endscenetwo.width / FlxG.camera.zoom));
 					endscenetwo.scrollFactor.set();
 					endscenetwo.updateHitbox();
 					endscenetwo.screenCenter();
@@ -2168,6 +2237,14 @@ class PlayState extends MusicBeatState
 
 	function introcutscene(?dialogueBox:DialogueBox):Void
 	{
+		if (!isObsessionIntro)
+		{
+			FlxG.camera.zoom = 1;
+			camHUD.visible = false;
+		}
+		else
+			isObsessionIntro = false;
+
 		var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 		black.scrollFactor.set();
 
@@ -2187,6 +2264,8 @@ class PlayState extends MusicBeatState
 							iconP1.visible = true;
 							iconP2.visible = true;
 							scoreTxt.visible = true;
+							replayTxt.visible = true;
+							botPlayState.visible = true;
 
 							remove(imageBG);
 							FlxTween.tween(blackScreen, {alpha: 0}, 3, {
@@ -2295,18 +2374,22 @@ class PlayState extends MusicBeatState
 
 	function startCountdown():Void
 	{
+		FlxG.camera.zoom = defaultCamZoom;
+		camHUD.visible = true;
 		midsongcutscene = true;
 
 		showCutscene = false;
 		inCutscene = false;
 
-		if (curSong.toLowerCase() == 'epiphany')
+		if (curSong.toLowerCase() == 'epiphany' || curSong.toLowerCase() == 'obsession')
 		{
 			healthBar.visible = true;
 			healthBarBG.visible = true;
 			iconP1.visible = true;
 			iconP2.visible = true;
 			scoreTxt.visible = true;
+			replayTxt.visible = true;
+			botPlayState.visible = true;
 		}
 
 		generateStaticArrows(0, SONG.noteStyle);
