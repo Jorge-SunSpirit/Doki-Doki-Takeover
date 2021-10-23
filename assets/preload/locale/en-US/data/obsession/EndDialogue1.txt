@@ -2,8 +2,8 @@
 :yuri_crazy:"Why must we stop now?"
 :yuri_crazy:"Let me scream every lyric trapped in my sick head!"
 :yuri_crazy:"Hahaha!"
-:gf_scared: -!
-:bf_scared: -!
+:gf_scared:"-!"
+:bf_scared:"-!"
 :sayori_ehh:"Eheheh... you weren't supposed to see that."
 :hideright:
 :glitch:
@@ -16,8 +16,8 @@
 :bf_hmph:"Bep-!"
 :hideright:
 :sayori_gone:"Does her name ring a bell?"
-:sayori_gone:"that must mean-"
-:sayori_gone:"You must've been the one who deleted her!"
+:sayori_gone:"That must mean-"
+:sayori_gone:"you must've been the one who deleted her!"
 :sayori_gone:"Ahaha, then you must be the one who brought us all back too!"
 :bf_scared:"Dee le bep skee doo-!"
 :bf_scared:(Translation) "Hold up, I didn't-!"

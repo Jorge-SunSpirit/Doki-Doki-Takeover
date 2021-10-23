@@ -9,7 +9,7 @@
 :mc_sigh:"Pero si no hubieran aparecido, habría tenido que ser yo quien cantara con ellos. Todavía no estoy preparada para avergonzarme delante de mis compañeros de esa manera."
 :mc_camera:"Además, ninguno de ellos pudo ni siquiera imaginar una canción que quisiera hacer a dúo."
 :mc_neutral:"¿Creen que pueden ayudarlos?"
-:gf_yeah:*Happy gesture*
+:gf_yeah:*gesto feliz*
 :bf_yeah_left:"Beep!"
 :mc_happy:"¿Todo un conjunto de canciones? Eso debería darles una buena selección para elegir."
 :mc_camera:"Les avisaré cuando vuelvan de la preparación."

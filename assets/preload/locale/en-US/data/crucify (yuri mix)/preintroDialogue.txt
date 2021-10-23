@@ -9,7 +9,7 @@
 :mc_sigh:"But if you guys didn't show up, I would've had to be the one to sing with them. I'm not ready to embarrass myself in front of my peers like that yet."
 :mc_camera:"Plus, none of them could even figure out a song they wanted to duet."
 :mc_neutral:"You think you guys can help them out?"
-:gf_yeah:*Happy gesture*
+:gf_yeah:*happy gesture*
 :bf_yeah_left:"Beep!"
 :mc_happy:"A whole backlog of songs? That should give them all a nice selection to choose from."
 :mc_camera:"I'll let them know once they come back from prepping."
