@@ -20,7 +20,6 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxGroup;
-
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
@@ -35,10 +34,15 @@ class DokiStoryState extends MusicBeatState
 		['High School Conflict', 'Bara No Yume', 'Your Demise'],
 		['Rain Clouds', 'My Confession'],
 		['My Sweets', 'Baka'],
-		//['Deep Breaths','Obsession'],
+		// ['Deep Breaths','Obsession'],
 		['Obsession'],
 		['Reconciliation'],
-		['Crucify (Yuri Mix)', 'Beathoven (Natsuki Mix)', "It's Complicated (Sayori Mix)", 'Glitcher (Monika Mix)']
+		[
+			'Crucify (Yuri Mix)',
+			'Beathoven (Natsuki Mix)',
+			"It's Complicated (Sayori Mix)",
+			'Glitcher (Monika Mix)'
+		]
 	];
 
 	var curDifficulty:Int = 1;
@@ -50,8 +54,10 @@ class DokiStoryState extends MusicBeatState
 	var grpWeekText:FlxTypedGroup<MenuItem>;
 
 	var curSelected:Int = 0;
+
 	public static var kadeEngineVer:String = "1.4.2" + nightly;
 	public static var nightly:String = "";
+
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
@@ -85,6 +91,7 @@ class DokiStoryState extends MusicBeatState
 	var rightArrow:FlxSprite;
 
 	public static var instance:DokiStoryState;
+
 	public var acceptInput:Bool = true;
 
 	override function create()
@@ -129,7 +136,7 @@ class DokiStoryState extends MusicBeatState
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		add(logoBl);
-		
+
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -167,13 +174,13 @@ class DokiStoryState extends MusicBeatState
 		add(diff);
 
 		/*var story_moni:FlxSprite;
-		var story_sayo:FlxSprite;
-		var story_nat:FlxSprite;
-		var story_yuri:FlxSprite;
-		var story_secret:FlxSprite;
-		var story_secret2:FlxSprite;*/
+			var story_sayo:FlxSprite;
+			var story_nat:FlxSprite;
+			var story_yuri:FlxSprite;
+			var story_secret:FlxSprite;
+			var story_secret2:FlxSprite; */
 
-		//second layer Y is 90
+		// second layer Y is 90
 
 		story_moni = new FlxSprite(-240, -160);
 		story_moni.frames = Paths.getSparrowAtlas('dokistory/moni_story');
@@ -206,7 +213,6 @@ class DokiStoryState extends MusicBeatState
 		story_nat.animation.play('locked');
 		story_nat.updateHitbox();
 		add(story_nat);
-
 
 		story_yuri = new FlxSprite(-240, 40);
 		story_yuri.frames = Paths.getSparrowAtlas('dokistory/yuri_story');
@@ -247,9 +253,7 @@ class DokiStoryState extends MusicBeatState
 
 		FlxG.camera.follow(camFollow, null, 0.60 * (60 / FlxG.save.data.fpsCap));
 
-
 		// NG.core.calls.event.logEvent('swag').send();
-
 
 		if (FlxG.save.data.dfjk)
 			controls.setKeyboardScheme(KeyboardScheme.Solo, true);
@@ -266,30 +270,26 @@ class DokiStoryState extends MusicBeatState
 	var selectedSomethin:Bool = false;
 	var diffselect:Bool = false;
 
-
-
-
 	override function update(elapsed:Float)
 	{
 		#if debug
 		switch (curSelected)
-			{
-				case 0:
-					trace("monika");
-				case 1:
-					trace("sayso");
-				case 2:
-					trace("nat big forhead");
-				case 3:
-					trace("yuri on ice");
-				case 4:
-					trace("recon to the battlefield");
-				case 5:
-					trace("Festival");
-					//trace("expurgation");
+		{
+			case 0:
+				trace("monika");
+			case 1:
+				trace("sayso");
+			case 2:
+				trace("nat big forhead");
+			case 3:
+				trace("yuri on ice");
+			case 4:
+				trace("recon to the battlefield");
+			case 5:
+				trace("Festival");
+				// trace("expurgation");
+		}
 
-			}
-		
 		// popup test
 		if (FlxG.keys.justPressed.ONE && acceptInput)
 			openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
@@ -365,69 +365,68 @@ class DokiStoryState extends MusicBeatState
 			openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
 
 		switch (curSelected)
-			{
-				case 0:
-					story_moni.animation.paused = false;
-					story_sayo.animation.paused = true;
-					story_nat.animation.paused = true;
-					story_yuri.animation.paused = true;
-					story_secret.animation.paused = true;
-					story_secret2.animation.paused = true;
+		{
+			case 0:
+				story_moni.animation.paused = false;
+				story_sayo.animation.paused = true;
+				story_nat.animation.paused = true;
+				story_yuri.animation.paused = true;
+				story_secret.animation.paused = true;
+				story_secret2.animation.paused = true;
 
-					story_cursor.x = -240;
-					story_cursor.y = -160;
-				case 1:
-					story_moni.animation.paused = true;
-					story_sayo.animation.paused = false;
-					story_nat.animation.paused = true;
-					story_yuri.animation.paused = true;
-					story_secret.animation.paused = true;
-					story_secret2.animation.paused = true;
+				story_cursor.x = -240;
+				story_cursor.y = -160;
+			case 1:
+				story_moni.animation.paused = true;
+				story_sayo.animation.paused = false;
+				story_nat.animation.paused = true;
+				story_yuri.animation.paused = true;
+				story_secret.animation.paused = true;
+				story_secret2.animation.paused = true;
 
-					story_cursor.x = 40;
-					story_cursor.y = -160;
-				case 2:
-					story_moni.animation.paused = true;
-					story_sayo.animation.paused = true;
-					story_nat.animation.paused = false;
-					story_yuri.animation.paused = true;
-					story_secret.animation.paused = true;
-					story_secret2.animation.paused = true;
+				story_cursor.x = 40;
+				story_cursor.y = -160;
+			case 2:
+				story_moni.animation.paused = true;
+				story_sayo.animation.paused = true;
+				story_nat.animation.paused = false;
+				story_yuri.animation.paused = true;
+				story_secret.animation.paused = true;
+				story_secret2.animation.paused = true;
 
-					story_cursor.x = 320;
-					story_cursor.y = -160;
-				case 3:
-					story_moni.animation.paused = true;
-					story_sayo.animation.paused = true;
-					story_nat.animation.paused = true;
-					story_yuri.animation.paused = false;
-					story_secret.animation.paused = true;
-					story_secret2.animation.paused = true;
+				story_cursor.x = 320;
+				story_cursor.y = -160;
+			case 3:
+				story_moni.animation.paused = true;
+				story_sayo.animation.paused = true;
+				story_nat.animation.paused = true;
+				story_yuri.animation.paused = false;
+				story_secret.animation.paused = true;
+				story_secret2.animation.paused = true;
 
-					story_cursor.x = -240;
-					story_cursor.y = 40;
-				case 4:
-					story_moni.animation.paused = true;
-					story_sayo.animation.paused = true;
-					story_nat.animation.paused = true;
-					story_yuri.animation.paused = true;
-					story_secret.animation.paused = false;
-					story_secret2.animation.paused = true;
+				story_cursor.x = -240;
+				story_cursor.y = 40;
+			case 4:
+				story_moni.animation.paused = true;
+				story_sayo.animation.paused = true;
+				story_nat.animation.paused = true;
+				story_yuri.animation.paused = true;
+				story_secret.animation.paused = false;
+				story_secret2.animation.paused = true;
 
-					story_cursor.x = 40;
-					story_cursor.y = 40;
-				case 5:
-					story_moni.animation.paused = true;
-					story_sayo.animation.paused = true;
-					story_nat.animation.paused = true;
-					story_yuri.animation.paused = true;
-					story_secret.animation.paused = true;
-					story_secret2.animation.paused = false;
+				story_cursor.x = 40;
+				story_cursor.y = 40;
+			case 5:
+				story_moni.animation.paused = true;
+				story_sayo.animation.paused = true;
+				story_nat.animation.paused = true;
+				story_yuri.animation.paused = true;
+				story_secret.animation.paused = true;
+				story_secret2.animation.paused = false;
 
-					story_cursor.x = 320;
-					story_cursor.y = 40;
-
-			}
+				story_cursor.x = 320;
+				story_cursor.y = 40;
+		}
 
 		if (FlxG.sound.music.volume < 0.8)
 		{
@@ -437,129 +436,127 @@ class DokiStoryState extends MusicBeatState
 		if (!selectedSomethin && acceptInput)
 		{
 			switch (diffselect)
-				{
-					case false:
+			{
+				case false:
+					{
+						if (controls.LEFT_P)
 						{
-							if (controls.LEFT_P)
-									{
-										FlxG.sound.play(Paths.sound('scrollMenu'));
-										changeItem(-1);
-									}
-					
-								if (controls.RIGHT_P)
-									{
-										FlxG.sound.play(Paths.sound('scrollMenu'));
-										changeItem(1);
-									}
-					
-								if (controls.UP_P)
-									{
-										FlxG.sound.play(Paths.sound('scrollMenu'));
-										changeItem(-3);
-									}
-					
-								if (controls.DOWN_P)
-									{
-										FlxG.sound.play(Paths.sound('scrollMenu'));
-										changeItem(3);
-									}
-					
-								if (controls.BACK)
-									{
-										acceptInput = false;
-										FlxG.sound.play(Paths.sound('cancelMenu'));
-										FlxG.switchState(new MainMenuState());
-									}
-					
-								if (controls.ACCEPT)
-									{
-										switch (curSelected)
-											{
-												default:
-													{
-														FlxG.sound.play(Paths.sound('confirmMenu'));
-														diff.visible = true;
-														diffselect = true;
-													}
-												case 1:
-													{
-														if (FlxG.save.data.monibeaten == true)
-															{
-																FlxG.sound.play(Paths.sound('confirmMenu'));
-																diff.visible = true;
-																diffselect = true;
-															}
-													}
-												case 2:
-													{
-														if (FlxG.save.data.sayobeaten == true)
-															{
-																FlxG.sound.play(Paths.sound('confirmMenu'));
-																diff.visible = true;
-																diffselect = true;
-															}
-													}	
-												case 3:
-													{
-														if (FlxG.save.data.natbeaten == true)
-															{
-																FlxG.sound.play(Paths.sound('confirmMenu'));
-																diff.visible = true;
-																diffselect = true;
-															}
-													}
-												case 4:
-													{
-														if (FlxG.save.data.yuribeaten == true)
-															{
-																FlxG.sound.play(Paths.sound('confirmMenu'));
-																diff.visible = true;
-																diffselect = true;
-															}
-													}
-												case 5:
-													{
-														if (FlxG.save.data.extrabeaten == true)
-															{
-																FlxG.sound.play(Paths.sound('confirmMenu'));
-																diff.visible = true;
-																diffselect = true;
-															}
-													}
-											}
-									}
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeItem(-1);
 						}
-					case true:
+
+						if (controls.RIGHT_P)
 						{
-							if (controls.BACK)
-								{
-									FlxG.sound.play(Paths.sound('cancelMenu'));
-									diff.visible = false;
-									diffselect = false;
-								}
-				
-							if (controls.LEFT_P)
-								{
-									FlxG.sound.play(Paths.sound('scrollMenu'));
-									changeDiff(-1);
-								}
-					
-							if (controls.RIGHT_P)
-								{
-									FlxG.sound.play(Paths.sound('scrollMenu'));
-									changeDiff(1);
-								}
-			
-							if (controls.ACCEPT)
-								{
-										selectedSomethin = true;
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeItem(1);
+						}
+
+						if (controls.UP_P)
+						{
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeItem(-3);
+						}
+
+						if (controls.DOWN_P)
+						{
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeItem(3);
+						}
+
+						if (controls.BACK)
+						{
+							acceptInput = false;
+							FlxG.sound.play(Paths.sound('cancelMenu'));
+							FlxG.switchState(new MainMenuState());
+						}
+
+						if (controls.ACCEPT)
+						{
+							switch (curSelected)
+							{
+								default:
+									{
 										FlxG.sound.play(Paths.sound('confirmMenu'));
-										goToState();
-										
-								}
+										diff.visible = true;
+										diffselect = true;
+									}
+								case 1:
+									{
+										if (FlxG.save.data.monibeaten == true)
+										{
+											FlxG.sound.play(Paths.sound('confirmMenu'));
+											diff.visible = true;
+											diffselect = true;
+										}
+									}
+								case 2:
+									{
+										if (FlxG.save.data.sayobeaten == true)
+										{
+											FlxG.sound.play(Paths.sound('confirmMenu'));
+											diff.visible = true;
+											diffselect = true;
+										}
+									}
+								case 3:
+									{
+										if (FlxG.save.data.natbeaten == true)
+										{
+											FlxG.sound.play(Paths.sound('confirmMenu'));
+											diff.visible = true;
+											diffselect = true;
+										}
+									}
+								case 4:
+									{
+										if (FlxG.save.data.yuribeaten == true)
+										{
+											FlxG.sound.play(Paths.sound('confirmMenu'));
+											diff.visible = true;
+											diffselect = true;
+										}
+									}
+								case 5:
+									{
+										if (FlxG.save.data.extrabeaten == true)
+										{
+											FlxG.sound.play(Paths.sound('confirmMenu'));
+											diff.visible = true;
+											diffselect = true;
+										}
+									}
+							}
 						}
-				}
-			
+					}
+				case true:
+					{
+						if (controls.BACK)
+						{
+							FlxG.sound.play(Paths.sound('cancelMenu'));
+							diff.visible = false;
+							diffselect = false;
+						}
+
+						if (controls.LEFT_P)
+						{
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeDiff(-1);
+						}
+
+						if (controls.RIGHT_P)
+						{
+							FlxG.sound.play(Paths.sound('scrollMenu'));
+							changeDiff(1);
+						}
+
+						if (controls.ACCEPT)
+						{
+							selectedSomethin = true;
+							FlxG.sound.play(Paths.sound('confirmMenu'));
+							goToState();
+						}
+					}
+			}
 		}
 
 		if (FlxG.sound.music != null)
@@ -568,214 +565,206 @@ class DokiStoryState extends MusicBeatState
 		super.update(elapsed);
 	}
 
-
 	function changeDiff(change:Int = 0):Void
+	{
+		curDifficulty += change;
+
+		if (curDifficulty < 0)
+			curDifficulty = 2;
+		if (curDifficulty > 2)
+			curDifficulty = 0;
+
+		switch (curDifficulty)
 		{
-			curDifficulty += change;
-
-			if (curDifficulty < 0)
-				curDifficulty = 2;
-			if (curDifficulty > 2)
-				curDifficulty = 0;
-
-			switch (curDifficulty)
-			{
-				case 0:
+			case 0:
 				diff.animation.play('easy');
-				case 1:
+			case 1:
 				diff.animation.play('normal');
-				case 2:
+			case 2:
 				diff.animation.play('hard');
-			}
 		}
-
+	}
 
 	function goToState()
+	{
+		if (FlxG.keys.pressed.E && FlxG.keys.pressed.R && FlxG.keys.pressed.B)
 		{
-			if (FlxG.keys.pressed.E && FlxG.keys.pressed.R && FlxG.keys.pressed.B)
+			PlayState.storyPlaylist = ['erb'];
+			PlayState.storyDifficulty = 1;
+		}
+		else
+		{
+			PlayState.storyPlaylist = weekData[curSelected];
+			PlayState.storyDifficulty = curDifficulty;
+		}
+
+		PlayState.isStoryMode = true;
+		selectedSomethin = true;
+		diffselect = false;
+
+		var diffic = "";
+
+		switch (curDifficulty)
+		{
+			case 0:
+				diffic = '-easy';
+			case 2:
+				diffic = '-hard';
+		}
+
+		switch (curSelected)
+		{
+			case 0:
+				story_moni.animation.play('selected');
+			case 1:
+				story_sayo.animation.play('selected');
+			case 2:
+				story_nat.animation.play('selected');
+			case 3:
+				story_yuri.animation.play('selected');
+			case 4:
+				story_secret.animation.play('selected');
+			case 5:
+				if (FlxG.save.data.extra2beaten == true)
 				{
-					PlayState.storyPlaylist = ['erb'];
-					PlayState.storyDifficulty = 1;
+					story_secret2.animation.play('selected');
 				}
-				else
-					{
-						PlayState.storyPlaylist = weekData[curSelected];
-						PlayState.storyDifficulty = curDifficulty;
-					}
-			
-			PlayState.isStoryMode = true;
-			selectedSomethin = true;
-			diffselect = false;
+		}
 
-
-			var diffic = "";
-
-						switch (curDifficulty)
-						{
-							case 0:
-								diffic = '-easy';
-							case 2:
-								diffic = '-hard';
-						}
-
+		PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+		PlayState.storyWeek = curSelected;
+		PlayState.campaignScore = 0;
+		new FlxTimer().start(2, function(tmr:FlxTimer)
+		{
 			switch (curSelected)
 			{
 				case 0:
-					story_moni.animation.play('selected');
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					trace("Monika Week Selected");
 				case 1:
-					story_sayo.animation.play('selected');
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					trace("Sayori Selected");
 				case 2:
-					story_nat.animation.play('selected');
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					trace("Natsuki Week Selected");
 				case 3:
-					story_yuri.animation.play('selected');
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					trace("Yuri Week Selected");
 				case 4:
-					story_secret.animation.play('selected');
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					trace("monika extra Week Selected");
 				case 5:
-					if (FlxG.save.data.extra2beaten == true)
-						{
-						story_secret2.animation.play('selected');
-						}
-
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					// trace("expurgation Week Selected");
+					trace("Festival Week Selected");
 			}
-
-			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-			PlayState.storyWeek = curSelected;
-			PlayState.campaignScore = 0;
-			new FlxTimer().start(2, function(tmr:FlxTimer)
-				{
-					switch (curSelected)
-						{
-							case 0:
-								LoadingState.loadAndSwitchState(new PlayState(), true);
-								trace("Monika Week Selected");
-							case 1:
-								LoadingState.loadAndSwitchState(new PlayState(), true);
-								trace("Sayori Selected");
-							case 2:
-								LoadingState.loadAndSwitchState(new PlayState(), true);
-								trace("Natsuki Week Selected");
-							case 3:
-								LoadingState.loadAndSwitchState(new PlayState(), true);
-								trace("Yuri Week Selected");
-							case 4:
-								LoadingState.loadAndSwitchState(new PlayState(), true);
-								trace("monika extra Week Selected");
-							case 5:
-								LoadingState.loadAndSwitchState(new PlayState(), true);
-								//trace("expurgation Week Selected");
-								trace("Festival Week Selected");
-						}
-				});
-			
-		}
-
+		});
+	}
 
 	function changeItem(huh:Int = 0)
+	{
+		curSelected += huh;
+
+		// attempts to loop back into the bottom row
+		if (curSelected == -3)
+			curSelected = 3;
+		if (curSelected == -2)
+			curSelected = 4;
+		if (curSelected == -1)
+			curSelected = 5;
+
+		// attempts to loop back into the top row
+		if (curSelected == 7)
+			curSelected = 1;
+		if (curSelected == 8)
+			curSelected = 2;
+		if (curSelected == 9)
+			curSelected = 3;
+
+		if (curSelected >= 6)
+			curSelected = 0;
+		if (curSelected < 0)
+			curSelected = 6 - 1;
+
+		updateText();
+
+		switch (curSelected)
 		{
-			curSelected += huh;
-
-			//attempts to loop back into the bottom row
-			if (curSelected == -3)
-				curSelected = 3;
-			if (curSelected == -2)
-				curSelected = 4;
-			if (curSelected == -1)
-				curSelected = 5;
-
-			//attempts to loop back into the top row
-			if (curSelected == 7)
-				curSelected = 1;
-			if (curSelected == 8)
-				curSelected = 2;
-			if (curSelected == 9)
-				curSelected = 3;
-
-			if (curSelected >= 6)
-				curSelected = 0;
-			if (curSelected < 0)
-				curSelected = 6 - 1;
-
-			updateText();
-
-			switch (curSelected)
-			{
-				case 1:
-					txtWeekTitle.visible = FlxG.save.data.monibeaten;
-					txtTracklist.visible = FlxG.save.data.monibeaten;
-				case 2:
-					txtWeekTitle.visible = FlxG.save.data.sayobeaten;
-					txtTracklist.visible = FlxG.save.data.sayobeaten;
-				case 3:
-					txtWeekTitle.visible = FlxG.save.data.natbeaten;
-					txtTracklist.visible = FlxG.save.data.natbeaten;
-				case 4:
-					txtWeekTitle.visible = FlxG.save.data.yuribeaten;
-					txtTracklist.visible = FlxG.save.data.yuribeaten;
-				case 5:
-					txtWeekTitle.visible = FlxG.save.data.extrabeaten;
-					txtTracklist.visible = FlxG.save.data.extra2beaten;
-				default:
-					txtWeekTitle.visible = true;
-					txtTracklist.visible = true;
-			}
-			
+			case 1:
+				txtWeekTitle.visible = FlxG.save.data.monibeaten;
+				txtTracklist.visible = FlxG.save.data.monibeaten;
+			case 2:
+				txtWeekTitle.visible = FlxG.save.data.sayobeaten;
+				txtTracklist.visible = FlxG.save.data.sayobeaten;
+			case 3:
+				txtWeekTitle.visible = FlxG.save.data.natbeaten;
+				txtTracklist.visible = FlxG.save.data.natbeaten;
+			case 4:
+				txtWeekTitle.visible = FlxG.save.data.yuribeaten;
+				txtTracklist.visible = FlxG.save.data.yuribeaten;
+			case 5:
+				txtWeekTitle.visible = FlxG.save.data.extrabeaten;
+				txtTracklist.visible = FlxG.save.data.extra2beaten;
+			default:
+				txtWeekTitle.visible = true;
+				txtTracklist.visible = true;
 		}
-
-		function unlockedweeks()
-		{
-			if (FlxG.save.data.monibeaten == true)
-			{
-				FlxG.save.data.weekUnlocked = 2;
-				story_sayo.animation.play('idle');
-			}
-			if (FlxG.save.data.sayobeaten == true)
-			{
-				FlxG.save.data.weekUnlocked = 3;
-				story_nat.animation.play('idle');
-			}
-			if (FlxG.save.data.natbeaten == true)
-			{
-				FlxG.save.data.weekUnlocked = 4;
-				story_yuri.animation.play('idle');
-			}
-			if (FlxG.save.data.yuribeaten == true)
-			{
-				FlxG.save.data.weekUnlocked = 5;
-				story_secret.animation.play('idle');
-			}
-			if (FlxG.save.data.extrabeaten == true)
-			{
-				FlxG.save.data.weekUnlocked = 6;
-				story_secret2.animation.play('hidden_idle');
-			}
-			if (FlxG.save.data.extra2beaten == true)
-			{
-				FlxG.save.data.weekUnlocked = 7;
-				story_secret2.animation.play('idle');
-			}
-		}
-
-		function updateText()
-		{
-			txtTracklist.text = "\n";
-			var stringThing:Array<String> = weekData[curSelected];
-
-			for (i in stringThing)
-				txtTracklist.text += "\n" + i.split(" (")[0];
-
-			txtWeekTitle.text = weekNames[curSelected].toUpperCase();
-			txtTracklist.text = txtTracklist.text.toUpperCase();
-
-			txtTracklist.screenCenter(X);
-			txtTracklist.x -= 1110;
-
-			txtTracklist.text += "\n";
-
-		}
-
-		override function beatHit()
-			{
-				super.beatHit();
-				logoBl.animation.play('bump', true);
-			}
 	}
+
+	function unlockedweeks()
+	{
+		if (FlxG.save.data.monibeaten == true)
+		{
+			FlxG.save.data.weekUnlocked = 2;
+			story_sayo.animation.play('idle');
+		}
+		if (FlxG.save.data.sayobeaten == true)
+		{
+			FlxG.save.data.weekUnlocked = 3;
+			story_nat.animation.play('idle');
+		}
+		if (FlxG.save.data.natbeaten == true)
+		{
+			FlxG.save.data.weekUnlocked = 4;
+			story_yuri.animation.play('idle');
+		}
+		if (FlxG.save.data.yuribeaten == true)
+		{
+			FlxG.save.data.weekUnlocked = 5;
+			story_secret.animation.play('idle');
+		}
+		if (FlxG.save.data.extrabeaten == true)
+		{
+			FlxG.save.data.weekUnlocked = 6;
+			story_secret2.animation.play('hidden_idle');
+		}
+		if (FlxG.save.data.extra2beaten == true)
+		{
+			FlxG.save.data.weekUnlocked = 7;
+			story_secret2.animation.play('idle');
+		}
+	}
+
+	function updateText()
+	{
+		txtTracklist.text = "\n";
+		var stringThing:Array<String> = weekData[curSelected];
+
+		for (i in stringThing)
+			txtTracklist.text += "\n" + i.split(" (")[0];
+
+		txtWeekTitle.text = weekNames[curSelected].toUpperCase();
+		txtTracklist.text = txtTracklist.text.toUpperCase();
+
+		txtTracklist.screenCenter(X);
+		txtTracklist.x -= 1110;
+
+		txtTracklist.text += "\n";
+	}
+
+	override function beatHit()
+	{
+		super.beatHit();
+		logoBl.animation.play('bump', true);
+	}
+}

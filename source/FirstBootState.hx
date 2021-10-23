@@ -72,111 +72,117 @@ class FirstBootState extends MusicBeatState
 		super.update(elapsed);
 
 		if (controls.ACCEPT && selectedSomethin && !selectedsomething)
-			{
-				FlxTween.tween(funnynote, {alpha: 0}, 2, {ease: FlxEase.quadOut,onComplete: function(twn:FlxTween)
-					{
+		{
+			FlxTween.tween(funnynote, {alpha: 0}, 2, {
+				ease: FlxEase.quadOut,
+				onComplete: function(twn:FlxTween)
+				{
 					funnynote.kill();
 					#if FEATURE_CACHING
 					FlxG.switchState(new TitleState());
 					#else
 					FlxG.switchState(new OutdatedSubState());
 					#end
+				}
+			});
+		}
+
+		if (!selectedSomethin)
+		{
+			if (controls.UP_P)
+			{
+				FlxG.sound.play(Paths.sound('scrollMenu'));
+				curSelected -= 1;
+			}
+
+			if (controls.DOWN_P)
+			{
+				FlxG.sound.play(Paths.sound('scrollMenu'));
+				curSelected += 1;
+			}
+
+			if (curSelected < 0)
+				curSelected = textMenuItems.length - 1;
+
+			if (curSelected >= textMenuItems.length)
+				curSelected = 0;
+
+			grpOptionsTexts.forEach(function(txt:FlxText)
+			{
+				txt.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+
+				if (txt.ID == curSelected)
+					txt.setBorderStyle(OUTLINE, 0xFFFFCFFF, 2);
+			});
+
+			if (controls.ACCEPT)
+			{
+				selectedsomething = true;
+				selectedSomethin = true;
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+				grpOptionsTexts.forEach(function(txt:FlxText)
+				{
+					if (curSelected != txt.ID)
+					{
+						FlxTween.tween(bg, {alpha: 0}, 1.3, {ease: FlxEase.quadOut, onComplete: function(twn:FlxTween)
+						{
+						}});
+						FlxTween.tween(txt, {alpha: 0}, 1.3, {
+							ease: FlxEase.quadOut,
+							onComplete: function(twn:FlxTween)
+							{
+								txt.kill();
+							}
+						});
+					}
+					else
+					{
+						if (FlxG.save.data.flashing)
+						{
+							FlxFlicker.flicker(txt, 1, 0.06, false, false, function(flick:FlxFlicker)
+							{
+								FlxG.save.data.language = localeList[curSelected];
+								trace('langauge set to ' + FlxG.save.data.language);
+								LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
+								new FlxTimer().start(2, function(tmr:FlxTimer)
+								{
+									FlxG.sound.play(Paths.sound('flip_page', 'shared'));
+									bringinthenote();
+								});
+							});
+						}
+						else
+						{
+							new FlxTimer().start(1, function(tmr:FlxTimer)
+							{
+								FlxG.save.data.language = localeList[curSelected];
+								trace('langauge set to ' + FlxG.save.data.language);
+								LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
+								new FlxTimer().start(2, function(tmr:FlxTimer)
+								{
+									FlxG.sound.play(Paths.sound('flip_page', 'shared'));
+									bringinthenote();
+								});
+							});
+						}
 					}
 				});
 			}
-		
-		if (!selectedSomethin)
-		{
-
-			if (controls.UP_P)
-				{
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-					curSelected -= 1;
-				}
-		
-				if (controls.DOWN_P)
-				{
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-					curSelected += 1;
-				}
-		
-				if (curSelected < 0)
-					curSelected = textMenuItems.length - 1;
-		
-				if (curSelected >= textMenuItems.length)
-					curSelected = 0;
-		
-				grpOptionsTexts.forEach(function(txt:FlxText)
-				{
-					txt.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
-		
-					if (txt.ID == curSelected)
-						txt.setBorderStyle(OUTLINE, 0xFFFFCFFF, 2);
-				});
-		
-				if (controls.ACCEPT)
-				{
-					selectedsomething = true;
-					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
-					grpOptionsTexts.forEach(function(txt:FlxText)
-						{
-							if (curSelected != txt.ID)
-							{
-								FlxTween.tween(bg, {alpha: 0}, 1.3, {ease: FlxEase.quadOut,onComplete: function(twn:FlxTween){}});
-								FlxTween.tween(txt, {alpha: 0}, 1.3, {
-								ease: FlxEase.quadOut,
-									onComplete: function(twn:FlxTween)
-									{
-										txt.kill();
-									}
-								});
-							}
-							else
-							{
-								if (FlxG.save.data.flashing)
-								{
-									FlxFlicker.flicker(txt, 1, 0.06, false, false, function(flick:FlxFlicker)
-										{
-											FlxG.save.data.language = localeList[curSelected];
-											trace('langauge set to ' + FlxG.save.data.language);
-											LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
-											new FlxTimer().start(2, function(tmr:FlxTimer)
-												{
-													FlxG.sound.play(Paths.sound('flip_page', 'shared'));
-													bringinthenote();
-												});
-										});
-								}
-								else
-								{
-									new FlxTimer().start(1, function(tmr:FlxTimer)
-									{
-										FlxG.save.data.language = localeList[curSelected];
-										trace('langauge set to ' + FlxG.save.data.language);
-										LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
-										new FlxTimer().start(2, function(tmr:FlxTimer)
-											{
-												FlxG.sound.play(Paths.sound('flip_page', 'shared'));
-												bringinthenote();
-											});
-									});
-								}
-							}
-						});
-				}
 		}
 	}
 
 	function bringinthenote()
-		{
-			funnynote = new FlxSprite(0, 0).loadGraphic(Paths.image('DDLCIntroWarning', 'preload', true));
-			funnynote.alpha = 0;
-			funnynote.screenCenter(X);
-			add(funnynote);
-			FlxTween.tween(funnynote, {alpha: 1}, 1, {ease: FlxEase.quadOut,onComplete: function(twn:FlxTween)
-				{
-					selectedsomething = false;
-				}});
-		}
+	{
+		funnynote = new FlxSprite(0, 0).loadGraphic(Paths.image('DDLCIntroWarning', 'preload', true));
+		funnynote.alpha = 0;
+		funnynote.screenCenter(X);
+		add(funnynote);
+		FlxTween.tween(funnynote, {alpha: 1}, 1, {
+			ease: FlxEase.quadOut,
+			onComplete: function(twn:FlxTween)
+			{
+				selectedsomething = false;
+			}
+		});
+	}
 }

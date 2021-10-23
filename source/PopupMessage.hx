@@ -68,7 +68,7 @@ class PopupMessage extends MusicBeatSubstate
 
 	override function update(elapsed:Float)
 	{
-        if (FlxG.keys.justPressed.ENTER)
+		if (FlxG.keys.justPressed.ENTER)
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			DokiStoryState.showPopUp = false;
