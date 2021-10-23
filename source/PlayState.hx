@@ -1914,8 +1914,6 @@ class PlayState extends MusicBeatState
 
 	function obsessionending():Void
 	{
-		// Currently this is tupid and renders over the pixel dialogue box atm. Either me or M&M can fix this tomorrow 10/07/2021
-
 		if (!loadRep)
 			rep.SaveReplay(saveNotes);
 		else
@@ -1942,9 +1940,9 @@ class PlayState extends MusicBeatState
 		if (SONG.validScore)
 			Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 
-		FlxG.save.flush();
 		FlxG.save.data.yuribeaten = true;
 		campaignScore += Math.round(songScore);
+		FlxG.save.flush();
 
 		// Do what ever idk
 		remove(blackScreen);
@@ -3894,8 +3892,6 @@ class PlayState extends MusicBeatState
 					DialogueBox.isPixel = true;
 					endcutscene(doof3);
 				case 'obsession':
-					FlxG.save.data.yuribeaten = true;
-					FlxG.save.flush();
 					remove(whiteflash);
 					staticshock.visible = false;
 					endcutscene(doof2);
