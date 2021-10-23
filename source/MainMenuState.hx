@@ -183,6 +183,7 @@ class MainMenuState extends MusicBeatState
 
 		//-700, =359
 		logo = new FlxSprite(-900, -359).loadGraphic(Paths.image('Credits_LeftSide'));
+		logo.antialiasing = true;
 		add(logo);
 		if (firstStart)
 			FlxTween.tween(logo,{x: -700},1.2 ,{ease: FlxEase.elasticOut, onComplete: function(flxTween:FlxTween) 

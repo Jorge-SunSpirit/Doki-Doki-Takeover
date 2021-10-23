@@ -115,9 +115,11 @@ class DokiStoryState extends MusicBeatState
 
 		//-700, =359
 		logo = new FlxSprite(-700, -359).loadGraphic(Paths.image('Credits_LeftSide'));
+		logo.antialiasing = true;
 		add(logo);
 
 		songlist = new FlxSprite(-700, -359).loadGraphic(Paths.image('dokistory/song_list_lazy_smile', 'preload', true));
+		songlist.antialiasing = true;
 		add(songlist);
 
 		//-600, -400

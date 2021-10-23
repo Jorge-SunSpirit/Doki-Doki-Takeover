@@ -99,6 +99,7 @@ class OptionsMenu extends MusicBeatState
 		backdrop.velocity.set(-40, -40);
 
 		logo = new FlxSprite(-60, 0).loadGraphic(Paths.image('Credits_LeftSide'));
+		logo.antialiasing = true;
 		add(logo);
 
 		logoBl = new FlxSprite(40, -41);
