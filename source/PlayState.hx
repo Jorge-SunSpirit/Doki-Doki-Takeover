@@ -737,6 +737,8 @@ class PlayState extends MusicBeatState
 					yuri.setGraphicSize(Std.int(yuri.width * .7));
 					yuri.updateHitbox();
 
+					add(sparkleBG);
+
 					if (FlxG.save.data.distractions)
 					{
 						switch (SONG.song.toLowerCase())
@@ -813,8 +815,6 @@ class PlayState extends MusicBeatState
 								}
 						}
 					}
-
-					add(sparkleBG);
 				}
 			
 			case 'dokifestival':
