@@ -18,6 +18,8 @@ import flixel.util.FlxTimer;
 import flixel.addons.effects.chainable.FlxGlitchEffect;
 import flixel.addons.effects.chainable.FlxEffectSprite;
 import openfl.utils.Assets as OpenFlAssets;
+import flixel.math.FlxMatrix;
+import openfl.geom.Point;
 
 using StringTools;
 
@@ -54,7 +56,6 @@ class DialogueBox extends FlxSpriteGroup
 	public function new(isPixel:Bool = false, ?dialogueList:Array<String>)
 	{
 		super();
-
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
 		bgFade.scrollFactor.set();
@@ -1227,10 +1228,23 @@ class DialogueBox extends FlxSpriteGroup
 	function funnyGlitch():Void
 	{
 		#if sys
+		/*
 		var screenHUD:FlxSprite = new FlxSprite();
 		screenHUD.pixels = FlxScreenGrab.grab().bitmapData;
+		*/
+		var screenHUD:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT);
+		screenHUD.antialiasing = true;
+		screenHUD.drawFrame();
+		var screenPixels = screenHUD.framePixels;
+
+		if (FlxG.renderBlit)
+			screenPixels.copyPixels(FlxG.camera.buffer, FlxG.camera.buffer.rect, new Point());
+		else
+		    screenPixels.draw(FlxG.camera.canvas, new FlxMatrix(1, 0, 0, 1, 0, 0));
+
 		var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
 		var glitchSprite:FlxEffectSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
+		glitchSprite.antialiasing = true;
 		add(glitchSprite);
 
 		glitchEffect.active = true;
