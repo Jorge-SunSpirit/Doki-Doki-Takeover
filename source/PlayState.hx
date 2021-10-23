@@ -5400,7 +5400,7 @@ class PlayState extends MusicBeatState
 		// bf pixel x 911 y 610
 		// monika pixel x 351 y 436
 
-		defaultCamZoom = 1;
+		defaultCamZoom = 1.05;
 		remove(boyfriend);
 		remove(dad);
 		remove(gf);
