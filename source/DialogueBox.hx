@@ -107,6 +107,7 @@ class DialogueBox extends FlxSpriteGroup
 		backgroundImage = new FlxSprite();
 		backgroundImage.x = 0;
 		backgroundImage.y = 0;
+		backgroundImage.antialiasing = true;
 		add(backgroundImage);
 		backgroundImage.visible = false;
 
