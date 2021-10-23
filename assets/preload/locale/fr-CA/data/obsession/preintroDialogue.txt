@@ -2,7 +2,7 @@
 :natsuki_what:"Hrk-!"
 :sayori_neutral:"Are you ok, Natsuki?"
 :natsuki_sick:
-:autoskip:"Bleh… I'm not feeling so gooooooooooo-"
+:autoskip:"Bleh... I'm not feeling so gooooooooooo-"
 :autoskip:"oooooooooooooooooooooooo"
 :autoskip:"ooooooooooooo"
 :autoskip:"oooo"

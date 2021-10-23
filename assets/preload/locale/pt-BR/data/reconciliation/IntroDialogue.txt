@@ -8,7 +8,7 @@
 :monika_eeh:"Oh! I-"
 :bf_neutral: *stare*
 :gf_neutral: *stare*
-:monika_eeh:"…hello, you two. It's been a while."
+:monika_eeh:"...hello, you two. It's been a while."
 :bf_neutral:"Bep."
 :monika_upset:"I'm sorry for what I did before."
 :monika_eeh:"And I'm sorry for inadvertently putting you in another situation just like that soon after-"
@@ -17,7 +17,7 @@
 :bf_think:"..."
 :bf_yeah:"Ska dee beep!"
 :monika_upset:-!
-:monika_ahaha:"Ahaha… You have no idea how happy I am to hear that."
+:monika_ahaha:"Ahaha... You have no idea how happy I am to hear that."
 :monika_ahh:"Okay, everyone!"
 :monika_ahh:"I'd like you to meet the newest members of the Literature Club!"
 :monika_ahh:"And I've got a fun way I'd like to introduce them."
