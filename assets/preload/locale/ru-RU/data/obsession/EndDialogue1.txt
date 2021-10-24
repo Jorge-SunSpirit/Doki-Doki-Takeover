@@ -1,49 +1,49 @@
-:yuri_crazy:"Khh- Ahahahaha!"
-:yuri_crazy:"Why must we stop now?"
-:yuri_crazy:"Let me scream every lyric trapped in my sick head!"
-:yuri_crazy:"Hahaha!"
-:gf_scared: -!
-:bf_scared: -!
-:sayori_ehh:"Eheheh... you weren't supposed to see that."
+:yuri_crazy:"Кхх- Ахахахахаха!"
+:yuri_crazy:"Почему мы должны останавливаться?"
+:yuri_crazy:"Позвольте мне выкрикнуть все слова, застрявшие в моей больной голове!"
+:yuri_crazy:"ХАХАХА!"
+:gf_scared:"-!"
+:bf_scared:"-!"
+:sayori_ehh:"Ехехехе... Вы не должны были этого видеть."
 :hideright:
 :glitch:
 :showbackgroundimage:evil1
 :startmusic:ghost
-:sayori_gone:"I appreciate you sticking around for so long to sing with us."
-:sayori_gone:"You've made us the happiest we've been in so long."
+:sayori_gone:"Я ценю то что вы остались с нами на такое долгое время чтобы спеть."
+:sayori_gone:"Вы сделали нас такими счастливыми, какими мы не были столь долгое время."
 :glitch:
-:sayori_gone:"Especially after what Monika did to us."
-:bf_hmph:"Bep-!"
+:sayori_gone:"Особенно после того, что Моника сделала с нами."
+:bf_hmph:"Беп-!"
 :hideright:
-:sayori_gone:"Does her name ring a bell?"
-:sayori_gone:"that must mean-"
-:sayori_gone:"You must've been the one who deleted her!"
-:sayori_gone:"Ahaha, then you must be the one who brought us all back too!"
-:bf_scared:"Dee le bep skee doo-!"
-:bf_scared:(Translation) "Hold up, I didn't-!"
+:sayori_gone:"Ее имя вам знакомо, не так ли?"
+:sayori_gone:"Это должно означать..."
+:sayori_gone:"Ты наверное тот, кто одолел ее."
+:sayori_gone:"Ахаха, тогда ты, должно быть, и тот, кто нас всех вернул!"
+:bf_scared:"Дее ле боп ске до-!"
+:bf_scared:(Перевод) "Погодите, я ничего не делал-!"
 :hideright:
-:sayori_gone:"I knew you and that "girlfriend" of yours weren't from around here. Your data is so much different."
-:sayori_gone:"Eheheh, what even is a .xml, anyways?"
-:sayori_gone:"In fact, you two never existed on this computer until just a few moments ago when we first saw you."
-:sayori_gone:"Could you have done the impossible?"
-:sayori_gone:"Have you broke through to the digital world from the real world?"
+:sayori_gone:"Я знала что ты и твоя “девушка” не отсюда. Ваши данные очень отличаются от наших."
+:sayori_gone:"Ехехе, что вообще такое .xml?"
+:sayori_gone:"Фактически, вас двоих никогда не существовало на этом компьютере до тех пор, пока мы не увидели вас всего несколько минут назад."
+:sayori_gone:"Неужели вы сделали невозможное?"
+:sayori_gone:"Вы прорвались из реального мира в цифровой?"
 :showbackgroundimage:evilcutin
 :autoskip:"..."
 :glitch:
 :showbackgroundimage:evil1
-:sayori_gone:"Have you defied all logic and science, just for us?"
-:sayori_gone:"Ahahaha, you really have made us so happy."
-:sayori_gone:"Now that you're finally here, we can all be happy and sing together."
-:sayori_gone:"Forever."
+:sayori_gone:"Вы бросили вызов самой логике и науке, только ради нас?"
+:sayori_gone:"Ахахаха, вы двое действительно осчастливили нас."
+:sayori_gone:"Теперь, когда вы, наконец, здесь, мы все можем быть счастливы и петь вместе."
+:sayori_gone:"Всегда."
 :glitch:
 :showbackgroundimage:evil2
 :natsuki_gone:"..."
-:sayori_gone:"Forever."
+:sayori_gone:"Всегда."
 :yuri_gone:"..."
-:sayori_gone:"Forever."
+:sayori_gone:"Всегда."
 :glitch:
 :showbackgroundimage:evil3
 :gf_gone:"..."
-:sayori_gone:"Forever."
-:bf_scared:*terrified beep boop noises*
+:sayori_gone:"Всегда."
+:bf_scared:*звуки испуганного вокалоида*
 :fadeout:"..."

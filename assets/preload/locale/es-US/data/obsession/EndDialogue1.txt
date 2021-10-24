@@ -2,8 +2,8 @@
 :yuri_crazy:"¿Por qué debemos parar ahora?"
 :yuri_crazy:"¡Déjame gritar cada letra atrapada en mi cabeza enferma!"
 :yuri_crazy:"¡Jajaja!"
-:gf_scared: -!
-:bf_scared: -!
+:gf_scared:"-!"
+:bf_scared:"-!"
 :sayori_ehh:"Eheheh... no debías ver eso."
 :hideright:
 :glitch:
