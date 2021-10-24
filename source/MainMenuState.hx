@@ -38,8 +38,7 @@ class MainMenuState extends MusicBeatState
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
 
-	//var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options', 'unlock'];
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options'];
+	var optionShit:Array<String>;
 
 	public static var firstStart:Bool = true;
 
@@ -62,6 +61,11 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		if (FlxG.save.data.extrabeaten)
+			optionShit = ['story mode', 'freeplay', 'credits', 'language', 'options'];
+		else
+			optionShit = ['story mode', 'freeplay', 'language', 'options'];
+
 		#if FEATURE_DISCORD
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
