@@ -1,6 +1,20 @@
-Thanks for downloading Friday Night Funkin': Doki Doki Takeover!
+Thank you for downloading Friday Night Funkin’: Doki Doki Takeover! Here’s a few
+things you should know before you begin.
 
-!! Minor warning to those with epilepsy or issues regarding fast imagery and flashing lights during the mod's 3rd song. Play at your own discretion. !!
+MILD EPILEPSY WARNING for the original Monika Week.
+
+MILD HORROR WARNING. This mod will get a little spooky. Note that the more
+disturbing topics present in Doki Doki Literature Club are not present within
+this mod.
+
+This mod is best experienced if you have played through / watched the original
+Doki Doki Literature Club. Story-wise, this mod takes place directly after Act 3.
+
+Also note that this mod is based on a visual novel, which means that there will be
+A LOT OF DIALOGUE AND TEXT, so get ready to READ, DAMMIT!
+
+Sincerely,
+The DDTO Mod Team
 
 https://gamebanana.com/mods/47364
 
@@ -8,35 +22,102 @@ https://gamebanana.com/mods/47364
     CREDITS
 ===============
 
-Programming: 
+Mod Directors:
+SirDusterBuster - https://twitter.com/SirDusterBuster
+Jorge_SunSpirit - https://twitter.com/Jorge_SunSpirit
+
+Character Sprite Art:
+SirDusterBuster [Monika, Sayori, Yuri, Natsuki, Additional Assets] - https://twitter.com/SirDusterBuster
+
+Animation:
+Jorge_SunSpirit - https://twitter.com/Jorge_SunSpirit
+SirDusterBuster - https://twitter.com/SirDusterBuster
+
+Background Art:
+Ito [Clubroom, Freeplay Menu]
+SirDusterBuster [Pixel Clubroom, BG Touch-Ups] - https://twitter.com/SirDusterBuster
+
+Additional Art:
+SirDusterBuster [Cutscene Art] - https://twitter.com/SirDusterBuster
+TokyoGalaxy [Freeplay Chibis, Monika Full Week BG] - https://twitter.com/TokyoGalaxyOG
+
+Programming:
 Jorge_SunSpirit - https://twitter.com/Jorge_SunSpirit
 M&M - https://twitter.com/ActualMandM
 
-Art:
+Charting:
+CelShader - https://twitter.com/CELSHDR
+Cval - https://twitter.com/cval_brown
+Joe
+MtH - https://twitter.com/emmnyaa
+Squidley - https://twitter.com/sqvidley
 SirDusterBuster - https://twitter.com/SirDusterBuster
-TokyoGalaxyOG - https://twitter.com/TokyoGalaxyOG
+Jorge_SunSpirit - https://twitter.com/Jorge_SunSpirit
 
-Music:
-CelShader - https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ
+Dialogue / Writing:
+SirDusterBuster - https://twitter.com/SirDusterBuster
+
+Translation:
+Sulayre [Spanish] - https://twitter.com/Sulayre
+SoftTurnip [French] - https://twitter.com/Ruffles_Savoie
+ClemO [Russian] - https://twitter.com/ClemO___O
+CrimiiCrim [Dutch] - https://twitter.com/CrimiiCrim
+SouLegal [Brazilian Portuguese] - https://twitter.com/nickstwt
+Aizakku [Brazilian Portuguese]
+
+Voices:
+Phebe Fabacher [Sayori Speaking Voice] - https://twitter.com/HarudoriVA
+Miss Beepy [Natsuki Singing/Speaking Voice] - https://twitter.com/MissBeepy
+Loganne Digma [Yuri Singing/Speaking Voice] - https://twitter.com/Loganne_Digma
+Esther Christo [Monika Singing/Speaking Voice] - https://twitter.com/carimellevo
+
+Music Director:
+CelShader - https://twitter.com/CELSHDR
+
+Musicians:
+CelShader - https://twitter.com/CELSHDR
+ClemO - https://twitter.com/ClemO___O
+HighPoweredKeyz - https://twitter.com/HighPoweredArt
 Kallionic - https://youtube.com/kallionic
-Stardust Tunes - https://twitter.com/StardustTunes
-Clem - https://twitter.com/ClemO___O
-blufirecat - https://twitter.com/starrie_blu
-Saruky - https://twitter.com/Saruky__
+kekb
 Matt$ - https://twitter.com/matt_currency
-HPK - https://twitter.com/HighPoweredArt
+Saruky - https://twitter.com/Saruky__
+Starrie_blu - https://twitter.com/starrie_blu
+Stardust Tunes - https://twitter.com/StardustTunes
+Tony Astro - https://twitter.com/TonyAstroVEVO
 
+Additional Credits:
+Ash237 [Coding Help] - https://gamebanana.com/members/1813477
+Lumitic [Coding Help] - https://twitter.com/PeacefulLuma
+SpaceMonkey841 [Week 6 GF-less Speakers] - https://gamebanana.com/members/1763051
+Zeexel [Coding Help] - https://twitter.com/Zeexel32
 
 ===============
 SPECIAL THANKS
 ===============
-Blantados did Vocals and Charting for "Your Reality"! - https://www.youtube.com/channel/UC4rwJYVeDHxGKnFDhHz88ZQ
-aśh implemented Alt animations per note and helped with adding the ending song cutscenes! - https://gamebanana.com/members/1813477
-Cval, Thank you for Charting the second song! - https://twitter.com/cval_brown
-Lumitic, the mad lad that actually knows how to code and helped with the project. - https://twitter.com/PeacefulLuma
-Zeexel32 really likes the fucking mcrib for some reason. - https://twitter.com/Zeexel32
-Matt$ for Remastering Monika Vocals - https://twitter.com/matt_currency
-foomfs for Thumbnail Design - https://twitter.com/foomfs
+AfroZer0
+bbpanzu
+Bijuu Mike
+Blantados
+Brody Foxx
+CesarFever
+Coda
+CommunityGame
+emeruga
+foomfs
+Gametoons
+Gegcoin
+Homskiy
+j8khero
+Max0KE
+MetalSucc
+Pip
+ReboundLeader
+StickyBM
+Summus
+Tamacoochi
+Tyler Bourke
+Type-Moon
 
 =============
 OTHER CREDITS
@@ -47,10 +128,11 @@ https://twitter.com/phantomarcade3k
 https://twitter.com/evilsk8r
 https://twitter.com/kawaisprite
 
-
 Doki Doki Literature Club! is owned by Dan Salvato (https://twitter.com/dansalvato) and published by Team Salvato (https://twitter.com/TeamSalvato).
 https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/
 
-Doki Doki Takeover is built off of Kade Engine, maintained by KadeDev and its contributors.
-https://twitter.com/KadeDeveloper
+Doki Doki Takeover! is built off of Kade Engine, maintained by KadeDev and its contributors.
 https://github.com/KadeDev/Kade-Engine
+https://twitter.com/KadeDeveloper
+https://github.com/KadeDev/Kade-Engine/graphs/contributors
+Engine Tweaks/Reworks by Jorge_SunSpirit & M&M
