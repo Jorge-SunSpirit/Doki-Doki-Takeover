@@ -38,7 +38,8 @@ class MainMenuState extends MusicBeatState
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
 
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options', 'unlock'];
+	//var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options', 'unlock'];
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options'];
 
 	public static var firstStart:Bool = true;
 
