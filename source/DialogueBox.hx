@@ -241,7 +241,7 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (FlxG.keys.justPressed.ESCAPE && !stopspamming && canSkip && canFullSkip && dialogueStarted)
+		if (PlayerSettings.player1.controls.BACK && !stopspamming && canSkip && canFullSkip && dialogueStarted)
 		{
 			isEnding = true;
 			stopspamming = true;
@@ -250,7 +250,7 @@ class DialogueBox extends FlxSpriteGroup
 			endinstantly();
 		}
 
-		if (FlxG.keys.justPressed.ANY && dialogueStarted && canSkip)
+		if (PlayerSettings.player1.controls.ACCEPT && dialogueStarted && canSkip)
 		{
 			remove(dialogue);
 

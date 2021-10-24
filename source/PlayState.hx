@@ -1675,13 +1675,13 @@ class PlayState extends MusicBeatState
 		laneunderlayOpponent.cameras = [camHUD];
 		laneunderlay.cameras = [camHUD];
 		/* pain
-		doof6.cameras = [camHUD];
-		doof.cameras = [camHUD];
-		doof2.cameras = [camHUD];
-		doof3.cameras = [camHUD];
-		doof4.cameras = [camHUD];
-		doof5.cameras = [camHUD];
-		*/
+			doof6.cameras = [camHUD];
+			doof.cameras = [camHUD];
+			doof2.cameras = [camHUD];
+			doof3.cameras = [camHUD];
+			doof4.cameras = [camHUD];
+			doof5.cameras = [camHUD];
+		 */
 		kadeEngineWatermark.cameras = [camHUD];
 		if (loadRep)
 			replayTxt.cameras = [camHUD];
@@ -1858,7 +1858,7 @@ class PlayState extends MusicBeatState
 						}
 						imageBG.antialiasing = false;
 						imageBG.scrollFactor.set();
-						//imageBG.cameras = [camHUD];
+						// imageBG.cameras = [camHUD];
 						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 						imageBG.updateHitbox();
 						imageBG.screenCenter(XY);
@@ -3122,7 +3122,7 @@ class PlayState extends MusicBeatState
 		else
 			scoreTxt.text = LangUtil.getString('cmnScore') + ':' + songScore;
 
-		if (FlxG.keys.justPressed.ENTER && startedCountdown && canPause)
+		if (controls.PAUSE && startedCountdown && canPause)
 		{
 			persistentUpdate = false;
 			persistentDraw = true;
@@ -4119,16 +4119,16 @@ class PlayState extends MusicBeatState
 					showCutscene = true;
 
 					/*
-									if (SONG.song.toLowerCase() == 'eggnog')
-										{
-											var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
-												-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-											blackShit.scrollFactor.set();
-											add(blackShit);
-											camHUD.visible = false;
+						if (SONG.song.toLowerCase() == 'eggnog')
+							{
+								var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
+									-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+								blackShit.scrollFactor.set();
+								add(blackShit);
+								camHUD.visible = false;
 
-											FlxG.sound.play(Paths.sound('Lights_Shut_off'));
-										}
+								FlxG.sound.play(Paths.sound('Lights_Shut_off'));
+							}
 					 */
 
 					switch (SONG.song.toLowerCase())
@@ -4500,9 +4500,19 @@ class PlayState extends MusicBeatState
 	private function keyShit():Void // I've invested in emma stocks
 	{
 		// control arrays, order L D R U
-		var holdArray:Array<Bool> = [controls.LEFT, controls.DOWN, controls.UP, controls.RIGHT];
-		var pressArray:Array<Bool> = [controls.LEFT_P, controls.DOWN_P, controls.UP_P, controls.RIGHT_P];
-		var releaseArray:Array<Bool> = [controls.LEFT_R, controls.DOWN_R, controls.UP_R, controls.RIGHT_R];
+		var holdArray:Array<Bool> = [controls.NOTE_LEFT, controls.NOTE_DOWN, controls.NOTE_UP, controls.NOTE_RIGHT];
+		var pressArray:Array<Bool> = [
+			controls.NOTE_LEFT_P,
+			controls.NOTE_DOWN_P,
+			controls.NOTE_UP_P,
+			controls.NOTE_RIGHT_P
+		];
+		var releaseArray:Array<Bool> = [
+			controls.NOTE_LEFT_R,
+			controls.NOTE_DOWN_R,
+			controls.NOTE_UP_R,
+			controls.NOTE_RIGHT_R
+		];
 
 		// Prevent player input if botplay is on
 		if (FlxG.save.data.botplay)
@@ -4722,24 +4732,24 @@ class PlayState extends MusicBeatState
 	}
 
 	/*function badNoteCheck()
-			{
-				// just double pasting this shit cuz fuk u
-				// REDO THIS SYSTEM!
-				var upP = controls.UP_P;
-				var rightP = controls.RIGHT_P;
-				var downP = controls.DOWN_P;
-				var leftP = controls.LEFT_P;
+		{
+			// just double pasting this shit cuz fuk u
+			// REDO THIS SYSTEM!
+			var upP = controls.UP_P;
+			var rightP = controls.RIGHT_P;
+			var downP = controls.DOWN_P;
+			var leftP = controls.LEFT_P;
 
-				if (leftP)
-					noteMiss(0);
-				if (upP)
-					noteMiss(2);
-				if (rightP)
-					noteMiss(3);
-				if (downP)
-					noteMiss(1);
-				updateAccuracy();
-			}
+			if (leftP)
+				noteMiss(0);
+			if (upP)
+				noteMiss(2);
+			if (rightP)
+				noteMiss(3);
+			if (downP)
+				noteMiss(1);
+			updateAccuracy();
+		}
 	 */
 	function updateAccuracy()
 	{

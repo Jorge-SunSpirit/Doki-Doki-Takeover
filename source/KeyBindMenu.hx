@@ -33,7 +33,7 @@ class KeyBindMenu extends FlxSubState
 	var warningTween:FlxTween;
 	var keyText:Array<String> = ["LEFT", "DOWN", "UP", "RIGHT"];
 	var defaultKeys:Array<String> = ["A", "S", "W", "D", "R"];
-	var defaultGpKeys:Array<String> = ["DPAD_LEFT", "DPAD_DOWN", "DPAD_UP", "DPAD_RIGHT"];
+	var defaultGpKeys:Array<String> = ["X", "A", "Y", "B"];
 	var curSelected:Int = 0;
 
 	var keys:Array<String> = [
@@ -76,7 +76,7 @@ class KeyBindMenu extends FlxSubState
 
 		// FlxG.sound.playMusic('assets/music/configurator' + TitleState.soundExt);
 
-		persistentUpdate = true;
+		persistentUpdate = persistentDraw = true;
 
 		keyTextDisplay = new FlxText(-10, 0, 1280, "", 72);
 		keyTextDisplay.scrollFactor.set(0, 0);
@@ -287,7 +287,7 @@ class KeyBindMenu extends FlxSubState
 			{
 				var textStart = (i == curSelected) ? "> " : "  ";
 				trace(gpKeys[i]);
-				keyTextDisplay.text += textStart + keyText[i] + ": " + gpKeys[i] + "\n";
+				keyTextDisplay.text += textStart + keyText[i] + ": " + ((gpKeys[i] != defaultGpKeys[i]) ? (gpKeys[i] + " / ") : "") + defaultGpKeys[i] + " \n";
 			}
 		}
 		else
@@ -350,7 +350,7 @@ class KeyBindMenu extends FlxSubState
 	{
 		var shouldReturn:Bool = true;
 
-		var notAllowed:Array<String> = ["START"];
+		var notAllowed:Array<String> = ["START", "GUIDE"];
 		var swapKey:Int = -1;
 
 		for (x in 0...gpKeys.length)
