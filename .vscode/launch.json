@@ -6,14 +6,14 @@
       "type": "hxcpp",
       "preLaunchTask": "Build Windows (Debug)",
       "request": "launch",
-      "program": "${workspaceFolder}/export/debug/windows/bin/Kade Engine.exe"
+      "program": "${workspaceFolder}/export/debug/windows/bin/DokiTakeover.exe"
     },
     {
       "name": "Windows (Release)",
       "type": "hxcpp",
       "preLaunchTask": "Build Windows (Release)",
       "request": "launch",
-      "program": "${workspaceFolder}/export/debug/windows/bin/Kade Engine.exe"
+      "program": "${workspaceFolder}/export/debug/windows/bin/DokiTakeover.exe"
     },
     {
       "name": "HTML5 (Debug)",
@@ -34,14 +34,14 @@
       "type": "hxcpp",
       "preLaunchTask": "Build Linux (Debug)",
       "request": "launch",
-      "program": "${workspaceFolder}/export/debug/linux/bin/Kade Engine"
+      "program": "${workspaceFolder}/export/debug/linux/bin/DokiTakeover"
     },
     {
       "name": "Linux (Release)",
       "type": "hxcpp",
       "preLaunchTask": "Build Linux (Release)",
       "request": "launch",
-      "program": "${workspaceFolder}/export/debug/linux/bin/Kade Engine"
+      "program": "${workspaceFolder}/export/debug/linux/bin/DokiTakeover"
     },
   ],
 }
