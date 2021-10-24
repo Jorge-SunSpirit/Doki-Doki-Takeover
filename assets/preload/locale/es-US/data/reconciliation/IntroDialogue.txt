@@ -6,8 +6,8 @@
 :natsuki_hmmph:"Bueno, al menos has encontrado otra chica también."
 :natsuki_hmmph:(Una que no me hace sentir tan pequeña comparada con el resto.)
 :monika_eeh:"Oh! Yo-"
-:bf_neutral: *stare*
-:gf_neutral: *stare*
+:bf_neutral:*stare*
+:gf_neutral:*stare*
 :monika_eeh:"Hola a los dos. Ha pasado mucho tiempo..."
 :bf_neutral:"Bep."
 :monika_upset:"Siento lo que hice antes."
@@ -16,7 +16,7 @@
 :monika_eeh:"No espero que me perdones... pero me alegro de que estéis a salvo ahora."
 :bf_think:"..."
 :bf_yeah:"Ska dee beep!"
-:monika_upset:-!
+:monika_upset:"-!"
 :monika_ahaha:"Ahaha... No sabes lo feliz que me hace escuchar eso."
 :monika_ahh:"¡Bien, todos!"
 :monika_ahh:"¡Me gustaría que conocieran a los nuevos miembros del Club de Literatura!"
