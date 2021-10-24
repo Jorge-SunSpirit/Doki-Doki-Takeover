@@ -1,8 +1,8 @@
 :disableskip:
-:monika_ahaha: It... it worked!
-:bf_scared:...
-:gf_scared:...
+:monika_ahaha:"It... it worked!"
+:bf_scared:"..."
+:gf_scared:"..."
 :hideright:
-:all_neutral:...
-:all_gasp:Monika!
+:all_neutral:"..."
+:all_gasp:"Monika!"
 :crash:
