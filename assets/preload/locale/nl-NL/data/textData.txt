@@ -1,0 +1,112 @@
+// COMMON
+cmnEasy::EASY
+cmnNormal::NORMAL
+cmnHard::HARD
+cmnPB::PERSONAL BEST
+cmnScore::Score
+cmnNPS::NPS
+cmnMaxNPS::Max
+cmnComboBreak::Combo Breaks
+cmnAccuracy::Accuracy
+cmnBotplay::Botplay
+cmnClear::Clear
+cmnOn::On
+cmnOff::Off
+cmnDesc::Description
+cmnOffset::Offset (Left, Right, Shift for slow)
+cmnAddOffset::Additive Offset (Left or Right)
+cmnCategory::Please select a category
+cmnCaching::Caching
+// CATEGORY
+catGameplay::Gameplay
+catAppearance::Appearance
+catUnlock::Unlockables
+catSave::Save
+// OPTIONS
+optKeyBindings::Key Bindings
+optDownscroll::Downscroll
+optUpscroll::Upscroll
+optGhostTap::Ghost Tapping
+optNoGhostTap::No Ghost Tapping
+optPosition::Song Position
+optDistract::Distractions
+optReset::Reset Button
+optFlashing::Flashing Lights
+optJudgement::Safe Frames
+optFPSCount::FPS Counter
+optFPSCap::FPS Cap
+optScroll::Scroll Speed
+optFPSRainbow::Rainbow FPS Counter
+optNPS::NPS Display
+optReplay::Load Replays
+optAccuracyMode::Accuracy Mode
+optAMAccurate::Accurate
+optAMComplex::Complex
+optCustomize::Customize Gameplay HUD
+optWatermark::Kade Engine Watermarks
+optGFCountdown::Girlfriend Countdown
+optLanguage::Language Select
+optCharacterCache::Character Caching
+optSongCache::Song Caching
+optMusicCache::Music Caching
+optSoundCache::SFX Caching
+optCaching::Start Caching
+optMiddleScrollOn::Middle Scroll
+optMiddleScrollOff::Right Side Scroll
+optLaneUnderwayOn::Lane Underlay
+optLaneUnderwayOff::No Lane Underlay
+optSaveReset::Reset Save File
+optSaveResetConfirm::Confirm Reset Save File
+// DESCRIPTION
+descAddOffset::Adds value to global offset, per song.
+descKeyBindings::Change the keybindings of each note.
+descDownscroll::Change the direction of upcoming notes.
+descGhostTap::Ghost Tapping is when you tap a direction and it doesn't give you a miss.
+descJudgement::Customize the game's safe frames. (Left or Right)
+descCurJudgement::Current Safe Frames
+descFPSCap::Set the game's FPS cap. (Left for -10, Right for +10. Shift to go faster)
+descCurFPSCap::Current FPS Cap
+descRefreshRate::Refresh Rate
+descScroll::Change your scroll speed. (Left for -0.1, Right for +0.1. 1 will be chart default.)
+descCurScroll::Current Scroll Speed
+descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Millisecond Based)
+descReset::Toggle pressing R to game over.
+descCustomize::Customize parts of the gameplay HUD to your heart's content.
+descCustomizeState::Drag around the score to customize its position. R to reset. Q/E to zoom. Space to pause cam zooming. C to generate combo. Escape to exit.
+descDistract::Toggle stage distractions that can hinder your gameplay.
+descFPSRainbow::Make the FPS counter display as a rainbow.
+descAccuracy::Display accuracy information.
+descNPS::Shows your current notes per second.
+descPosition::Show the songs current position. (as a bar)
+descFPSCount::Toggle the FPS counter.
+descReplay::View your previous gameplay.
+descFlashing::Toggle flashing lights that can cause epileptic seizures and strain.
+descWatermark::Show watermarks that come from Kade Engine.
+descBotplay::Showcase your charts and mods with autoplay.
+descGFCountdown::Have Girlfriend count down before the song starts.
+descKeyBindKBCurrent::Current Mode: Keyboard.
+descKeyBindGPCurrent::Current Mode: Gamepad.
+descKeyBindTAB::Press Tab to switch.
+descKeyBindKBControls::Escape to save, Backspace to leave without saving. Enter to change a keybind.
+descKeyBindGPControls::Right Trigger to save, Right Trigger to leave without saving. Start to change a keybind.
+descKeyBindBlacklist::is blacklisted!
+descCharacterCache::Reduce load times by caching every character on boot. (MAJOR MEMORY USAGE)
+descSongCache::Reduce load times by caching every song on boot. (MAJOR MEMORY USAGE)
+descMusicCache::Reduce load times by caching every music on boot. (MAJOR MEMORY USAGE)
+descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY USAGE)
+descCaching::Reduce load times after boot by loading the selected options above.
+descDisableCaching::(press D to disable next boot)
+descMiddleScroll::Put your lane in the center or on the right.
+descLaneUnderway::Toggles lane underlay.
+descLaneUnderwayControl::Current Lane Underlay transparency
+descSaveReset::Reset your save file to its defaults.
+descDialogueSkip::Press ESCAPE to skip the dialogue.
+// UNLOCK POPUPS
+msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
+msgSayo::Sayori's songs are now available in the Freeplay menu.
+msgGFCount::"Girlfriend Countdown" unlocked!{NL}Toggle it in the Options menu.
+msgNat::Natsuki's songs are now available in the Freeplay menu.
+msgYuri::Yuri's songs are now available in the Freeplay menu.
+msgExtra1::"Poems 'n Thorns" unlocked!{NL}Access the song in the Freeplay menu.
+msgExtra2::"Dual Demise" unlocked!{NL}Access the song in the Freeplay menu.
+msgExtra3::Epiphany{NL}unlocked.

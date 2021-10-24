@@ -1,0 +1,14 @@
+:startmusic:sayoc
+:sayori_happ:"See? That wasn’t so hard at all! In fact, it was a lot of fun too!"
+:yuri_neutral:"..."
+:natsuki_neutral:"...hmm..."
+:sayori_ehh:"Eheh, did I do a good job?"
+:gf_neutral:*happy gesture*
+:bf_beep:"Beep!"
+:sayori_happ:"Aww, I'm so happy you two are enjoying your time here!"
+:sayori_happ:"It's my duty to make sure everyone in the club has bright happy smiles."
+:hideright:
+:endmusic:
+:sayori_neutral:"After all-"
+:glitch:
+:sayori_neutral:"I AM the Club President."

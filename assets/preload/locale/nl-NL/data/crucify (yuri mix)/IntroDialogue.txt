@@ -1,0 +1,13 @@
+:mc_happy:"Audio is all set up, we're ready to go when you are."
+:sayori_happ:"Thank you so much for helping us!"
+:natsuki_wah:"It's funny seeing you managing all that music tech."
+:sayori_happ:"Yeah! You're like our own personal MC!"
+:monika_ahaha:(In more ways than one, ahaha-)
+:monika_upset:(Hmm... I wonder if that joke works in translation-)
+:hideright:
+:natsuki_neutral:"Oh, you're gonna go first, Yuri?"
+:yuri_neutral:"Mhm..."
+:yuri_smile:"I found myself particularly immersed in the story of the track I picked."
+:yuri_neutral:"A song of two young lovers who wander into the shady parts of their lively hometown and come face to face with a monster."
+:yuri_neutral:"One ready to exact the will of God upon them."
+:yuri_ehh:"With a chainsaw."

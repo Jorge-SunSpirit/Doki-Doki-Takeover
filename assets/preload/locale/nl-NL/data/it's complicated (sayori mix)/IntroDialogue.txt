@@ -1,0 +1,6 @@
+:sayori_neutral:"There was one song in that list that popped out to me."
+:sayori_neutral:"The song was both happy and upbeat-"
+:sayori_ehh:"and yet it felt really sad too."
+:sayori_neutral:"Stuff that's both sad and happy in that way really speaks to me."
+:sayori_ehh:"Eheheh, I don't know..."
+:sayori_ehh:"It's complicated."
