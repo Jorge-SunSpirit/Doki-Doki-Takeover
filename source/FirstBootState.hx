@@ -124,9 +124,12 @@ class FirstBootState extends MusicBeatState
 				{
 					if (curSelected != txt.ID)
 					{
-						FlxTween.tween(bg, {alpha: 0}, 1.3, {ease: FlxEase.quadOut, onComplete: function(twn:FlxTween)
-						{
-						}});
+						FlxTween.tween(bg, {alpha: 0}, 1.3, {
+							ease: FlxEase.quadOut,
+							onComplete: function(twn:FlxTween)
+							{
+							}
+						});
 						FlxTween.tween(txt, {alpha: 0}, 1.3, {
 							ease: FlxEase.quadOut,
 							onComplete: function(twn:FlxTween)

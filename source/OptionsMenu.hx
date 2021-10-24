@@ -47,11 +47,12 @@ class OptionsMenu extends MusicBeatState
 			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
 		new OptionCategory(LangUtil.getString('catAppearance'), [
-			new FPSOption(LangUtil.getString('descFPSCount')), new RainbowFPSOption(LangUtil.getString('descFPSRainbow')),
-			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')), new FlashingLightsOption(LangUtil.getString('descFlashing')),
-			new AccuracyOption(LangUtil.getString('descAccuracy')), new NPSDisplayOption(LangUtil.getString('descNPS')),
-			new LaneUnderlayOption(LangUtil.getString('descLaneUnderway')), new MiddleScrollOption(LangUtil.getString('descMiddleScroll')),
-			new SongPositionOption(LangUtil.getString('descPosition')), new WatermarkOption(LangUtil.getString('descWatermark'))]),
+			                   new FPSOption(LangUtil.getString('descFPSCount')),     new RainbowFPSOption(LangUtil.getString('descFPSRainbow')),
+			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')),   new FlashingLightsOption(LangUtil.getString('descFlashing')),
+			              new AccuracyOption(LangUtil.getString('descAccuracy')),            new NPSDisplayOption(LangUtil.getString('descNPS')),
+			      new LaneUnderlayOption(LangUtil.getString('descLaneUnderway')), new MiddleScrollOption(LangUtil.getString('descMiddleScroll')),
+			          new SongPositionOption(LangUtil.getString('descPosition')),       new WatermarkOption(LangUtil.getString('descWatermark'))
+		]),
 		#if FEATURE_CACHING
 		new OptionCategory(LangUtil.getString('cmnCaching'), [
 			new CharacterCaching(LangUtil.getString('descCharacterCache')),
