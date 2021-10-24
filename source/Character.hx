@@ -120,6 +120,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24, false);
 				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24, false);
 				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24, false);
+				animation.addByIndices('idleLoop', "Dad idle dance", [11, 12], "", 12, true);
 
 				loadOffsetFile(curCharacter);
 
@@ -544,6 +545,12 @@ class Character extends FlxSprite
 			if (animation.curAnim.name.startsWith('sing'))
 			{
 				holdTimer += elapsed;
+			}
+
+			if (animation.getByName('idleLoop') != null)
+			{
+				if (!animation.curAnim.name.startsWith('sing') && animation.curAnim.finished)
+					playAnim('idleLoop');
 			}
 
 			var dadVar:Float = 6;
