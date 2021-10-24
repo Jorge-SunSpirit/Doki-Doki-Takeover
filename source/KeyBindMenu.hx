@@ -32,6 +32,7 @@ class KeyBindMenu extends FlxSubState
 	var keyWarning:FlxText;
 	var warningTween:FlxTween;
 	var keyText:Array<String> = ["LEFT", "DOWN", "UP", "RIGHT"];
+	var gpkeyText:Array<String> = ["DPAD_LEFT", "DPAD_DOWN", "DPAD_UP", "DPAD_RIGHT"];
 	var defaultKeys:Array<String> = ["A", "S", "W", "D", "R"];
 	var defaultGpKeys:Array<String> = ["X", "A", "Y", "B"];
 	var curSelected:Int = 0;
@@ -287,7 +288,7 @@ class KeyBindMenu extends FlxSubState
 			{
 				var textStart = (i == curSelected) ? "> " : "  ";
 				trace(gpKeys[i]);
-				keyTextDisplay.text += textStart + keyText[i] + ": " + ((gpKeys[i] != defaultGpKeys[i]) ? (gpKeys[i] + " / ") : "") + defaultGpKeys[i] + " \n";
+				keyTextDisplay.text += textStart + keyText[i] + ": " + ((gpKeys[i] != gpkeyText[i]) ? (gpKeys[i] + " / ") : "") + gpkeyText[i] + " \n";
 			}
 		}
 		else
