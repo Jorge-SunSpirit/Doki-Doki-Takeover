@@ -582,8 +582,13 @@ class Character extends FlxSprite
 	 */
 	public function dance(altAnim:Bool = false)
 	{
+		var altSuffix:String = '';
+
 		if (!debugMode)
 		{
+			if (altAnim)
+				altSuffix = '-alt';
+
 			switch (curCharacter)
 			{
 				case 'gf' | 'gf-realdoki' | 'gf-pixel' | 'gf-doki' | 'nogf-pixel':
@@ -610,27 +615,14 @@ class Character extends FlxSprite
 
 				case 'yuri':
 					if (animation.curAnim.name != 'breath')
-					{
-						if (altAnim && animation.getByName('idle-alt') != null)
-							playAnim('idle-alt')
-						else
-							playAnim('idle');
-					}
+						playAnim('idle' + altSuffix);
 
 				case 'bigmonika':
 					if (animation.curAnim.name != 'lastNOTE')
-					{
-						if (altAnim && animation.getByName('idle-alt') != null)
-							playAnim('idle-alt')
-						else
-							playAnim('idle');
-					}
+						playAnim('idle' + altSuffix);
 
 				default:
-					if (altAnim && animation.getByName('idle-alt') != null)
-						playAnim('idle-alt')
-					else
-						playAnim('idle');
+					playAnim('idle' + altSuffix);
 			}
 		}
 	}
