@@ -48,7 +48,7 @@ jobs:
           haxelib list
           haxelib run lime build linux
           
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Linux Build
-          path: export/release/linux/bin
+      # - uses: actions/upload-artifact@v2
+      #   with:
+      #     name: Linux Build
+      #     path: export/release/linux/bin

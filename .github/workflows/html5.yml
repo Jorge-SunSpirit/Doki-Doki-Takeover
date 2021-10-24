@@ -48,7 +48,7 @@ jobs:
           haxelib list
           haxelib run lime build html5
           
-      - uses: actions/upload-artifact@v2
-        with:
-          name: HTML5 Build
-          path: export/release/html5/bin
+      # - uses: actions/upload-artifact@v2
+      #   with:
+      #     name: HTML5 Build
+      #     path: export/release/html5/bin
