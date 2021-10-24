@@ -1,12 +1,12 @@
 :startmusic:natsc
-:natsuki_wah:"Hah! Could you keep up with that one?"
+:natsuki_wah:"Hah! Deu pra acompanhar o rítimo?"
 :bf_neutral:"Dee boo skeet~"
-:gf_giggle:*giggling*
-:natsuki_angy:"Rgh-! STOP CALLING ME CUTE!!!"
-:natsuki_angy:"I don't need boys calling me cute too, that's extra embarrassing-"
-:sayori_ehh:"He's the only boy here, Natsuki."
-:sayori_neutral:"Well... I've been meaning to ask a good friend of mine to join the club as well, but I bet that dummy is just gonna join the anime club instead."
-:natsuki:"I knew I should've tried something new."
-:natsuki_neutral:"Luckily, music like that isn’t the only kind I listen to."
-:natsuki_hmmph:"If there's anyone who knows how to subvert expectations, its me."
-:natsuki_angy:"Hit it!"
+:gf_giggle:*risadinha*
+:natsuki_angy:"Rgh-! PARE DE ME CHAMAR DE FOFA!!!"
+:natsuki_angy:"Não preciso de garotos me chamando de fofa também, isso é mais constrangedor ainda-"
+:sayori_ehh:"Ele é o único garoto aqui, Natsuki."
+:sayori_neutral:"Bom... eu estive pensando em convidar um amigo meu pra se juntar a nós, mas eu aposto que aquele bobo vai se juntar ao clube de anime ao invés disso."
+:natsuki:"Hmph, eu sabia que eu deveria ter experimentado algo novo."
+:natsuki_neutral:"Por sorte, esse não é o único tipo de música que eu escuto."
+:natsuki_hmmph:"Se tem alguém daqui que consegue superar expectativas, sou eu."
+:natsuki_angy:"Manda ver!"

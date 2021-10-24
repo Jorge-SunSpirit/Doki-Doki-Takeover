@@ -1,7 +1,7 @@
 :startmusic:sayoc
 :sayori_happ:"See? That wasn’t so hard at all! In fact, it was a lot of fun too!"
 :yuri_neutral:"..."
-:natsuki_neutral:"...hmm.."
+:natsuki_neutral:"...hmm..."
 :sayori_ehh:"Eheh, did I do a good job?"
 :gf_neutral:*happy gesture*
 :bf_beep:"Beep!"

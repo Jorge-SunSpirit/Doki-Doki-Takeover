@@ -1,5 +1,5 @@
 :disableskip:
-:monika_ahaha:"It... it worked!"
+:monika_ahaha:"Fun... funcionou!"
 :bf_scared:"..."
 :gf_scared:"..."
 :hideright:

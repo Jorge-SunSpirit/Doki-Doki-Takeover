@@ -1,10 +1,10 @@
 :startmusic:yuric
-:natsuki_what:"...bleh. I think I’m done for now. I feel really dizzy after that one."
-:sayori_yeah:"That’s ok! Go rest your vocal chords."
-:gf_ehh:*confused glances*
+:natsuki_what:"...bleh. Eu acho que já tá bom pra mim por enquanto. Eu me sinto bem zonza depois dessa."
+:sayori_yeah:"Tá tudo bem! Vá descansar suas cordas vocais."
+:gf_ehh:*olhares confusos*
 :bf_think:"Skee dep? ...beep de dee skee."
-:sayori_neutral:"eheheh... Well, looks like you’re the only one left, Yuri!"
+:sayori_neutral:"eheheh... Bem, parece que só sobrou você, Yuri!"
 :yuri_blush:"...mmh-"
-:sayori_ooh:"Hey, I know you can do it, Yuri. I bet you have one of the nicest singing voices ever!"
-:yuri_ehh:"...first having to read my poems aloud to the club... now singing too?"
-:yuri_ehh:"This club continues to ask so much out of me."
+:sayori_ooh:"Ei, eu sei que você consegue, Yuri. Eu aposto que você tem uma das melhores vozes de canto de todas! Qual é, por favor?!"
+:yuri_ehh:"...primeiro ter que ler meus poemas a frente do clube... agora cantar também?"
+:yuri_ehh:"Esse clube continua a pedir muito de mim."
