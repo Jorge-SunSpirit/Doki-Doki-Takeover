@@ -19,6 +19,7 @@
 :monikasad:-so they could be happy.
 :monikasad:But, things didn't "work right" when everyone wasn't present.
 :monikagasp:If that's still true with me not there-
+:hidedialogue:
 :glitch:
 :showbackgroundimage:flashback2
 :monikagasp:-!
@@ -27,9 +28,9 @@
 :monikagasp:I- I made a mistake-!
 :senpaihmm:M-Monika?! What's happening to you?
 :monikasad:(This is really bad. I gotta-)
+:hidedialogue:
 :glitch:
 :showbackgroundimage:flashback3
-:monikagasp:-!
 :monikasad:(-wait! That kid is there too?!)
 :monikasad:(Damn it, I don't know how him and his girlfriend even got there, but if my friends are acting like this-)
 :glitch:
@@ -41,6 +42,7 @@
 :monikagasp:-then there's a chance that I still have some residual data over there-!
 :monikagasp:Maybe if I just...
 :monikagasp:-try this!
+:hidedialogue:
 :glitch:
 :showbackgroundimage:ending5
 :playsound:glitch1
