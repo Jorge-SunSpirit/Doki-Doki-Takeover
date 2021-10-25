@@ -196,6 +196,7 @@ class PlayState extends MusicBeatState
 	var phillyTrain:FlxSprite;
 	var trainSound:FlxSound;
 	var camend:FlxObject;
+	var popup:FlxSprite;
 
 	var lights_front:FlxSprite;
 	var deskfront:FlxSprite;
@@ -1244,6 +1245,16 @@ class PlayState extends MusicBeatState
 					// stageFront.scale.set(1.5, 1.5);
 					stageFront.scrollFactor.set(1, 1);
 					add(stageFront);
+
+					popup = new FlxSprite(312, 432);
+					popup.frames = Paths.getSparrowAtlas('bigmonika/bigika_delete', 'doki');
+					popup.animation.addByPrefix('idle', "PopUpAnim", 24, false);
+					popup.antialiasing = true;
+					popup.scrollFactor.set(1, 1);
+					popup.setGraphicSize(Std.int(popup.width * 1));
+					popup.updateHitbox();
+					popup.animation.play('idle', true);
+					popup.visible = false;
 				}
 			default:
 				{
@@ -1449,6 +1460,9 @@ class PlayState extends MusicBeatState
 			add(blackScreentwo);
 			blackScreentwo.visible = false;
 		}
+
+		if (SONG.song.toLowerCase() == 'epiphany')
+			add(popup);
 
 		if (SONG.song.toLowerCase() == "dual demise")
 		{
@@ -5359,6 +5373,9 @@ class PlayState extends MusicBeatState
 			{
 				switch (curBeat)
 				{
+					case 648:
+						popup.visible = true;
+						popup.animation.play('idle', true);
 					case 776:
 						dad.playAnim('lastNOTE');
 					case 788:

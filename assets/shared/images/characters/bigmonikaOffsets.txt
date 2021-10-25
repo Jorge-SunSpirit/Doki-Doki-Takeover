@@ -1,6 +1,6 @@
+lastNOTE 191 43
 idle 0 0
-singDOWN 1 -48
+singRIGHT 0 -1
+singDOWN 1 -49
+singLEFT 1 -15
 singUP 0 14
-singRIGHT 0 0
-singLEFT 1 -14
-lastNOTE 95 34

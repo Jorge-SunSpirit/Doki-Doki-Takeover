@@ -2,109 +2,81 @@
 <TextureAtlas imagePath="big_monikia_death.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Big Monika Retry End0000" x="2314" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0001" x="2314" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0002" x="10" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry End0000" x="10" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry End0001" x="10" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry End0002" x="1162" y="10" width="1142" height="982"/>
 	<SubTexture name="Big Monika Retry End0003" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0004" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0005" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0006" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0007" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0008" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0009" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0010" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0011" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0012" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0013" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0014" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0015" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0016" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0017" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0018" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0019" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0020" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0021" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0022" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0023" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0024" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0025" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0026" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0027" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0028" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0029" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0030" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0031" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0032" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0033" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0034" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry End0035" x="1162" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry Loop0000" x="2314" y="10" width="1142" height="982"/>
-	<SubTexture name="Big Monika Retry Start0000" x="3466" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0001" x="3466" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0002" x="4618" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0003" x="4618" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0004" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0005" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0006" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0007" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0008" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0009" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0010" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0011" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0012" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0013" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0014" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0015" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0016" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0017" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0018" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0019" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0020" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0021" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0022" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0023" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0024" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0025" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0026" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0027" x="5770" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0028" x="6922" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0029" x="6922" y="10" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0030" x="10" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0031" x="10" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0032" x="1162" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0033" x="1162" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0034" x="2314" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0035" x="2314" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0036" x="3466" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0037" x="3466" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0038" x="3466" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0039" x="3466" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0040" x="3466" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0041" x="4618" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0042" x="4618" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0043" x="5770" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0044" x="5770" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0045" x="6922" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0046" x="6922" y="1038" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0047" x="10" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0048" x="10" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0049" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0050" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0051" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0052" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0053" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0054" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0055" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0056" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika Retry Start0057" x="1162" y="2066" width="1142" height="1018"/>
-	<SubTexture name="Big Monika SCARY0000" x="2314" y="2066" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0001" x="2314" y="2066" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0002" x="2314" y="2066" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0003" x="2314" y="2066" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0004" x="4019" y="2066" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0005" x="4019" y="2066" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0006" x="5724" y="2066" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0007" x="10" y="3477" width="1695" height="1401"/>
+	<SubTexture name="Big Monika Retry End0004" x="2314" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry End0005" x="2314" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry End0006" x="3466" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry End0007" x="3466" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry Loop0000" x="4618" y="10" width="1142" height="982"/>
+	<SubTexture name="Big Monika Retry Start0000" x="5770" y="10" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0001" x="5770" y="10" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0002" x="6922" y="10" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0003" x="6922" y="10" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0004" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0005" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0006" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0007" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0008" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0009" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0010" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0011" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0012" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0013" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0014" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0015" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0016" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0017" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0018" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0019" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0020" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0021" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0022" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0023" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0024" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0025" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0026" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0027" x="10" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0028" x="1162" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0029" x="1162" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0030" x="2314" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0031" x="2314" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0032" x="3466" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0033" x="3466" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0034" x="4618" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0035" x="4618" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0036" x="5770" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0037" x="5770" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0038" x="5770" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0039" x="5770" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0040" x="5770" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0041" x="6922" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0042" x="6922" y="1038" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0043" x="10" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0044" x="10" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0045" x="1162" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0046" x="1162" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0047" x="2314" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0048" x="2314" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0049" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0050" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0051" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0052" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0053" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0054" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0055" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0056" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika Retry Start0057" x="3466" y="2066" width="1142" height="1018"/>
+	<SubTexture name="Big Monika SCARY0000" x="4618" y="2066" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0001" x="4618" y="2066" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0002" x="4618" y="2066" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0003" x="4618" y="2066" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0004" x="4618" y="2066" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0005" x="4618" y="2066" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0006" x="6323" y="2066" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0007" x="6323" y="2066" width="1695" height="1401"/>
 	<SubTexture name="Big Monika SCARY0008" x="10" y="3477" width="1695" height="1401"/>
 	<SubTexture name="Big Monika SCARY0009" x="1715" y="3477" width="1695" height="1401"/>
 	<SubTexture name="Big Monika SCARY0010" x="1715" y="3477" width="1695" height="1401"/>
@@ -112,8 +84,12 @@
 	<SubTexture name="Big Monika SCARY0012" x="3420" y="3477" width="1695" height="1401"/>
 	<SubTexture name="Big Monika SCARY0013" x="5125" y="3477" width="1695" height="1401"/>
 	<SubTexture name="Big Monika SCARY0014" x="5125" y="3477" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0015" x="5125" y="3477" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0016" x="5125" y="3477" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0017" x="5125" y="3477" width="1695" height="1401"/>
-	<SubTexture name="Big Monika SCARY0018" x="5125" y="3477" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0015" x="10" y="4888" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0016" x="10" y="4888" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0017" x="10" y="4888" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0018" x="10" y="4888" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0019" x="10" y="4888" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0020" x="10" y="4888" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0021" x="10" y="4888" width="1695" height="1401"/>
+	<SubTexture name="Big Monika SCARY0022" x="10" y="4888" width="1695" height="1401"/>
 </TextureAtlas>

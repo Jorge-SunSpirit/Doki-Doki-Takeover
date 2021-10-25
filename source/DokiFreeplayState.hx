@@ -310,7 +310,8 @@ class DokiFreeplayState extends MusicBeatState
 
 			if (controls.ACCEPT && songs[curSelected].songName.toLowerCase() == 'epiphany')
 			{
-				curDifficulty = 2;
+				// keep this as normal cause you won't see your score in freeplay
+				curDifficulty = 1;
 				startsong();
 			}
 
