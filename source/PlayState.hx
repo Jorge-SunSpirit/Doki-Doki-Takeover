@@ -775,7 +775,7 @@ class PlayState extends MusicBeatState
 								{
 									// Sayori week
 									add(yuri);
-									yuri.x = 130;
+									yuri.x = -74;
 									yuri.y = 176;
 									add(natsuki);
 									natsuki.x = 1088;
