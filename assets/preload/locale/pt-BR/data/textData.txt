@@ -107,6 +107,6 @@ msgSayo::As músicas de Sayori agora estão disponíveis no menu de Freeplay.
 msgGFCount::"Contagem da Girlfriend"{NL}desbloqueada! Ative/Desative nas opções!
 msgNat::As músicas de Natsuki agora estão disponíveis no menu de Freeplay.
 msgYuri::As músicas de Yuri agora estão disponíveis no menu de Freeplay.
-msgExtra1::"Poems 'n Thorns" desbloqueado!{NL}Acesse a música no menu de Freeplay.
+msgExtra1::"Poems n' Thorns" desbloqueado!{NL}Acesse a música no menu de Freeplay.
 msgExtra2::"Dual Demise" desbloqueado!{NL}Acesse a música no menu de Freeplay.
-msgExtra3::Epiphany{NL}desbloqueada.
+msgExtra3::"Epiphany"{NL}desbloqueada.
