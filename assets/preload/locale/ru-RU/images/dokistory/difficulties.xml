@@ -4,5 +4,5 @@
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="Easy0000" x="10" y="10" width="434" height="95"/>
 	<SubTexture name="Hard0000" x="10" y="115" width="434" height="86"/>
-	<SubTexture name="Normal0000" x="10" y="211" width="434" height="95"/>
+	<SubTexture name="Normal0000" x="10" y="211" width="434" height="105"/>
 </TextureAtlas>
