@@ -2095,7 +2095,6 @@ class PlayState extends MusicBeatState
 					if (!isintro)
 					{
 						var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending1', 'doki'));
-						imageBG.antialiasing = true;
 						imageBG.scrollFactor.set();
 						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 						imageBG.updateHitbox();
