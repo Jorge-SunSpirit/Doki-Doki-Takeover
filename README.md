@@ -1,4 +1,4 @@
-![Logo](https://cdn.discordapp.com/attachments/404826669971406867/869727046165729360/api.png) 
+![Doki Doki Takeover! logo](art/api.png)
 ## Built on **[Kade Engine](https://github.com/KadeDev/Kade-Engine)**
 
 # Original Game Links
