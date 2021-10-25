@@ -132,6 +132,14 @@ class DokiFreeplayState extends MusicBeatState
 			add(grpSongs);
 		}
 
+		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 8);
+		// scoreText.autoSize = false;
+		scoreText.setFormat(LangUtil.getFont(), 32, FlxColor.BLACK, RIGHT);
+		// scoreText.alignment = RIGHT;
+		scoreText.x -= 460;
+		scoreText.y += 45;
+		add(scoreText);
+
 		menu_character = new FlxSprite(40, 500);
 		menu_character.frames = Paths.getSparrowAtlas('freeplay/chibidorks');
 		menu_character.antialiasing = true;
@@ -187,7 +195,14 @@ class DokiFreeplayState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		trace(curPage + "hewwo");
+		trace(curPage + " hewwo");
+
+		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.4));
+
+		if (Math.abs(lerpScore - intendedScore) <= 10)
+			lerpScore = intendedScore;
+
+		scoreText.text = LangUtil.getString('cmnPB') + ':' + lerpScore;
 
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;
@@ -402,6 +417,10 @@ class DokiFreeplayState extends MusicBeatState
 		if (curDifficulty > 2)
 			curDifficulty = 0;
 
+		#if !switch
+		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
+		#end
+
 		switch (curDifficulty)
 		{
 			case 0:
@@ -421,6 +440,11 @@ class DokiFreeplayState extends MusicBeatState
 			curSelected = 0;
 		if (curSelected < 0)
 			curSelected = songs.length - 1;
+
+		#if !switch
+		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
+		// lerpScore = 0;
+		#end
 
 		if ((curPage == 1 && !FlxG.save.data.monibeaten) || (curPage == 2 && !FlxG.save.data.extra2beaten))
 		{
