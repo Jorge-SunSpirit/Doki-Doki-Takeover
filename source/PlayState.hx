@@ -1964,6 +1964,7 @@ class PlayState extends MusicBeatState
 
 	function obsessionending():Void
 	{
+		DialogueBox.isPixel = false;
 		FlxG.camera.zoom = 1;
 		camHUD.visible = false;
 		if (!loadRep)
@@ -2093,29 +2094,32 @@ class PlayState extends MusicBeatState
 				{
 					if (!isintro)
 					{
-						var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3', 'doki'));
+						var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending1', 'doki'));
 						imageBG.antialiasing = true;
 						imageBG.scrollFactor.set();
 						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 						imageBG.updateHitbox();
 						imageBG.screenCenter(XY);
+						imageBG.alpha = 0;
 						add(imageBG);
 
-						add(blackScreen);
-						blackScreen.alpha = 1;
-						blackScreentwo.visible = false;
+						add(blackScreentwo);
+						blackScreentwo.alpha = 1;
+						blackScreentwo.visible = true;
 
-						FlxTween.tween(blackScreen, {alpha: 0}, 2, {
+						FlxTween.tween(imageBG, {alpha: 1}, 3, {
 							ease: FlxEase.expoOut,
 							onComplete: function(twn:FlxTween)
 							{
 								remove(blackScreen);
+								DialogueBox.isPixel = true;
 								endcutscene(doof5);
 							}
 						});
 					}
 					else
 					{
+						defaultCamZoom = 0.75;
 						healthBar.visible = false;
 						healthBarBG.visible = false;
 						iconP1.visible = false;

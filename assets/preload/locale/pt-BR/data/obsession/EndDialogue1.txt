@@ -42,6 +42,7 @@
 :yuri_gone:"..."
 :sayori_gone:"Para sempre."
 :glitch:
+:playsound:glitch2
 :showbackgroundimage:evil3
 :gf_gone:"..."
 :sayori_gone:"Para sempre."
