@@ -41,3 +41,4 @@
 :senpaihmm:...
 :senpai:...Что я несу?
 :senpai:Полный блин отстой.
+:fadeout:"..."

@@ -342,6 +342,10 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		isCommand = false;
 		cleanDialog();
+		if (PlayState.SONG.noteStyle == 'pixel' || isPixel)
+		{
+			box.visible = true;
+		}
 
 		swagDialogue.resetText(dialogueList[0]);
 		swagDialogue.start(0.04, true);
@@ -554,6 +558,10 @@ class DialogueBox extends FlxSpriteGroup
 					skipText.visible = false;
 					canFullSkip = false;
 					enddialogue();
+				case 'hidedialogue':
+					box.visible = false;
+					portraitRight.visible = false;
+					portraitLeft.visible = false;
 			}
 		}
 		else
@@ -1211,7 +1219,7 @@ class DialogueBox extends FlxSpriteGroup
 			}
 		}
 
-		if (dialogueList[0] == '' && !isCommand)
+		if (dialogueList[0] == '' && !isCommand && curCharacter != 'hidedialogue')
 			enddialogue();
 	}
 

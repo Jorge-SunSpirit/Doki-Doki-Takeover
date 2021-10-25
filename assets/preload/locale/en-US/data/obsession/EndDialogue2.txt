@@ -50,3 +50,4 @@
 :senpaihmm:...
 :senpai:...what am I saying?
 :senpai:This shit sucks.
+:fadeout:"..."

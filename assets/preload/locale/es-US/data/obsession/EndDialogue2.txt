@@ -41,3 +41,4 @@
 :senpaihmm:...
 :senpai:...¿qué estoy diciendo?
 :senpai:Esta mierda apesta.
+:fadeout:"..."

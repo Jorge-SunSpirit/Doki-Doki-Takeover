@@ -41,3 +41,4 @@
 :senpaihmm:...
 :senpai:...o que que eu tô falando?
 :senpai:Essa merda é um saco.
+:fadeout:"..."

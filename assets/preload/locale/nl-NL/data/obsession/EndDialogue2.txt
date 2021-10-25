@@ -43,3 +43,4 @@
 :senpaihmm:...
 :senpai:...wat zeg ik toch? 
 :senpai:Dit zuigt.
+:fadeout:"..."

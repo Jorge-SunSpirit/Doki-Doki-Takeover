@@ -220,6 +220,7 @@ class PlayState extends MusicBeatState
 	var protag:FlxSprite;
 
 	var imageBG:FlxSprite;
+	var monikatransformer:FlxSprite;
 
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
@@ -2012,10 +2013,24 @@ class PlayState extends MusicBeatState
 		FlxG.save.flush();
 
 		// Do what ever idk
-		remove(blackScreen);
 
-		// Play animation for monika's magical girl transformation into HD here
-		endcutscene(doof4);
+		remove(imageBG);
+
+		FlxTween.tween(monikatransformer, {alpha: 1}, 3, {
+			ease: FlxEase.expoOut,
+			onComplete: function(twn:FlxTween)
+			{
+				// Play animation for monika's magical girl transformation into HD here
+
+				monikatransformer.animation.play('idle');
+				FlxG.sound.play(Paths.sound('PixelToNonPixel'));
+				new FlxTimer().start(4, function(swagTimer:FlxTimer)
+				{
+					monikatransformer.alpha = 0;
+					endcutscene(doof4);
+				});
+			}
+		});
 	}
 
 	function preintrocutscene(?dialogueBox:DialogueBox):Void
@@ -2108,13 +2123,24 @@ class PlayState extends MusicBeatState
 				{
 					if (!isintro)
 					{
-						var imageBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending1', 'doki'));
+						remove(deskfront);
+						imageBG = new FlxSprite(0, 0).loadGraphic(Paths.image('dialogue/bgs/ending3', 'doki'));
 						imageBG.scrollFactor.set();
 						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
 						imageBG.updateHitbox();
 						imageBG.screenCenter(XY);
 						imageBG.alpha = 0;
 						add(imageBG);
+
+						monikatransformer = new FlxSprite();
+						monikatransformer.frames = Paths.getSparrowAtlas('dialogue/bgs/PixelToNonPixel', 'doki');
+						monikatransformer.animation.addByPrefix('idle', 'PixelToNonPixel', 24, false);
+						monikatransformer.setGraphicSize(Std.int(monikatransformer.width * 1));
+						monikatransformer.scrollFactor.set();
+						monikatransformer.updateHitbox();
+						monikatransformer.screenCenter();
+						monikatransformer.alpha = 0;
+						add(monikatransformer);
 
 						add(blackScreentwo);
 						blackScreentwo.alpha = 1;
