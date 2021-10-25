@@ -1,8 +1,7 @@
 :disableskip:
-:monika_ahaha:"It... it worked!"
-:bf_scared:"..."
-:gf_scared:"..."
-:hideright:
-:all_neutral:"..."
-:all_gasp:"Monika!"
+:monika_ahaha: Het... Het heeft gewerkt!
+:bf_scared:...
+:gf_scared:...
+:all_neutral:...
+:all_gasp:Monika!
 :crash:

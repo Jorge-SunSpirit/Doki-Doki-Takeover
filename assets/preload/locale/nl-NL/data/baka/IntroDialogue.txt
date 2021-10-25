@@ -1,12 +1,12 @@
-:startmusic:natsc
-:natsuki_wah:"Hah! Could you keep up with that one?"
+:startmusic:natoc
+:natsuki_wah:"Hah! Kun je het nog bijhouden?"
 :bf_neutral:"Dee boo skeet~"
-:gf_giggle:*giggling*
-:natsuki_angy:"Rgh-! STOP CALLING ME CUTE!!!"
-:natsuki_angy:"I don't need boys calling me cute too, that's extra embarrassing-"
-:sayori_ehh:"He's the only boy here, Natsuki."
-:sayori_neutral:"Well... I've been meaning to ask a good friend of mine to join the club as well, but I bet that dummy is just gonna join the anime club instead."
-:natsuki:"I knew I should've tried something new."
-:natsuki_neutral:"Luckily, music like that isn’t the only kind I listen to."
-:natsuki_hmmph:"If there's anyone who knows how to subvert expectations, its me."
+:gf_giggle:*gegiechel*
+:natsuki_angy:"Rgh-! HOU OP MET ME SCHATTIG TE NOEMEN!!!"
+:natsuki_angy:"Ik wil niet dat jongens mij ook nog is schattig gaan noemen, dat is extra gênant."
+:sayori_ehh:"Hij is de enige jongen hier, Natsuki."
+:sayori_neutral:"Nou ja… ik was van plan om een goeie vriend van mij uit te nodigen om zich bij onze club aan te sluiten, maar ik wed dat die domkop liever naar de anime club gaat."
+:natsuki_neutral:"Hmph, Ik wist wel dat ik iets nieuws had moeten proberen."
+:natsuki_neutral:"Gelukkig is dat niet het enige soort muziek waar ik naar luister."
+:natsuki_hmmph:"Als er iemand is die weet hoe ze verwachtingen omver moet blazen, dan ben ik dat wel!"
 :natsuki_angy:"Hit it!"

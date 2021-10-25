@@ -1,112 +1,112 @@
 // COMMON
-cmnEasy::EASY
-cmnNormal::NORMAL
-cmnHard::HARD
-cmnPB::PERSONAL BEST
+cmnEasy::MAKKELIJK
+cmnNormal::NORMAAL
+cmnHard::MOELIJK
+cmnPB::PERSOONLIJKE RECORD
 cmnScore::Score
 cmnNPS::NPS
 cmnMaxNPS::Max
-cmnComboBreak::Combo Breaks
-cmnAccuracy::Accuracy
+cmnComboBreak::Combo Breuken
+cmnAccuracy::Nauwkeurigheid
 cmnBotplay::Botplay
-cmnClear::Clear
-cmnOn::On
-cmnOff::Off
-cmnDesc::Description
-cmnOffset::Offset (Left, Right, Shift for slow)
-cmnAddOffset::Additive Offset (Left or Right)
-cmnCategory::Please select a category
+cmnClear::Klaar
+cmnOn::Aan
+cmnOff::Uit
+cmnDesc::Beschrijving
+cmnOffset::Offset (Links, Rechts, Shift voor langzaam)
+cmnAddOffset::Toegevoegde Offset (Links of Rechts)
+cmnCategory::Selecteer een categorie
 cmnCaching::Caching
 // CATEGORY
 catGameplay::Gameplay
-catAppearance::Appearance
+catAppearance::Uiterlijk
 catUnlock::Unlockables
-catSave::Save
+catSave::Opslag
 // OPTIONS
-optKeyBindings::Key Bindings
-optDownscroll::Downscroll
-optUpscroll::Upscroll
-optGhostTap::Ghost Tapping
-optNoGhostTap::No Ghost Tapping
-optPosition::Song Position
-optDistract::Distractions
-optReset::Reset Button
-optFlashing::Flashing Lights
-optJudgement::Safe Frames
-optFPSCount::FPS Counter
+optKeyBindings::Sneltoetsen
+optDownscroll::Scroll Omlaag
+optUpscroll::Scroll Omhoog
+optGhostTap::Ghost Tapping Aan
+optNoGhostTap::Ghost Tapping Uit
+optPosition::Positie van het Lied
+optDistract::Afleidingen
+optReset::Reset Knop
+optFlashing::Flitsende Lichten
+optJudgement::Veiligheidsframes
+optFPSCount::FPS Teller
 optFPSCap::FPS Cap
-optScroll::Scroll Speed
-optFPSRainbow::Rainbow FPS Counter
-optNPS::NPS Display
-optReplay::Load Replays
-optAccuracyMode::Accuracy Mode
-optAMAccurate::Accurate
+optScroll::Scroll Snelheid
+optFPSRainbow::Regenboog FPS Teller
+optNPS::NPS Weergave
+optReplay::Herhalingen Bekijken
+optAccuracyMode::Nauwkeurigheid Modus
+optAMAccurate::Nauwkeurig
 optAMComplex::Complex
-optCustomize::Customize Gameplay HUD
-optWatermark::Kade Engine Watermarks
+optCustomize::Gameplay HUD Aanpassen
+optWatermark::Watermerken Van Kade Engine
 optGFCountdown::Girlfriend Countdown
-optLanguage::Language Select
-optCharacterCache::Character Caching
-optSongCache::Song Caching
-optMusicCache::Music Caching
+optLanguage::Kies een Taal
+optCharacterCache::Personage Caching
+optSongCache::Lied Caching
+optMusicCache::Muziek Caching
 optSoundCache::SFX Caching
 optCaching::Start Caching
-optMiddleScrollOn::Middle Scroll
-optMiddleScrollOff::Right Side Scroll
-optLaneUnderwayOn::Lane Underlay
-optLaneUnderwayOff::No Lane Underlay
-optSaveReset::Reset Save File
-optSaveResetConfirm::Confirm Reset Save File
+optMiddleScrollOn::Laan In Het Midden
+optMiddleScrollOff::Laan Niet In Het Midden
+optLaneUnderwayOn::Onderlaag van je Laan
+optLaneUnderwayOff::Geen Onderlaag van je Laan
+optSaveReset::Reset Je Opslaggegevens 
+optSaveResetConfirm::Bevestig jouw Keuze
 // DESCRIPTION
-descAddOffset::Adds value to global offset, per song.
-descKeyBindings::Change the keybindings of each note.
-descDownscroll::Change the direction of upcoming notes.
-descGhostTap::Ghost Tapping is when you tap a direction and it doesn't give you a miss.
-descJudgement::Customize the game's safe frames. (Left or Right)
-descCurJudgement::Current Safe Frames
-descFPSCap::Set the game's FPS cap. (Left for -10, Right for +10. Shift to go faster)
-descCurFPSCap::Current FPS Cap
-descRefreshRate::Refresh Rate
-descScroll::Change your scroll speed. (Left for -0.1, Right for +0.1. 1 will be chart default.)
-descCurScroll::Current Scroll Speed
-descAccuracyMode::Change how accuracy is calculated. (Accurate = Simple, Complex = Millisecond Based)
-descReset::Toggle pressing R to game over.
-descCustomize::Customize parts of the gameplay HUD to your heart's content.
-descCustomizeState::Drag around the score to customize its position. R to reset. Q/E to zoom. Space to pause cam zooming. C to generate combo. Escape to exit.
-descDistract::Toggle stage distractions that can hinder your gameplay.
-descFPSRainbow::Make the FPS counter display as a rainbow.
-descAccuracy::Display accuracy information.
-descNPS::Shows your current notes per second.
-descPosition::Show the songs current position. (as a bar)
-descFPSCount::Toggle the FPS counter.
-descReplay::View your previous gameplay.
-descFlashing::Toggle flashing lights that can cause epileptic seizures and strain.
-descWatermark::Show watermarks that come from Kade Engine.
-descBotplay::Showcase your charts and mods with autoplay.
-descGFCountdown::Have Girlfriend count down before the song starts.
-descKeyBindKBCurrent::Current Mode: Keyboard.
-descKeyBindGPCurrent::Current Mode: Gamepad.
-descKeyBindTAB::Press Tab to switch.
-descKeyBindKBControls::Escape to save, Backspace to leave without saving. Enter to change a keybind.
-descKeyBindGPControls::Right Trigger to save, Right Trigger to leave without saving. Start to change a keybind.
-descKeyBindBlacklist::is blacklisted!
-descCharacterCache::Reduce load times by caching every character on boot. (MAJOR MEMORY USAGE)
-descSongCache::Reduce load times by caching every song on boot. (MAJOR MEMORY USAGE)
-descMusicCache::Reduce load times by caching every music on boot. (MAJOR MEMORY USAGE)
-descSoundCache::Reduce load times by caching every sound on boot. (MAJOR MEMORY USAGE)
-descCaching::Reduce load times after boot by loading the selected options above.
-descDisableCaching::(press D to disable next boot)
-descMiddleScroll::Put your lane in the center or on the right.
-descLaneUnderway::Toggles lane underlay.
-descLaneUnderwayControl::Current Lane Underlay transparency
-descSaveReset::Reset your save file to its defaults.
-descDialogueSkip::Press ESCAPE to skip the dialogue.
+descAddOffset::Voegt een waarde aan de globale offset, per lied.
+descKeyBindings::Verander de sneltoetsen van de noten.
+descDownscroll::Veranderd de richting van de aankomende noten.
+descGhostTap::Ghost Tapping houdt in dat je niet mist als je een richting tikt.
+descJudgement::Pas de veiligheidsframes van het spel aan (Links of Rechts)
+descCurJudgement::Huidige veiligheidsframes
+descFPSCap::Stel de FPS Cap van het spel in (Links voor -10, Rechts voor +10. Shift om sneller te gaan)
+descCurFPSCap::Huidige FPS Cap
+descRefreshRate::Verversingssnelheid
+descScroll::Stel de Scroll Snelheid in. (Links voor -0.1, Rechts voor +0.1. 1 is de standaard chart snelheid.)
+descCurScroll::Huidige Scroll Snelheid
+descAccuracyMode::Pas aan hoe het nauwkeurigheid berekend wordt (Nauwkeurig = Simpel, Complex = Op Basis van Milliseconden.)
+descReset::Als je op R drukt, krijg je een Game Over.
+descCustomize::Pas delen van de Gameplay HUD aan.
+descCustomizeState::Sleep de score rond om de positie aan te passen. R om te resetten. Q/E om in of uit te zoomen. Space om de camera zoom te pauseren. C om een combo te genereren. Escape om af te sluiten.
+descDistract::Schakel de afleidingen die je spel kunnen hinderen uit.
+descFPSRainbow::Toont de FPS Teller als een regenboog.
+descAccuracy::Toont je nauwkeurigheid.
+descNPS::Toont je huidige notities per seconde.
+descPosition::Toont je voortgang in het liedje. (als een balk)
+descFPSCount::Schakel de FPS Teller aan of uit.
+descReplay::Bekijk een herhaling van je vorige spel.
+descFlashing::Schakel de flitsende lichten die epileptische aanvallen en overbelasting kunnen veroorzaken uit of aan.
+descWatermark::Toont de watermerken die van Kade Engine zijn.
+descBotplay::Toont jouw grafieken en mods met autoplay.
+descGFCountdown::Laat Girlfriend aftellen voordat het liedje begint.
+descKeyBindKBCurrent::Huidige Besturing: Toetsenbord.
+descKeyBindGPCurrent::Huidige Besturing: Gamepad.
+descKeyBindTAB::Druk op Tab om te wisselen.
+descKeyBindKBControls::Escape om op te slaan, Backspace om af te sluiten zonder op te slaan. Enter om een sneltoets te veranderen.
+descKeyBindGPControls::Rechter Trigger om op te slaan, Rechter Trigger om af te sluiten zonder op te slaan. Start om een sneltoets te veranderen.
+descKeyBindBlacklist::staat op de zwarte lijst!
+descCharacterCache::Verminder de laadtijd door elk personage in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
+descSongCache::Verminder de laadtijd door elk liedje in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
+descMusicCache::Verminder de laadtijd door alle muziek in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
+descSoundCache::Verminder de laadtijd door elk geluidjein het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
+descCaching::Verminder de laadtijd door de geselecteerde opties hierboven te laden.
+descDisableCaching::(druk op D om de volgende boot uit te schakelen)
+descMiddleScroll::Zet jouw laan in het midden of aan de rechterkant. 
+descLaneUnderway::Zet de Onderlaag van jouw Laan aan of uit.
+descLaneUnderwayControl::De doorzichtigheid van de onderlaag van jouw laan.
+descSaveReset::Reset jouw Opslaggevens.
+descDialogueSkip::Druk op ESCAPE om het gesprek over te slaan.
 // UNLOCK POPUPS
-msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
-msgSayo::Sayori's songs are now available in the Freeplay menu.
-msgGFCount::"Girlfriend Countdown" unlocked!{NL}Toggle it in the Options menu.
-msgNat::Natsuki's songs are now available in the Freeplay menu.
-msgYuri::Yuri's songs are now available in the Freeplay menu.
-msgExtra1::"Poems n' Thorns" unlocked!{NL}Access the song in the Freeplay menu.
-msgExtra2::"Dual Demise" unlocked!{NL}Access the song in the Freeplay menu.
-msgExtra3::"Epiphany"{NL}unlocked.
+msgMoni::"Your Reality" Ontgrendeld!{NL}Krijg toegang tot het lied in de Freeplay Menu.
+msgSayo::Sayori's liedjes zijn nu toegankelijk in de Freeplay Menu.
+msgGFCount::"Girlfriend Countdown" Ontgrendeld!{NL}Zet het aan via de Opties Menu.
+msgNat::Natsuki's liedjes zijn nu toegankelijk in de Freeplay Menu.
+msgYuri::Yuri's liedjes zijn nu toegankelijk in de Freeplay Menu.
+msgExtra1::"Poems 'n Thorns" Ontgrendeld!{NL}Krijg toegang tot het lied in de Freeplay Menu.
+msgExtra2::"Dual Demise" Ontgrendeld!{NL}Krijg toegang tot het lied in de Freeplay Menu.
+msgExtra3::Epiphany{NL}ontgrendeld.
