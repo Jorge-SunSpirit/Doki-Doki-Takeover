@@ -442,16 +442,17 @@ class DokiFreeplayState extends MusicBeatState
 		if (curSelected < 0)
 			curSelected = songs.length - 1;
 
-		#if !switch
-		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
-		// lerpScore = 0;
-		#end
-
 		if ((curPage == 1 && !FlxG.save.data.monibeaten) || (curPage == 2 && !FlxG.save.data.extra2beaten))
 		{
+			trace('look at me I am not beaten');
 		}
 		else
 		{
+			#if !switch
+			intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
+			// lerpScore = 0;
+			#end
+
 			#if PRELOAD_ALL
 			FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
 

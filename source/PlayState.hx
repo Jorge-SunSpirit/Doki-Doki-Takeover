@@ -803,7 +803,7 @@ class PlayState extends MusicBeatState
 								}
 							case "obsession":
 								{
-									if (isStoryMode)
+									if (isStoryMode && showCutscene)
 									{
 										add(sayori);
 										sayori.x = -49;
@@ -1706,70 +1706,97 @@ class PlayState extends MusicBeatState
 
 		startingSong = true;
 		isintro = true;
-		if (isStoryMode)
+		if (showCutscene)
 		{
-			switch (curSong.toLowerCase())
+			if (isStoryMode)
 			{
-				// setting up intro dialogue for songs
-				case 'high school conflict':
-					introcutscene(doof);
-				case 'bara no yume':
-					introcutscene(doof2);
-				case 'your demise':
-					if (showCutscene)
+				switch (curSong.toLowerCase())
+				{
+					// setting up intro dialogue for songs
+					case 'high school conflict':
 						introcutscene(doof);
-					else
+					case 'bara no yume':
+						introcutscene(doof2);
+					case 'your demise':
+						introcutscene(doof);
+					case 'erb':
+						introcutscene(doof);
+
+					// addin stuff for dokis
+					case 'baka':
+						introcutscene(doof);
+					case 'my sweets':
+						introcutscene(doof);
+
+					case 'rain clouds':
+						introcutscene(doof);
+					case 'my confession':
+						introcutscene(doof);
+
+					case 'deep breaths':
+						introcutscene(doof);
+					case 'obsession':
+						introcutscene(doof6);
+
+					case 'reconciliation':
+						introcutscene(doof);
+
+					case 'beathoven (natsuki mix)':
+						introcutscene(doof);
+					case 'crucify (yuri mix)':
+						preintrocutscene(doof6);
+					case "it's complicated (sayori mix)":
+						introcutscene(doof);
+					case 'glitcher (monika mix)':
+						introcutscene(doof);
+					default:
+						startCountdown();
+				}
+			}
+			else
+			{
+				switch (curSong.toLowerCase())
+				{
+					case 'dual demise':
+						dualdemisecountdown();
+					case 'your demise':
 						DarkStart(doof);
-				case 'erb':
-					introcutscene(doof);
-
-				// addin stuff for dokis
-				case 'baka':
-					introcutscene(doof);
-				case 'my sweets':
-					introcutscene(doof);
-
-				case 'rain clouds':
-					introcutscene(doof);
-				case 'my confession':
-					introcutscene(doof);
-
-				case 'deep breaths':
-					introcutscene(doof);
-				case 'obsession':
-					introcutscene(doof6);
-
-				case 'reconciliation':
-					introcutscene(doof);
-
-				case 'beathoven (natsuki mix)':
-					introcutscene(doof);
-				case 'crucify (yuri mix)':
-					preintrocutscene(doof6);
-				case "it's complicated (sayori mix)":
-					introcutscene(doof);
-				case 'glitcher (monika mix)':
-					introcutscene(doof);
-
-				default:
-					startCountdown();
+					case 'epiphany':
+						funnyephiphinya(doof);
+					default:
+						startCountdown();
+				}
 			}
 		}
 		else
 		{
-			switch (curSong.toLowerCase())
+			if (isStoryMode)
 			{
-				case 'dual demise':
-					dualdemisecountdown();
-				case 'your demise':
-					DarkStart(doof);
-				case 'epiphany':
-					if (showCutscene)
-						funnyephiphinya(doof);
-					else
+				switch (curSong.toLowerCase())
+				{
+					case 'dual demise':
+						dualdemisecountdown();
+					case 'your demise':
+						DarkStart(doof);
+					case 'epiphany':
 						epipdarkstart(doof);
-				default:
-					startCountdown();
+					default:
+						startCountdown();
+				}
+			}
+			else
+			{
+				switch (curSong.toLowerCase())
+				{
+					case 'dual demise':
+						dualdemisecountdown();
+					case 'your demise':
+						DarkStart(doof);
+					case 'epiphany':
+						epipdarkstart(doof);
+					default:
+						startCountdown();
+				}
 			}
 		}
 
@@ -1828,7 +1855,70 @@ class PlayState extends MusicBeatState
 	{
 		switch (curSong.toLowerCase())
 		{
-			case 'my confession' | 'baka':
+			case 'my confession':
+				vocals.pause();
+				FlxG.sound.music.pause();
+				inCutscene = true;
+				camZooming = false;
+				startedCountdown = false;
+				generatedMusic = false;
+				canPause = false;
+				vocals.stop();
+				vocals.volume = 0;
+
+				add(blackScreen);
+				blackScreen.alpha = 0.1;
+				FlxTween.tween(blackScreen, {alpha: 1}, 5, {
+					ease: FlxEase.expoOut,
+					onComplete: function(twn:FlxTween)
+					{
+						FlxG.camera.zoom = 1;
+						add(blackScreentwo);
+						camHUD.visible = false;
+						remove(strumLineNotes);
+						remove(scoreTxt);
+						remove(replayTxt);
+						remove(botPlayState);
+						remove(healthBarBG);
+						remove(healthBar);
+						remove(iconP1);
+						remove(iconP2);
+						remove(kadeEngineWatermark);
+						remove(songPosBG);
+						remove(songPosBar);
+						remove(songName);
+						remove(laneunderlayOpponent);
+						remove(laneunderlay);
+
+						var imageBG:FlxSprite = new FlxSprite(0, 0);
+						imageBG.loadGraphic(Paths.image('dialogue/bgs/ending1', 'doki'));
+						imageBG.antialiasing = false;
+						imageBG.scrollFactor.set();
+						// imageBG.cameras = [camHUD];
+						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
+						imageBG.updateHitbox();
+						imageBG.screenCenter(XY);
+						add(imageBG);
+
+						FlxTween.tween(blackScreentwo, {alpha: 0}, 5, {
+							ease: FlxEase.expoOut,
+							onComplete: function(twn:FlxTween)
+							{
+								if (dialogueBox != null)
+								{
+									camFollow.setPosition(dad.getMidpoint().x + 50, boyfriend.getMidpoint().y - 300);
+									add(dialogueBox);
+								}
+								else
+								{
+									endSong();
+								}
+							}
+						});
+					}
+				});
+			case 'baka':
+				// lemme try the old code
 				vocals.pause();
 				FlxG.sound.music.pause();
 				inCutscene = true;
@@ -1862,15 +1952,8 @@ class PlayState extends MusicBeatState
 						remove(laneunderlayOpponent);
 						remove(laneunderlay);
 
-						// todo make this per song instead of all songs when images are done
 						var imageBG:FlxSprite = new FlxSprite(0, 0);
-						switch (curSong.toLowerCase())
-						{
-							case 'my confession':
-								imageBG.loadGraphic(Paths.image('dialogue/bgs/ending1', 'doki'));
-							case 'baka':
-								imageBG.loadGraphic(Paths.image('dialogue/bgs/ending2', 'doki'));
-						}
+						imageBG.loadGraphic(Paths.image('dialogue/bgs/ending2', 'doki'));
 						imageBG.antialiasing = false;
 						imageBG.scrollFactor.set();
 						// imageBG.cameras = [camHUD];
@@ -4102,9 +4185,6 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					Conductor.changeBPM(102);
-
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
 
@@ -4132,7 +4212,22 @@ class PlayState extends MusicBeatState
 					DokiStoryState.popupWeek = PlayState.storyWeek;
 
 					showCutscene = true;
-					FlxG.switchState(new DokiStoryState());
+
+					if (SONG.song.toLowerCase() == 'glitcher (monika mix)')
+					{
+						#if FEATURE_WEBM
+						FlxG.switchState(new VideoState('assets/videos/credits/credits.webm', new DokiStoryState()));
+						#else
+						FlxG.switchState(new DokiStoryState());
+						#end
+					}
+					else
+					{
+						FlxG.switchState(new DokiStoryState());
+					}
+
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					Conductor.changeBPM(102);
 
 					#if FEATURE_LUAMODCHART
 					if (luaModchart != null)
@@ -4160,19 +4255,6 @@ class PlayState extends MusicBeatState
 					trace('LOADING NEXT SONG');
 					trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
 					showCutscene = true;
-
-					/*
-						if (SONG.song.toLowerCase() == 'eggnog')
-							{
-								var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
-									-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-								blackShit.scrollFactor.set();
-								add(blackShit);
-								camHUD.visible = false;
-
-								FlxG.sound.play(Paths.sound('Lights_Shut_off'));
-							}
-					 */
 
 					switch (SONG.song.toLowerCase())
 					{
