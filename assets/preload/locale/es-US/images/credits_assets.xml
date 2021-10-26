@@ -92,22 +92,4 @@
 	<SubTexture name="story mode white0006" x="10" y="334" width="447" height="26"/>
 	<SubTexture name="story mode white0007" x="10" y="334" width="447" height="26"/>
 	<SubTexture name="story mode white0008" x="10" y="334" width="447" height="26"/>
-	<SubTexture name="unlock basic0000" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0001" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0002" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0003" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0004" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0005" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0006" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0007" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock basic0008" x="10" y="370" width="447" height="26"/>
-	<SubTexture name="unlock white0000" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0001" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0002" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0003" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0004" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0005" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0006" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0007" x="10" y="406" width="447" height="26"/>
-	<SubTexture name="unlock white0008" x="10" y="406" width="447" height="26"/>
 </TextureAtlas>
