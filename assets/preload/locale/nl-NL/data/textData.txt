@@ -88,7 +88,7 @@ descKeyBindKBCurrent::Huidige Besturing: Toetsenbord.
 descKeyBindGPCurrent::Huidige Besturing: Gamepad.
 descKeyBindTAB::Druk op Tab om te wisselen.
 descKeyBindKBControls::Escape om op te slaan, Backspace om af te sluiten zonder op te slaan. Enter om een sneltoets te veranderen.
-descKeyBindGPControls::Rechter Trigger om op te slaan, Links Trigger om af te sluiten zonder op te slaan. Start om een sneltoets te veranderen.
+descKeyBindGPControls::Rechter Trigger om op te slaan, Rechter Trigger om af te sluiten zonder op te slaan. Start om een sneltoets te veranderen.
 descKeyBindBlacklist::staat op de zwarte lijst!
 descCharacterCache::Verminder de laadtijd door elk personage in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
 descSongCache::Verminder de laadtijd door elk liedje in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
@@ -102,11 +102,12 @@ descLaneUnderwayControl::De doorzichtigheid van de onderlaag van jouw laan.
 descSaveReset::Reset jouw Opslaggevens.
 descDialogueSkip::Druk op ESCAPE om het gesprek over te slaan.
 // UNLOCK POPUPS
-msgMoni::"Your Reality" Ontgrendeld!{NL}Krijg toegang tot het lied in de Freeplay Menu.
-msgSayo::Sayori's liedjes zijn nu toegankelijk in de Freeplay Menu.
+msgMoni::"Your Reality" Ontgrendeld!{NL}Krijg toegang tot het lied in de het Vrije Spel Menu.
+msgSayo::Sayori's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
 msgGFCount::"Girlfriend Countdown" Ontgrendeld!{NL}Zet het aan via de Opties Menu.
-msgNat::Natsuki's liedjes zijn nu toegankelijk in de Freeplay Menu.
-msgYuri::Yuri's liedjes zijn nu toegankelijk in de Freeplay Menu.
-msgExtra1::"Poems 'n Thorns" Ontgrendeld!{NL}Krijg toegang tot het lied in de Freeplay Menu.
-msgExtra2::"Dual Demise" Ontgrendeld!{NL}Krijg toegang tot het lied in de Freeplay Menu.
+msgNat::Natsuki's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
+msgYuri::Yuri's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
+msgExtra1::"Poems 'n Thorns" Ontgrendeld!{NL}Krijg toegang tot het lied in het Vrije Spel Menu.
+msgExtra2::"Dual Demise" Ontgrendeld!{NL}Krijg toegang tot het lied in het Vrije Spel Menu.
 msgExtra3::Epiphany{NL}ontgrendeld.
+msgFestival::Liedjes van Het Festival zijn nu toegankelijk in het Vrije Spel Menu.
