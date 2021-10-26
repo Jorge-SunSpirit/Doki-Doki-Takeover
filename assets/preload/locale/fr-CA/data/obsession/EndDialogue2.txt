@@ -20,13 +20,21 @@
 :monikasad:But, things didn't "work right" when everyone wasn't present.
 :monikagasp:If that's still true with me not there-
 :glitch:
+:showbackgroundimage:flashback2
+:hidedialogue:
 :monikagasp:-!
+:glitch:
+:showbackgroundimage:ending3
 :monikagasp:I- I made a mistake-!
 :senpaihmm:M-Monika?! What's happening to you?
 :monikasad:(This is really bad. I gotta-)
 :glitch:
+:showbackgroundimage:flashback3
+:hidedialogue:
 :monikasad:(-wait! That kid is there too?!)
 :monikasad:(Damn it, I don't know how him and his girlfriend even got there, but if my friends are acting like this-)
+:glitch:
+:showbackgroundimage:ending4
 :monikagasp:I gotta fix this! Somehow!
 :senpaihmm:Wh-what in the fresh hell is all this?!
 :monikasad:There's gotta be something... something...
@@ -35,9 +43,13 @@
 :monikagasp:Maybe if I just...
 :monikagasp:-try this!
 :glitch:
+:showbackgroundimage:ending5
+:playsound:glitch1
+:hidedialogue:
 :senpaihmm:-!
 :senpaihmm:...and just like that, the only one to ever truly intrigue me has left in a flash.
 :senpaihmm:Ah, woe is me!
 :senpaihmm:...
 :senpai:...what am I saying?
 :senpai:This shit sucks.
+:fadeout:"..."

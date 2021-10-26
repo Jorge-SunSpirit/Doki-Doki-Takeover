@@ -1,3 +1,4 @@
+:startmusic:yuric
 :mc_neutral:"Así que vosotros dos debéis ser los otros miembros que Monika y las otras chicas no dejan de mencionar."
 :mc_neutral:"Parece que os conocen bastante bien, aunque no os he visto a ninguno de los dos en una reunión del club antes."
 :mc_sigh:"Bueno, supongo que me metí en todo este asunto del Club de Literatura no hace mucho tiempo, debo haberme perdido cuando estabas por aquí."
