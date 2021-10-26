@@ -1846,6 +1846,7 @@ class PlayState extends MusicBeatState
 					onComplete: function(twn:FlxTween)
 					{
 						FlxG.camera.zoom = 1;
+						add(blackScreentwo);
 						camHUD.visible = false;
 						remove(strumLineNotes);
 						remove(scoreTxt);
@@ -1862,8 +1863,8 @@ class PlayState extends MusicBeatState
 						remove(laneunderlayOpponent);
 						remove(laneunderlay);
 
-						// todo make this per song instead of all songs when images are done
 						var imageBG:FlxSprite = new FlxSprite(0, 0);
+						// todo make this per song instead of all songs when images are done
 						switch (curSong.toLowerCase())
 						{
 							case 'my confession':
@@ -1879,7 +1880,7 @@ class PlayState extends MusicBeatState
 						imageBG.screenCenter(XY);
 						add(imageBG);
 
-						FlxTween.tween(blackScreen, {alpha: 0}, 5, {
+						FlxTween.tween(blackScreentwo, {alpha: 0}, 5, {
 							ease: FlxEase.expoOut,
 							onComplete: function(twn:FlxTween)
 							{
