@@ -1828,7 +1828,7 @@ class PlayState extends MusicBeatState
 	{
 		switch (curSong.toLowerCase())
 		{
-			case 'my confession' | 'baka':
+			case 'my confession':
 				vocals.pause();
 				FlxG.sound.music.pause();
 				inCutscene = true;
@@ -1864,14 +1864,7 @@ class PlayState extends MusicBeatState
 						remove(laneunderlay);
 
 						var imageBG:FlxSprite = new FlxSprite(0, 0);
-						// todo make this per song instead of all songs when images are done
-						switch (curSong.toLowerCase())
-						{
-							case 'my confession':
-								imageBG.loadGraphic(Paths.image('dialogue/bgs/ending1', 'doki'));
-							case 'baka':
-								imageBG.loadGraphic(Paths.image('dialogue/bgs/ending2', 'doki'));
-						}
+						imageBG.loadGraphic(Paths.image('dialogue/bgs/ending1', 'doki'));
 						imageBG.antialiasing = false;
 						imageBG.scrollFactor.set();
 						// imageBG.cameras = [camHUD];
@@ -1881,6 +1874,68 @@ class PlayState extends MusicBeatState
 						add(imageBG);
 
 						FlxTween.tween(blackScreentwo, {alpha: 0}, 5, {
+							ease: FlxEase.expoOut,
+							onComplete: function(twn:FlxTween)
+							{
+								if (dialogueBox != null)
+								{
+									camFollow.setPosition(dad.getMidpoint().x + 50, boyfriend.getMidpoint().y - 300);
+									add(dialogueBox);
+								}
+								else
+								{
+									endSong();
+								}
+							}
+						});
+					}
+				});
+			case 'baka':
+				// lemme try the old code
+				vocals.pause();
+				FlxG.sound.music.pause();
+				inCutscene = true;
+				camZooming = false;
+				startedCountdown = false;
+				generatedMusic = false;
+				canPause = false;
+				vocals.stop();
+				vocals.volume = 0;
+
+				add(blackScreen);
+				blackScreen.alpha = 0.1;
+				FlxTween.tween(blackScreen, {alpha: 1}, 5, {
+					ease: FlxEase.expoOut,
+					onComplete: function(twn:FlxTween)
+					{
+						FlxG.camera.zoom = 1;
+						camHUD.visible = false;
+						remove(strumLineNotes);
+						remove(scoreTxt);
+						remove(replayTxt);
+						remove(botPlayState);
+						remove(healthBarBG);
+						remove(healthBar);
+						remove(iconP1);
+						remove(iconP2);
+						remove(kadeEngineWatermark);
+						remove(songPosBG);
+						remove(songPosBar);
+						remove(songName);
+						remove(laneunderlayOpponent);
+						remove(laneunderlay);
+
+						var imageBG:FlxSprite = new FlxSprite(0, 0);
+						imageBG.loadGraphic(Paths.image('dialogue/bgs/ending2', 'doki'));
+						imageBG.antialiasing = false;
+						imageBG.scrollFactor.set();
+						// imageBG.cameras = [camHUD];
+						imageBG.setGraphicSize(Std.int(imageBG.width / FlxG.camera.zoom));
+						imageBG.updateHitbox();
+						imageBG.screenCenter(XY);
+						add(imageBG);
+
+						FlxTween.tween(blackScreen, {alpha: 0}, 5, {
 							ease: FlxEase.expoOut,
 							onComplete: function(twn:FlxTween)
 							{
