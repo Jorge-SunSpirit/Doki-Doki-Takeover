@@ -1,3 +1,4 @@
+:disableskip:
 :senpaihmm:...Литературный клуб? Признаю, Я никогда не воображал себя читающим или пишущим человеком.
 :senpaihappy:Для многих это звучит шокирующим, ведь они говорят что я очень хорош в словах.
 :senpaihappy:И они правы~
@@ -25,6 +26,7 @@
 :monikagasp:-!
 :glitch:
 :showbackgroundimage:ending3
+:startmusic:ghost
 :monikagasp:Я- Я совершила большую ошибку-!
 :senpaihmm:М-Моника?! Что с тобой происходит?
 :monikasad:(Это очень плохо. Я должна-)
@@ -35,6 +37,8 @@
 :monikasad:(Черт возьми, я не знаю как он там оказался, но если мои друзья ведут себя так-)
 :glitch:
 :showbackgroundimage:ending4
+:hidedialogue:
+:playsound:glitch2
 :monikagasp:Я должна все исправить! Любой ценой!
 :senpaihmm:Ч-что черт возьми, происходит?!
 :monikasad:Должен же быть способ... любой...
@@ -44,6 +48,7 @@
 :monikagasp:Попробую вот это!
 :glitch:
 :showbackgroundimage:ending5
+:endmusic:
 :playsound:glitch1
 :hidedialogue:
 :senpaihmm:-!

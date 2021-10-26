@@ -1,3 +1,4 @@
+:disableskip:
 :senpaihmm:...¿el club de literatura? Reconozco que nunca me he considerado una persona que lea o escriba.
 :senpaihappy:Eso sorprende a muchos, cuando todos dicen que tengo una gran habilidad con las palabras.
 :senpaihappy:Y tienen mucha razón~
@@ -25,6 +26,7 @@
 :monikagasp:-!
 :glitch:
 :showbackgroundimage:ending3
+:startmusic:ghost
 :monikagasp:¡Yo... yo cometí un error!
 :senpaihmm:¡¿Monika?! ¿Qué te está pasando?
 :monikasad:(Esto es realmente malo. Tengo que...)
@@ -35,6 +37,8 @@
 :monikasad:(Maldita sea, no sé cómo llegó allí, pero si mis amigos están actuando así...)
 :glitch:
 :showbackgroundimage:ending4
+:hidedialogue:
+:playsound:glitch2
 :monikagasp:¡Tengo que arreglar esto! ¡De alguna manera!
 :senpaihmm:¡¿Qué diablos es todo esto?!
 :monikasad:¡Tiene que haber algo... algo...
@@ -44,6 +48,7 @@
 :monikagasp:¡intento esto!
 :glitch:
 :showbackgroundimage:ending5
+:endmusic:
 :playsound:glitch1
 :hidedialogue:
 :senpaihmm:-!

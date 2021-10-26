@@ -1,3 +1,4 @@
+:disableskip:
 :senpaihmm:...de Literatuur Club? Ik heb mijzelf nooit het type gevonden voor lezen of schrijven. 
 :senpaihappy:Dat zal velen verbazen, wanneer ze mij vertellen dat ik zo goed met woorden overweg kan
 :senpaihappy:En ze hebben gelijk~
@@ -27,6 +28,7 @@
 :monikagasp:-!
 :glitch:
 :showbackgroundimage:ending3
+:startmusic:ghost
 :monikagasp:I-Ik heb een fout gemaakt-!
 :senpaihmm:M-Monika?! Wat gebeurt er met je?
 :monikasad:(Dit is niet goed. Ik moet-)
@@ -37,6 +39,8 @@
 :monikasad:(Ik weet niet hoe hij en zijn vriendin daar in vredesnaam terecht zijn gekomen, maar als mijn vrienden zich zo gedragen-)
 :glitch:
 :showbackgroundimage:ending4
+:hidedialogue:
+:playsound:glitch2
 :monikagasp:Ik moet dit zien op te lossen! Het maakt niet uit hoe!
 :senpaihmm:W-wat in hemelsnaam gebeurt er allemaal?
 :monikasad:Er moet toch iets zijn wat ik kan doen… iets… 
@@ -46,6 +50,7 @@
 :monikagasp:-dit probeer!
 :glitch:
 :showbackgroundimage:ending5
+:endmusic:
 :playsound:glitch1
 :hidedialogue:
 :senpaihmm:-!
