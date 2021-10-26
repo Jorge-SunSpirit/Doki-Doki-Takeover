@@ -88,7 +88,7 @@ descKeyBindKBCurrent::Modo Actual: Keyboard.
 descKeyBindGPCurrent::Modo Actual: Gamepad.
 descKeyBindTAB::Pulsa Tab para cambiar.
 descKeyBindKBControls::Esc para guardar, Backspace para salir sin guardar. Enter para cambiar una tecla.
-descKeyBindGPControls::Trigger Izquierdo para guardar, Trigger Derecho para salir sin guardar. Start para cambiar una tecla.
+descKeyBindGPControls::Trigger Derecho para guardar, Trigger Izquierdo para salir sin guardar. Start para cambiar una tecla.
 descKeyBindBlacklist::está blacklisted!
 descCharacterCache::Reduce los tiempos de carga usando caching en los personajes. (MAJOR MEMORY USAGE)
 descSongCache::Reduce los tiempos de carga usando caching en las canciones. (MAJOR MEMORY USAGE)
