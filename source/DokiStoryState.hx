@@ -302,10 +302,12 @@ class DokiStoryState extends MusicBeatState
 		if (FlxG.keys.justPressed.FIVE && acceptInput)
 			openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
 		if (FlxG.keys.justPressed.SIX && acceptInput)
-			openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
+			openSubState(new PopupMessage(LangUtil.getString('msgFestival')));
 		if (FlxG.keys.justPressed.SEVEN && acceptInput)
-			openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+			openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
 		if (FlxG.keys.justPressed.EIGHT && acceptInput)
+			openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+		if (FlxG.keys.justPressed.NINE && acceptInput)
 			openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
 		#end
 
@@ -331,14 +333,15 @@ class DokiStoryState extends MusicBeatState
 						openSubState(new PopupMessage(LangUtil.getString('msgNat')));
 					else
 						showPopUp = false;
+					secondaryPopUp = false;
 				case 4:
 					if (!FlxG.save.data.extra1popup)
-						openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
+						openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
 					else
 						showPopUp = false;
 				case 5:
 					if (!FlxG.save.data.extra2popup)
-						openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+						openSubState(new PopupMessage(LangUtil.getString('msgFestival')));
 					else
 					{
 						showPopUp = false;
@@ -353,6 +356,8 @@ class DokiStoryState extends MusicBeatState
 			{
 				default:
 					openSubState(new PopupMessage(LangUtil.getString('msgGFCount')));
+				case 2:
+					openSubState(new PopupMessage(LangUtil.getString('msgExtra1')));
 				case 5:
 					if (FlxG.save.data.unlockepip)
 						openSubState(new PopupMessage(LangUtil.getString('msgExtra3'), true));
