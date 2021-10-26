@@ -40,7 +40,7 @@ class DiscordClient
 			details: "In the Menus",
 			state: null,
 			largeImageKey: 'rpc_logo',
-			largeImageText: "Friday Night Funkin': Monika Full Week Rebooted!",
+			largeImageText: "Friday Night Funkin': Doki Doki Takeover!",
 		});
 	}
 
