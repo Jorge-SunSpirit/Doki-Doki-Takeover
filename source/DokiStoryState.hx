@@ -332,8 +332,10 @@ class DokiStoryState extends MusicBeatState
 					if (!FlxG.save.data.natpopup)
 						openSubState(new PopupMessage(LangUtil.getString('msgNat')));
 					else
+					{
 						showPopUp = false;
-					secondaryPopUp = false;
+						secondaryPopUp = false;
+					}
 				case 4:
 					if (!FlxG.save.data.extra1popup)
 						openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
