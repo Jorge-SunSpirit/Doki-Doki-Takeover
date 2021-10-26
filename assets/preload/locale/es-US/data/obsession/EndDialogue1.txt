@@ -2,7 +2,9 @@
 :yuri_crazy:"¿Por qué debemos parar ahora?"
 :yuri_crazy:"¡Déjame gritar cada letra atrapada en mi cabeza enferma!"
 :yuri_crazy:"¡Jajaja!"
-:gf_scared:"-!"
+:gf_spook:
+:playsound:glitch1
+:autoskip:"#($**&#&#@)*&#&$^$^&@*(($(#"
 :bf_scared:"-!"
 :sayori_ehh:"Eheheh... no debías ver eso."
 :hideright:
@@ -28,7 +30,7 @@
 :sayori_gone:"¿Habéis hecho lo imposible?"
 :sayori_gone:"¿Habéis atravesado el mundo digital desde el mundo real?"
 :showbackgroundimage:evilcutin
-:autoskip:"..."
+:autoskip:"*%&^$*(%)^*&"
 :glitch:
 :showbackgroundimage:evil1
 :sayori_gone:"¿Habéis desafiado toda la lógica y la ciencia, sólo por nosotros?"

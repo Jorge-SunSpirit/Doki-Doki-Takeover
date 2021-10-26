@@ -20,13 +20,21 @@
 :monikasad:Pero, las cosas no "funcionaban bien" cuando todos no estaban presentes.
 :monikagasp:Si eso sigue siendo cierto sin que yo esté presente-
 :glitch:
+:showbackgroundimage:flashback2
+:hidedialogue:
 :monikagasp:-!
+:glitch:
+:showbackgroundimage:ending3
 :monikagasp:¡Yo... yo cometí un error!
 :senpaihmm:¡¿Monika?! ¿Qué te está pasando?
 :monikasad:(Esto es realmente malo. Tengo que...)
 :glitch:
+:showbackgroundimage:flashback3
+:hidedialogue:
 :monikasad:(Esperar... ¿Ese chico está ahí también?)
 :monikasad:(Maldita sea, no sé cómo llegó allí, pero si mis amigos están actuando así...)
+:glitch:
+:showbackgroundimage:ending4
 :monikagasp:¡Tengo que arreglar esto! ¡De alguna manera!
 :senpaihmm:¡¿Qué diablos es todo esto?!
 :monikasad:¡Tiene que haber algo... algo...
@@ -35,6 +43,9 @@
 :monikagasp:Tal vez si sólo...
 :monikagasp:¡intento esto!
 :glitch:
+:showbackgroundimage:ending5
+:playsound:glitch1
+:hidedialogue:
 :senpaihmm:-!
 :senpaihmm:...y así, el único que me ha intrigado de verdad se ha ido en un instante.
 :senpaihmm:¡Ah, pobre de mí!

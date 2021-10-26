@@ -20,13 +20,21 @@
 :monikasad:Mas, as coisas não foram como o "planejado" quando todos não estavam presentes.
 :monikagasp:Se isso ainda for verdade comigo não-
 :glitch:
+:showbackgroundimage:flashback2
+:hidedialogue:
 :monikagasp:-!
+:glitch:
+:showbackgroundimage:ending3
 :monikagasp:E- eu cometi um erro-!
 :senpaihmm:M-Monika?! O que acontecendo contigo?
 :monikasad:(Isso é muito ruim. Eu preciso-)
 :glitch:
+:showbackgroundimage:flashback3
+:hidedialogue:
 :monikasad:(espera-! Aquele garoto está lá também?-)
 :monikasad:(Droga, nem sei como que ele foi parar lá, mas se as minhas amigas estão agindo assim-)
+:glitch:
+:showbackgroundimage:ending4
 :monikagasp:Preciso consertar isso! De alguma forma!
 :senpaihmm:Ma- Mas o que diabos é isso tudo?!
 :monikasad:Deve ter alguma coisa... alguma coisa...
@@ -35,6 +43,9 @@
 :monikagasp:Talvez se eu só...
 :monikagasp:-tentar isso!
 :glitch:
+:showbackgroundimage:ending5
+:playsound:glitch1
+:hidedialogue:
 :senpaihmm:-!
 :senpaihmm:...e assim, a única pessoa que me intrigava sumiu em um instante.
 :senpaihmm:Ah, tadinho de mim!

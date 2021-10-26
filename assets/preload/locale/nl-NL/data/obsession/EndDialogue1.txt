@@ -2,7 +2,9 @@
 :yuri_crazy:"Waarom wil je nu al stoppen?"
 :yuri_crazy:"Laat me elke lied die in mijn zieke hoofd gevangen zit eruit schreeuwen!"
 :yuri_crazy:"Hahaha!"
-:gf_scared: -!
+:gf_spook:
+:playsound:glitch1
+:autoskip:"#($**&#&#@)*&#&$^$^&@*(($(#"
 :bf_scared: -!
 :sayori_ehh:"Eheheh… dat had je niet mogen zien."
 :hideright:
@@ -28,7 +30,7 @@
 :sayori_gone:"Zouden jullie het onmogelijke mogelijk gemaakt kunnen hebben?"
 :sayori_gone:"Zijn jullie vanuit de echte wereld de digitale wereld in gestapt?"
 :showbackgroundimage:evilcutin
-:autoskip:"..."
+:autoskip:"*%&^$*(%)^*&"
 :glitch:
 :showbackgroundimage:evil1
 :sayori_gone:"Hebben jullie alle logica en wetenschap getrotseerd om hier te komen? Voor ons?"

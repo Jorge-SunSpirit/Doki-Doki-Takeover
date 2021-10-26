@@ -2,7 +2,9 @@
 :yuri_crazy:"Почему мы должны останавливаться?"
 :yuri_crazy:"Позвольте мне выкрикнуть все слова, застрявшие в моей больной голове!"
 :yuri_crazy:"ХАХАХА!"
-:gf_scared:"-!"
+:gf_spook:
+:playsound:glitch1
+:autoskip:"#($**&#&#@)*&#&$^$^&@*(($(#"
 :bf_scared:"-!"
 :sayori_ehh:"Ехехехе... Вы не должны были этого видеть."
 :hideright:
@@ -28,7 +30,7 @@
 :sayori_gone:"Неужели вы сделали невозможное?"
 :sayori_gone:"Вы прорвались из реального мира в цифровой?"
 :showbackgroundimage:evilcutin
-:autoskip:"..."
+:autoskip:"*%&^$*(%)^*&"
 :glitch:
 :showbackgroundimage:evil1
 :sayori_gone:"Вы бросили вызов самой логике и науке, только ради нас?"

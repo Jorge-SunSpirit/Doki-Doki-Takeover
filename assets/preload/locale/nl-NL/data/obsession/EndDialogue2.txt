@@ -22,13 +22,21 @@
 :monikasad:Maar dingen “werkten niet zo goed” wanneer er iemand afwezig is.
 :monikagasp:Als dat nog steeds het geval is terwijl ik er nu niet ben dan-
 :glitch:
+:showbackgroundimage:flashback2
+:hidedialogue:
 :monikagasp:-!
+:glitch:
+:showbackgroundimage:ending3
 :monikagasp:I-Ik heb een fout gemaakt-!
 :senpaihmm:M-Monika?! Wat gebeurt er met je?
 :monikasad:(Dit is niet goed. Ik moet-)
 :glitch:
+:showbackgroundimage:flashback3
+:hidedialogue:
 :monikasad:(-wacht! Die jongetje is daar ook?!)
 :monikasad:(Ik weet niet hoe hij en zijn vriendin daar in vredesnaam terecht zijn gekomen, maar als mijn vrienden zich zo gedragen-)
+:glitch:
+:showbackgroundimage:ending4
 :monikagasp:Ik moet dit zien op te lossen! Het maakt niet uit hoe!
 :senpaihmm:W-wat in hemelsnaam gebeurt er allemaal?
 :monikasad:Er moet toch iets zijn wat ik kan doen… iets… 
@@ -37,6 +45,9 @@
 :monikagasp:Misschien als ik…
 :monikagasp:-dit probeer!
 :glitch:
+:showbackgroundimage:ending5
+:playsound:glitch1
+:hidedialogue:
 :senpaihmm:-!
 :senpaihmm:...en toen was de enigste persoon die me ooit geïnteresseerd heeft in een flits vertrokken.
 :senpaihmm:Ah, verdorie.

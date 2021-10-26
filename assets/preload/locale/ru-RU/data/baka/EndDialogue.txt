@@ -11,13 +11,12 @@
 :monikauhohright:И благодаря этому, я повстречала своих замечательных друзей...
 :glitch:
 :showbackgroundimage:flashback1
-:monikagasp:...
+:hidedialogue:
 :glitch:
 :showbackgroundimage:ending2
 :monikagasp:-Агх!
 :monikagasp:(Я что, только что видела-)
-:monikagasp:(Это был-)
-:monikagasp:(Но почему-)
+:monikagasp:(Но почему..?)
 :senpaihmm:Ты снова странно себя ведешь, Моника. Ты же знаешь что можешь всегда рассказать мне, в чем бы ни было дело.
 :monikagasp:Я-я в порядке... В порядке!
 :monikauhohright:Не нужно беспокоится обо мне, хахаха-

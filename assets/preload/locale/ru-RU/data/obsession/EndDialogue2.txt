@@ -20,13 +20,21 @@
 :monikasad:Но игра не работала “правильно” когда присутствовали не все.
 :monikagasp:Если это все еще так, и меня там нет, то-
 :glitch:
+:showbackgroundimage:flashback2
+:hidedialogue:
 :monikagasp:-!
+:glitch:
+:showbackgroundimage:ending3
 :monikagasp:Я- Я совершила большую ошибку-!
 :senpaihmm:М-Моника?! Что с тобой происходит?
 :monikasad:(Это очень плохо. Я должна-)
 :glitch:
+:showbackgroundimage:flashback3
+:hidedialogue:
 :monikasad:(Погодите-! Мальчишка тоже там?-)
 :monikasad:(Черт возьми, я не знаю как он там оказался, но если мои друзья ведут себя так-)
+:glitch:
+:showbackgroundimage:ending4
 :monikagasp:Я должна все исправить! Любой ценой!
 :senpaihmm:Ч-что черт возьми, происходит?!
 :monikasad:Должен же быть способ... любой...
@@ -35,6 +43,9 @@
 :monikagasp:Может если я просто...
 :monikagasp:Попробую вот это!
 :glitch:
+:showbackgroundimage:ending5
+:playsound:glitch1
+:hidedialogue:
 :senpaihmm:-!
 :senpaihmm:...И вот так, единственная, кто когда-либо меня по-настоящему заинтриговал, испарилась в мгновение ока.
 :senpaihmm:Ах, горе мне!
