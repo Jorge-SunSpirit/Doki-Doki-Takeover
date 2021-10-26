@@ -342,8 +342,9 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		isCommand = false;
 		cleanDialog();
-		if (PlayState.SONG.noteStyle == 'pixel' || isPixel)
+		if (box.visible == false)
 		{
+			bgFade.visible = true;
 			box.visible = true;
 		}
 
@@ -1216,6 +1217,11 @@ class DialogueBox extends FlxSpriteGroup
 					skipText.visible = false;
 					canFullSkip = false;
 					enddialogue();
+				case 'hidedialogue':
+					bgFade.visible = false;
+					box.visible = false;
+					portraitRight.visible = false;
+					portraitLeft.visible = false;
 			}
 		}
 

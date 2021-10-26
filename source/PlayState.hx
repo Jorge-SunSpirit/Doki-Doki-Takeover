@@ -2110,6 +2110,8 @@ class PlayState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('PixelToNonPixel'));
 				new FlxTimer().start(4, function(swagTimer:FlxTimer)
 				{
+					add(imageBG);
+					imageBG.loadGraphic(Paths.image('dialogue/bgs/ending6', 'doki'));
 					monikatransformer.alpha = 0;
 					endcutscene(doof4);
 				});
@@ -5468,7 +5470,7 @@ class PlayState extends MusicBeatState
 					case 136:
 						// shit gets serious
 						yuriGoCrazy();
-					case 141:
+					case 142:
 						remove(blackScreen);
 						staticshock.alpha = 0.1;
 
