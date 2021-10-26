@@ -88,7 +88,7 @@ descKeyBindKBCurrent::Modo Atual: Teclado.
 descKeyBindGPCurrent::Modo Atual: Gamepad.
 descKeyBindTAB::Pressione Tab para mudar.
 descKeyBindKBControls::ESC para salvar, Backspace para sair sem salvar. Enter para mudar uma tecla.
-descKeyBindGPControls::Gatilho Direito para salvar, Gatilho Direito para sair sem salvar. Start para mudar uma keybind.
+descKeyBindGPControls::Gatilho Direito para salvar, Gatilho Esquerdo para sair sem salvar. Start para mudar uma keybind.
 descKeyBindBlacklist::Está proibida!
 descCharacterCache::Reduz tempos de carregamento fazendo caching de todos os personagens ao iniciar o jogo. (GRANDE USO DE MEMÓRIA)
 descSongCache::Reduz tempos de carregamento fazendo caching de todas as músicas jogáveis ao iniciar o jogo. (GRANDE USO DE MEMÓRIA)

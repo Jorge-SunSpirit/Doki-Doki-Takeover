@@ -88,7 +88,7 @@ descKeyBindKBCurrent::Current Mode: Keyboard.
 descKeyBindGPCurrent::Current Mode: Gamepad.
 descKeyBindTAB::Press Tab to switch.
 descKeyBindKBControls::Escape to save, Backspace to leave without saving. Enter to change a keybind.
-descKeyBindGPControls::Right Trigger to save, Right Trigger to leave without saving. Start to change a keybind.
+descKeyBindGPControls::Right Trigger to save, Left Trigger to leave without saving. Start to change a keybind.
 descKeyBindBlacklist::is blacklisted!
 descCharacterCache::Reduce load times by caching every character on boot. (MAJOR MEMORY USAGE)
 descSongCache::Reduce load times by caching every song on boot. (MAJOR MEMORY USAGE)

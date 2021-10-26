@@ -88,7 +88,7 @@ descKeyBindKBCurrent::Huidige Besturing: Toetsenbord.
 descKeyBindGPCurrent::Huidige Besturing: Gamepad.
 descKeyBindTAB::Druk op Tab om te wisselen.
 descKeyBindKBControls::Escape om op te slaan, Backspace om af te sluiten zonder op te slaan. Enter om een sneltoets te veranderen.
-descKeyBindGPControls::Rechter Trigger om op te slaan, Rechter Trigger om af te sluiten zonder op te slaan. Start om een sneltoets te veranderen.
+descKeyBindGPControls::Rechter Trigger om op te slaan, Links Trigger om af te sluiten zonder op te slaan. Start om een sneltoets te veranderen.
 descKeyBindBlacklist::staat op de zwarte lijst!
 descCharacterCache::Verminder de laadtijd door elk personage in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
 descSongCache::Verminder de laadtijd door elk liedje in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)

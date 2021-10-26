@@ -85,7 +85,7 @@ descKeyBindKBCurrent::Mode actuel : Clavier.
 descKeyBindGPCurrent::Mode actuel : Manette de Jeu.
 descKeyBindTAB::Appuyez sur Tab pour changer.
 descKeyBindKBControls::Échap pour enregistrer, Retour partir sans enregistrer. Enter pour modifier un raccourci clavier.
-descKeyBindGPControls::Gâchette droite pour enregistrer, Gâchette droite pour quitter sans enregistrer. Start pour modifier un raccourci clavier.
+descKeyBindGPControls::Gâchette droite pour enregistrer, Gâchette gauche pour quitter sans enregistrer. Start pour modifier un raccourci clavier.
 descKeyBindBlacklist::est sur liste noire !
 descCharacterCache::Réduisez les temps de chargement en mettant en cache chaques personnages au démarrage. (UTILISATION MAJEURE DE LA MÉMOIRE)
 descSongCache::Réduisez les temps de chargement en mettant en cache chaques chansons au démarrage. (UTILISATION MAJEURE DE LA MÉMOIRE)
