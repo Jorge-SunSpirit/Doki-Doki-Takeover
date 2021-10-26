@@ -239,6 +239,7 @@ class PlayState extends MusicBeatState
 	var fc:Bool = true;
 
 	var isintro:Bool = true;
+	var incutsceneforendingsmh:Bool = false;
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
@@ -2503,7 +2504,7 @@ class PlayState extends MusicBeatState
 		FlxG.camera.zoom = defaultCamZoom;
 		camHUD.visible = true;
 		midsongcutscene = true;
-
+		incutsceneforendingsmh = false;
 		showCutscene = false;
 		inCutscene = false;
 
@@ -2702,6 +2703,8 @@ class PlayState extends MusicBeatState
 
 	function startSong():Void
 	{
+		incutsceneforendingsmh = false;
+
 		midsongcutscene == true;
 		startingSong = false;
 		songStarted = true;
@@ -4078,44 +4081,49 @@ class PlayState extends MusicBeatState
 
 	function songOutro():Void
 	{
+		trace('testing');
 		isintro = false;
 		midsongcutscene = false;
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
 		canPause = false;
 
-		if (isStoryMode)
+		if (!incutsceneforendingsmh)
 		{
-			switch (curSong.toLowerCase())
+			incutsceneforendingsmh = true;
+			if (isStoryMode)
 			{
-				case 'high school conflict':
-					endcutscene(doof4);
-				case 'bara no yume':
-					endcutscene(doof4);
-				case 'your demise':
-					endcutscene(doof2);
-				case 'my confession':
-					DialogueBox.isPixel = true;
-					endcutscene(doof3);
-				case 'baka':
-					DialogueBox.isPixel = true;
-					endcutscene(doof3);
-				case 'obsession':
-					remove(whiteflash);
-					staticshock.visible = false;
-					endcutscene(doof2);
-				case 'glitcher (monika mix)':
-					endcutscene(doof2);
-				default:
-					endSong();
+				switch (curSong.toLowerCase())
+				{
+					case 'high school conflict':
+						endcutscene(doof4);
+					case 'bara no yume':
+						endcutscene(doof4);
+					case 'your demise':
+						endcutscene(doof2);
+					case 'my confession':
+						DialogueBox.isPixel = true;
+						endcutscene(doof3);
+					case 'baka':
+						DialogueBox.isPixel = true;
+						endcutscene(doof3);
+					case 'obsession':
+						remove(whiteflash);
+						staticshock.visible = false;
+						endcutscene(doof2);
+					case 'glitcher (monika mix)':
+						endcutscene(doof2);
+					default:
+						endSong();
+				}
 			}
-		}
-		else
-		{
-			switch (curSong.toLowerCase())
+			else
 			{
-				default:
-					endSong();
+				switch (curSong.toLowerCase())
+				{
+					default:
+						endSong();
+				}
 			}
 		}
 	}
