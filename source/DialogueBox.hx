@@ -563,6 +563,8 @@ class DialogueBox extends FlxSpriteGroup
 					box.visible = false;
 					portraitRight.visible = false;
 					portraitLeft.visible = false;
+				case 'hidebgfade':
+					bgFade.alpha = 0;
 			}
 		}
 		else
@@ -1222,6 +1224,8 @@ class DialogueBox extends FlxSpriteGroup
 					box.visible = false;
 					portraitRight.visible = false;
 					portraitLeft.visible = false;
+				case 'hidebgfade':
+					bgFade.alpha = 0;
 			}
 		}
 

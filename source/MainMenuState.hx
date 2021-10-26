@@ -370,7 +370,7 @@ class MainMenuState extends MusicBeatState
 				menu_character.frames = Paths.getSparrowAtlas('menucharacters/sayozip');
 				menu_character.antialiasing = true;
 				menu_character.scale.set(.8, .8);
-				menu_character.animation.addByPrefix('play', 'Sayo Zipper Menu', 24, false);
+				menu_character.animation.addByPrefix('play', 'Sayo Zipper Menu', 24);
 				menu_character.updateHitbox();
 				menu_character.animation.play('play');
 				add(menu_character);
@@ -612,8 +612,8 @@ class MainMenuState extends MusicBeatState
 
 		logoBl.animation.play('bump', true);
 
-		if ((show == 'protag' || show == 'fumo' || show == 'zipori' || show == 'together1' || show == 'together' || show == 'akimonika' || show == 'monika'
-			|| show == 'yuri' || show == 'natsuki' || show == 'sayori' || show == 'pixelmonika' || show == 'minusmonikapixel')
+		if ((show == 'protag' || show == 'fumo' || show == 'together1' || show == 'together' || show == 'akimonika' || show == 'monika' || show == 'yuri'
+			|| show == 'natsuki' || show == 'sayori' || show == 'pixelmonika' || show == 'minusmonikapixel')
 			&& curBeat % 2 == 0)
 			menu_character.animation.play('play', true);
 	}

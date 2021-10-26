@@ -1,3 +1,4 @@
+:hidebgfade:
 :disableskip:
 :hidedialogue:
 :monika_ahaha:"It... it worked!"
