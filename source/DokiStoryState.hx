@@ -649,7 +649,11 @@ class DokiStoryState extends MusicBeatState
 					LoadingState.loadAndSwitchState(new PlayState(), true);
 					trace("Monika Week Selected");
 				case 1:
-					LoadingState.loadAndSwitchState(new PlayState(), true);
+					#if FEATURE_WEBM
+					LoadingState.loadAndSwitchState(new VideoState('assets/videos/sayointro/intro.webm', new PlayState()));
+					#else
+					LoadingState.loadAndSwitchState(new PlayState());
+					#end
 					trace("Sayori Selected");
 				case 2:
 					LoadingState.loadAndSwitchState(new PlayState(), true);
