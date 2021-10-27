@@ -3276,17 +3276,26 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.SEVEN)
 		{
-			#if FEATURE_DISCORD
-			DiscordClient.changePresence("Chart Editor", null, null, true);
-			#end
-			FlxG.switchState(new ChartingState());
-			#if FEATURE_LUAMODCHART
-			if (luaModchart != null)
+			if (FlxG.save.data.unlockepip)
 			{
-				luaModchart.die();
-				luaModchart = null;
+				#if FEATURE_DISCORD
+				DiscordClient.changePresence("Chart Editor", null, null, true);
+				#end
+				FlxG.switchState(new ChartingState());
+				#if FEATURE_LUAMODCHART
+				if (luaModchart != null)
+				{
+					luaModchart.die();
+					luaModchart = null;
+				}
+				#end
 			}
-			#end
+			else
+			{
+				FlxTransitionableState.skipNextTransOut = true;
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxG.switchState(new GitarooPause());
+			}
 		}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);

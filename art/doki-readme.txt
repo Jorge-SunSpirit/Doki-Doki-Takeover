@@ -63,7 +63,7 @@ SoftTurnip [French] - https://twitter.com/Ruffles_Savoie
 ClemO [Russian] - https://twitter.com/ClemO___O
 CrimiiCrim [Dutch] - https://twitter.com/CrimiiCrim
 SouLegal [Brazilian Portuguese] - https://twitter.com/nickstwt
-Aizakku [Brazilian Portuguese]
+Aizakku [Brazilian Portuguese] - https://gamebanana.com/members/1875729
 
 Voices:
 Phebe Fabacher [Sayori Speaking Voice] - https://twitter.com/HarudoriVA
@@ -79,7 +79,7 @@ CelShader - https://twitter.com/CELSHDR
 ClemO - https://twitter.com/ClemO___O
 HighPoweredKeyz - https://twitter.com/HighPoweredArt
 Kallionic - https://youtube.com/kallionic
-kekb
+kekb - https://www.youtube.com/channel/UCbty7MoajjV1ZbmYz2OtDLw/videos
 Matt$ - https://twitter.com/matt_currency
 Saruky - https://twitter.com/Saruky__
 Starrie_blu - https://twitter.com/starrie_blu

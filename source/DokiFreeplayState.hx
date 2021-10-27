@@ -299,7 +299,7 @@ class DokiFreeplayState extends MusicBeatState
 				changeDiff(1);
 			}
 
-			if (FlxG.keys.justPressed.SEVEN && diffselect)
+			if (FlxG.keys.justPressed.SEVEN && diffselect && FlxG.save.data.unlockepip)
 				loadSong(true);
 
 			if (controls.ACCEPT && songs[curSelected].songName.toLowerCase() == 'your reality')
