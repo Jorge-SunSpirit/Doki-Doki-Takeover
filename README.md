@@ -25,8 +25,6 @@ DDLC+ Links: **[DDLC+ Official Website](http://ddlc.plus) ⋅ [Steam page](https
 - [CrimiiCrim, Dutch Translation](https://twitter.com/CrimiiCrim)
 - [SouLegal, Brazilian Portuguese Translation](https://twitter.com/nickstwt)
 - [Aizakku, Brazilian Portuguese Translation]
-- 
-- 
 
 ### Special Thanks
 
