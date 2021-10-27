@@ -5562,7 +5562,7 @@ class PlayState extends MusicBeatState
 		iconP1.changeIcon('bf-pixel');
 		iconP2.changeIcon('monika');
 
-		if (FlxG.save.data.songPosition)
+		if (FlxG.save.data.songPosition && songName != null)
 			songName.antialiasing = false;
 
 		scoreTxt.antialiasing = false;
@@ -5628,7 +5628,7 @@ class PlayState extends MusicBeatState
 		protag.visible = true;
 		yuri.visible = true;
 
-		if (FlxG.save.data.songPosition)
+		if (FlxG.save.data.songPosition && songName != null)
 			songName.antialiasing = true;
 
 		scoreTxt.antialiasing = true;
