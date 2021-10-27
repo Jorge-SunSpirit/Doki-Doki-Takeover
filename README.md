@@ -15,10 +15,18 @@ DDLC+ Links: **[DDLC+ Official Website](http://ddlc.plus) ⋅ [Steam page](https
 - [Jorge_SunSpirit](https://twitter.com/Jorge_SunSpirit) and [M&M](https://twitter.com/ActualMandM) - Programming
 - [SirDusterBuster](https://twitter.com/SirDusterBuster) and [TokyoGalaxyOG](https://twitter.com/TokyoGalaxyOG) - Art
 - [CelShader](https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ), [Kallionic](https://youtube.com/kallionic), [Stardust Tunes](https://twitter.com/StardustTunes), [Clem](https://twitter.com/ClemO___O), [blufirecat](https://twitter.com/starrie_blu), [Saruky](https://twitter.com/Saruky__), [Matt$](https://twitter.com/matt_currency), [HPK](https://twitter.com/HighPoweredArt) - Music
-- [Esther Christo, voice of Monika (as a bonus)](https://twitter.com/carimellevo)
+- [Esther Christo, voice of Monika](https://twitter.com/carimellevo)
 - [Miss Beepy, voice of Natsuki](https://twitter.com/MissBeepy)
 - [Loganne Digma, voice of Yuri](https://twitter.com/Loganne_Digma)
 - [Phebe Fabacher, voice of Sayori](https://twitter.com/HarudoriVA)
+- [Sulayre, Spanish translation](https://twitter.com/Sulayre)
+- [SoftTurnip. French translation](https://twitter.com/Ruffles_Savoie)
+- [Clem, Russian Translation](https://twitter.com/ClemO___O)
+- [CrimiiCrim, Dutch Translation](https://twitter.com/CrimiiCrim)
+- [SouLegal, Brazilian Portuguese Translation](https://twitter.com/nickstwt)
+- [Aizakku, Brazilian Portuguese Translation]
+- 
+- 
 
 ### Special Thanks
 
