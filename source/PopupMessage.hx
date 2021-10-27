@@ -78,7 +78,7 @@ class PopupMessage extends MusicBeatSubstate
 				DokiStoryState.popupWeek = 0;
 				DokiStoryState.secondaryPopUp = false;
 			}
-			else if (DokiStoryState.popupWeek == 1 || DokiStoryState.popupWeek == 5)
+			else if (DokiStoryState.popupWeek == 1 || DokiStoryState.popupWeek == 2 || DokiStoryState.popupWeek == 5)
 				DokiStoryState.secondaryPopUp = true;
 
 			if (!FlxG.sound.music.playing)
