@@ -57,6 +57,7 @@ optLaneUnderwayOn::Subrallado de Carril
 optLaneUnderwayOff::Sin Subrallado de Carril
 optSaveReset::Reiniciar Datos de Guardado
 optSaveResetConfirm::Confirmar Reinicio de Datos de Guardado
+optSelfAware::Self Awareness
 // DESCRIPTION
 descAddOffset::Añade un valor al desplazamiento global, por canción.
 descKeyBindings::Cambiar las teclas de cada nota.

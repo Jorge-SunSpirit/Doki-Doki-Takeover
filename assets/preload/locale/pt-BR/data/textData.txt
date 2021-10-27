@@ -57,6 +57,7 @@ optLaneUnderwayOn::Underlay de Pista
 optLaneUnderwayOff::Sem Underlay de Pista
 optSaveReset::Resetar Seu Save File
 optSaveResetConfirm::Confirmar Resetar Save File
+optSelfAware::Self Awareness
 // DESCRIPTION
 descAddOffset::Adiciona valor ao offset global, por música.
 descKeyBindings::Muda as teclas de cada seta.

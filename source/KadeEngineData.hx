@@ -106,6 +106,9 @@ class KadeEngineData
 		if (FlxG.save.data.laneTransparency == null)
 			FlxG.save.data.laneTransparency = 0.5;
 
+		if (FlxG.save.data.selfAware == null)
+			FlxG.save.data.selfAware = true;
+
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
 		KeyBinds.gamepad = gamepad != null;

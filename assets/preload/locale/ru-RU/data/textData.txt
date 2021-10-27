@@ -57,6 +57,7 @@ optLaneUnderwayOn::Lane Underlay
 optLaneUnderwayOff::Без Lane Underlay
 optSaveReset::Обнулить файл сохранения
 optSaveResetConfirm::Подтвердить обнуление?
+optSelfAware::Self Awareness
 // DESCRIPTION
 descAddOffset::Добавляет задержку к нотам, применяется ко всем песням.
 descKeyBindings::Сменить назначения клавиш для каждой ноты.

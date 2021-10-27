@@ -57,6 +57,7 @@ optLaneUnderwayOn::Lane Underlay
 optLaneUnderwayOff::No Lane Underlay
 optSaveReset::Reset Save File
 optSaveResetConfirm::Confirm Reset Save File
+optSelfAware::Self Awareness
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.

@@ -881,6 +881,7 @@ class ResetSave extends Option
 		FlxG.save.data.gpdownBind = null;
 		FlxG.save.data.gpleftBind = null;
 		FlxG.save.data.gprightBind = null;
+		FlxG.save.data.selfAware = null;
 		FlxG.save.data.songScores = null;
 		for (key in Highscore.songScores.keys())
 		{
@@ -907,5 +908,27 @@ class ResetSave extends Option
 	private override function updateDisplay():String
 	{
 		return confirm ? LangUtil.getString('optSaveResetConfirm') : LangUtil.getString('optSaveReset');
+	}
+}
+
+class SelfAwareness extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.selfAware = !FlxG.save.data.selfAware;
+
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optSelfAware') + ' ' + (FlxG.save.data.selfAware ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }

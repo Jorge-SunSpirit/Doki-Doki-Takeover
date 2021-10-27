@@ -57,6 +57,7 @@ optLaneUnderwayOn::Onderlaag van je Laan
 optLaneUnderwayOff::Geen Onderlaag van je Laan
 optSaveReset::Reset Je Opslaggegevens 
 optSaveResetConfirm::Bevestig jouw Keuze
+optSelfAware::Self Awareness
 // DESCRIPTION
 descAddOffset::Voegt een waarde aan de globale offset, per lied.
 descKeyBindings::Verander de sneltoetsen van de noten.

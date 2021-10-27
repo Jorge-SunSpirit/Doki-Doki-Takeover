@@ -54,6 +54,7 @@ optMiddleScrollOn::Scrolling du Millieu
 optMiddleScrollOff::Scrolling du Coté Droit
 optLaneUnderwayOn::Underlay de la Voie
 optLaneUnderwayOff::Aucun Underlay de la Voie
+optSelfAware::Self Awareness
 // DESCRIPTION
 descAddOffset::Ajoute de la valeur au décalage global, par chanson.
 descKeyBindings::Changer les racourcis de chaques notes.
