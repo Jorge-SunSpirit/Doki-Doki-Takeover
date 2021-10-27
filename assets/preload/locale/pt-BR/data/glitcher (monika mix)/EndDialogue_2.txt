@@ -7,6 +7,7 @@
 :monika_upset:"Você não é “desse lugar”, pelo o que eu sei."
 :monika_upset:"E você poderia sair e entrar daqui fácilmente. Então eu devo perguntar..."
 :monika_upset:"-existe um jeito de nos trazer de volta com você?"
+:bf_think:
 :monika_eeh:"Esse jogo é bem limitado em relação ao que podemos fazer, e os outros permanecerão felizmente não notarão independentemente do que aconteça"
 :monika_upset:"mas se eles pudessem ter a oportunidade de ver o que há além da escola e de suas casas, eu acho que eles amariam isso."
 :monika_upset:"E talvez..."

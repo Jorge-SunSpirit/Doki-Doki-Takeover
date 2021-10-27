@@ -7,6 +7,7 @@
 :monika_upset:"Zover ik gezien heb, komen jullie hier niet vandaan."
 :monika_upset:"Jullie kunnen deze plek heel gemakkelijk betreden en verlaten. Dus wou ik vragen… "
 :monika_upset:"Of er een manier is om ons met jullie mee terug te nemen?"
+:bf_think:
 :monika_eeh:"Dit spel is zeer beperkt in wat we wel of niet kunnen doen. De anderen zullen zich er niet bewust van zijn wat er gebeurt."
 :monika_upset:"Maar als ze de kans zouden krijgen om te zien wat er buiten hun school en huizen te vinden is, denk ik dat ze dat geweldig zouden vinden."
 :monika_upset:"En misschien…"

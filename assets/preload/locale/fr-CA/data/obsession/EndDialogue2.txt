@@ -1,3 +1,4 @@
+:disableskip:
 :senpaihmm:...the Literature Club? I do admit, I never fancied myself the reading or writing type.
 :senpaihappy:That comes as a shock to many, when they all say I have such a way with words.
 :senpaihappy:And they're so right~
@@ -25,6 +26,7 @@
 :monikagasp:-!
 :glitch:
 :showbackgroundimage:ending3
+:startmusic:ghost
 :monikagasp:I- I made a mistake-!
 :senpaihmm:M-Monika?! What's happening to you?
 :monikasad:(This is really bad. I gotta-)
@@ -35,6 +37,8 @@
 :monikasad:(Damn it, I don't know how him and his girlfriend even got there, but if my friends are acting like this-)
 :glitch:
 :showbackgroundimage:ending4
+:hidedialogue:
+:playsound:glitch2
 :monikagasp:I gotta fix this! Somehow!
 :senpaihmm:Wh-what in the fresh hell is all this?!
 :monikasad:There's gotta be something... something...
@@ -44,6 +48,7 @@
 :monikagasp:-try this!
 :glitch:
 :showbackgroundimage:ending5
+:endmusic:
 :playsound:glitch1
 :hidedialogue:
 :senpaihmm:-!

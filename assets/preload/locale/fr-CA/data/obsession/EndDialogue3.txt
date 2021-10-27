@@ -1,4 +1,5 @@
 :disableskip:
+:hidedialogue:
 :monika_ahaha:"It... it worked!"
 :bf_scared:"..."
 :gf_scared:"..."
