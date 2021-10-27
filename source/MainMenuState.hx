@@ -407,6 +407,24 @@ class MainMenuState extends MusicBeatState
 				menuItem.x = 50;
 		}
 
+		var versionShit:FlxText = new FlxText(-350, FlxG.height - 24, 0, "v" + Application.current.meta.get('version'), 12);
+		versionShit.scrollFactor.set();
+		versionShit.antialiasing = true;
+		versionShit.setFormat(LangUtil.getFont('aller'), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShit);
+
+		if (firstStart)
+			FlxTween.tween(versionShit, {x: 5}, 1.2, {
+				ease: FlxEase.elasticOut,
+				onComplete: function(flxTween:FlxTween)
+				{
+					firstStart = false;
+					changeItem();
+				}
+			});
+		else
+			versionShit.x = 5;
+
 		FlxG.camera.follow(camFollow, null, 0.60 * (60 / FlxG.save.data.fpsCap));
 
 		// NG.core.calls.event.logEvent('swag').send();
