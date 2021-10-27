@@ -1600,13 +1600,13 @@ class PlayState extends MusicBeatState
 			add(songPosBG);
 
 			songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
-				'songPositionBar', 0, 90000);
+				'songPositionBar', 0, songLength);
 			songPosBar.scrollFactor.set();
 			songPosBar.createFilledBar(FlxColor.GRAY, FlxColor.LIME);
 			songPosBar.cameras = [camHUD];
 			add(songPosBar);
 
-			var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20, songPosBG.y, 0, SONG.song, 16);
+			var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - (SONG.song.length * 5), songPosBG.y, 0, SONG.song, 16);
 			if (FlxG.save.data.downscroll)
 				songName.y -= 3;
 			songName.screenCenter(X);
@@ -2730,9 +2730,6 @@ class PlayState extends MusicBeatState
 		if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith("sing"))
 			spirit.dance();
 
-		// Song duration in a float, useful for the time left feature
-		songLength = FlxG.sound.music.length;
-
 		/*
 			// Song check real quick
 			switch(curSong)
@@ -2777,6 +2774,9 @@ class PlayState extends MusicBeatState
 			vocals = new FlxSound();
 
 		FlxG.sound.list.add(vocals);
+
+		// Song duration in a float, useful for the time left feature
+		songLength = FlxG.sound.music.length / 1000;
 
 		notes = new FlxTypedGroup<Note>();
 		add(notes);
@@ -3401,7 +3401,7 @@ class PlayState extends MusicBeatState
 				{
 					FlxG.sound.music._channel.
 			}*/
-			songPositionBar = Conductor.songPosition;
+			songPositionBar = (Conductor.songPosition - songLength) / 1000;
 
 			if (!paused)
 			{
@@ -5257,9 +5257,6 @@ class PlayState extends MusicBeatState
 		// yes this is bad
 		// but i'm doing it to update misses and accuracy
 		#if FEATURE_DISCORD
-		// Song duration in a float, useful for the time left feature
-		songLength = FlxG.sound.music.length;
-
 		// Updating Discord Rich Presence (with Time Left)
 		DiscordClient.changePresence(detailsText
 			+ " "
