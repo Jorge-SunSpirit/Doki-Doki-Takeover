@@ -109,6 +109,7 @@ class PlayState extends MusicBeatState
 	var iconRPC:String = "";
 	var detailsText:String = "";
 	var detailsPausedText:String = "";
+	var songLengthDiscord:Float = 0;
 	#end
 
 	private var vocals:FlxSound;
@@ -2777,6 +2778,9 @@ class PlayState extends MusicBeatState
 
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length / 1000;
+		#if FEATURE_DISCORD
+		songLengthDiscord = FlxG.sound.music.length;
+		#end
 
 		notes = new FlxTypedGroup<Note>();
 		add(notes);
@@ -3089,7 +3093,7 @@ class PlayState extends MusicBeatState
 					+ songScore
 					+ " | Misses: "
 					+ misses, iconRPC, true,
-					songLength
+					songLengthDiscord
 					- Conductor.songPosition);
 			}
 			else
@@ -5271,7 +5275,7 @@ class PlayState extends MusicBeatState
 			+ songScore
 			+ " | Misses: "
 			+ misses, iconRPC, true,
-			songLength
+			songLengthDiscord
 			- Conductor.songPosition);
 		#end
 	}
