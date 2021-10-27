@@ -102,6 +102,7 @@ msgSayo::Les chansons de Sayori sont désormais disponibles dans le menu Freepla
 msgGFCount::"Girlfriend Countdown" Débloqué!{NL}Activez le dans le menu Options.
 msgNat::Les chansons de Natsuki sont maintenant disponibles dans le menu Freeplay.
 msgYuri::Les chansons de Yuri sont maintenant disponibles dans le menu Freeplay.
+msgFestival::The Festival songs are now available in the Freeplay menu.
 msgExtra1::"Poems n' Thorns" Débloqué!{NL}Accédez à la chanson dans le menu Freeplay.
 msgExtra2::"Dual Demise" Débloqué!{NL}Accédez à la chanson dans le menu Freeplay.
 msgExtra3::"Epiphany"{NL}Débloqué.

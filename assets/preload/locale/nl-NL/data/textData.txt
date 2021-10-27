@@ -107,7 +107,7 @@ msgSayo::Sayori's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
 msgGFCount::"Girlfriend Countdown" Ontgrendeld!{NL}Zet het aan via de Opties Menu.
 msgNat::Natsuki's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
 msgYuri::Yuri's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
+msgFestival::Liedjes van Het Festival zijn nu toegankelijk in het Vrije Spel Menu.
 msgExtra1::"Poems 'n Thorns" Ontgrendeld!{NL}Krijg toegang tot het lied in het Vrije Spel Menu.
 msgExtra2::"Dual Demise" Ontgrendeld!{NL}Krijg toegang tot het lied in het Vrije Spel Menu.
 msgExtra3::Epiphany{NL}ontgrendeld.
-msgFestival::Liedjes van Het Festival zijn nu toegankelijk in het Vrije Spel Menu.
