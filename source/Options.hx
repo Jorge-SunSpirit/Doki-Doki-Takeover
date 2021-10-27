@@ -881,7 +881,6 @@ class ResetSave extends Option
 		FlxG.save.data.gpdownBind = null;
 		FlxG.save.data.gpleftBind = null;
 		FlxG.save.data.gprightBind = null;
-		FlxG.save.data.selfAware = null;
 		FlxG.save.data.songScores = null;
 		for (key in Highscore.songScores.keys())
 		{
