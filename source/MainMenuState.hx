@@ -553,12 +553,24 @@ class MainMenuState extends MusicBeatState
 				FlxG.switchState(new DokiFreeplayState());
 				trace("Freeplay Menu Selected");
 			case 'credits':
-				// make VideoState work for this
-				#if FEATURE_WEBM
-				FlxG.switchState(new VideoState('assets/videos/credits/credits.webm', new MainMenuState()));
-				#else
-				FlxG.switchState(new MainMenuState());
-				#end
+				if (FlxG.keys.pressed.G)
+				{
+					// Hueh keeping this forever
+					#if linux
+					Sys.command('/usr/bin/xdg-open', ["https://www.youtube.com/watch?v=0MW9Nrg_kZU", "&"]);
+					#else
+					FlxG.openURL('https://www.youtube.com/watch?v=0MW9Nrg_kZU');
+					#end
+					FlxG.switchState(new MainMenuState());
+				}
+				else
+				{
+					#if FEATURE_WEBM
+					FlxG.switchState(new VideoState('assets/videos/credits/credits.webm', new MainMenuState()));
+					#else
+					FlxG.switchState(new MainMenuState());
+					#end
+				}
 				trace("Credits Menu Selected");
 			case 'unlock':
 				trace('hello');
