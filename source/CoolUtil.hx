@@ -19,7 +19,8 @@ class CoolUtil
 		'bdcam',
 		'fraps',
 		'xsplit', // TIL c# program
-		'hycam2' // hueh
+		'hycam2', // hueh
+		'twitchstudio' // why
 	];
 
 	public static var pfpPath:String = '';
