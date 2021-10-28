@@ -44,7 +44,8 @@ class OptionsMenu extends MusicBeatState
 			new AccuracyDOption(LangUtil.getString('descAccuracyMode')),
 			new ResetButtonOption(LangUtil.getString('descReset')),
 			new BotPlay(LangUtil.getString('descBotplay')),
-			new SelfAwareness('...'),
+			#if FEATURE_OBS new SelfAwareness('...'),
+			#end
 			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
 		new OptionCategory(LangUtil.getString('catAppearance'), [

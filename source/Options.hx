@@ -910,6 +910,7 @@ class ResetSave extends Option
 	}
 }
 
+#if FEATURE_OBS
 class SelfAwareness extends Option
 {
 	public function new(desc:String)
@@ -931,3 +932,4 @@ class SelfAwareness extends Option
 		return LangUtil.getString('optSelfAware') + ' ' + (FlxG.save.data.selfAware ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
+#end
