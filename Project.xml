@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.ddtoteam.dokitakeover" main="Main" version="2.0.2" company="DDTO Team" />
+	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.ddtoteam.dokitakeover" main="Main" version="2.0.3" company="DDTO Team" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />

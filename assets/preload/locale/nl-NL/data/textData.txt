@@ -2,7 +2,7 @@
 cmnEasy::MAKKELIJK
 cmnNormal::NORMAAL
 cmnHard::MOELIJK
-cmnPB::PERSOONLIJKE RECORD
+cmnPB::PERSOONLIJK RECORD
 cmnScore::Score
 cmnNPS::NPS
 cmnMaxNPS::Max
@@ -15,7 +15,7 @@ cmnOff::Uit
 cmnDesc::Beschrijving
 cmnOffset::Offset (Links, Rechts, Shift voor langzaam)
 cmnAddOffset::Toegevoegde Offset (Links of Rechts)
-cmnCategory::Selecteer een categorie
+cmnCategory::Selecteer een Categorie
 cmnCaching::Caching
 // CATEGORY
 catGameplay::Gameplay
@@ -56,10 +56,10 @@ optMiddleScrollOff::Laan Niet In Het Midden
 optLaneUnderwayOn::Onderlaag van je Laan
 optLaneUnderwayOff::Geen Onderlaag van je Laan
 optSaveReset::Reset Je Opslaggegevens 
-optSaveResetConfirm::Bevestig jouw Keuze
-optSelfAware::Self Awareness
+optSaveResetConfirm::Bevestig Jouw Keuze
+optSelfAware::Zelfbewustzijn
 // DESCRIPTION
-descAddOffset::Voegt een waarde aan de globale offset, per lied.
+descAddOffset::Voegt een waarde aan de globale offset toe, per lied.
 descKeyBindings::Verander de sneltoetsen van de noten.
 descDownscroll::Veranderd de richting van de aankomende noten.
 descGhostTap::Ghost Tapping houdt in dat je niet mist als je een richting tikt.
@@ -89,7 +89,7 @@ descKeyBindKBCurrent::Huidige Besturing: Toetsenbord.
 descKeyBindGPCurrent::Huidige Besturing: Gamepad.
 descKeyBindTAB::Druk op Tab om te wisselen.
 descKeyBindKBControls::Escape om op te slaan, Backspace om af te sluiten zonder op te slaan. Enter om een sneltoets te veranderen.
-descKeyBindGPControls::Rechter Trigger om op te slaan, Links Trigger om af te sluiten zonder op te slaan. Start om een sneltoets te veranderen.
+descKeyBindGPControls::Rechter Trigger om op te slaan, Linker Trigger om af te sluiten zonder op te slaan. Start om een sneltoets te veranderen.
 descKeyBindBlacklist::staat op de zwarte lijst!
 descCharacterCache::Verminder de laadtijd door elk personage in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
 descSongCache::Verminder de laadtijd door elk liedje in het cachegeheugen op te slaan. (VEEL GEHEUGENGEBRUIK)
@@ -98,12 +98,12 @@ descSoundCache::Verminder de laadtijd door elk geluidjein het cachegeheugen op t
 descCaching::Verminder de laadtijd door de geselecteerde opties hierboven te laden.
 descDisableCaching::(druk op D om de volgende boot uit te schakelen)
 descMiddleScroll::Zet jouw laan in het midden of aan de rechterkant. 
-descLaneUnderway::Zet de Onderlaag van jouw Laan aan of uit.
-descLaneUnderwayControl::De doorzichtigheid van de onderlaag van jouw laan.
+descLaneUnderway::Zet de onderlaag van jouw laan aan of uit.
+descLaneUnderwayControl::Huidige Doorzichtigheid Onderlaag Laan
 descSaveReset::Reset jouw Opslaggevens.
 descDialogueSkip::Druk op ESCAPE om het gesprek over te slaan.
 // UNLOCK POPUPS
-msgMoni::"Your Reality" Ontgrendeld!{NL}Krijg toegang tot het lied in de het Vrije Spel Menu.
+msgMoni::"Your Reality" Ontgrendeld!{NL}Krijg toegang tot het lied in het Vrije Spel Menu.
 msgSayo::Sayori's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
 msgGFCount::"Girlfriend Countdown" Ontgrendeld!{NL}Zet het aan via de Opties Menu.
 msgNat::Natsuki's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
