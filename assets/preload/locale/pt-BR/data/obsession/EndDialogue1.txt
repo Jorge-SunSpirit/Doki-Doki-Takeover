@@ -1,13 +1,13 @@
 :disableskip:
 :yuri_crazy:"Khh- Ahahahaha!"
-:yuri_crazy:"Por quê deveríamos parar agora?"
+:yuri_crazy:"Por que deveríamos parar agora?"
 :yuri_crazy:"Deixe-me gritar cada letra presa na minha cabeça doentia!"
 :yuri_crazy:"Hahaha!"
 :gf_spook:
 :playsound:glitch1
 :autoskip:"#($**&#&#@)*&#&$^$^&@*(($(#"
 :bf_scared:"-!"
-:sayori_ehh:"E heheh... não era você ter visto aqulo."
+:sayori_ehh:"Eheheh... não era pra você ter visto aquilo."
 :hideright:
 :glitch:
 :showbackgroundimage:evil1
@@ -21,7 +21,7 @@
 :sayori_gone:"Esse nome te lembra alguém?"
 :sayori_gone:"Isso deve significar-"
 :sayori_gone:"deve ter sido você que deletou ela."
-:sayori_gone:"Ahaha, então você deve ter sido quem nos trouxe de volta também!"
+:sayori_gone:"Ahaha, então deve ter sido você quem nos trouxe de volta também!"
 :bf_scared:"Dee le bep skee doo-!"
 :bf_scared:(Tradução) "Espera aí, eu não-!"
 :hideright:
@@ -34,9 +34,9 @@
 :autoskip:"*%&^$*(%)^*&"
 :glitch:
 :showbackgroundimage:evil1
-:sayori_gone:"Você desafiou toda a lógica e ciência, só para nós?"
+:sayori_gone:"Você desafiou toda lógica e ciência, só por nós?"
 :sayori_gone:"Ahahaha, você nos fez tão feliz."
-:sayori_gone:"Agora que você finalmente está aqui, nós podemos ser todas felizes e cantar para sempre juntos."
+:sayori_gone:"Agora que você finalmente está aqui, nós podemos ser todas felizes e cantar juntas para sempre."
 :sayori_gone:"Para sempre."
 :glitch:
 :showbackgroundimage:evil2

@@ -4,10 +4,10 @@
 :sayori_ehh:"Ei- eu não estava esperando por ninguém novo. A gente nem distribuiu cartazes pro clube ainda!"
 :sayori_neutral:"Mas olha, Natsuki! Nós temos outra menina também!"
 :gf_neutral:*pensamentos vazios*
-:sayori_ehh:"Ehehe, se eu soubesse que estávamos esperando mais membros- Eu iria ter perguntando a Natsuki pra fazer alguns cupcakes de boas vindas!"
+:sayori_ehh:"Ehehe, se eu soubesse que estávamos esperando mais membros- Eu iria ter perguntado a Natsuki pra fazer alguns cupcakes de boas vindas!"
 :sayori_happ:"Ah! E talvez eu teria perguntado a Yuri para fazer chá também!"
 :sayori_happ:"Eu preciso escrever isso pra mais tarde: 'Planejar Festa do Chá para Clube em Breve'"
-:yuri_smile:"Parec que você já está bem animada sobre nossos novos convidados. Mas você ainda nem perguntou seus nomes-"
+:yuri_smile:"Parece que você já está bem animada sobre nossos novos convidados. Mas você ainda nem perguntou seus nomes-"
 :sayori_ehh:"Ah, certo! Eheh, eu sou tão bobinha. Quais são seus nomes, novos membros do clube de literatura?"
 :bf_beep:"Beep skee!"
 :gf_yeah:*gesto feliz*
@@ -31,7 +31,7 @@
 :yuri_neutral:"...você quer mesmo cantar conosco?"
 :yuri_blush:"Eu... não tenho certeza quão comfortável eu estaria fazendo isso-"
 :bf_beep:"Skee dep doop!"
-:yuri_blush:"C-Como assim nós temos quê cantar?!"
+:yuri_blush:"C-Como assim nós temos que cantar?!"
 :hideright:
 :sayori_neutral:"Sabe, nós estivemos trabalhando tão duro em escrever e em poemas recentemente. Eu acho que ter uma divertida sessão de canto com todo mundo seria o descanso perfeito que todas nós precisamos!"
 :yuri_blush:"-!"

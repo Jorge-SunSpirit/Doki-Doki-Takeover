@@ -7,7 +7,7 @@
 :hideright:
 :natsuki_neutral:"Oh, você quer ir primeiro, Yuri?"
 :yuri_neutral:"Mhm..."
-:yuri_smile:"Eu fiquei particularmente imersa na história da faixa que escolhi."
+:yuri_smile:"Eu fiquei particularmente imersa na história da canção que escolhi."
 :yuri_neutral:"Uma música de dois jovens amantes que vagam pelas partes obscuras da cidade natal deles e enfrentam um monstro cara a cara."
 :yuri_neutral:"Alguém pronto para exigir a vontade de Deus sobre eles."
 :yuri_ehh:"Com uma motoserra."

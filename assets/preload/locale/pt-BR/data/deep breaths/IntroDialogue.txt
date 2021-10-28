@@ -6,5 +6,5 @@
 :sayori_neutral:"eheheh... Bem, parece que só sobrou você, Yuri!"
 :yuri_blush:"...mmh-"
 :sayori_ooh:"Ei, eu sei que você consegue, Yuri. Eu aposto que você tem uma das melhores vozes de canto de todas! Qual é, por favor?!"
-:yuri_ehh:"...primeiro ter que ler meus poemas a frente do clube... agora cantar também?"
+:yuri_ehh:"...primeiro ter que ler meus poemas na frente do clube... agora cantar também?"
 :yuri_ehh:"Esse clube continua a pedir muito de mim."

@@ -10,7 +10,7 @@
 :mc_sigh:"Mas se vocês não tivessem aparecido, seria eu que teria que cantar com elas. Não estou pronto pra me humilhar na frente dos meus colegas ainda."
 :mc_camera:"Aliás, nenhuma delas decidiu qual música cantariam juntas ainda."
 :mc_neutral:"Vocês acham que podem ajudar elas?"
-:gf_yeah:*gestura feliz*
+:gf_yeah:*gesto feliz*
 :bf_yeah_left:"Beep!"
 :mc_happy:"Um catálogo inteiro de canções? Isso deve dar uma boa seleção de músicas pra elas escolherem."
 :mc_camera:"Vou deixá-las sabendo quando terminarem de se preparar."
