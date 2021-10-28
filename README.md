@@ -35,6 +35,7 @@ DDLC+ Links: **[DDLC+ Official Website](http://ddlc.plus) ⋅ [Steam page](https
 - [foomfs](https://twitter.com/foomfs) - Thumbnail Design 
 - [Matt$](https://twitter.com/matt_currency) - Remastering Monika Vocals
 - [Cval](https://twitter.com/cval_brown) - Charting "Bara no Yume"
+- eishiya - [LanaPixel](https://opengameart.org/content/lanapixel-localization-friendly-pixel-font)
 
 ### Friday Night Funkin'
  - [ninjamuffin99](https://twitter.com/ninja_muffin99) - Programming
