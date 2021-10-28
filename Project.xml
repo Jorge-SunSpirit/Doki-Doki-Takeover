@@ -156,8 +156,8 @@
 
 	<!-- <haxedef name="SKIP_TO_PLAYSTATE" if="debug" /> -->
 
-  <!-- Defines whether the Discord client should be enabled. Only works on desktop. -->
-  <haxedef name="FEATURE_DISCORD" if="desktop" unless="hl"/>
+  <!-- Defines whether the Discord client should be enabled. Only works on Windows. -->
+  <haxedef name="FEATURE_DISCORD" if="windows" unless="hl"/>
   <!-- Defines whether the file system can be read/written directly. Does not work in browser. -->
   <haxedef name="FEATURE_FILESYSTEM" if="desktop" />
   <!-- Defines whether Lua Modcharts should be enabled. Only works on Windows. -->
