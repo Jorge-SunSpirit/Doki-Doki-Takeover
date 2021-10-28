@@ -59,6 +59,12 @@ class CoolUtil
 		#end
 	}
 
+	public static function coolText(path:String):String
+	{
+		var daList:String = Assets.getText(path).trim();
+		return daList;
+	}
+
 	public static function coolTextFile(path:String):Array<String>
 	{
 		var daList:Array<String> = Assets.getText(path).trim().split('\n');
