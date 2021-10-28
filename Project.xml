@@ -162,12 +162,12 @@
   <haxedef name="FEATURE_FILESYSTEM" if="desktop" />
   <!-- Defines whether Lua Modcharts should be enabled. Only works on Windows. -->
   <haxedef name="FEATURE_LUAMODCHART" if="windows" unless="hl" />
-  <!-- Defines whether WebM videos should be enabled. Currently only enabled on Windows. -->
+  <!-- Defines whether WebM videos should be enabled. Only works on Windows. -->
   <haxedef name="FEATURE_WEBM" if="windows" unless="hl" />
   <!-- Defines whether the Thread class can be used. -->
   <haxedef name="FEATURE_MULTITHREADING" if="cpp || hl" />
-  <!-- Defines whether Caching is enabled. Will cause issues on systems with limited memory. -->
-  <haxedef name="FEATURE_CACHING" if="desktop" unless="32bit || hl" />
+  <!-- Defines whether Caching is enabled. Will cause issues on systems with limited memory. Only works on Windows. -->
+  <haxedef name="FEATURE_CACHING" if="windows" unless="32bit || hl" />
   <!-- Defines whether OBS or other recording software can be detected. Only works on Windows. -->
   <haxedef name="FEATURE_OBS" if="windows" />
 	
