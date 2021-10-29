@@ -113,7 +113,9 @@ class DokiFreeplayState extends MusicBeatState
 			icon.scale.set(1.6, 1.6);
 			icon.angle = 30;
 
-			if ((curPage == 1 && !FlxG.save.data.monibeaten) || (curPage == 2 && !FlxG.save.data.extra2beaten))
+			if ((curPage == 1 && !FlxG.save.data.monibeaten)
+				|| (curPage == 2 && !FlxG.save.data.extra2beaten)
+				|| (curPage == 3 && !FlxG.save.data.epipbeaten))
 			{
 			}
 			else
@@ -133,11 +135,10 @@ class DokiFreeplayState extends MusicBeatState
 		}
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 8);
-		// scoreText.autoSize = false;
-		scoreText.setFormat(LangUtil.getFont(), 32, FlxColor.BLACK, RIGHT);
-		// scoreText.alignment = RIGHT;
-		scoreText.x -= 460;
-		scoreText.y += 45;
+		scoreText.setFormat(LangUtil.getFont('aller'), 28, FlxColor.BLACK, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.WHITE);
+		scoreText.antialiasing = true;
+		scoreText.x -= 454;
+		scoreText.y += 46;
 		add(scoreText);
 
 		menu_character = new FlxSprite(40, 500);
@@ -202,7 +203,7 @@ class DokiFreeplayState extends MusicBeatState
 		if (Math.abs(lerpScore - intendedScore) <= 10)
 			lerpScore = intendedScore;
 
-		scoreText.text = LangUtil.getString('cmnPB') + ':' + lerpScore;
+		scoreText.text = LangUtil.getString('cmnPB') + ': ' + lerpScore;
 
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;

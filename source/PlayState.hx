@@ -4327,6 +4327,9 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
+				if (curSong.toLowerCase() == 'epiphany' && !FlxG.save.data.epipbeaten)
+					FlxG.save.data.epipbeaten = true;
+
 				trace('WENT BACK TO FREEPLAY??');
 				showCutscene = true;
 				FlxG.switchState(new DokiFreeplayState());
