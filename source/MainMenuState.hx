@@ -23,6 +23,9 @@ import flixel.group.FlxGroup;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
+#if FEATURE_GAMEJOLT
+import GameJolt.GameJoltAPI;
+#end
 
 using StringTools;
 
@@ -575,6 +578,9 @@ class MainMenuState extends MusicBeatState
 				if (FlxG.keys.pressed.G)
 				{
 					// Hueh keeping this forever
+					#if FEATURE_GAMEJOLT
+					GameJoltAPI.getTrophy(0);
+					#end
 					#if linux
 					Sys.command('/usr/bin/xdg-open', ["https://www.youtube.com/watch?v=0MW9Nrg_kZU", "&"]);
 					#else
