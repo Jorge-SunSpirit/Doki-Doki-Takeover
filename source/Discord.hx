@@ -39,7 +39,7 @@ class DiscordClient
 		DiscordRpc.presence({
 			details: "In the Menus",
 			state: null,
-			largeImageKey: 'rpc_logo',
+			largeImageKey: 'dokialbum',
 			largeImageText: "Friday Night Funkin': Doki Doki Takeover!",
 		});
 	}
@@ -75,7 +75,7 @@ class DiscordClient
 		DiscordRpc.presence({
 			details: details,
 			state: state,
-			largeImageKey: 'rpc_logo',
+			largeImageKey: 'dokialbum',
 			largeImageText: "Friday Night Funkin': Doki Doki Takeover!",
 			smallImageKey: smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
