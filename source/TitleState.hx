@@ -89,6 +89,9 @@ class TitleState extends MusicBeatState
 		#if FEATURE_GAMEJOLT
 		GameJoltAPI.connect();
 		GameJoltAPI.authDaUser(FlxG.save.data.gjUser, FlxG.save.data.gjToken);
+
+		if (FlxG.save.data.epipbeaten)
+			GameJoltAPI.getTrophy(0);
 		#end
 
 		if (FlxG.save.data.weekUnlocked != null)

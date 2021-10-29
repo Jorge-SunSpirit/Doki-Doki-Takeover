@@ -23,6 +23,9 @@ import flixel.group.FlxGroup;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
+#if FEATURE_GAMEJOLT
+import GameJolt.GameJoltAPI;
+#end
 
 using StringTools;
 
@@ -316,12 +319,22 @@ class DokiStoryState extends MusicBeatState
 			{
 				default:
 					if (!FlxG.save.data.monipopup)
+					{
 						openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
+						#if FEATURE_GAMEJOLT
+						GameJoltAPI.getTrophy(0);
+						#end
+					}
 					else
 						showPopUp = false;
 				case 1:
 					if (!FlxG.save.data.sayopopup)
+					{
 						openSubState(new PopupMessage(LangUtil.getString('msgSayo')));
+						#if FEATURE_GAMEJOLT
+						GameJoltAPI.getTrophy(0);
+						#end
+					}
 					else
 					{
 						showPopUp = false;
@@ -329,7 +342,12 @@ class DokiStoryState extends MusicBeatState
 					}
 				case 2:
 					if (!FlxG.save.data.natpopup)
+					{
 						openSubState(new PopupMessage(LangUtil.getString('msgNat')));
+						#if FEATURE_GAMEJOLT
+						GameJoltAPI.getTrophy(0);
+						#end
+					}
 					else
 					{
 						showPopUp = false;
@@ -337,12 +355,22 @@ class DokiStoryState extends MusicBeatState
 					}
 				case 4:
 					if (!FlxG.save.data.extra1popup)
+					{
 						openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
+						#if FEATURE_GAMEJOLT
+						GameJoltAPI.getTrophy(0);
+						#end
+					}
 					else
 						showPopUp = false;
 				case 5:
 					if (!FlxG.save.data.extra2popup)
+					{
 						openSubState(new PopupMessage(LangUtil.getString('msgFestival')));
+						#if FEATURE_GAMEJOLT
+						GameJoltAPI.getTrophy(0);
+						#end
+					}
 					else
 					{
 						showPopUp = false;
@@ -631,10 +659,8 @@ class DokiStoryState extends MusicBeatState
 			case 4:
 				story_secret.animation.play('selected');
 			case 5:
-				if (FlxG.save.data.extra2beaten == true)
-				{
+				if (FlxG.save.data.extra2beaten)
 					story_secret2.animation.play('selected');
-				}
 		}
 
 		PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());

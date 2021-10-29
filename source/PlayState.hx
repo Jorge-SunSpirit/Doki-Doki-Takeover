@@ -60,6 +60,9 @@ import Discord.DiscordClient;
 import Sys;
 import sys.FileSystem;
 #end
+#if FEATURE_GAMEJOLT
+import GameJolt.GameJoltAPI;
+#end
 
 using StringTools;
 
@@ -4307,7 +4310,12 @@ class PlayState extends MusicBeatState
 			else
 			{
 				if (curSong.toLowerCase() == 'epiphany' && !FlxG.save.data.epipbeaten)
+				{
 					FlxG.save.data.epipbeaten = true;
+					#if FEATURE_GAMEJOLT
+					GameJoltAPI.getTrophy(0);
+					#end
+				}
 
 				trace('WENT BACK TO FREEPLAY??');
 				showCutscene = true;
