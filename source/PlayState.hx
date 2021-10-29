@@ -336,10 +336,12 @@ class PlayState extends MusicBeatState
 			case 0:
 				storyDifficultyText = "Easy";
 			case 1:
-				switch (curSong.toLowerCase())
+				switch (SONG.song.toLowerCase())
 				{
 					case 'your reality':
 						storyDifficultyText = "Your Reality";
+					case 'erb':
+						storyDifficultyText = "Goku vs Superman";
 					default:
 						storyDifficultyText = "Normal";
 				}
@@ -350,42 +352,31 @@ class PlayState extends MusicBeatState
 
 		iconRPC = SONG.player2;
 
-		// To avoid having duplicate images in Discord assets
-		switch (iconRPC)
-		{
-			case 'senpai-angry':
-				iconRPC = 'senpai';
-			case 'monster-christmas':
-				iconRPC = 'monster';
-			case 'mom-car':
-				iconRPC = 'mom';
-		}
-
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
 		{
 			switch (storyWeek)
 			{
-				case 0:
-					detailsText = "Story Mode: Monika Week -";
-				case 1:
-					detailsText = "Story Mode: Sayori Week -";
-				case 2:
-					detailsText = "Story Mode: Natsuki Week -";
-				case 3:
-					detailsText = "Story Mode: Yuri Week -";
-				case 4:
-					detailsText = "Story Mode: ??? -";
-				case 5:
-					detailsText = "Story Mode: ??? -";
 				default:
-					detailsText = "Story Mode: Week Monika -";
+					detailsText = "Story Mode -";
+				case 0:
+					detailsText = "Story Mode: Prologue -";
+				case 1:
+					detailsText = "Story Mode: Sayori -";
+				case 2:
+					detailsText = "Story Mode: Natsuki -";
+				case 3:
+					detailsText = "Story Mode: Yuri -";
+					/*
+						case 4:
+							detailsText = "Story Mode: Monika -";
+						case 5:
+							detailsText = "Story Mode: Festival -";
+					 */
 			}
 		}
 		else
-		{
 			detailsText = "Freeplay -";
-		}
 
 		// String for when the game is paused
 		detailsPausedText = "Paused - " + detailsText;
@@ -394,9 +385,7 @@ class PlayState extends MusicBeatState
 		DiscordClient.changePresence(detailsText
 			+ " "
 			+ SONG.song
-			+ " ("
-			+ storyDifficultyText
-			+ ") "
+			+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 			+ Ratings.GenerateLetterRank(accuracy),
 			"\nAcc: "
 			+ HelperFunctions.truncateFloat(accuracy, 2)
@@ -2745,9 +2734,7 @@ class PlayState extends MusicBeatState
 		DiscordClient.changePresence(detailsText
 			+ " "
 			+ SONG.song
-			+ " ("
-			+ storyDifficultyText
-			+ ") "
+			+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 			+ Ratings.GenerateLetterRank(accuracy),
 			"\nAcc: "
 			+ HelperFunctions.truncateFloat(accuracy, 2)
@@ -3046,9 +3033,7 @@ class PlayState extends MusicBeatState
 			#if FEATURE_DISCORD
 			DiscordClient.changePresence("PAUSED on "
 				+ SONG.song
-				+ " ("
-				+ storyDifficultyText
-				+ ") "
+				+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 				+ Ratings.GenerateLetterRank(accuracy),
 				"Acc: "
 				+ HelperFunctions.truncateFloat(accuracy, 2)
@@ -3083,9 +3068,7 @@ class PlayState extends MusicBeatState
 				DiscordClient.changePresence(detailsText
 					+ " "
 					+ SONG.song
-					+ " ("
-					+ storyDifficultyText
-					+ ") "
+					+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 					+ Ratings.GenerateLetterRank(accuracy),
 					"\nAcc: "
 					+ HelperFunctions.truncateFloat(accuracy, 2)
@@ -3098,7 +3081,9 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy), iconRPC);
+				DiscordClient.changePresence(detailsText,
+					SONG.song + (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ") + Ratings.GenerateLetterRank(accuracy),
+					iconRPC);
 			}
 			#end
 		}
@@ -3119,9 +3104,7 @@ class PlayState extends MusicBeatState
 		DiscordClient.changePresence(detailsText
 			+ " "
 			+ SONG.song
-			+ " ("
-			+ storyDifficultyText
-			+ ") "
+			+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 			+ Ratings.GenerateLetterRank(accuracy),
 			"\nAcc: "
 			+ HelperFunctions.truncateFloat(accuracy, 2)
@@ -3683,9 +3666,7 @@ class PlayState extends MusicBeatState
 			// Game Over doesn't get his own variable because it's only used here
 			DiscordClient.changePresence("GAME OVER -- "
 				+ SONG.song
-				+ " ("
-				+ storyDifficultyText
-				+ ") "
+				+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 				+ Ratings.GenerateLetterRank(accuracy),
 				"\nAcc: "
 				+ HelperFunctions.truncateFloat(accuracy, 2)
@@ -3716,9 +3697,7 @@ class PlayState extends MusicBeatState
 				// Game Over doesn't get his own variable because it's only used here
 				DiscordClient.changePresence("GAME OVER -- "
 					+ SONG.song
-					+ " ("
-					+ storyDifficultyText
-					+ ") "
+					+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 					+ Ratings.GenerateLetterRank(accuracy),
 					"\nAcc: "
 					+ HelperFunctions.truncateFloat(accuracy, 2)
@@ -5277,9 +5256,7 @@ class PlayState extends MusicBeatState
 		DiscordClient.changePresence(detailsText
 			+ " "
 			+ SONG.song
-			+ " ("
-			+ storyDifficultyText
-			+ ") "
+			+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
 			+ Ratings.GenerateLetterRank(accuracy),
 			"Acc: "
 			+ HelperFunctions.truncateFloat(accuracy, 2)

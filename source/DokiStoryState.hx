@@ -35,7 +35,6 @@ class DokiStoryState extends MusicBeatState
 		['Rain Clouds', 'My Confession'],
 		['My Sweets', 'Baka'],
 		['Deep Breaths', 'Obsession'],
-		// ['Obsession'],
 		['Reconciliation'],
 		[
 			'Crucify (Yuri Mix)',
