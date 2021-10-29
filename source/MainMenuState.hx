@@ -61,7 +61,7 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
-		if (FlxG.save.data.extrabeaten)
+		if (FlxG.save.data.extra2beaten)
 			optionShit = ['story mode', 'freeplay', 'credits', 'language', 'options'];
 		else
 			optionShit = ['story mode', 'freeplay', 'language', 'options'];
