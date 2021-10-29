@@ -1256,11 +1256,6 @@ class DialogueBox extends FlxSpriteGroup
 
 	function funnyGlitch():Void
 	{
-		#if sys
-		/*
-			var screenHUD:FlxSprite = new FlxSprite();
-			screenHUD.pixels = FlxScreenGrab.grab().bitmapData;
-		 */
 		var screenHUD:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT);
 		screenHUD.antialiasing = true;
 		screenHUD.drawFrame();
@@ -1277,17 +1272,14 @@ class DialogueBox extends FlxSpriteGroup
 		add(glitchSprite);
 
 		glitchEffect.active = true;
-		#end
 
 		FlxG.sound.play(Paths.sound('glitchin'));
 
 		new FlxTimer().start(0.5, function(tmr:FlxTimer)
 		{
-			#if sys
 			glitchEffect.active = false;
 			remove(glitchSprite);
 			remove(screenHUD);
-			#end
 			enddialogue();
 		});
 	}
