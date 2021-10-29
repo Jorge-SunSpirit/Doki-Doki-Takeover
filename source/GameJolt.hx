@@ -125,7 +125,7 @@ class GameJoltAPI // Connects to tentools.api.FlxGameJolt
 					FlxG.save.flush();
 					userLogin = true;
 					startSession();
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+					// FlxG.sound.play(Paths.sound('confirmMenu'));
 					if (loginArg)
 					{
 						GameJoltLogin.login = true;
@@ -296,7 +296,7 @@ class GameJoltLogin extends MusicBeatSubstate
 		backdrop.velocity.set(-40, -40);
 
 		charBop = new FlxSprite(FlxG.width - 400, 250);
-		charBop.frames = Paths.getSparrowAtlas('characters/DDLCBoyFriend_Assets', 'shared');
+		charBop.frames = Paths.getSparrowAtlas('characters/BOYFRIEND', 'preload');
 		charBop.animation.addByPrefix('idle', 'BF idle dance', 24, false);
 		charBop.animation.addByPrefix('loggedin', 'BF HEY', 24, false);
 		charBop.setGraphicSize(Std.int(charBop.width * 1.4));
@@ -304,21 +304,28 @@ class GameJoltLogin extends MusicBeatSubstate
 		charBop.flipX = false;
 		add(charBop);
 
-		gamejoltText = new FlxText(0, 25, 0, "GameJolt Integration", 16);
+		gamejoltText = new FlxText(0, 25, 0, "GameJolt Integration");
+		gamejoltText.setFormat(LangUtil.getFont('riffic'), 24, FlxColor.WHITE, CENTER);
+		gamejoltText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		gamejoltText.screenCenter(X);
 		gamejoltText.x += baseX;
-		gamejoltText.color = FlxColor.fromRGB(84, 155, 149);
 		add(gamejoltText);
 
 		versionText = new FlxText(5, FlxG.height - 18, 0, "Game ID: " + GJKeys.id + " API: " + GameJoltInfo.version, 12);
+		versionText.setFormat(LangUtil.getFont('riffic'), 12, FlxColor.WHITE, CENTER);
+		versionText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		add(versionText);
 
 		loginTexts = new FlxTypedGroup<FlxText>(2);
 		add(loginTexts);
 
-		usernameText = new FlxText(0, 125, 300, "Username:", 30);
+		usernameText = new FlxText(0, 125, 300, "Username:");
+		usernameText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
+		usernameText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 
-		tokenText = new FlxText(0, 225, 300, "Token:", 30);
+		tokenText = new FlxText(0, 225, 300, "Token:");
+		tokenText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
+		tokenText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 
 		loginTexts.add(usernameText);
 		loginTexts.add(tokenText);
@@ -404,8 +411,9 @@ class GameJoltLogin extends MusicBeatSubstate
 
 		if (GameJoltAPI.getStatus())
 		{
-			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true), 40);
-			username.alignment = CENTER;
+			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true));
+			username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
+			username.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 			username.screenCenter(X);
 			username.x += baseX;
 			add(username);
