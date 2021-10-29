@@ -20,6 +20,9 @@ import flixel.addons.effects.chainable.FlxEffectSprite;
 import openfl.utils.Assets as OpenFlAssets;
 import flixel.math.FlxMatrix;
 import openfl.geom.Point;
+#if FEATURE_GAMEJOLT
+import GameJolt.GameJoltAPI;
+#end
 
 using StringTools;
 
@@ -1243,6 +1246,11 @@ class DialogueBox extends FlxSpriteGroup
 		else if (isEpiphany && !FlxG.save.data.selfAware)
 			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}',
 				CoolUtil.coolText(Paths.txt('data/epiphany/name', 'preload')));
+		else
+			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', 'User');
+		#elseif (FEATURE_GAMEJOLT && web)
+		if (isEpiphany && GameJoltAPI.getUserInfo(true).toLowerCase() != 'no user')
+			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', GameJoltAPI.getUserInfo(true));
 		else
 			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', 'User');
 		#else

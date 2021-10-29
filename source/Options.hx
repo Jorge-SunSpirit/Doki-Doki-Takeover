@@ -933,3 +933,26 @@ class SelfAwareness extends Option
 	}
 }
 #end
+
+#if FEATURE_GAMEJOLT
+class GameJolt extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		trace("switch");
+		FlxG.switchState(new GameJolt.GameJoltLogin());
+		return false;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optGameJolt');
+	}
+}
+#end

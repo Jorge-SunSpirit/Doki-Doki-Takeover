@@ -46,6 +46,9 @@ class OptionsMenu extends MusicBeatState
 			new BotPlay(LangUtil.getString('descBotplay')),
 			#if FEATURE_OBS new SelfAwareness('...'),
 			#end
+			#if FEATURE_GAMEJOLT
+			new GameJolt(LangUtil.getString('descGameJolt')),
+			#end
 			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
 		new OptionCategory(LangUtil.getString('catAppearance'), [

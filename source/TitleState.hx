@@ -29,6 +29,9 @@ import Discord.DiscordClient;
 #if FEATURE_MULTITHREADING
 import sys.thread.Thread;
 #end
+#if FEATURE_GAMEJOLT
+import GameJolt.GameJoltAPI;
+#end
 
 using StringTools;
 
@@ -82,6 +85,11 @@ class TitleState extends MusicBeatState
 		LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
 
 		Highscore.load();
+
+		#if FEATURE_GAMEJOLT
+		GameJoltAPI.connect();
+		GameJoltAPI.authDaUser(FlxG.save.data.gjUser, FlxG.save.data.gjToken);
+		#end
 
 		if (FlxG.save.data.weekUnlocked != null)
 		{
