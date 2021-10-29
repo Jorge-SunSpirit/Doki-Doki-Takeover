@@ -310,7 +310,7 @@ class StoryMenuState extends MusicBeatState
 								switch (curWeek)
 								{
 									default:
-										LoadingState.loadAndSwitchState(new PlayState(), true);
+										LoadingState.loadAndSwitchState(new PlayState(), true, true);
 									case 1:
 										trace('huh? VIDEO WORK');
 										FlxG.save.data.introwatched = true;
@@ -323,7 +323,7 @@ class StoryMenuState extends MusicBeatState
 										LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
 								}
 							case true:
-								LoadingState.loadAndSwitchState(new PlayState(), true);
+								LoadingState.loadAndSwitchState(new PlayState(), true, true);
 						}
 					});
 				}
@@ -369,7 +369,7 @@ class StoryMenuState extends MusicBeatState
 										switch (curWeek)
 										{
 											default:
-												LoadingState.loadAndSwitchState(new PlayState(), true);
+												LoadingState.loadAndSwitchState(new PlayState(), true, true);
 											case 1:
 												trace('huh? VIDEO WORK');
 												FlxG.save.data.introwatched = true;
@@ -382,7 +382,7 @@ class StoryMenuState extends MusicBeatState
 												LoadingState.loadAndSwitchState(new VideoState('assets/videos/ugh/ugh.webm', new PlayState()));
 										}
 									case true:
-										LoadingState.loadAndSwitchState(new PlayState(), true);
+										LoadingState.loadAndSwitchState(new PlayState(), true, true);
 								}
 							});
 						}

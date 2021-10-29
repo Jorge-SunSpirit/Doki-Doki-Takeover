@@ -645,26 +645,26 @@ class DokiStoryState extends MusicBeatState
 			switch (curSelected)
 			{
 				case 0:
-					LoadingState.loadAndSwitchState(new PlayState(), true);
+					LoadingState.loadAndSwitchState(new PlayState(), true, true);
 					trace("Monika Week Selected");
 				case 1:
 					#if FEATURE_WEBM
 					LoadingState.loadAndSwitchState(new VideoState('assets/videos/sayointro/intro.webm', new PlayState()));
 					#else
-					LoadingState.loadAndSwitchState(new PlayState());
+					LoadingState.loadAndSwitchState(new PlayState(), true, true);
 					#end
 					trace("Sayori Selected");
 				case 2:
-					LoadingState.loadAndSwitchState(new PlayState(), true);
+					LoadingState.loadAndSwitchState(new PlayState(), true, true);
 					trace("Natsuki Week Selected");
 				case 3:
-					LoadingState.loadAndSwitchState(new PlayState(), true);
+					LoadingState.loadAndSwitchState(new PlayState(), true, true);
 					trace("Yuri Week Selected");
 				case 4:
-					LoadingState.loadAndSwitchState(new PlayState(), true);
+					LoadingState.loadAndSwitchState(new PlayState(), true, true);
 					trace("monika extra Week Selected");
 				case 5:
-					LoadingState.loadAndSwitchState(new PlayState(), true);
+					LoadingState.loadAndSwitchState(new PlayState(), true, true);
 					// trace("expurgation Week Selected");
 					trace("Festival Week Selected");
 			}

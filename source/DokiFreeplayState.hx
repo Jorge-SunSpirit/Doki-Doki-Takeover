@@ -71,7 +71,7 @@ class DokiFreeplayState extends MusicBeatState
 		#end
 
 		if (pageFlipped)
-			FlxG.sound.play(Paths.sound('flip_page'));
+			FlxG.sound.play(Paths.sound('flip_page', 'preload'));
 
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('data/Page' + (curPage + 1)));
 
@@ -260,7 +260,7 @@ class DokiFreeplayState extends MusicBeatState
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
 				changePage(-1);
-				LoadingState.loadAndSwitchState(new DokiFreeplayState());
+				LoadingState.loadAndSwitchState(new DokiFreeplayState(), false);
 			}
 
 			if (controls.RIGHT_P && !diffselect)
@@ -269,7 +269,7 @@ class DokiFreeplayState extends MusicBeatState
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
 				changePage(1);
-				LoadingState.loadAndSwitchState(new DokiFreeplayState());
+				LoadingState.loadAndSwitchState(new DokiFreeplayState(), false);
 			}
 
 			if (controls.BACK)

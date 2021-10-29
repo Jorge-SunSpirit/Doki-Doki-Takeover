@@ -12,6 +12,7 @@ import lime.utils.Assets as LimeAssets;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
 import haxe.io.Path;
+import flixel.addons.display.FlxBackdrop;
 
 class LoadingState extends MusicBeatState
 {
@@ -21,6 +22,7 @@ class LoadingState extends MusicBeatState
 	var stopMusic = false;
 	var callbacks:MultiCallback;
 
+	var backdrop:FlxBackdrop;
 	var logo:FlxSprite;
 	var gfDance:FlxSprite;
 	var danceLeft = false;
@@ -34,14 +36,15 @@ class LoadingState extends MusicBeatState
 
 	override function create()
 	{
-		logo = new FlxSprite(-150, -100);
+		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
+		backdrop.velocity.set(-40, -40);
+
+		logo = new FlxSprite(0, 0);
 		logo.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
 		logo.antialiasing = true;
-		logo.animation.addByPrefix('bump', 'logo bumpin', 24);
-		logo.animation.play('bump');
+		logo.setGraphicSize(Std.int(logo.width * 0.8));
+		logo.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logo.updateHitbox();
-		// logoBl.screenCenter();
-		// logoBl.color = FlxColor.BLACK;
 
 		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
@@ -119,11 +122,15 @@ class LoadingState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
 		#if debug
 		if (FlxG.keys.justPressed.SPACE)
 			trace('fired: ' + callbacks.getFired() + " unfired:" + callbacks.getUnfired());
 		#end
+
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
+
+		super.update(elapsed);
 	}
 
 	function onLoad()
@@ -144,22 +151,26 @@ class LoadingState extends MusicBeatState
 		return Paths.voices(PlayState.SONG.song);
 	}
 
-	inline static public function loadAndSwitchState(target:FlxState, stopMusic = false)
+	inline static public function loadAndSwitchState(target:FlxState, isPlayState = true, stopMusic = false)
 	{
-		FlxG.switchState(getNextState(target, stopMusic));
+		FlxG.switchState(getNextState(target, isPlayState, stopMusic));
 	}
 
-	static function getNextState(target:FlxState, stopMusic = false):FlxState
+	static function getNextState(target:FlxState, isPlayState = true, stopMusic = false):FlxState
 	{
-		Paths.setCurrentLevel("week6");
-		#if NO_PRELOAD_ALL
-		var loaded = isSoundLoaded(getSongPath())
-			&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
-			&& isLibraryLoaded("shared");
+		if (isPlayState)
+		{
+			Paths.setCurrentLevel("week6");
+			#if NO_PRELOAD_ALL
+			var loaded = isSoundLoaded(getSongPath())
+				&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
+				&& isLibraryLoaded("shared");
 
-		if (!loaded)
-			return new LoadingState(target, stopMusic);
-		#end
+			if (!loaded)
+				return new LoadingState(target, stopMusic);
+			#end
+		}
+
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
