@@ -50,9 +50,9 @@ class GameplayCustomizeState extends MusicBeatState
 		DiscordClient.changePresence("Customizing Gameplay Modules", null);
 		#end
 
-		background = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback', 'shared'));
-		front = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront', 'shared'));
-		curt = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains', 'shared'));
+		background = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
+		front = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
+		curt = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
 		background.antialiasing = true;
 		front.antialiasing = true;
 		curt.antialiasing = true;
@@ -137,7 +137,7 @@ class GameplayCustomizeState extends MusicBeatState
 		playerStrums = new FlxTypedGroup<FlxSprite>();
 		cpuStrums = new FlxTypedGroup<FlxSprite>();
 
-		sick = new FlxSprite().loadGraphic(Paths.image('sick', 'shared'));
+		sick = new FlxSprite().loadGraphic(Paths.image('sick'));
 		sick.setGraphicSize(Std.int(sick.width * 0.7));
 		sick.antialiasing = true;
 		sick.scrollFactor.set();
@@ -334,7 +334,7 @@ class GameplayCustomizeState extends MusicBeatState
 		{
 			// FlxG.log.add(i);
 			var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
-			babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets', 'shared');
+			babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
 			babyArrow.animation.addByPrefix('green', 'arrowUP');
 			babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
 			babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
