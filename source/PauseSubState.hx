@@ -60,7 +60,9 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.scrollFactor.set();
 		levelDifficulty.setFormat(LangUtil.getFont(), 32);
 		levelDifficulty.updateHitbox();
-		add(levelDifficulty);
+
+		if (PlayState.SONG.song.toLowerCase() != 'epiphany')
+			add(levelDifficulty);
 
 		levelDifficulty.alpha = 0;
 		levelInfo.alpha = 0;
