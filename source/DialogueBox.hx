@@ -1240,12 +1240,17 @@ class DialogueBox extends FlxSpriteGroup
 		#if FEATURE_OBS
 		if (isEpiphany && FlxG.save.data.selfAware)
 			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', Sys.environment()["USERNAME"]);
-		else
+		else if (isEpiphany && !FlxG.save.data.selfAware)
 			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}',
 				CoolUtil.coolText(Paths.txt('data/epiphany/name', 'preload')));
+		else
+			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', 'Player');
 		#else
-		dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}',
-			CoolUtil.coolText(Paths.txt('data/epiphany/name', 'preload')));
+		if (isEpiphany)
+			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}',
+				CoolUtil.coolText(Paths.txt('data/epiphany/name', 'preload')));
+		else
+			dialogueList[0] = StringTools.replace(dialogueList[0].substr(splitName[1].length + 2).trim(), '{USERNAME}', 'Player');
 		#end
 	}
 
