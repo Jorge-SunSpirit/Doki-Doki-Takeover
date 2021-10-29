@@ -7,6 +7,7 @@
 :monika_upset:"You aren’t “from here”, from what I’ve seen."
 :monika_upset:"And you can enter and leave this place very easily now. So I must ask..."
 :monika_upset:"-is there a way to bring us back with you?"
+:bf_think:
 :monika_eeh:"This game is very limiting with what we can do, and the others will remain blissfully unaware regardless of what happens"
 :monika_upset:"but if they could have the opportunity to see what’s beyond their school and homes, I think they would really love it."
 :monika_upset:"And maybe..."
