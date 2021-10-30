@@ -1582,30 +1582,31 @@ class PlayState extends MusicBeatState
 
 		FlxG.fixedTimestep = false;
 
-		if (FlxG.save.data.songPosition) // I dont wanna talk about this code :(
+		songPosBG = new FlxSprite(0, 10).makeGraphic(600, 20, FlxColor.BLACK);
+		if (FlxG.save.data.downscroll)
+			songPosBG.y = FlxG.height * 0.9 + 45;
+		songPosBG.screenCenter(X);
+		songPosBG.scrollFactor.set();
+		songPosBG.cameras = [camHUD];
+
+		songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
+			'songPositionBar', 0, songLength);
+		songPosBar.scrollFactor.set();
+		songPosBar.createFilledBar(FlxColor.GRAY, FlxColor.LIME);
+		songPosBar.cameras = [camHUD];
+
+		songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - (SONG.song.length * 5), songPosBG.y, 0, SONG.song, 16);
+		songName.text = SONG.song + ' (' + FlxStringUtil.formatTime(songLength, false) + ')';
+		songName.screenCenter(X);
+		songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		songName.scrollFactor.set();
+		songName.antialiasing = !isPixelUI;
+		songName.cameras = [camHUD];
+
+		if (FlxG.save.data.songPosition)
 		{
-			songPosBG = new FlxSprite(0, 10).makeGraphic(600, 20, FlxColor.BLACK);
-			if (FlxG.save.data.downscroll)
-				songPosBG.y = FlxG.height * 0.9 + 45;
-			songPosBG.screenCenter(X);
-			songPosBG.scrollFactor.set();
-			songPosBG.cameras = [camHUD];
 			add(songPosBG);
-
-			songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
-				'songPositionBar', 0, songLength);
-			songPosBar.scrollFactor.set();
-			songPosBar.createFilledBar(FlxColor.GRAY, FlxColor.LIME);
-			songPosBar.cameras = [camHUD];
 			add(songPosBar);
-
-			songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - (SONG.song.length * 5), songPosBG.y, 0, SONG.song, 16);
-			songName.text = SONG.song + ' (' + FlxStringUtil.formatTime(songLength, false) + ')';
-			songName.screenCenter(X);
-			songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-			songName.scrollFactor.set();
-			songName.antialiasing = !isPixelUI;
-			songName.cameras = [camHUD];
 			add(songName);
 		}
 
@@ -1699,7 +1700,7 @@ class PlayState extends MusicBeatState
 
 		startingSong = true;
 		isintro = true;
-		if (showCutscene)
+		if (showCutscene && !loadRep)
 		{
 			if (isStoryMode)
 			{
@@ -1763,33 +1764,16 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			if (isStoryMode)
+			switch (curSong.toLowerCase())
 			{
-				switch (curSong.toLowerCase())
-				{
-					case 'dual demise':
-						dualdemisecountdown();
-					case 'your demise':
-						DarkStart(doof);
-					case 'epiphany':
-						epipdarkstart(doof);
-					default:
-						startCountdown();
-				}
-			}
-			else
-			{
-				switch (curSong.toLowerCase())
-				{
-					case 'dual demise':
-						dualdemisecountdown();
-					case 'your demise':
-						DarkStart(doof);
-					case 'epiphany':
-						epipdarkstart(doof);
-					default:
-						startCountdown();
-				}
+				case 'dual demise':
+					dualdemisecountdown();
+				case 'your demise':
+					DarkStart(doof);
+				case 'epiphany':
+					epipdarkstart(doof);
+				default:
+					startCountdown();
 			}
 		}
 
