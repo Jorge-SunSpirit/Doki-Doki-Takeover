@@ -40,8 +40,8 @@
 	Exiting the login menu will throw you back to Main Menu State. You can change this in the GameJoltLogin class.
 
 	The session will automatically start on login and will be pinged every 30 seconds.
-	If it isn't pinged within 120 seconds, the session automatically ends from GameJolt's side.
-	Thanks GameJolt, makes my life much easier! Not sarcasm!
+	If it isn't pinged within 120 seconds, the session automatically ends from Game Jolt's side.
+	Thanks Game Jolt, makes my life much easier! Not sarcasm!
 
 	You can give a trophy by using:
 	GameJoltAPI.getTrophy(trophyID);
@@ -306,7 +306,7 @@ class GameJoltLogin extends MusicBeatSubstate
 		charBop.flipX = false;
 		add(charBop);
 
-		gamejoltText = new FlxText(0, 25, 0, "GameJolt Integration");
+		gamejoltText = new FlxText(0, 25, 0, "Game Jolt Integration");
 		gamejoltText.setFormat(LangUtil.getFont('riffic'), 24, FlxColor.WHITE, CENTER);
 		gamejoltText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		gamejoltText.antialiasing = true;
@@ -371,7 +371,7 @@ class GameJoltLogin extends MusicBeatSubstate
 			GameJoltAPI.authDaUser(usernameBox.text, tokenBox.text, true);
 		});
 
-		helpBox = new FlxButton(0, 550, "GameJolt Token", function()
+		helpBox = new FlxButton(0, 550, "Game Jolt Token", function()
 		{
 			openLink('https://www.youtube.com/watch?v=T5-x7kAGGnE');
 		});
