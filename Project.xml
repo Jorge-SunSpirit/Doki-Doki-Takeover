@@ -170,7 +170,7 @@
 	<haxedef name="FEATURE_CACHING" if="windows" unless="32bit || hl" />
 	<!-- Defines whether OBS or other recording software can be detected. Only works on Windows. -->
 	<haxedef name="FEATURE_OBS" if="windows" />
-	<!-- Defines whether GameJolt integration is enabled. Unsure what platforms it works on. -->
+	<!-- Defines whether GameJolt integration is enabled. -->
 	<haxedef name="FEATURE_GAMEJOLT" />
 
 </project>
