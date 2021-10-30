@@ -17,6 +17,7 @@ Sincerely,
 The DDTO Mod Team
 
 https://gamebanana.com/mods/47364
+https://gamejolt.com/games/dokidoki/654415
 
 ===============
     CREDITS
