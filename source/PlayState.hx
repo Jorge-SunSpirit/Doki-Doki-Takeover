@@ -1832,6 +1832,9 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = false;
 		replayTxt.visible = false;
 		botPlayState.visible = false;
+		songPosBG.visible = false;
+		songPosBar.visible = false;
+		songName.visible = false;
 		new FlxTimer().start(1.2, function(godlike:FlxTimer)
 		{
 			if (dialogueBox != null)
@@ -2244,6 +2247,9 @@ class PlayState extends MusicBeatState
 						scoreTxt.visible = false;
 						replayTxt.visible = false;
 						botPlayState.visible = false;
+						songPosBG.visible = false;
+						songPosBar.visible = false;
+						songName.visible = false;
 						camHUD.visible = true;
 						add(blackScreen);
 						blackScreen.alpha = 0;
@@ -2511,6 +2517,9 @@ class PlayState extends MusicBeatState
 			scoreTxt.visible = true;
 			replayTxt.visible = true;
 			botPlayState.visible = true;
+			songPosBG.visible = true;
+			songPosBar.visible = true;
+			songName.visible = true;
 		}
 
 		generateStaticArrows(0, SONG.noteStyle);
