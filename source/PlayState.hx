@@ -4313,7 +4313,7 @@ class PlayState extends MusicBeatState
 				{
 					FlxG.save.data.epipbeaten = true;
 					#if FEATURE_GAMEJOLT
-					GameJoltAPI.getTrophy(0);
+					GameJoltAPI.getTrophy(151163);
 					#end
 				}
 

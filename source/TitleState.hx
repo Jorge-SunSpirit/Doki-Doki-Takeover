@@ -90,8 +90,26 @@ class TitleState extends MusicBeatState
 		GameJoltAPI.connect();
 		GameJoltAPI.authDaUser(FlxG.save.data.gjUser, FlxG.save.data.gjToken);
 
+		if (FlxG.save.data.monipopup)
+			GameJoltAPI.getTrophy(151157);
+
+		if (FlxG.save.data.sayopopup)
+			GameJoltAPI.getTrophy(151158);
+
+		if (FlxG.save.data.natpopup)
+			GameJoltAPI.getTrophy(151159);
+
+		if (FlxG.save.data.yuripopup)
+			GameJoltAPI.getTrophy(151160);
+
+		if (FlxG.save.data.extra1popup)
+			GameJoltAPI.getTrophy(151161);
+
+		if (FlxG.save.data.extra2popup)
+			GameJoltAPI.getTrophy(151162);
+
 		if (FlxG.save.data.epipbeaten)
-			GameJoltAPI.getTrophy(0);
+			GameJoltAPI.getTrophy(151163);
 		#end
 
 		if (FlxG.save.data.weekUnlocked != null)

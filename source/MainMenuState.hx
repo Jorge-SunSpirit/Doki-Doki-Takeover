@@ -579,7 +579,7 @@ class MainMenuState extends MusicBeatState
 				{
 					// Hueh keeping this forever
 					#if FEATURE_GAMEJOLT
-					GameJoltAPI.getTrophy(0);
+					GameJoltAPI.getTrophy(151164);
 					#end
 					#if linux
 					Sys.command('/usr/bin/xdg-open', ["https://www.youtube.com/watch?v=0MW9Nrg_kZU", "&"]);
