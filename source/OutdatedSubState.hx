@@ -69,16 +69,25 @@ class OutdatedSubState extends MusicBeatState
 			FlxG.save.data.weekUnlocked = 2;
 
 			#if FEATURE_GAMEJOLT
-			GameJoltAPI.getTrophy(0);
+			GameJoltAPI.getTrophy(151157);
 			#end
 
 			#if debug
 			// devonlystuff
+			FlxG.save.data.monibeaten = true;
 			FlxG.save.data.sayobeaten = true;
 			FlxG.save.data.natbeaten = true;
 			FlxG.save.data.yuribeaten = true;
 			FlxG.save.data.extrabeaten = true;
-			FlxG.save.data.weekUnlocked = 10;
+			FlxG.save.data.extra2beaten = true;
+			FlxG.save.data.unlockepip = true;
+			FlxG.save.data.monipopup = true;
+			FlxG.save.data.sayopopup = true;
+			FlxG.save.data.natpopup = true;
+			FlxG.save.data.yuripopup = true;
+			FlxG.save.data.extra1popup = true;
+			FlxG.save.data.extra2popup = true;
+			FlxG.save.data.weekUnlocked = 7;
 			#end
 
 			FlxG.switchState(new MainMenuState());
