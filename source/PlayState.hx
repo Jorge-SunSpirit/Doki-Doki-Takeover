@@ -2794,7 +2794,6 @@ class PlayState extends MusicBeatState
 		}
 		#end
 		var daBeats:Int = 0; // Not exactly representative of 'daBeats' lol, just how much it has looped
-		var gottaHitNote:Bool;
 		for (section in noteData)
 		{
 			var noteStyle:String = SONG.noteStyle;
@@ -2809,7 +2808,7 @@ class PlayState extends MusicBeatState
 					daStrumTime = 0;
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 
-				gottaHitNote = (FlxG.save.data.mirrorMode ? !section.mustHitSection : section.mustHitSection);
+				var gottaHitNote:Bool = (FlxG.save.data.mirrorMode ? !section.mustHitSection : section.mustHitSection);
 
 				if (songNotes[1] > 3)
 					gottaHitNote = (FlxG.save.data.mirrorMode ? section.mustHitSection : !section.mustHitSection);
@@ -2843,20 +2842,13 @@ class PlayState extends MusicBeatState
 					sustainNote.mustPress = gottaHitNote;
 
 					if (sustainNote.mustPress)
-					{
 						sustainNote.x += FlxG.width / 2; // general offset
-					}
 				}
 
 				swagNote.mustPress = gottaHitNote;
 
 				if (swagNote.mustPress)
-				{
 					swagNote.x += FlxG.width / 2; // general offset
-				}
-				else
-				{
-				}
 			}
 			daBeats += 1;
 		}
