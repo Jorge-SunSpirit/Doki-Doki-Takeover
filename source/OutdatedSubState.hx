@@ -74,7 +74,6 @@ class OutdatedSubState extends MusicBeatState
 			FlxG.save.data.extrabeaten = true;
 			FlxG.save.data.extra2beaten = true;
 			FlxG.save.data.unlockepip = true;
-			FlxG.save.data.monipopup = true;
 			FlxG.save.data.sayopopup = true;
 			FlxG.save.data.natpopup = true;
 			FlxG.save.data.yuripopup = true;
