@@ -491,7 +491,11 @@ class MainMenuState extends MusicBeatState
 
 			#if debug
 			if (FlxG.keys.justPressed.I)
+			{
+				FlxTransitionableState.skipNextTransOut = true;
+				FlxTransitionableState.skipNextTransIn = true;
 				FlxG.switchState(new MainMenuState());
+			}
 
 			if (FlxG.keys.justPressed.O)
 			{
