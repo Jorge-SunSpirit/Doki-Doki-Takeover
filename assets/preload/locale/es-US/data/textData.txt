@@ -58,7 +58,7 @@ optLaneUnderwayOff::Sin Subrallado de Carril
 optSaveReset::Reiniciar Datos de Guardado
 optSaveResetConfirm::Confirmar Reinicio de Datos de Guardado
 optSelfAware::Conciencia de Uno Mismo
-optGameJolt::Integración de GameJolt
+optGameJolt::Integración de Game Jolt
 // DESCRIPTION
 descAddOffset::Añade un valor al desplazamiento global, por canción.
 descKeyBindings::Cambiar las teclas de cada nota.
@@ -103,7 +103,7 @@ descLaneUnderway::Alterna el lane underlay.
 descLaneUnderwayControl::Transparencia del Lane Underlay actual.
 descSaveReset::Reinicia tu partida guardada a una predeterminada.
 descDialogueSkip::Pulsa ESCAPE para saltar el dialogo.
-descGameJolt::Inicia sesión en GameJolt para obtener trofeos!
+descGameJolt::Inicia sesión en Game Jolt para obtener trofeos!
 // UNLOCK POPUPS
 msgMoni:: Desbloqueaste "Your Reality"{NL}Accede a la canción desde el menú de freeplay.
 msgSayo::Las canciones de Sayori ahora están disponibles en el  menú de Freeplay.

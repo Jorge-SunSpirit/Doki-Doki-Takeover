@@ -58,7 +58,7 @@ optLaneUnderwayOff::No Lane Underlay
 optSaveReset::Reset Save File
 optSaveResetConfirm::Confirm Reset Save File
 optSelfAware::Self Awareness
-optGameJolt::GameJolt Integration
+optGameJolt::Game Jolt Integration
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -103,7 +103,7 @@ descLaneUnderway::Toggles lane underlay.
 descLaneUnderwayControl::Current Lane Underlay transparency
 descSaveReset::Reset your save file to its defaults.
 descDialogueSkip::Press ESCAPE to skip the dialogue.
-descGameJolt::Log into your GameJolt account to earn trophies!
+descGameJolt::Log into your Game Jolt account to earn trophies!
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.

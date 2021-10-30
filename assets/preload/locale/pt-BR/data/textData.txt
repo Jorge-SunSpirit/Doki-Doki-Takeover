@@ -58,7 +58,7 @@ optLaneUnderwayOff::Sem Underlay de Pista
 optSaveReset::Resetar Seu Save File
 optSaveResetConfirm::Confirmar Resetar Save File
 optSelfAware::Self Awareness
-optGameJolt::GameJolt Integration
+optGameJolt::Game Jolt Integration
 // DESCRIPTION
 descAddOffset::Adiciona valor ao offset global, por música.
 descKeyBindings::Muda as teclas de cada seta.
@@ -103,7 +103,7 @@ descLaneUnderway::Ativa/desativa underlay de pista.
 descLaneUnderwayControl::Transparência atual do Underlay da pista
 descSaveReset::Resete seu save para o padrão.
 descDialogueSkip::Pressione ESCAPE para pular o diálogo.
-descGameJolt::Log into your GameJolt account to earn trophies!
+descGameJolt::Log into your Game Jolt account to earn trophies!
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Desbloqueado!{NL}Acesse a música no menu de Freeplay.
 msgSayo::As músicas de Sayori agora estão disponíveis no menu de Freeplay.

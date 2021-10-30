@@ -377,14 +377,11 @@ class GameJoltLogin extends MusicBeatSubstate
 		});
 		helpBox.color = FlxColor.fromRGB(84, 155, 149);
 
-		logOutBox = new FlxButton(0, 650, "Log Out & Restart", function()
+		logOutBox = new FlxButton(0, 650, "Log Out & Close", function()
 		{
 			// GameJoltAPI.fetchAllTrophies();
 			GameJoltAPI.deAuthDaUser();
 		});
-		#if !windows
-		logOutBox.text = "Log Out & Close";
-		#end
 		logOutBox.color = FlxColor.RED /*FlxColor.fromRGB(255,134,61)*/;
 
 		cancelBox = new FlxButton(0, 650, "Not Right Now", function()
@@ -417,8 +414,9 @@ class GameJoltLogin extends MusicBeatSubstate
 
 		if (GameJoltAPI.getStatus())
 		{
-			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true));
-			username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
+			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true), 40);
+			// username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
+			username.alignment = CENTER;
 			username.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 			username.antialiasing = true;
 			username.screenCenter(X);
