@@ -113,6 +113,7 @@ class OptionsMenu extends MusicBeatState
 			var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
 			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 			controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+			controlLabel.antialiasing = true;
 			controlLabel.ID = i;
 			grpControls.add(controlLabel);
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -167,6 +168,7 @@ class OptionsMenu extends MusicBeatState
 					var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
 					controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 					controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+					controlLabel.antialiasing = true;
 					controlLabel.ID = i;
 					grpControls.add(controlLabel);
 					// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -272,6 +274,7 @@ class OptionsMenu extends MusicBeatState
 						var ctrl:FlxText = new FlxText(460, (50 * curSelected) + 20, 0, currentSelectedCat.getOptions()[curSelected].getDisplay());
 						ctrl.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 						ctrl.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+						ctrl.antialiasing = true;
 						ctrl.ID = curSelected;
 						grpControls.add(ctrl);
 					}
@@ -286,6 +289,7 @@ class OptionsMenu extends MusicBeatState
 						var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, currentSelectedCat.getOptions()[i].getDisplay());
 						controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 						controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+						controlLabel.antialiasing = true;
 						controlLabel.ID = i;
 						grpControls.add(controlLabel);
 						// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!

@@ -309,12 +309,14 @@ class GameJoltLogin extends MusicBeatSubstate
 		gamejoltText = new FlxText(0, 25, 0, "GameJolt Integration");
 		gamejoltText.setFormat(LangUtil.getFont('riffic'), 24, FlxColor.WHITE, CENTER);
 		gamejoltText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+		gamejoltText.antialiasing = true;
 		gamejoltText.screenCenter(X);
 		gamejoltText.x += baseX;
 		add(gamejoltText);
 
 		versionText = new FlxText(5, FlxG.height - 18, 0, "Game ID: " + GJKeys.id + " API: " + GameJoltInfo.version, 12);
 		versionText.setFormat(LangUtil.getFont('riffic'), 12, FlxColor.WHITE, CENTER);
+		versionText.antialiasing = true;
 		versionText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		add(versionText);
 
@@ -324,10 +326,12 @@ class GameJoltLogin extends MusicBeatSubstate
 		usernameText = new FlxText(0, 125, 300, "Username:");
 		usernameText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
 		usernameText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+		usernameText.antialiasing = true;
 
 		tokenText = new FlxText(0, 225, 300, "Token:");
 		tokenText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
 		tokenText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+		tokenText.antialiasing = true;
 
 		loginTexts.add(usernameText);
 		loginTexts.add(tokenText);
@@ -416,6 +420,7 @@ class GameJoltLogin extends MusicBeatSubstate
 			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true));
 			username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
 			username.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+			username.antialiasing = true;
 			username.screenCenter(X);
 			username.x += baseX;
 			add(username);

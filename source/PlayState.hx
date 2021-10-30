@@ -88,6 +88,7 @@ class PlayState extends MusicBeatState
 
 	public static var songPosBG:FlxSprite;
 	public static var songPosBar:FlxBar;
+	public static var songName:FlxText;
 
 	public static var rep:Replay;
 	public static var loadRep:Bool = false;
@@ -229,7 +230,6 @@ class PlayState extends MusicBeatState
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
-	var songName:FlxText;
 	var upperBoppers:FlxSprite;
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
@@ -1599,9 +1599,8 @@ class PlayState extends MusicBeatState
 			songPosBar.cameras = [camHUD];
 			add(songPosBar);
 
-			var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - (SONG.song.length * 5), songPosBG.y, 0, SONG.song, 16);
-			if (FlxG.save.data.downscroll)
-				songName.y -= 3;
+			songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - (SONG.song.length * 5), songPosBG.y, 0, SONG.song, 16);
+			songName.text = SONG.song + ' (' + FlxStringUtil.formatTime(songLength, false) + ')';
 			songName.screenCenter(X);
 			songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			songName.scrollFactor.set();
@@ -2700,16 +2699,13 @@ class PlayState extends MusicBeatState
 	{
 		incutsceneforendingsmh = false;
 
-		midsongcutscene == true;
 		startingSong = false;
 		songStarted = true;
 		previousFrameTime = FlxG.game.ticks;
 		lastReportedPlayheadPosition = 0;
 
 		if (!paused)
-		{
 			FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 1, false);
-		}
 
 		FlxG.sound.music.onComplete = songOutro;
 		vocals.play();
@@ -3132,6 +3128,9 @@ class PlayState extends MusicBeatState
 		perfectMode = false;
 		#end
 
+		if (FlxG.save.data.songPosition)
+			songName.screenCenter(X);
+
 		if (FlxG.save.data.botplay && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
 
@@ -3415,6 +3414,17 @@ class PlayState extends MusicBeatState
 					// Conductor.songPosition += FlxG.elapsed * 1000;
 					// trace('MISSED FRAME');
 				}
+
+				var curTime:Float = FlxG.sound.music.time;
+				if (curTime < 0)
+					curTime = 0;
+
+				var secondsTotal:Int = Math.floor(((curTime - songLength) / 1000));
+				if (secondsTotal < 0)
+					secondsTotal = 0;
+
+				if (FlxG.save.data.songPosition)
+					songName.text = SONG.song + ' (' + FlxStringUtil.formatTime((songLength - secondsTotal), false) + ')';
 			}
 
 			// Conductor.lastSongPos = FlxG.sound.music.time;
@@ -5559,7 +5569,7 @@ class PlayState extends MusicBeatState
 		iconP1.changeIcon('bf-pixel');
 		iconP2.changeIcon('monika');
 
-		if (FlxG.save.data.songPosition && songName != null)
+		if (FlxG.save.data.songPosition)
 			songName.antialiasing = false;
 
 		scoreTxt.antialiasing = false;
@@ -5625,7 +5635,7 @@ class PlayState extends MusicBeatState
 		protag.visible = true;
 		yuri.visible = true;
 
-		if (FlxG.save.data.songPosition && songName != null)
+		if (FlxG.save.data.songPosition)
 			songName.antialiasing = true;
 
 		scoreTxt.antialiasing = true;
