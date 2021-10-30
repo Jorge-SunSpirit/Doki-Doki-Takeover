@@ -170,6 +170,7 @@ class PlayState extends MusicBeatState
 
 	private var iconP1:HealthIcon;
 	private var iconP2:HealthIcon;
+	private var iconSubtract:Int = 0;
 
 	public var camHUD:FlxCamera;
 
@@ -518,12 +519,24 @@ class PlayState extends MusicBeatState
 					else
 					{
 						DialogueBox.isEpiphany = true;
+						#if FEATURE_ICON
+						HealthIcon.isEpiphany = true;
+						iconP1 = new HealthIcon('player');
+						remove(iconP1);
+						if (FileSystem.exists(CoolUtil.pfpPath))
+							iconSubtract = 25;
+						#end
 						dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 					}
 				}
 				else
 					dialogue = CoolUtil.coolTextFile(Paths.txt("data/epiphany/IntroDialogue", 'preload', true));
 		}
+
+		#if FEATURE_ICON
+		if (!showCutscene && SONG.song.toLowerCase() == 'epiphany' && HealthIcon.isEpiphany && FileSystem.exists(CoolUtil.pfpPath))
+			iconSubtract = 25;
+		#end
 
 		trace(SONG.stage);
 
@@ -1665,6 +1678,8 @@ class PlayState extends MusicBeatState
 		iconP1.y = healthBar.y - (iconP1.height / 2);
 		add(iconP1);
 
+		iconP1.y += iconSubtract;
+
 		iconP2 = new HealthIcon(SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
@@ -1756,6 +1771,9 @@ class PlayState extends MusicBeatState
 					case 'your demise':
 						DarkStart(doof);
 					case 'epiphany':
+						#if FEATURE_ICON
+						iconP1.changeIcon('player');
+						#end
 						funnyephiphinya(doof);
 					default:
 						startCountdown();
@@ -1773,6 +1791,9 @@ class PlayState extends MusicBeatState
 					case 'your demise':
 						DarkStart(doof);
 					case 'epiphany':
+						#if FEATURE_ICON
+						iconP1.changeIcon('player');
+						#end
 						epipdarkstart(doof);
 					default:
 						startCountdown();
@@ -1787,6 +1808,9 @@ class PlayState extends MusicBeatState
 					case 'your demise':
 						DarkStart(doof);
 					case 'epiphany':
+						#if FEATURE_ICON
+						iconP1.changeIcon('player');
+						#end
 						epipdarkstart(doof);
 					default:
 						startCountdown();
@@ -3287,7 +3311,7 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.5)));
+		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width - (iconSubtract * 2), 0.5)));
 		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.5)));
 
 		iconP1.updateHitbox();
@@ -3295,7 +3319,7 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
+		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset + iconSubtract);
 		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
 
 		if (health > 2)

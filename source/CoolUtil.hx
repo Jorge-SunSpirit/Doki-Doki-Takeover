@@ -65,6 +65,28 @@ class CoolUtil
 		return daList;
 	}
 
+	public static function grabUserIcon():FlxGraphic
+	{
+		#if FEATURE_ICON
+		if (!grabbedPfp)
+		{
+			if (FileSystem.exists(Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg'))
+				pfpPath = Sys.getEnv("localappdata") + '\\Microsoft\\Windows\\AccountPicture\\UserImage.jpg';
+			grabbedPfp = true;
+		}
+
+		if (FileSystem.exists(pfpPath))
+		{
+			var avatar = BitmapData.fromFile(pfpPath);
+			return FlxGraphic.fromBitmapData(avatar);
+		}
+		else
+			return Paths.loadImage('icons/icon-bf', 'shared');
+		#else
+		return Paths.loadImage('icons/icon-bf', 'shared');
+		#end
+	}
+
 	public static function coolTextFile(path:String):Array<String>
 	{
 		var daList:Array<String> = Assets.getText(path).trim().split('\n');

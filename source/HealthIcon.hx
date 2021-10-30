@@ -43,6 +43,19 @@ class HealthIcon extends FlxSprite
 		{
 			case 'bf-pixel' | 'bf-old' | 'monika-angry' | 'yuri-crazy' | 'dual-demise' | 'monika-real':
 			// lol
+			case 'player':
+				#if FEATURE_ICON
+				if (isEpiphany)
+				{
+					loadGraphic(CoolUtil.grabUserIcon());
+					if (sys.FileSystem.exists(CoolUtil.pfpPath))
+					{
+						animation.add(char, [0, 1], 0, false, !isPlayer);
+						animation.play(char);
+						return;
+					}
+				}
+				#end
 			case 'bf-pixelangry':
 				char = 'bf-pixel';
 			case 'playablesenpai':
