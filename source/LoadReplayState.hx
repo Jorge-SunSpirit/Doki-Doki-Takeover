@@ -57,8 +57,7 @@ class LoadReplayState extends MusicBeatState
 		if (controlsStrings.length == 0)
 			controlsStrings.push("No Replays...");
 
-		menuBG.color = 0xFFea71fd;
-		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
+		menuBG.setGraphicSize(Std.int(menuBG.width));
 		menuBG.updateHitbox();
 		menuBG.screenCenter();
 		menuBG.antialiasing = true;

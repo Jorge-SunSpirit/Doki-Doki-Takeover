@@ -27,8 +27,6 @@ class OutdatedSubState extends MusicBeatState
 	{
 		super.create();
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGFriends'));
-		bg.scale.x *= 1;
-		bg.scale.y *= 1;
 		bg.screenCenter();
 		add(bg);
 
