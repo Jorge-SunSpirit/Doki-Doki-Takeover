@@ -75,7 +75,9 @@ import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.graphics.FlxGraphic;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
+#if FEATURE_FILESYSTEM
 import Sys;
+#end
 
 // Unused
 // class GameJoltGameData
@@ -152,8 +154,8 @@ class GameJoltAPI // Connects to tentools.api.FlxGameJolt
 		closeSession();
 		userLogin = false;
 		trace(FlxG.save.data.gjUser + FlxG.save.data.gjToken);
-		FlxG.save.data.gjUser = "";
-		FlxG.save.data.gjToken = "";
+		FlxG.save.data.gjUser = null;
+		FlxG.save.data.gjToken = null;
 		FlxG.save.flush();
 		trace(FlxG.save.data.gjUser + FlxG.save.data.gjToken);
 		trace("Logged out!");
@@ -374,7 +376,7 @@ class GameJoltLogin extends MusicBeatSubstate
 		logOutBox = new FlxButton(0, 650, "Log Out & Restart", function()
 		{
 			// GameJoltAPI.fetchAllTrophies();
-			// GameJoltAPI.deAuthDaUser();
+			GameJoltAPI.deAuthDaUser();
 		});
 		#if !windows
 		logOutBox.text = "Log Out & Close";
@@ -444,9 +446,7 @@ class GameJoltLogin extends MusicBeatSubstate
 			Conductor.songPosition = FlxG.sound.music.time;
 
 		if (!FlxG.sound.music.playing)
-		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
-		}
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
@@ -465,33 +465,12 @@ class GameJoltLogin extends MusicBeatSubstate
 
 	public static function restart()
 	{
-		#if windows
-		var os = Sys.systemName();
-		var args = "Test.hx";
-		var app = "";
-		var workingdir = Sys.getCwd();
-
-		FlxG.log.add(app);
-
-		app = Sys.programPath();
-
-		// Launch application:
-		var result = systools.win.Tools.createProcess(app // app. path
-			, args // app. args
-			, workingdir // app. working directory
-			, false // do not hide the window
-			, false // do not wait for the application to terminate
-		);
-		// Show result:
-		if (result == 0)
-		{
-			FlxG.log.add('SUS');
-			System.exit(1337);
-		}
-		else
-			throw "Failed to restart";
+		#if FEATURE_FILESYSTEM
+		Sys.exit(0);
 		#else
-		System.exit(0);
+		FlxTransitionableState.skipNextTransOut = true;
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxG.switchState(new CrashState());
 		#end
 	}
 

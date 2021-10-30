@@ -58,7 +58,7 @@ optLaneUnderwayOff::Geen Onderlaag van je Laan
 optSaveReset::Reset Je Opslaggegevens 
 optSaveResetConfirm::Bevestig Jouw Keuze
 optSelfAware::Zelfbewustzijn
-optGameJolt::GameJolt Integration
+optGameJolt::GameJolt Integratie
 // DESCRIPTION
 descAddOffset::Voegt een waarde aan de globale offset toe, per lied.
 descKeyBindings::Verander de sneltoetsen van de noten.
@@ -103,8 +103,7 @@ descLaneUnderway::Zet de onderlaag van jouw laan aan of uit.
 descLaneUnderwayControl::Huidige Doorzichtigheid Onderlaag Laan
 descSaveReset::Reset jouw Opslaggevens.
 descDialogueSkip::Druk op ESCAPE om het gesprek over te slaan.
-descGameJolt::Log into your GameJolt account to earn trophies!
-
+descGameJolt::Log in op je GameJolt account om trofeeën te verdienen!
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Ontgrendeld!{NL}Krijg toegang tot het lied in het Vrije Spel Menu.
 msgSayo::Sayori's liedjes zijn nu toegankelijk in het Vrije Spel Menu.
