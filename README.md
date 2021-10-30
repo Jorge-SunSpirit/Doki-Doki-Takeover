@@ -1,5 +1,5 @@
 ![Doki Doki Takeover! logo](art/api.png)
-## Built on **[Kade Engine](https://github.com/KadeDev/Kade-Engine)** - **[GameBanana](https://gamebanana.com/mods/47364)** - **[GameJolt](https://gamejolt.com/games/dokidoki/654415)**
+## Built on **[Kade Engine](https://github.com/KadeDev/Kade-Engine)** - **[GameBanana](https://gamebanana.com/mods/47364)** - **[Game Jolt](https://gamejolt.com/games/dokidoki/654415)**
 
 # Original Game Links
 
