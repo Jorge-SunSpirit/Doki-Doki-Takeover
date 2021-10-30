@@ -864,8 +864,10 @@ class ResetSave extends Option
 		FlxG.save.data.yuribeaten = null;
 		FlxG.save.data.extrabeaten = null;
 		FlxG.save.data.extra2beaten = null;
-		FlxG.save.data.gfCountdown = null;
 		FlxG.save.data.unlockepip = null;
+		FlxG.save.data.epipbeaten = null;
+		FlxG.save.data.gfCountdown = null;
+		FlxG.save.data.mirrorMode = null;
 		FlxG.save.data.monipopup = null;
 		FlxG.save.data.sayopopup = null;
 		FlxG.save.data.natpopup = null;
@@ -956,3 +958,24 @@ class GameJolt extends Option
 	}
 }
 #end
+
+class MirrorMode extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.mirrorMode = !FlxG.save.data.mirrorMode;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optMirrorMode') + ' ' + (FlxG.save.data.mirrorMode ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}

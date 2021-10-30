@@ -521,6 +521,7 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.extrabeaten = false;
 				FlxG.save.data.extra2beaten = false;
 				FlxG.save.data.gfCountdown = false;
+				FlxG.save.data.mirrorMode = false;
 				FlxG.save.data.unlockepip = false;
 				FlxG.save.data.monipopup = false;
 				FlxG.save.data.sayopopup = false;

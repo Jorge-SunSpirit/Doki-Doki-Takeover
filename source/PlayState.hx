@@ -2794,14 +2794,13 @@ class PlayState extends MusicBeatState
 		}
 		#end
 		var daBeats:Int = 0; // Not exactly representative of 'daBeats' lol, just how much it has looped
+		var gottaHitNote:Bool;
 		for (section in noteData)
 		{
 			var noteStyle:String = SONG.noteStyle;
 
 			if (section.altAnim && curStage == "dokiglitcher" && FlxG.save.data.distractions)
 				noteStyle = 'pixel';
-
-			var coolSection:Int = Std.int(section.lengthInSteps / 4);
 
 			for (songNotes in section.sectionNotes)
 			{
@@ -2810,12 +2809,10 @@ class PlayState extends MusicBeatState
 					daStrumTime = 0;
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 
-				var gottaHitNote:Bool = section.mustHitSection;
+				gottaHitNote = (FlxG.save.data.mirrorMode ? !section.mustHitSection : section.mustHitSection);
 
 				if (songNotes[1] > 3)
-				{
-					gottaHitNote = !section.mustHitSection;
-				}
+					gottaHitNote = (FlxG.save.data.mirrorMode ? section.mustHitSection : !section.mustHitSection);
 
 				var oldNote:Note;
 				if (unspawnNotes.length > 0)
@@ -4039,9 +4036,7 @@ class PlayState extends MusicBeatState
 					else
 					{
 						if (daNote.noteType == 2)
-						{
 							vocals.volume = 1;
-						}
 						else
 						{
 							health -= 0.075;
@@ -4833,9 +4828,8 @@ class PlayState extends MusicBeatState
 		{
 			health -= 0.04;
 			if (combo > 5 && gf.animOffsets.exists('sad') && !gf.animation.curAnim.name.startsWith('necksnap'))
-			{
 				gf.playAnim('sad');
-			}
+
 			combo = 0;
 			misses++;
 
@@ -5217,9 +5211,7 @@ class PlayState extends MusicBeatState
 				switch (curStep)
 				{
 					case 138:
-						{
-							dad.playAnim('breath');
-						}
+						dad.playAnim('breath');
 					case 148:
 						FlxG.sound.play(Paths.sound('exhale'));
 				}
@@ -5351,11 +5343,9 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
+		// when the code don't work https://i.imgur.com/wHYhTSC.png
 		if (!gf.animation.curAnim.name.startsWith('countdown') && !gf.animation.curAnim.name.startsWith('neck') && curBeat % gfSpeed == 0)
-		{
-			// when the code don't work https://i.imgur.com/wHYhTSC.png
 			gf.dance();
-		}
 
 		if (midsongcutscene)
 		{

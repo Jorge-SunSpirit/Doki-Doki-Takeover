@@ -56,6 +56,7 @@ optLaneUnderwayOn::Underlay de la Voie
 optLaneUnderwayOff::Aucun Underlay de la Voie
 optSelfAware::Self Awareness
 optGameJolt::Game Jolt Integration
+optMirrorMode::Mirror Mode
 // DESCRIPTION
 descAddOffset::Ajoute de la valeur au décalage global, par chanson.
 descKeyBindings::Changer les racourcis de chaques notes.
@@ -99,6 +100,7 @@ descMiddleScroll::Mettez votre voie au centre ou à droite.
 descLaneUnderway::Active la sous-couche de voie.
 descLaneUnderwayControl::Transparence du calque sous-jacent de la voie actuelle
 descGameJolt::Log into your Game Jolt account to earn trophies!
+descMirrorMode::Swap your notes with the opponent's notes!
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Débloqué!{NL}Accédez à la chanson dans le menu Freeplay.
 msgSayo::Les chansons de Sayori sont désormais disponibles dans le menu Freeplay.

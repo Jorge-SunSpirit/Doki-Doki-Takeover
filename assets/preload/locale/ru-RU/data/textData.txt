@@ -58,7 +58,8 @@ optLaneUnderwayOff::Без Lane Underlay
 optSaveReset::Обнулить файл сохранения
 optSaveResetConfirm::Подтвердить обнуление?
 optSelfAware::Самосознательность
-optGameJolt::Интеграция с Game Jolt 
+optGameJolt::Интеграция с Game Jolt
+optMirrorMode::Mirror Mode
 // DESCRIPTION
 descAddOffset::Добавляет задержку к нотам, применяется ко всем песням.
 descKeyBindings::Сменить назначения клавиш для каждой ноты.
@@ -104,6 +105,7 @@ descLaneUnderwayControl::Текущий уровень прозрачности 
 descSaveReset::Полностью обнуляет ваш файл сохранения.
 descDialogueSkip::Нажмите ESCAPE чтобы пропустить диалог.
 descGameJolt::Войдите в свой аккаунт Game Jolt чтобы получать достижения!
+descMirrorMode::Swap your notes with the opponent's notes!
 // UNLOCK POPUPS
 msgMoni::Песня "Your Reality"{NL}Разблокирована! Вы можете найти ее в меню свободной игры.
 msgSayo::Песни Сайори теперь доступны в меню свободной игры!

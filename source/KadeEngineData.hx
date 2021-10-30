@@ -113,6 +113,9 @@ class KadeEngineData
 		if (FlxG.save.data.selfAware == null)
 			FlxG.save.data.selfAware = true;
 
+		if (FlxG.save.data.mirrorMode == null)
+			FlxG.save.data.mirrorMode = false;
+
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
 		KeyBinds.gamepad = gamepad != null;

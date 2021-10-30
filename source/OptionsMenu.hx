@@ -86,7 +86,12 @@ class OptionsMenu extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		if (FlxG.save.data.sayobeaten)
+		if (FlxG.save.data.epipbeaten)
+			options.push(new OptionCategory(LangUtil.getString('catUnlock'), [
+				new GFCountdownOption(LangUtil.getString('descGFCountdown')),
+				new MirrorMode(LangUtil.getString('descMirrorMode'))
+			]));
+		else if (FlxG.save.data.sayobeaten)
 			options.push(new OptionCategory(LangUtil.getString('catUnlock'), [new GFCountdownOption(LangUtil.getString('descGFCountdown'))]));
 
 		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
