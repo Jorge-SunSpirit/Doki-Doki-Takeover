@@ -402,6 +402,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Nat Sing Note Right', 24, false);
 				animation.addByPrefix('singDOWN', 'Nat Sing Note DOWN', 24, false);
 				animation.addByPrefix('singLEFT', 'Nat Sing Note Left', 24, false);
+				animation.addByPrefix('singUP-alt', 'Nat hmph', 24, false);
 
 				loadOffsetFile(curCharacter);
 
