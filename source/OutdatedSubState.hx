@@ -9,9 +9,6 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
-#if FEATURE_GAMEJOLT
-import GameJolt.GameJoltAPI;
-#end
 
 class OutdatedSubState extends MusicBeatState
 {
@@ -66,15 +63,11 @@ class OutdatedSubState extends MusicBeatState
 		{
 			FlxG.save.data.funnyquestionpopup = true;
 			FlxG.save.data.monibeaten = true;
+			FlxG.save.data.monipopup = true;
 			FlxG.save.data.weekUnlocked = 2;
-
-			#if FEATURE_GAMEJOLT
-			GameJoltAPI.getTrophy(151157);
-			#end
 
 			#if debug
 			// devonlystuff
-			FlxG.save.data.monibeaten = true;
 			FlxG.save.data.sayobeaten = true;
 			FlxG.save.data.natbeaten = true;
 			FlxG.save.data.yuribeaten = true;
