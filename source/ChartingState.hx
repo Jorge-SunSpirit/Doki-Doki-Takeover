@@ -61,6 +61,9 @@ class ChartingState extends MusicBeatState
 	var writingNotesText:FlxText;
 	var highlight:FlxSprite;
 
+	public var speed:Float = 1.0;
+	public var playDaHit:Bool = false;
+
 	var GRID_SIZE:Int = 40;
 
 	var dummyArrow:FlxSprite;
@@ -190,7 +193,7 @@ class ChartingState extends MusicBeatState
 		var UI_songTitle = new FlxUIInputText(10, 10, 70, _song.song, 8);
 		typingShit = UI_songTitle;
 
-		var check_voices = new FlxUICheckBox(10, 25, null, null, "Has voice track", 100);
+		var check_voices = new FlxUICheckBox(10, 35, null, null, "Has voice track", 100);
 		check_voices.checked = _song.needsVoices;
 		// _song.needsVoices = check_voices.checked;
 		check_voices.callback = function()
@@ -209,6 +212,16 @@ class ChartingState extends MusicBeatState
 				vol = 0;
 
 			FlxG.sound.music.volume = vol;
+		};
+
+		var playHitSound = new FlxUICheckBox(10, 235, null, null, "Play Hitsounds", 100);
+		playHitSound.checked = false;
+		playHitSound.callback = function()
+		{
+			if (playHitSound.checked)
+				playDaHit = true;
+			else
+				playDaHit = false;
 		};
 
 		var saveButton:FlxButton = new FlxButton(110, 8, "Save", function()
@@ -314,6 +327,7 @@ class ChartingState extends MusicBeatState
 		tab_group_song.add(restart);
 		tab_group_song.add(check_voices);
 		tab_group_song.add(check_mute_inst);
+		tab_group_song.add(playHitSound);
 		tab_group_song.add(saveButton);
 		tab_group_song.add(reloadSong);
 		tab_group_song.add(reloadSongJson);
@@ -607,17 +621,38 @@ class ChartingState extends MusicBeatState
 	{
 		updateHeads();
 
-		curStep = recalculateSteps();
-
-		if (FlxG.keys.justPressed.ALT && UI_box.selected_tab == 0)
+		if (FlxG.sound.music != null)
 		{
-			writingNotes = !writingNotes;
+			if (FlxG.sound.music.playing)
+			{
+				@:privateAccess
+				{
+					lime.media.openal.AL.sourcef(FlxG.sound.music._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, speed);
+					try
+					{
+						lime.media.openal.AL.sourcef(vocals._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, speed);
+					}
+					catch (e)
+					{
+						// trace("failed to pitch vocals (probably cuz they don't exist)");
+					}
+				}
+			}
 		}
 
-		if (writingNotes)
-			writingNotesText.text = "WRITING NOTES";
-		else
-			writingNotesText.text = "";
+		curStep = recalculateSteps();
+
+		/*
+			if (FlxG.keys.justPressed.ALT && UI_box.selected_tab == 0)
+			{
+				writingNotes = !writingNotes;
+			}
+
+			if (writingNotes)
+				writingNotesText.text = "WRITING NOTES";
+			else
+				writingNotesText.text = "";
+		 */
 
 		Conductor.songPosition = FlxG.sound.music.time;
 		_song.song = typingShit.text;
@@ -657,11 +692,11 @@ class ChartingState extends MusicBeatState
 
 		curRenderedNotes.forEach(function(note:Note)
 		{
-			if (FlxG.sound.music.playing)
+			if (FlxG.sound.music.playing && playDaHit)
 			{
 				FlxG.overlap(strumLine, note, function(_, _)
 				{
-					if (!claps.contains(note))
+					if (!claps.contains(note) && note.noteType != 2)
 					{
 						claps.push(note);
 						if (_song.notes[curSection].mustHitSection)
@@ -867,14 +902,29 @@ class ChartingState extends MusicBeatState
 			}
 
 			var shiftThing:Int = 1;
-			if (FlxG.keys.pressed.SHIFT)
+			if (FlxG.keys.pressed.CONTROL)
 				shiftThing = 4;
 			if (!writingNotes)
 			{
-				if (FlxG.keys.justPressed.RIGHT || FlxG.keys.justPressed.D)
-					changeSection(curSection + shiftThing);
-				if (FlxG.keys.justPressed.LEFT || FlxG.keys.justPressed.A)
-					changeSection(curSection - shiftThing);
+				if (FlxG.keys.pressed.SHIFT)
+				{
+					if (FlxG.keys.justPressed.RIGHT)
+						speed += 0.1;
+					else if (FlxG.keys.justPressed.LEFT)
+						speed -= 0.1;
+
+					if (speed > 3)
+						speed = 3;
+					if (speed <= 0.01)
+						speed = 0.1;
+				}
+				else
+				{
+					if (FlxG.keys.justPressed.RIGHT)
+						changeSection(curSection + shiftThing);
+					if (FlxG.keys.justPressed.LEFT)
+						changeSection(curSection - shiftThing);
+				}
 			}
 			if (FlxG.keys.justPressed.SPACE)
 			{
@@ -963,7 +1013,9 @@ class ChartingState extends MusicBeatState
 			+ "\nCurStep: "
 			+ curStep
 			+ "\nCurBeat: "
-			+ curBeat;
+			+ curBeat
+			+ "\nSpeed: "
+			+ speed;
 		super.update(elapsed);
 	}
 

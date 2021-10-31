@@ -23,6 +23,9 @@ import flixel.group.FlxGroup;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
+#if FEATURE_GAMEJOLT
+import GameJolt.GameJoltAPI;
+#end
 
 using StringTools;
 
@@ -61,6 +64,29 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		#if FEATURE_GAMEJOLT
+		if (FlxG.save.data.monipopup)
+			GameJoltAPI.getTrophy(151157);
+
+		if (FlxG.save.data.sayopopup)
+			GameJoltAPI.getTrophy(151158);
+
+		if (FlxG.save.data.natpopup)
+			GameJoltAPI.getTrophy(151159);
+
+		if (FlxG.save.data.yuripopup)
+			GameJoltAPI.getTrophy(151160);
+
+		if (FlxG.save.data.extra1popup)
+			GameJoltAPI.getTrophy(151161);
+
+		if (FlxG.save.data.extra2popup)
+			GameJoltAPI.getTrophy(151162);
+
+		if (FlxG.save.data.epipbeaten)
+			GameJoltAPI.getTrophy(151163);
+		#end
+
 		if (FlxG.save.data.extra2beaten)
 			optionShit = ['story mode', 'freeplay', 'credits', 'language', 'options'];
 		else
@@ -465,7 +491,11 @@ class MainMenuState extends MusicBeatState
 
 			#if debug
 			if (FlxG.keys.justPressed.I)
+			{
+				FlxTransitionableState.skipNextTransOut = true;
+				FlxTransitionableState.skipNextTransIn = true;
 				FlxG.switchState(new MainMenuState());
+			}
 
 			if (FlxG.keys.justPressed.O)
 			{
@@ -495,6 +525,7 @@ class MainMenuState extends MusicBeatState
 				FlxG.save.data.extrabeaten = false;
 				FlxG.save.data.extra2beaten = false;
 				FlxG.save.data.gfCountdown = false;
+				FlxG.save.data.mirrorMode = false;
 				FlxG.save.data.unlockepip = false;
 				FlxG.save.data.monipopup = false;
 				FlxG.save.data.sayopopup = false;
@@ -575,6 +606,9 @@ class MainMenuState extends MusicBeatState
 				if (FlxG.keys.pressed.G)
 				{
 					// Hueh keeping this forever
+					#if FEATURE_GAMEJOLT
+					GameJoltAPI.getTrophy(151164);
+					#end
 					#if linux
 					Sys.command('/usr/bin/xdg-open', ["https://www.youtube.com/watch?v=0MW9Nrg_kZU", "&"]);
 					#else

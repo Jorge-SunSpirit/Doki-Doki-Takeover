@@ -40,8 +40,8 @@
 	Exiting the login menu will throw you back to Main Menu State. You can change this in the GameJoltLogin class.
 
 	The session will automatically start on login and will be pinged every 30 seconds.
-	If it isn't pinged within 120 seconds, the session automatically ends from GameJolt's side.
-	Thanks GameJolt, makes my life much easier! Not sarcasm!
+	If it isn't pinged within 120 seconds, the session automatically ends from Game Jolt's side.
+	Thanks Game Jolt, makes my life much easier! Not sarcasm!
 
 	You can give a trophy by using:
 	GameJoltAPI.getTrophy(trophyID);
@@ -75,7 +75,9 @@ import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.graphics.FlxGraphic;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
+#if FEATURE_FILESYSTEM
 import Sys;
+#end
 
 // Unused
 // class GameJoltGameData
@@ -152,8 +154,8 @@ class GameJoltAPI // Connects to tentools.api.FlxGameJolt
 		closeSession();
 		userLogin = false;
 		trace(FlxG.save.data.gjUser + FlxG.save.data.gjToken);
-		FlxG.save.data.gjUser = "";
-		FlxG.save.data.gjToken = "";
+		FlxG.save.data.gjUser = null;
+		FlxG.save.data.gjToken = null;
 		FlxG.save.flush();
 		trace(FlxG.save.data.gjUser + FlxG.save.data.gjToken);
 		trace("Logged out!");
@@ -304,15 +306,17 @@ class GameJoltLogin extends MusicBeatSubstate
 		charBop.flipX = false;
 		add(charBop);
 
-		gamejoltText = new FlxText(0, 25, 0, "GameJolt Integration");
+		gamejoltText = new FlxText(0, 25, 0, "Game Jolt Integration");
 		gamejoltText.setFormat(LangUtil.getFont('riffic'), 24, FlxColor.WHITE, CENTER);
 		gamejoltText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+		gamejoltText.antialiasing = true;
 		gamejoltText.screenCenter(X);
 		gamejoltText.x += baseX;
 		add(gamejoltText);
 
 		versionText = new FlxText(5, FlxG.height - 18, 0, "Game ID: " + GJKeys.id + " API: " + GameJoltInfo.version, 12);
 		versionText.setFormat(LangUtil.getFont('riffic'), 12, FlxColor.WHITE, CENTER);
+		versionText.antialiasing = true;
 		versionText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		add(versionText);
 
@@ -322,10 +326,12 @@ class GameJoltLogin extends MusicBeatSubstate
 		usernameText = new FlxText(0, 125, 300, "Username:");
 		usernameText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
 		usernameText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+		usernameText.antialiasing = true;
 
 		tokenText = new FlxText(0, 225, 300, "Token:");
 		tokenText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
 		tokenText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+		tokenText.antialiasing = true;
 
 		loginTexts.add(usernameText);
 		loginTexts.add(tokenText);
@@ -365,27 +371,25 @@ class GameJoltLogin extends MusicBeatSubstate
 			GameJoltAPI.authDaUser(usernameBox.text, tokenBox.text, true);
 		});
 
-		helpBox = new FlxButton(0, 550, "GameJolt Token", function()
+		helpBox = new FlxButton(0, 550, "Game Jolt Token", function()
 		{
 			openLink('https://www.youtube.com/watch?v=T5-x7kAGGnE');
 		});
 		helpBox.color = FlxColor.fromRGB(84, 155, 149);
 
-		logOutBox = new FlxButton(0, 650, "Log Out & Restart", function()
+		logOutBox = new FlxButton(0, 650, "Log Out & Close", function()
 		{
 			// GameJoltAPI.fetchAllTrophies();
-			// GameJoltAPI.deAuthDaUser();
+			GameJoltAPI.deAuthDaUser();
 		});
-		#if !windows
-		logOutBox.text = "Log Out & Close";
-		#end
 		logOutBox.color = FlxColor.RED /*FlxColor.fromRGB(255,134,61)*/;
 
 		cancelBox = new FlxButton(0, 650, "Not Right Now", function()
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7, false, null, true, function()
 			{
-				FlxG.switchState(new MainMenuState());
+				FlxG.mouse.visible = false;
+				FlxG.switchState(new OptionsMenu());
 			});
 		});
 
@@ -411,9 +415,11 @@ class GameJoltLogin extends MusicBeatSubstate
 
 		if (GameJoltAPI.getStatus())
 		{
-			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true));
-			username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
+			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true), 40);
+			// username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
+			username.alignment = CENTER;
 			username.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+			username.antialiasing = true;
 			username.screenCenter(X);
 			username.x += baseX;
 			add(username);
@@ -444,14 +450,12 @@ class GameJoltLogin extends MusicBeatSubstate
 			Conductor.songPosition = FlxG.sound.music.time;
 
 		if (!FlxG.sound.music.playing)
-		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
-		}
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
 			FlxG.mouse.visible = false;
-			FlxG.switchState(new MainMenuState());
+			FlxG.switchState(new OptionsMenu());
 		}
 
 		super.update(elapsed);
@@ -460,38 +464,18 @@ class GameJoltLogin extends MusicBeatSubstate
 	override function beatHit()
 	{
 		super.beatHit();
-		charBop.animation.play((GameJoltAPI.getStatus() ? "loggedin" : "idle"));
+		if (curBeat % 2 == 0)
+			charBop.animation.play((GameJoltAPI.getStatus() ? "loggedin" : "idle"), true);
 	}
 
 	public static function restart()
 	{
-		#if windows
-		var os = Sys.systemName();
-		var args = "Test.hx";
-		var app = "";
-		var workingdir = Sys.getCwd();
-
-		FlxG.log.add(app);
-
-		app = Sys.programPath();
-
-		// Launch application:
-		var result = systools.win.Tools.createProcess(app // app. path
-			, args // app. args
-			, workingdir // app. working directory
-			, false // do not hide the window
-			, false // do not wait for the application to terminate
-		);
-		// Show result:
-		if (result == 0)
-		{
-			FlxG.log.add('SUS');
-			System.exit(1337);
-		}
-		else
-			throw "Failed to restart";
+		#if FEATURE_FILESYSTEM
+		Sys.exit(0);
 		#else
-		System.exit(0);
+		FlxTransitionableState.skipNextTransOut = true;
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxG.switchState(new CrashState());
 		#end
 	}
 

@@ -86,7 +86,12 @@ class OptionsMenu extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		if (FlxG.save.data.sayobeaten)
+		if (FlxG.save.data.epipbeaten)
+			options.push(new OptionCategory(LangUtil.getString('catUnlock'), [
+				new GFCountdownOption(LangUtil.getString('descGFCountdown')),
+				new MirrorMode(LangUtil.getString('descMirrorMode'))
+			]));
+		else if (FlxG.save.data.sayobeaten)
 			options.push(new OptionCategory(LangUtil.getString('catUnlock'), [new GFCountdownOption(LangUtil.getString('descGFCountdown'))]));
 
 		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
@@ -113,6 +118,7 @@ class OptionsMenu extends MusicBeatState
 			var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
 			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 			controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+			controlLabel.antialiasing = true;
 			controlLabel.ID = i;
 			grpControls.add(controlLabel);
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -132,6 +138,7 @@ class OptionsMenu extends MusicBeatState
 			12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionShit.antialiasing = true;
 
 		blackBorder = new FlxSprite(-30, FlxG.height + 40).makeGraphic((Std.int(versionShit.width + 900)), Std.int(versionShit.height + 600), FlxColor.BLACK);
 		blackBorder.alpha = 0.5;
@@ -167,6 +174,7 @@ class OptionsMenu extends MusicBeatState
 					var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
 					controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 					controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+					controlLabel.antialiasing = true;
 					controlLabel.ID = i;
 					grpControls.add(controlLabel);
 					// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -272,6 +280,7 @@ class OptionsMenu extends MusicBeatState
 						var ctrl:FlxText = new FlxText(460, (50 * curSelected) + 20, 0, currentSelectedCat.getOptions()[curSelected].getDisplay());
 						ctrl.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 						ctrl.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+						ctrl.antialiasing = true;
 						ctrl.ID = curSelected;
 						grpControls.add(ctrl);
 					}
@@ -286,6 +295,7 @@ class OptionsMenu extends MusicBeatState
 						var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, currentSelectedCat.getOptions()[i].getDisplay());
 						controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
 						controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
+						controlLabel.antialiasing = true;
 						controlLabel.ID = i;
 						grpControls.add(controlLabel);
 						// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!

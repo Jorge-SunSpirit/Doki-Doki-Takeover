@@ -548,12 +548,6 @@ class Character extends FlxSprite
 				holdTimer += elapsed;
 			}
 
-			if (animation.getByName('idleLoop') != null)
-			{
-				if (!animation.curAnim.name.startsWith('sing') && animation.curAnim.finished)
-					playAnim('idleLoop');
-			}
-
 			var dadVar:Float = 6;
 
 			if (curCharacter == 'yuri-crazy')
@@ -564,6 +558,12 @@ class Character extends FlxSprite
 				dance();
 				holdTimer = 0;
 			}
+		}
+
+		if (animation.getByName('idleLoop') != null)
+		{
+			if (!animation.curAnim.name.startsWith('sing') && animation.curAnim.finished)
+				playAnim('idleLoop');
 		}
 
 		switch (curCharacter)

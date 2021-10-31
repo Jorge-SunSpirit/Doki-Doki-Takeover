@@ -322,7 +322,7 @@ class DokiStoryState extends MusicBeatState
 					{
 						openSubState(new PopupMessage(LangUtil.getString('msgMoni')));
 						#if FEATURE_GAMEJOLT
-						GameJoltAPI.getTrophy(0);
+						GameJoltAPI.getTrophy(151157);
 						#end
 					}
 					else
@@ -332,7 +332,7 @@ class DokiStoryState extends MusicBeatState
 					{
 						openSubState(new PopupMessage(LangUtil.getString('msgSayo')));
 						#if FEATURE_GAMEJOLT
-						GameJoltAPI.getTrophy(0);
+						GameJoltAPI.getTrophy(151158);
 						#end
 					}
 					else
@@ -345,7 +345,7 @@ class DokiStoryState extends MusicBeatState
 					{
 						openSubState(new PopupMessage(LangUtil.getString('msgNat')));
 						#if FEATURE_GAMEJOLT
-						GameJoltAPI.getTrophy(0);
+						GameJoltAPI.getTrophy(151159);
 						#end
 					}
 					else
@@ -358,7 +358,7 @@ class DokiStoryState extends MusicBeatState
 					{
 						openSubState(new PopupMessage(LangUtil.getString('msgExtra2')));
 						#if FEATURE_GAMEJOLT
-						GameJoltAPI.getTrophy(0);
+						GameJoltAPI.getTrophy(151161);
 						#end
 					}
 					else
@@ -368,7 +368,7 @@ class DokiStoryState extends MusicBeatState
 					{
 						openSubState(new PopupMessage(LangUtil.getString('msgFestival')));
 						#if FEATURE_GAMEJOLT
-						GameJoltAPI.getTrophy(0);
+						GameJoltAPI.getTrophy(151162);
 						#end
 					}
 					else
@@ -396,7 +396,12 @@ class DokiStoryState extends MusicBeatState
 		}
 
 		if (FlxG.save.data.yuribeaten && !FlxG.save.data.yuripopup)
+		{
 			openSubState(new PopupMessage(LangUtil.getString('msgYuri')));
+			#if FEATURE_GAMEJOLT
+			GameJoltAPI.getTrophy(151160);
+			#end
+		}
 
 		switch (curSelected)
 		{
