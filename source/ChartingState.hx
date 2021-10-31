@@ -621,6 +621,7 @@ class ChartingState extends MusicBeatState
 	{
 		updateHeads();
 
+		#if cpp
 		if (FlxG.sound.music != null)
 		{
 			if (FlxG.sound.music.playing)
@@ -639,6 +640,7 @@ class ChartingState extends MusicBeatState
 				}
 			}
 		}
+		#end
 
 		curStep = recalculateSteps();
 
@@ -841,6 +843,7 @@ class ChartingState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.ENTER)
 		{
+			FlxG.mouse.visible = false;
 			lastSection = curSection;
 
 			PlayState.SONG = _song;
@@ -851,6 +854,7 @@ class ChartingState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
+			FlxG.mouse.visible = false;
 			HealthIcon.isEpiphany = false;
 			PlayState.showCutscene = true;
 
