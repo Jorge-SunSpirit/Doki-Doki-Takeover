@@ -53,6 +53,7 @@ import lime.utils.Assets;
 import openfl.display.BlendMode;
 import openfl.display.StageQuality;
 import openfl.filters.ShaderFilter;
+import flixel.util.FlxSpriteUtil;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
@@ -89,6 +90,8 @@ class PlayState extends MusicBeatState
 	public static var songPosBG:FlxSprite;
 	public static var songPosBar:FlxBar;
 	public static var songName:FlxText;
+
+	public var bar:FlxSprite;
 
 	public static var rep:Replay;
 	public static var loadRep:Bool = false;
@@ -1584,29 +1587,38 @@ class PlayState extends MusicBeatState
 
 		songPosBG = new FlxSprite(0, 10).makeGraphic(600, 20, FlxColor.BLACK);
 		if (FlxG.save.data.downscroll)
-			songPosBG.y = FlxG.height * 0.9 + 45;
+			songPosBG.y = FlxG.height * 0.9 + 35;
 		songPosBG.screenCenter(X);
 		songPosBG.scrollFactor.set();
 		songPosBG.cameras = [camHUD];
 
-		songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
-			'songPositionBar', 0, songLength);
+		songPosBar = new FlxBar(640 - (Std.int(songPosBG.width - 100) / 2), songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 100),
+			Std.int(songPosBG.height + 6), this, 'songPositionBar', 0, songLength);
 		songPosBar.scrollFactor.set();
-		songPosBar.createFilledBar(FlxColor.GRAY, FlxColor.LIME);
+		songPosBar.createFilledBar(FlxColor.BLACK, FlxColor.fromRGB(0, 255, 128));
 		songPosBar.cameras = [camHUD];
 
-		songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - (SONG.song.length * 5), songPosBG.y, 0, SONG.song, 16);
+		bar = new FlxSprite(songPosBar.x, songPosBar.y).makeGraphic(Math.floor(songPosBar.width), Math.floor(songPosBar.height), FlxColor.TRANSPARENT);
+		bar.cameras = [camHUD];
+
+		FlxSpriteUtil.drawRect(bar, 0, 0, songPosBar.width, songPosBar.height, FlxColor.TRANSPARENT, {thickness: 4, color: FlxColor.BLACK});
+
+		songPosBG.setGraphicSize(Std.int(songPosBar.width));
+
+		songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - (SONG.song.length * 5), songPosBG.y - 15, 0, SONG.song, 16);
+		songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		songName.text = SONG.song + ' (' + FlxStringUtil.formatTime(songLength, false) + ')';
 		songName.screenCenter(X);
-		songName.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		songName.y = songPosBG.y + (songPosBG.height / 3);
 		songName.scrollFactor.set();
 		songName.antialiasing = !isPixelUI;
 		songName.cameras = [camHUD];
 
 		if (FlxG.save.data.songPosition)
 		{
-			add(songPosBG);
+			// add(songPosBG);
 			add(songPosBar);
+			add(bar);
 			add(songName);
 		}
 
@@ -1816,8 +1828,9 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = false;
 		replayTxt.visible = false;
 		botPlayState.visible = false;
-		songPosBG.visible = false;
+		// songPosBG.visible = false;
 		songPosBar.visible = false;
+		bar.visible = false;
 		songName.visible = false;
 		new FlxTimer().start(1.2, function(godlike:FlxTimer)
 		{
@@ -1864,8 +1877,9 @@ class PlayState extends MusicBeatState
 						remove(iconP1);
 						remove(iconP2);
 						remove(kadeEngineWatermark);
-						remove(songPosBG);
+						// remove(songPosBG);
 						remove(songPosBar);
+						remove(bar);
 						remove(songName);
 						remove(laneunderlayOpponent);
 						remove(laneunderlay);
@@ -1926,8 +1940,9 @@ class PlayState extends MusicBeatState
 						remove(iconP1);
 						remove(iconP2);
 						remove(kadeEngineWatermark);
-						remove(songPosBG);
+						// remove(songPosBG);
 						remove(songPosBar);
+						remove(bar);
 						remove(songName);
 						remove(laneunderlayOpponent);
 						remove(laneunderlay);
@@ -1977,8 +1992,9 @@ class PlayState extends MusicBeatState
 				remove(iconP1);
 				remove(iconP2);
 				remove(kadeEngineWatermark);
-				remove(songPosBG);
+				// remove(songPosBG);
 				remove(songPosBar);
+				remove(bar);
 				remove(songName);
 				remove(laneunderlayOpponent);
 				remove(laneunderlay);
@@ -2013,8 +2029,9 @@ class PlayState extends MusicBeatState
 				remove(iconP1);
 				remove(iconP2);
 				remove(kadeEngineWatermark);
-				remove(songPosBG);
+				// remove(songPosBG);
 				remove(songPosBar);
+				remove(bar);
 				remove(songName);
 				remove(laneunderlayOpponent);
 				remove(laneunderlay);
@@ -2231,8 +2248,9 @@ class PlayState extends MusicBeatState
 						scoreTxt.visible = false;
 						replayTxt.visible = false;
 						botPlayState.visible = false;
-						songPosBG.visible = false;
+						// songPosBG.visible = false;
 						songPosBar.visible = false;
+						bar.visible = false;
 						songName.visible = false;
 						camHUD.visible = true;
 						add(blackScreen);
@@ -2276,8 +2294,9 @@ class PlayState extends MusicBeatState
 					remove(iconP1);
 					remove(iconP2);
 					remove(kadeEngineWatermark);
-					remove(songPosBG);
+					// remove(songPosBG);
 					remove(songPosBar);
+					remove(bar);
 					remove(songName);
 					remove(laneunderlayOpponent);
 					remove(laneunderlay);
@@ -2501,8 +2520,9 @@ class PlayState extends MusicBeatState
 			scoreTxt.visible = true;
 			replayTxt.visible = true;
 			botPlayState.visible = true;
-			songPosBG.visible = true;
+			// songPosBG.visible = true;
 			songPosBar.visible = true;
+			bar.visible = true;
 			songName.visible = true;
 		}
 
