@@ -5481,6 +5481,20 @@ override function beatHit()
 			}
 		}
 
+		if (curSong.toLowerCase() == 'reconciliation' && FlxG.keys.pressed.O && FlxG.keys.pressed.P)
+		{
+			switch (curBeat)
+			{
+				case 32:
+					var olddadx = PlayState.dad.x;
+					var olddady = PlayState.dad.y;
+					iconP2.changeIcon('spirit');
+					remove(dad);
+					dad = new Character(olddadx, olddady, 'spirit');
+					add(dad);
+			}
+		}
+
 		if (curSong.toLowerCase() == 'obsession')
 		{
 			switch (curBeat)
