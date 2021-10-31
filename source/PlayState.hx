@@ -2545,9 +2545,21 @@ class PlayState extends MusicBeatState
 				dad.dance();
 				if (curSong.toLowerCase() == 'dual demise')
 					spirit.dance();
+
+				if (curStage.startsWith('doki'))
+				{
+					monika.animation.play('idle', true);
+					sayori.animation.play('idle', true);
+					natsuki.animation.play('idle', true);
+					protag.animation.play('idle', true);
+					yuri.animation.play('idle', true);
+				}
 			}
 			else if (dad.curCharacter == 'sayori')
 				dad.dance();
+
+			if (curSong.toLowerCase() == "bara no yume" || curSong.toLowerCase() == "poems n thorns")
+				bgGirls.dance();
 
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
 			introAssets.set('default', ['ready', "set", "go"]);
@@ -2569,7 +2581,6 @@ class PlayState extends MusicBeatState
 			}
 
 			switch (swagCounter)
-
 			{
 				case 0:
 					if (curStage.startsWith('schoolEvil'))
@@ -2711,6 +2722,18 @@ class PlayState extends MusicBeatState
 			dad.dance();
 		if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith("sing"))
 			spirit.dance();
+
+		if (curSong.toLowerCase() == "bara no yume" || curSong.toLowerCase() == "poems n thorns")
+			bgGirls.dance();
+
+		if (curStage.startsWith('doki'))
+		{
+			monika.animation.play('idle', true);
+			sayori.animation.play('idle', true);
+			natsuki.animation.play('idle', true);
+			protag.animation.play('idle', true);
+			yuri.animation.play('idle', true);
+		}
 
 		/*
 			// Song check real quick
