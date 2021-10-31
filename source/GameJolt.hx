@@ -388,6 +388,7 @@ class GameJoltLogin extends MusicBeatSubstate
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7, false, null, true, function()
 			{
+				FlxG.mouse.visible = false;
 				FlxG.switchState(new OptionsMenu());
 			});
 		});
