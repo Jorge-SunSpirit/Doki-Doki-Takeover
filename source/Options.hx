@@ -808,6 +808,58 @@ class LaneUnderlayOption extends Option
 	}
 }
 
+class HitSoundOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+		acceptValues = true;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.hitSound = !FlxG.save.data.hitSound;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optHitSound') + ' ' + (FlxG.save.data.hitSound ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+
+	override function right():Bool
+	{
+		FlxG.save.data.hitSoundVolume += 0.1;
+
+		if (FlxG.save.data.hitSoundVolume < 0)
+			FlxG.save.data.hitSoundVolume = 0;
+
+		if (FlxG.save.data.hitSoundVolume > 1)
+			FlxG.save.data.hitSoundVolume = 1;
+		return true;
+	}
+
+	override function getValue():String
+	{
+		return LangUtil.getString('descHitSoundControl') + ': ' + HelperFunctions.truncateFloat(FlxG.save.data.hitSoundVolume, 1);
+	}
+
+	override function left():Bool
+	{
+		FlxG.save.data.hitSoundVolume -= 0.1;
+
+		if (FlxG.save.data.hitSoundVolume < 0)
+			FlxG.save.data.hitSoundVolume = 0;
+
+		if (FlxG.save.data.hitSoundVolume > 1)
+			FlxG.save.data.hitSoundVolume = 1;
+
+		return true;
+	}
+}
+
 class ResetSave extends Option
 {
 	var confirm:Bool = false;

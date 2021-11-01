@@ -41,7 +41,6 @@ class OptionsMenu extends MusicBeatState
 			new ReplayOption(LangUtil.getString('descReplay')),
 			#end
 			new ScrollSpeedOption(LangUtil.getString('descScroll')),
-			new AccuracyDOption(LangUtil.getString('descAccuracyMode')),
 			new ResetButtonOption(LangUtil.getString('descReset')),
 			new BotPlay(LangUtil.getString('descBotplay')),
 			#if FEATURE_OBS new SelfAwareness('...'),
@@ -49,15 +48,16 @@ class OptionsMenu extends MusicBeatState
 			#if FEATURE_GAMEJOLT
 			new GameJolt(LangUtil.getString('descGameJolt')),
 			#end
+			new HitSoundOption(LangUtil.getString('descHitSound')),
 			new CustomizeGameplay(LangUtil.getString('descCustomize'))
 		]),
 		new OptionCategory(LangUtil.getString('catAppearance'), [
-			                   new FPSOption(LangUtil.getString('descFPSCount')),     new RainbowFPSOption(LangUtil.getString('descFPSRainbow')),
-			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')),   new FlashingLightsOption(LangUtil.getString('descFlashing')),
-			              new AccuracyOption(LangUtil.getString('descAccuracy')),            new NPSDisplayOption(LangUtil.getString('descNPS')),
-			      new LaneUnderlayOption(LangUtil.getString('descLaneUnderway')), new MiddleScrollOption(LangUtil.getString('descMiddleScroll')),
-			          new SongPositionOption(LangUtil.getString('descPosition')),       new WatermarkOption(LangUtil.getString('descWatermark'))
-		]),
+			new FPSOption(LangUtil.getString('descFPSCount')), new RainbowFPSOption(LangUtil.getString('descFPSRainbow')),
+			new DistractionsAndEffectsOption(LangUtil.getString('descDistract')), new FlashingLightsOption(LangUtil.getString('descFlashing')),
+			new AccuracyOption(LangUtil.getString('descAccuracy')), new AccuracyDOption(LangUtil.getString('descAccuracyMode')),
+			new NPSDisplayOption(LangUtil.getString('descNPS')), new LaneUnderlayOption(LangUtil.getString('descLaneUnderway')),
+			new MiddleScrollOption(LangUtil.getString('descMiddleScroll')), new SongPositionOption(LangUtil.getString('descPosition')),
+			new WatermarkOption(LangUtil.getString('descWatermark'))]),
 		#if FEATURE_CACHING
 		new OptionCategory(LangUtil.getString('cmnCaching'), [
 			new CharacterCaching(LangUtil.getString('descCharacterCache')),

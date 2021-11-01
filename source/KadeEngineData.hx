@@ -116,6 +116,12 @@ class KadeEngineData
 		if (FlxG.save.data.mirrorMode == null)
 			FlxG.save.data.mirrorMode = false;
 
+		if (FlxG.save.data.hitSound == null)
+			FlxG.save.data.hitSound = false;
+
+		if (FlxG.save.data.hitSoundVolume == null)
+			FlxG.save.data.hitSoundVolume = 1;
+
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
 		KeyBinds.gamepad = gamepad != null;

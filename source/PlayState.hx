@@ -4342,7 +4342,7 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				if (curSong.toLowerCase() == 'epiphany' && !FlxG.save.data.epipbeaten)
+				if (curSong.toLowerCase() == 'epiphany' && !FlxG.save.data.epipbeaten && !FlxG.save.data.botplay)
 				{
 					FlxG.save.data.epipbeaten = true;
 					#if FEATURE_GAMEJOLT
@@ -4692,6 +4692,10 @@ class PlayState extends MusicBeatState
 			pressArray = [false, false, false, false];
 			releaseArray = [false, false, false, false];
 		}
+
+		if (pressArray.contains(true) && FlxG.save.data.hitSound)
+			FlxG.sound.play(Paths.sound('SNAP', 'shared'), FlxG.save.data.hitSoundVolume);
+
 		// HOLDS, check for sustain notes
 		if (holdArray.contains(true) && /*!boyfriend.stunned && */ generatedMusic)
 		{
