@@ -13,4 +13,4 @@ sayori
 yuri
 yuri-crazy
 monika-real
-big-monika
+bigmonika

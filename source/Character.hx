@@ -30,6 +30,21 @@ class Character extends FlxSprite
 
 		switch (curCharacter)
 		{
+			default:
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST');
+				frames = tex;
+				animation.addByPrefix('idle', 'Dad idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24, false);
+				animation.addByIndices('idleLoop', "Dad idle dance", [11, 12], "", 12, true);
+
+				loadOffsetFile('dad');
+
+				playAnim('idle');
+
 			case 'gf':
 				// GIRLFRIEND CODE
 				tex = Paths.getSparrowAtlas('characters/GF_assets');
@@ -110,21 +125,6 @@ class Character extends FlxSprite
 				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
 				antialiasing = false;
-
-			case 'dad':
-				// DAD ANIMATION LOADING CODE
-				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST');
-				frames = tex;
-				animation.addByPrefix('idle', 'Dad idle dance', 24, false);
-				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24, false);
-				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24, false);
-				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24, false);
-				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24, false);
-				animation.addByIndices('idleLoop', "Dad idle dance", [11, 12], "", 12, true);
-
-				loadOffsetFile(curCharacter);
-
-				playAnim('idle');
 
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND');
