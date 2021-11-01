@@ -60,6 +60,7 @@ optSaveResetConfirm::Bevestig Jouw Keuze
 optSelfAware::Zelfbewustzijn
 optGameJolt::Game Jolt Integratie
 optMirrorMode::Mirror Mode
+optHitSound::Hit Sounds
 // DESCRIPTION
 descAddOffset::Voegt een waarde aan de globale offset toe, per lied.
 descKeyBindings::Verander de sneltoetsen van de noten.
@@ -106,6 +107,8 @@ descSaveReset::Reset jouw Opslaggevens.
 descDialogueSkip::Druk op ESCAPE om het gesprek over te slaan.
 descGameJolt::Log in op je Game Jolt account om trofeeën te verdienen!
 descMirrorMode::Swap your notes with the opponent's notes!
+descHitSound::Play a sound whenever you press a note on your keyboard/controller.
+descHitSoundControl::Current Hit Sound volume
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Ontgrendeld!{NL}Krijg toegang tot het lied in het Vrije Spel Menu.
 msgSayo::Sayori's liedjes zijn nu toegankelijk in het Vrije Spel Menu.

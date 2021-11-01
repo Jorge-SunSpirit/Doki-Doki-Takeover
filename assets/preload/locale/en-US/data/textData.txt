@@ -60,6 +60,7 @@ optSaveResetConfirm::Confirm Reset Save File
 optSelfAware::Self Awareness
 optGameJolt::Game Jolt Integration
 optMirrorMode::Mirror Mode
+optHitSound::Hit Sounds
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -106,6 +107,8 @@ descSaveReset::Reset your save file to its defaults.
 descDialogueSkip::Press ESCAPE to skip the dialogue.
 descGameJolt::Log into your Game Jolt account to earn trophies!
 descMirrorMode::Swap your notes with the opponent's notes!
+descHitSound::Play a sound whenever you press a note on your keyboard/controller.
+descHitSoundControl::Current Hit Sound volume
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.
