@@ -11,6 +11,8 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
+using StringTools;
+
 class LangSelectState extends MusicBeatState
 {
 	var textMenuItems:Array<String> = [];
@@ -33,7 +35,7 @@ class LangSelectState extends MusicBeatState
 
 		for (i in 0...languageList.length)
 		{
-			var data:Array<String> = languageList[i].split(':');
+			var data:Array<String> = languageList[i].trim().split(':');
 			textMenuItems.push(data[0]);
 			localeList.push(data[1]);
 		}

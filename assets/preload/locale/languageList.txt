@@ -3,3 +3,4 @@ Spanish:es-US
 Russian:ru-RU
 Dutch:nl-NL
 Brazilian Portuguese:pt-BR
+Japanese:jp-JP

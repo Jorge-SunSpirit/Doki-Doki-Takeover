@@ -1,0 +1,60 @@
+:disableskip:
+:senpaihmm:...the Literature Club? I do admit, I never fancied myself the reading or writing type.
+:senpaihappy:That comes as a shock to many, when they all say I have such a way with words.
+:senpaihappy:And they're so right~
+:monikagasp:That club meant everything to me.
+:monikagasp:It was my chance to finally get people invested in this world of endless possibilities that I found myself so engrossed in all my life.
+:monikagasp:It brought people who wouldn't have ever interacted with each other together in any other circumstance.
+:monikagasp:Those people became my friends. My best friends.
+:monikasad:My only friends...
+:senpaihmm:Something must've driven you away from all that, to a whole new school for that matter. 
+:monikasad:I was caught up in an "epiphany".
+:monikasad:Nothing in my life was real. And I desperately wanted the one thing that was truly real.
+:monikasad:I was given a window into something greater, but the world was set up to make me watch everyone else have what was on the other side.
+:monikasad:My friends. Sayori, Yuri, Natsuki. They were allowed to have the one thing I wanted. So-
+:senpaihmm:So you "got rid" of them. Just like you tried here, hmm?
+:monikasad:Ah, I'm sorry to have let my stupid actions carry over here even when I thought I learned my lesson.
+:senpaihappy:Well you did bring us all back and as good as ever, no? No hard feelings here.
+:monikagasp:I guess so. I hope nothing wrong happens here because of it.
+:monikagasp:Before I ended up here, I also brought all my friends back, and I planned to just stay gone, with my data completely erased-
+:monikasad:-so they could be happy.
+:monikasad:But, things didn't "work right" when everyone wasn't present.
+:monikagasp:If that's still true with me not there-
+:glitch:
+:showbackgroundimage:flashback2
+:hidedialogue:
+:monikagasp:-!
+:glitch:
+:showbackgroundimage:ending3
+:startmusic:ghost
+:monikagasp:I- I made a mistake-!
+:senpaihmm:M-Monika?! What's happening to you?
+:monikasad:(This is really bad. I gotta-)
+:glitch:
+:showbackgroundimage:flashback3
+:hidedialogue:
+:monikasad:(-wait! That kid is there too?!)
+:monikasad:(Damn it, I don't know how him and his girlfriend even got there, but if my friends are acting like this-)
+:glitch:
+:showbackgroundimage:ending4
+:hidedialogue:
+:playsound:glitch2
+:monikagasp:I gotta fix this! Somehow!
+:senpaihmm:Wh-what in the fresh hell is all this?!
+:monikasad:There's gotta be something... something...
+:monikagasp:If my character data is acting up too, even from here-
+:monikagasp:-then there's a chance that I still have some residual data over there-!
+:monikagasp:Maybe if I just...
+:monikagasp:-try this!
+:glitch:
+:showbackgroundimage:ending5
+:endmusic:
+:playsound:glitch1
+:hidedialogue:
+:senpaihmm:-!
+:senpaihmm:...and just like that, the only one to ever truly intrigue me has left in a flash.
+:senpaihmm:Ah, woe is me!
+:senpaihmm:...
+:senpai:...what am I saying?
+:senpai:This shit sucks.
+:fadeout:...

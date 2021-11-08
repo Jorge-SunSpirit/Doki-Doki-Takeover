@@ -1,0 +1,27 @@
+:startmusic:monic
+:sayori_happ:"Monika! We've been waiting for you!"
+:sayori_happ:"It's not like you to be this late to a club meeting!"
+:yuri_neutral:"It appears that you've brought some new members with you too."
+:natsuki_neutral:"Seriously, Monika? You brought a boy?"
+:natsuki_hmmph:"Well, at least you found another girl too."
+:natsuki_hmmph:(One who doesn't make me feel so small compared to the rest of you.)
+:monika_eeh:"Oh! I-"
+:bf_neutral:*stare*
+:gf_neutral:*stare*
+:monika_eeh:"...hello, you two. It's been a while."
+:bf_neutral:"Bep."
+:monika_upset:"I'm sorry for what I did before."
+:monika_eeh:"And I'm sorry for inadvertently putting you in another situation just like that soon after-"
+:monika_upset:"-but now that I'm here, everything should be stable."
+:monika_eeh:"I don't expect you to forgive me... but I'm glad you two are safe now."
+:bf_think:"..."
+:bf_yeah:"Ska dee beep!"
+:monika_upset:"-!"
+:monika_ahaha:"Ahaha... You have no idea how happy I am to hear that."
+:monika_ahh:"Okay, everyone!"
+:monika_ahh:"I'd like you to meet the newest members of the Literature Club!"
+:monika_ahh:"And I've got a fun way I'd like to introduce them."
+:monika_upset:"Hey, despite all that stressful stuff that just happened-"
+:monika_ahaha:"-you have enough energy left for one more song?"
+:bf_yeah:"Ska dee beep!"
+:monika_ahh:"Then let's do it!"

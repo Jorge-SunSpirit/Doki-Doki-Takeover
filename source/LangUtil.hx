@@ -2,6 +2,8 @@ package;
 
 import flixel.FlxG;
 
+using StringTools;
+
 // for reference: https://www.techonthenet.com/js/language_tags.php
 class LangUtil
 {
@@ -18,6 +20,8 @@ class LangUtil
 				{
 					case 'ru-RU':
 						font = 'Ubuntu Bold';
+					case 'jp-JP':
+						font = 'Noto Sans JP Medium';
 					default:
 						font = 'Aller';
 				}
@@ -26,6 +30,8 @@ class LangUtil
 				{
 					case 'ru-RU':
 						font = 'Ubuntu Bold';
+					case 'jp-JP':
+						font = 'Noto Sans JP Medium';
 					default:
 						font = 'Riffic Free Bold';
 				}
@@ -40,6 +46,8 @@ class LangUtil
 				{
 					case 'ru-RU':
 						font = 'Ubuntu Bold';
+					case 'jp-JP':
+						font = 'Noto Sans JP Medium';
 					default:
 						font = 'VCR OSD Mono';
 				}
@@ -54,7 +62,7 @@ class LangUtil
 
 		for (i in 0...localeList.length)
 		{
-			var data:Array<String> = localeList[i].split('::');
+			var data:Array<String> = localeList[i].trim().split('::');
 
 			if (data[0] != identifier)
 				continue;
