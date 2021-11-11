@@ -1576,7 +1576,7 @@ class PlayState extends MusicBeatState
 
 		add(camFollow);
 
-		FlxG.camera.follow(camFollow, LOCKON, 0.04 * (#if (web || mobile || switch) 60 #else 30 #end / (cast(Lib.current.getChildAt(0), Main)).getFPS()));
+		FlxG.camera.follow(camFollow, LOCKON);
 		// FlxG.camera.setScrollBounds(0, FlxG.width, 0, FlxG.height);
 		FlxG.camera.zoom = defaultCamZoom;
 		FlxG.camera.focusOn(camFollow.getPosition());
@@ -3152,6 +3152,8 @@ class PlayState extends MusicBeatState
 		#if !debug
 		perfectMode = false;
 		#end
+
+		FlxG.camera.followLerp = 0.04 * (#if (web || mobile || switch) 60 #else 30 #end / (cast(Lib.current.getChildAt(0), Main)).getFPS());
 
 		if (FlxG.save.data.songPosition)
 			songName.screenCenter(X);

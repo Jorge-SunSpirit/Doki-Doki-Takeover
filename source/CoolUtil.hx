@@ -23,9 +23,6 @@ class CoolUtil
 		'twitchstudio' // why
 	];
 
-	public static var pfpPath:String = '';
-	public static var grabbedPfp:Bool = false;
-
 	public static function difficultyString():String
 	{
 		var difficultyArray:Array<String> = [
