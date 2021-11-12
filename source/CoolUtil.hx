@@ -13,8 +13,6 @@ using StringTools;
 
 class CoolUtil
 {
-	public static var targetFPS:Float = 60;
-
 	public static var programList:Array<String> = [
 		'obs32',
 		'obs64',
@@ -101,7 +99,7 @@ class CoolUtil
 
 	public static function camLerpShit(ease:Float):Float
 	{
-		return FlxG.elapsed / (1 / targetFPS) * ease;
+		return FlxG.elapsed / (1 / 60) * ease;
 	}
 
 	public static function coolLerp(a:Float, b:Float, ratio:Float):Float
