@@ -65,18 +65,24 @@ class LangUtil
 			case 'aller':
 				switch (FlxG.save.data.language)
 				{
+					case 'ru-RU':
+						offset = -2;
 					case 'jp-JP':
 						offset = -5;
 				}
 			case 'riffic':
 				switch (FlxG.save.data.language)
 				{
+					case 'ru-RU':
+						offset = -2;
 					case 'jp-JP':
 						offset = -5;
 				}
 			default:
 				switch (FlxG.save.data.language)
 				{
+					case 'ru-RU':
+						offset = -2;
 					case 'jp-JP':
 						offset = -5;
 				}
