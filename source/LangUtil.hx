@@ -66,19 +66,19 @@ class LangUtil
 				switch (FlxG.save.data.language)
 				{
 					case 'jp-JP':
-						offset = -6;
+						offset = -5;
 				}
 			case 'riffic':
 				switch (FlxG.save.data.language)
 				{
 					case 'jp-JP':
-						offset = -6;
+						offset = -5;
 				}
 			default:
 				switch (FlxG.save.data.language)
 				{
 					case 'jp-JP':
-						offset = -6;
+						offset = -5;
 				}
 		}
 
