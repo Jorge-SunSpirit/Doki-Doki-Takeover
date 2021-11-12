@@ -21,6 +21,7 @@ cmnCaching::Caching
 catGameplay::Gameplay
 catAppearance::Apparence
 catUnlock::Récompenses
+catSave::Save
 // OPTIONS
 optKeyBindings::Raccourcis clavier
 optDownscroll::Défilement vers le Bas
@@ -54,6 +55,8 @@ optMiddleScrollOn::Scrolling du Millieu
 optMiddleScrollOff::Scrolling du Coté Droit
 optLaneUnderwayOn::Underlay de la Voie
 optLaneUnderwayOff::Aucun Underlay de la Voie
+optSaveReset::Reset Save File
+optSaveResetConfirm::Confirm Reset Save File
 optSelfAware::Self Awareness
 optGameJolt::Game Jolt Integration
 optMirrorMode::Mirror Mode
@@ -100,9 +103,11 @@ descDisableCaching::(appuyez sur D pour désactiver le prochain démarrage)
 descMiddleScroll::Mettez votre voie au centre ou à droite.
 descLaneUnderway::Active la sous-couche de voie.
 descLaneUnderwayControl::Transparence du calque sous-jacent de la voie actuelle
+descSaveReset::Reset your save file to its defaults.
+descDialogueSkip::Press ESCAPE to skip the dialogue.
 descGameJolt::Log into your Game Jolt account to earn trophies!
 descMirrorMode::Swap your notes with the opponent's notes!
-descHitSound::Play a sound whenever you press a note on your keyboard/controller.
+descHitSound::Play a sound whenever you press a note.
 descHitSoundControl::Current Hit Sound volume
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Débloqué!{NL}Accédez à la chanson dans le menu Freeplay.

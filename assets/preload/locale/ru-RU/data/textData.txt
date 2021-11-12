@@ -107,7 +107,7 @@ descSaveReset::Полностью обнуляет ваш файл сохран�
 descDialogueSkip::Нажмите ESCAPE чтобы пропустить диалог.
 descGameJolt::Войдите в свой аккаунт Game Jolt чтобы получать достижения!
 descMirrorMode::Swap your notes with the opponent's notes!
-descHitSound::Play a sound whenever you press a note on your keyboard/controller.
+descHitSound::Play a sound whenever you press a note.
 descHitSoundControl::Current Hit Sound volume
 // UNLOCK POPUPS
 msgMoni::Песня "Your Reality"{NL}Разблокирована! Вы можете найти ее в меню свободной игры.

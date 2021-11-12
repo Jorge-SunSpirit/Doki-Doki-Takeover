@@ -107,7 +107,7 @@ descSaveReset::Resete seu save para o padrão.
 descDialogueSkip::Pressione ESCAPE para pular o diálogo.
 descGameJolt::Log into your Game Jolt account to earn trophies!
 descMirrorMode::Swap your notes with the opponent's notes!
-descHitSound::Play a sound whenever you press a note on your keyboard/controller.
+descHitSound::Play a sound whenever you press a note.
 descHitSoundControl::Current Hit Sound volume
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Desbloqueado!{NL}Acesse a música no menu de Freeplay.
