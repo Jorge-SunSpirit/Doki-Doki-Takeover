@@ -59,6 +59,7 @@ class PopupMessage extends MusicBeatSubstate
 		{
 			var text:FlxText = new FlxText(0, box.y + 76 + (i * 36), box.frameWidth * 0.95, popupTextLines[i]);
 			text.setFormat(LangUtil.getFont('aller'), 32, FlxColor.BLACK, FlxTextAlign.CENTER);
+			text.y += LangUtil.getFontOffset('aller');
 			text.screenCenter(X);
 			text.x -= offsetX;
 			text.antialiasing = true;

@@ -56,6 +56,35 @@ class LangUtil
 		return font;
 	}
 
+	public static function getFontOffset(type:String = 'vcr'):Float
+	{
+		var offset:Float = 0;
+
+		switch (type.toLowerCase())
+		{
+			case 'aller':
+				switch (FlxG.save.data.language)
+				{
+					case 'jp-JP':
+						offset = -6;
+				}
+			case 'riffic':
+				switch (FlxG.save.data.language)
+				{
+					case 'jp-JP':
+						offset = -6;
+				}
+			default:
+				switch (FlxG.save.data.language)
+				{
+					case 'jp-JP':
+						offset = -6;
+				}
+		}
+
+		return offset;
+	}
+
 	public static function getString(identifier:String):String
 	{
 		var string:String = '';

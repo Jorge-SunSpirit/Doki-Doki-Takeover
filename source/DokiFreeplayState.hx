@@ -136,6 +136,7 @@ class DokiFreeplayState extends MusicBeatState
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 8);
 		scoreText.setFormat(LangUtil.getFont('aller'), 28, FlxColor.BLACK, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.WHITE);
+		scoreText.y += LangUtil.getFontOffset('aller');
 		scoreText.antialiasing = true;
 		scoreText.x -= 454;
 		scoreText.y += 46;

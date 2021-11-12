@@ -308,6 +308,7 @@ class GameJoltLogin extends MusicBeatSubstate
 
 		gamejoltText = new FlxText(0, 25, 0, "Game Jolt Integration");
 		gamejoltText.setFormat(LangUtil.getFont('riffic'), 24, FlxColor.WHITE, CENTER);
+		gamejoltText.y += LangUtil.getFontOffset('riffic');
 		gamejoltText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		gamejoltText.antialiasing = true;
 		gamejoltText.screenCenter(X);
@@ -316,6 +317,7 @@ class GameJoltLogin extends MusicBeatSubstate
 
 		versionText = new FlxText(5, FlxG.height - 18, 0, "Game ID: " + GJKeys.id + " API: " + GameJoltInfo.version, 12);
 		versionText.setFormat(LangUtil.getFont('riffic'), 12, FlxColor.WHITE, CENTER);
+		versionText.y += LangUtil.getFontOffset('riffic');
 		versionText.antialiasing = true;
 		versionText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		add(versionText);
@@ -325,11 +327,13 @@ class GameJoltLogin extends MusicBeatSubstate
 
 		usernameText = new FlxText(0, 125, 300, "Username:");
 		usernameText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
+		usernameText.y += LangUtil.getFontOffset('riffic');
 		usernameText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		usernameText.antialiasing = true;
 
 		tokenText = new FlxText(0, 225, 300, "Token:");
 		tokenText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
+		tokenText.y += LangUtil.getFontOffset('riffic');
 		tokenText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		tokenText.antialiasing = true;
 

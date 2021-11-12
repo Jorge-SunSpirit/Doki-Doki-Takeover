@@ -68,6 +68,7 @@ class VideoState extends MusicBeatState
 		defaultText = "" + html5Text;
 		txt = new FlxText(0, 0, FlxG.width, defaultText, 32);
 		txt.setFormat(LangUtil.getFont(), 32, FlxColor.WHITE, CENTER);
+		txt.y += LangUtil.getFontOffset();
 		txt.screenCenter();
 		add(txt);
 

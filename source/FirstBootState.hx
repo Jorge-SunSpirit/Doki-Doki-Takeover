@@ -53,6 +53,7 @@ class FirstBootState extends MusicBeatState
 		{
 			var optionText:FlxText = new FlxText(0, 50 + (i * 50), 0, textMenuItems[i]);
 			optionText.setFormat(LangUtil.getFont('riffic'), 32, FlxColor.WHITE, CENTER);
+			optionText.y += LangUtil.getFontOffset('riffic');
 			optionText.screenCenter(X);
 			optionText.antialiasing = true;
 			optionText.ID = i;

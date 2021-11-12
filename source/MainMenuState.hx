@@ -439,6 +439,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.antialiasing = true;
 		versionShit.setFormat(LangUtil.getFont('aller'), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionShit.y += LangUtil.getFontOffset('aller');
 		add(versionShit);
 
 		if (firstStart)

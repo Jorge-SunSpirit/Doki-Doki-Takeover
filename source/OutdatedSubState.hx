@@ -35,6 +35,7 @@ class OutdatedSubState extends MusicBeatState
 			32);
 
 		txt.setFormat(LangUtil.getFont(), 32, FlxColor.fromRGB(200, 200, 200), CENTER);
+		txt.y += LangUtil.getFontOffset();
 		txt.borderColor = FlxColor.BLACK;
 		txt.borderSize = 3;
 		txt.borderStyle = FlxTextBorderStyle.OUTLINE;

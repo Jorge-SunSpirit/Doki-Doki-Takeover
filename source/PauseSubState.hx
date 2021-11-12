@@ -51,6 +51,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelInfo.antialiasing = true;
 		levelInfo.scrollFactor.set();
 		levelInfo.setFormat(LangUtil.getFont(), 32);
+		levelInfo.y += LangUtil.getFontOffset();
 		levelInfo.updateHitbox();
 		add(levelInfo);
 
@@ -59,6 +60,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.antialiasing = true;
 		levelDifficulty.scrollFactor.set();
 		levelDifficulty.setFormat(LangUtil.getFont(), 32);
+		levelDifficulty.y += LangUtil.getFontOffset();
 		levelDifficulty.updateHitbox();
 
 		if (PlayState.SONG.song.toLowerCase() != 'epiphany')
@@ -71,7 +73,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(levelInfo, {alpha: 1, y: 20 + LangUtil.getFontOffset()}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
@@ -89,6 +91,7 @@ class PauseSubState extends MusicBeatSubstate
 		perSongOffset.antialiasing = true;
 		perSongOffset.scrollFactor.set();
 		perSongOffset.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		perSongOffset.y += LangUtil.getFontOffset();
 
 		#if FEATURE_FILESYSTEM
 		add(perSongOffset);

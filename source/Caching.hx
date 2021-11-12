@@ -49,11 +49,13 @@ class Caching extends MusicBeatState
 
 		text = new FlxText(FlxG.width / 2, FlxG.height / 2 + 300, 0, LangUtil.getString('cmnCaching') + "...");
 		text.setFormat(LangUtil.getFont('riffic'), 42, FlxColor.WHITE, FlxTextAlign.CENTER);
+		text.y += LangUtil.getFontOffset('riffic');
 		text.alpha = 0;
 		text.antialiasing = true;
 
 		disableText = new FlxText(0, 34, 0, LangUtil.getString('descDisableCaching'));
 		disableText.setFormat(LangUtil.getFont('aller'), 21, FlxColor.WHITE, FlxTextAlign.CENTER);
+		disableText.y += LangUtil.getFontOffset('riffic');
 		disableText.antialiasing = true;
 		disableText.alpha = 0.1;
 		disableText.screenCenter(X);

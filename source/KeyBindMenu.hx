@@ -82,6 +82,7 @@ class KeyBindMenu extends FlxSubState
 		keyTextDisplay = new FlxText(-10, 0, 1280, "", 72);
 		keyTextDisplay.scrollFactor.set(0, 0);
 		keyTextDisplay.setFormat(LangUtil.getFont('riffic'), 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, 0xFFFF7CFF);
+		keyTextDisplay.y += LangUtil.getFontOffset('riffic');
 		keyTextDisplay.borderSize = 2;
 		keyTextDisplay.borderQuality = 3;
 		keyTextDisplay.antialiasing = true;
@@ -92,6 +93,7 @@ class KeyBindMenu extends FlxSubState
 		infoText = new FlxText(-10, 580, 1280, 'Just Monika.', 72);
 		infoText.scrollFactor.set(0, 0);
 		infoText.setFormat(LangUtil.getFont('riffic'), 24, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, 0xFFFF7CFF);
+		infoText.y += LangUtil.getFontOffset('riffic');
 		infoText.borderSize = 2;
 		infoText.borderQuality = 3;
 		infoText.alpha = 0;

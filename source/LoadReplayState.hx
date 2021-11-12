@@ -80,11 +80,13 @@ class LoadReplayState extends MusicBeatState
 			12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionShit.y += LangUtil.getFontOffset();
 		add(versionShit);
 
 		poggerDetails = new FlxText(5, 34, 0, "Replay Details - \nnone", 12);
 		poggerDetails.scrollFactor.set();
 		poggerDetails.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		poggerDetails.y += LangUtil.getFontOffset();
 		add(poggerDetails);
 
 		changeSelection(0);

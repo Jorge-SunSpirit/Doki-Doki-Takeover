@@ -117,6 +117,7 @@ class OptionsMenu extends MusicBeatState
 		{
 			var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
 			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+			controlLabel.y += LangUtil.getFontOffset('riffic');
 			controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 			controlLabel.antialiasing = true;
 			controlLabel.ID = i;
@@ -147,7 +148,7 @@ class OptionsMenu extends MusicBeatState
 
 		add(versionShit);
 
-		FlxTween.tween(versionShit, {y: FlxG.height - 18}, 2, {ease: FlxEase.elasticInOut});
+		FlxTween.tween(versionShit, {y: FlxG.height - 18 + LangUtil.getFontOffset()}, 2, {ease: FlxEase.elasticInOut});
 		FlxTween.tween(blackBorder, {y: FlxG.height - 18}, 2, {ease: FlxEase.elasticInOut});
 
 		super.create();
@@ -173,6 +174,7 @@ class OptionsMenu extends MusicBeatState
 				{
 					var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, options[i].getName());
 					controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+					controlLabel.y += LangUtil.getFontOffset('riffic');
 					controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 					controlLabel.antialiasing = true;
 					controlLabel.ID = i;
@@ -279,6 +281,7 @@ class OptionsMenu extends MusicBeatState
 						grpControls.remove(grpControls.members[curSelected]);
 						var ctrl:FlxText = new FlxText(460, (50 * curSelected) + 20, 0, currentSelectedCat.getOptions()[curSelected].getDisplay());
 						ctrl.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+						ctrl.y += LangUtil.getFontOffset('riffic');
 						ctrl.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 						ctrl.antialiasing = true;
 						ctrl.ID = curSelected;
@@ -294,6 +297,7 @@ class OptionsMenu extends MusicBeatState
 					{
 						var controlLabel:FlxText = new FlxText(460, (50 * i) + 20, 0, currentSelectedCat.getOptions()[i].getDisplay());
 						controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+						controlLabel.y += LangUtil.getFontOffset('riffic');
 						controlLabel.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 						controlLabel.antialiasing = true;
 						controlLabel.ID = i;

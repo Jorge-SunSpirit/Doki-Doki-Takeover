@@ -196,6 +196,7 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			swagDialogue = new FlxTypeText(220, 520, Std.int(box.width * 0.85), "", 28);
 			swagDialogue.font = LangUtil.getFont('aller');
+			swagDialogue.y += LangUtil.getFontOffset('aller');
 			swagDialogue.color = 0xFFFFFFFF;
 			swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.8)];
 			swagDialogue.setBorderStyle(OUTLINE, FlxColor.BLACK, 1, 1);
@@ -206,6 +207,7 @@ class DialogueBox extends FlxSpriteGroup
 		skipText = new FlxText(5, 695, 640, LangUtil.getString('descDialogueSkip'), 40);
 		skipText.scrollFactor.set(0, 0);
 		skipText.setFormat(LangUtil.getFont(), 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		skipText.y += LangUtil.getFontOffset();
 		skipText.borderSize = 2;
 		skipText.borderQuality = 1;
 		skipText.antialiasing = true;

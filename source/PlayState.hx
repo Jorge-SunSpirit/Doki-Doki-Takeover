@@ -1610,6 +1610,7 @@ class PlayState extends MusicBeatState
 		songName.text = SONG.song + ' (' + FlxStringUtil.formatTime(songLength, false) + ')';
 		songName.screenCenter(X);
 		songName.y = songPosBG.y + (songPosBG.height / 3);
+		songName.y += LangUtil.getFontOffset();
 		songName.scrollFactor.set();
 		songName.antialiasing = !isPixelUI;
 		songName.cameras = [camHUD];
@@ -1645,6 +1646,7 @@ class PlayState extends MusicBeatState
 			+ (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""),
 			16);
 		kadeEngineWatermark.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		kadeEngineWatermark.y += LangUtil.getFontOffset();
 		kadeEngineWatermark.scrollFactor.set();
 		// add(kadeEngineWatermark);
 
@@ -1653,11 +1655,13 @@ class PlayState extends MusicBeatState
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 50, 0, "", 20);
 		scoreTxt.setFormat(LangUtil.getFont(), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.y += LangUtil.getFontOffset();
 		scoreTxt.scrollFactor.set();
 		scoreTxt.antialiasing = !isPixelUI;
 
 		replayTxt = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		replayTxt.y += LangUtil.getFontOffset();
 		replayTxt.scrollFactor.set();
 		replayTxt.antialiasing = !isPixelUI;
 		replayTxt.screenCenter(X);
@@ -1667,6 +1671,7 @@ class PlayState extends MusicBeatState
 		// Literally copy-paste of the above, fu
 		botPlayState = new FlxText(0, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "BOTPLAY", 20);
 		botPlayState.setFormat(LangUtil.getFont(), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botPlayState.y += LangUtil.getFontOffset();
 		botPlayState.scrollFactor.set();
 		botPlayState.antialiasing = !isPixelUI;
 		botPlayState.screenCenter(X);
