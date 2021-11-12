@@ -453,7 +453,7 @@ class MainMenuState extends MusicBeatState
 		else
 			versionShit.x = 5;
 
-		FlxG.camera.follow(camFollow, null, 0.60 * (60 / FlxG.save.data.fpsCap));
+		FlxG.camera.follow(camFollow);
 
 		// NG.core.calls.event.logEvent('swag').send();
 

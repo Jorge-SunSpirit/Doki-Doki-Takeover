@@ -1576,7 +1576,7 @@ class PlayState extends MusicBeatState
 
 		add(camFollow);
 
-		FlxG.camera.follow(camFollow, LOCKON);
+		FlxG.camera.follow(camFollow);
 		// FlxG.camera.setScrollBounds(0, FlxG.width, 0, FlxG.height);
 		FlxG.camera.zoom = defaultCamZoom;
 		FlxG.camera.focusOn(camFollow.getPosition());
@@ -3153,7 +3153,7 @@ class PlayState extends MusicBeatState
 		perfectMode = false;
 		#end
 
-		FlxG.camera.followLerp = 0.04 * (#if (web || mobile || switch) 60 #else 30 #end / (cast(Lib.current.getChildAt(0), Main)).getFPS());
+		FlxG.camera.followLerp = CoolUtil.camLerpShit(0.04);
 
 		if (FlxG.save.data.songPosition)
 			songName.screenCenter(X);
@@ -3670,8 +3670,8 @@ class PlayState extends MusicBeatState
 
 		if (camZooming)
 		{
-			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, 0.95);
-			camHUD.zoom = FlxMath.lerp(FlxG.save.data.zoom, camHUD.zoom, 0.95);
+			FlxG.camera.zoom = defaultCamZoom + 0.95 * (FlxG.camera.zoom - defaultCamZoom);
+			camHUD.zoom = FlxG.save.data.zoom + 0.95 * (camHUD.zoom - FlxG.save.data.zoom);
 		}
 
 		FlxG.watch.addQuick("beatShit", curBeat);

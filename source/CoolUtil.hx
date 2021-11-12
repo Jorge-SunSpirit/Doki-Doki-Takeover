@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxG;
 import openfl.display.BitmapData;
 import lime.utils.Assets;
 import flixel.graphics.FlxGraphic;
@@ -12,6 +13,8 @@ using StringTools;
 
 class CoolUtil
 {
+	public static var targetFPS:Float = 60;
+
 	public static var programList:Array<String> = [
 		'obs32',
 		'obs64',
@@ -94,5 +97,15 @@ class CoolUtil
 			dumbArray.push(i);
 		}
 		return dumbArray;
+	}
+
+	public static function camLerpShit(ease:Float):Float
+	{
+		return FlxG.elapsed / (1 / targetFPS) * ease;
+	}
+
+	public static function coolLerp(a:Float, b:Float, ratio:Float):Float
+	{
+		return a + camLerpShit(ratio) * (b - a);
 	}
 }

@@ -253,7 +253,7 @@ class DokiStoryState extends MusicBeatState
 		story_cursor = new FlxSprite(-240, -110).loadGraphic(Paths.image('dokistory/cursor'));
 		add(story_cursor);
 
-		FlxG.camera.follow(camFollow, null, 0.60 * (60 / FlxG.save.data.fpsCap));
+		FlxG.camera.follow(camFollow);
 
 		// NG.core.calls.event.logEvent('swag').send();
 

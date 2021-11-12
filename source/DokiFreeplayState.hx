@@ -36,8 +36,8 @@ class DokiFreeplayState extends MusicBeatState
 	var diffselect:Bool = false;
 	var scoreText:FlxText;
 	var diffText:FlxText;
-	var lerpScore:Int = 0;
-	var intendedScore:Int = 0;
+	var lerpScore:Float = 0;
+	var intendedScore:Float = 0;
 	var diff:FlxSprite;
 	var bg:FlxSprite;
 
@@ -198,12 +198,9 @@ class DokiFreeplayState extends MusicBeatState
 	{
 		trace(curPage + " hewwo");
 
-		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.4));
+		lerpScore = CoolUtil.coolLerp(lerpScore, intendedScore, 0.4);
 
-		if (Math.abs(lerpScore - intendedScore) <= 10)
-			lerpScore = intendedScore;
-
-		scoreText.text = LangUtil.getString('cmnPB') + ': ' + lerpScore;
+		scoreText.text = LangUtil.getString('cmnPB') + ': ' + Math.round(lerpScore);
 
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;
