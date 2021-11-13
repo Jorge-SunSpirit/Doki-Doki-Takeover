@@ -54,6 +54,8 @@ import openfl.display.BlendMode;
 import openfl.display.StageQuality;
 import openfl.filters.ShaderFilter;
 import flixel.util.FlxSpriteUtil;
+import motion.Actuate;
+import motion.easing.Linear;
 #if FEATURE_DISCORD
 import Discord.DiscordClient;
 #end
@@ -250,7 +252,6 @@ class PlayState extends MusicBeatState
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
-	var camtween:FlxTween;
 	var talking:Bool = true;
 	var songScore:Int = 0;
 	var songScoreDef:Int = 0;
@@ -2466,9 +2467,7 @@ class PlayState extends MusicBeatState
 						black.alpha -= 0.1;
 
 						if (black.alpha > 0)
-						{
 							tmr.reset(0.3);
-						}
 						else
 						{
 							if (dialogueBox != null)
@@ -3059,6 +3058,8 @@ class PlayState extends MusicBeatState
 				vocals.pause();
 			}
 
+			Actuate.pauseAll();
+
 			#if FEATURE_DISCORD
 			DiscordClient.changePresence("PAUSED on "
 				+ SONG.song
@@ -3083,12 +3084,13 @@ class PlayState extends MusicBeatState
 		if (paused)
 		{
 			if (FlxG.sound.music != null && !startingSong)
-			{
 				resyncVocals();
-			}
+
+			Actuate.resumeAll();
 
 			if (!startTimer.finished)
 				startTimer.active = true;
+
 			paused = false;
 
 			#if FEATURE_DISCORD
@@ -5206,20 +5208,17 @@ class PlayState extends MusicBeatState
 						camFocus = false;
 						camFollow.setPosition(gf.getMidpoint().x, gf.getMidpoint().y - 100);
 						gf.playAnim('countdownThree');
-						camtween = FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoOut});
+						Actuate.tween(FlxG.camera, 1, {zoom: 1});
 					case 484:
-						camtween.cancel();
 						gf.playAnim('countdownTwo');
-						camtween = FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1, {ease: FlxEase.expoOut});
+						Actuate.tween(FlxG.camera, 1, {zoom: 1.2});
 					case 488:
-						camtween.cancel();
 						gf.playAnim('countdownOne');
-						camtween = FlxTween.tween(FlxG.camera, {zoom: 1.4}, 1, {ease: FlxEase.expoOut});
+						Actuate.tween(FlxG.camera, 1, {zoom: 1.4});
 					case 492:
 						camFollow.setPosition(gf.getMidpoint().x, gf.getMidpoint().y);
-						camtween.cancel();
 						gf.playAnim('countdownGo');
-						camtween = FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.expoOut});
+						Actuate.tween(FlxG.camera, 1, {zoom: 0.75});
 					case 496:
 						gf.dance();
 						camZooming = true;
@@ -5229,9 +5228,7 @@ class PlayState extends MusicBeatState
 						camZooming = false;
 						staticshock.visible = true;
 						add(vignette);
-						FlxTween.tween(FlxG.camera, {zoom: 2}, 1, {
-							ease: FlxEase.expoOut
-						});
+						Actuate.tween(FlxG.camera, 1, {zoom: 2});
 						new FlxTimer().start(0, function(tmr:FlxTimer)
 						{
 							vignette.alpha += 1 / 5;
@@ -5240,9 +5237,7 @@ class PlayState extends MusicBeatState
 
 					case 768:
 						staticshock.visible = false;
-						FlxTween.tween(FlxG.camera, {zoom: 0.75}, 0.2, {
-							ease: FlxEase.expoOut
-						});
+						Actuate.tween(FlxG.camera, 0.2, {zoom: 0.75});
 						new FlxTimer().start(0, function(tmr:FlxTimer)
 						{
 							vignette.alpha -= 1 / 5;
@@ -5274,7 +5269,9 @@ class PlayState extends MusicBeatState
 
 						new FlxTimer().start(0.03, function(tmr:FlxTimer)
 						{
-							whiteflash.alpha -= 0.15;
+							if (!paused)
+								whiteflash.alpha -= 0.15;
+
 							if (whiteflash.alpha > 0)
 								tmr.reset(0.03);
 							else
@@ -5404,7 +5401,8 @@ class PlayState extends MusicBeatState
 						bakaOverlay.alpha = 0;
 						new FlxTimer().start(0.2, function(tmr:FlxTimer)
 						{
-							bakaOverlay.alpha += 0.1;
+							if (!paused)
+								bakaOverlay.alpha += 0.1;
 
 							if (bakaOverlay.alpha < 1)
 								tmr.reset(0.2);
@@ -5423,7 +5421,8 @@ class PlayState extends MusicBeatState
 						bakaOverlay.alpha = 1;
 						new FlxTimer().start(0.2, function(tmr:FlxTimer)
 						{
-							bakaOverlay.alpha -= 0.1;
+							if (!paused)
+								bakaOverlay.alpha -= 0.1;
 
 							if (bakaOverlay.alpha > 0)
 								tmr.reset(0.2);
@@ -5433,7 +5432,8 @@ class PlayState extends MusicBeatState
 						bakaOverlay.alpha = 0;
 						new FlxTimer().start(0.2, function(tmr:FlxTimer)
 						{
-							bakaOverlay.alpha += 0.1;
+							if (!paused)
+								bakaOverlay.alpha += 0.1;
 
 							if (bakaOverlay.alpha < 1)
 								tmr.reset(0.2);
@@ -5457,9 +5457,12 @@ class PlayState extends MusicBeatState
 						pinkOverlay.alpha = 0.2;
 						new FlxTimer().start(0.2, function(tmr:FlxTimer)
 						{
-							sparkleBG.alpha -= 0.1;
-							sparkleFG.alpha -= 0.1;
-							pinkOverlay.alpha -= 0.02;
+							if (!paused)
+							{
+								sparkleBG.alpha -= 0.1;
+								sparkleFG.alpha -= 0.1;
+								pinkOverlay.alpha -= 0.02;
+							}
 
 							if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
 								tmr.reset(0.2);
@@ -5474,9 +5477,12 @@ class PlayState extends MusicBeatState
 						pinkOverlay.alpha = 0.2;
 						new FlxTimer().start(0.35, function(tmr:FlxTimer)
 						{
-							sparkleBG.alpha -= 0.1;
-							sparkleFG.alpha -= 0.1;
-							pinkOverlay.alpha -= 0.02;
+							if (!paused)
+							{
+								sparkleBG.alpha -= 0.1;
+								sparkleFG.alpha -= 0.1;
+								pinkOverlay.alpha -= 0.02;
+							}
 
 							if (sparkleBG.alpha > 0 && sparkleFG.alpha > 0 && bakaOverlay.alpha > 0)
 								tmr.reset(0.35);
@@ -5490,12 +5496,13 @@ class PlayState extends MusicBeatState
 				{
 					case 119:
 						camZooming = false;
-						FlxTween.tween(FlxG.camera, {zoom: 1.5}, 10, {ease: FlxEase.linear});
+						Actuate.tween(FlxG.camera, 10, {zoom: 1.5}).ease(Linear.easeNone);
 						staticshock.visible = true;
 						staticshock.alpha = 0;
 						new FlxTimer().start(1, function(tmr:FlxTimer)
 						{
-							staticshock.alpha += 0.1;
+							if (!paused)
+								staticshock.alpha += 0.1;
 
 							if (staticshock.alpha < 1)
 								tmr.reset(1);
@@ -5513,7 +5520,8 @@ class PlayState extends MusicBeatState
 
 						new FlxTimer().start(0.1, function(tmr:FlxTimer)
 						{
-							whiteflash.alpha -= 0.15;
+							if (!paused)
+								whiteflash.alpha -= 0.15;
 
 							if (whiteflash.alpha > 0.15)
 								tmr.reset(0.1);
@@ -5536,7 +5544,8 @@ class PlayState extends MusicBeatState
 					case 788:
 						new FlxTimer().start(0.05, function(tmr:FlxTimer)
 						{
-							iconP2.alpha -= 0.15;
+							if (!paused)
+								iconP2.alpha -= 0.15;
 
 							if (iconP2.alpha > 0)
 								tmr.reset(0.05);
