@@ -41,7 +41,7 @@ class MainMenuState extends MusicBeatState
 	var crediticons:FlxTypedGroup<FlxSprite>;
 	var fixdiff:FlxTypedGroup<FlxSprite>;
 
-	var optionShit:Array<String>;
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'credits', 'language', 'options'];
 
 	public static var firstStart:Bool = true;
 
@@ -87,12 +87,13 @@ class MainMenuState extends MusicBeatState
 			if (FlxG.save.data.epipbeaten)
 				GameJoltAPI.getTrophy(151163);
 			#end
-		 */
 
-		if (FlxG.save.data.extra2beaten)
-			optionShit = ['story mode', 'freeplay', 'credits', 'language', 'options'];
-		else
-			optionShit = ['story mode', 'freeplay', 'language', 'options'];
+			if (FlxG.save.data.extra2beaten)
+				optionShit = ['story mode', 'freeplay', 'credits', 'language', 'options'];
+			else
+				optionShit = ['story mode', 'freeplay', 'language', 'options'];
+
+		 */
 
 		#if FEATURE_DISCORD
 		// Updating Discord Rich Presence
