@@ -59,8 +59,8 @@ optSaveReset::Обнулить файл сохранения
 optSaveResetConfirm::Подтвердить обнуление?
 optSelfAware::Самосознательность
 optGameJolt::Интеграция с Game Jolt
-optMirrorMode::Mirror Mode
-optHitSound::Hit Sounds
+optMirrorMode::Режим зеркала
+optHitSound::Звуки попаданий
 // DESCRIPTION
 descAddOffset::Добавляет задержку к нотам, применяется ко всем песням.
 descKeyBindings::Сменить назначения клавиш для каждой ноты.
@@ -106,9 +106,9 @@ descLaneUnderwayControl::Текущий уровень прозрачности 
 descSaveReset::Полностью обнуляет ваш файл сохранения.
 descDialogueSkip::Нажмите ESCAPE чтобы пропустить диалог.
 descGameJolt::Войдите в свой аккаунт Game Jolt чтобы получать достижения!
-descMirrorMode::Swap your notes with the opponent's notes!
-descHitSound::Play a sound whenever you press a note.
-descHitSoundControl::Current Hit Sound volume
+descMirrorMode::Поменяйтесь местами и играйте за оппонента!
+descHitSound::Проигрывает звук когда вы попадаете по ноте.
+descHitSoundControl::Текущий уровень громкости звуков попадания
 // UNLOCK POPUPS
 msgMoni::Песня "Your Reality"{NL}Разблокирована! Вы можете найти ее в меню свободной игры.
 msgSayo::Песни Сайори теперь доступны в меню свободной игры!
