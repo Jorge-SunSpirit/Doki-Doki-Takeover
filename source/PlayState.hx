@@ -1632,7 +1632,7 @@ class PlayState extends MusicBeatState
 		songName.antialiasing = !isPixelUI;
 		songName.cameras = [camHUD];
 
-		if (FlxG.save.data.songPosition)
+		if (FlxG.save.data.songPosition && !isStoryMode)
 		{
 			// add(songPosBG);
 			add(songPosBar);
@@ -3189,7 +3189,7 @@ class PlayState extends MusicBeatState
 
 		FlxG.camera.followLerp = CoolUtil.camLerpShit(0.04);
 
-		if (FlxG.save.data.songPosition)
+		if (FlxG.save.data.songPosition && !isStoryMode)
 			songName.screenCenter(X);
 
 		if (FlxG.save.data.botplay && FlxG.keys.justPressed.ONE)
@@ -3484,7 +3484,7 @@ class PlayState extends MusicBeatState
 				if (secondsTotal < 0)
 					secondsTotal = 0;
 
-				if (FlxG.save.data.songPosition)
+				if (FlxG.save.data.songPosition && !isStoryMode)
 					songName.text = SONG.song + ' (' + FlxStringUtil.formatTime((songLength - secondsTotal), false) + ')';
 			}
 
@@ -5640,7 +5640,7 @@ class PlayState extends MusicBeatState
 		iconP1.changeIcon('bf-pixel');
 		iconP2.changeIcon('monika');
 
-		if (FlxG.save.data.songPosition)
+		if (FlxG.save.data.songPosition && !isStoryMode)
 			songName.antialiasing = false;
 
 		scoreTxt.antialiasing = false;
@@ -5706,7 +5706,7 @@ class PlayState extends MusicBeatState
 		protag.visible = true;
 		yuri.visible = true;
 
-		if (FlxG.save.data.songPosition)
+		if (FlxG.save.data.songPosition && !isStoryMode)
 			songName.antialiasing = true;
 
 		scoreTxt.antialiasing = true;
