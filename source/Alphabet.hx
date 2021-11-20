@@ -255,7 +255,6 @@ class AlphaCharacter extends FlxSprite
 	{
 		animation.addByPrefix(letter, letter.toUpperCase() + " bold", 24);
 		animation.play(letter);
-		animation.curAnim.frameRate = CoolUtil.camLerpShit(24);
 		updateHitbox();
 	}
 
