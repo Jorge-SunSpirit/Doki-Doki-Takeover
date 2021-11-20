@@ -148,6 +148,8 @@ class PauseSubState extends MusicBeatSubstate
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 	}
 
+	var canChangeOffset:Bool = true;
+
 	override function update(elapsed:Float)
 	{
 		if (pauseMusic.volume < 0.5)
@@ -169,78 +171,81 @@ class PauseSubState extends MusicBeatSubstate
 			changeSelection(1);
 
 		#if FEATURE_FILESYSTEM
-		else if (leftP)
+		if (canChangeOffset)
 		{
-			oldOffset = PlayState.songOffset;
-			PlayState.songOffset -= 1;
-			sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
-			perSongOffset.text = LangUtil.getString('cmnAddOffset') + ': ' + PlayState.songOffset + ' - ' + LangUtil.getString('cmnDesc') + ' - '
-				+ LangUtil.getString('descAddOffset');
-
-			// Prevent loop from happening every single time the offset changes
-			if (!offsetChanged)
+			if (leftP)
 			{
-				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
-					pauseOG = ["Restart Song", "Exit to menu"];
-				else
-					pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
+				oldOffset = PlayState.songOffset;
+				PlayState.songOffset -= 1;
+				sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
+				perSongOffset.text = LangUtil.getString('cmnAddOffset') + ': ' + PlayState.songOffset + ' - ' + LangUtil.getString('cmnDesc') + ' - '
+					+ LangUtil.getString('descAddOffset');
 
-				menuItems = pauseOG;
-				regenMenu();
-				offsetChanged = true;
+				// Prevent loop from happening every single time the offset changes
+				if (!offsetChanged)
+				{
+					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+						pauseOG = ["Restart Song", "Exit to menu"];
+					else
+						pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
+
+					menuItems = pauseOG;
+					regenMenu();
+					offsetChanged = true;
+				}
+				else if (PlayState.songOffset == startOffset)
+				{
+					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+						pauseOG = ["Resume", "Restart Song", "Exit to menu"];
+					else
+						pauseOG = [
+							"Resume",
+							"Restart Song",
+							"Change Difficulty",
+							"Toggle Practice Mode",
+							"Exit to menu"
+						];
+
+					menuItems = pauseOG;
+					regenMenu();
+					offsetChanged = false;
+				}
 			}
-			else if (PlayState.songOffset == startOffset)
+			else if (rightP)
 			{
-				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
-					pauseOG = ["Resume", "Restart Song", "Exit to menu"];
-				else
-					pauseOG = [
-						"Resume",
-						"Restart Song",
-						"Change Difficulty",
-						"Toggle Practice Mode",
-						"Exit to menu"
-					];
+				oldOffset = PlayState.songOffset;
+				PlayState.songOffset += 1;
+				sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
+				perSongOffset.text = LangUtil.getString('cmnAddOffset') + ': ' + PlayState.songOffset + ' - ' + LangUtil.getString('cmnDesc') + ' - '
+					+ LangUtil.getString('descAddOffset');
+				if (!offsetChanged)
+				{
+					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+						pauseOG = ["Restart Song", "Exit to menu"];
+					else
+						pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
 
-				menuItems = pauseOG;
-				regenMenu();
-				offsetChanged = false;
-			}
-		}
-		else if (rightP)
-		{
-			oldOffset = PlayState.songOffset;
-			PlayState.songOffset += 1;
-			sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
-			perSongOffset.text = LangUtil.getString('cmnAddOffset') + ': ' + PlayState.songOffset + ' - ' + LangUtil.getString('cmnDesc') + ' - '
-				+ LangUtil.getString('descAddOffset');
-			if (!offsetChanged)
-			{
-				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
-					pauseOG = ["Restart Song", "Exit to menu"];
-				else
-					pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
+					menuItems = pauseOG;
+					regenMenu();
+					offsetChanged = true;
+				}
+				else if (PlayState.songOffset == startOffset)
+				{
+					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+						pauseOG = ["Resume", "Restart Song", "Exit to menu"];
+					else
+						pauseOG = [
+							"Resume",
+							"Restart Song",
+							"Change Difficulty",
+							"Toggle Practice Mode",
+							"Exit to menu"
+						];
 
-				menuItems = pauseOG;
-				regenMenu();
-				offsetChanged = true;
-			}
-			else if (PlayState.songOffset == startOffset)
-			{
-				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
-					pauseOG = ["Resume", "Restart Song", "Exit to menu"];
-				else
-					pauseOG = [
-						"Resume",
-						"Restart Song",
-						"Change Difficulty",
-						"Toggle Practice Mode",
-						"Exit to menu"
-					];
-
-				menuItems = pauseOG;
-				regenMenu();
-				offsetChanged = false;
+					menuItems = pauseOG;
+					regenMenu();
+					offsetChanged = false;
+				}
 			}
 		}
 		#end
@@ -256,6 +261,7 @@ class PauseSubState extends MusicBeatSubstate
 				case "Restart Song":
 					FlxG.resetState();
 				case "Change Difficulty":
+					canChangeOffset = false;
 					menuItems = difficultyChoices;
 					regenMenu();
 				case "Toggle Practice Mode":
@@ -291,15 +297,10 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.storyDifficulty = curSelected;
 					FlxG.resetState();
 				case "BACK":
+					canChangeOffset = true;
 					menuItems = pauseOG;
 					regenMenu();
 			}
-		}
-
-		if (FlxG.keys.justPressed.J)
-		{
-			// for reference later!
-			// PlayerSettings.player1.controls.replaceBinding(Control.LEFT, Keys, FlxKey.J, null);
 		}
 	}
 
