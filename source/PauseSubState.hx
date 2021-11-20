@@ -43,7 +43,9 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		super();
 
-		if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+		if (PlayState.isStoryMode
+			|| PlayState.SONG.song.toLowerCase() == 'epiphany'
+			|| PlayState.SONG.song.toLowerCase() == 'your reality')
 			pauseOG = ["Resume", "Restart Song", "Exit to menu"];
 
 		menuItems = pauseOG;
@@ -70,7 +72,7 @@ class PauseSubState extends MusicBeatSubstate
 		add(levelInfo);
 
 		var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, "", 32);
-		levelDifficulty.text += CoolUtil.difficultyString();
+		levelDifficulty.text = CoolUtil.difficultyString();
 		levelDifficulty.antialiasing = true;
 		levelDifficulty.scrollFactor.set();
 		levelDifficulty.setFormat(LangUtil.getFont(), 32);
@@ -79,6 +81,11 @@ class PauseSubState extends MusicBeatSubstate
 
 		if (PlayState.SONG.song.toLowerCase() != 'epiphany')
 			add(levelDifficulty);
+
+		if (PlayState.SONG.song.toLowerCase() == 'your reality')
+			levelDifficulty.text = 'YOUR REALITY';
+		else if (PlayState.SONG.song.toLowerCase() == 'erb')
+			levelDifficulty.text = 'GOKU VS SUPERMAN';
 
 		var deathText:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
 		deathText.text += "Blue balled: " + PlayState.deathCounter;
@@ -184,7 +191,9 @@ class PauseSubState extends MusicBeatSubstate
 				// Prevent loop from happening every single time the offset changes
 				if (!offsetChanged)
 				{
-					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+					if (PlayState.isStoryMode
+						|| PlayState.SONG.song.toLowerCase() == 'epiphany'
+						|| PlayState.SONG.song.toLowerCase() == 'your reality')
 						pauseOG = ["Restart Song", "Exit to menu"];
 					else
 						pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
@@ -195,7 +204,9 @@ class PauseSubState extends MusicBeatSubstate
 				}
 				else if (PlayState.songOffset == startOffset)
 				{
-					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+					if (PlayState.isStoryMode
+						|| PlayState.SONG.song.toLowerCase() == 'epiphany'
+						|| PlayState.SONG.song.toLowerCase() == 'your reality')
 						pauseOG = ["Resume", "Restart Song", "Exit to menu"];
 					else
 						pauseOG = [
@@ -220,7 +231,9 @@ class PauseSubState extends MusicBeatSubstate
 					+ LangUtil.getString('descAddOffset');
 				if (!offsetChanged)
 				{
-					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+					if (PlayState.isStoryMode
+						|| PlayState.SONG.song.toLowerCase() == 'epiphany'
+						|| PlayState.SONG.song.toLowerCase() == 'your reality')
 						pauseOG = ["Restart Song", "Exit to menu"];
 					else
 						pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
@@ -231,7 +244,9 @@ class PauseSubState extends MusicBeatSubstate
 				}
 				else if (PlayState.songOffset == startOffset)
 				{
-					if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
+					if (PlayState.isStoryMode
+						|| PlayState.SONG.song.toLowerCase() == 'epiphany'
+						|| PlayState.SONG.song.toLowerCase() == 'your reality')
 						pauseOG = ["Resume", "Restart Song", "Exit to menu"];
 					else
 						pauseOG = [

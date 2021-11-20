@@ -344,7 +344,14 @@ class PlayState extends MusicBeatState
 		switch (storyDifficulty)
 		{
 			case 0:
-				storyDifficultyText = "Easy";
+				switch (SONG.song.toLowerCase())
+				{
+					case 'erb':
+						storyDifficultyText = "Goku vs Superman";
+					default:
+						storyDifficultyText = "Easy";
+				}
+
 			case 1:
 				switch (SONG.song.toLowerCase())
 				{
@@ -357,7 +364,13 @@ class PlayState extends MusicBeatState
 				}
 
 			case 2:
-				storyDifficultyText = "Hard";
+				switch (SONG.song.toLowerCase())
+				{
+					case 'erb':
+						storyDifficultyText = "Goku vs Superman";
+					default:
+						storyDifficultyText = "Hard";
+				}
 		}
 
 		iconRPC = SONG.player2;
