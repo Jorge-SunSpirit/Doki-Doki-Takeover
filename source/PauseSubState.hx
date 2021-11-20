@@ -82,15 +82,19 @@ class PauseSubState extends MusicBeatSubstate
 
 		var deathText:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
 		deathText.text += "Blue balled: " + PlayState.deathCounter;
+		deathText.antialiasing = true;
 		deathText.scrollFactor.set();
-		deathText.setFormat(Paths.font('vcr.ttf'), 32);
+		deathText.setFormat(LangUtil.getFont(), 32);
+		deathText.y += LangUtil.getFontOffset();
 		deathText.updateHitbox();
 		add(deathText);
 
 		practiceText = new FlxText(20, 15 + 96, 0, "PRACTICE MODE", 32);
 		practiceText.visible = PlayState.practiceMode;
+		practiceText.antialiasing = true;
 		practiceText.scrollFactor.set();
-		practiceText.setFormat(Paths.font('vcr.ttf'), 32);
+		practiceText.setFormat(LangUtil.getFont(), 32);
+		practiceText.y += LangUtil.getFontOffset();
 		practiceText.updateHitbox();
 		add(practiceText);
 
