@@ -855,8 +855,9 @@ class ChartingState extends MusicBeatState
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
 			FlxG.mouse.visible = false;
-			HealthIcon.isEpiphany = false;
+			PlayState.practiceMode = false;
 			PlayState.showCutscene = true;
+			PlayState.deathCounter = 0;
 
 			lastSection = curSection;
 

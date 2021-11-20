@@ -21,10 +21,19 @@ class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
-	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Exit to menu'];
+	var menuItems:Array<String>;
+	var pauseOG:Array<String> = [
+		"Resume",
+		"Restart Song",
+		"Change Difficulty",
+		"Toggle Practice Mode",
+		"Exit to menu"
+	];
+	var difficultyChoices:Array<String> = ["EASY", "NORMAL", "HARD", "BACK"];
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
+	var practiceText:FlxText;
 	var perSongOffset:FlxText;
 
 	var offsetChanged:Bool = false;
@@ -33,6 +42,11 @@ class PauseSubState extends MusicBeatSubstate
 	public function new(x:Float, y:Float)
 	{
 		super();
+
+		if (PlayState.isStoryMode)
+			pauseOG = ["Resume", "Restart Song", "Exit to menu"];
+
+		menuItems = pauseOG;
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('disco'), true, true);
 		pauseMusic.volume = 0;
@@ -66,15 +80,35 @@ class PauseSubState extends MusicBeatSubstate
 		if (PlayState.SONG.song.toLowerCase() != 'epiphany')
 			add(levelDifficulty);
 
-		levelDifficulty.alpha = 0;
+		var deathText:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
+		deathText.text += "Blue balled: " + PlayState.deathCounter;
+		deathText.scrollFactor.set();
+		deathText.setFormat(Paths.font('vcr.ttf'), 32);
+		deathText.updateHitbox();
+		add(deathText);
+
+		practiceText = new FlxText(20, 15 + 96, 0, "PRACTICE MODE", 32);
+		practiceText.visible = PlayState.practiceMode;
+		practiceText.scrollFactor.set();
+		practiceText.setFormat(Paths.font('vcr.ttf'), 32);
+		practiceText.updateHitbox();
+		add(practiceText);
+
 		levelInfo.alpha = 0;
+		levelDifficulty.alpha = 0;
+		deathText.alpha = 0;
+		practiceText.alpha = 0;
 
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
+		deathText.x = FlxG.width - (deathText.width + 20);
+		practiceText.x = FlxG.width - (practiceText.width + 20);
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(levelInfo, {alpha: 1, y: 20 + LangUtil.getFontOffset()}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
+		FlxTween.tween(deathText, {alpha: 1, y: deathText.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
+		FlxTween.tween(practiceText, {alpha: 1, y: practiceText.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.9});
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
@@ -142,38 +176,30 @@ class PauseSubState extends MusicBeatSubstate
 			// Prevent loop from happening every single time the offset changes
 			if (!offsetChanged)
 			{
-				grpMenuShit.clear();
+				if (PlayState.isStoryMode)
+					pauseOG = ["Restart Song", "Exit to menu"];
+				else
+					pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
 
-				menuItems = ['Restart Song', 'Exit to menu'];
-
-				for (i in 0...menuItems.length)
-				{
-					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
-					songText.isMenuItem = true;
-					songText.targetY = i;
-					grpMenuShit.add(songText);
-				}
-
-				changeSelection();
-
-				cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+				menuItems = pauseOG;
+				regenMenu();
 				offsetChanged = true;
 			}
 			else if (PlayState.songOffset == startOffset)
 			{
-				grpMenuShit.clear();
-				menuItems = ['Resume', 'Restart Song', 'Exit to menu'];
-				for (i in 0...menuItems.length)
-				{
-					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
-					songText.isMenuItem = true;
-					songText.targetY = i;
-					grpMenuShit.add(songText);
-				}
+				if (PlayState.isStoryMode)
+					pauseOG = ["Resume", "Restart Song", "Exit to menu"];
+				else
+					pauseOG = [
+						"Resume",
+						"Restart Song",
+						"Change Difficulty",
+						"Toggle Practice Mode",
+						"Exit to menu"
+					];
 
-				changeSelection();
-
-				cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+				menuItems = pauseOG;
+				regenMenu();
 				offsetChanged = false;
 			}
 		}
@@ -186,38 +212,30 @@ class PauseSubState extends MusicBeatSubstate
 				+ LangUtil.getString('descAddOffset');
 			if (!offsetChanged)
 			{
-				grpMenuShit.clear();
+				if (PlayState.isStoryMode)
+					pauseOG = ["Restart Song", "Exit to menu"];
+				else
+					pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
 
-				menuItems = ['Restart Song', 'Exit to menu'];
-
-				for (i in 0...menuItems.length)
-				{
-					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
-					songText.isMenuItem = true;
-					songText.targetY = i;
-					grpMenuShit.add(songText);
-				}
-
-				changeSelection();
-
-				cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+				menuItems = pauseOG;
+				regenMenu();
 				offsetChanged = true;
 			}
 			else if (PlayState.songOffset == startOffset)
 			{
-				grpMenuShit.clear();
-				menuItems = ['Resume', 'Restart Song', 'Exit to menu'];
-				for (i in 0...menuItems.length)
-				{
-					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
-					songText.isMenuItem = true;
-					songText.targetY = i;
-					grpMenuShit.add(songText);
-				}
+				if (PlayState.isStoryMode)
+					pauseOG = ["Resume", "Restart Song", "Exit to menu"];
+				else
+					pauseOG = [
+						"Resume",
+						"Restart Song",
+						"Change Difficulty",
+						"Toggle Practice Mode",
+						"Exit to menu"
+					];
 
-				changeSelection();
-
-				cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+				menuItems = pauseOG;
+				regenMenu();
 				offsetChanged = false;
 			}
 		}
@@ -233,8 +251,14 @@ class PauseSubState extends MusicBeatSubstate
 					close();
 				case "Restart Song":
 					FlxG.resetState();
+				case "Change Difficulty":
+					menuItems = difficultyChoices;
+					regenMenu();
+				case "Toggle Practice Mode":
+					PlayState.practiceMode = !PlayState.practiceMode;
+					practiceText.visible = PlayState.practiceMode;
 				case "Exit to menu":
-					HealthIcon.isEpiphany = false;
+					PlayState.practiceMode = false;
 					PlayState.showCutscene = true;
 					if (PlayState.loadRep)
 					{
@@ -257,6 +281,14 @@ class PauseSubState extends MusicBeatSubstate
 						FlxG.switchState(new DokiStoryState());
 					else
 						FlxG.switchState(new DokiFreeplayState());
+				case "EASY" | "NORMAL" | "HARD":
+					PlayState.SONG = Song.loadFromJson(Highscore.formatSong(PlayState.SONG.song.toLowerCase(), curSelected),
+						PlayState.SONG.song.toLowerCase());
+					PlayState.storyDifficulty = curSelected;
+					FlxG.resetState();
+				case "BACK":
+					menuItems = pauseOG;
+					regenMenu();
 			}
 		}
 
@@ -299,5 +331,24 @@ class PauseSubState extends MusicBeatSubstate
 				// item.setGraphicSize(Std.int(item.width));
 			}
 		}
+	}
+
+	function regenMenu()
+	{
+		while (grpMenuShit.members.length > 0)
+		{
+			grpMenuShit.remove(grpMenuShit.members[0], true);
+		}
+
+		for (i in 0...menuItems.length)
+		{
+			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
+			songText.isMenuItem = true;
+			songText.targetY = i;
+			grpMenuShit.add(songText);
+		}
+
+		curSelected = 0;
+		changeSelection();
 	}
 }

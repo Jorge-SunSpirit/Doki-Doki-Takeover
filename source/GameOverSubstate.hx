@@ -21,7 +21,6 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	public function new(x:Float, y:Float)
 	{
-		var daStage = PlayState.curStage;
 		var daBf:String = '';
 		switch (PlayState.SONG.player1)
 		{
@@ -67,7 +66,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.camera.scroll.set();
 		FlxG.camera.target = null;
 
-		if (bf.curCharacter == "playablesenpai")
+		if (daBf == "playablesenpai")
 		{
 			// FlxG.camera.zoom = FlxG.camera.zoom - 0.25;
 			camFollow.setPosition(bf.getGraphicMidpoint().x - 74, bf.getGraphicMidpoint().y - 150);
@@ -98,8 +97,9 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (controls.BACK && !crashdeath)
 		{
 			FlxG.sound.music.stop();
-			HealthIcon.isEpiphany = false;
+			PlayState.practiceMode = false;
 			PlayState.showCutscene = true;
+			PlayState.deathCounter = 0;
 			if (PlayState.isStoryMode)
 				FlxG.switchState(new DokiStoryState());
 			else

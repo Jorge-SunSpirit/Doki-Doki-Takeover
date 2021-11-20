@@ -73,7 +73,9 @@ class PlayState extends MusicBeatState
 {
 	public static var instance:PlayState = null;
 
+	public static var practiceMode:Bool = false;
 	public static var showCutscene:Bool = true;
+	public static var deathCounter:Int = 0;
 
 	var midsongcutscene:Bool = false;
 
@@ -3254,7 +3256,7 @@ class PlayState extends MusicBeatState
 				maxNPS = nps;
 		}
 
-		if (FlxG.keys.justPressed.NINE && !HealthIcon.isEpiphany)
+		if (FlxG.keys.justPressed.NINE)
 			iconP1.swapOldIcon();
 
 		scoreTxt.screenCenter(X);
@@ -3708,7 +3710,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (health <= 0 && !cannotDie)
+		if (health <= 0 && !cannotDie && !practiceMode)
 		{
 			boyfriend.stunned = true;
 
@@ -3718,6 +3720,8 @@ class PlayState extends MusicBeatState
 
 			vocals.stop();
 			FlxG.sound.music.stop();
+
+			deathCounter += 1;
 
 			openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
@@ -4181,6 +4185,10 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		practiceMode = false;
+		showCutscene = true;
+		deathCounter = 0;
+
 		if (curSong.toLowerCase() == 'obsession' && isStoryMode)
 		{
 			#if FEATURE_FILESYSTEM
@@ -4202,8 +4210,6 @@ class PlayState extends MusicBeatState
 			FlxG.save.data.scrollSpeed = 1;
 			FlxG.save.data.downscroll = false;
 		}
-
-		HealthIcon.isEpiphany = false;
 
 		if (FlxG.save.data.fpsCap > 290)
 			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(290);
@@ -4270,8 +4276,6 @@ class PlayState extends MusicBeatState
 					DokiStoryState.showPopUp = true;
 					DokiStoryState.popupWeek = PlayState.storyWeek;
 
-					showCutscene = true;
-
 					if (SONG.song.toLowerCase() == 'glitcher (monika mix)')
 					{
 						#if FEATURE_WEBM
@@ -4313,7 +4317,6 @@ class PlayState extends MusicBeatState
 
 					trace('LOADING NEXT SONG');
 					trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
-					showCutscene = true;
 
 					switch (SONG.song.toLowerCase())
 					{
@@ -4355,7 +4358,6 @@ class PlayState extends MusicBeatState
 								PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 								FlxG.sound.music.stop();
 
-								showCutscene = true;
 								LoadingState.loadAndSwitchState(new PlayState());
 							}
 					}
@@ -4372,7 +4374,6 @@ class PlayState extends MusicBeatState
 				}
 
 				trace('WENT BACK TO FREEPLAY??');
-				showCutscene = true;
 				FlxG.switchState(new DokiFreeplayState());
 			}
 		}
@@ -4467,8 +4468,11 @@ class PlayState extends MusicBeatState
 
 		if (daRating != 'shit' || daRating != 'bad')
 		{
-			songScore += Math.round(score);
-			songScoreDef += Math.round(ConvertScore.convertScore(noteDiff));
+			if (!practiceMode)
+			{
+				songScore += Math.round(score);
+				songScoreDef += Math.round(ConvertScore.convertScore(noteDiff));
+			}
 
 			/* if (combo > 60)
 					daRating = 'sick';
@@ -4899,7 +4903,8 @@ class PlayState extends MusicBeatState
 			if (FlxG.save.data.accuracyMod == 1)
 				totalNotesHit -= 1;
 
-			songScore -= 10;
+			if (!practiceMode)
+				songScore -= 10;
 
 			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
 			// FlxG.sound.play(Paths.sound('missnote1'), 1, false);

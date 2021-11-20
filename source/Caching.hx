@@ -140,11 +140,13 @@ class Caching extends MusicBeatState
 		super.create();
 	}
 
-	var calledDone = false;
+	var calledDone:Bool = false;
+
+	var canSpam:Bool = true;
 
 	override function update(elapsed)
 	{
-		if (FlxG.keys.justPressed.D && !afterBoot)
+		if (FlxG.keys.justPressed.D && !afterBoot && canSpam)
 		{
 			trace('disabled caching for next time');
 			FlxG.save.data.cacheCharacters = false;
@@ -152,6 +154,7 @@ class Caching extends MusicBeatState
 			FlxG.save.data.cacheMusic = false;
 			FlxG.save.data.cacheSounds = false;
 			remove(disableText);
+			canSpam = false;
 		}
 
 		super.update(elapsed);
