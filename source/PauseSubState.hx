@@ -43,7 +43,7 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		super();
 
-		if (PlayState.isStoryMode)
+		if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
 			pauseOG = ["Resume", "Restart Song", "Exit to menu"];
 
 		menuItems = pauseOG;
@@ -176,7 +176,7 @@ class PauseSubState extends MusicBeatSubstate
 			// Prevent loop from happening every single time the offset changes
 			if (!offsetChanged)
 			{
-				if (PlayState.isStoryMode)
+				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
 					pauseOG = ["Restart Song", "Exit to menu"];
 				else
 					pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
@@ -187,7 +187,7 @@ class PauseSubState extends MusicBeatSubstate
 			}
 			else if (PlayState.songOffset == startOffset)
 			{
-				if (PlayState.isStoryMode)
+				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
 					pauseOG = ["Resume", "Restart Song", "Exit to menu"];
 				else
 					pauseOG = [
@@ -212,7 +212,7 @@ class PauseSubState extends MusicBeatSubstate
 				+ LangUtil.getString('descAddOffset');
 			if (!offsetChanged)
 			{
-				if (PlayState.isStoryMode)
+				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
 					pauseOG = ["Restart Song", "Exit to menu"];
 				else
 					pauseOG = ["Restart Song", "Change Difficulty", "Toggle Practice Mode", "Exit to menu"];
@@ -223,7 +223,7 @@ class PauseSubState extends MusicBeatSubstate
 			}
 			else if (PlayState.songOffset == startOffset)
 			{
-				if (PlayState.isStoryMode)
+				if (PlayState.isStoryMode || PlayState.SONG.song.toLowerCase() == 'epiphany')
 					pauseOG = ["Resume", "Restart Song", "Exit to menu"];
 				else
 					pauseOG = [
