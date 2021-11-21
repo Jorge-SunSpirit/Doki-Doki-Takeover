@@ -87,8 +87,8 @@ class PauseSubState extends MusicBeatSubstate
 		else if (PlayState.SONG.song.toLowerCase() == 'erb')
 			levelDifficulty.text = 'GOKU VS SUPERMAN';
 
-		var deathText:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
-		deathText.text += "Blue balled: " + PlayState.deathCounter;
+		var deathText:FlxText = new FlxText(20, 15 + 64, 0, (PlayState.SONG.player1 == "playablesenpai" ? "Pasta'd: " : "Blue balled: "), 32);
+		deathText.text += PlayState.deathCounter;
 		deathText.antialiasing = true;
 		deathText.scrollFactor.set();
 		deathText.setFormat(LangUtil.getFont(), 32);

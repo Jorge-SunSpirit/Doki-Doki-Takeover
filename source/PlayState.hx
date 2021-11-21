@@ -3709,7 +3709,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (health <= 0 && !cannotDie && !practiceMode)
+		if ((health <= 0 && !cannotDie && !practiceMode) || (FlxG.save.data.resetButton && songStarted && FlxG.keys.justPressed.R))
 		{
 			boyfriend.stunned = true;
 
@@ -3739,38 +3739,6 @@ class PlayState extends MusicBeatState
 			#end
 
 			// FlxG.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
-		}
-		if (FlxG.save.data.resetButton)
-		{
-			if (songStarted && FlxG.keys.justPressed.R)
-			{
-				boyfriend.stunned = true;
-
-				persistentUpdate = false;
-				persistentDraw = false;
-				paused = true;
-
-				vocals.stop();
-				FlxG.sound.music.stop();
-
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
-
-				#if FEATURE_DISCORD
-				// Game Over doesn't get his own variable because it's only used here
-				DiscordClient.changePresence("GAME OVER -- "
-					+ SONG.song
-					+ (SONG.song.toLowerCase() == 'epiphany' ? " " : " (" + storyDifficultyText + ") ")
-					+ Ratings.GenerateLetterRank(accuracy),
-					"\nAcc: "
-					+ HelperFunctions.truncateFloat(accuracy, 2)
-					+ "% | Score: "
-					+ songScore
-					+ " | Misses: "
-					+ misses, iconRPC);
-				#end
-
-				// FlxG.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
-			}
 		}
 
 		if (unspawnNotes[0] != null)
