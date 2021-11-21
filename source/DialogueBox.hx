@@ -221,6 +221,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	var dialogueOpened:Bool = false;
 	var dialogueStarted:Bool = false;
+	var dialogueEnded:Bool = false;
 
 	var stopspamming:Bool = false;
 
@@ -255,13 +256,15 @@ class DialogueBox extends FlxSpriteGroup
 			endinstantly();
 		}
 
-		if (PlayerSettings.player1.controls.ACCEPT && dialogueStarted && canSkip)
+		if (PlayerSettings.player1.controls.ACCEPT && dialogueEnded && canSkip)
 		{
 			remove(dialogue);
 
 			FlxG.sound.play(Paths.sound('clickText'), 0.8);
 			enddialogue();
 		}
+		else if (PlayerSettings.player1.controls.ACCEPT && dialogueStarted && canSkip)
+			swagDialogue.skip();
 
 		super.update(elapsed);
 	}
@@ -354,7 +357,14 @@ class DialogueBox extends FlxSpriteGroup
 		}
 
 		swagDialogue.resetText(dialogueList[0]);
-		swagDialogue.start(0.04, true);
+		swagDialogue.start(0.04);
+		swagDialogue.completeCallback = function()
+		{
+			dialogueEnded = true;
+		}
+
+		dialogueEnded = false;
+
 		if (PlayState.SONG.noteStyle == 'pixel' || isPixel)
 		{
 			switch (curCharacter)
@@ -565,6 +575,7 @@ class DialogueBox extends FlxSpriteGroup
 					canFullSkip = false;
 					enddialogue();
 				case 'hidedialogue':
+					dialogueEnded = true;
 					box.visible = false;
 					portraitRight.visible = false;
 					portraitLeft.visible = false;
@@ -1225,6 +1236,7 @@ class DialogueBox extends FlxSpriteGroup
 					canFullSkip = false;
 					enddialogue();
 				case 'hidedialogue':
+					dialogueEnded = true;
 					bgFade.visible = false;
 					box.visible = false;
 					portraitRight.visible = false;
