@@ -285,6 +285,7 @@ class PauseSubState extends MusicBeatSubstate
 				case "Exit to menu":
 					PlayState.practiceMode = false;
 					PlayState.showCutscene = true;
+					PlayState.deathCounter = 0;
 					if (PlayState.loadRep)
 					{
 						FlxG.save.data.botplay = false;
