@@ -858,6 +858,11 @@ class ChartingState extends MusicBeatState
 			PlayState.practiceMode = false;
 			PlayState.showCutscene = true;
 			PlayState.deathCounter = 0;
+			if (PlayState.loadRep)
+			{
+				FlxG.save.data.botplay = false;
+				PlayState.loadRep = false;
+			}
 
 			lastSection = curSection;
 

@@ -1498,8 +1498,6 @@ class PlayState extends MusicBeatState
 			FlxG.watch.addQuick('rep releases', repReleases);
 
 			FlxG.save.data.botplay = true;
-			FlxG.save.data.scrollSpeed = rep.replay.noteSpeed;
-			FlxG.save.data.downscroll = rep.replay.isDownscroll;
 			// FlxG.watch.addQuick('Queued',inputsQueued);
 		}
 
@@ -2078,11 +2076,8 @@ class PlayState extends MusicBeatState
 		if (!loadRep)
 			rep.SaveReplay(saveNotes);
 		else
-		{
 			FlxG.save.data.botplay = false;
-			FlxG.save.data.scrollSpeed = 1;
-			FlxG.save.data.downscroll = false;
-		}
+
 		if (FlxG.save.data.fpsCap > 290)
 			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(290);
 		#if FEATURE_LUAMODCHART
@@ -4209,11 +4204,7 @@ class PlayState extends MusicBeatState
 		if (!loadRep)
 			rep.SaveReplay(saveNotes);
 		else
-		{
 			FlxG.save.data.botplay = false;
-			FlxG.save.data.scrollSpeed = 1;
-			FlxG.save.data.downscroll = false;
-		}
 
 		if (FlxG.save.data.fpsCap > 290)
 			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(290);

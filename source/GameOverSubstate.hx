@@ -100,11 +100,15 @@ class GameOverSubstate extends MusicBeatSubstate
 			PlayState.practiceMode = false;
 			PlayState.showCutscene = true;
 			PlayState.deathCounter = 0;
+			if (PlayState.loadRep)
+			{
+				FlxG.save.data.botplay = false;
+				PlayState.loadRep = false;
+			}
 			if (PlayState.isStoryMode)
 				FlxG.switchState(new DokiStoryState());
 			else
 				FlxG.switchState(new DokiFreeplayState());
-			PlayState.loadRep = false;
 		}
 
 		if (bf.animation.curAnim.name == 'crashDeath' && bf.animation.finished)
