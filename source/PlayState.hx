@@ -341,36 +341,27 @@ class PlayState extends MusicBeatState
 
 		#if FEATURE_DISCORD
 		// Making difficulty text for Discord Rich Presence.
-		switch (storyDifficulty)
+		if (SONG.song.toLowerCase() == 'erb')
+			storyDifficultyText = "Goku vs Superman";
+		else
 		{
-			case 0:
-				switch (SONG.song.toLowerCase())
-				{
-					case 'erb':
-						storyDifficultyText = "Goku vs Superman";
-					default:
-						storyDifficultyText = "Easy";
-				}
+			switch (storyDifficulty)
+			{
+				case 0:
+					storyDifficultyText = "Easy";
 
-			case 1:
-				switch (SONG.song.toLowerCase())
-				{
-					case 'your reality':
-						storyDifficultyText = "Your Reality";
-					case 'erb':
-						storyDifficultyText = "Goku vs Superman";
-					default:
-						storyDifficultyText = "Normal";
-				}
+				case 1:
+					switch (SONG.song.toLowerCase())
+					{
+						case 'your reality':
+							storyDifficultyText = "Your Reality";
+						default:
+							storyDifficultyText = "Normal";
+					}
 
-			case 2:
-				switch (SONG.song.toLowerCase())
-				{
-					case 'erb':
-						storyDifficultyText = "Goku vs Superman";
-					default:
-						storyDifficultyText = "Hard";
-				}
+				case 2:
+					storyDifficultyText = "Hard";
+			}
 		}
 
 		iconRPC = SONG.player2;
