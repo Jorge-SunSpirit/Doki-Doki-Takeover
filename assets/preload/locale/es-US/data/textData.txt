@@ -59,7 +59,7 @@ optSaveReset::Reiniciar Datos de Guardado
 optSaveResetConfirm::Confirmar Reinicio de Datos de Guardado
 optSelfAware::Conciencia de Uno Mismo
 optGameJolt::Integración de Game Jolt
-optMirrorMode::Mirror Mode
+optMirrorMode::Modo Espejo
 optHitSound::Hit Sounds
 // DESCRIPTION
 descAddOffset::Añade un valor al desplazamiento global, por canción.
@@ -106,9 +106,9 @@ descLaneUnderwayControl::Transparencia del Lane Underlay actual.
 descSaveReset::Reinicia tu partida guardada a una predeterminada.
 descDialogueSkip::Pulsa ESCAPE para saltar el dialogo.
 descGameJolt::Inicia sesión en Game Jolt para obtener trofeos!
-descMirrorMode::Swap your notes with the opponent's notes!
-descHitSound::Play a sound whenever you press a note.
-descHitSoundControl::Current Hit Sound volume
+descMirrorMode::Cambia tus notas con las del oponente!
+descHitSound::Reproduce un sonido cuando presionas una nota.
+descHitSoundControl::Volumen actual de los Hit Sounds
 // UNLOCK POPUPS
 msgMoni:: Desbloqueaste "Your Reality"{NL}Accede a la canción desde el menú de freeplay.
 msgSayo::Las canciones de Sayori ahora están disponibles en el  menú de Freeplay.
