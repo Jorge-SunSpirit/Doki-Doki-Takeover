@@ -61,6 +61,7 @@ optSelfAware::Self Awareness
 optGameJolt::Game Jolt Integration
 optMirrorMode::Mirror Mode
 optHitSound::Hit Sounds
+optNoteSplash::Note Splashes
 // DESCRIPTION
 descAddOffset::Adds value to global offset, per song.
 descKeyBindings::Change the keybindings of each note.
@@ -109,6 +110,7 @@ descGameJolt::Log into your Game Jolt account to earn trophies!
 descMirrorMode::Swap your notes with the opponent's notes!
 descHitSound::Play a sound whenever you press a note.
 descHitSoundControl::Current Hit Sound volume
+descNoteSplash::Adds a splash to any sick notes that you hit!
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Unlocked!{NL}Access the song in the Freeplay menu.
 msgSayo::Sayori's songs are now available in the Freeplay menu.

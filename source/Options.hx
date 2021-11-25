@@ -295,7 +295,7 @@ class Judgement extends Option
 			+ HelperFunctions.truncateFloat(90 * Conductor.timeScale, 0)
 			+ "ms BD: "
 			+ HelperFunctions.truncateFloat(135 * Conductor.timeScale, 0)
-			+ "ms NO: "
+			+ "ms SHT: "
 			+ HelperFunctions.truncateFloat(155 * Conductor.timeScale, 0)
 			+ "ms TOTAL: "
 			+ HelperFunctions.truncateFloat(Conductor.safeZoneOffset, 0)
@@ -1029,5 +1029,26 @@ class MirrorMode extends Option
 	private override function updateDisplay():String
 	{
 		return LangUtil.getString('optMirrorMode') + ' ' + (FlxG.save.data.mirrorMode ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
+
+class NoteSplashToggle extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.noteSplash = !FlxG.save.data.noteSplash;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optNoteSplash') + ' ' + (FlxG.save.data.noteSplash ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }

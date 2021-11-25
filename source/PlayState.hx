@@ -150,7 +150,9 @@ class PlayState extends MusicBeatState
 	public static var playerStrums:FlxTypedGroup<FlxSprite> = null;
 	public static var cpuStrums:FlxTypedGroup<FlxSprite> = null;
 
-	var isPixelUI:Bool = false;
+	var grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
+
+	public static var isPixelUI:Bool = false;
 
 	private var camZooming:Bool = false;
 	private var camFocus:Bool = true;
@@ -418,6 +420,10 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(camHUD);
 
 		camHUD.zoom = FlxG.save.data.zoom;
+
+		var tempNoteSplash = new NoteSplash(0, 0, 0);
+		grpNoteSplashes.add(tempNoteSplash);
+		tempNoteSplash.alpha = 0.1;
 
 		FlxCamera.defaultCameras = [camGame];
 
@@ -1564,6 +1570,8 @@ class PlayState extends MusicBeatState
 		playerStrums = new FlxTypedGroup<FlxSprite>();
 		cpuStrums = new FlxTypedGroup<FlxSprite>();
 
+		add(grpNoteSplashes);
+
 		// startCountdown();
 
 		generateSong(SONG.song);
@@ -1695,6 +1703,7 @@ class PlayState extends MusicBeatState
 		// layering due to 'player' icon
 		add(scoreTxt);
 
+		grpNoteSplashes.cameras = [camHUD];
 		strumLineNotes.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
@@ -1879,6 +1888,7 @@ class PlayState extends MusicBeatState
 						FlxG.camera.zoom = 1;
 						add(blackScreentwo);
 						camHUD.visible = false;
+						remove(grpNoteSplashes);
 						remove(strumLineNotes);
 						remove(scoreTxt);
 						remove(replayTxt);
@@ -1942,6 +1952,7 @@ class PlayState extends MusicBeatState
 					{
 						FlxG.camera.zoom = 1;
 						camHUD.visible = false;
+						remove(grpNoteSplashes);
 						remove(strumLineNotes);
 						remove(scoreTxt);
 						remove(replayTxt);
@@ -1994,6 +2005,7 @@ class PlayState extends MusicBeatState
 				add(blackScreen);
 				blackScreen.alpha = 1;
 				vocals.pause();
+				remove(grpNoteSplashes);
 				remove(strumLineNotes);
 				remove(scoreTxt);
 				remove(replayTxt);
@@ -2031,6 +2043,7 @@ class PlayState extends MusicBeatState
 				FlxG.camera.zoom = 1;
 				camHUD.visible = false;
 				vocals.pause();
+				remove(grpNoteSplashes);
 				remove(strumLineNotes);
 				remove(scoreTxt);
 				remove(replayTxt);
@@ -2293,6 +2306,7 @@ class PlayState extends MusicBeatState
 					vocals.pause();
 					vocals.stop();
 					FlxG.sound.music.stop();
+					remove(grpNoteSplashes);
 					remove(strumLineNotes);
 					remove(scoreTxt);
 					remove(replayTxt);
@@ -4431,6 +4445,13 @@ class PlayState extends MusicBeatState
 
 		if (daRating != 'shit' || daRating != 'bad')
 		{
+			if (daRating == 'sick' && FlxG.save.data.noteSplash && !FlxG.save.data.botplay)
+			{
+				var daNoteSplash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
+				daNoteSplash.setupNoteSplash(daNote.x, strumLine.y, daNote.noteData);
+				grpNoteSplashes.add(daNoteSplash);
+			}
+
 			if (!practiceMode)
 			{
 				songScore += Math.round(score);

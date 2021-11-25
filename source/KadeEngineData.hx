@@ -122,6 +122,9 @@ class KadeEngineData
 		if (FlxG.save.data.hitSoundVolume == null)
 			FlxG.save.data.hitSoundVolume = 1;
 
+		if (FlxG.save.data.noteSplash == null)
+			FlxG.save.data.noteSplash = true;
+
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
 		KeyBinds.gamepad = gamepad != null;

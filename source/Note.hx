@@ -58,8 +58,6 @@ class Note extends FlxSprite
 
 		this.noteData = noteData;
 
-		var daStage:String = PlayState.curStage;
-
 		switch (noteStyle)
 		{
 			case 'pixel':
