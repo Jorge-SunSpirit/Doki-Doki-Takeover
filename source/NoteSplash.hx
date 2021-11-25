@@ -29,10 +29,7 @@ class NoteSplash extends FlxSprite
 		alpha = 0.6;
 
 		// glitcher stuff
-		if (PlayState.isPixelUI)
-			antialiasing = false;
-		else
-			antialiasing = true;
+		antialiasing = !PlayState.isPixelUI;
 
 		animation.play("note" + noteData + "-" + FlxG.random.int(0, 1), true);
 		animation.finishCallback = function(name) kill();
