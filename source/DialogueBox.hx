@@ -252,7 +252,6 @@ class DialogueBox extends FlxSpriteGroup
 			isEnding = true;
 			stopspamming = true;
 			remove(dialogue);
-			dialogueStarted = false;
 			endinstantly();
 		}
 
@@ -296,6 +295,7 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			isPixel = false;
 			isEpiphany = false;
+			dialogueStarted = false;
 			finishThing();
 			kill();
 		});
