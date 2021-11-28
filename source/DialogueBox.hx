@@ -272,6 +272,7 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		canSkip = false;
 		isEnding = true;
+		swagDialogue.skip();
 		dialogueList.remove(dialogueList[0]);
 
 		if (FlxG.sound.music != null)
