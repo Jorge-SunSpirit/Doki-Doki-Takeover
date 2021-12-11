@@ -129,6 +129,7 @@ class DownscrollOption extends Option
 	public override function press():Bool
 	{
 		FlxG.save.data.downscroll = !FlxG.save.data.downscroll;
+		FlxG.save.data.downScroll = FlxG.save.data.downscroll;
 		display = updateDisplay();
 		return true;
 	}
@@ -150,6 +151,7 @@ class GhostTapOption extends Option
 	public override function press():Bool
 	{
 		FlxG.save.data.ghost = !FlxG.save.data.ghost;
+		FlxG.save.data.ghostTapping = FlxG.save.data.ghost;
 		display = updateDisplay();
 		return true;
 	}
@@ -234,6 +236,7 @@ class ResetButtonOption extends Option
 	public override function press():Bool
 	{
 		FlxG.save.data.resetButton = !FlxG.save.data.resetButton;
+		FlxG.save.data.noReset = !FlxG.save.data.resetButton;
 		display = updateDisplay();
 		return true;
 	}
@@ -338,6 +341,7 @@ class FPSOption extends Option
 	public override function press():Bool
 	{
 		FlxG.save.data.fps = !FlxG.save.data.fps;
+		FlxG.save.data.showFPS = FlxG.save.data.fps;
 		(cast(Lib.current.getChildAt(0), Main)).toggleFPS(FlxG.save.data.fps);
 		display = updateDisplay();
 		return true;
@@ -378,27 +382,28 @@ class FPSCapOption extends Option
 
 	override function right():Bool
 	{
-		if (FlxG.save.data.fpsCap >= 290)
+		if (FlxG.save.data.fpsCap >= 240)
 		{
-			FlxG.save.data.fpsCap = 290;
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(290);
+			FlxG.save.data.fpsCap = 240;
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
 		}
 		else
 			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap + 10;
 		(cast(Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
+		FlxG.save.data.framerate = FlxG.save.data.fpsCap;
 		return true;
 	}
 
 	override function left():Bool
 	{
-		if (FlxG.save.data.fpsCap > 290)
-			FlxG.save.data.fpsCap = 290;
+		if (FlxG.save.data.fpsCap > 240)
+			FlxG.save.data.fpsCap = 240;
 		else if (FlxG.save.data.fpsCap < 60)
 			FlxG.save.data.fpsCap = Application.current.window.displayMode.refreshRate;
 		else
 			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap - 10;
 				(cast(Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
-
+		FlxG.save.data.framerate = FlxG.save.data.fpsCap;
 		return true;
 	}
 }
@@ -1043,6 +1048,7 @@ class NoteSplashToggle extends Option
 	public override function press():Bool
 	{
 		FlxG.save.data.noteSplash = !FlxG.save.data.noteSplash;
+		FlxG.save.data.noteSplashes = FlxG.save.data.noteSplash;
 		display = updateDisplay();
 		return true;
 	}

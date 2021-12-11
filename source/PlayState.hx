@@ -317,9 +317,6 @@ class PlayState extends MusicBeatState
 		if (SONG.noteStyle != null)
 			isPixelUI = SONG.noteStyle.startsWith('pixel');
 
-		if (FlxG.save.data.fpsCap > 290)
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(800);
-
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
@@ -2091,8 +2088,8 @@ class PlayState extends MusicBeatState
 		else
 			FlxG.save.data.botplay = false;
 
-		if (FlxG.save.data.fpsCap > 290)
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(290);
+		if (FlxG.save.data.fpsCap > 240)
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
 		#if FEATURE_LUAMODCHART
 		if (luaModchart != null)
 		{
@@ -4188,8 +4185,8 @@ class PlayState extends MusicBeatState
 		else
 			FlxG.save.data.botplay = false;
 
-		if (FlxG.save.data.fpsCap > 290)
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(290);
+		if (FlxG.save.data.fpsCap > 240)
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
 
 		#if FEATURE_LUAMODCHART
 		if (luaModchart != null)

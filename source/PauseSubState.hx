@@ -298,8 +298,8 @@ class PauseSubState extends MusicBeatSubstate
 						PlayState.luaModchart = null;
 					}
 					#end
-					if (FlxG.save.data.fpsCap > 290)
-						(cast(Lib.current.getChildAt(0), Main)).setFPSCap(290);
+					if (FlxG.save.data.fpsCap > 240)
+						(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
 
 					if (PlayState.isStoryMode)
 						FlxG.switchState(new DokiStoryState());
