@@ -1076,6 +1076,6 @@ class MillisecondOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return LangUtil.getString('optMillisecond') + ' ' + (FlxG.save.data.noteSplash ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+		return LangUtil.getString('optMillisecond') + ' ' + (FlxG.save.data.millisecond ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
