@@ -125,6 +125,11 @@ class KadeEngineData
 		if (FlxG.save.data.noteSplash == null)
 			FlxG.save.data.noteSplash = true;
 
+		if (FlxG.save.data.millisecond == null)
+			FlxG.save.data.millisecond = false;
+
+		psychCompat();
+
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
 		KeyBinds.gamepad = gamepad != null;
@@ -134,5 +139,45 @@ class KadeEngineData
 		Main.watermarks = FlxG.save.data.watermark;
 
 		(cast(Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
+	}
+
+	// Psych Engine cross-compatibility
+	public static function psychCompat()
+	{
+		// Framerate
+		if (FlxG.save.data.framerate == null)
+			FlxG.save.data.framerate = FlxG.save.data.fpsCap;
+		else
+			FlxG.save.data.fpsCap = FlxG.save.data.framerate;
+
+		// FPS Counter
+		if (FlxG.save.data.showFPS == null)
+			FlxG.save.data.showFPS = FlxG.save.data.fps;
+		else
+			FlxG.save.data.fps = FlxG.save.data.showFPS;
+
+		// Downscroll
+		if (FlxG.save.data.downScroll == null)
+			FlxG.save.data.downScroll = FlxG.save.data.downscroll;
+		else
+			FlxG.save.data.downscroll = FlxG.save.data.downScroll;
+
+		// Ghost Tapping
+		if (FlxG.save.data.ghostTapping == null)
+			FlxG.save.data.ghostTapping = FlxG.save.data.ghost;
+		else
+			FlxG.save.data.ghost = FlxG.save.data.ghostTapping;
+
+		// Reset Button
+		if (FlxG.save.data.noReset == null)
+			FlxG.save.data.noReset = !FlxG.save.data.resetButton;
+		else
+			FlxG.save.data.resetButton = !FlxG.save.data.noReset;
+
+		// Note Splashes
+		if (FlxG.save.data.noteSplashes == null)
+			FlxG.save.data.noteSplashes = FlxG.save.data.noteSplash;
+		else
+			FlxG.save.data.noteSplash = FlxG.save.data.noteSplashes;
 	}
 }

@@ -62,6 +62,7 @@ optGameJolt::Game Jolt Integration
 optMirrorMode::Mirror Mode
 optHitSound::Hit Sounds
 optNoteSplash::Note Splashes
+optMillisecond::Display Note Timing
 // DESCRIPTION
 descAddOffset::Adiciona valor ao offset global, por música.
 descKeyBindings::Muda as teclas de cada seta.
@@ -111,6 +112,7 @@ descMirrorMode::Swap your notes with the opponent's notes!
 descHitSound::Play a sound whenever you press a note.
 descHitSoundControl::Current Hit Sound volume
 descNoteSplash::Adds a splash to any sick notes that you hit!
+descMillisecond::Shows the timing of the note that you hit in milliseconds.
 // UNLOCK POPUPS
 msgMoni::"Your Reality" Desbloqueado!{NL}Acesse a música no menu de Freeplay.
 msgSayo::As músicas de Sayori agora estão disponíveis no menu de Freeplay.

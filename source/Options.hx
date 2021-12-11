@@ -1052,3 +1052,24 @@ class NoteSplashToggle extends Option
 		return LangUtil.getString('optNoteSplash') + ' ' + (FlxG.save.data.noteSplash ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
+
+class MillisecondOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.millisecond = !FlxG.save.data.millisecond;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('optMillisecond') + ' ' + (FlxG.save.data.noteSplash ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
