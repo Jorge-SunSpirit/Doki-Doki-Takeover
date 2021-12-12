@@ -1641,8 +1641,17 @@ class PlayState extends MusicBeatState
 		healthBarBG.scrollFactor.set();
 		add(healthBarBG);
 
-		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
-			'health', 0, 2);
+		if (FlxG.save.data.mirrorMode)
+		{
+			healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, LEFT_TO_RIGHT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
+				'health', 0, 2);
+		}
+		else
+		{
+			healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
+				'health', 0, 2);
+		}
+
 		healthBar.scrollFactor.set();
 		healthBar.createFilledBar(0xFFFF0000, 0xFF66FF33);
 		// healthBar
@@ -2088,8 +2097,8 @@ class PlayState extends MusicBeatState
 		else
 			FlxG.save.data.botplay = false;
 
-		if (FlxG.save.data.fpsCap > 330)
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(330);
+		if (FlxG.save.data.fpsCap > 240)
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
 		#if FEATURE_LUAMODCHART
 		if (luaModchart != null)
 		{
@@ -3047,7 +3056,24 @@ class PlayState extends MusicBeatState
 				default:
 					babyArrow.x += 98;
 			}
-			babyArrow.x += ((FlxG.width / 2) * player);
+
+			if (FlxG.save.data.mirrorMode)
+			{
+				switch (player)
+				{
+					case 0:
+						babyArrow.x += ((FlxG.width / 2) * 1);
+					case 1:
+						if (FlxG.save.data.middleScroll)
+							babyArrow.x += ((FlxG.width / 2) * player);
+						else
+							babyArrow.x += ((FlxG.width / 2) * 0);
+				}
+			}
+			else
+			{
+				babyArrow.x += ((FlxG.width / 2) * player);
+			}
 
 			if (FlxG.save.data.middleScroll && !executeModchart)
 				babyArrow.x -= 320;
@@ -3352,21 +3378,46 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
-		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
+		// HUGE SHOUTOUT TO HOLOFUNK DEV TEAM, I APPRECIATE THEM SO MUCH
+
+		if (!FlxG.save.data.mirrorMode)
+		{
+			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
+			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
+		}
+		else
+		{
+			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01) - iconOffset);
+			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
+		}
 
 		if (health > 2)
 			health = 2;
 
-		if (healthBar.percent < 20)
-			iconP1.animation.curAnim.curFrame = 1;
-		else
-			iconP1.animation.curAnim.curFrame = 0;
+		if (!FlxG.save.data.mirrorMode)
+		{
+			if (healthBar.percent < 20)
+				iconP1.animation.curAnim.curFrame = 1;
+			else
+				iconP1.animation.curAnim.curFrame = 0;
 
-		if (healthBar.percent > 80)
-			iconP2.animation.curAnim.curFrame = 1;
+			if (healthBar.percent > 80)
+				iconP2.animation.curAnim.curFrame = 1;
+			else
+				iconP2.animation.curAnim.curFrame = 0;
+		}
 		else
-			iconP2.animation.curAnim.curFrame = 0;
+		{
+			if (healthBar.percent < 20)
+				iconP2.animation.curAnim.curFrame = 1;
+			else
+				iconP2.animation.curAnim.curFrame = 0;
+
+			if (healthBar.percent > 80)
+				iconP1.animation.curAnim.curFrame = 1;
+			else
+				iconP1.animation.curAnim.curFrame = 0;
+		}
 
 		/* if (FlxG.keys.justPressed.NINE)
 			FlxG.switchState(new Charting()); */
@@ -3883,7 +3934,7 @@ class PlayState extends MusicBeatState
 
 					if (SONG.notes[Math.floor(curStep / 16)] != null)
 					{
-						if (SONG.notes[Math.floor(curStep / 16)].altAnim)
+						if (SONG.notes[Math.floor(curStep / 16)].altAnim && !FlxG.save.data.mirrorMode)
 						{
 							switch (curSong.toLowerCase())
 							{
@@ -3912,7 +3963,7 @@ class PlayState extends MusicBeatState
 						}
 					}
 
-					if (daNote.noteType == 1)
+					if (daNote.noteType == 1 && !FlxG.save.data.mirrorMode)
 					{
 						switch (curSong.toLowerCase())
 						{
@@ -3924,8 +3975,6 @@ class PlayState extends MusicBeatState
 											spirit.playAnim('singUP', true);
 										case 3:
 											spirit.playAnim('singRIGHT', true);
-										case 4:
-											spirit.playAnim('idle', true);
 										case 1:
 											spirit.playAnim('singDOWN', true);
 										case 0:
@@ -3949,15 +3998,41 @@ class PlayState extends MusicBeatState
 									switch (Math.abs(daNote.noteData))
 									{
 										case 2:
-											dad.playAnim('singUP' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singUP' + altAnim, true);
+											}
+											else
+											{
+												dad.playAnim('singUP' + altAnim, true);
+											}
 										case 3:
-											dad.playAnim('singRIGHT' + altAnim, true);
-										case 4:
-											dad.playAnim('idle' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singRIGHT' + altAnim, true);
+											}
+											else
+											{
+												dad.playAnim('singRIGHT' + altAnim, true);
+											}
 										case 1:
-											dad.playAnim('singDOWN' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singDOWN', true);
+											}
+											else
+											{
+												dad.playAnim('singDOWN' + altAnim, true);
+											}
 										case 0:
-											dad.playAnim('singLEFT' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singLEFT', true);
+											}
+											else
+											{
+												dad.playAnim('singLEFT' + altAnim, true);
+											}
 									}
 								}
 							}
@@ -3968,15 +4043,41 @@ class PlayState extends MusicBeatState
 									switch (Math.abs(daNote.noteData))
 									{
 										case 2:
-											dad.playAnim('singUP' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singUP' + altAnim, true);
+											}
+											else
+											{
+												dad.playAnim('singUP' + altAnim, true);
+											}
 										case 3:
-											dad.playAnim('singRIGHT' + altAnim, true);
-										case 4:
-											dad.playAnim('idle' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singRIGHT' + altAnim, true);
+											}
+											else
+											{
+												dad.playAnim('singRIGHT' + altAnim, true);
+											}
 										case 1:
-											dad.playAnim('singDOWN' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singDOWN', true);
+											}
+											else
+											{
+												dad.playAnim('singDOWN' + altAnim, true);
+											}
 										case 0:
-											dad.playAnim('singLEFT' + altAnim, true);
+											if (FlxG.save.data.mirrorMode)
+											{
+												boyfriend.playAnim('singLEFT', true);
+											}
+											else
+											{
+												dad.playAnim('singLEFT' + altAnim, true);
+											}
 									}
 								}
 							}
@@ -3987,15 +4088,41 @@ class PlayState extends MusicBeatState
 								switch (Math.abs(daNote.noteData))
 								{
 									case 2:
-										dad.playAnim('singUP' + altAnim, true);
+										if (FlxG.save.data.mirrorMode)
+										{
+											boyfriend.playAnim('singUP' + altAnim, true);
+										}
+										else
+										{
+											dad.playAnim('singUP' + altAnim, true);
+										}
 									case 3:
-										dad.playAnim('singRIGHT' + altAnim, true);
-									case 4:
-										dad.playAnim('idle' + altAnim, true);
+										if (FlxG.save.data.mirrorMode)
+										{
+											boyfriend.playAnim('singRIGHT' + altAnim, true);
+										}
+										else
+										{
+											dad.playAnim('singRIGHT' + altAnim, true);
+										}
 									case 1:
-										dad.playAnim('singDOWN' + altAnim, true);
+										if (FlxG.save.data.mirrorMode)
+										{
+											boyfriend.playAnim('singDOWN', true);
+										}
+										else
+										{
+											dad.playAnim('singDOWN' + altAnim, true);
+										}
 									case 0:
-										dad.playAnim('singLEFT' + altAnim, true);
+										if (FlxG.save.data.mirrorMode)
+										{
+											boyfriend.playAnim('singLEFT', true);
+										}
+										else
+										{
+											dad.playAnim('singLEFT' + altAnim, true);
+										}
 								}
 							}
 					}
@@ -4021,7 +4148,14 @@ class PlayState extends MusicBeatState
 						luaModchart.executeState('playerTwoSing', [Math.abs(daNote.noteData), Conductor.songPosition]);
 					#end
 
-					dad.holdTimer = 0;
+					if (FlxG.save.data.mirrorMode)
+					{
+						boyfriend.holdTimer = 0;
+					}
+					else
+					{
+						dad.holdTimer = 0;
+					}
 
 					if (SONG.needsVoices)
 						vocals.volume = 1;
@@ -4185,8 +4319,8 @@ class PlayState extends MusicBeatState
 		else
 			FlxG.save.data.botplay = false;
 
-		if (FlxG.save.data.fpsCap > 330)
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(330);
+		if (FlxG.save.data.fpsCap > 240)
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
 
 		#if FEATURE_LUAMODCHART
 		if (luaModchart != null)
@@ -4715,7 +4849,14 @@ class PlayState extends MusicBeatState
 		// PRESSES, check for note hits
 		if (pressArray.contains(true) && /*!boyfriend.stunned && */ generatedMusic)
 		{
-			boyfriend.holdTimer = 0;
+			if (!FlxG.save.data.mirrorMode)
+			{
+				boyfriend.holdTimer = 0;
+			}
+			else
+			{
+				dad.holdTimer = 0;
+			}
 
 			var possibleNotes:Array<Note> = []; // notes that can be hit
 			var directionList:Array<Int> = []; // directions that can be hit
@@ -4827,7 +4968,14 @@ class PlayState extends MusicBeatState
 							if (daNote.noteType != 2)
 							{
 								goodNoteHit(daNote);
-								boyfriend.holdTimer = daNote.sustainLength;
+								if (!FlxG.save.data.mirrorMode)
+								{
+									boyfriend.holdTimer = daNote.sustainLength;
+								}
+								else
+								{
+									dad.holdTimer = daNote.sustainLength;
+								}
 							}
 						}
 					}
@@ -4836,17 +4984,34 @@ class PlayState extends MusicBeatState
 						if (daNote.noteType != 2)
 						{
 							goodNoteHit(daNote);
-							boyfriend.holdTimer = daNote.sustainLength;
+							if (!FlxG.save.data.mirrorMode)
+							{
+								boyfriend.holdTimer = daNote.sustainLength;
+							}
+							else
+							{
+								dad.holdTimer = daNote.sustainLength;
+							}
 						}
 					}
 				}
 			}
 		});
 
-		if (boyfriend.holdTimer > Conductor.stepCrochet * 0.004 && (!holdArray.contains(true) || FlxG.save.data.botplay))
+		if (boyfriend.holdTimer > Conductor.stepCrochet * 0.004
+			&& (!holdArray.contains(true) || FlxG.save.data.botplay)
+			&& !FlxG.save.data.mirrorMode)
 		{
 			if (boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
 				boyfriend.dance();
+		}
+
+		if (dad.holdTimer > Conductor.stepCrochet * 0.004
+			&& (!holdArray.contains(true) || FlxG.save.data.botplay)
+			&& FlxG.save.data.mirrorMode)
+		{
+			if (dad.animation.curAnim.name.startsWith('sing'))
+				dad.dance();
 		}
 
 		playerStrums.forEach(function(spr:FlxSprite)
@@ -4891,16 +5056,19 @@ class PlayState extends MusicBeatState
 			// FlxG.sound.play(Paths.sound('missnote1'), 1, false);
 			// FlxG.log.add('played imss note');
 
-			switch (direction)
+			if (!FlxG.save.data.mirrorMode)
 			{
-				case 0:
-					boyfriend.playAnim('singLEFTmiss', true);
-				case 1:
-					boyfriend.playAnim('singDOWNmiss', true);
-				case 2:
-					boyfriend.playAnim('singUPmiss', true);
-				case 3:
-					boyfriend.playAnim('singRIGHTmiss', true);
+				switch (direction)
+				{
+					case 0:
+						boyfriend.playAnim('singLEFTmiss', true);
+					case 1:
+						boyfriend.playAnim('singDOWNmiss', true);
+					case 2:
+						boyfriend.playAnim('singUPmiss', true);
+					case 3:
+						boyfriend.playAnim('singRIGHTmiss', true);
+				}
 			}
 
 			#if FEATURE_LUAMODCHART
@@ -5037,16 +5205,129 @@ class PlayState extends MusicBeatState
 			else
 				totalNotesHit += 1;
 
-			switch (note.noteData)
+			if (!FlxG.save.data.mirrorMode)
 			{
-				case 2:
-					boyfriend.playAnim('singUP', true);
-				case 3:
-					boyfriend.playAnim('singRIGHT', true);
-				case 1:
-					boyfriend.playAnim('singDOWN', true);
-				case 0:
-					boyfriend.playAnim('singLEFT', true);
+				switch (note.noteData)
+				{
+					case 2:
+						boyfriend.playAnim('singUP', true);
+					case 3:
+						boyfriend.playAnim('singRIGHT', true);
+					case 1:
+						boyfriend.playAnim('singDOWN', true);
+					case 0:
+						boyfriend.playAnim('singLEFT', true);
+				}
+			}
+			else
+			{
+				if (curSong.toLowerCase() != "dual demise"
+					&& (!SONG.notes[Math.floor(curStep / 16)].altAnim)
+					|| curSong.toLowerCase() != "dual demise"
+					&& (note.noteType != 1)
+					|| (curSong.toLowerCase() == "dual demise" && !SONG.notes[Math.floor(curStep / 16)].altAnim))
+				{
+					switch (note.noteData)
+					{
+						case 2:
+							trace('not alt anim');
+							dad.playAnim('singUP', true);
+						case 3:
+							trace('not alt anim');
+							dad.playAnim('singRIGHT', true);
+						case 1:
+							trace('not alt anim');
+							dad.playAnim('singDOWN', true);
+						case 0:
+							trace('not alt anim');
+							dad.playAnim('singLEFT', true);
+					}
+				}
+
+				if (SONG.notes[Math.floor(curStep / 16)] != null)
+				{
+					if (SONG.notes[Math.floor(curStep / 16)].altAnim)
+					{
+						switch (curSong.toLowerCase())
+						{
+							case "dual demise":
+								{
+									switch (note.noteData)
+									{
+										case 2:
+											spirit.playAnim('singUP', true);
+										case 3:
+											spirit.playAnim('singRIGHT', true);
+										case 4:
+											spirit.playAnim('idle', true);
+										case 1:
+											spirit.playAnim('singDOWN', true);
+										case 0:
+											spirit.playAnim('singLEFT', true);
+									}
+
+									if (dad.animation.curAnim.name.startsWith('sing'))
+										dad.dance();
+								}
+							default:
+								switch (note.noteData)
+								{
+									case 2:
+										trace('hueh');
+										dad.playAnim('singUP-alt', true);
+									case 3:
+										trace('hueh');
+										dad.playAnim('singRIGHT-alt', true);
+									case 1:
+										trace('hueh');
+										dad.playAnim('singDOWN-alt', true);
+									case 0:
+										trace('hueh');
+										dad.playAnim('singLEFT-alt', true);
+								}
+						}
+					}
+				}
+				if (note.noteType == 1)
+				{
+					switch (curSong.toLowerCase())
+					{
+						case "dual demise":
+							{
+								switch (note.noteData)
+								{
+									case 2:
+										spirit.playAnim('singUP', true);
+									case 3:
+										spirit.playAnim('singRIGHT', true);
+									case 1:
+										spirit.playAnim('singDOWN', true);
+									case 0:
+										spirit.playAnim('singLEFT', true);
+								}
+
+								if (dad.animation.curAnim.name.startsWith('sing'))
+									dad.dance();
+							}
+						default:
+							altAnim = '-alt';
+							switch (note.noteData)
+							{
+								case 2:
+									trace('hueh');
+									dad.playAnim('singUP-alt', true);
+								case 3:
+									trace('hueh');
+									dad.playAnim('singRIGHT-alt', true);
+								case 1:
+									trace('hueh');
+									dad.playAnim('singDOWN-alt', true);
+								case 0:
+									trace('hueh');
+									dad.playAnim('singLEFT-alt', true);
+							}
+					}
+				}
 			}
 
 			#if FEATURE_LUAMODCHART
@@ -5348,9 +5629,15 @@ class PlayState extends MusicBeatState
 			{
 				if (!boyfriend.animation.curAnim.name.startsWith('sing'))
 					boyfriend.dance();
-				if (!dad.animation.curAnim.name.startsWith('sing'))
+				if (!dad.animation.curAnim.name.startsWith('sing')
+					|| (FlxG.save.data.mirrorMode && dad.animation.curAnim.name.startsWith('sing') && dad.animation.curAnim.finished))
 					dad.dance(SONG.notes[Math.floor(curStep / 16)].altAnim);
-				if (curSong.toLowerCase() == 'dual demise' && !spirit.animation.curAnim.name.startsWith('sing'))
+				if (curSong.toLowerCase() == 'dual demise'
+					&& !spirit.animation.curAnim.name.startsWith('sing')
+					|| (curSong.toLowerCase() == 'dual demise'
+						&& FlxG.save.data.mirrorMode
+						&& spirit.animation.curAnim.name.startsWith('sing')
+						&& spirit.animation.curAnim.finished))
 					spirit.dance();
 			}
 			else if (dad.curCharacter == 'sayori' && !dad.animation.curAnim.name.startsWith('sing'))

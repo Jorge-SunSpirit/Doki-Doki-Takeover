@@ -540,22 +540,45 @@ class Character extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		if (!isPlayer)
+		// HUGE SHOUTOUT TO HOLOFUNK DEV TEAM, I APPRECIATE THEM SO MUCH
+
+		if (FlxG.save.data.mirrorMode)
 		{
-			if (animation.curAnim.name.startsWith('sing'))
+			if (isPlayer)
 			{
-				holdTimer += elapsed;
+				if (animation.curAnim.name.startsWith('sing'))
+				{
+					holdTimer += elapsed;
+				}
+
+				var dadVar:Float = 6;
+
+				if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
+				{
+					dance();
+					holdTimer = 0;
+				}
 			}
-
-			var dadVar:Float = 6;
-
-			if (curCharacter == 'yuri-crazy')
-				dadVar = 4;
-
-			if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
+		}
+		else
+		{
+			if (!isPlayer)
 			{
-				dance();
-				holdTimer = 0;
+				if (animation.curAnim.name.startsWith('sing'))
+				{
+					holdTimer += elapsed;
+				}
+
+				var dadVar:Float = 6;
+
+				if (curCharacter == 'yuri-crazy')
+					dadVar = 4;
+
+				if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
+				{
+					dance();
+					holdTimer = 0;
+				}
 			}
 		}
 
