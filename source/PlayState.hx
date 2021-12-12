@@ -4319,8 +4319,8 @@ class PlayState extends MusicBeatState
 		else
 			FlxG.save.data.botplay = false;
 
-		if (FlxG.save.data.fpsCap > 240)
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
+		if (FlxG.save.data.fpsCap > 330)
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(330);
 
 		#if FEATURE_LUAMODCHART
 		if (luaModchart != null)
