@@ -382,10 +382,10 @@ class FPSCapOption extends Option
 
 	override function right():Bool
 	{
-		if (FlxG.save.data.fpsCap >= 240)
+		if (FlxG.save.data.fpsCap >= 330)
 		{
-			FlxG.save.data.fpsCap = 240;
-			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(240);
+			FlxG.save.data.fpsCap = 330;
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(330);
 		}
 		else
 			FlxG.save.data.fpsCap = FlxG.save.data.fpsCap + 10;
@@ -396,8 +396,8 @@ class FPSCapOption extends Option
 
 	override function left():Bool
 	{
-		if (FlxG.save.data.fpsCap > 240)
-			FlxG.save.data.fpsCap = 240;
+		if (FlxG.save.data.fpsCap > 330)
+			FlxG.save.data.fpsCap = 330;
 		else if (FlxG.save.data.fpsCap < 60)
 			FlxG.save.data.fpsCap = Application.current.window.displayMode.refreshRate;
 		else
