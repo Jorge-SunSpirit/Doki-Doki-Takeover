@@ -326,15 +326,9 @@ class GameJoltLogin extends MusicBeatSubstate
 		add(loginTexts);
 
 		usernameText = new FlxText(0, 125, 300, "Username:");
-		usernameText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
-		usernameText.y += LangUtil.getFontOffset('riffic');
-		usernameText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		usernameText.antialiasing = true;
 
 		tokenText = new FlxText(0, 225, 300, "Token:");
-		tokenText.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
-		tokenText.y += LangUtil.getFontOffset('riffic');
-		tokenText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		tokenText.antialiasing = true;
 
 		loginTexts.add(usernameText);
@@ -343,6 +337,9 @@ class GameJoltLogin extends MusicBeatSubstate
 		{
 			item.screenCenter(X);
 			item.x += baseX;
+			item.setFormat(LangUtil.getFont('riffic'), 30, FlxColor.WHITE, CENTER);
+			item.y += LangUtil.getFontOffset('riffic');
+			item.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 		});
 
 		loginBoxes = new FlxTypedGroup<FlxUIInputText>(2);
@@ -419,8 +416,8 @@ class GameJoltLogin extends MusicBeatSubstate
 
 		if (GameJoltAPI.getStatus())
 		{
-			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true), 40);
-			// username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
+			username = new FlxText(0, 75, 0, "Signed in as:\n" + GameJoltAPI.getUserInfo(true) + '\n', 40);
+			username.setFormat(LangUtil.getFont('riffic'), 40, FlxColor.WHITE, CENTER);
 			username.alignment = CENTER;
 			username.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
 			username.antialiasing = true;
@@ -474,13 +471,7 @@ class GameJoltLogin extends MusicBeatSubstate
 
 	public static function restart()
 	{
-		#if FEATURE_FILESYSTEM
-		Sys.exit(0);
-		#else
-		FlxTransitionableState.skipNextTransOut = true;
-		FlxTransitionableState.skipNextTransIn = true;
-		FlxG.switchState(new CrashState());
-		#end
+		CoolUtil.crash();
 	}
 
 	function openLink(url:String)

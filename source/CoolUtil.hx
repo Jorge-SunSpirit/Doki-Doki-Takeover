@@ -106,4 +106,15 @@ class CoolUtil
 	{
 		return a + camLerpShit(ratio) * (b - a);
 	}
+
+	public static function crash()
+	{
+		#if FEATURE_FILESYSTEM
+		Sys.exit(0);
+		#else
+		FlxTransitionableState.skipNextTransOut = true;
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxG.switchState(new CrashState());
+		#end
+	}
 }

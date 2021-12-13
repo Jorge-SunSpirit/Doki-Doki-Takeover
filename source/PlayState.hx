@@ -4302,15 +4302,7 @@ class PlayState extends MusicBeatState
 		deathCounter = 0;
 
 		if (curSong.toLowerCase() == 'obsession' && isStoryMode)
-		{
-			#if FEATURE_FILESYSTEM
-			Sys.exit(0);
-			#else
-			FlxTransitionableState.skipNextTransOut = true;
-			FlxTransitionableState.skipNextTransIn = true;
-			FlxG.switchState(new CrashState());
-			#end
-		}
+			CoolUtil.crash();
 
 		midsongcutscene = false;
 

@@ -543,13 +543,7 @@ class DialogueBox extends FlxSpriteGroup
 					swagDialogue.completeCallback = enddialogue;
 
 				case 'crash':
-					#if FEATURE_FILESYSTEM
-					Sys.exit(0);
-					#else
-					FlxTransitionableState.skipNextTransOut = true;
-					FlxTransitionableState.skipNextTransIn = true;
-					FlxG.switchState(new CrashState());
-					#end
+					CoolUtil.crash();
 				case 'showbackgroundimage':
 					backgroundImage.loadGraphic(Paths.image('dialogue/bgs/' + dialogueList[0], 'doki'));
 					enddialogue();
@@ -1203,14 +1197,7 @@ class DialogueBox extends FlxSpriteGroup
 					enddialogue();
 
 				case 'crash':
-					#if FEATURE_FILESYSTEM
-					Sys.exit(0);
-					#else
-					FlxTransitionableState.skipNextTransOut = true;
-					FlxTransitionableState.skipNextTransIn = true;
-					FlxG.switchState(new CrashState());
-					#end
-
+					CoolUtil.crash();
 				case 'showbackgroundimage':
 					backgroundImage.loadGraphic(Paths.image('dialogue/bgs/' + dialogueList[0], 'doki'));
 					enddialogue();

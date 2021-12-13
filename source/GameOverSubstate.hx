@@ -115,13 +115,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		{
 			new FlxTimer().start(.5, function(timer:FlxTimer)
 			{
-				#if FEATURE_FILESYSTEM
-				Sys.exit(0);
-				#else
-				FlxTransitionableState.skipNextTransOut = true;
-				FlxTransitionableState.skipNextTransIn = true;
-				FlxG.switchState(new CrashState());
-				#end
+				CoolUtil.crash();
 			});
 		}
 

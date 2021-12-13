@@ -948,15 +948,12 @@ class ResetSave extends Option
 
 		FlxG.save.flush();
 
-		#if FEATURE_FILESYSTEM
-		Sys.exit(0);
-		#else
+		#if !FEATURE_FILESYSTEM
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
-		FlxTransitionableState.skipNextTransOut = true;
-		FlxTransitionableState.skipNextTransIn = true;
-		FlxG.switchState(new CrashState());
 		#end
+
+		CoolUtil.crash();
 
 		confirm = false;
 		display = updateDisplay();
