@@ -4,6 +4,7 @@ import flixel.FlxG;
 import openfl.display.BitmapData;
 import lime.utils.Assets;
 import flixel.graphics.FlxGraphic;
+import flixel.addons.transition.FlxTransitionableState;
 #if FEATURE_FILESYSTEM
 import sys.io.Process;
 import sys.FileSystem;
