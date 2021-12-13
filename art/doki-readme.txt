@@ -92,12 +92,13 @@ Ash237 [Coding Help] - https://gamebanana.com/members/1813477
 Lumitic [Coding Help] - https://twitter.com/PeacefulLuma
 SpaceMonkey841 [Week 6 GF-less Speakers] - https://gamebanana.com/members/1763051
 Zeexel [Coding Help] - https://twitter.com/Zeexel32
+bbpanzu [Note Style Swap Mid-Song] - https://twitter.com/bbsub3
+Team Holofunk [Mirror Mode Animations] - https://gamebanana.com/mods/41250
 
 ===============
 SPECIAL THANKS
 ===============
 AfroZer0
-bbpanzu
 Bijuu Mike
 Blantados
 Brody Foxx
