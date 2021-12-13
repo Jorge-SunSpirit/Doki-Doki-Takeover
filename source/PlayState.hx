@@ -5214,9 +5214,6 @@ class PlayState extends MusicBeatState
 			else
 			{
 				if (curSong.toLowerCase() != "dual demise"
-					&& (!SONG.notes[Math.floor(curStep / 16)].altAnim)
-					|| curSong.toLowerCase() != "dual demise"
-					&& (note.noteType != 1)
 					|| (curSong.toLowerCase() == "dual demise" && !SONG.notes[Math.floor(curStep / 16)].altAnim))
 				{
 					switch (note.noteData)
