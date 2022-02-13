@@ -47,7 +47,7 @@ Jorge_SunSpirit - https://twitter.com/Jorge_SunSpirit
 M&M - https://twitter.com/ActualMandM
 
 Charting:
-CelShader - https://twitter.com/CELSHDR
+FruityDaLei - https://twitter.com/FruityDaLei
 Cval - https://twitter.com/cval_brown
 Joe
 MtH - https://twitter.com/emmnyaa
@@ -73,10 +73,10 @@ Loganne Digma [Yuri Singing/Speaking Voice] - https://twitter.com/Loganne_Digma
 Esther Christo [Monika Singing/Speaking Voice] - https://twitter.com/carimellevo
 
 Music Director:
-CelShader - https://twitter.com/CELSHDR
+FruityDaLei - https://twitter.com/FruityDaLei
 
 Musicians:
-CelShader - https://twitter.com/CELSHDR
+FruityDaLei - https://twitter.com/FruityDaLei
 ClemO - https://twitter.com/ClemO___O
 HighPoweredKeyz - https://twitter.com/HighPoweredArt
 Kallionic - https://youtube.com/kallionic
