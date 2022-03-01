@@ -97,9 +97,9 @@
 	<haxelib name="linc_luajit" if="windows" unless="hl"/>
 
 	<!-- https://github.com/TentaRJ/GameJolt-FNF-Integration -->
-	<haxelib name="tentools" />
-	<haxelib name="systools" />
-	<ndll name="systools" haxelib="systools" />
+	<haxelib name="tentools" unless="html5"/>
+	<haxelib name="systools" unless="html5"/>
+	<ndll name="systools" haxelib="systools" unless="html5"/>
 
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
 
@@ -171,6 +171,6 @@
 	<!-- Defines whether OBS or other recording software can be detected. Only works on Windows. -->
 	<haxedef name="FEATURE_OBS" if="windows" />
 	<!-- Defines whether Game Jolt integration is enabled. -->
-	<haxedef name="FEATURE_GAMEJOLT" />
+	<haxedef name="FEATURE_GAMEJOLT" unless="html5"/>
 
 </project>
