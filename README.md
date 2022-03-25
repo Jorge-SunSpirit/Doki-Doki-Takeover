@@ -14,14 +14,14 @@ DDLC+ Links: **[DDLC+ Official Website](http://ddlc.plus) ⋅ [Steam page](https
 ### Doki Doki Takeover
 - [Jorge_SunSpirit](https://twitter.com/Jorge_SunSpirit) and [M&M](https://twitter.com/ActualMandM) - Programming
 - [SirDusterBuster](https://twitter.com/SirDusterBuster) and [TokyoGalaxyOG](https://twitter.com/TokyoGalaxyOG) - Art
-- [FruityDaLei](https://twitter.com/FruityDaLei), [ClemO](https://twitter.com/ClemO___O), [HighPoweredKeyz](https://twitter.com/HighPoweredArt), [Kallionic](https://youtube.com/kallionic), [kekb](https://www.youtube.com/channel/UCbty7MoajjV1ZbmYz2OtDLw/videos), [Matt$](https://twitter.com/matt_currency), [Saruky](https://twitter.com/Saruky__), [Starrie_blu](https://twitter.com/starrie_blu), [Stardust Tunes](https://twitter.com/StardustTunes), [Tony Astro](https://twitter.com/TonyAstroVEVO) - Music
+- [FruityDaLei](https://twitter.com/FruityDaLei), [Sprunkle](https://twitter.com/Sprunkle2), [HighPoweredKeyz](https://twitter.com/HighPoweredArt), [Kallionic](https://youtube.com/kallionic), [kekb](https://www.youtube.com/channel/UCbty7MoajjV1ZbmYz2OtDLw/videos), [Matt$](https://twitter.com/matt_currency), [Saruky](https://twitter.com/Saruky__), [Starrie_blu](https://twitter.com/starrie_blu), [Stardust Tunes](https://twitter.com/StardustTunes), [Tony Astro](https://twitter.com/TonyAstroVEVO) - Music
 - [Esther Christo, voice of Monika](https://twitter.com/carimellevo)
 - [Miss Beepy, voice of Natsuki](https://twitter.com/MissBeepy)
 - [Loganne Digma, voice of Yuri](https://twitter.com/Loganne_Digma)
 - [Phebe Fabacher, voice of Sayori](https://twitter.com/HarudoriVA)
 - [Sulayre, Spanish translation](https://twitter.com/Sulayre)
 - [SoftTurnip. French translation](https://twitter.com/Ruffles_Savoie)
-- [Clem, Russian Translation](https://twitter.com/ClemO___O)
+- [Sprunkle, Russian Translation](https://twitter.com/Sprunkle2)
 - [CrimiiCrim, Dutch Translation](https://twitter.com/CrimiiCrim)
 - [SouLegal, Brazilian Portuguese Translation](https://twitter.com/nickstwt)
 - [Aizakku, Brazilian Portuguese Translation](https://gamebanana.com/members/1875729)

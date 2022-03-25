@@ -61,7 +61,7 @@ SirDusterBuster - https://twitter.com/SirDusterBuster
 Translation:
 Sulayre [Spanish] - https://twitter.com/Sulayre
 SoftTurnip [French] - https://twitter.com/Ruffles_Savoie
-ClemO [Russian] - https://twitter.com/ClemO___O
+Sprunkle [Russian] - https://twitter.com/Sprunkle2
 CrimiiCrim [Dutch] - https://twitter.com/CrimiiCrim
 SouLegal [Brazilian Portuguese] - https://twitter.com/nickstwt
 Aizakku [Brazilian Portuguese] - https://gamebanana.com/members/1875729
@@ -77,7 +77,7 @@ FruityDaLei - https://twitter.com/FruityDaLei
 
 Musicians:
 FruityDaLei - https://twitter.com/FruityDaLei
-ClemO - https://twitter.com/ClemO___O
+Sprunkle - https://twitter.com/Sprunkle2
 HighPoweredKeyz - https://twitter.com/HighPoweredArt
 Kallionic - https://youtube.com/kallionic
 kekb - https://www.youtube.com/channel/UCbty7MoajjV1ZbmYz2OtDLw/videos
