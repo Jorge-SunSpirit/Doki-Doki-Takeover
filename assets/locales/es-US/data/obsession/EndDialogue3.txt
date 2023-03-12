@@ -1,0 +1,9 @@
+:disableskip:
+:hidedialogue:
+:monika_ahaha:"Ha... ha funcionado!"
+:bf_scared:"..."
+:gf_scared:"..."
+:hideright:
+:all_neutral:"..."
+:all_gasp:"Monika!"
+:crash:

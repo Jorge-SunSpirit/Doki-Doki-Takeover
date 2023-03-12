@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "NEET",
+        "artist": "HighPoweredKeyz & Sprunkle",
+        "icon": "pen",
+        "pause": "protag",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

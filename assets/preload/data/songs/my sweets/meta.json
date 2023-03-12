@@ -1,0 +1,9 @@
+{
+    "song": {
+        "name": "My Sweets",
+        "artist": "Sprunkle",
+        "icon": "pen",
+        "pause": "natsuki",
+        "introDialogue": "IntroDialogue"
+    }
+}

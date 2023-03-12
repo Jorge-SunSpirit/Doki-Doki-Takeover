@@ -1,0 +1,31 @@
+flag	content
+cmnDiff	Difficulty
+cmnEasy	Easy
+cmnNormal	Normal
+cmnHard	Hard
+cmnPB	Personal Best
+cmnScore	Score
+cmnNPS	NPS
+cmnMax	Max
+cmnComboBreak	Combo Breaks
+cmnBreaks	Breaks
+cmnAccuracy	Accuracy
+cmnRating	Rating
+cmnBotplay	Botplay
+cmnClear	Clear
+cmnOn	On
+cmnOff	Off
+cmnYes	Yes
+cmnNo	No
+cmnOffset	Global Offset (Left or Right)
+cmnAddOffset	Song Offset (Left or Right): <X> | Adds an additional offset to this song only.
+cmnCategory	Please select a category.
+cmnPractice	Practice Mode
+cmnLock	Locked
+cmnSpeed	Speed
+cmnCaching	Caching
+cmnLanguage	Language Select
+cmnDisableCaching	(press D to disable next boot)
+cmnCachingFinish	Finished caching!
+cmnWelcome	Welcome to Doki Doki Takeover!<N>This is a sequel to the Monika Full Week mod.<N><N>Have you played Monika Full Week?<N><N>Press Enter for yes, or Escape for no.
+cmnDialogueSkip	Press ESCAPE to skip the dialogue.

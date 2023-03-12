@@ -1,0 +1,137 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Big Monika Idle"
+		},
+		{
+			"offsets": [
+				141,
+				11
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Big Monika Sing Up"
+		},
+		{
+			"offsets": [
+				-22,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Big Monika Sing Right"
+		},
+		{
+			"offsets": [
+				1,
+				-49
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Big Monika Sing Down"
+		},
+		{
+			"offsets": [
+				156,
+				-14
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Big Monika Sing Left"
+		},
+		{
+			"offsets": [
+				141,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "lastNOTE_start",
+			"loop": false,
+			"name": "Big Monika Last Note0"
+		},
+		{
+			"offsets": [
+				280,
+				-8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "lastNOTE_end",
+			"loop": false,
+			"name": "Big Monika Last Note First"
+		},
+		{
+			"offsets": [
+				37,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "Big Monika Retry Start"
+		},
+		{
+			"offsets": [
+				41,
+				-33
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": false,
+			"name": "Big Monika Retry Loop"
+		},
+		{
+			"offsets": [
+				142,
+				-30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "Big Monika Retry End"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Doki_BigMonikaDress_Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bigmonika",
+	"flip_x": false,
+	"healthbar_colors": [
+		140,
+		212,
+		101
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"gameover_character": "bigmonika-dress",
+	"gameover_character_mirror": "bigmonika-dress",
+	"death_sound": "fnf_loss_sfx-bigmonika",
+	"win_sound": "fnf_loss_sfx-bigmonika",
+	"sing_duration": 6,
+	"scale": 0.9
+}

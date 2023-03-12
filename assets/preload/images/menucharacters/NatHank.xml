@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NatHank.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="NatHankMenu0000" x="25" y="25" width="836" height="627" frameX="-19" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0001" x="25" y="25" width="836" height="627" frameX="-19" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0002" x="886" y="25" width="828" height="626" frameX="-29" frameY="-1" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0003" x="886" y="25" width="828" height="626" frameX="-29" frameY="-1" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0004" x="1739" y="25" width="855" height="627" frameX="0" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0005" x="1739" y="25" width="855" height="627" frameX="0" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0006" x="2619" y="25" width="855" height="627" frameX="0" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0007" x="2619" y="25" width="855" height="627" frameX="0" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0008" x="25" y="677" width="853" height="627" frameX="0" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0009" x="903" y="677" width="850" height="627" frameX="-3" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0010" x="1778" y="677" width="852" height="627" frameX="-3" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0011" x="2655" y="677" width="849" height="627" frameX="-6" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0012" x="2655" y="677" width="849" height="627" frameX="-6" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0013" x="2655" y="677" width="849" height="627" frameX="-6" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0014" x="25" y="1329" width="849" height="627" frameX="-6" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0015" x="25" y="1329" width="849" height="627" frameX="-6" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0016" x="25" y="1329" width="849" height="627" frameX="-6" frameY="0" frameWidth="857" frameHeight="627"/>
+	<SubTexture name="NatHankMenu0017" x="25" y="1329" width="849" height="627" frameX="-6" frameY="0" frameWidth="857" frameHeight="627"/>
+</TextureAtlas>

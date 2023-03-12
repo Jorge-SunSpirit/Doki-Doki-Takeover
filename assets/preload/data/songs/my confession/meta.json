@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "My Confession",
+        "artist": "Sprunkle",
+        "icon": "pen",
+        "pause": "sayori",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

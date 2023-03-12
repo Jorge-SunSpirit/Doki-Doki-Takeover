@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="natsuki_spook.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="natsuki_spook0000" x="10" y="10" width="500" height="500"/>
+	<SubTexture name="natsuki_spook0001" x="10" y="10" width="500" height="500"/>
+	<SubTexture name="natsuki_spook0002" x="520" y="10" width="500" height="500"/>
+	<SubTexture name="natsuki_spook0003" x="520" y="10" width="500" height="500"/>
+</TextureAtlas>

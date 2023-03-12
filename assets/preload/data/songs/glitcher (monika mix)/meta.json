@@ -1,0 +1,11 @@
+{
+    "song": {
+        "name": "Glitcher (Monika Mix)",
+        "artist": "HighPoweredKeyz & Matt$ / YingYang48",
+        "icon": "pen",
+        "pause": "monika",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue",
+        "playManually": true
+    }
+}

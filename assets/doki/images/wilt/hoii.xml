@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hoii.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Hey0000" x="10" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0001" x="10" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0002" x="641" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0003" x="641" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0004" x="1272" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0005" x="1903" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0006" x="2534" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0007" x="3165" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0008" x="3796" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0009" x="3796" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0010" x="4427" y="10" width="621" height="720" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0011" x="5058" y="10" width="621" height="733" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0012" x="5058" y="10" width="621" height="733" frameX="-277" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0013" x="5689" y="10" width="630" height="733" frameX="-268" frameY="-48" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0014" x="6329" y="10" width="868" height="770" frameX="-30" frameY="-11" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0015" x="7207" y="10" width="884" height="781" frameX="-14" frameY="0" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0016" x="10" y="801" width="864" height="780" frameX="-34" frameY="-1" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0017" x="884" y="801" width="845" height="780" frameX="-53" frameY="-1" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0018" x="1739" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0019" x="2595" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0020" x="2595" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0021" x="2595" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0022" x="2595" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0023" x="2595" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0024" x="2595" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0025" x="2595" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0026" x="3451" y="801" width="846" height="758" frameX="-52" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0027" x="4307" y="801" width="848" height="781" frameX="-50" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0028" x="5165" y="801" width="894" height="816" frameX="-4" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0029" x="6069" y="801" width="898" height="819" frameX="0" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0030" x="6977" y="801" width="882" height="814" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0031" x="10" y="1630" width="866" height="808" frameX="-32" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0032" x="886" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0033" x="1778" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0034" x="1778" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0035" x="1778" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0036" x="1778" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0037" x="2670" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0038" x="2670" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0039" x="1778" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0040" x="1778" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0041" x="3562" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0042" x="3562" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0043" x="2670" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0044" x="2670" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0045" x="4454" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0046" x="5346" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0047" x="6238" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0048" x="7130" y="1630" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0049" x="10" y="2448" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0050" x="902" y="2448" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0051" x="1794" y="2448" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0052" x="2686" y="2448" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0053" x="3578" y="2448" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0054" x="4470" y="2448" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0055" x="5362" y="2448" width="882" height="803" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0056" x="10" y="10" width="621" height="720" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+	<SubTexture name="Hey0057" x="10" y="10" width="621" height="720" frameX="-16" frameY="-23" frameWidth="898" frameHeight="842"/>
+</TextureAtlas>

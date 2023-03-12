@@ -1,0 +1,50 @@
+flag	content
+descKeyBindings	Change the key bindings of each note.
+descDownscroll	Change the direction of incoming notes.
+descGhostTap	Determines whether or not tapping outside of incoming notes will reduce your health.
+descJudgement	Customize the game's judgement timings.
+descFPSCap	Set the game's FPS cap. (Left or Right)
+descCurFPSCap	Current FPS Cap
+descScroll	Change your note scroll speed. Mid-song speed changes won't apply. (Left or Right)
+descCurScroll	Current Scroll Speed
+descReset	Toggle pressing R to game over.
+descCustomize	Customize parts of the gameplay HUD to your heart's content.
+descCustomizeState	Drag around the score to customize its position. R to reset. Q/E to zoom. Space to pause zooming. C to generate combo.
+descAccuracy	Display accuracy information underneath the health bar.
+descNPS	Shows your current notes per second.
+descPosition	Shows how much time is left in the current song.
+descFPSCount	Display the current framerate and memory usage.
+descFlashing	Toggle flashing lights that may cause epileptic seizures and/or eye strain.
+descBotplay	Have a bot automatically play for you. (Scores will not be saved)
+descGFCountdown	Have Girlfriend count down before the song starts.
+descMiddleScroll	Put your notes in the center or to the right of the screen.
+descLaneUnderway	Toggles an underlay for the notes. (0% is transparent, 100% is opaque)
+descLaneUnderwayControl	Current Lane Underlay transparency
+descScoreReset	Reset your score save data to its defaults. This will also affect certain unlocks. (CANNOT BE REVERSED)
+descStoryReset	Reset your story save data to its defaults. This will also affect certain unlocks. (CANNOT BE REVERSED)
+descSaveReset	Deletes your save file entirely. (CANNOT BE REVERSED)
+descGameJolt	Log into your Game Jolt account to earn trophies!
+descHitSound	Play a sound whenever you press a note key.
+descHitSoundControl	Current Hit Sound volume
+descHitSoundJudge	Chooses whether or not hit sounds change depending on the note judgement that you get.
+descNoteSplash	Adds a splash to any sick notes you hit!
+descEarlyLate	Shows an indicator for whenever you hit the note early or late.
+descAutoPause	Toggle the game pausing in menus when it's unfocused.
+descJudgeCount	Shows a count of every judgement that you get during a song.
+descLanguage	Change the language of the game.
+descVideoDub	View the official video dub of Doki Doki Takeover!
+descBadEnd	Experience what goes wrong in an alternate ending. (Option goes to GameBanana)
+descRatingToggle	Choose whether or not ratings are shown during gameplay.
+descAntialiasing	Make visuals smoother at the cost of performance.
+descMiddleOpponent	Show opponent notes
+descCacheCharacter	Reduce load times by caching every character on boot. (HEAVY MEMORY USAGE)
+descCacheSong	Reduce load times by caching every song on boot. (HEAVY MEMORY USAGE)
+descCache	Reduce further load times in this session by caching what was enabled above.
+descPreload	Preload assets when going into a song to reduce stutters and freezes at the cost of load times.
+descRandom	Randomize the notes of you and your opponent! (Scores will not be saved)
+descNoM	Notes of Markov
+descShaders	Allow the game to make use of shaders! Disable if you experience crashes or performance issues.
+descCursor	Shows a customized cursor instead of your computer's cursor.
+descKeyBindControls	Escape to save, Backspace to reset. Enter to change a keybind.
+descKeyBindBlacklist	<X> is blacklisted!
+descJudgementControls	Press Left to decrease by 1, or Right to increase by 1.<N>Shift will go faster, Control will go by 0.1, Alt will go by 0.01.<N>Press R to reset the selected judgement. Holding Shift will reset all judgements.

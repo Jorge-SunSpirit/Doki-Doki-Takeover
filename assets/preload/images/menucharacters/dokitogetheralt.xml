@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dokitogetheralt.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Doki together club0000" x="10" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0001" x="10" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0002" x="882" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0003" x="882" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0004" x="1754" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0005" x="1754" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0006" x="2626" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0007" x="2626" y="10" width="862" height="957"/>
+	<SubTexture name="Doki together club0008" x="10" y="977" width="862" height="957"/>
+	<SubTexture name="Doki together club0009" x="10" y="977" width="862" height="957"/>
+	<SubTexture name="Doki together club0010" x="10" y="977" width="862" height="957"/>
+	<SubTexture name="Doki together club0011" x="10" y="977" width="862" height="957"/>
+</TextureAtlas>

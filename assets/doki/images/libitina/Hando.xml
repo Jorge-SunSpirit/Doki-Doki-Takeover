@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Hando.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="HandoAnim0000" x="8" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0001" x="8" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0002" x="8" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0003" x="8" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0004" x="284" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0005" x="284" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0006" x="284" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0007" x="284" y="8" width="268" height="274" frameX="-76" frameY="-77" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0008" x="560" y="8" width="276" height="282" frameX="-72" frameY="-73" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0009" x="560" y="8" width="276" height="282" frameX="-72" frameY="-73" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0010" x="560" y="8" width="276" height="282" frameX="-72" frameY="-73" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0011" x="560" y="8" width="276" height="282" frameX="-72" frameY="-73" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0012" x="844" y="8" width="282" height="288" frameX="-69" frameY="-70" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0013" x="844" y="8" width="282" height="288" frameX="-69" frameY="-70" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0014" x="844" y="8" width="282" height="288" frameX="-69" frameY="-70" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0015" x="844" y="8" width="282" height="288" frameX="-69" frameY="-70" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0016" x="1134" y="8" width="298" height="304" frameX="-61" frameY="-62" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0017" x="1134" y="8" width="298" height="304" frameX="-61" frameY="-62" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0018" x="1134" y="8" width="298" height="304" frameX="-61" frameY="-62" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0019" x="1134" y="8" width="298" height="304" frameX="-61" frameY="-62" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0020" x="1440" y="8" width="320" height="327" frameX="-50" frameY="-51" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0021" x="1440" y="8" width="320" height="327" frameX="-50" frameY="-51" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0022" x="1440" y="8" width="320" height="327" frameX="-50" frameY="-51" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0023" x="1440" y="8" width="320" height="327" frameX="-50" frameY="-51" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0024" x="8" y="343" width="353" height="360" frameX="-34" frameY="-34" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0025" x="8" y="343" width="353" height="360" frameX="-34" frameY="-34" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0026" x="8" y="343" width="353" height="360" frameX="-34" frameY="-34" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0027" x="8" y="343" width="353" height="360" frameX="-34" frameY="-34" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0028" x="369" y="343" width="362" height="370" frameX="-29" frameY="-26" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0029" x="369" y="343" width="362" height="370" frameX="-29" frameY="-26" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0030" x="369" y="343" width="362" height="370" frameX="-29" frameY="-26" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0031" x="369" y="343" width="362" height="370" frameX="-29" frameY="-26" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0032" x="739" y="343" width="403" height="411" frameX="-9" frameY="-9" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0033" x="739" y="343" width="403" height="411" frameX="-9" frameY="-9" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0034" x="739" y="343" width="403" height="411" frameX="-9" frameY="-9" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0035" x="739" y="343" width="403" height="411" frameX="-9" frameY="-9" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0036" x="1150" y="343" width="414" height="423" frameX="-3" frameY="-3" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0037" x="1150" y="343" width="414" height="423" frameX="-3" frameY="-3" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0038" x="1150" y="343" width="414" height="423" frameX="-3" frameY="-3" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0039" x="1150" y="343" width="414" height="423" frameX="-3" frameY="-3" frameWidth="421" frameHeight="430"/>
+	<SubTexture name="HandoAnim0040" x="1572" y="343" width="421" height="430"/>
+	<SubTexture name="HandoAnim0041" x="1572" y="343" width="421" height="430"/>
+	<SubTexture name="HandoAnim0042" x="1572" y="343" width="421" height="430"/>
+	<SubTexture name="HandoAnim0043" x="1572" y="343" width="421" height="430"/>
+	<SubTexture name="HandoAnim0044" x="8" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0045" x="8" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0046" x="8" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0047" x="8" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0048" x="437" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0049" x="437" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0050" x="437" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0051" x="437" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0052" x="866" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0053" x="866" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0054" x="866" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0055" x="866" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0056" x="1295" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0057" x="1295" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0058" x="1295" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0059" x="1295" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0060" x="8" y="1219" width="421" height="430"/>
+	<SubTexture name="HandoAnim0061" x="8" y="1219" width="421" height="430"/>
+	<SubTexture name="HandoAnim0062" x="8" y="1219" width="421" height="430"/>
+	<SubTexture name="HandoAnim0063" x="8" y="1219" width="421" height="430"/>
+	<SubTexture name="HandoAnim0064" x="866" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0065" x="866" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0066" x="866" y="781" width="421" height="430"/>
+	<SubTexture name="HandoAnim0067" x="866" y="781" width="421" height="430"/>
+</TextureAtlas>

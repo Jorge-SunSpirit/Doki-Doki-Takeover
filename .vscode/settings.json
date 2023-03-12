@@ -1,0 +1,13 @@
+{
+  "[haxe]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": true
+  },
+  "[xml]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[tsv]": {
+    "editor.insertSpaces": false
+  }
+}

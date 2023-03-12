@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="HomeStatic.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="HomeStatic0000" x="5" y="5" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0001" x="5" y="5" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0002" x="1930" y="5" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0003" x="1930" y="5" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0004" x="5" y="1090" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0005" x="5" y="1090" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0006" x="1930" y="1090" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0007" x="1930" y="1090" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0008" x="5" y="2175" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0009" x="5" y="2175" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0010" x="1930" y="2175" width="1920" height="1080"/>
+	<SubTexture name="HomeStatic0011" x="1930" y="2175" width="1920" height="1080"/>
+</TextureAtlas>

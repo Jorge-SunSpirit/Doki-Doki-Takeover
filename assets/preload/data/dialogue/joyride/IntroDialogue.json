@@ -1,0 +1,195 @@
+{
+	"startingMusic": "sayoc",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Hmm, Natsuki and Yuri both stopped by already, so I wonder-\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Monika’s words were quickly cut off by the sound of the music room door swinging wide open.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Quickly running in was the Literature Club’s last major member, with a pep in her step.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "showdad",
+			"duration": 0
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Ahaha, just as I thought! I’m happy you came to visit me too, Sayori.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"Ah, were Natsuki and Yuri here already??? Did I miss them??? Aww noooo, I had exciting news to share!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Both of them did show up earlier to talk one on one with me.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"Though what's got you in super high spirits right now? Your smile is the biggest I’ve ever seen!\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"Ehehe, I can’t help it! Everything we’ve been doing recently has been amazing!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"The festival went perfectly, and now we have seven amazing club members all making each other happy and positive!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "happ",
+			"string": "\"It's everything I could ever want: Everyone being happy and supporting each other.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic",
+			"expression": "",
+			"string": "",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Sayori’s excited demeanor cools down, becoming more solemn but still with a genuine smile on her face.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"Seeing how much good we’ve been doing… It helps give me a reason to get out of bed every morning, knowing that we were able to accomplish this.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"It’s still hard for me to always keep those happy thoughts in mind, but it's getting better, bit by bit each day.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "\"It makes me more grateful each day that we were able to start this club.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "wah",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "All the positive news and happiness from her friends had filled Monika with an overwhelming state of emotion.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Tears welled up in Monika’s eyes while she listened to Sayori’s words.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "In a burst of melancholic happiness, Monika walks over and hugs Sayori.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "cry",
+			"string": "I’m… I’m so proud of you, Sayori. It means so much that you’re here with us to make this club the place it is.",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "cry",
+			"string": "It’s helped so many people… especially me. Thank you…",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "wah",
+			"string": "Ehehe… thank you too, Monika.",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "After a few moments pass, the girls break off their hug. Monika wipes her tears and takes a deep breath.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "Aha- this is going to be a big shift in tone, but when the others came by earlier, they each sang a song with me.",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "It would make me so happy to be able to do the same with you too.",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "You don’t need to tell me twice! Let’s sing!",
+			"side": "left"
+		}
+	]
+}

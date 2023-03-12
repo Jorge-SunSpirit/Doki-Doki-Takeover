@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="playable_gfBS.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF IDLE0000" x="10" y="10" width="340" height="467" frameX="0" frameY="-4" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0001" x="10" y="10" width="340" height="467" frameX="0" frameY="-4" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0002" x="360" y="10" width="332" height="462" frameX="0" frameY="-9" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0003" x="702" y="10" width="327" height="460" frameX="0" frameY="-11" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0004" x="1039" y="10" width="326" height="461" frameX="-3" frameY="-11" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0005" x="1375" y="10" width="325" height="465" frameX="-4" frameY="-7" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0006" x="1710" y="10" width="321" height="465" frameX="-8" frameY="-7" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0007" x="2041" y="10" width="331" height="472" frameX="-8" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0008" x="2382" y="10" width="330" height="472" frameX="-9" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0009" x="2722" y="10" width="333" height="472" frameX="-9" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0010" x="3065" y="10" width="333" height="472" frameX="-9" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0011" x="3408" y="10" width="334" height="472" frameX="-9" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0012" x="3752" y="10" width="333" height="472" frameX="-10" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0013" x="10" y="492" width="334" height="472" frameX="-10" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0014" x="354" y="492" width="314" height="472" frameX="-15" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0015" x="354" y="492" width="314" height="472" frameX="-15" frameY="0" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0016" x="678" y="492" width="319" height="466" frameX="-11" frameY="-5" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0017" x="678" y="492" width="319" height="466" frameX="-11" frameY="-5" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0018" x="1007" y="492" width="322" height="464" frameX="-14" frameY="-7" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0019" x="1007" y="492" width="322" height="464" frameX="-14" frameY="-7" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0020" x="1339" y="492" width="332" height="468" frameX="-19" frameY="-4" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0021" x="1339" y="492" width="332" height="468" frameX="-19" frameY="-4" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0022" x="1681" y="492" width="333" height="468" frameX="-14" frameY="-4" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0023" x="1681" y="492" width="333" height="468" frameX="-14" frameY="-4" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0024" x="2024" y="492" width="328" height="470" frameX="-12" frameY="-2" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0025" x="2024" y="492" width="328" height="470" frameX="-12" frameY="-2" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0026" x="2362" y="492" width="327" height="470" frameX="-11" frameY="-2" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0027" x="2362" y="492" width="327" height="470" frameX="-11" frameY="-2" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0028" x="2699" y="492" width="327" height="470" frameX="-10" frameY="-2" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF IDLE0029" x="2699" y="492" width="327" height="470" frameX="-10" frameY="-2" frameWidth="351" frameHeight="472"/>
+	<SubTexture name="GF Sing up0000" x="3036" y="492" width="368" height="473" frameX="-10" frameY="-12" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0001" x="3414" y="492" width="370" height="485" frameX="-10" frameY="0" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0002" x="10" y="987" width="405" height="480" frameX="0" frameY="-5" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0003" x="10" y="987" width="405" height="480" frameX="0" frameY="-5" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0004" x="425" y="987" width="403" height="483" frameX="0" frameY="-2" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0005" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0006" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0007" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0008" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0009" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0010" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0011" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0012" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0013" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0014" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0015" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF Sing up0016" x="838" y="987" width="405" height="482" frameX="0" frameY="-3" frameWidth="405" frameHeight="485"/>
+	<SubTexture name="GF sing DOWN0000" x="1253" y="987" width="339" height="452" frameX="0" frameY="-5" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0001" x="1253" y="987" width="339" height="452" frameX="0" frameY="-5" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0002" x="1602" y="987" width="338" height="456" frameX="0" frameY="-2" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0003" x="1602" y="987" width="338" height="456" frameX="0" frameY="-2" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0004" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0005" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0006" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0007" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0008" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0009" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0010" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0011" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0012" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0013" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0014" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0015" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0016" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing DOWN0017" x="1950" y="987" width="338" height="458" frameX="0" frameY="0" frameWidth="339" frameHeight="458"/>
+	<SubTexture name="GF sing LEFT0000" x="2298" y="987" width="441" height="478" frameX="0" frameY="0" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0001" x="2749" y="987" width="441" height="471" frameX="0" frameY="-7" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0002" x="3200" y="987" width="437" height="475" frameX="-6" frameY="-3" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0003" x="3200" y="987" width="437" height="475" frameX="-6" frameY="-3" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0004" x="3647" y="987" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0005" x="3647" y="987" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0006" x="10" y="1480" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0007" x="10" y="1480" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0008" x="457" y="1480" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0009" x="457" y="1480" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0010" x="457" y="1480" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing LEFT0011" x="457" y="1480" width="437" height="473" frameX="-6" frameY="-5" frameWidth="443" frameHeight="478"/>
+	<SubTexture name="GF sing RIGHT0000" x="904" y="1480" width="310" height="496" frameX="0" frameY="0" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0001" x="904" y="1480" width="310" height="496" frameX="0" frameY="0" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0002" x="1224" y="1480" width="340" height="494" frameX="0" frameY="-1" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0003" x="1224" y="1480" width="340" height="494" frameX="0" frameY="-1" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0004" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0005" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0006" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0007" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0008" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0009" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0010" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0011" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0012" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0013" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0014" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0015" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0016" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="GF sing RIGHT0017" x="1574" y="1480" width="343" height="493" frameX="0" frameY="-2" frameWidth="343" frameHeight="496"/>
+	<SubTexture name="hey!0000" x="1927" y="1480" width="304" height="476" frameX="-14" frameY="0" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0001" x="2241" y="1480" width="320" height="474" frameX="0" frameY="-2" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0002" x="2571" y="1480" width="320" height="473" frameX="0" frameY="-2" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0003" x="2901" y="1480" width="319" height="473" frameX="-5" frameY="-2" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0004" x="3230" y="1480" width="319" height="473" frameX="-5" frameY="-2" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0005" x="3559" y="1480" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0006" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0007" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0008" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0009" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0010" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0011" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0012" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+	<SubTexture name="hey!0013" x="10" y="1986" width="321" height="474" frameX="-5" frameY="-1" frameWidth="326" frameHeight="476"/>
+</TextureAtlas>

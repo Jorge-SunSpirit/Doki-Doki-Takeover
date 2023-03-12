@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Monika_Finale.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MONIKA DOWN GLITCH0000" x="0" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0001" x="145" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0002" x="145" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0003" x="290" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0004" x="290" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0005" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0006" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0007" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0008" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0009" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0010" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0011" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0012" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0013" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0014" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN GLITCH0015" x="435" y="0" width="140" height="134"/>
+	<SubTexture name="MONIKA DOWN NOTE0000" x="580" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0001" x="580" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0002" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0003" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0004" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0005" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0006" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0007" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0008" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0009" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0010" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0011" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0012" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA DOWN NOTE0013" x="701" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0000" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0001" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0002" x="0" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0003" x="0" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0004" x="121" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0005" x="121" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0006" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0007" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0008" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0009" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0010" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0011" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0012" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0013" x="242" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0014" x="363" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0015" x="363" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0016" x="484" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0017" x="484" y="139" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0018" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0019" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0020" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0021" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0022" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0023" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0024" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA IDLE0025" x="822" y="0" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0000" x="605" y="139" width="140" height="134"/>
+	<SubTexture name="MONIKA LEFT GLITCH0001" x="750" y="139" width="140" height="134"/>
+	<SubTexture name="MONIKA LEFT GLITCH0002" x="750" y="139" width="140" height="134"/>
+	<SubTexture name="MONIKA LEFT GLITCH0003" x="0" y="278" width="140" height="134"/>
+	<SubTexture name="MONIKA LEFT GLITCH0004" x="0" y="278" width="140" height="134"/>
+	<SubTexture name="MONIKA LEFT GLITCH0005" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0006" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0007" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0008" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0009" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0010" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0011" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0012" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0013" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0014" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT GLITCH0015" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0000" x="145" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0001" x="145" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0002" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0003" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0004" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0005" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0006" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0007" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0008" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0009" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0010" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0011" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0012" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA LEFT NOTE0013" x="266" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0000" x="387" y="278" width="140" height="134"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0001" x="532" y="278" width="140" height="134"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0002" x="532" y="278" width="140" height="134"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0003" x="677" y="278" width="140" height="134"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0004" x="677" y="278" width="140" height="134"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0005" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0006" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0007" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0008" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0009" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0010" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0011" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0012" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0013" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0014" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT GLITCH0015" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0000" x="822" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0001" x="822" y="278" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0002" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0003" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0004" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0005" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0006" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0007" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0008" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0009" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0010" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0011" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0012" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA RIGHT NOTE0013" x="0" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP GLITCH0000" x="121" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0001" x="266" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0002" x="266" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0003" x="411" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0004" x="411" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0005" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0006" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0007" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0008" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0009" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0010" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0011" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP GLITCH0012" x="556" y="417" width="140" height="134"/>
+	<SubTexture name="MONIKA UP NOTE0000" x="701" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0001" x="701" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0002" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0003" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0004" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0005" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0006" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0007" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0008" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0009" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0010" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0011" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0012" x="822" y="417" width="116" height="132"/>
+	<SubTexture name="MONIKA UP NOTE0013" x="822" y="417" width="116" height="132"/>
+</TextureAtlas>

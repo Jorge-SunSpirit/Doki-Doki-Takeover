@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Protag Idle"
+		},
+		{
+			"offsets": [
+				95,
+				40
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Protag Left"
+		},
+		{
+			"offsets": [
+				-36,
+				17
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Protag Right"
+		},
+		{
+			"offsets": [
+				7,
+				42
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Protag Up"
+		},
+		{
+			"offsets": [
+				1,
+				-22
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Protag Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/protag/protag_blueskies",
+	"position": [
+		2,
+		-381
+	],
+	"healthicon": "protag",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		83,
+		65
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6,
+	"scale": 0.98,
+	"gameover_character": "protag_death"
+}

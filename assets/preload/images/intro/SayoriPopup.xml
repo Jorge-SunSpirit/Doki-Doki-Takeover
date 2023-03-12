@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SayoriPopup.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SayoriPopup0000" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0001" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0002" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0003" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0004" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0005" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0006" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0007" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0008" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0009" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0010" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0011" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0012" x="8" y="8" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0013" x="395" y="8" width="363" height="532" frameX="0" frameY="0" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0014" x="395" y="8" width="363" height="532" frameX="0" frameY="0" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0015" x="766" y="8" width="369" height="530" frameX="-6" frameY="-2" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0016" x="766" y="8" width="369" height="530" frameX="-6" frameY="-2" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0017" x="1143" y="8" width="376" height="526" frameX="-18" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0018" x="1143" y="8" width="376" height="526" frameX="-18" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0019" x="1527" y="8" width="378" height="526" frameX="-21" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0020" x="1527" y="8" width="378" height="526" frameX="-21" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0021" x="8" y="548" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0022" x="8" y="548" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0023" x="395" y="548" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0024" x="395" y="548" width="379" height="526" frameX="-27" frameY="-6" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0025" x="782" y="548" width="392" height="502" frameX="-56" frameY="-30" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0026" x="782" y="548" width="392" height="502" frameX="-56" frameY="-30" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0027" x="1182" y="548" width="392" height="505" frameX="-50" frameY="-27" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0028" x="1182" y="548" width="392" height="505" frameX="-50" frameY="-27" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0029" x="1582" y="548" width="387" height="513" frameX="-37" frameY="-19" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0030" x="1582" y="548" width="387" height="513" frameX="-37" frameY="-19" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0031" x="8" y="1082" width="381" height="520" frameX="-29" frameY="-12" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0032" x="8" y="1082" width="381" height="520" frameX="-29" frameY="-12" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0033" x="397" y="1082" width="377" height="528" frameX="-25" frameY="-4" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0034" x="397" y="1082" width="377" height="528" frameX="-25" frameY="-4" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0035" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0036" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0037" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0038" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0039" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0040" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0041" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0042" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0043" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0044" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0045" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0046" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0047" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0048" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+	<SubTexture name="SayoriPopup0049" x="782" y="1082" width="375" height="531" frameX="-22" frameY="-1" frameWidth="448" frameHeight="532"/>
+</TextureAtlas>

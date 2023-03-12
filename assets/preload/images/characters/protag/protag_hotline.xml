@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="protag_hotline.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Protag Down0000" x="10" y="10" width="313" height="758" frameX="-2" frameY="-2" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0001" x="10" y="10" width="313" height="758" frameX="-2" frameY="-2" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0002" x="333" y="10" width="310" height="756" frameX="0" frameY="-4" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0003" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0004" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0005" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0006" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0007" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0008" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0009" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0010" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0011" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0012" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Down0013" x="653" y="10" width="308" height="760" frameX="-2" frameY="0" frameWidth="315" frameHeight="760"/>
+	<SubTexture name="Protag Idle0000" x="971" y="10" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0001" x="971" y="10" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0002" x="1271" y="10" width="295" height="779" frameX="-5" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0003" x="1576" y="10" width="311" height="780" frameX="0" frameY="0" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0004" x="1576" y="10" width="311" height="780" frameX="0" frameY="0" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0005" x="1897" y="10" width="306" height="778" frameX="-10" frameY="-2" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0006" x="1897" y="10" width="306" height="778" frameX="-10" frameY="-2" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0007" x="2213" y="10" width="303" height="777" frameX="-8" frameY="-3" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0008" x="2213" y="10" width="303" height="777" frameX="-8" frameY="-3" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0009" x="2526" y="10" width="291" height="779" frameX="-9" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0010" x="971" y="10" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0011" x="971" y="10" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0012" x="971" y="10" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Left0000" x="2827" y="10" width="361" height="825" frameX="-15" frameY="0" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0001" x="2827" y="10" width="361" height="825" frameX="-15" frameY="0" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0002" x="3198" y="10" width="378" height="823" frameX="0" frameY="-2" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0003" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0004" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0005" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0006" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0007" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0008" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0009" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0010" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0011" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0012" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Left0013" x="3586" y="10" width="377" height="815" frameX="-1" frameY="-10" frameWidth="378" frameHeight="825"/>
+	<SubTexture name="Protag Right0000" x="10" y="845" width="337" height="788"/>
+	<SubTexture name="Protag Right0001" x="10" y="845" width="337" height="788"/>
+	<SubTexture name="Protag Right0002" x="357" y="845" width="329" height="788" frameX="0" frameY="0" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0003" x="696" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0004" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0005" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0006" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0007" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0008" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0009" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0010" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0011" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0012" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0013" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Right0014" x="1023" y="845" width="317" height="786" frameX="0" frameY="-2" frameWidth="337" frameHeight="788"/>
+	<SubTexture name="Protag Up0000" x="1350" y="845" width="331" height="824" frameX="0" frameY="0" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0001" x="1350" y="845" width="331" height="824" frameX="0" frameY="0" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0002" x="1691" y="845" width="329" height="818" frameX="-5" frameY="-6" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0003" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0004" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0005" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0006" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0007" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0008" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0009" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0010" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0011" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0012" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+	<SubTexture name="Protag Up0013" x="2030" y="845" width="326" height="805" frameX="-17" frameY="-19" frameWidth="343" frameHeight="824"/>
+</TextureAtlas>

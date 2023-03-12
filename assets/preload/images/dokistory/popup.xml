@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="popup.png">
+	<!-- Created with my typing fingers -->
+	<SubTexture name="glitch0000" x="0" y="0" width="766" height="319"/>
+	<SubTexture name="normal0000" x="0" y="319" width="626" height="319"/>
+	<SubTexture name="va11halla0000" x="0" y="638" width="626" height="319"/>
+	<SubTexture name="libitina0000" x="0" y="957" width="626" height="319"/>
+</TextureAtlas>

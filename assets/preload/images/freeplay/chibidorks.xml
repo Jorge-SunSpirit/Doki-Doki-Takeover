@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="chibidorks.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="FreeplayChibiCheer0000" x="10" y="10" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0001" x="295" y="10" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0002" x="580" y="10" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0003" x="10" y="222" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0004" x="295" y="222" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0005" x="580" y="222" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0006" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0007" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0008" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0009" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0010" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0011" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0012" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0013" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0014" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0015" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0016" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0017" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiCheer0018" x="10" y="434" width="275" height="202"/>
+	<SubTexture name="FreeplayChibiIdle0000" x="295" y="434" width="275" height="171"/>
+</TextureAtlas>

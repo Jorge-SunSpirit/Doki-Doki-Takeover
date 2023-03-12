@@ -1,0 +1,211 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF idle dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF NOTE LEFT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-39,
+				-52
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF NOTE DOWN0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-56,
+				22
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF NOTE UP0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				-6
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF NOTE RIGHT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				9
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BF NOTE LEFT MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-11,
+				-25
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BF NOTE DOWN MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-36,
+				21
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BF NOTE UP MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-39,
+				6
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BF NOTE RIGHT MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				5
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF HEY",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-16,
+				2
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "BF idle shaking",
+			"indices": []
+		}
+	],
+	"costumes": "bf",
+	"costumelist": [
+		{
+			"subfolder":false,
+			"internal_Name": "casual",
+			"charFile":"bf"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "christmas",
+			"charFile":"bf-christmas"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "blueskies",
+			"charFile":"bf-blueskies"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "holofunk",
+			"charFile":"aloe"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "aloe-classic",
+			"charFile":"aloe-classic"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "minus",
+			"charFile":"bf-minus"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "minus-mean",
+			"charFile":"bf-minus-mean"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "minus-yellow",
+			"charFile":"bf-minus-yellow"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "sutazu",
+			"charFile":"sutazu"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "soft",
+			"charFile":"bf-soft"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "soft-classic",
+			"charFile":"bf-soft-classic"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "mrcow",
+			"charFile":"mrcow"
+		}
+		
+	],
+	"no_antialiasing": false,
+	"image": "characters/boyfriend/DDLCBoyFriend_Assets",
+	"position": [
+		5,
+		0
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"gameover_character": "bf",
+	"death_sound": "fnf_loss_sfx",
+	"win_sound": "dah"
+}

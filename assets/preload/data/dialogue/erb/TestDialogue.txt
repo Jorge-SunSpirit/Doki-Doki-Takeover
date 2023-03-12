@@ -1,0 +1,71 @@
+:startmusic:cutscene_jargon_shmargon
+:yuri_neutral:Yuri's neutral expression
+:autoskip:Test yes hello AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+:yuri_ehh:Yuri's ehh expression
+:yuri_blush:Yuri do be blushin tho
+:yuri_crazy:Damn that Yuri is crazy
+:yuri_smile:She smilin!
+:yuri_ahaha:Ahahahaha
+:yuri_gone: DISAPPEAR
+:natsuki_neutral:Natsuki neutral expression
+:natsuki_angy:Angy baby
+:natsuki_hmmph:Don't pout at me
+:natsuki_what:WHAT?!
+:natsuki_sick: Tight bars lil man
+:natsuki_spook:SPOOOKY
+:natsuki_gone: GONE
+:sayori_neutral:Sayori's neutral expression
+:sayori_happ:she happy!
+:sayori_ehh:Ehhhh oh well
+:sayori_grumpy:Grumpori
+:sayori_ooh:Oh...huh
+:sayori_yeah:Yeah, yeah
+:sayori_concern:Concern thing
+:sayori_gone:sayso
+:mc_neutral:Senpai I mean MC I MEAN... neutral expression
+:mc_camera:He's holding a camera
+:mc_happy:He's happy!
+:mc_sigh:Sorry
+:monika_neutral:Neutral dialogue box cause why not
+:monika_upset:Don't look at me that way
+:monika_eeh:Au au auauauauaua
+:monika_ahaha:Thanks Duster for writing that
+:monika_ahh:AHHHHHHHHHHHHHHHHHH
+:all_neutral: Neutral expression
+:shake:
+:all_gasp: MONIKA
+:bf_neutral:bf's neutral expression
+:bf_beep:BEEP
+:bf_yeah:Yeah yeah yeah
+:bf_yeah_left:Yeah yeah yeah
+:bf_think:He do be thinkin
+:bf_scared:Don't be scared
+:gf_neutral:GF's neutral expression
+:gf_giggle:Cute giggle
+:gf_scared:don't be scared :(
+:gf_yeah:YEAH
+:gf_ehh:hueh
+:gf_spook: HI HO
+:gf_gone: HE DEAD
+:swapstyle:pixel
+:senpai:Howdy, I'm Senpai Doki Doki Funkin
+:bfwhat:bep-
+:monikagasp:FUCK
+:spirit:hueh
+:swapstyle:normal
+:endmusic:
+:sayori_neutral:Stopping music
+:hideright:
+:sayori_neutral:Hid right
+:hideleft:
+:bf_neutral:hid left
+:no_one_left: Talking left no box
+:no_one_right: Talking right no box
+:bf_beep:We gonna glitch!
+:glitch:
+:bf_think:yeah yeah we did that
+:showbackgroundimage:example
+:bf_neutral:This is the background CG :)
+:hidebackground:
+:bf_beep:We hidden
+:flash:FLASH!

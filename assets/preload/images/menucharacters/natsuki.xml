@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="natsuki.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Natsu BG0000" x="10" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0001" x="10" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0002" x="392" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0003" x="392" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0004" x="774" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0005" x="774" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0006" x="1156" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0007" x="1156" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0008" x="1538" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0009" x="1538" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0010" x="1538" y="10" width="372" height="637"/>
+	<SubTexture name="Natsu BG0011" x="1538" y="10" width="372" height="637"/>
+</TextureAtlas>

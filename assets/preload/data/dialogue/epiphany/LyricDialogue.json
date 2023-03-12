@@ -1,0 +1,67 @@
+{
+	"disableBGFade": true,
+	"dialogue": [{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Notice anything different?\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Ahaha, I wanted to make this moment a little extra special.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"I’ve noticed that when we sing, my voice gets turned into an assortment of random vowels and sounds.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"As fun as it can still be that way, there’s so much I’m trying to say to you that doesn’t come through.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"So I did a little digging into this game’s files myself, and I think I’ve successfully bypassed that feature!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Unfortunately, you’ll still need to use Boyfriend’s voice to sing back, though I won’t make you sing against all those death notes this time, ahaha.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Just remember to save me once the game tries to delete me again, okay, my love?\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Ah, I’m getting sidetracked.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Like I said, I want this to be very special, so here’s something I wrote specially for you.\"",
+			"side": "left"
+		}
+	]
+}

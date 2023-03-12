@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="protag_death.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Protag Dies0000" x="10" y="10" width="286" height="779" frameX="-37" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0001" x="306" y="10" width="302" height="779" frameX="-21" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0002" x="618" y="10" width="316" height="778" frameX="-14" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0003" x="944" y="10" width="316" height="778" frameX="-14" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0004" x="1270" y="10" width="341" height="778" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0005" x="1621" y="10" width="341" height="778" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0006" x="1972" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0007" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0008" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0009" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0010" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0011" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0012" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0013" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0014" x="2264" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0015" x="2556" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0016" x="2556" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0017" x="2556" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0018" x="2848" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0019" x="2848" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0020" x="3140" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0021" x="3140" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0022" x="3432" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0023" x="3432" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0024" x="3724" y="10" width="282" height="778" frameX="-41" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0025" x="4016" y="10" width="287" height="803" frameX="-36" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0026" x="4016" y="10" width="287" height="803" frameX="-36" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0027" x="4313" y="10" width="307" height="786" frameX="-16" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0028" x="4313" y="10" width="307" height="786" frameX="-16" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0029" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0030" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0031" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0032" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0033" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0034" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0035" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0036" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0037" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0038" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0039" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0040" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0041" x="4630" y="10" width="314" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0042" x="4954" y="10" width="634" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0043" x="4954" y="10" width="634" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0044" x="5598" y="10" width="687" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0045" x="5598" y="10" width="687" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0046" x="6295" y="10" width="703" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0047" x="6295" y="10" width="703" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0048" x="7008" y="10" width="713" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0049" x="7008" y="10" width="713" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0050" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0051" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0052" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0053" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0054" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0055" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0056" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Dies0057" x="10" y="839" width="704" height="819" frameX="-9" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Idle0000" x="724" y="839" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0001" x="724" y="839" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0002" x="1024" y="839" width="295" height="779" frameX="-5" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0003" x="1329" y="839" width="311" height="780" frameX="0" frameY="0" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0004" x="1329" y="839" width="311" height="780" frameX="0" frameY="0" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0005" x="1650" y="839" width="306" height="778" frameX="-10" frameY="-2" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0006" x="1650" y="839" width="306" height="778" frameX="-10" frameY="-2" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0007" x="1966" y="839" width="303" height="777" frameX="-8" frameY="-3" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0008" x="1966" y="839" width="303" height="777" frameX="-8" frameY="-3" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0009" x="2279" y="839" width="291" height="779" frameX="-9" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0010" x="724" y="839" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0011" x="724" y="839" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Idle0012" x="724" y="839" width="290" height="779" frameX="-11" frameY="-1" frameWidth="316" frameHeight="780"/>
+	<SubTexture name="Protag Retry Confirm0000" x="2580" y="839" width="712" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0001" x="3302" y="839" width="712" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0002" x="4024" y="839" width="722" height="819"/>
+	<SubTexture name="Protag Retry Confirm0003" x="4756" y="839" width="722" height="819"/>
+	<SubTexture name="Protag Retry Confirm0004" x="5488" y="839" width="609" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0005" x="6107" y="839" width="609" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0006" x="6726" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0007" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0008" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0009" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0010" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0011" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0012" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0013" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0014" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0015" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0016" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0017" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0018" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0019" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0020" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0021" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0022" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0023" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0024" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0025" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0026" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0027" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0028" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0029" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0030" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0031" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0032" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Confirm0033" x="7050" y="839" width="314" height="819" frameX="0" frameY="0" frameWidth="722" frameHeight="819"/>
+	<SubTexture name="Protag Retry Loop0000" x="7374" y="839" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0001" x="10" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0002" x="10" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0003" x="724" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0004" x="724" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0005" x="1438" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0006" x="1438" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0007" x="2152" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0008" x="2152" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0009" x="2152" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0010" x="2152" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0011" x="2152" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0012" x="2152" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0013" x="2152" y="1668" width="704" height="819"/>
+	<SubTexture name="Protag Retry Loop0014" x="2152" y="1668" width="704" height="819"/>
+</TextureAtlas>

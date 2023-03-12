@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SayoriCard.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SayoCardAnim0000" x="10" y="10" width="272" height="177" frameX="0" frameY="-317" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0001" x="292" y="10" width="272" height="335" frameX="0" frameY="-159" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0002" x="574" y="10" width="272" height="413" frameX="0" frameY="-81" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0003" x="856" y="10" width="272" height="464" frameX="0" frameY="-30" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0004" x="1138" y="10" width="272" height="479" frameX="0" frameY="-15" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0005" x="1420" y="10" width="272" height="479" frameX="0" frameY="-12" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0006" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0007" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0008" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0009" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0010" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0011" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0012" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0013" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0014" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0015" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0016" x="1702" y="10" width="254" height="479" frameX="-9" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0017" x="10" y="499" width="109" height="477" frameX="-81" frameY="-7" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0018" x="129" y="499" width="5" height="478" frameX="-133" frameY="0" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0019" x="144" y="499" width="109" height="477" frameX="-81" frameY="-7" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0020" x="263" y="499" width="253" height="477" frameX="-9" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0021" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0022" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0023" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0024" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0025" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0026" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0027" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0028" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="SayoCardAnim0029" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+</TextureAtlas>

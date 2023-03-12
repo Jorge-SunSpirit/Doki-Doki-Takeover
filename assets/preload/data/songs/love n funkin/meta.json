@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Love n' Funkin'",
+        "artist": "DatDavi & Stardust Tunes",
+        "icon": "pen",
+        "pause": "gf",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

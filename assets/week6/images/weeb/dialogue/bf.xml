@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bf.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bf_neutral0000" x="0" y="0" width="106" height="106"/>
+	<SubTexture name="bf_angry0001" x="106" y="0" width="106" height="106"/>
+	<SubTexture name="bf_what0002" x="0" y="106" width="106" height="106"/>
+</TextureAtlas>

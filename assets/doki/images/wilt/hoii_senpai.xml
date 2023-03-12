@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hoii_senpai.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Hey_Senpai0000" x="10" y="10" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0001" x="641" y="10" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0002" x="641" y="10" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0003" x="1272" y="10" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0004" x="1903" y="10" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0005" x="2534" y="10" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0006" x="3165" y="10" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0007" x="10" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0008" x="641" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0009" x="641" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0010" x="1272" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0011" x="1272" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0012" x="1903" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0013" x="1903" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0014" x="2534" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0015" x="2534" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0016" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0017" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0018" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0019" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0020" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0021" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0022" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0023" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0024" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0025" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0026" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0027" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0028" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0029" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0030" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0031" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0032" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0033" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0034" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0035" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0036" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0037" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0038" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0039" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0040" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0041" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0042" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0043" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0044" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0045" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0046" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0047" x="3165" y="740" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0048" x="10" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0049" x="10" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0050" x="641" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0051" x="641" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0052" x="1272" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0053" x="1272" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0054" x="1903" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0055" x="1903" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0056" x="2534" y="1470" width="621" height="720"/>
+	<SubTexture name="Hey_Senpai0057" x="10" y="10" width="621" height="720"/>
+</TextureAtlas>

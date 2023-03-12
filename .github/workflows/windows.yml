@@ -1,0 +1,49 @@
+name: Windows
+
+# This workflow only exists to build the game without having to clear locally
+on: workflow_dispatch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  Build:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3.3.0
+
+      - uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.2.5
+      # Runs a set of commands using the runners shell
+      - name: Install Haxelib
+        run: |
+          haxelib setup C:/haxelib
+          haxelib install hxcpp > nul
+          haxelib install lime
+          haxelib install openfl
+          haxelib --never install flixel
+          haxelib run lime setup flixel
+          haxelib run lime setup
+          haxelib install flixel-tools
+          haxelib install flixel-ui
+          haxelib install flixel-addons
+          haxelib install firetongue
+          haxelib install hxCodec
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+          haxelib git tentools https://github.com/TentaRJ/tentools
+          haxelib git systools https://github.com/haya3218/systools
+          haxelib install hxcpp-debug-server
+          haxelib list
+          haxelib run lime rebuild systools windows
+      - name: Compile
+        run: haxelib run lime build Project.xml windows -final
+        # If this worked, we could've done --app-version="3.0.0-${{github.sha}}"
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: DDTO-Windows
+          path: 'export/release/windows/bin'

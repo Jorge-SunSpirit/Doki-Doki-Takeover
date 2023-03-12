@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fumo.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cirno_fumo instance 10000" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10001" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10002" x="304" y="10" width="308" height="349" frameX="0" frameY="-99" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10003" x="304" y="10" width="308" height="349" frameX="0" frameY="-99" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10004" x="622" y="10" width="284" height="391" frameX="-12" frameY="-57" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10005" x="622" y="10" width="284" height="391" frameX="-12" frameY="-57" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10006" x="10" y="443" width="249" height="448" frameX="-34" frameY="0" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10007" x="10" y="443" width="249" height="448" frameX="-34" frameY="0" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10008" x="269" y="443" width="274" height="431" frameX="-17" frameY="-17" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10009" x="269" y="443" width="274" height="431" frameX="-17" frameY="-17" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10010" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10011" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10012" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10013" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10014" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10015" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10016" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10017" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10018" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10019" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10020" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10021" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10022" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10023" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+	<SubTexture name="cirno_fumo instance 10024" x="10" y="10" width="284" height="423" frameX="-12" frameY="-25" frameWidth="308" frameHeight="448"/>
+</TextureAtlas>

@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Yuri Crazy Idle"
+		},
+		{
+			"offsets": [
+				153,
+				6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Yuri Crazy Left"
+		},
+		{
+			"offsets": [
+				-51,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Yuri Crazy Right"
+		},
+		{
+			"offsets": [
+				-3,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Yuri Crazy Down"
+		},
+		{
+			"offsets": [
+				55,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Yuri Crazy Up"
+		}
+	],
+	"costumes": "yuri",
+	"costumelist": [
+		{
+			"subfolder":true,
+			"internal_Name": "casual",
+			"charFile":"yuri-crazy-casual"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "blueskies",
+			"charFile":"yuri-crazy-blueskies"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "taki",
+			"charFile":"yuri-crazy-taki"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "derby",
+			"charFile":"yuri-crazy-derby"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "tabi",
+			"charFile":"yuri-crazy-tabi"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "picnic",
+			"charFile":"yuri-crazy-picnic"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/yuri/Doki_Crazy_Yuri_Assets",
+	"position": [
+		20,
+		-255
+	],
+	"healthicon": "yuri-crazy",
+	"flip_x": false,
+	"healthbar_colors": [
+		158,
+		114,
+		210
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

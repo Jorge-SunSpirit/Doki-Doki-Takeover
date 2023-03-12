@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Nat Idle"
+		},
+		{
+			"offsets": [
+				-29,
+				-22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Nat Sing Note Left"
+		},
+		{
+			"offsets": [
+				-46,
+				14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Nat Sing Note Right"
+		},
+		{
+			"offsets": [
+				38,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Nat Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				34,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Nat Sing Note Up"
+		},
+		{
+			"offsets": [
+				-13,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hmmph",
+			"indices": [],
+			"name": "Nat hmph"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/natsuki/Doki_Nat_Skater_Assets",
+	"position": [
+		0,
+		-175
+	],
+	"healthicon": "natsuki",
+	"flip_x": false,
+	"healthbar_colors": [
+		252,
+		149,
+		211
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

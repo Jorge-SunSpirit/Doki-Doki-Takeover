@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Bara no Yume",
+        "artist": "Kairii",
+        "icon": "pen-pixel",
+        "pause": "monika",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

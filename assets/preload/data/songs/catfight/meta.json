@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Catfight",
+        "artist": "Matt$",
+        "icon": "pen",
+        "pause": "natsuki",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Hot Air Balloon",
+        "artist": "DatDavi",
+        "icon": "pen",
+        "pause": "natsuki",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

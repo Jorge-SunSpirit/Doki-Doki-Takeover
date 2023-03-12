@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Wilted",
+        "artist": "GGalactigal",
+        "icon": "pen-pixel",
+        "pause": "senpai",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

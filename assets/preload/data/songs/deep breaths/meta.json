@@ -1,0 +1,9 @@
+{
+    "song": {
+        "name": "Deep Breaths",
+        "artist": "Saruky",
+        "icon": "pen",
+        "pause": "yuri",
+        "introDialogue": "IntroDialogue"
+    }
+}

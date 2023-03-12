@@ -1,0 +1,188 @@
+{
+	"startingMusic": "monic",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "A few days since the festival… Monika stands alone in the school’s music room.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "The Literature Club has been occupying the space a lot more since their recent club inductees introduced them all to singing-",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "-so much so that they often end up using the room more than the actual Music Club on occasions.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "With her moment alone, Monika reflects on everything that’s happened recently.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"It’s unreal just how… nice things have become.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"I don’t know what I did to deserve a second chance, after everything I did before… but I know I’ll keep things right this time. For my friends.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"Aha- back when it was just me left, I remember telling the one I love how I would’ve loved to have a rap artist join the club one day.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"I didn’t expect that to actually happen, and for them to be the one to help save me and give me this extra chance. I can’t thank them enough.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Monika’s reflection is interrupted by the sound of footsteps entering the music room. A familiar pink-haired individual walked in.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "showdad",
+			"duration": 0
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"Ah, Natsuki! I’m surprised to see you here! I expected you and the others to still be in classes.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "neutral",
+			"string": "\"I… I told my teacher I was taking a bathroom break. Though I actually left to go and find you.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"I’ve been thinking about… stuff… recently. I wanted to come talk with you about it.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"I’m always all ears! What’s on your mind?\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"I… I feel like I can’t keep up with you guys.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Oh? In what way?\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"I had that feeling deep down for a while, even as far back as when it was just the four of us in the club.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Now that the club has grown to seven members, and with the singing on top of that… I feel like I can’t compete-!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"Everyone feels so much better and refined at singing, and I just can’t stand out among all the voices.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"This club is one of the best things I’ve got right now as a comfortable place away from home, but this feeling of being overshadowed and thinking I have to try so hard to not be forgotten-\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "upset",
+			"string": "\"Natsuki- I can assure you, from the bottom of my heart, that you’re honestly one of our most stand-out writers and singers in the whole club!\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"I don’t think anyone can capture the unique style you bring to everything you do. And everyone knows it too!\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahaha",
+			"string": "\"The impression you leave in the club is too special to be forgotten, and we’d never want to leave you out.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "hmmph",
+			"string": "\"...\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Natsuki crosses her arms and looks away with an unsure expression.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"I can prove it, too! Here, why don’t we sing a quick song? I can assure you, once you start getting into your flow, you’ll see what makes you so special.\"",
+			"side": "right"
+		}
+	]
+}

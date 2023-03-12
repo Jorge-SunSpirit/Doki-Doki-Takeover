@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "You and Me",
+        "artist": "HighPoweredKeyz & GGalactigal",
+        "icon": "pen",
+        "pause": "protag",
+        "allowCountDown": false,
+        "endDialogue": "EndDialogue"
+    }
+}

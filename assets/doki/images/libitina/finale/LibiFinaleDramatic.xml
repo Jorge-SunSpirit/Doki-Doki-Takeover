@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="LibiFinaleDramatic.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="LibiFinale0000" x="8" y="8" width="681" height="680"/>
+	<SubTexture name="LibiFinale0001" x="8" y="8" width="681" height="680"/>
+	<SubTexture name="LibiFinale0002" x="8" y="8" width="681" height="680"/>
+	<SubTexture name="LibiFinale0003" x="697" y="8" width="681" height="680"/>
+	<SubTexture name="LibiFinale0004" x="697" y="8" width="681" height="680"/>
+	<SubTexture name="LibiFinale0005" x="697" y="8" width="681" height="680"/>
+	<SubTexture name="LibiFinale0006" x="8" y="696" width="681" height="680"/>
+	<SubTexture name="LibiFinale0007" x="8" y="696" width="681" height="680"/>
+	<SubTexture name="LibiFinale0008" x="8" y="696" width="681" height="680"/>
+</TextureAtlas>

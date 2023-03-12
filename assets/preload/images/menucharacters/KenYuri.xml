@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="KenYuri.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Yuri and Ken instance 10000" x="0" y="0" width="561" height="557" frameX="0" frameY="-11" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10001" x="0" y="0" width="561" height="557" frameX="0" frameY="-11" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10002" x="561" y="0" width="556" height="557" frameX="0" frameY="-11" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10003" x="561" y="0" width="556" height="557" frameX="0" frameY="-11" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10004" x="1117" y="0" width="547" height="561" frameX="0" frameY="-7" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10005" x="1117" y="0" width="547" height="561" frameX="0" frameY="-7" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10006" x="0" y="561" width="537" height="568" frameX="0" frameY="0" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10007" x="0" y="561" width="537" height="568" frameX="0" frameY="0" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10008" x="537" y="561" width="537" height="567" frameX="0" frameY="-1" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10009" x="537" y="561" width="537" height="567" frameX="0" frameY="-1" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10010" x="1074" y="561" width="537" height="567" frameX="0" frameY="-1" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10011" x="1074" y="561" width="537" height="567" frameX="0" frameY="-1" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10012" x="0" y="1129" width="537" height="567" frameX="0" frameY="-1" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10013" x="0" y="1129" width="537" height="567" frameX="0" frameY="-1" frameWidth="561" frameHeight="568"/>
+	<SubTexture name="Yuri and Ken instance 10014" x="537" y="561" width="537" height="567" frameX="0" frameY="-1" frameWidth="561" frameHeight="568"/>
+</TextureAtlas>

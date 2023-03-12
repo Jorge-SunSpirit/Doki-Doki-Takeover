@@ -1,0 +1,14 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "",
+			"expression": "",
+			"string": "",
+			"side": ""
+		}
+	]
+}

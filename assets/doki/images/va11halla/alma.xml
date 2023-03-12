@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="alma.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="alma0000" x="0" y="0" width="90" height="130"/>
+	<SubTexture name="alma0001" x="0" y="0" width="90" height="130"/>
+	<SubTexture name="alma0002" x="90" y="0" width="90" height="130"/>
+	<SubTexture name="alma0003" x="90" y="0" width="90" height="130"/>
+	<SubTexture name="alma0004" x="180" y="0" width="90" height="130"/>
+	<SubTexture name="alma0005" x="180" y="0" width="90" height="130"/>
+	<SubTexture name="alma0006" x="270" y="0" width="90" height="130"/>
+	<SubTexture name="alma0007" x="270" y="0" width="90" height="130"/>
+	<SubTexture name="alma0008" x="360" y="0" width="90" height="130"/>
+	<SubTexture name="alma0009" x="360" y="0" width="90" height="130"/>
+	<SubTexture name="alma0010" x="0" y="130" width="90" height="130"/>
+	<SubTexture name="alma0011" x="0" y="130" width="90" height="130"/>
+	<SubTexture name="alma0012" x="0" y="130" width="90" height="130"/>
+	<SubTexture name="alma0013" x="0" y="130" width="90" height="130"/>
+	<SubTexture name="alma0014" x="0" y="130" width="90" height="130"/>
+	<SubTexture name="alma0015" x="0" y="130" width="90" height="130"/>
+</TextureAtlas>

@@ -1,0 +1,91 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-102,
+				-9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "Big Monika Retry Start"
+		},
+		{
+			"offsets": [
+				-102,
+				-42
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": false,
+			"name": "Big Monika Retry Loop"
+		},
+		{
+			"offsets": [
+				-2,
+				-38
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "Big Monika Retry End"
+		},
+		{
+			"offsets": [
+				332,
+				120
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "crashDeath",
+			"loop": false,
+			"name": "Big Monika ZAMN SCARY"
+		},
+		{
+			"offsets": [
+				-102,
+				-9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Big Monika Retry Start"
+		},
+		{
+			"offsets": [
+				-102,
+				-9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Big Monika Retry Start"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/big_monikia_death",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bigmonika",
+	"flip_x": false,
+	"healthbar_colors": [
+		140,
+		212,
+		101
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"death_sound": "fnf_loss_sfx-bigmonika",
+	"win_sound": "fnf_loss_sfx-bigmonika",
+	"sing_duration": 6,
+	"scale": 0.9
+}

@@ -1,0 +1,180 @@
+{
+    "characters": [
+        {
+            "name":"fumo",
+            "spritePos": [640, 160],
+            "atlas": "menucharacters/fumo",
+            "prefix": "cirno_fumo",
+            "looped": false
+        },
+        {
+            "name":"yuriken",
+            "spritePos": [560, 100],
+            "atlas": "menucharacters/KenYuri",
+            "prefix": "Yuri and Ken",
+            "looped": true
+        },
+        {
+            "name": "sayominus",
+            "spritePos": [600, 240],
+            "atlas": "menucharacters/minussayori",
+            "prefix": "Minus Idle",
+            "scale": [0.8, 0.8],
+            "looped": true
+        },
+        {
+            "name": "senpai",
+            "spritePos": [540, 110],
+            "atlas": "menucharacters/Senpai",
+            "prefix": "senpai_microphone",
+            "scale": [0.9, 0.9],
+            "looped": true
+        },
+        {
+            "name": "sunnat",
+            "spritePos": [340, 260],
+            "atlas": "menucharacters/sunnat_menu",
+            "prefix": "sunday right",
+            "scale": [0.8, 0.8],
+            "looped": true
+        },
+        {
+            "name": "yuritabi",
+            "spritePos": [490, 90],
+            "atlas": "menucharacters/tabiandyuri",
+            "prefix": "Tabi Yuri together hueh",
+            "scale": [0.77, 0.77],
+            "frames": 21,
+            "looped": true
+        },
+        {
+            "name": "pixelmonika",
+            "spritePos": [600, 120],
+            "atlas": "menucharacters/pixelmonika",
+            "prefix": "Monika_Neutral_gif",
+            "scale": [0.7, 0.7],
+            "looped": false
+        },
+        {
+            "name": "minusmonikapixel",
+            "spritePos": [600, 80],
+            "atlas": "menucharacters/minusmonikapixel",
+            "prefix": "MinusMonika_gif",
+            "scale": [0.7, 0.7],
+            "looped": false
+        },
+        {
+            "name": "yuri",
+            "spritePos": [660, 130],
+            "atlas": "menucharacters/yuri",
+            "prefix": "Yuri BG",
+            "scale": [0.7, 0.7]
+        },
+        {
+            "name": "sayori",
+            "spritePos": [660, 180],
+            "atlas": "menucharacters/sayori",
+            "prefix": "Sayori BG",
+            "scale": [0.7, 0.7]
+        },
+        {
+            "name": "natsuki",
+            "spritePos": [640, 220],
+            "atlas": "menucharacters/natsuki",
+            "prefix": "Natsu BG",
+            "scale": [0.7, 0.7]
+        },
+        {
+            "name": "monika",
+            "spritePos": [570, 110],
+            "atlas": "menucharacters/monika",
+            "prefix": "Moni BG",
+            "scale": [0.7, 0.7]
+        },
+        {
+            "name": "protag",
+            "spritePos": [660, 110],
+            "atlas": "menucharacters/protag",
+            "prefix": "Protag-kun BG",
+            "scale": [0.7, 0.7]
+        },
+        {
+            "name": "akimonika",
+            "spritePos": [570, 90],
+            "atlas": "menucharacters/akihamoniduo",
+            "prefix": "Moni Akiha Menu",
+            "scale": [0.77, 0.77],
+            "frames": 21
+        },
+        {
+            "name": "cyrixstatic",
+            "spritePos": [500, 130],
+            "atlas": "menucharacters/cyrixstaticmenu",
+            "prefix": "Cyrix-Static Menu",
+            "frames": 21,
+            "looped": true
+        },
+        {
+            "name": "together",
+            "spritePos": [470, 40],
+            "atlas": "menucharacters/dokitogether",
+            "prefix": "Doki together club",
+            "scale": [0.7, 0.7],
+            "frames": 21
+        },
+        {
+            "name":"together1",
+            "spritePos": [490, 50],
+            "atlas": "menucharacters/dokitogetheralt",
+            "prefix": "Doki together club",
+            "scale": [0.77, 0.77],
+            "frames": 21
+        },
+        {
+            "name":"zipori",
+            "spritePos": [540, 90],
+            "atlas": "menucharacters/sayozip",
+            "prefix": "Sayo Zipper Menu",
+            "scale": [0.8, 0.8],
+            "looped": true
+        },
+        {
+            "name": "nathaachama",
+            "spritePos": [500, 200],
+            "atlas": "menucharacters/nathaachama",
+            "prefix": "Nat Haachama",
+            "scale": [0.85, 0.85],
+            "looped": true
+        },
+        {
+            "name": "nathank",
+            "spritePos": [430, 168],
+            "atlas": "menucharacters/NatHank",
+            "prefix": "NatHankMenu",
+            "scale": [0.85, 0.85]
+        },
+        {
+            "name": "indiehorror",
+            "spritePos": [410, 190],
+            "atlas": "menucharacters/indiehorror",
+            "prefix": "IndieHorror",
+            "scale": [0.8, 0.8]
+        },
+        {
+            "name": "deeppoems",
+            "spritePos": [410, 70],
+            "atlas": "menucharacters/deeppoems",
+            "prefix": "Deep Poems",
+            "scale": [0.9, 0.9]
+        },
+        {
+            "name": "sayomongus",
+            "spritePos": [600, 142],
+            "atlas": "menucharacters/sayomongus",
+            "prefix": "Sayo Impostor Menu",
+            "scale": [0.8, 0.8],
+            "looped": true
+        }
+
+    ]
+}

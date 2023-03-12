@@ -1,0 +1,45 @@
+flag	content
+nameKeyBindings	Key Bindings
+nameDownscroll	Downscroll
+nameUpscroll	Upscroll
+nameGhostTap	Ghost Tapping
+nameNoGhostTap	No Ghost Tapping
+namePosition	Song Position
+nameReset	Reset Button
+nameFlashing	Flashing Lights
+nameJudgement	Judgement Timings
+nameFPSCount	FPS & Memory Counter
+nameFPSCap	FPS Cap
+nameScroll	Scroll Speed
+nameNPS	NPS Display
+nameCustomize	Customize Gameplay HUD
+nameGFCountdown	Girlfriend Countdown
+nameMiddleScrollOn	Middle Scroll
+nameMiddleScrollOff	Right Side Scroll
+nameLaneUnderwayOn	Lane Underlay
+nameLaneUnderwayOff	No Lane Underlay
+nameScoreReset	Reset Score Data
+nameScoreResetConfirm	Confirm Reset Score Data
+nameStoryReset	Reset Story Data
+nameStoryResetConfirm	Confirm Reset Story Data
+nameSaveReset	Delete Save Data
+nameSaveResetConfirm	Confirm Save Data Deletion
+nameSelfAware	Self Awareness
+nameGameJolt	Game Jolt Integration
+nameHitSound	Hit Sounds
+nameHitSoundJudge	Judgement Hit Sounds
+nameNoteSplash	Note Splashes
+nameEarlyLate	Early/Late Indicator
+nameAutoPause	Auto Pause
+nameJudgeCount	Judgement Counter
+nameVideoDub	Video Dub
+nameShowRating	Show Ratings
+nameHideRating	Hide Ratings
+nameAntialiasing	Anti-aliasing
+nameCacheCharacter	Character Caching
+nameCacheSong	Song Caching
+nameCache	Cache Assets
+namePreload	Preload Assets
+nameRandom	Randomize Notes
+nameShaders	Shaders
+nameCursor	Custom Cursor

@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Constricted",
+        "artist": "Stardust Tunes",
+        "icon": "pen",
+        "pause": "sayori",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

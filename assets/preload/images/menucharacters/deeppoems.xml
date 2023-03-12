@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="deeppoems.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Deep Poems0000" x="10" y="10" width="989" height="804" frameX="0" frameY="0" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0001" x="10" y="10" width="989" height="804" frameX="0" frameY="0" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0002" x="1009" y="10" width="987" height="798" frameX="-6" frameY="-6" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0003" x="1009" y="10" width="987" height="798" frameX="-6" frameY="-6" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0004" x="2006" y="10" width="991" height="795" frameX="-9" frameY="-9" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0005" x="3007" y="10" width="991" height="795" frameX="-9" frameY="-9" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0006" x="10" y="824" width="993" height="794" frameX="-9" frameY="-10" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0007" x="10" y="824" width="993" height="794" frameX="-9" frameY="-10" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0008" x="1013" y="824" width="991" height="803" frameX="-1" frameY="-1" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0009" x="1013" y="824" width="991" height="803" frameX="-1" frameY="-1" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0010" x="2014" y="824" width="989" height="804" frameX="0" frameY="0" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0011" x="3013" y="824" width="989" height="804" frameX="0" frameY="0" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0012" x="3013" y="824" width="989" height="804" frameX="0" frameY="0" frameWidth="1002" frameHeight="804"/>
+	<SubTexture name="Deep Poems0013" x="3013" y="824" width="989" height="804" frameX="0" frameY="0" frameWidth="1002" frameHeight="804"/>
+</TextureAtlas>

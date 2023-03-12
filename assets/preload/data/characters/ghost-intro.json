@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": true,
+			"anim": "idle",
+			"fps": 24,
+			"name": "GhostIntroIdle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				103,
+				65
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "GhostIntroLeft",
+			"indices": []
+		},
+		{
+			"offsets": [
+				96,
+				70
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "GhostIntroDown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				97,
+				60
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "GhostIntroUp",
+			"indices": []
+		},
+		{
+			"offsets": [
+				103,
+				65
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "GhostIntroRight",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ghost/LibiIntro_Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "hidden",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

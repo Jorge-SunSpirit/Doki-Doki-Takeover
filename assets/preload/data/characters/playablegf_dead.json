@@ -1,0 +1,70 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				179
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "GF dead Loop"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				170
+			],
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "GF Dies"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				179
+			],
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "GF dead Loop"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				98,
+				231
+			],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "GF dead Confirm"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/girlfriend/playable_gf_dead",
+	"position": [
+		0,
+		-70
+	],
+	"healthicon": "gf",
+	"flip_x": true,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"gameover_character": "playablegf",
+	"death_sound": "fnf_loss_sfx",
+	"win_sound": "dah"
+}

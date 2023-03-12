@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfPixelangryNew.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BFPISSED Down Miss0000" x="3" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0001" x="3" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0002" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0003" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0004" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0005" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0006" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0007" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0008" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0009" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0010" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0011" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0012" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0013" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Down Miss0014" x="90" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0000" x="177" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0001" x="177" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0002" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0003" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0004" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0005" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0006" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0007" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0008" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0009" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0010" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0011" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0012" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0013" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Left Miss0014" x="264" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0000" x="351" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0001" x="351" y="3" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0002" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0003" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0004" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0005" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0006" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0007" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0008" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0009" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0010" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0011" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0012" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0013" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Right Miss0014" x="3" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0000" x="90" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0001" x="90" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0002" x="90" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0003" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0004" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0005" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0006" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0007" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0008" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0009" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0010" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0011" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0012" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0013" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSED Up Miss0014" x="177" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0000" x="264" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0001" x="264" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0002" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0003" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0004" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0005" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0006" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0007" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0008" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0009" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0010" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0011" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0012" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0013" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDDown0014" x="351" y="90" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0000" x="3" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0001" x="3" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0002" x="90" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0003" x="90" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0004" x="177" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0005" x="177" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0006" x="264" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0007" x="264" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0008" x="351" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0009" x="351" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0010" x="351" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0011" x="351" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0012" x="351" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0013" x="351" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDIdle0014" x="351" y="177" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0000" x="3" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0001" x="3" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0002" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0003" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0004" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0005" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0006" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0007" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0008" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0009" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0010" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0011" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0012" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0013" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDLeft0014" x="90" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0000" x="177" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0001" x="177" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0002" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0003" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0004" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0005" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0006" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0007" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0008" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0009" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0010" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0011" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0012" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0013" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDRight0014" x="264" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0000" x="351" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0001" x="351" y="264" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0002" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0003" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0004" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0005" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0006" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0007" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0008" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0009" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0010" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0011" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0012" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0013" x="3" y="351" width="84" height="84"/>
+	<SubTexture name="BFPISSEDUp0014" x="3" y="351" width="84" height="84"/>
+</TextureAtlas>

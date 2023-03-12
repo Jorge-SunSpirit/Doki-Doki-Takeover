@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="YuriCard.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="YuriCardAnim0000" x="10" y="10" width="272" height="177" frameX="0" frameY="-317" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0001" x="292" y="10" width="272" height="335" frameX="0" frameY="-159" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0002" x="574" y="10" width="272" height="413" frameX="0" frameY="-81" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0003" x="856" y="10" width="272" height="464" frameX="0" frameY="-30" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0004" x="1138" y="10" width="272" height="479" frameX="0" frameY="-15" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0005" x="1420" y="10" width="272" height="479" frameX="0" frameY="-12" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0006" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0007" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0008" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0009" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0010" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0011" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0012" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0013" x="1420" y="10" width="272" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0014" x="1702" y="10" width="254" height="479" frameX="-9" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0015" x="10" y="499" width="109" height="477" frameX="-81" frameY="-7" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0016" x="129" y="499" width="5" height="478" frameX="-133" frameY="0" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0017" x="144" y="499" width="109" height="477" frameX="-81" frameY="-7" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0018" x="263" y="499" width="253" height="477" frameX="-9" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0019" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0020" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0021" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0022" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0023" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0024" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0025" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0026" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0027" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0028" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+	<SubTexture name="YuriCardAnim0029" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="272" frameHeight="494"/>
+</TextureAtlas>

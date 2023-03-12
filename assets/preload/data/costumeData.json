@@ -1,0 +1,348 @@
+{
+    "list": [
+        {
+            "id": "bf",
+            "charName": "charBF",
+            "costumes": [
+                {
+                    "data": "",
+                    "name": "nameDefault",
+                    "desc": "descDefault_BF",
+                    "color": "0xFFB2EFFF"
+                },
+                {
+                    "data": "casual",
+                    "name": "nameRegular",
+                    "desc": "descRegular_BF",
+                    "color": "0xFFB2EFFF"
+                },
+                {
+                    "data": "minus",
+                    "name": "nameMinus",
+                    "desc": "descMinus_BF",
+                    "color": "0xFFB2EFFF"
+                },
+                {
+                    "data": "soft",
+                    "name": "nameSoft",
+                    "desc": "descSoft",
+                    "unlock": "unlockSoft",
+                    "color": "0xFFAECDEA"
+                },
+                {
+                    "data": "mrcow",
+                    "name": "nameCow",
+                    "desc": "descCow",
+                    "unlock": "unlockCow",
+                    "color": "0xFF3D3D3D"
+                },
+                {
+                    "data": "blueskies",
+                    "name": "nameBlueSky",
+                    "desc": "descBlueSky_BF",
+                    "unlock": "unlockBlueSkies_BF",
+                    "color": "0xFFB2EFFF"
+                },
+                {
+                    "data": "holofunk",
+                    "name": "nameHoloFunk",
+                    "desc": "descHoloFunk_BF",
+                    "unlock": "unlockHoloFunk",
+                    "color": "0xFFFF85C8"
+                }
+            ]
+        },
+        {
+            "id": "gf",
+            "charName": "charGF",
+            "costumes": [
+                {
+                    "data": "",
+                    "name": "nameDefault",
+                    "desc": "descDefault_GF",
+                    "color": "0xFFF84863"
+                },
+                {
+                    "data": "casual",
+                    "name": "nameRegular",
+                    "desc": "descRegular_GF",
+                    "color": "0xFFF84863"
+                },
+                {
+                    "data": "minus",
+                    "name": "nameMinus",
+                    "desc": "descMinusGF",
+                    "color": "0xFFC22D6C"
+                },
+                {
+                    "data": "soft",
+                    "name": "nameSoftPico",
+                    "desc": "descSoftPico",
+                    "unlock": "unlockSoft",
+                    "color": "0xFF679B87"
+                },
+                {
+                    "data": "blueskies",
+                    "name": "nameBlueSky",
+                    "desc": "descBlueSky_GF",
+                    "unlock": "unlockBlueSkies_GF",
+                    "color": "0xFFB2EFFF"
+                },
+                {
+                    "data": "holofunk",
+                    "name": "nameHoloFunk",
+                    "desc": "descHoloFunk_GF",
+                    "unlock": "unlockHoloFunk",
+                    "color": "0xFFFFB09E"
+                },
+                {
+                    "data": "tbd",
+                    "name": "nameTBD",
+                    "desc": "descTBD",
+                    "unlock": "unlockTBD",
+                    "color": "0xFFFF9EC3"
+                }
+            ]
+        },
+        {
+            "id": "monika",
+            "charName": "charMoni",
+            "costumes": [
+                {
+                    "data": "",
+                    "name": "nameDefault",
+                    "desc": "descDefault_MO",
+                    "color": "0xFF6FC96C"
+                },
+                {
+                    "data": "casual",
+                    "name": "nameCasual",
+                    "desc": "descCasual_MO",
+                    "color": "0xFFFCE5C4"
+                },
+                {
+                    "data": "valentine",
+                    "name": "nameValentine",
+                    "desc": "descValentine_MO",
+                    "unlock": "unlockValentine"
+                },
+                {
+                    "data": "hex",
+                    "name": "nameFestival",
+                    "desc": "descFestival_MO",
+                    "unlock": "unlockFestival_MO",
+                    "color": "0xFFEDA469"
+                },
+                {
+                    "data": "senpai",
+                    "name": "nameFriends",
+                    "desc": "descFriends_MO",
+                    "unlock": "unlockFriends_MO",
+                    "color": "0xFFA5C0F9"
+                },
+                {
+                    "data": "blueskies",
+                    "name": "nameBlueSky",
+                    "desc": "descBlueSky_MO",
+                    "unlock": "unlockBlueSkies_MO",
+                    "color": "0xFFB2EFFF"
+                },
+                {
+                    "data": "vigilante",
+                    "name": "nameVigilante",
+                    "desc": "descVigilante",
+                    "unlock": "unlockVigilante",
+                    "color": "0xFFBD3427"
+                }
+            ]
+        },
+        {
+            "id": "sayori",
+            "charName": "charSayo",
+            "costumes": [
+                {
+                    "data": "",
+                    "name": "nameDefault",
+                    "desc": "descDefault_SA",
+                    "color": "0xFF94D9FA"
+                },
+                {
+                    "data": "casual",
+                    "name": "nameCasual",
+                    "desc": "descCasual_SA"
+                },
+                {
+                    "data": "sleepwear",
+                    "name": "nameSleepWear",
+                    "desc": "descSleepWear",
+                    "unlock": "unlockSleepWear",
+                    "color": "0xFFC4C4C4"
+                },
+                {
+                    "data": "picnic",
+                    "name": "namePicnic",
+                    "desc": "descPicnic_SA",
+                    "unlock": "unlockPicnic_SA",
+                    "color": "0xFF8EDB9B"
+                },
+                {
+                    "data": "grace",
+                    "name": "nameFestival",
+                    "desc": "descFestival_SA",
+                    "unlock": "unlockFestival_SA",
+                    "color": "0xFFFF9D98"
+                },
+                {
+                    "data": "zipper",
+                    "name": "nameFriends",
+                    "desc": "descFriends_SA",
+                    "unlock": "unlockFriends_SA",
+                    "color": "0xFF3D3D3D"
+                },
+                {
+                    "data": "blueskies",
+                    "name": "nameBlueSky",
+                    "desc": "descBlueSky_SA",
+                    "unlock": "unlockBlueSkies_SA",
+                    "color": "0xFFB2EFFF"
+                }
+            ]
+        },
+        {
+            "id": "natsuki",
+            "charName": "charNat",
+            "costumes": [
+                {
+                    "data": "",
+                    "name": "nameDefault",
+                    "desc": "descDefault_NA"
+                },
+                {
+                    "data": "casual",
+                    "name": "nameCasual",
+                    "desc": "descCasual_NA"
+                },
+                {
+                    "data": "skater",
+                    "name": "nameSkater",
+                    "desc": "descSkater_NA",
+                    "unlock": "unlockSkater",
+                    "color": "0xFFFDCFB1"
+                },
+                {
+                    "data": "kapi",
+                    "name": "nameFestival",
+                    "desc": "descFestival_NA",
+                    "unlock": "unlockFestival_NA",
+                    "color": "0xFF8D9ED9"
+                },
+                {
+                    "data": "sunday",
+                    "name": "nameFriends",
+                    "desc": "descFriends_NA",
+                    "unlock": "unlockFriends_NA",
+                    "color": "0xFF3D3D3D"
+                },
+                {
+                    "data": "hank",
+                    "name": "nameHank",
+                    "desc": "descHank",
+                    "unlock": "unlockHank",
+                    "color": "0xFFBD3427"
+                },
+                {
+                    "data": "blueskies",
+                    "name": "nameBlueSky",
+                    "desc": "descBlueSky_NA",
+                    "unlock": "unlockBlueSkies_NA",
+                    "color": "0xFFB2EFFF"
+                }
+            ]
+        },
+        {
+            "id": "yuri",
+            "charName": "charYuri",
+            "costumes": [
+                {
+                    "data": "",
+                    "name": "nameDefault",
+                    "desc": "descDefault_YU",
+                    "color": "0xFFC68EE8"
+                },
+                {
+                    "data": "casual",
+                    "name": "nameCasual",
+                    "desc": "descCasual_YU",
+                    "color": "0xFF3D3D3D"
+                },
+                {
+                    "data": "derby",
+                    "name": "nameDerby",
+                    "desc": "descDerby_YU",
+                    "unlock": "unlockDerby",
+                    "color": "0xFFA6E0BA"
+                },
+                {
+                    "data": "picnic",
+                    "name": "namePicnic",
+                    "desc": "descPicnic_YU",
+                    "unlock": "unlockPicnic_YU",
+                    "color": "0xFF3D3D3D"
+                },
+                {
+                    "data": "taki",
+                    "name": "nameFestival",
+                    "desc": "descFestival_YU",
+                    "unlock": "unlockFestival_YU",
+                    "color": "0xFFD8D4F3"
+                },
+                {
+                    "data": "tabi",
+                    "name": "nameFriends",
+                    "desc": "descFriends_YU",
+                    "unlock": "unlockFriends_YU",
+                    "color": "0xFFFDEDB6"
+                },
+                {
+                    "data": "blueskies",
+                    "name": "nameBlueSky",
+                    "desc": "descBlueSky_YU",
+                    "unlock": "unlockBlueSkies_YU",
+                    "color": "0xFFB2EFFF"
+                }
+            ]
+        },
+        {
+            "id": "protag",
+            "charName": "charPro",
+            "costumes": [
+                {
+                    "data": "",
+                    "name": "nameDefault",
+                    "desc": "descDefault_PR",
+                    "color": "0xFFBB846F"
+                },
+                {
+                    "data": "casual",
+                    "name": "nameCasual",
+                    "desc": "descCasual_PR",
+                    "color": "0xFF9E7782"
+                },
+                {
+                    "data": "hotline",
+                    "name": "nameHotline",
+                    "desc": "descHotline",
+                    "unlock": "unlockHotline",
+                    "color": "0xFFF75B6C"
+                },
+                {
+                    "data": "blueskies",
+                    "name": "nameBlueSky",
+                    "desc": "descBlueSky_PR",
+                    "unlock": "unlockBlueSkies_PR",
+                    "color": "0xFFB2EFFF"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+	"directory": "doki",
+	"defaultZoom": 1.1,
+	"isPixelStage": false,
+
+	"boyfriend": [820, 680],
+	"girlfriend": [500, 530],
+	"opponent": [228, 412],
+	"hide_girlfriend": false,
+
+	"forced_camera_position": true,
+	"camera_boyfriend": [752, 587],
+	"camera_opponent": [566, 440],
+	"camera_center": [582, 477],
+	"camera_speed": 1
+}

@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "High School Conflict",
+        "artist": "GGalactigal",
+        "icon": "pen-pixel",
+        "pause": "monika",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

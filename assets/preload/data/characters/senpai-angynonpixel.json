@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Senpai Returns Angy0"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [10, 11, 12, 13],
+			"fps": 24,
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "Senpai Returns Angy0"
+		},
+		{
+			"offsets": [
+				31,
+				-4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Senpai Returns Left Angy0"
+		},
+		{
+			"offsets": [
+				31,
+				-4
+			],
+			"indices": [10, 11, 12, 13],
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"loop": true,
+			"name": "Senpai Returns Left Angy0"
+		},
+		{
+			"offsets": [
+				-15,
+				-12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Senpai Returns Right Angy0"
+		},
+		{
+			"offsets": [
+				-15,
+				-12
+			],
+			"indices": [10, 11, 12, 13],
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"loop": true,
+			"name": "Senpai Returns Right Angy0"
+		},
+		{
+			"offsets": [
+				-8,
+				27
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Senpai Returns Up Angy0"
+		},
+		{
+			"offsets": [
+				-8,
+				27
+			],
+			"indices": [10, 11, 12, 13],
+			"fps": 24,
+			"anim": "singUP-loop",
+			"loop": true,
+			"name": "Senpai Returns Up Angy0"
+		},
+		{
+			"offsets": [
+				-10,
+				-78
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Senpai Returns Down Angy0"
+		},
+		{
+			"offsets": [
+				-10,
+				-78
+			],
+			"indices": [10, 11, 12, 13],
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"loop": true,
+			"name": "Senpai Returns Down Angy0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SenpaiNonPixel_Assets",
+	"position": [
+		20,
+		-350
+	],
+	"healthicon": "senpai-real",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		170,
+		111
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

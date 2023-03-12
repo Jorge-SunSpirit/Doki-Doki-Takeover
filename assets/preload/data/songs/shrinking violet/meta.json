@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Shrinking Violet",
+        "artist": "HighPoweredKeyz & DatDavi",
+        "icon": "pen",
+        "pause": "yuri",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

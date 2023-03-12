@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SideStories.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Side Stories0000" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0001" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0002" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0003" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0004" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0005" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0006" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0007" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0008" x="10" y="10" width="867" height="50"/>
+	<SubTexture name="Side Stories0009" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0010" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0011" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0012" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0013" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0014" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0015" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0016" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories0017" x="10" y="70" width="867" height="50"/>
+	<SubTexture name="Side Stories Selected0000" x="10" y="130" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0001" x="10" y="130" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0002" x="10" y="190" width="867" height="74" frameX="0" frameY="-5" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0003" x="10" y="190" width="867" height="74" frameX="0" frameY="-5" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0004" x="10" y="274" width="867" height="78" frameX="0" frameY="-1" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0005" x="10" y="274" width="867" height="78" frameX="0" frameY="-1" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0006" x="10" y="362" width="867" height="79"/>
+	<SubTexture name="Side Stories Selected0007" x="10" y="362" width="867" height="79"/>
+	<SubTexture name="Side Stories Selected0008" x="10" y="362" width="867" height="79"/>
+	<SubTexture name="Side Stories Selected0009" x="10" y="362" width="867" height="79"/>
+	<SubTexture name="Side Stories Selected0010" x="10" y="362" width="867" height="79"/>
+	<SubTexture name="Side Stories Selected0011" x="10" y="451" width="867" height="71" frameX="0" frameY="-8" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0012" x="10" y="451" width="867" height="71" frameX="0" frameY="-8" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0013" x="10" y="532" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0014" x="10" y="532" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0015" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0016" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0017" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0018" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0019" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0020" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0021" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0022" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0023" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0024" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0025" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0026" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0027" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0028" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0029" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0030" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0031" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0032" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0033" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories Selected0034" x="10" y="592" width="867" height="50" frameX="0" frameY="-29" frameWidth="867" frameHeight="79"/>
+	<SubTexture name="Side Stories highlighted0000" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0001" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0002" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0003" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0004" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0005" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0006" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0007" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0008" x="10" y="652" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0009" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0010" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0011" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0012" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0013" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0014" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0015" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0016" x="10" y="712" width="867" height="50"/>
+	<SubTexture name="Side Stories highlighted0017" x="10" y="712" width="867" height="50"/>
+</TextureAtlas>

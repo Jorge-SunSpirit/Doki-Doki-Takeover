@@ -1,0 +1,69 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF idle dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-48,
+				151
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "DokiGameOverIntro",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-72,
+				137
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "DokiGameOverLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-52,
+				153
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "DokiGameOverConfirm",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DokiGameOver",
+	"position": [
+		-25,
+		0
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"death_sound": "fnf_loss_sfx-doki",
+	"win_sound": "dah"
+}

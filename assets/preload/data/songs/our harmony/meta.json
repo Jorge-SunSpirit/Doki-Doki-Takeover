@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Our Harmony",
+        "artist": "DatDavi ft. Carimelle",
+        "icon": "pen",
+        "pause": "monika",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Obsession",
+        "artist": "Matt$",
+        "icon": "pen",
+        "pause": "yuri",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

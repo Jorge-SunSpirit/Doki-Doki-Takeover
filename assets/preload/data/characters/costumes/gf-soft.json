@@ -1,0 +1,172 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "GF Dancing Beat"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"name": "GF Dancing Beat"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				9
+			],
+			"fps": 24,
+			"anim": "countdownThree",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"name": "GF countdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				9
+			],
+			"fps": 24,
+			"anim": "countdownTwo",
+			"indices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "GF countdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				9
+			],
+			"fps": 24,
+			"anim": "countdownOne",
+			"indices": [
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23
+			],
+			"name": "GF countdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				9
+			],
+			"fps": 24,
+			"anim": "countdownGo",
+			"indices": [
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34
+			],
+			"name": "GF countdown"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-7,
+				-6
+			],
+			"fps": 24,
+			"anim": "necksnap",
+			"indices": [],
+			"name": "GF NECKSNAP"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/girlfriend/Reanimated_Toughie_Assets",
+	"position": [
+		-100,
+		230
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

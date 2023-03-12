@@ -1,0 +1,21 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "what",
+			"string": "\"PUT THAT THING BACK WHERE IT CAME FROM OR SO HELP ME-!\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "zipper",
+			"expression": "neutral",
+			"string": "\"Gwarrgh.\"",
+			"side": "left"
+		}
+	]
+}

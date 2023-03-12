@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ProtagPopup.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ProtagPopup0000" x="8" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0001" x="8" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0002" x="8" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0003" x="390" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0004" x="390" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0005" x="772" y="8" width="374" height="559" frameX="-13" frameY="-62" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0006" x="1154" y="8" width="374" height="559" frameX="-13" frameY="-62" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0007" x="1154" y="8" width="374" height="559" frameX="-13" frameY="-62" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0008" x="1536" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0009" x="1918" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0010" x="1918" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0011" x="1918" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0012" x="1536" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0013" x="1536" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0014" x="1536" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0015" x="1918" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0016" x="1918" y="8" width="374" height="564" frameX="-13" frameY="-57" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0017" x="2300" y="8" width="374" height="559" frameX="-13" frameY="-62" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0018" x="2682" y="8" width="374" height="559" frameX="-13" frameY="-62" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0019" x="2682" y="8" width="374" height="559" frameX="-13" frameY="-62" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0020" x="3064" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0021" x="3446" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0022" x="3446" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0023" x="3446" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0024" x="3064" y="8" width="374" height="554" frameX="-13" frameY="-67" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0025" x="8" y="580" width="387" height="508" frameX="0" frameY="-113" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0026" x="8" y="580" width="387" height="508" frameX="0" frameY="-113" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0027" x="403" y="580" width="374" height="620" frameX="-13" frameY="0" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0028" x="403" y="580" width="374" height="620" frameX="-13" frameY="0" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0029" x="785" y="580" width="386" height="601" frameX="-12" frameY="-20" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0030" x="1179" y="580" width="386" height="601" frameX="-12" frameY="-20" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0031" x="1573" y="580" width="384" height="607" frameX="-13" frameY="-13" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0032" x="1573" y="580" width="384" height="607" frameX="-13" frameY="-13" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0033" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0034" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0035" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0036" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0037" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0038" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0039" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0040" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0041" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0042" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0043" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0044" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0045" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0046" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0047" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0048" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+	<SubTexture name="ProtagPopup0049" x="1965" y="580" width="384" height="609" frameX="-13" frameY="-11" frameWidth="398" frameHeight="621"/>
+</TextureAtlas>

@@ -1,0 +1,178 @@
+{
+	"canSkip": false,
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "yeah",
+			"string": "\"Yuri, your singing voice is amazing! Sing again, sing again! I wanna hear!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "what",
+			"string": "\"Hrk-!\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Are you ok, Natsuki?\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"Bleh... I'm not feeling so gooooooooooo-\""
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"oooooooooooooooooooooooo\""
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"ooooooooooooo\""
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"oooo\""
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"ooooooo\""
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"oooo\""
+		},
+		{
+			"isCommand": true,
+			"name": "autoskip",
+			"string": "\"ooo\""
+		},
+		{
+			"isCommand": true,
+			"name": "playsound",
+			"string": "glitch1"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "spook",
+			"string": "",
+			"side": "right"
+		},
+		{
+			"isCommand": true,
+			"name": "glitch"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "this gets skipped for some reason",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "sick",
+			"string": "\"I'm not feeling so good.\"",
+			"side": "right"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Ah- I’m gonna walk Natsuki to the nurse’s office.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "neutral",
+			"string": "\"Y-you guys have fun singing though!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Eheh-\"",
+			"side": "left"
+		},
+		{
+			"isCommand": true,
+			"name": "hideleft"
+		},
+		{
+			"isCommand": true,
+			"name": "hideright"
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "dokiexit",
+			"duration": 7
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"...ufufu.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Singing is much nicer than I thought.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Its a nice alternative means to... release my emotions.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "smile",
+			"string": "\"Let’s sing again. Right now.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ahaha",
+			"string": "\"Hahhhh...-\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "scared",
+			"string": "\"...\"",
+			"side": "right"
+		}
+	]
+}

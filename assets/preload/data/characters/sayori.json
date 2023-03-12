@@ -1,0 +1,166 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-32,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Sayo Sing Note Left"
+		},
+		{
+			"offsets": [
+				-98,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Sayo Sing Note Right"
+		},
+		{
+			"offsets": [
+				-88,
+				-44
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Sayo Sing Note Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "Sayo Idle nrw test",
+			"indices": [
+				25,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "Sayo Idle nrw test",
+			"indices": [
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
+			]
+		},
+		{
+			"offsets": [
+				-51,
+				73
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Sayo Sing Note Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-21,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "nara",
+			"indices": [],
+			"name": "Sayo Nara animated"
+		}
+	],
+	"costumes": "sayori",
+	"costumelist": [
+		{
+			"subfolder":true,
+			"internal_Name": "blueskies",
+			"charFile":"sayori-blueskies"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "casual",
+			"charFile":"sayori-casual"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "picnic",
+			"charFile":"sayori-picnic"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "grace",
+			"charFile":"sayori-grace"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "minus",
+			"charFile":"sayori-minus"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "sleepwear",
+			"charFile":"sayori-sleepwear"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "zipper",
+			"charFile":"sayori-zipper"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sayori/Doki_Sayo_Assets",
+	"position": [
+		0,
+		-280
+	],
+	"healthicon": "sayori",
+	"flip_x": false,
+	"healthbar_colors": [
+		149,
+		224,
+		250
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

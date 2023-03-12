@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pixel_Splash.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="note splash blue 10000" x="63" y="116" width="43" height="43"/>
+	<SubTexture name="note splash blue 10001" x="10" y="10" width="43" height="43"/>
+	<SubTexture name="note splash blue 10002" x="63" y="10" width="43" height="43"/>
+	<SubTexture name="note splash blue 10003" x="116" y="10" width="43" height="43"/>
+	<SubTexture name="note splash blue 10004" x="63" y="169" width="43" height="43"/>
+	<SubTexture name="note splash green 10000" x="63" y="116" width="43" height="43"/>
+	<SubTexture name="note splash green 10001" x="169" y="10" width="43" height="43"/>
+	<SubTexture name="note splash green 10002" x="10" y="63" width="43" height="43"/>
+	<SubTexture name="note splash green 10003" x="63" y="63" width="43" height="43"/>
+	<SubTexture name="note splash green 10004" x="63" y="169" width="43" height="43"/>
+	<SubTexture name="note splash purple 10000" x="63" y="116" width="43" height="43"/>
+	<SubTexture name="note splash purple 10001" x="116" y="63" width="43" height="43"/>
+	<SubTexture name="note splash purple 10002" x="169" y="63" width="43" height="43"/>
+	<SubTexture name="note splash purple 10003" x="10" y="116" width="43" height="43"/>
+	<SubTexture name="note splash purple 10004" x="63" y="169" width="43" height="43"/>
+	<SubTexture name="note splash red 10000" x="63" y="116" width="43" height="43"/>
+	<SubTexture name="note splash red 10001" x="116" y="116" width="43" height="43"/>
+	<SubTexture name="note splash red 10002" x="169" y="116" width="43" height="43"/>
+	<SubTexture name="note splash red 10003" x="10" y="169" width="43" height="43"/>
+	<SubTexture name="note splash red 10004" x="63" y="169" width="43" height="43"/>
+</TextureAtlas>

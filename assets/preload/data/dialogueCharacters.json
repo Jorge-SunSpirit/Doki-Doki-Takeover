@@ -1,0 +1,84 @@
+{
+    "characters": [
+        {
+            "name": "monika",
+            "portraitLeft": true,
+            "atlas": "dialogue/monika"
+        },
+        {
+            "name": "monikahappy",
+            "portraitLeft": true,
+            "atlas": "dialogue/monikahappy"
+        },
+        {
+            "name": "monikagasp",
+            "portraitLeft": false,
+            "atlas": "dialogue/monikagasp"
+        },
+        {
+            "name": "monikagaspleft",
+            "portraitLeft": true,
+            "atlas": "dialogue/monikagaspleft"
+        },
+        {
+            "name": "monikahmm",
+            "portraitLeft": false,
+            "atlas": "dialogue/monikahmm" 
+        },
+        {
+            "name": "monikahoh",
+            "portraitLeft": false,
+            "atlas": "dialogue/monikahoh"
+        },
+        {
+            "name": "monikahohleft",
+            "portraitLeft": true,
+            "atlas": "dialogue/monikahohleft"
+        },
+        {
+            "name": "monikasad",
+            "portraitLeft": false,
+            "atlas": "dialogue/monikasad"
+        },
+        {
+            "name": "bf",
+            "portraitLeft": false,
+            "atlas": "dialogue/bf"
+        },
+        {
+            "name": "bfwhat",
+            "portraitLeft": false,
+            "atlas": "dialogue/bfwhat"
+        },
+        {
+            "name": "bfangry",
+            "portraitLeft": false,
+            "atlas": "dialogue/bfangry"
+        },
+        {
+            "name": "senpai",
+            "portraitLeft": true,
+            "atlas": "dialogue/senpai"
+        },
+        {
+            "name": "senpaihappy",
+            "portraitLeft": true,
+            "atlas": "dialogue/senpaihappy"
+        },
+        {
+            "name": "senpaihmm",
+            "portraitLeft": true,
+            "atlas": "dialogue/senpaihmm"
+        },
+        {
+            "name": "whodis",
+            "portraitLeft": true,
+            "atlas": "dialogue/whodis"
+        },
+        {
+            "name": "spirit",
+            "portraitLeft": true,
+            "atlas": "dialogue/spirit" 
+        }
+    ]
+}

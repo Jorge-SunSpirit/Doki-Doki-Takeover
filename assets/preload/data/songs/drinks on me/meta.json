@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Drinks on Me",
+        "artist": "DPZ",
+        "icon": "shaker",
+        "pause": "jill",
+        "allowCountDown": false,
+        "playManually": true
+    }
+}

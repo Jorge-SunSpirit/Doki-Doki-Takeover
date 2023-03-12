@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BakaBGDoodles.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Normal Overlay0000" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0001" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0002" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0003" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0004" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0005" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0006" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0007" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0008" x="10" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0009" x="1282" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0010" x="2554" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0011" x="2554" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0012" x="2554" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0013" x="2554" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0014" x="2554" y="10" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0015" x="10" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0016" x="10" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0017" x="10" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0018" x="10" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0019" x="1282" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0020" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0021" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0022" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0023" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0024" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0025" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0026" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0027" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0028" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Normal Overlay0029" x="2554" y="786" width="1262" height="766"/>
+	<SubTexture name="Rock Overlay0000" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0001" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0002" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0003" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0004" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0005" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0006" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0007" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0008" x="10" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0009" x="1282" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0010" x="2554" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0011" x="2554" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0012" x="2554" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0013" x="2554" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0014" x="2554" y="1562" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0015" x="10" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0016" x="10" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0017" x="10" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0018" x="10" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0019" x="1282" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0020" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0021" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0022" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0023" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0024" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0025" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0026" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0027" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0028" x="2554" y="2334" width="1262" height="762"/>
+	<SubTexture name="Rock Overlay0029" x="2554" y="2334" width="1262" height="762"/>
+</TextureAtlas>

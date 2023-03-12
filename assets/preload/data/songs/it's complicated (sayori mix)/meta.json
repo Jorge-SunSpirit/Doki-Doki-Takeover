@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "It's Complicated (Sayori Mix)",
+        "artist": "Stardust Tunes / StarrieBlu",
+        "icon": "pen",
+        "pause": "sayori",
+        "introDialogue": "IntroDialogue",
+        "playManually": true
+    }
+}

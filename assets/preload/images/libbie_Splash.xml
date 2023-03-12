@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="libbie_Splash.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="note splash blue 1 instance 10000" x="0" y="0" width="193" height="192" frameX="-29" frameY="-29" frameWidth="251" frameHeight="250"/>
+	<SubTexture name="note splash blue 1 instance 10001" x="193" y="0" width="251" height="250"/>
+	<SubTexture name="note splash blue 1 instance 10002" x="444" y="0" width="251" height="250"/>
+	<SubTexture name="note splash blue 1 instance 10003" x="695" y="0" width="251" height="250"/>
+	<SubTexture name="note splash blue 1 instance 10004" x="0" y="250" width="251" height="250"/>
+	<SubTexture name="note splash blue 1 instance 10005" x="251" y="250" width="251" height="250"/>
+	<SubTexture name="note splash blue 1 instance 10006" x="502" y="250" width="251" height="250"/>
+	<SubTexture name="note splash blue 1 instance 10007" x="753" y="250" width="251" height="250"/>
+	<SubTexture name="note splash green 1 instance 10000" x="0" y="0" width="193" height="192" frameX="-30" frameY="-29" frameWidth="251" frameHeight="250"/>
+	<SubTexture name="note splash green 1 instance 10001" x="193" y="0" width="251" height="250"/>
+	<SubTexture name="note splash green 1 instance 10002" x="444" y="0" width="251" height="250"/>
+	<SubTexture name="note splash green 1 instance 10003" x="695" y="0" width="251" height="250"/>
+	<SubTexture name="note splash green 1 instance 10004" x="0" y="250" width="251" height="250"/>
+	<SubTexture name="note splash green 1 instance 10005" x="251" y="250" width="251" height="250"/>
+	<SubTexture name="note splash green 1 instance 10006" x="502" y="250" width="251" height="250"/>
+	<SubTexture name="note splash green 1 instance 10007" x="0" y="500" width="251" height="250"/>
+	<SubTexture name="note splash purple 1 instance 10000" x="0" y="0" width="193" height="192" frameX="-29" frameY="-29" frameWidth="251" frameHeight="250"/>
+	<SubTexture name="note splash purple 1 instance 10001" x="193" y="0" width="251" height="250"/>
+	<SubTexture name="note splash purple 1 instance 10002" x="444" y="0" width="251" height="250"/>
+	<SubTexture name="note splash purple 1 instance 10003" x="695" y="0" width="251" height="250"/>
+	<SubTexture name="note splash purple 1 instance 10004" x="0" y="250" width="251" height="250"/>
+	<SubTexture name="note splash purple 1 instance 10005" x="251" y="250" width="251" height="250"/>
+	<SubTexture name="note splash purple 1 instance 10006" x="502" y="250" width="251" height="250"/>
+	<SubTexture name="note splash purple 1 instance 10007" x="251" y="500" width="251" height="250"/>
+	<SubTexture name="note splash red 1 instance 10000" x="0" y="0" width="193" height="192" frameX="-29" frameY="-29" frameWidth="251" frameHeight="250"/>
+	<SubTexture name="note splash red 1 instance 10001" x="193" y="0" width="251" height="250"/>
+	<SubTexture name="note splash red 1 instance 10002" x="444" y="0" width="251" height="250"/>
+	<SubTexture name="note splash red 1 instance 10003" x="695" y="0" width="251" height="250"/>
+	<SubTexture name="note splash red 1 instance 10004" x="0" y="250" width="251" height="250"/>
+	<SubTexture name="note splash red 1 instance 10005" x="251" y="250" width="251" height="250"/>
+	<SubTexture name="note splash red 1 instance 10006" x="502" y="250" width="251" height="250"/>
+	<SubTexture name="note splash red 1 instance 10007" x="502" y="500" width="250" height="250"/>
+</TextureAtlas>

@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Libitina",
+        "artist": "Kairii",
+        "icon": "file",
+        "pause": "libitina",
+        "allowCountDown": false,
+        "playManually": true
+    }
+}

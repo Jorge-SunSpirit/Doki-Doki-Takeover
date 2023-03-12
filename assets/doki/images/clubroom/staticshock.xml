@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="staticshock.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hueh0000" x="0" y="0" width="1280" height="720"/>
+	<SubTexture name="hueh0001" x="0" y="0" width="1280" height="720"/>
+	<SubTexture name="hueh0002" x="1280" y="0" width="1280" height="720"/>
+	<SubTexture name="hueh0003" x="1280" y="0" width="1280" height="720"/>
+	<SubTexture name="hueh0004" x="2560" y="0" width="1280" height="720"/>
+	<SubTexture name="hueh0005" x="2560" y="0" width="1280" height="720"/>
+	<SubTexture name="hueh0006" x="0" y="720" width="1280" height="720"/>
+	<SubTexture name="hueh0007" x="0" y="720" width="1280" height="720"/>
+</TextureAtlas>

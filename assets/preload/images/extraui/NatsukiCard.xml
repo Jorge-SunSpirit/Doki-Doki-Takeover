@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NatsukiCard.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="NatCardAnim0000" x="10" y="10" width="271" height="177" frameX="0" frameY="-317" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0001" x="291" y="10" width="271" height="335" frameX="0" frameY="-159" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0002" x="572" y="10" width="271" height="413" frameX="0" frameY="-81" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0003" x="853" y="10" width="271" height="464" frameX="0" frameY="-30" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0004" x="1134" y="10" width="271" height="479" frameX="0" frameY="-15" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0005" x="1415" y="10" width="271" height="479" frameX="0" frameY="-12" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0006" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0007" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0008" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0009" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0010" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0011" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0012" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0013" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0014" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0015" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0016" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0017" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0018" x="1415" y="10" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0019" x="1696" y="10" width="253" height="479" frameX="-9" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0020" x="10" y="499" width="109" height="477" frameX="-81" frameY="-7" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0021" x="129" y="499" width="5" height="478" frameX="-133" frameY="0" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0022" x="144" y="499" width="109" height="477" frameX="-81" frameY="-7" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0023" x="263" y="499" width="253" height="477" frameX="-9" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0024" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0025" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0026" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0027" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0028" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+	<SubTexture name="NatCardAnim0029" x="526" y="499" width="271" height="479" frameX="0" frameY="-11" frameWidth="271" frameHeight="494"/>
+</TextureAtlas>

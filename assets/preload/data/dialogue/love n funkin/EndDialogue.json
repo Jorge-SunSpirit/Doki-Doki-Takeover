@@ -1,0 +1,70 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "And through the power of song, Girlfriend was able to write down the lyrics to her very own love song for her darling Boyfriend.",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "The girls excitedly ask to see what Girlfriend had come up with, so she handed them the paper with all the lyrics written on it.",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "With much anticipation, the girls began to read, and-",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "-their expressions slowly morphed into ones of shock and confusion.",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "eeh",
+			"string": "\"...I wasn't expecting you to write something so... explicit-\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "angy",
+			"string": "\"Eugh, eww!!! Why did you write that?! I don't need to know what you and your boyfriend do at night!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "ehh",
+			"string": "\"I'm... curious as to what inspired you to write down several verses about 'The blood of your enemies'-\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "ehh",
+			"string": "\"Eheheh... ehhhhh... maybe next time, try to keep things school appropriate-\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "peace",
+			"string": "*blep*",
+			"side": "right"
+		}
+	]
+}

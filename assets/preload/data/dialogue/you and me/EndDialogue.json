@@ -1,0 +1,311 @@
+{
+	"startingMusic": "",
+	"initStyle": "normal",
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "The positivity that club gave everyone involved continued to nurture a stunning flower of friendship amongst the club members.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "flash"
+		},
+		{
+			"isCommand": true,
+			"name": "startmusic",
+			"string": "protagc"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "youandme"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Even outside the clubroom, the group was almost never seen apart from each other.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "It was only a matter of time to see what would bloom next for the Literature Club.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "But for now, days of pleasant normalcy awaited them.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic"
+		},
+		{
+			"isCommand": true,
+			"name": "fadeout",
+			"duration": 3
+		},
+		{
+			"isCommand": true,
+			"name": "flash"
+		},
+		{
+			"isCommand": true,
+			"name": "playsound",
+			"string": "confirmMenu"
+		},
+		{
+			"isCommand": true,
+			"name": "fadein",
+			"duration": 0.1
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "youandme2"
+		},
+		{
+			"isCommand": true,
+			"name": "hidedialogue"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "-Or so they thought.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "flash"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "youandme3"
+		},
+		{
+			"isCommand": true,
+			"name": "hidedialogue"
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "gone",
+			"string": "\"Skee yeah!\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Boyfriend and Girlfriend, seemingly appearing out of thin air, reached out to the group, wanting them to follow.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "black"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "One by one, the group followed the two into the white light, and what they would see next...",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "playcutscene",
+			"string": "youregoingtophilly",
+			"duration": 11.04
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "youandme4"
+		},
+		{
+			"isCommand": true,
+			"name": "startmusic",
+			"string": "phillyambience"
+		},
+		{
+			"isCommand": false,
+			"name": "natsuki",
+			"expression": "gone",
+			"string": "\"Where… are we?\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "sayori",
+			"expression": "gone",
+			"string": "\"Woah! I’ve never visited the city before!\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "yuri",
+			"expression": "gone",
+			"string": "\"Oh my, what a lovely display of lights.\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "protag",
+			"expression": "gone",
+			"string": "\"What the- how did we get here so fast? And wasn’t it still daylight a minute ago?\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "protag",
+			"expression": "gone",
+			"string": "\"I also could've sworn we were all in uniform before too-\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "gf",
+			"expression": "gone",
+			"string": "*excited cheering*",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Boyfriend and Girlfriend quickly turn to Monika with very excited grins on their faces.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "bf",
+			"expression": "gone",
+			"string": "\"Dee boop de skee!\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"Wait...\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"Is this... are we...\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "They actually did it. They made it out of the game.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Boyfriend gestured over to the nearby computer, and in his somehow comprehensible language of beeps and boops, told Monika that this was their gate in and out of their home world.",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Whenever her and the others wanted to visit, this was their ticket.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "endmusic"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "Monika quickly became choked up with emotion. Words quickly failed her as she could not describe how overwhelmingly happy she was.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "flash"
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "youandme5"
+		},
+		{
+			"isCommand": true,
+			"name": "hidedialogue"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"I… I don’t know what to say-\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"Thank you… Thank you so so much… For everything.\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "A new world was out there for the Literature Club to explore. One of crazy possibilities. And somewhere out there is someone very important to Monika.",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "showbackgroundimage",
+			"string": "black"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"I know you’re out there. There’s so much I need to tell you… So much I need to apologize for… and… and-\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"Now that I have this chance… maybe you’ll give me a chance-\"",
+			"side": ""
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "gone",
+			"string": "\"-to learn to love in your reality.\"",
+			"side": ""
+		},
+		{
+			"isCommand": true,
+			"name": "fadeout",
+			"duration": 3
+		}
+	]
+}

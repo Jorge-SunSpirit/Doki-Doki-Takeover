@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="LockedWeek.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="0" y="0" width="423" height="312"/>
+	<SubTexture name="idle0001" x="0" y="0" width="423" height="312"/>
+	<SubTexture name="idle0002" x="423" y="0" width="423" height="312"/>
+	<SubTexture name="idle0003" x="423" y="0" width="423" height="312"/>
+	<SubTexture name="idle0004" x="0" y="312" width="423" height="312"/>
+	<SubTexture name="idle0005" x="0" y="312" width="423" height="312"/>
+	<SubTexture name="idle0006" x="423" y="312" width="423" height="312"/>
+	<SubTexture name="idle0007" x="423" y="312" width="423" height="312"/>
+</TextureAtlas>

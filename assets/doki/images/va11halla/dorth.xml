@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dorth.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dortohy_left0000" x="0" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_left0001" x="0" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_left0002" x="60" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_left0003" x="60" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_left0004" x="120" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_left0005" x="120" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_left0006" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0007" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0008" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0009" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0010" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0011" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0012" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0013" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_left0014" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0000" x="180" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_right0001" x="180" y="0" width="60" height="80"/>
+	<SubTexture name="dortohy_right0002" x="0" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0003" x="0" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0004" x="60" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0005" x="60" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0006" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0007" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0008" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0009" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0010" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0011" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0012" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0013" x="120" y="80" width="60" height="80"/>
+	<SubTexture name="dortohy_right0014" x="120" y="80" width="60" height="80"/>
+</TextureAtlas>

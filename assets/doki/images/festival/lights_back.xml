@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lights_back.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="lights back0000" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0001" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0002" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0003" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0004" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0005" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0006" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0007" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0008" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0009" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0010" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0011" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0012" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0013" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0014" x="10" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0015" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0016" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0017" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0018" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0019" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0020" x="612" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0021" x="1214" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0022" x="1214" y="10" width="592" height="228"/>
+	<SubTexture name="lights back0023" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0024" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0025" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0026" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0027" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0028" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0029" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0030" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0031" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0032" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0033" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0034" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0035" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0036" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0037" x="10" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0038" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0039" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0040" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0041" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0042" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0043" x="612" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0044" x="1214" y="248" width="592" height="228"/>
+	<SubTexture name="lights back0045" x="1214" y="248" width="592" height="228"/>
+</TextureAtlas>

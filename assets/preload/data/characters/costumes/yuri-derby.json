@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Yuri Idle0"
+		},
+		{
+			"offsets": [
+				11,
+				15
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle-alt",
+			"loop": false,
+			"name": "Yuri Idle-alt"
+		},
+		{
+			"offsets": [
+				23,
+				30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "breath",
+			"loop": false,
+			"name": "Yuri Breath"
+		},
+		{
+			"offsets": [
+				30,
+				-11
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Yuri Sing Note Left"
+		},
+		{
+			"offsets": [
+				18,
+				14
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Yuri Sing Note Right"
+		},
+		{
+			"offsets": [
+				30,
+				32
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Yuri Sing Note Up"
+		},
+		{
+			"offsets": [
+				4,
+				-12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Yuri Sing Note Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/yuri/Doki_Yuri_Derby_Assets",
+	"position": [
+		50,
+		-390
+	],
+	"healthicon": "yuri",
+	"flip_x": false,
+	"healthbar_colors": [
+		158,
+		114,
+		210
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

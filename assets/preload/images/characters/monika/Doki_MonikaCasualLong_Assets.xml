@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Doki_MonikaCasualLong_Assets.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Monika Returns Down0000" x="8" y="8" width="345" height="667" frameX="0" frameY="-12" frameWidth="371" frameHeight="679"/>
+	<SubTexture name="Monika Returns Down0001" x="8" y="8" width="345" height="667" frameX="0" frameY="-12" frameWidth="371" frameHeight="679"/>
+	<SubTexture name="Monika Returns Down0002" x="361" y="8" width="363" height="675" frameX="0" frameY="-4" frameWidth="371" frameHeight="679"/>
+	<SubTexture name="Monika Returns Down0003" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0004" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0005" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0006" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0007" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0008" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0009" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0010" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0011" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0012" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Down0013" x="732" y="8" width="371" height="679"/>
+	<SubTexture name="Monika Returns Idle0000" x="1111" y="8" width="502" height="771" frameX="-21" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0001" x="1111" y="8" width="502" height="771" frameX="-21" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0002" x="1621" y="8" width="494" height="761" frameX="-28" frameY="-14" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0003" x="2123" y="8" width="494" height="761" frameX="-28" frameY="-14" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0004" x="2625" y="8" width="494" height="772" frameX="-27" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0005" x="2625" y="8" width="494" height="772" frameX="-27" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0006" x="3127" y="8" width="495" height="774" frameX="-25" frameY="0" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0007" x="8" y="790" width="498" height="774" frameX="-23" frameY="0" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0008" x="514" y="790" width="523" height="762" frameX="0" frameY="-13" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0009" x="514" y="790" width="523" height="762" frameX="0" frameY="-13" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0010" x="1045" y="790" width="527" height="766" frameX="-7" frameY="-9" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0011" x="1580" y="790" width="527" height="766" frameX="-7" frameY="-9" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0012" x="2115" y="790" width="518" height="771" frameX="-11" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0013" x="1111" y="8" width="502" height="771" frameX="-21" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0014" x="1111" y="8" width="502" height="771" frameX="-21" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0015" x="1111" y="8" width="502" height="771" frameX="-21" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Idle0016" x="1111" y="8" width="502" height="771" frameX="-21" frameY="-3" frameWidth="534" frameHeight="775"/>
+	<SubTexture name="Monika Returns Left0000" x="2641" y="790" width="384" height="783" frameX="0" frameY="0" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0001" x="2641" y="790" width="384" height="783" frameX="0" frameY="0" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0002" x="3033" y="790" width="391" height="773" frameX="-12" frameY="-10" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0003" x="3033" y="790" width="391" height="773" frameX="-12" frameY="-10" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0004" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0005" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0006" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0007" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0008" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0009" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0010" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0011" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Left0012" x="3432" y="790" width="387" height="775" frameX="-12" frameY="-8" frameWidth="403" frameHeight="783"/>
+	<SubTexture name="Monika Returns Right0000" x="8" y="1581" width="567" height="764" frameX="-26" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0001" x="8" y="1581" width="567" height="764" frameX="-26" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0002" x="583" y="1581" width="579" height="761" frameX="-1" frameY="-3" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0003" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0004" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0005" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0006" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0007" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0008" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0009" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0010" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0011" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0012" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Right0013" x="1170" y="1581" width="573" height="764" frameX="0" frameY="0" frameWidth="593" frameHeight="764"/>
+	<SubTexture name="Monika Returns Up0000" x="1751" y="1581" width="351" height="795" frameX="-23" frameY="-7" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0001" x="1751" y="1581" width="351" height="795" frameX="-23" frameY="-7" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0002" x="2110" y="1581" width="352" height="779" frameX="-24" frameY="-22" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0003" x="2470" y="1581" width="352" height="788" frameX="-23" frameY="-13" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0004" x="2470" y="1581" width="352" height="788" frameX="-23" frameY="-13" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0005" x="2470" y="1581" width="352" height="788" frameX="-23" frameY="-13" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0006" x="2830" y="1581" width="337" height="798" frameX="-20" frameY="-3" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0007" x="3175" y="1581" width="339" height="790" frameX="0" frameY="-11" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0008" x="3175" y="1581" width="339" height="790" frameX="0" frameY="-11" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0009" x="3522" y="1581" width="334" height="801" frameX="-4" frameY="0" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0010" x="3522" y="1581" width="334" height="801" frameX="-4" frameY="0" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0011" x="3522" y="1581" width="334" height="801" frameX="-4" frameY="0" frameWidth="376" frameHeight="802"/>
+	<SubTexture name="Monika Returns Up0012" x="3522" y="1581" width="334" height="801" frameX="-4" frameY="0" frameWidth="376" frameHeight="802"/>
+</TextureAtlas>

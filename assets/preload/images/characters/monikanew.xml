@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="monikanew.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Mka Alt Down0000" x="475" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0001" x="475" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0002" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0003" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0004" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0005" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0006" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0007" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0008" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0009" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0010" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0011" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0012" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0013" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Down0014" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0000" x="3" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0001" x="3" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0002" x="121" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0003" x="121" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0004" x="239" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0005" x="239" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0006" x="357" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0007" x="357" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0008" x="475" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0009" x="475" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0010" x="593" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0011" x="593" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0012" x="593" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0013" x="593" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0014" x="593" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Idle0015" x="593" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0000" x="711" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0001" x="711" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0002" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0003" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0004" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0005" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0006" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0007" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0008" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0009" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0010" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0011" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0012" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0013" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Left0014" x="829" y="3" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0000" x="3" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0001" x="3" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0002" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0003" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0004" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0005" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0006" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0007" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0008" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0009" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0010" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0011" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0012" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0013" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Right0014" x="121" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0000" x="239" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0001" x="239" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0002" x="239" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0003" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0004" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0005" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0006" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0007" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0008" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0009" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Alt Up0010" x="357" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0000" x="475" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0001" x="475" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0002" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0003" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0004" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0005" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0006" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0007" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0008" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0009" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0010" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0011" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0012" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0013" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Down0014" x="593" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0000" x="711" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0001" x="711" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0002" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0003" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0004" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0005" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0006" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0007" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0008" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0009" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0010" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0011" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0012" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0013" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Left0014" x="829" y="146" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0000" x="3" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0001" x="3" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0002" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0003" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0004" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0005" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0006" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0007" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0008" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0009" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0010" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0011" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0012" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0013" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Right0014" x="121" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0000" x="239" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0001" x="239" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0002" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0003" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0004" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0005" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0006" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0007" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0008" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0009" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0010" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0011" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0012" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0013" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="Mka Miss Up0014" x="357" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0000" x="475" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0001" x="475" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0002" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0003" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0004" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0005" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0006" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0007" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0008" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0009" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0010" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0011" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0012" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0013" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaDown0014" x="593" y="289" width="115" height="140"/>
+	<SubTexture name="MkaIdle0000" x="711" y="289" width="115" height="140"/>
+	<SubTexture name="MkaIdle0001" x="711" y="289" width="115" height="140"/>
+	<SubTexture name="MkaIdle0002" x="829" y="289" width="115" height="140"/>
+	<SubTexture name="MkaIdle0003" x="829" y="289" width="115" height="140"/>
+	<SubTexture name="MkaIdle0004" x="3" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0005" x="3" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0006" x="121" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0007" x="121" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0008" x="239" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0009" x="239" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0010" x="357" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0011" x="357" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0012" x="357" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0013" x="357" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0014" x="357" y="432" width="115" height="140"/>
+	<SubTexture name="MkaIdle0015" x="357" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0000" x="475" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0001" x="475" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0002" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0003" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0004" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0005" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0006" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0007" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0008" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0009" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0010" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0011" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0012" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0013" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaLeft0014" x="593" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0000" x="711" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0001" x="711" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0002" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0003" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0004" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0005" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0006" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0007" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0008" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0009" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0010" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0011" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0012" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0013" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaRight0014" x="829" y="432" width="115" height="140"/>
+	<SubTexture name="MkaUp0000" x="3" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0001" x="3" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0002" x="3" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0003" x="121" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0004" x="121" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0005" x="121" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0006" x="121" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0007" x="121" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0008" x="121" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0009" x="121" y="575" width="115" height="140"/>
+	<SubTexture name="MkaUp0010" x="121" y="575" width="115" height="140"/>
+</TextureAtlas>

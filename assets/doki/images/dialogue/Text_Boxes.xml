@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Text_Boxes.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Doki Dialogue BF0000" x="10" y="10" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue BF0001" x="10" y="10" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue BF0002" x="10" y="10" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue BF0003" x="10" y="10" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue BF0004" x="10" y="10" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0000" x="840" y="10" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0001" x="10" y="209" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0002" x="840" y="209" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0003" x="10" y="408" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0004" x="840" y="408" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0005" x="10" y="607" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0006" x="840" y="607" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0007" x="840" y="607" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Blank0008" x="840" y="607" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue GF0000" x="10" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue GF0001" x="10" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue GF0002" x="10" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue GF0003" x="10" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue GF0004" x="10" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Moni0000" x="840" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Moni0001" x="840" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Moni0002" x="840" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Moni0003" x="840" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Moni0004" x="840" y="806" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Natsu0000" x="10" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Natsu0001" x="10" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Natsu0002" x="10" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Natsu0003" x="10" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Natsu0004" x="10" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Protag0000" x="840" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Protag0001" x="840" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Protag0002" x="840" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Protag0003" x="840" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Protag0004" x="840" y="1005" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Sayo0000" x="10" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Sayo0001" x="10" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Sayo0002" x="10" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Sayo0003" x="10" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Sayo0004" x="10" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Who0000" x="840" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Who0001" x="840" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Who0002" x="840" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Who0003" x="840" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Who0004" x="840" y="1204" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Yuri0000" x="10" y="1403" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Yuri0001" x="10" y="1403" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Yuri0002" x="10" y="1403" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Yuri0003" x="10" y="1403" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Yuri0004" x="10" y="1403" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Yuri Glitch0000" x="840" y="1403" width="854" height="196"/>
+	<SubTexture name="Doki Dialogue Yuri Glitch0001" x="840" y="1403" width="854" height="196"/>
+	<SubTexture name="Doki Dialogue Yuri Glitch0002" x="840" y="1403" width="854" height="196"/>
+	<SubTexture name="Doki Dialogue Yuri Glitch0003" x="840" y="1403" width="854" height="196"/>
+	<SubTexture name="Doki Dialogue Yuri Glitch0004" x="840" y="1403" width="854" height="196"/>
+	<SubTexture name="Doki Dialogue Zipper0000" x="10" y="1609" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Zipper0001" x="10" y="1609" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Zipper0002" x="10" y="1609" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Zipper0003" x="10" y="1609" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue Zipper0004" x="10" y="1609" width="820" height="189"/>
+	<SubTexture name="Doki Dialogue noone0000" x="840" y="607" width="820" height="189"/>
+</TextureAtlas>

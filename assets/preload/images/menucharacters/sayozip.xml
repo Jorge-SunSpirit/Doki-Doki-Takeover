@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sayozip.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Sayo Zipper Menu0000" x="10" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0001" x="10" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0002" x="628" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0003" x="628" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0004" x="1246" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0005" x="1246" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0006" x="1864" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0007" x="2482" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0008" x="3100" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0009" x="3100" y="10" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0010" x="10" y="770" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0011" x="10" y="770" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0012" x="628" y="770" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0013" x="628" y="770" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0014" x="1246" y="770" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0015" x="1246" y="770" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0016" x="1864" y="770" width="608" height="750"/>
+	<SubTexture name="Sayo Zipper Menu0017" x="2482" y="770" width="608" height="750"/>
+</TextureAtlas>

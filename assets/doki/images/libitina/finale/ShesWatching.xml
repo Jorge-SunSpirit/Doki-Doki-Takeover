@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ShesWatching.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ShesWatching0000" x="8" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0001" x="8" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0002" x="8" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0003" x="8" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0004" x="8" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0005" x="2576" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0006" x="2576" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0007" x="2576" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0008" x="2576" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0009" x="2576" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0010" x="5144" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0011" x="5144" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0012" x="5144" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0013" x="5144" y="8" width="2560" height="1440"/>
+	<SubTexture name="ShesWatching0014" x="5144" y="8" width="2560" height="1440"/>
+</TextureAtlas>

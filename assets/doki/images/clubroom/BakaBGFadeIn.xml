@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="BakaBGFadeIn.png">
+<SubTexture name="FadeIn0000" x="8073" y="6336" width="101" height="331" frameX="-1549" frameY="-272" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0001" x="7965" y="6336" width="108" height="341" frameX="-1547" frameY="-272" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0002" x="7744" y="6336" width="221" height="352" frameX="-1547" frameY="-267" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0003" x="7523" y="6336" width="221" height="410" frameX="-1556" frameY="-216" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0004" x="7296" y="6336" width="227" height="418" frameX="-1556" frameY="-209" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0005" x="7068" y="6336" width="228" height="438" frameX="-1556" frameY="-198" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0006" x="6837" y="6336" width="231" height="442" frameX="-1556" frameY="-196" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0007" x="5316" y="5280" width="1610" height="729" frameX="-177" frameY="-153" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0008" x="5316" y="4224" width="1669" height="837" frameX="-118" frameY="-144" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0009" x="5153" y="6336" width="1684" height="857" frameX="-103" frameY="-136" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0010" x="3459" y="6336" width="1694" height="957" frameX="-93" frameY="-39" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0011" x="3517" y="3168" width="1699" height="980" frameX="-90" frameY="-39" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0012" x="1740" y="1056" width="1699" height="984" frameX="-90" frameY="-39" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0013" x="1740" y="2112" width="1699" height="984" frameX="-90" frameY="-39" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0014" x="1740" y="6336" width="1719" height="984" frameX="-90" frameY="-39" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0015" x="5219" y="1056" width="1737" height="1021" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0016" x="0" y="0" width="1739" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0017" x="1739" y="0" width="1740" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0018" x="0" y="1056" width="1740" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0019" x="0" y="2112" width="1740" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0020" x="3479" y="0" width="1740" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0021" x="0" y="3168" width="1745" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0022" x="1745" y="3168" width="1772" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0023" x="5219" y="0" width="1771" height="1056" frameX="-76" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0024" x="0" y="4224" width="1772" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0025" x="5219" y="3098" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0026" x="3479" y="1056" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0027" x="3479" y="2063" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0028" x="6990" y="0" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0029" x="6990" y="1007" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0030" x="6990" y="2014" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0031" x="6990" y="3021" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0032" x="6990" y="4028" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0033" x="6990" y="5035" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0034" x="0" y="6336" width="1740" height="1007" frameX="-90" frameY="-18" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0035" x="5219" y="2077" width="1754" height="1021" frameX="-76" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0036" x="1772" y="4224" width="1772" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0037" x="3544" y="4224" width="1772" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0038" x="0" y="5280" width="1772" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0039" x="1772" y="5280" width="1772" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="FadeIn0040" x="3544" y="5280" width="1772" height="1056" frameX="-75" frameY="-10" frameWidth="1920" frameHeight="1080" />
+</TextureAtlas>

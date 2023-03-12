@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SenpaiNonPixel_Assets.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Senpai Returns0000" x="10" y="10" width="393" height="747" frameX="-3" frameY="-27" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0001" x="10" y="10" width="393" height="747" frameX="-3" frameY="-27" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0002" x="413" y="10" width="408" height="742" frameX="-1" frameY="-32" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0003" x="413" y="10" width="408" height="742" frameX="-1" frameY="-32" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0004" x="831" y="10" width="423" height="757" frameX="0" frameY="-17" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0005" x="831" y="10" width="423" height="757" frameX="0" frameY="-17" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0006" x="1264" y="10" width="439" height="767" frameX="-5" frameY="-7" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0007" x="1264" y="10" width="439" height="767" frameX="-5" frameY="-7" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0008" x="1713" y="10" width="446" height="774" frameX="-6" frameY="0" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0009" x="1713" y="10" width="446" height="774" frameX="-6" frameY="0" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0010" x="1713" y="10" width="446" height="774" frameX="-6" frameY="0" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0011" x="1713" y="10" width="446" height="774" frameX="-6" frameY="0" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0012" x="1713" y="10" width="446" height="774" frameX="-6" frameY="0" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns0013" x="1713" y="10" width="446" height="774" frameX="-6" frameY="0" frameWidth="452" frameHeight="774"/>
+	<SubTexture name="Senpai Returns Angy0000" x="2169" y="10" width="378" height="756" frameX="-3" frameY="-27" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0001" x="2557" y="10" width="378" height="756" frameX="-3" frameY="-27" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0002" x="2945" y="10" width="394" height="750" frameX="-1" frameY="-33" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0003" x="3349" y="10" width="394" height="750" frameX="-1" frameY="-33" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0004" x="3753" y="10" width="423" height="766" frameX="0" frameY="-17" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0005" x="4186" y="10" width="423" height="766" frameX="0" frameY="-17" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0006" x="4619" y="10" width="439" height="776" frameX="-5" frameY="-7" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0007" x="5068" y="10" width="439" height="776" frameX="-5" frameY="-7" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0008" x="5517" y="10" width="446" height="783" frameX="-6" frameY="0" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0009" x="5973" y="10" width="446" height="783" frameX="-6" frameY="0" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0010" x="6429" y="10" width="446" height="783" frameX="-6" frameY="0" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0011" x="6885" y="10" width="446" height="783" frameX="-6" frameY="0" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0012" x="5517" y="10" width="446" height="783" frameX="-6" frameY="0" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Angy0013" x="5973" y="10" width="446" height="783" frameX="-6" frameY="0" frameWidth="452" frameHeight="783"/>
+	<SubTexture name="Senpai Returns Down0000" x="7341" y="10" width="386" height="693" frameX="0" frameY="-19" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0001" x="7341" y="10" width="386" height="693" frameX="0" frameY="-19" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0002" x="7737" y="10" width="386" height="707" frameX="0" frameY="-5" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0003" x="7737" y="10" width="386" height="707" frameX="0" frameY="-5" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0004" x="10" y="803" width="373" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0005" x="10" y="803" width="373" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0006" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0007" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0008" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0009" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0010" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0011" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0012" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down0013" x="393" y="803" width="372" height="712" frameX="0" frameY="0" frameWidth="386" frameHeight="712"/>
+	<SubTexture name="Senpai Returns Down Angy0000" x="775" y="803" width="347" height="680" frameX="0" frameY="-18" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0001" x="775" y="803" width="347" height="680" frameX="0" frameY="-18" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0002" x="1132" y="803" width="343" height="693" frameX="0" frameY="-5" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0003" x="1132" y="803" width="343" height="693" frameX="0" frameY="-5" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0004" x="1485" y="803" width="344" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0005" x="1485" y="803" width="344" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0006" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0007" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0008" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0009" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0010" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0011" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0012" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Down Angy0013" x="1839" y="803" width="346" height="698" frameX="0" frameY="0" frameWidth="347" frameHeight="698"/>
+	<SubTexture name="Senpai Returns Left0000" x="2195" y="803" width="396" height="785" frameX="0" frameY="-2" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0001" x="2195" y="803" width="396" height="785" frameX="0" frameY="-2" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0002" x="2601" y="803" width="393" height="787" frameX="-14" frameY="0" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0003" x="2601" y="803" width="393" height="787" frameX="-14" frameY="0" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0004" x="3004" y="803" width="399" height="787" frameX="-16" frameY="0" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0005" x="3004" y="803" width="399" height="787" frameX="-16" frameY="0" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0006" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0007" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0008" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0009" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0010" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0011" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0012" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left0013" x="3413" y="803" width="400" height="786" frameX="-16" frameY="-1" frameWidth="416" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0000" x="3823" y="803" width="386" height="785" frameX="0" frameY="-2" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0001" x="3823" y="803" width="386" height="785" frameX="0" frameY="-2" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0002" x="4219" y="803" width="373" height="787" frameX="-14" frameY="0" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0003" x="4219" y="803" width="373" height="787" frameX="-14" frameY="0" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0004" x="4602" y="803" width="371" height="787" frameX="-16" frameY="0" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0005" x="4602" y="803" width="371" height="787" frameX="-16" frameY="0" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0006" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0007" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0008" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0009" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0010" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0011" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0012" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Left Angy0013" x="4983" y="803" width="371" height="786" frameX="-16" frameY="-1" frameWidth="387" frameHeight="787"/>
+	<SubTexture name="Senpai Returns Right0000" x="5364" y="803" width="398" height="775" frameX="-19" frameY="-3" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0001" x="5364" y="803" width="398" height="775" frameX="-19" frameY="-3" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0002" x="5772" y="803" width="405" height="778" frameX="-8" frameY="0" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0003" x="5772" y="803" width="405" height="778" frameX="-8" frameY="0" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0004" x="6187" y="803" width="407" height="777" frameX="0" frameY="-1" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0005" x="6187" y="803" width="407" height="777" frameX="0" frameY="-1" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0006" x="6604" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0007" x="6604" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0008" x="7022" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0009" x="7022" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0010" x="7022" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0011" x="7022" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0012" x="7022" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right0013" x="7022" y="803" width="408" height="776" frameX="0" frameY="-2" frameWidth="417" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0000" x="7440" y="803" width="363" height="775" frameX="-20" frameY="-3" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0001" x="7440" y="803" width="363" height="775" frameX="-20" frameY="-3" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0002" x="7813" y="803" width="368" height="778" frameX="-9" frameY="0" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0003" x="7813" y="803" width="368" height="778" frameX="-9" frameY="0" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0004" x="10" y="1600" width="376" height="777" frameX="0" frameY="-1" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0005" x="10" y="1600" width="376" height="777" frameX="0" frameY="-1" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0006" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0007" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0008" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0009" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0010" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0011" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0012" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Right Angy0013" x="396" y="1600" width="377" height="776" frameX="0" frameY="-2" frameWidth="383" frameHeight="778"/>
+	<SubTexture name="Senpai Returns Up0000" x="783" y="1600" width="408" height="813" frameX="-4" frameY="0" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0001" x="783" y="1600" width="408" height="813" frameX="-4" frameY="0" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0002" x="1201" y="1600" width="410" height="805" frameX="0" frameY="-8" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0003" x="1201" y="1600" width="410" height="805" frameX="0" frameY="-8" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0004" x="1621" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0005" x="1621" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0006" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0007" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0008" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0009" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0010" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0011" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0012" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up0013" x="2043" y="1600" width="412" height="800" frameX="0" frameY="-13" frameWidth="412" frameHeight="813"/>
+	<SubTexture name="Senpai Returns Up Angy0000" x="2465" y="1600" width="377" height="817" frameX="-4" frameY="0" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0001" x="2465" y="1600" width="377" height="817" frameX="-4" frameY="0" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0002" x="2852" y="1600" width="377" height="806" frameX="0" frameY="-11" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0003" x="2852" y="1600" width="377" height="806" frameX="0" frameY="-11" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0004" x="3239" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0005" x="3239" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0006" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0007" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0008" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0009" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0010" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0011" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0012" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Returns Up Angy0013" x="3626" y="1600" width="377" height="800" frameX="0" frameY="-17" frameWidth="381" frameHeight="817"/>
+	<SubTexture name="Senpai Swap0000" x="4013" y="1600" width="446" height="774" frameX="-11" frameY="-9" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0001" x="4013" y="1600" width="446" height="774" frameX="-11" frameY="-9" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0002" x="4469" y="1600" width="440" height="783" frameX="-14" frameY="0" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0003" x="4919" y="1600" width="393" height="763" frameX="0" frameY="-20" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0004" x="5322" y="1600" width="359" height="736" frameX="-11" frameY="-47" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0005" x="5322" y="1600" width="359" height="736" frameX="-11" frameY="-47" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0006" x="5691" y="1600" width="401" height="723" frameX="-11" frameY="-60" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0007" x="5691" y="1600" width="401" height="723" frameX="-11" frameY="-60" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0008" x="6102" y="1600" width="389" height="719" frameX="-11" frameY="-64" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0009" x="6102" y="1600" width="389" height="719" frameX="-11" frameY="-64" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0010" x="6501" y="1600" width="390" height="723" frameX="-14" frameY="-60" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0011" x="6501" y="1600" width="390" height="723" frameX="-14" frameY="-60" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0012" x="6901" y="1600" width="420" height="766" frameX="-20" frameY="-17" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0013" x="7331" y="1600" width="420" height="766" frameX="-20" frameY="-17" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0014" x="10" y="2427" width="446" height="774" frameX="-11" frameY="-9" frameWidth="457" frameHeight="783"/>
+	<SubTexture name="Senpai Swap0015" x="466" y="2427" width="446" height="774" frameX="-11" frameY="-9" frameWidth="457" frameHeight="783"/>
+</TextureAtlas>

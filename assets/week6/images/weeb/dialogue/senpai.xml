@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="senpai.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="senpai_neutral0000" x="0" y="0" width="106" height="106"/>
+	<SubTexture name="senpai_angry0001" x="106" y="0" width="106" height="106"/>
+	<SubTexture name="senpai_whodis0002" x="212" y="0" width="106" height="106"/>
+	<SubTexture name="senpai_hmm0003" x="318" y="0" width="106" height="106"/>
+	<SubTexture name="senpai_spirit0004" x="0" y="106" width="106" height="106"/>
+</TextureAtlas>

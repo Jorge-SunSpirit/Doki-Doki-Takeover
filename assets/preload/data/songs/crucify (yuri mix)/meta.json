@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Crucify (Yuri Mix)",
+        "artist": "Sprunkle & Stardust Tunes / Foodieti",
+        "icon": "pen",
+        "pause": "yuri",
+        "introDialogue": "IntroDialogue",
+        "playManually": true
+    }
+}

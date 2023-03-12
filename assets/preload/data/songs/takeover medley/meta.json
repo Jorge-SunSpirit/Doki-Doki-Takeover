@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Takeover Medley",
+        "artist": "HighPoweredKeyz, Stardust Tunes, Kairii\nMiss Beepy, GGalactigal, DatDavi",
+        "icon": "pen",
+        "pause": "monika",
+        "allowCountDown": false,
+        "playManually": true
+    }
+}

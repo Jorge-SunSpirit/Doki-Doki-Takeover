@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="akihamoniduo.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Moni Akiha Menu0000" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0001" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0002" x="811" y="8" width="789" height="760" frameX="0" frameY="-13" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0003" x="811" y="8" width="789" height="760" frameX="0" frameY="-13" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0004" x="8" y="786" width="791" height="764" frameX="-6" frameY="-9" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0005" x="8" y="786" width="791" height="764" frameX="-6" frameY="-9" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0006" x="807" y="786" width="790" height="773" frameX="-8" frameY="0" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0007" x="807" y="786" width="790" height="773" frameX="-8" frameY="0" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0008" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0009" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0010" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0011" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0012" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0013" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0014" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0015" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0016" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0017" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+	<SubTexture name="Moni Akiha Menu0018" x="8" y="8" width="795" height="770" frameX="-6" frameY="-3" frameWidth="801" frameHeight="773"/>
+</TextureAtlas>

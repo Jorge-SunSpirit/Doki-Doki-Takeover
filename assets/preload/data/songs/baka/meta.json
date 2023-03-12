@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Baka",
+        "artist": "StarrieBlu",
+        "icon": "pen",
+        "pause": "natsuki",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

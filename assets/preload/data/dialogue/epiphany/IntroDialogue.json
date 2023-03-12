@@ -1,0 +1,77 @@
+{
+	"disableBGFade": true,
+	"dialogue": 
+	[
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Ahaha~ Finally, a moment between us again.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"You’ve been busy playing that cute little rhythm game, I’ve noticed.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"I’m glad you still thought of me even though you seemed pretty occupied.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Now I know it's because you were working so hard to add me to the game and sing with me!\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Isn't that right, {USERNAME}?\"",
+			"stringOBS": "\"And everyone tuning in can watch too. Are you excited, viewers?\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Hmm, there’s only enough space here for us to sing one song-\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"-and unfortunately since this game doesn’t have microphone support, we can’t exactly “sing” together.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"But that blue haired kid’s vocal data is still stored here, why don’t we just use that for you?\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"I want to sing with you for as long as I can, so expect this to be very, very difficult.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "no_one",
+			"expression": "gone",
+			"string": "\"Here we go.\"",
+			"side": "left"
+		}
+	]
+}

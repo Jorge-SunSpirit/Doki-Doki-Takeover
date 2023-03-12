@@ -1,0 +1,127 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Nat Idle"
+		},
+		{
+			"offsets": [
+				-32,
+				-21
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Nat Sing Note Left"
+		},
+		{
+			"offsets": [
+				-45,
+				14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Nat Sing Note Right"
+		},
+		{
+			"offsets": [
+				38,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Nat Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				33,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Nat Sing Note Up"
+		},
+		{
+			"offsets": [
+				-12,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hmmph",
+			"indices": [],
+			"name": "Nat hmph"
+		}
+	],
+	"costumes": "natsuki",
+	"costumelist": [
+		{
+			"subfolder":true,
+			"internal_Name": "blueskies",
+			"charFile":"natsuki-blueskies"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "buff",
+			"charFile":"natsuki-buff"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "casual",
+			"charFile":"natsuki-casual"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "hank",
+			"charFile":"natsuki-hank"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "kapi",
+			"charFile":"natsuki-kapi"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "sunday",
+			"charFile":"natsuki-sunday"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "skater",
+			"charFile":"natsuki-skater"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/natsuki/Doki_Nat_Assets",
+	"position": [
+		0,
+		-175
+	],
+	"healthicon": "natsuki",
+	"flip_x": false,
+	"healthbar_colors": [
+		252,
+		149,
+		211
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

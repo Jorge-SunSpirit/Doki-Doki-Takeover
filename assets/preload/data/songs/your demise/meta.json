@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Your Demise",
+        "artist": "DPZ",
+        "icon": "pen-demise",
+        "pause": "monika",
+        "introDialogue": "IntroDialogue",
+        "endDialogue": "EndDialogue"
+    }
+}

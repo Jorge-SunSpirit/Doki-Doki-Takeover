@@ -1,0 +1,171 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "TBD Dance"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"name": "TBD Dance"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				15
+			],
+			"fps": 24,
+			"anim": "countdownThree",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"name": "TBD Countdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				15
+			],
+			"fps": 24,
+			"anim": "countdownTwo",
+			"indices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "TBD Countdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				15
+			],
+			"fps": 24,
+			"anim": "countdownOne",
+			"indices": [
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23
+			],
+			"name": "TBD Countdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				15
+			],
+			"fps": 24,
+			"anim": "countdownGo",
+			"indices": [
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34
+			],
+			"name": "TBD Countdown"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				-4
+			],
+			"fps": 24,
+			"anim": "necksnap",
+			"indices": [],
+			"name": "TBD Spook"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/girlfriend/TBD Tan",
+	"position": [
+		-60,
+		90
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

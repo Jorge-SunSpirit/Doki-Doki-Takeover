@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="YuriWeek.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="0" y="0" width="424" height="312"/>
+	<SubTexture name="idle0001" x="0" y="0" width="424" height="312"/>
+	<SubTexture name="idle0002" x="424" y="0" width="424" height="312"/>
+	<SubTexture name="idle0003" x="424" y="0" width="424" height="312"/>
+	<SubTexture name="idle0004" x="848" y="0" width="424" height="312"/>
+	<SubTexture name="idle0005" x="848" y="0" width="424" height="312"/>
+	<SubTexture name="idle0006" x="1272" y="0" width="424" height="312"/>
+	<SubTexture name="idle0007" x="1272" y="0" width="424" height="312"/>
+	<SubTexture name="idle0008" x="0" y="312" width="424" height="312"/>
+	<SubTexture name="idle0009" x="424" y="312" width="424" height="312"/>
+	<SubTexture name="idle0010" x="424" y="312" width="424" height="312"/>
+	<SubTexture name="idle0011" x="424" y="312" width="424" height="312"/>
+	<SubTexture name="idle0012" x="848" y="312" width="424" height="312"/>
+	<SubTexture name="idle0013" x="1272" y="312" width="424" height="312"/>
+	<SubTexture name="idle0014" x="0" y="624" width="424" height="312"/>
+	<SubTexture name="idle0015" x="424" y="624" width="424" height="312"/>
+	<SubTexture name="idle0016" x="848" y="624" width="424" height="312"/>
+	<SubTexture name="idle0017" x="848" y="624" width="424" height="312"/>
+	<SubTexture name="idle0018" x="1272" y="624" width="424" height="312"/>
+	<SubTexture name="idle0019" x="0" y="936" width="424" height="312"/>
+	<SubTexture name="idle0020" x="424" y="936" width="424" height="312"/>
+	<SubTexture name="idle0021" x="424" y="936" width="424" height="312"/>
+	<SubTexture name="idle0022" x="424" y="936" width="424" height="312"/>
+	<SubTexture name="idle0023" x="424" y="936" width="424" height="312"/>
+</TextureAtlas>

@@ -1,0 +1,32 @@
+{
+	"dialogue": [
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"There were a lot of songs that would've worked for me to sing.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"I'm happy that you even cataloged all our songs too.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "ahh",
+			"string": "\"But this one in particular... it felt like something people would want me to sing.\"",
+			"side": "left"
+		},
+		{
+			"isCommand": false,
+			"name": "monika",
+			"expression": "neutral",
+			"string": "\"I think it's the name.\"",
+			"side": "left"
+		}
+	]
+}

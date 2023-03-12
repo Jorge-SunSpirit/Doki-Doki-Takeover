@@ -1,0 +1,10 @@
+{
+    "song": {
+        "name": "Beathoven (Natsuki Mix)",
+        "artist": "Kairii / PaperKitty",
+        "icon": "pen",
+        "pause": "natsuki",
+        "introDialogue": "IntroDialogue",
+        "playManually": true
+    }
+}

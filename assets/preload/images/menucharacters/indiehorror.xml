@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="indiehorror.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="IndieHorror0000" x="25" y="25" width="1048" height="551"/>
+	<SubTexture name="IndieHorror0001" x="25" y="25" width="1048" height="551"/>
+	<SubTexture name="IndieHorror0002" x="1098" y="25" width="1048" height="546" frameX="0" frameY="-5" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0003" x="1098" y="25" width="1048" height="546" frameX="0" frameY="-5" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0004" x="2171" y="25" width="1048" height="546" frameX="0" frameY="-5" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0005" x="2171" y="25" width="1048" height="546" frameX="0" frameY="-5" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0006" x="2171" y="25" width="1048" height="546" frameX="0" frameY="-5" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0007" x="25" y="601" width="1048" height="548" frameX="0" frameY="-3" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0008" x="25" y="601" width="1048" height="548" frameX="0" frameY="-3" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0009" x="1098" y="601" width="1048" height="550" frameX="0" frameY="-1" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0010" x="1098" y="601" width="1048" height="550" frameX="0" frameY="-1" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0011" x="1098" y="601" width="1048" height="550" frameX="0" frameY="-1" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0012" x="1098" y="601" width="1048" height="550" frameX="0" frameY="-1" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0013" x="1098" y="601" width="1048" height="550" frameX="0" frameY="-1" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0014" x="1098" y="601" width="1048" height="550" frameX="0" frameY="-1" frameWidth="1048" frameHeight="551"/>
+	<SubTexture name="IndieHorror0015" x="1098" y="601" width="1048" height="550" frameX="0" frameY="-1" frameWidth="1048" frameHeight="551"/>
+</TextureAtlas>
