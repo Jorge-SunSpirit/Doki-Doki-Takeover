@@ -244,25 +244,6 @@ class CostumeSelectState extends MusicBeatState
 			Conductor.songPosition = FlxG.sound.music.time;
 
 		super.update(elapsed);
-
-		if (costumeUnlocked[curSelected][costumeSelected])
-		{
-			// JSON array is always ordered, so should be fine
-			var text:String = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].desc, 'costume');
-			flavorText.text = text;
-		}
-		else
-		{
-			var text:String = '';
-		
-			// Checking unlock value if its null or not
-			if (costumeJSON.list[curSelected].costumes[costumeSelected].unlock != null)
-				text = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].unlock, 'costume');
-			else
-				text = "Unlocked by default.";
-
-			flavorText.text = LangUtil.getString('cmnLock') + ": " + text;
-		}
 			
 		if (!selectedSomethin)
 		{
@@ -334,11 +315,8 @@ class CostumeSelectState extends MusicBeatState
 				// selected character is rendered black
 				// This fix should hopefully resolve it.
 
-				// This did not resolve it.
-				/*
 				if (chara.color == 0x000000)
-					chara.color == 0xFFFFFF;
-				*/
+					chara.color = 0xFFFFFF;
 			}
 			if (controls.ACCEPT)
 				if (!selectingcostume)
@@ -394,7 +372,44 @@ class CostumeSelectState extends MusicBeatState
 			chara.loadGraphic(Paths.image('costume/' + char + '-' + charCostume, 'preload'));
 		else
 			chara.loadGraphic(Paths.image('costume/' + char, 'preload'));
-			
+
+		if (costumeUnlocked[curSelected][costumeSelected])
+		{
+			// JSON array is always ordered, so should be fine
+			flavorText.text = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].desc, 'costume');
+
+			// Descriptions for hidden costumes
+			switch (char)
+			{
+				case 'natsuki':
+				{
+					if (charCostume == 'buff')
+						flavorText.text = LangUtil.getString('descBuff_NA', 'costume');
+				}
+				case 'bf':
+				{
+					if (charCostume == 'sutazu')
+						flavorText.text = LangUtil.getString('descSutazu', 'costume');
+				}
+				case 'gf':
+				{
+					if (charCostume == 'sayo')
+						flavorText.text = LangUtil.getString('descSayoGF', 'costume');
+				}
+			}
+		}
+		else
+		{
+			var text:String = '';
+
+			// Checking unlock value if its null or not
+			if (costumeJSON.list[curSelected].costumes[costumeSelected].unlock != null)
+				text = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].unlock, 'costume');
+			else
+				text = "Unlocked by default.";
+
+			flavorText.text = LangUtil.getString('cmnLock') + ": " + text;
+		}
 	}
 
 	function costumeselect(goku:Bool)
@@ -545,7 +560,7 @@ class CostumeSelectState extends MusicBeatState
 				case 2:
 					SaveData.monikacostume = selection.data;
 
-					if (costumeSelected == 1 && (FlxG.keys.pressed.LEFT || FlxG.keys.pressed.RIGHT))
+					if (costumeSelected == 1 && (controls.LEFT || controls.RIGHT))
 						SaveData.monikacostume = "casuallong";
 				case 1:
 					SaveData.gfcostume = selection.data;
@@ -556,7 +571,7 @@ class CostumeSelectState extends MusicBeatState
 						SaveData.gfcostume = "sayo";
 					}
 						
-					if (costumeSelected == 1 && (FlxG.keys.pressed.LEFT || FlxG.keys.pressed.RIGHT))
+					if (costumeSelected == 1 && (controls.LEFT || controls.RIGHT))
 						SaveData.gfcostume = "christmas";
 				default:
 					SaveData.bfcostume = selection.data;
@@ -567,21 +582,21 @@ class CostumeSelectState extends MusicBeatState
 						colorthingie = 0xFFFFADD7;
 						SaveData.bfcostume = "sutazu";
 					}
-					if (costumeSelected == 1 && (FlxG.keys.pressed.LEFT || FlxG.keys.pressed.RIGHT))
+					if (costumeSelected == 1 && (controls.LEFT || controls.RIGHT))
 						SaveData.bfcostume = "christmas";
-					if (costumeSelected == 2 && FlxG.keys.pressed.LEFT)
+					if (costumeSelected == 2 && controls.LEFT)
 					{
 						colorthingie = 0xFFF8F4C1;
 						SaveData.bfcostume = "minus-yellow";
 					}
-					if (costumeSelected == 2 && FlxG.keys.pressed.RIGHT)
+					if (costumeSelected == 2 && controls.RIGHT)
 					{
 						colorthingie = 0xFFBFE6FF;
 						SaveData.bfcostume = "minus-mean";
 					}
-					if (costumeSelected == 3 && (FlxG.keys.pressed.LEFT || FlxG.keys.pressed.RIGHT))
+					if (costumeSelected == 3 && (controls.LEFT || controls.RIGHT))
 						SaveData.bfcostume = "soft-classic";
-					if (costumeSelected == 6 && (FlxG.keys.pressed.LEFT || FlxG.keys.pressed.RIGHT))
+					if (costumeSelected == 6 && (controls.LEFT || controls.RIGHT))
 						SaveData.bfcostume = "aloe-classic";
 			}
 

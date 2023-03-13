@@ -18,8 +18,8 @@ cmnOff	Off
 cmnYes	Yes
 cmnNo	No
 cmnOffset	Global Offset (Left or Right)
-cmnAddOffset	Song Offset (Left or Right): <X> | Adds an additional offset to this song only.
-cmnCategory	Please select a category.
+cmnAddOffset	Song Offset (Left or Right): <X> | Adds an additional offset to this song only. Hold Shift to change the offset faster.
+cmnCategory	Please select a category. Hold Shift to change the offset faster.
 cmnPractice	Practice Mode
 cmnLock	Locked
 cmnSpeed	Speed
@@ -27,5 +27,4 @@ cmnCaching	Caching
 cmnLanguage	Language Select
 cmnDisableCaching	(press D to disable next boot)
 cmnCachingFinish	Finished caching!
-cmnWelcome	Welcome to Doki Doki Takeover!<N>This is a sequel to the Monika Full Week mod.<N><N>Have you played Monika Full Week?<N><N>Press Enter for yes, or Escape for no.
 cmnDialogueSkip	Press ESCAPE to skip the dialogue.

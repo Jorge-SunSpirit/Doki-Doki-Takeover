@@ -1,4 +1,4 @@
-![Doki Doki Takeover! logo](art/DokiTakeoverPlusLogo.png)
+![Doki Doki Takeover Plus! logo](art/DokiTakeoverPlusLogo.png)
 
 ## **[GameBanana](https://gamebanana.com/mods/47364)**
 
@@ -9,6 +9,10 @@ FNF Links: **[FNF Official Website](https://funkin.me) ⋅ [itch.io page](https:
 DDLC Links: **[DDLC Official Website](http://ddlc.moe) ⋅ [itch.io page](https://teamsalvato.itch.io/ddlc) ⋅ [Steam page](https://store.steampowered.com/app/698780)**
 
 DDLC+ Links: **[DDLC+ Official Website](http://ddlc.plus) ⋅ [Steam page](https://store.steampowered.com/app/1388880)**
+
+# Building
+
+Refer to [BUILDING.md](BUILDING.md) on how to build Doki Doki Takeover Plus.
 
 # Credits
 

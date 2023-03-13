@@ -646,13 +646,17 @@ class PlayState extends MusicBeatState
 	
 				if (SONG.song.toLowerCase() == 'epiphany')
 				{
-					DialogueBox.isOBS = CoolUtil.isRecording();
-	
-					if (SaveData.beatEpiphany)
-						introDialogue = metadata.song.introDialogueBeat;
-	
-					if (storyDifficulty == 2)
+					if (storyDifficulty != 2)
+					{
+						DialogueBox.isOBS = CoolUtil.isRecording();
+
+						if (SaveData.beatEpiphany)
+							introDialogue = metadata.song.introDialogueBeat;
+					}
+					else
+					{
 						introDialogue = metadata.song.introDialogueAlt;
+					}
 				}
 	
 				try
@@ -2135,9 +2139,11 @@ class PlayState extends MusicBeatState
 		add(waitin);
 
 		blackbarTop = new BGSprite('TightBars', 'shared', 0, -102, 0, 0);
+		blackbarTop.alpha = 0.001;
 		blackbarTop.cameras = [camHUD];
 		add(blackbarTop);
 		blackbarBottom = new BGSprite('TightBars', 'shared', 0, 822, 0, 0);
+		blackbarBottom.alpha = 0.001;
 		blackbarBottom.cameras = [camHUD];
 		add(blackbarBottom);
 			
@@ -7014,20 +7020,35 @@ class PlayState extends MusicBeatState
 							FlxTween.tween(funnytext, {alpha: 0}, 0.5, {ease: FlxEase.sineIn});
 						case 240:
 							if (SaveData.judgementCounter)
-								FlxTween.tween(judgementCounter, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
+								FlxTween.tween(judgementCounter, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
 
-							FlxTween.tween(laneunderlay, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
-							FlxTween.tween(laneunderlayOpponent, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
+							if (mirrormode && middleScroll)
+							{
+								// do nothing!
+							}
+							else
+							{
+								FlxTween.tween(laneunderlay, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
+							}
 
 							FlxTween.tween(iconP1, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
 							FlxTween.tween(healthBar, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
 							FlxTween.tween(healthBarBG, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
 							FlxTween.tween(scoreTxt, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
 							camZooming = true;
+
+							var targetAlpha:Float = 1;
+
+							if (mirrormode && middleScroll)
+								targetAlpha = SaveData.middleOpponent ? 0.35 : 0;
+
 							var whichStrums:FlxTypedGroup<StrumNote> = (mirrormode ? opponentStrums : playerStrums);
+
 							for (i in 0...4)
-								FlxTween.tween(whichStrums.members[i], {y: whichStrums.members[i].y + 10, alpha: 1}, 1,
+							{
+								FlxTween.tween(whichStrums.members[i], {y: whichStrums.members[i].y + 10, alpha: targetAlpha}, 1,
 									{ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
+							}
 						case 248:
 							blackBars(true);
 							FlxTween.tween(camFollow, {y: 326}, 3, {
@@ -7063,10 +7084,23 @@ class PlayState extends MusicBeatState
 							canPause = false;
 							openSubState(new DokiCards(!isStoryMode));
 						case 1246:
+							var targetAlpha:Float = 1;
+
+							if (!mirrormode && middleScroll)
+								targetAlpha = SaveData.middleOpponent ? 0.35 : 0;
+
 							var whichStrums:FlxTypedGroup<StrumNote> = (mirrormode ? playerStrums : opponentStrums);
+
 							for (i in 0...4)
-								FlxTween.tween(whichStrums.members[i], {y: whichStrums.members[i].y + 10, alpha: 1}, 1,
+							{
+								FlxTween.tween(whichStrums.members[i], {y: whichStrums.members[i].y + 10, alpha: targetAlpha}, 1,
 									{ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
+							}
+
+							if (!middleScroll)
+								FlxTween.tween(laneunderlayOpponent, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
+							else if (mirrormode && middleScroll)
+								FlxTween.tween(laneunderlay, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
 						case 1252:
 							blackBars(true);
 							FlxTween.tween(camFollow, {y: 326}, 3, {
@@ -7228,10 +7262,9 @@ class PlayState extends MusicBeatState
 							libHando.animation.play('idle', true);
 						case 368:
 							if (SaveData.judgementCounter)
-								FlxTween.tween(judgementCounter, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
+								FlxTween.tween(judgementCounter, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
 
 							FlxTween.tween(laneunderlay, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
-							FlxTween.tween(laneunderlayOpponent, {alpha: SaveData.laneTransparency}, 0.5, {ease: FlxEase.sineIn});
 
 							FlxTween.tween(iconP1, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
 							FlxTween.tween(healthBar, {alpha: 1}, 0.5, {ease: FlxEase.sineIn});
@@ -8627,6 +8660,9 @@ class PlayState extends MusicBeatState
 	{
 		if (inorout)
 		{
+			blackbarTop.alpha = 1;
+			blackbarBottom.alpha = 1;
+
 			FlxTween.tween(blackbarBottom, {y: 628}, 1.2, {ease: FlxEase.sineOut});
 			FlxTween.tween(blackbarTop, {y: 0}, 1.2, {ease: FlxEase.sineOut});
 		}
@@ -8634,12 +8670,21 @@ class PlayState extends MusicBeatState
 		{
 			FlxTween.tween(blackbarBottom, {y: 822}, 1.2, {ease: FlxEase.sineIn});
 			FlxTween.tween(blackbarTop, {y: -102}, 1.2, {ease: FlxEase.sineIn});
+
+			new FlxTimer().start(1.2, function(tmr:FlxTimer)
+			{
+				blackbarTop.alpha = 0.001;
+				blackbarBottom.alpha = 0.001;
+			});
 		}
 	}
 
 	function bringInThingie()
 	{
 		trace('plz wok for me <3');
+		if (middleScroll)
+			waitin.screenCenter(X);
+
 		waitin.alpha = 1;
 		FlxTween.tween(waitin, {y: 367}, 1.2, {
 			ease: FlxEase.quadOut,

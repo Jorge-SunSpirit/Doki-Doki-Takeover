@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.teamtbd.dokitakeover" main="Main" version="3.0.0" company="TeamTBD" />
+	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.teamtbd.dokitakeover" main="Main" version="3.0.1" company="TeamTBD" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->

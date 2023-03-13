@@ -1,20 +1,15 @@
 package;
 
-import flixel.FlxG;
-import flixel.graphics.FlxGraphic;
-import flixel.graphics.frames.FlxAtlasFrames;
-import lime.utils.Assets;
-import openfl.display.BitmapData;
-import openfl.media.Sound;
 import openfl.system.System;
-import openfl.utils.Assets as OpenFlAssets;
+import flixel.FlxG;
+import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
+import openfl.utils.Assets as OpenFlAssets;
+import lime.utils.Assets;
+import flixel.graphics.FlxGraphic;
+import openfl.display.BitmapData;
 import openfl.display3D.textures.Texture;
-
-#if sys
-import sys.io.File;
-import sys.FileSystem;
-#end
+import openfl.media.Sound;
 
 using StringTools;
 
@@ -285,14 +280,23 @@ class Paths
 			{
 				var newBitmap:BitmapData = OpenFlAssets.getBitmapData(path);
 
-				var newTexture:Texture = FlxG.stage.context3D.createTexture(newBitmap.width, newBitmap.height, BGRA, false);
-				newTexture.uploadFromBitmapData(newBitmap);
-				currentTrackedTextures.set(path, newTexture);
-				newBitmap.dispose();
-				newBitmap.disposeImage();
-				newBitmap = null;
+				var newGraphic:FlxGraphic;
 
-				var newGraphic:FlxGraphic = FlxG.bitmap.add(BitmapData.fromTexture(newTexture), false, path);
+				if (SaveData.gpuTextures)
+				{
+					var newTexture:Texture = FlxG.stage.context3D.createTexture(newBitmap.width, newBitmap.height, BGRA, false);
+					newTexture.uploadFromBitmapData(newBitmap);
+					currentTrackedTextures.set(path, newTexture);
+					newBitmap.dispose();
+					newBitmap.disposeImage();
+					newBitmap = null;
+					newGraphic = FlxG.bitmap.add(BitmapData.fromTexture(newTexture), false, path);
+				}
+				else
+				{
+					newGraphic = FlxG.bitmap.add(path, false, path);
+				}
+
 				newGraphic.persist = true;
 				currentTrackedAssets.set(path, newGraphic);
 			}

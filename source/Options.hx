@@ -1029,6 +1029,27 @@ class AntiAliasing extends Option
 	}
 }
 
+class GPUTextures extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		SaveData.gpuTextures = !SaveData.gpuTextures;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('nameGPUTextures', 'option') + ' ' + (SaveData.gpuTextures ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
+
 class CharaCacheOption extends Option
 {
 	public function new(desc:String)

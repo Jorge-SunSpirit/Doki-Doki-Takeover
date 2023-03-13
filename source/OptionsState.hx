@@ -64,6 +64,7 @@ class OptionsState extends MusicBeatState
 		new OptionCategory(LangUtil.getString('catPerformance', 'option'), [
 			new FPSCapOption(LangUtil.getString('descFPSCap', 'option')),
 			new AntiAliasing(LangUtil.getString('descAntialiasing', 'option')),
+			new GPUTextures(LangUtil.getString('descGPUTextures', 'option')),
 			#if FEATURE_CACHING
 			new CharaCacheOption(LangUtil.getString('descCacheCharacter', 'option')),
 			new SongCacheOption(LangUtil.getString('descCacheSong', 'option')),

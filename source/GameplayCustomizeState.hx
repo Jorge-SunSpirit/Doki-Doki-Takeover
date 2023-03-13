@@ -117,13 +117,13 @@ class GameplayCustomizeState extends MusicBeatState
 		strumLine.scrollFactor.set();
 
 		laneunderlayOpponent = new FlxSprite(70, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
-		laneunderlayOpponent.alpha = 1 - SaveData.laneTransparency;
+		laneunderlayOpponent.alpha = SaveData.laneTransparency;
 		laneunderlayOpponent.scrollFactor.set();
 		laneunderlayOpponent.screenCenter(Y);
 		laneunderlayOpponent.cameras = [camHUD];
 
 		laneunderlay = new FlxSprite(70 + (FlxG.width / 2), 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
-		laneunderlay.alpha = 1 - SaveData.laneTransparency;
+		laneunderlay.alpha = SaveData.laneTransparency;
 		laneunderlay.scrollFactor.set();
 		laneunderlay.screenCenter(Y);
 		laneunderlay.cameras = [camHUD];
@@ -263,7 +263,7 @@ class GameplayCustomizeState extends MusicBeatState
 			{
 				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('num' + Std.int(i)));
 				numScore.screenCenter();
-				numScore.x = sick.x + (43 * daLoop) - 50;
+				numScore.x = sick.x + (45 * daLoop) - 50;
 				numScore.y = sick.y + 100;
 				numScore.cameras = [camHUD];
 				numScore.antialiasing = SaveData.globalAntialiasing;

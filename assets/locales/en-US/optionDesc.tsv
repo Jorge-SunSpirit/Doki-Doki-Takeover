@@ -3,9 +3,9 @@ descKeyBindings	Change the key bindings of each note.
 descDownscroll	Change the direction of incoming notes.
 descGhostTap	Determines whether or not tapping outside of incoming notes will reduce your health.
 descJudgement	Customize the game's judgement timings.
-descFPSCap	Set the game's FPS cap. (Left or Right)
+descFPSCap	Set the game's FPS cap. (Left or Right, Shift to go faster)
 descCurFPSCap	Current FPS Cap
-descScroll	Change your note scroll speed. Mid-song speed changes won't apply. (Left or Right)
+descScroll	Change your note scroll speed. Mid-song speed changes won't apply. (Left or Right, Shift to go faster)
 descCurScroll	Current Scroll Speed
 descReset	Toggle pressing R to game over.
 descCustomize	Customize parts of the gameplay HUD to your heart's content.
@@ -33,10 +33,11 @@ descAutoPause	Toggle the game pausing in menus when it's unfocused.
 descJudgeCount	Shows a count of every judgement that you get during a song.
 descLanguage	Change the language of the game.
 descVideoDub	View the official video dub of Doki Doki Takeover!
-descBadEnd	Experience what goes wrong in an alternate ending. (Option goes to GameBanana)
+descBadEnd	Experience what goes wrong in an alternate ending. (Goes to GameBanana)
 descRatingToggle	Choose whether or not ratings are shown during gameplay.
 descAntialiasing	Make visuals smoother at the cost of performance.
 descMiddleOpponent	Show opponent notes
+descGPUTextures	Load textures through your GPU instead, reducing memory usage.
 descCacheCharacter	Reduce load times by caching every character on boot. (HEAVY MEMORY USAGE)
 descCacheSong	Reduce load times by caching every song on boot. (HEAVY MEMORY USAGE)
 descCache	Reduce further load times in this session by caching what was enabled above.

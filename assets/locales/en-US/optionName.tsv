@@ -36,6 +36,7 @@ nameVideoDub	Video Dub
 nameShowRating	Show Ratings
 nameHideRating	Hide Ratings
 nameAntialiasing	Anti-aliasing
+nameGPUTextures	GPU Textures
 nameCacheCharacter	Character Caching
 nameCacheSong	Song Caching
 nameCache	Cache Assets
