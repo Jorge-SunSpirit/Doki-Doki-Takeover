@@ -4,11 +4,13 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxBackdrop;
 import flixel.addons.transition.FlxTransitionableState;
+import flixel.effects.FlxFlicker;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 import shaders.ColorMaskShader;
 
 class FirstBootState extends MusicBeatState
@@ -48,7 +50,6 @@ class FirstBootState extends MusicBeatState
 		FlxTween.tween(gradient, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
 
 		#if FEATURE_LANGUAGE
-
 		localeList = Main.tongue.locales;
 
 		for (i in 0...localeList.length)

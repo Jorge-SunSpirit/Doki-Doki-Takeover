@@ -21,6 +21,9 @@
 	<file id="story" value="weekNames.tsv"/>
 	<file id="story" value="unlockPopups.tsv"/>
 
+	<!-- Used for Dialogue -->
+	<file id="dialogue" value="dialogue/high school conflict.tsv"/>
+
 
 	<!--Add locale entries here.
 

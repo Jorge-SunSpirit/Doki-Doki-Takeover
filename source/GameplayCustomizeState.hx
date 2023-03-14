@@ -315,11 +315,14 @@ class GameplayCustomizeState extends MusicBeatState
 		{
 			bf.dance();
 			dad.dance();
+			gf.dance();
 		}
-		else if (dad.curCharacter == 'sayori')
-			dad.dance();
-
-		gf.dance();
+		else if (curBeat % 2 != 0)
+		{
+			if (bf.danceIdle) bf.dance();
+			if (dad.danceIdle) dad.dance();
+			if (gf.danceIdle) gf.dance();
+		}
 
 		if (!FlxG.keys.pressed.SPACE && zoomStuff && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
 		{

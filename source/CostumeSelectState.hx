@@ -376,27 +376,38 @@ class CostumeSelectState extends MusicBeatState
 		if (costumeUnlocked[curSelected][costumeSelected])
 		{
 			// JSON array is always ordered, so should be fine
-			flavorText.text = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].desc, 'costume');
+			var text:String = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].desc, 'costume');
 
 			// Descriptions for hidden costumes
 			switch (char)
 			{
 				case 'natsuki':
 				{
-					if (charCostume == 'buff')
-						flavorText.text = LangUtil.getString('descBuff_NA', 'costume');
+					switch (charCostume)
+					{
+						case 'buff':
+							text = LangUtil.getString('descBuff_NA', 'costume');
+					}
 				}
 				case 'bf':
 				{
-					if (charCostume == 'sutazu')
-						flavorText.text = LangUtil.getString('descSutazu', 'costume');
+					switch (charCostume)
+					{
+						case 'sutazu':
+							text = LangUtil.getString('descSutazu', 'costume');
+					}
 				}
 				case 'gf':
 				{
-					if (charCostume == 'sayo')
-						flavorText.text = LangUtil.getString('descSayoGF', 'costume');
+					switch (charCostume)
+					{
+						case 'sayo':
+							text = LangUtil.getString('descSayoGF', 'costume');
+					}
 				}
 			}
+
+			flavorText.text = text;
 		}
 		else
 		{

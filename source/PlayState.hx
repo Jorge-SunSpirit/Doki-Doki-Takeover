@@ -473,6 +473,13 @@ class PlayState extends MusicBeatState
 			[FlxKey.fromString(SaveData.rightBind), FlxKey.RIGHT]
 		];
 
+		Ratings.timingWindows = [
+			SaveData.shitMs,
+			SaveData.badMs,
+			SaveData.goodMs,
+			SaveData.sickMs
+		];
+
 		Character.ingame = true;
 		Character.isFestival = false;
 
@@ -1453,15 +1460,18 @@ class PlayState extends MusicBeatState
 					lightoverlay.blend = ADD;
 
 					// love n' funkin'
-					poemVideo = new VideoSprite();
-					poemVideo.playVideo(Paths.video('lnf'), true);
-					poemVideo.bitmap.canSkip = false;
-					poemVideo.scrollFactor.set();
-					poemVideo.setGraphicSize(Std.int(poemVideo.width / defaultCamZoom));
-					poemVideo.updateHitbox();
-					poemVideo.antialiasing = SaveData.globalAntialiasing;
-					poemVideo.cameras = [camGame2];
-					poemVideo.alpha = 0.001;
+					if (SONG.song.toLowerCase() == 'love n funkin')
+					{
+						poemVideo = new VideoSprite();
+						poemVideo.playVideo(Paths.video('lnf'), true);
+						poemVideo.bitmap.canSkip = false;
+						poemVideo.scrollFactor.set();
+						poemVideo.setGraphicSize(Std.int(poemVideo.width / defaultCamZoom));
+						poemVideo.updateHitbox();
+						poemVideo.antialiasing = SaveData.globalAntialiasing;
+						poemVideo.cameras = [camGame2];
+						poemVideo.alpha = 0.001;
+					}
 
 					sideWindow = new BGSprite('notepad/SideWindow', 'doki', 0, 0, 0, 0);
 					sideWindow.setGraphicSize(Std.int(sideWindow.width / defaultCamZoom));
@@ -3351,6 +3361,9 @@ class PlayState extends MusicBeatState
 		if (hasMetadata && metadata.song.allowCountDown == false)
 			allowCountdown = metadata.song.allowCountDown;
 
+		if (!gf.danceIdle)
+			gfSpeed = 2;
+
 		if (!allowCountdown)
 		{
 			Conductor.songPosition = -CoolUtil.calcSectionLength(0.25) * 1000;
@@ -3358,25 +3371,20 @@ class PlayState extends MusicBeatState
 			{
 				if (SONG.song.toLowerCase() == 'catfight')
 					gf.playAnim('gone');
-				else
+				else if (gf.danceIdle && !gf.animation.curAnim.name.startsWith('sing'))
 					gf.dance();
 
-				if (boyfriend.danceIdle && !boyfriend.animation.curAnim.name.endsWith('miss'))
+				if (boyfriend.danceIdle && !boyfriend.animation.curAnim.name.startsWith('sing'))
 					boyfriend.dance(isAltAnimSection());
 
-				if (dad.danceIdle && !dad.animation.curAnim.name.endsWith('miss'))
+				if (dad.danceIdle && !dad.animation.curAnim.name.startsWith('sing'))
 					dad.dance(isAltAnimSection());
 
-				if (SONG.numofchar >= 3)
-				{
-					if (extrachar1.danceIdle)
-						extrachar1.dance(isAltAnimSection());
-				}
-				if (SONG.numofchar >= 4)
-				{
-					if (extrachar2.danceIdle)
-						extrachar2.dance(isAltAnimSection());
-				}
+				if (SONG.numofchar >= 3 && extrachar1.danceIdle && !extrachar1.animation.curAnim.name.startsWith('sing'))
+					extrachar1.dance(isAltAnimSection());
+
+				if (SONG.numofchar >= 4 && extrachar2.danceIdle && !extrachar2.animation.curAnim.name.startsWith('sing'))
+					extrachar2.dance(isAltAnimSection());
 
 				if (metadataDisplay != null)
 				{
@@ -3412,22 +3420,22 @@ class PlayState extends MusicBeatState
 				{
 					if (SONG.song.toLowerCase() == 'catfight')
 						gf.playAnim('gone');
-					else
+					else if (!gf.animation.curAnim.name.startsWith('sing'))
 						gf.dance();
 				}
 
 				if (swagCounter % 2 == 0)
 				{
-					if (!boyfriend.animation.curAnim.name.endsWith('miss'))
+					if (!boyfriend.animation.curAnim.name.startsWith('sing'))
 						boyfriend.dance(isAltAnimSection());
 
-					if (!dad.animation.curAnim.name.endsWith('miss'))
+					if (!dad.animation.curAnim.name.startsWith('sing'))
 						dad.dance(isAltAnimSection());
 
-					if (SONG.numofchar >= 3 && !extrachar1.animation.curAnim.name.endsWith('miss'))
+					if (SONG.numofchar >= 3 && !extrachar1.animation.curAnim.name.startsWith('sing'))
 						extrachar1.dance(isAltAnimSection());
 
-					if (SONG.numofchar >= 4 && !extrachar2.animation.curAnim.name.endsWith('miss'))
+					if (SONG.numofchar >= 4 && !extrachar2.animation.curAnim.name.startsWith('sing'))
 						extrachar2.dance(isAltAnimSection());
 
 					if (curStage.startsWith('doki'))
@@ -3443,20 +3451,20 @@ class PlayState extends MusicBeatState
 				}
 				else if (swagCounter % 2 != 0)
 				{
-					if (boyfriend.danceIdle && !boyfriend.animation.curAnim.name.endsWith('miss'))
+					if (boyfriend.danceIdle && !boyfriend.animation.curAnim.name.startsWith('sing'))
 						boyfriend.dance(isAltAnimSection());
 
-					if (dad.danceIdle && !dad.animation.curAnim.name.endsWith('miss'))
+					if (dad.danceIdle && !dad.animation.curAnim.name.startsWith('sing'))
 						dad.dance(isAltAnimSection());
 
 					if (SONG.numofchar >= 3)
 					{
-						if (extrachar1.danceIdle && !extrachar1.animation.curAnim.name.endsWith('miss'))
+						if (extrachar1.danceIdle && !extrachar1.animation.curAnim.name.startsWith('sing'))
 							extrachar1.dance(isAltAnimSection());
 					}
 					if (SONG.numofchar >= 4)
 					{
-						if (extrachar2.danceIdle && !extrachar2.animation.curAnim.name.endsWith('miss'))
+						if (extrachar2.danceIdle && !extrachar2.animation.curAnim.name.startsWith('sing'))
 							extrachar2.dance(isAltAnimSection());
 					}
 				}
@@ -4974,9 +4982,9 @@ class PlayState extends MusicBeatState
 					switch (curBeat)
 					{
 						case 0:
-							gfSpeed = 2;
+							gfSpeed = !gf.danceIdle ? 4 : 2;
 						case 16:
-							gfSpeed = 1;
+							gfSpeed = !gf.danceIdle ? 2 : 1;
 					}
 				case 'glitcher (monika mix)':
 					if (SaveData.shaders)
@@ -7612,7 +7620,6 @@ class PlayState extends MusicBeatState
 				danaBop.dance(true);
 				alma.dance(true);
 			}
-				
 
 			dorthDanced = !dorthDanced;
 
