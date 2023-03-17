@@ -8,6 +8,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"See? That wasn’t so hard at all! In fact, it was a lot of fun too!\"",
+			"key": "confIntro1",
 			"side": "left"
 		},
 		{
@@ -22,6 +23,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"...hmm...\"",
+			"key": "confIntro2",
 			"side": "right"
 		},
 		{
@@ -29,6 +31,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Eheh, did I do a good job?\"",
+			"key": "confIntro3",
 			"side": "left"
 		},
 		{
@@ -36,6 +39,7 @@
 			"name": "gf",
 			"expression": "neutral",
 			"string": "*happy gesture*",
+			"key": "confIntro4",
 			"side": "right"
 		},
 		{
@@ -43,6 +47,7 @@
 			"name": "bf",
 			"expression": "beep",
 			"string": "\"Beep!\"",
+			"key": "confIntro5",
 			"side": "right"
 		},
 		{
@@ -50,6 +55,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"Aww, I'm so happy you two are enjoying your time here!\"",
+			"key": "confIntro6",
 			"side": "left"
 		},
 		{
@@ -57,6 +63,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"It's my duty to make sure everyone in the club has bright happy smiles.\"",
+			"key": "confIntro7",
 			"side": "left"
 		},
 		{
@@ -72,6 +79,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"After all-\"",
+			"key": "confIntro8",
 			"side": "left"
 		},
 		{
@@ -83,6 +91,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"I AM the Club President.\"",
+			"key": "confIntro9",
 			"side": "left"
 		}
 	]

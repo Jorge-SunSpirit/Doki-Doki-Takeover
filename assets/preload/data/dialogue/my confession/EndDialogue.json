@@ -8,6 +8,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "What a lovely performance that was! I knew you had it in you.",
+			"key": "confEnd1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "Today has been one of the only real times I've tried to sing in front of strangers.",
+			"key": "confEnd2",
 			"side": "right"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "monika",
 			"expression": "uhoh",
 			"string": "I'm glad that all the practice had paid off.",
+			"key": "confEnd3",
 			"side": "right"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "I quite liked the song choice as well. Where is it from?",
+			"key": "confEnd4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Oh! I... I wrote that song.",
+			"key": "confEnd5",
 			"side": "right"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "It's something I spend a lot of long nights working on. It was meant for someone who means a lot to me.",
+			"key": "confEnd6",
 			"side": "right"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "Unfortunately... a lot happened, and I lost my chance to sing it to them... ",
+			"key": "confEnd7",
 			"side": "right"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "I still don't know where I am now, so I don't know if I'll ever get to share it with them... ",
+			"key": "confEnd8",
 			"side": "right"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "-though I don't know if they'll even want to hear it.",
+			"key": "confEnd9",
 			"side": "right"
 		},
 		{
@@ -71,6 +80,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Ah, such a tragic story you've found yourself entangled in.",
+			"key": "confEnd10",
 			"side": "left"
 		},
 		{
@@ -78,6 +88,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "I can promise that this place is one of no such tragedies.",
+			"key": "confEnd11",
 			"side": "left"
 		},
 		{
@@ -85,6 +96,7 @@
 			"name": "senpai",
 			"expression": "happy",
 			"string": "I'll be around whenever you have a song in your heart that needs to be sang!",
+			"key": "confEnd12",
 			"side": "left"
 		},
 		{
@@ -96,6 +108,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "(This guy is awfully flirtatious all of a sudden- especially after he snapped at me and that kid earlier...)",
+			"key": "confEnd13",
 			"side": "right"
 		},
 		{
@@ -103,6 +116,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "(Well. If I didn't end up here, it would've been the recycling bin instead...)",
+			"key": "confEnd14",
 			"side": "right"
 		},
 		{
@@ -117,6 +131,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "(I hope the others are okay.)",
+			"key": "confEnd15",
 			"side": "right"
 		},
 		{
@@ -124,6 +139,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "(Natsuki, Yuri, Sayori...)",
+			"key": "confEnd16",
 			"side": "right"
 		},
 		{
@@ -131,6 +147,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "(After what happened, I thought restoring their character files and leaving would be what's best for the club... and for the one I loved...)",
+			"key": "confEnd17",
 			"side": "right"
 		},
 		{
@@ -149,6 +166,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "Is something the matter?",
+			"key": "confEnd18",
 			"side": "left"
 		},
 		{
@@ -156,6 +174,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Ah- I'm fine. I don't know what that was-",
+			"key": "confEnd19",
 			"side": "right"
 		}
 	]

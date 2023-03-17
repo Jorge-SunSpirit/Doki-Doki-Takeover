@@ -11,11 +11,12 @@ nameJudgement	Judgement Timings
 nameFPSCount	FPS & Memory Counter
 nameFPSCap	FPS Cap
 nameScroll	Scroll Speed
+nameScrollDefault	Song Default
 nameNPS	NPS Display
 nameCustomize	Customize Gameplay HUD
 nameGFCountdown	Girlfriend Countdown
-nameMiddleScrollOn	Middle Scroll
-nameMiddleScrollOff	Right Side Scroll
+nameMiddleScrollOn	Middlescroll
+nameMiddleScrollOff	Sidescroll
 nameLaneUnderwayOn	Lane Underlay
 nameLaneUnderwayOff	No Lane Underlay
 nameScoreReset	Reset Score Data
@@ -41,6 +42,9 @@ nameCacheCharacter	Character Caching
 nameCacheSong	Song Caching
 nameCache	Cache Assets
 namePreload	Preload Assets
-nameRandom	Randomize Notes
 nameShaders	Shaders
+nameLowEnd	Low End
 nameCursor	Custom Cursor
+nameMirror	Mirror Mode
+nameSudden	Sudden Death
+nameRandom	Randomized Notes

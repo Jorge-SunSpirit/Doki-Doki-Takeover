@@ -25,7 +25,7 @@ class CloseGameSubState extends MusicBeatSubstate
 		box.screenCenter();
 		add(box);
 
-		var text:FlxText = new FlxText(0, box.y + 76, box.frameWidth * 0.95, 'Are you sure you want to\nexit the game?');
+		var text:FlxText = new FlxText(0, box.y + 76, box.frameWidth * 0.95, LangUtil.getString('cmnExit'));
 		text.setFormat(LangUtil.getFont('aller'), 32, FlxColor.BLACK, FlxTextAlign.CENTER);
 		text.y += LangUtil.getFontOffset('aller');
 		text.screenCenter(X);

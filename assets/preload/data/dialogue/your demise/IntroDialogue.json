@@ -8,6 +8,7 @@
 			"name": "monika",
 			"expression": "uhoh",
 			"string": "There... No more distractions.",
+			"key": "ydIntro1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "bf",
 			"expression": "what",
 			"string": "SKEE DEP!",
+			"key": "ydIntro2",
 			"side": "right"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "bf",
 			"expression": "what",
 			"string": "(Translation) GIRLFRIEND!",
+			"key": "ydIntro3",
 			"side": "right"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "monika",
 			"expression": "",
 			"string": "Let's get back to singing, shall we?",
+			"key": "ydIntro4",
 			"side": "left"
 		},
 		{
@@ -43,6 +47,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Hmm?",
+			"key": "ydIntro5",
 			"side": "left"
 		},
 		{
@@ -50,6 +55,7 @@
 			"name": "bf",
 			"expression": "angry",
 			"string": "*aggressive bee bop noises*",
+			"key": "ydIntro6",
 			"side": "right"
 		},
 		{
@@ -57,6 +63,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Oh... her.",
+			"key": "ydIntro7",
 			"side": "left"
 		},
 		{
@@ -64,6 +71,7 @@
 			"name": "monika",
 			"expression": "",
 			"string": "Hey, let's not worry about her, ok?",
+			"key": "ydIntro8",
 			"side": "left"
 		},
 		{
@@ -71,6 +79,7 @@
 			"name": "monika",
 			"expression": "",
 			"string": "C'mon, I've got a very special song I've wanted to sing!",
+			"key": "ydIntro9",
 			"side": "left"
 		},
 		{
@@ -78,6 +87,7 @@
 			"name": "bf",
 			"expression": "angry",
 			"string": "*continuation of angry bee bops*",
+			"key": "ydIntro10",
 			"side": "right"
 		},
 		{
@@ -99,6 +109,7 @@
 			"name": "monika",
 			"expression": "hmm",
 			"string": "One more song.",
+			"key": "ydIntro11",
 			"side": "left"
 		}
 	]

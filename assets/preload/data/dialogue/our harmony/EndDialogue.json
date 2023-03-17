@@ -9,6 +9,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "The Literature Club girls conclude their song with laughter and cheer. The music room is alight with excitement and joy.",
+			"key": "ohEnd1",
 			"side": ""
 		},
 		{
@@ -16,6 +17,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"I can’t believe we waited this long to all sing together! I wanna do this so much more often!\"",
+			"key": "ohEnd2",
 			"side": "left"
 		},
 		{
@@ -23,6 +25,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"There’s always plenty of extra time during club meetings to keep singing, and I’m more than excited to sing some more with everyone. We sound amazing together!\"",
+			"key": "ohEnd3",
 			"side": "right"
 		},
 		{
@@ -30,6 +33,7 @@
 			"name": "natsuki",
 			"expression": "gone",
 			"string": "\"Maybe next time we can get the other three to join us too.\"",
+			"key": "ohEnd4",
 			"side": "left"
 		},
 		{
@@ -37,6 +41,7 @@
 			"name": "yuri",
 			"expression": "gone",
 			"string": "\"I haven’t seen any of them around. Do you think they’ll show up for the club meeting today?\"",
+			"key": "ohEnd5",
 			"side": "left"
 		},
 		{
@@ -44,6 +49,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"We’ll have to see.\"",
+			"key": "ohEnd6",
 			"side": "right"
 		},
 		{
@@ -51,6 +57,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"Actually, I just remembered-! Sayori, didn’t you have exciting news you wanted to share with us?\"",
+			"key": "ohEnd7",
 			"side": "right"
 		},
 		{
@@ -58,6 +65,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Oh oh! I do! Thank you for reminding me!\"",
+			"key": "ohEnd8",
 			"side": "left"
 		},
 		{
@@ -65,6 +73,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"You guys aren’t gonna believe this, but you know how my friend keeps refusing to sing with us?\"",
+			"key": "ohEnd9",
 			"side": "left"
 		},
 		{
@@ -72,6 +81,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"I saw him in the clubroom with Boyfriend and Girlfriend, and I could have sworn I heard him singing!\"",
+			"key": "ohEnd10",
 			"side": "left"
 		},
 		{
@@ -79,6 +89,7 @@
 			"name": "natsuki",
 			"expression": "gone",
 			"string": "\"Heh heh, about time he gave in. I was gonna keep bullying that dope until he did.\"",
+			"key": "ohEnd11",
 			"side": "left"
 		},
 		{
@@ -86,6 +97,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"I’m surprised he stuck out not singing for so long. You think we’ll catch him mid-song if we all sneak in right now?\"",
+			"key": "ohEnd12",
 			"side": "left"
 		},
 		{
@@ -93,6 +105,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Let’s go and see! To the club!\"",
+			"key": "ohEnd13",
 			"side": "left"
 		}
 	]

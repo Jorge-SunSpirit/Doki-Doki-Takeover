@@ -1,9 +1,0 @@
-:disableskip:
-:hidedialogue:
-:monika_ahaha:"Это... Это сработало!"
-:bf_scared:"..."
-:gf_scared:"..."
-:hideright:
-:all_neutral:"..."
-:all_gasp:"Моника!"
-:crash:

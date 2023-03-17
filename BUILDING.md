@@ -2,30 +2,23 @@
 
 ## Installing the required programs
 
-You will need to install [Haxe](https://haxe.org/download/), [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/), and [Git](https://git-scm.com/downloads).
+You will need to install [Haxe](https://haxe.org/download/) (4.2.4+), [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/) (5.0.0+), and [Git](https://git-scm.com/downloads).
 
 You also need to install additional libraries. Currently, these are the things that are required:
 
 ```text
 haxelib install firetongue
-haxelib install hxCodec
-haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-haxelib git tentools https://github.com/TentaRJ/tentools
-haxelib git systools https://github.com/haya3218/systools
+haxelib install flxanimate
+haxelib git hxCodec https://github.com/polybiusproxy/hxCodec.git
+haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
 ```
 
-Recompiling systools is required as it's different from the one that comes with HaxeFlixel.
-
-```text
-haxelib run lime rebuild systools [windows, mac, linux]
-```
-
-If you're on Linux, you'll need to grab a specific commit of hxCodec instead and install libvlc.
+If you're on Linux, you'll need to install libvlc. If you are on Arch, the AUR package is outdated so you'll need to install vlc instead.
+The following is for distributions based off Ubuntu:
 
 ```text
 sudo apt-get install libvlc-dev
 sudo apt-get install libvlccore-dev
-haxelib git hxCodec https://github.com/polybiusproxy/hxCodec 15d950b103603a976e0e2d5004c8717b4eecc945
 ```
 
 You should have everything ready for compiling the game; follow the guide below to continue!

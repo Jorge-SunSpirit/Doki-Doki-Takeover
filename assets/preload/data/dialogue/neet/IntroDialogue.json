@@ -7,6 +7,7 @@
 			"name": "mc",
 			"expression": "chill",
 			"string": "\"Ah, good thing I caught you guys at a good time. I heard from the others that you'll be leaving the club for a while after today.\"",
+			"key": "neetIntro1",
 			"side": "left"
 		},
 		{
@@ -14,6 +15,7 @@
 			"name": "mc",
 			"expression": "chill",
 			"string": "\"We didn't exactly see each other much aside from the festival, so I wanted to say goodbye just in case.\"",
+			"key": "neetIntro2",
 			"side": "left"
 		},
 		{
@@ -21,6 +23,7 @@
 			"name": "mc",
 			"expression": "camera",
 			"string": "\"I've also been meaning to ask you something too. Some advice, to be specific.\"",
+			"key": "neetIntro3",
 			"side": "left"
 		},
 		{
@@ -28,6 +31,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "\"Bee boop?\"",
+			"key": "neetIntro4",
 			"side": "right"
 		},
 		{
@@ -35,6 +39,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"I didn't expect to enjoy my time here in the club so much. Writing poems and helping set up these special events and just getting to know all the other club members is definitely something I needed.\"",
+			"key": "neetIntro5",
 			"side": "left"
 		},
 		{
@@ -42,6 +47,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"Otherwise, I would've been stuck in my room for the rest of my life being a 'NEET', as Sayori would say.\"",
+			"key": "neetIntro6",
 			"side": "left"
 		},
 		{
@@ -49,6 +55,7 @@
 			"name": "mc",
 			"expression": "chill",
 			"string": "\"Joining the Literature Club did come with a pretty nice extra benefit too.\"",
+			"key": "neetIntro7",
 			"side": "left"
 		},
 		{
@@ -56,6 +63,7 @@
 			"name": "mc",
 			"expression": "chill",
 			"string": "\"I'm sure you've already noticed, but this club-\"",
+			"key": "neetIntro8",
 			"side": "left"
 		},
 		{
@@ -63,6 +71,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"-is full of incredibly cute girls.\"",
+			"key": "neetIntro9",
 			"side": "left"
 		},
 		{
@@ -70,6 +79,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"You already got yourself a girlfriend, so I wanted to ask if you, by chance, have any advice for someone like me who may pursue romance?\"",
+			"key": "neetIntro10",
 			"side": "left"
 		},
 		{
@@ -77,6 +87,7 @@
 			"name": "bf",
 			"expression": "beep",
 			"string": "\"De skeet.\"",
+			"key": "neetIntro11",
 			"side": "right"
 		},
 		{
@@ -84,6 +95,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"...sing? That seems like your response to every life problem.\"",
+			"key": "neetIntro12",
 			"side": "left"
 		},
 		{
@@ -91,6 +103,7 @@
 			"name": "mc",
 			"expression": "camera",
 			"string": "\"Girls aren't that simple, y'know. Plus, I've told you before, I'm not gonna embarrass myself trying to sing in front of them.\"",
+			"key": "neetIntro13",
 			"side": "left"
 		},
 		{
@@ -98,6 +111,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "*stare*",
+			"key": "neetIntro14",
 			"side": "right"
 		},
 		{
@@ -112,6 +126,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"No.\"",
+			"key": "neetIntro15",
 			"side": "left"
 		},
 		{
@@ -119,6 +134,7 @@
 			"name": "gf",
 			"expression": "neutral",
 			"string": "*stare*",
+			"key": "neetIntro14",
 			"side": "right"
 		},
 		{
@@ -126,6 +142,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"Stop that.\"",
+			"key": "neetIntro16",
 			"side": "left"
 		},
 		{
@@ -133,6 +150,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "*intense unbreaking eye contact*",
+			"key": "neetIntro17",
 			"side": "right"
 		},
 		{
@@ -152,6 +170,7 @@
 			"name": "mc",
 			"expression": "hrk",
 			"string": "\"...ghh-!\"",
+			"key": "neetIntro18",
 			"side": "left"
 		},
 		{
@@ -159,6 +178,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"F-fine! I'll give singing a shot.\"",
+			"key": "neetIntro19",
 			"side": "left"
 		},
 		{
@@ -166,6 +186,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "(I can't believe staredowns are all it takes to get me to do things-)",
+			"key": "neetIntro20",
 			"side": "left"
 		},
 		{
@@ -173,6 +194,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "(Though if this ends up like how me joining the club turned out, this could end up working out in the end.)",
+			"key": "neetIntro21",
 			"side": "left"
 		},
 		{
@@ -180,6 +202,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"Can you give me some pointers at least?\"",
+			"key": "neetIntro22",
 			"side": "left"
 		},
 		{
@@ -187,6 +210,7 @@
 			"name": "gf",
 			"expression": "yeah",
 			"string": "*cheer*",
+			"key": "neetIntro23",
 			"side": "right"
 		},
 		{
@@ -194,6 +218,7 @@
 			"name": "bf",
 			"expression": "yeah",
 			"string": "\"Skee yeah!\"",
+			"key": "neetIntro24",
 			"side": "right"
 		}
 	]

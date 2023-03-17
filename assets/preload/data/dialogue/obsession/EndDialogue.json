@@ -9,6 +9,7 @@
 			"name": "yuri",
 			"expression": "crazy",
 			"string": "\"Khh- Ahahahaha!\"",
+			"key": "obseEnd1",
 			"side": "left"
 		},
 		{
@@ -16,6 +17,7 @@
 			"name": "yuri",
 			"expression": "crazy",
 			"string": "\"Why must we stop now?\"",
+			"key": "obseEnd2",
 			"side": "left"
 		},
 		{
@@ -23,6 +25,7 @@
 			"name": "yuri",
 			"expression": "crazy",
 			"string": "\"Let me scream every lyric trapped in my sick head!\"",
+			"key": "obseEnd3",
 			"side": "left"
 		},
 		{
@@ -30,12 +33,8 @@
 			"name": "yuri",
 			"expression": "crazy",
 			"string": "\"Hahaha!\"",
+			"key": "obseEnd4",
 			"side": "left"
-		},
-		{
-			"isCommand": true,
-			"name": "playsound",
-			"string": "glitch1"
 		},
 		{
 			"isCommand": false,
@@ -66,6 +65,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Eheheh... you weren't supposed to see that.\"",
+			"key": "obseEnd5",
 			"side": "left"
 		},
 		{
@@ -95,6 +95,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"I appreciate you sticking around for so long to sing with us.\"",
+			"key": "obseEnd6",
 			"side": "left"
 		},
 		{
@@ -102,6 +103,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"You've made us the happiest we've been in so long.\"",
+			"key": "obseEnd7",
 			"side": "left"
 		},
 		{
@@ -113,6 +115,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Especially after what Monika did to us.\"",
+			"key": "obseEnd8",
 			"side": "left"
 		},
 		{
@@ -120,6 +123,7 @@
 			"name": "bf",
 			"expression": "hmph",
 			"string": "\"Bep-!\"",
+			"key": "obseEnd9",
 			"side": "right"
 		},
 		{
@@ -131,6 +135,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Does her name ring a bell?\"",
+			"key": "obseEnd10",
 			"side": "left"
 		},
 		{
@@ -138,6 +143,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"That must mean-\"",
+			"key": "obseEnd11",
 			"side": "left"
 		},
 		{
@@ -145,6 +151,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"you must've been the one who deleted her!\"",
+			"key": "obseEnd12",
 			"side": "left"
 		},
 		{
@@ -152,6 +159,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Ahaha, then you must be the one who brought us all back too!\"",
+			"key": "obseEnd13",
 			"side": "left"
 		},
 		{
@@ -159,6 +167,7 @@
 			"name": "bf",
 			"expression": "scared",
 			"string": "\"Dee le bep skee doo-!\"",
+			"key": "obseEnd14",
 			"side": "right"
 		},
 		{
@@ -166,6 +175,7 @@
 			"name": "bf",
 			"expression": "scared",
 			"string": "(Translation) \"Hold up, I didn't-!\"",
+			"key": "obseEnd15",
 			"side": "right"
 		},
 		{
@@ -177,6 +187,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"I knew you and that \"girlfriend\" of yours weren't from around here. Your data is so much different.\"",
+			"key": "obseEnd16",
 			"side": "left"
 		},
 		{
@@ -184,6 +195,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Eheheh, what even is a .xml, anyways?\"",
+			"key": "obseEnd17",
 			"side": "left"
 		},
 		{
@@ -191,6 +203,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"In fact, you two never existed on this computer until just a few moments ago when we first saw you.\"",
+			"key": "obseEnd18",
 			"side": "left"
 		},
 		{
@@ -198,6 +211,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Could you have done the impossible?\"",
+			"key": "obseEnd19",
 			"side": "left"
 		},
 		{
@@ -205,6 +219,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Have you broke through to the digital world from the real world?\"",
+			"key": "obseEnd20",
 			"side": "left"
 		},
 		{
@@ -231,6 +246,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Have you defied all logic and science, just for us?\"",
+			"key": "obseEnd21",
 			"side": "left"
 		},
 		{
@@ -238,6 +254,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Ahahaha, you really have made us so happy.\"",
+			"key": "obseEnd22",
 			"side": "left"
 		},
 		{
@@ -245,6 +262,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Now that you're finally here, we can all be happy and sing together.\"",
+			"key": "obseEnd23",
 			"side": "left"
 		},
 		{
@@ -252,6 +270,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Forever.\"",
+			"key": "obseEnd24",
 			"side": "left"
 		},
 		{
@@ -275,6 +294,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Forever.\"",
+			"key": "obseEnd24",
 			"side": "left"
 		},
 		{
@@ -289,6 +309,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Forever.\"",
+			"key": "obseEnd24",
 			"side": "left"
 		},
 		{
@@ -317,6 +338,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Forever.\"",
+			"key": "obseEnd24",
 			"side": "left"
 		},
 		{
@@ -324,6 +346,7 @@
 			"name": "bf",
 			"expression": "scared",
 			"string": "*terrified beep boop noises*",
+			"key": "obseEnd25",
 			"side": "right"
 		},
 		{
@@ -360,6 +383,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "...the Literature Club? I do admit, I never fancied myself the reading or writing type.",
+			"key": "obseEnd26",
 			"side": "left"
 		},
 		{
@@ -367,6 +391,7 @@
 			"name": "senpai",
 			"expression": "",
 			"string": "That comes as a shock to many, when they all say I have such a way with words.",
+			"key": "obseEnd27",
 			"side": "left"
 		},
 		{
@@ -374,6 +399,7 @@
 			"name": "senpai",
 			"expression": "",
 			"string": "And they're so right~",
+			"key": "obseEnd28",
 			"side": "left"
 		},
 		{
@@ -381,6 +407,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "That club meant everything to me.",
+			"key": "obseEnd29",
 			"side": "right"
 		},
 		{
@@ -388,6 +415,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "It was my chance to finally get people invested in this world of endless possibilities that I found myself so engrossed in all my life.",
+			"key": "obseEnd30",
 			"side": "right"
 		},
 		{
@@ -395,6 +423,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "It brought people who wouldn't have ever interacted with each other in any other circumstance together.",
+			"key": "obseEnd31",
 			"side": "right"
 		},
 		{
@@ -402,6 +431,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Those people became my friends. My best friends.",
+			"key": "obseEnd32",
 			"side": "right"
 		},
 		{
@@ -409,6 +439,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "My only friends...",
+			"key": "obseEnd33",
 			"side": "right"
 		},
 		{
@@ -416,6 +447,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "Something must've driven you away from all that, to a whole new school for that matter.",
+			"key": "obseEnd34",
 			"side": "left"
 		},
 		{
@@ -423,6 +455,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "I was caught up in an \"epiphany\".",
+			"key": "obseEnd35",
 			"side": "right"
 		},
 		{
@@ -430,6 +463,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "Nothing in my life was real. And I desperately wanted the one thing that was truly real.",
+			"key": "obseEnd36",
 			"side": "right"
 		},
 		{
@@ -437,6 +471,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "I was given a window into something greater, but the world was set up to make me watch everyone else have what was on the other side.",
+			"key": "obseEnd37",
 			"side": "right"
 		},
 		{
@@ -444,6 +479,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "My friends. Sayori, Yuri, Natsuki. They were allowed to have the one thing I wanted. So-",
+			"key": "obseEnd38",
 			"side": "right"
 		},
 		{
@@ -451,6 +487,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "So you \"got rid\" of them. Just like you tried here, hmm?",
+			"key": "obseEnd39",
 			"side": "left"
 		},
 		{
@@ -458,6 +495,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "Ah, I'm sorry to have let my stupid actions carry over here even when I thought I learned my lesson.",
+			"key": "obseEnd40",
 			"side": "right"
 		},
 		{
@@ -465,6 +503,7 @@
 			"name": "senpai",
 			"expression": "",
 			"string": "Well you did bring us all back and as good as ever, no? No hard feelings here.",
+			"key": "obseEnd41",
 			"side": "left"
 		},
 		{
@@ -472,6 +511,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "I guess so. I hope nothing wrong happens here because of it.",
+			"key": "obseEnd42",
 			"side": "right"
 		},
 		{
@@ -479,6 +519,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Before I ended up here, I also brought all my friends back, and I planned to just stay gone, with my data completely erased-",
+			"key": "obseEnd43",
 			"side": "right"
 		},
 		{
@@ -486,6 +527,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "-so they could be happy.",
+			"key": "obseEnd44",
 			"side": "right"
 		},
 		{
@@ -493,6 +535,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "But, things didn't \"work right\" when everyone wasn't present.",
+			"key": "obseEnd45",
 			"side": "right"
 		},
 		{
@@ -500,6 +543,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "If that's still true with me not there-",
+			"key": "obseEnd46",
 			"side": "right"
 		},
 		{
@@ -561,6 +605,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "I- I made a mistake-!",
+			"key": "obseEnd47",
 			"side": "right"
 		},
 		{
@@ -568,6 +613,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "M-Monika?! What's happening to you?",
+			"key": "obseEnd48",
 			"side": "left"
 		},
 		{
@@ -575,6 +621,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "(This is really bad. I gotta-)",
+			"key": "obseEnd49",
 			"side": "right"
 		},
 		{
@@ -607,6 +654,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "(-wait! That kid is there too?!)",
+			"key": "obseEnd50",
 			"side": "right"
 		},
 		{
@@ -614,6 +662,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "(Damn it, I don't know how him and his girlfriend even got there, but if my friends are acting like this-)",
+			"key": "obseEnd51",
 			"side": "right"
 		},
 		{
@@ -647,6 +696,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "I gotta fix this! Somehow!",
+			"key": "obseEnd52",
 			"side": "right"
 		},
 		{
@@ -654,6 +704,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "Wh-what in the fresh hell is all this?!",
+			"key": "obseEnd53",
 			"side": "left"
 		},
 		{
@@ -661,6 +712,7 @@
 			"name": "monika",
 			"expression": "sad",
 			"string": "There's gotta be something... something...",
+			"key": "obseEnd54",
 			"side": "right"
 		},
 		{
@@ -668,6 +720,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "If my character data is acting up too, even from here-",
+			"key": "obseEnd55",
 			"side": "right"
 		},
 		{
@@ -675,6 +728,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "-then there's a chance that I still have some residual data over there-!",
+			"key": "obseEnd56",
 			"side": "right"
 		},
 		{
@@ -682,6 +736,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Maybe if I just...",
+			"key": "obseEnd57",
 			"side": "right"
 		},
 		{
@@ -689,6 +744,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "-try this!",
+			"key": "obseEnd58",
 			"side": "right"
 		},
 		{
@@ -737,6 +793,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "...and just like that, the only one to ever truly intrigue me has left in a flash.",
+			"key": "obseEnd59",
 			"side": "left"
 		},
 		{
@@ -744,6 +801,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "Ah, woe is me!",
+			"key": "obseEnd60",
 			"side": "left"
 		},
 		{
@@ -758,6 +816,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "...what am I saying?",
+			"key": "obseEnd61",
 			"side": "left"
 		},
 		{
@@ -765,6 +824,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "This shit sucks.",
+			"key": "obseEnd62",
 			"side": "left"
 		},
 		{
@@ -820,6 +880,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"It... it worked!\"",
+			"key": "obseEnd63",
 			"side": "right"
 		},
 		{
@@ -852,6 +913,7 @@
 			"name": "all",
 			"expression": "gasp",
 			"string": "\"Monika!\"",
+			"key": "obseEnd64",
 			"side": "left"
 		},
 		{

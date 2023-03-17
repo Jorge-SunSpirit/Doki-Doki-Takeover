@@ -1,9 +1,0 @@
-:disableskip:
-:hidedialogue:
-:monika_ahaha: Het... Het heeft gewerkt!
-:bf_scared:...
-:gf_scared:...
-:hideright:
-:all_neutral:...
-:all_gasp:Monika!
-:crash:

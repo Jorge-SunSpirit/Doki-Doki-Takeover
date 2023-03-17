@@ -13,8 +13,6 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import flixel.addons.effects.chainable.FlxGlitchEffect;
-import flixel.addons.effects.chainable.FlxEffectSprite;
 import openfl.utils.Assets as OpenFlAssets;
 import openfl.geom.Point;
 import openfl.filters.ShaderFilter;
@@ -617,10 +615,6 @@ class DialogueBox extends FlxSpriteGroup
 
 	var staticlol:StaticShader;
 
-	var screenHUD:FlxSprite;
-	var glitchEffect:FlxGlitchEffect;
-	var glitchSprite:FlxEffectSprite;
-
 	function funnyGlitch():Void
 	{
 		if (SaveData.shaders)
@@ -628,38 +622,17 @@ class DialogueBox extends FlxSpriteGroup
 			staticlol = new StaticShader();
 			PlayState.camOverlay.setFilters([new ShaderFilter(staticlol)]);
 		}
-		else
-		{
-			screenHUD = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT);
-			screenHUD.drawFrame();
-			var screenPixels = screenHUD.framePixels;
-			var targetCamera = PlayState.camOverlay;
-	
-			if (FlxG.renderBlit)
-				screenPixels.copyPixels(targetCamera.buffer, targetCamera.buffer.rect, new Point());
-			else
-				screenPixels.draw(targetCamera.canvas, new FlxMatrix(1, 0, 0, 1, 0, 0));
-	
-			glitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
-			glitchSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
-			glitchSprite.antialiasing = SaveData.globalAntialiasing;
-			add(glitchSprite);
-	
-			glitchEffect.active = true;
-		}
 
 		FlxG.sound.play(Paths.sound('glitchin'));
 
 		new FlxTimer().start(0.5, function(tmr:FlxTimer)
 		{
 			if (SaveData.shaders)
-				PlayState.camOverlay.setFilters([]);
-			else
 			{
-				glitchEffect.active = false;
-				remove(glitchSprite);
-				remove(screenHUD);
+				PlayState.camOverlay.setFilters([]);
+				staticlol = null;
 			}
+
 			enddialogue();
 		});
 	}

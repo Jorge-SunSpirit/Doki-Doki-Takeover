@@ -17,6 +17,7 @@ class SaveData
 	#end
 
 	public static var language:String = 'en-US';
+	public static var lowEnd:Null<Bool> = false;
 	public static var customCursor:Null<Bool> = true;
 	public static var weekUnlocked:Null<Int> = 1;
 	public static var downScroll:Null<Bool> = false;

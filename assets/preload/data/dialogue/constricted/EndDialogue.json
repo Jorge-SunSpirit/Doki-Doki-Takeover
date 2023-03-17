@@ -8,6 +8,7 @@
 			"name": "natsuki",
 			"expression": "what",
 			"string": "\"PUT THAT THING BACK WHERE IT CAME FROM OR SO HELP ME-!\"",
+			"key": "consEnd1",
 			"side": "right"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "zipper",
 			"expression": "neutral",
 			"string": "\"Gwarrgh.\"",
+			"key": "consEnd2",
 			"side": "left"
 		}
 	]

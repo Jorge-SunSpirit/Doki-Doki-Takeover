@@ -1,15 +1,13 @@
 {
+	"startingMusic": "monic",
+	"initStyle": "normal",
 	"dialogue": [
-		{
-			"isCommand": true,
-			"name": "startmusic",
-			"string": "monic"
-		},
 		{
 			"isCommand": false,
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"Monika! We've been waiting for you!\"",
+			"key": "recoIntro1",
 			"side": "left"
 		},
 		{
@@ -17,6 +15,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"It's not like you to be this late to a club meeting!\"",
+			"key": "recoIntro2",
 			"side": "left"
 		},
 		{
@@ -24,6 +23,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"It appears that you've brought some new members with you too.\"",
+			"key": "recoIntro3",
 			"side": "left"
 		},
 		{
@@ -31,6 +31,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"Seriously, Monika? You brought a boy?\"",
+			"key": "recoIntro4",
 			"side": "left"
 		},
 		{
@@ -38,6 +39,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"Well, at least you found another girl too.\"",
+			"key": "recoIntro5",
 			"side": "left"
 		},
 		{
@@ -45,6 +47,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "(One who doesn't make me feel so small compared to the rest of you.)",
+			"key": "recoIntro6",
 			"side": "left"
 		},
 		{
@@ -52,6 +55,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"Oh! I-\"",
+			"key": "recoIntro7",
 			"side": "left"
 		},
 		{
@@ -59,6 +63,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "*stare*",
+			"key": "recoIntro8",
 			"side": "right"
 		},
 		{
@@ -66,6 +71,7 @@
 			"name": "gf",
 			"expression": "neutral",
 			"string": "*stare*",
+			"key": "recoIntro8",
 			"side": "right"
 		},
 		{
@@ -73,6 +79,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"...hello, you two. It's been a while.\"",
+			"key": "recoIntro9",
 			"side": "left"
 		},
 		{
@@ -80,6 +87,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "\"Bep.\"",
+			"key": "recoIntro10",
 			"side": "right"
 		},
 		{
@@ -87,6 +95,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"I'm sorry for what I did before.\"",
+			"key": "recoIntro11",
 			"side": "left"
 		},
 		{
@@ -94,6 +103,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"And I'm sorry for inadvertently putting you in another situation just like that soon after-\"",
+			"key": "recoIntro12",
 			"side": "left"
 		},
 		{
@@ -101,6 +111,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"-but now that I'm here, everything should be stable.\"",
+			"key": "recoIntro13",
 			"side": "left"
 		},
 		{
@@ -108,6 +119,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"I don't expect you to forgive me... but I'm glad you two are safe now.\"",
+			"key": "recoIntro14",
 			"side": "left"
 		},
 		{
@@ -122,6 +134,7 @@
 			"name": "bf",
 			"expression": "yeah",
 			"string": "\"Ska dee beep!\"",
+			"key": "recoIntro15",
 			"side": "right"
 		},
 		{
@@ -136,6 +149,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"Ahaha... You have no idea how happy I am to hear that.\"",
+			"key": "recoIntro16",
 			"side": "left"
 		},
 		{
@@ -143,6 +157,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Okay, everyone!\"",
+			"key": "recoIntro17",
 			"side": "left"
 		},
 		{
@@ -150,6 +165,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"I'd like you to meet the newest members of the Literature Club!\"",
+			"key": "recoIntro18",
 			"side": "left"
 		},
 		{
@@ -157,6 +173,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"And I've got a fun way I'd like to introduce them.\"",
+			"key": "recoIntro19",
 			"side": "left"
 		},
 		{
@@ -164,6 +181,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"Hey, despite all that stressful stuff that just happened-\"",
+			"key": "recoIntro20",
 			"side": "left"
 		},
 		{
@@ -171,6 +189,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"-you have enough energy left for one more song?\"",
+			"key": "recoIntro21",
 			"side": "left"
 		},
 		{
@@ -178,6 +197,7 @@
 			"name": "bf",
 			"expression": "yeah",
 			"string": "\"Ska dee beep!\"",
+			"key": "recoIntro22",
 			"side": "right"
 		},
 		{
@@ -185,6 +205,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Then let's do it!\"",
+			"key": "recoIntro23",
 			"side": "left"
 		}
 	]

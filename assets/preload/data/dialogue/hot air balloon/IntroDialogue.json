@@ -8,6 +8,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "A few days since the festival… Monika stands alone in the school’s music room.",
+			"key": "habIntro1",
 			"side": ""
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "The Literature Club has been occupying the space a lot more since their recent club inductees introduced them all to singing-",
+			"key": "habIntro2",
 			"side": ""
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "-so much so that they often end up using the room more than the actual Music Club on occasions.",
+			"key": "habIntro3",
 			"side": ""
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "With her moment alone, Monika reflects on everything that’s happened recently.",
+			"key": "habIntro4",
 			"side": ""
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"It’s unreal just how… nice things have become.\"",
+			"key": "habIntro5",
 			"side": "right"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"I don’t know what I did to deserve a second chance, after everything I did before… but I know I’ll keep things right this time. For my friends.\"",
+			"key": "habIntro6",
 			"side": "right"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"Aha- back when it was just me left, I remember telling the one I love how I would’ve loved to have a rap artist join the club one day.\"",
+			"key": "habIntro7",
 			"side": "right"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"I didn’t expect that to actually happen, and for them to be the one to help save me and give me this extra chance. I can’t thank them enough.\"",
+			"key": "habIntro8",
 			"side": "right"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Monika’s reflection is interrupted by the sound of footsteps entering the music room. A familiar pink-haired individual walked in.",
+			"key": "habIntro9",
 			"side": ""
 		},
 		{
@@ -77,6 +86,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Ah, Natsuki! I’m surprised to see you here! I expected you and the others to still be in classes.\"",
+			"key": "habIntro10",
 			"side": "right"
 		},
 		{
@@ -84,6 +94,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"I… I told my teacher I was taking a bathroom break. Though I actually left to go and find you.\"",
+			"key": "habIntro11",
 			"side": "left"
 		},
 		{
@@ -91,6 +102,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"I’ve been thinking about… stuff… recently. I wanted to come talk with you about it.\"",
+			"key": "habIntro12",
 			"side": "left"
 		},
 		{
@@ -98,6 +110,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"I’m always all ears! What’s on your mind?\"",
+			"key": "habIntro13",
 			"side": "right"
 		},
 		{
@@ -105,6 +118,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"I… I feel like I can’t keep up with you guys.\"",
+			"key": "habIntro14",
 			"side": "left"
 		},
 		{
@@ -112,6 +126,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"Oh? In what way?\"",
+			"key": "habIntro15",
 			"side": "right"
 		},
 		{
@@ -119,6 +134,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"I had that feeling deep down for a while, even as far back as when it was just the four of us in the club.\"",
+			"key": "habIntro16",
 			"side": "left"
 		},
 		{
@@ -126,6 +142,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"Now that the club has grown to seven members, and with the singing on top of that… I feel like I can’t compete-!\"",
+			"key": "habIntro17",
 			"side": "left"
 		},
 		{
@@ -133,6 +150,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"Everyone feels so much better and refined at singing, and I just can’t stand out among all the voices.\"",
+			"key": "habIntro18",
 			"side": "left"
 		},
 		{
@@ -140,6 +158,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"This club is one of the best things I’ve got right now as a comfortable place away from home, but this feeling of being overshadowed and thinking I have to try so hard to not be forgotten-\"",
+			"key": "habIntro19",
 			"side": "left"
 		},
 		{
@@ -147,6 +166,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"Natsuki- I can assure you, from the bottom of my heart, that you’re honestly one of our most stand-out writers and singers in the whole club!\"",
+			"key": "habIntro20",
 			"side": "right"
 		},
 		{
@@ -154,6 +174,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"I don’t think anyone can capture the unique style you bring to everything you do. And everyone knows it too!\"",
+			"key": "habIntro21",
 			"side": "right"
 		},
 		{
@@ -161,6 +182,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"The impression you leave in the club is too special to be forgotten, and we’d never want to leave you out.\"",
+			"key": "habIntro22",
 			"side": "right"
 		},
 		{
@@ -175,6 +197,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Natsuki crosses her arms and looks away with an unsure expression.",
+			"key": "habIntro23",
 			"side": ""
 		},
 		{
@@ -182,6 +205,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"I can prove it, too! Here, why don’t we sing a quick song? I can assure you, once you start getting into your flow, you’ll see what makes you so special.\"",
+			"key": "habIntro24",
 			"side": "right"
 		}
 	]

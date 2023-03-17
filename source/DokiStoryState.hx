@@ -134,7 +134,7 @@ class DokiStoryState extends MusicBeatState
 		logo.antialiasing = SaveData.globalAntialiasing;
 		add(logo);
 
-		songlist = new FlxSprite(-60, 0).loadGraphic(Paths.image('dokistory/song_list_lazy_smile'));
+		songlist = new FlxSprite(-60, 0).loadGraphic(Paths.image('dokistory/song_list_lazy_smile', 'preload', true));
 		songlist.antialiasing = SaveData.globalAntialiasing;
 		add(songlist);
 
@@ -202,7 +202,7 @@ class DokiStoryState extends MusicBeatState
 		add(mouseManager);
 
 		story_sidestories = new FlxSprite(395, 542);
-		story_sidestories.frames = Paths.getSparrowAtlas('dokistory/SideStories', 'preload');
+		story_sidestories.frames = Paths.getSparrowAtlas('dokistory/SideStories', 'preload', true);
 		story_sidestories.antialiasing = SaveData.globalAntialiasing;
 		story_sidestories.animation.addByPrefix('idle', 'Side Stories0', 20);
 		story_sidestories.animation.addByPrefix('selected', 'Side Stories Selected', 20, false);
@@ -371,7 +371,7 @@ class DokiStoryState extends MusicBeatState
 					#if (FEATURE_MP4 || FEATURE_VIDEO)
 					var video:NetStreamHandler = new NetStreamHandler();
 					video.canSkip = SaveData.beatSayori;
-					video.skipKeys = [FlxKey.ENTER];
+					video.skipKeys = [FlxKey.ESCAPE, FlxKey.ENTER];
 					video.playVideo(Paths.video('sayointro'), false, true);
 					video.finishCallback = function()
 					{
@@ -381,10 +381,8 @@ class DokiStoryState extends MusicBeatState
 					#else
 					LoadingState.loadAndSwitchState(new PlayState(), true, true);
 					#end
+
 					trace("Sayori Selected");
-				case 6:
-					LoadingState.loadAndSwitchState(new PlayState(), true, true);
-					trace("hueh Week Selected");
 			}
 		});
 	}

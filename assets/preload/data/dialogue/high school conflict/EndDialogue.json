@@ -7,6 +7,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "Skdee bep!",
+			"key": "hscEnd1",
 			"side": "right"
 		},
 		{
@@ -14,6 +15,7 @@
 			"name": "monika",
 			"expression": "happy",
 			"string": "You kept up really well with my song!",
+			"key": "hscEnd2",
 			"side": "left"
 		},
 		{
@@ -21,6 +23,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "Ah, I haven't felt this happy in a while!",
+			"key": "hscEnd3",
 			"side": "left"
 		},
 		{
@@ -28,6 +31,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "Could we sing again?",
+			"key": "hscEnd4",
 			"side": "left"
 		},
 		{
@@ -35,6 +39,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "Beep!",
+			"key": "hscEnd5",
 			"side": "right"
 		},
 		{
@@ -42,6 +47,7 @@
 			"name": "monika",
 			"expression": "happy",
 			"string": "Alright! Here we go-",
+			"key": "hscEnd6",
 			"side": "left"
 		},
 		{
@@ -49,6 +55,7 @@
 			"name": "senpai",
 			"expression": "whodis",
 			"string": "Who the hell are you?!",
+			"key": "hscEnd7",
 			"side": "right"
 		},
 		{
@@ -56,6 +63,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "-huh?",
+			"key": "hscEnd8",
 			"side": "left"
 		}
 	]

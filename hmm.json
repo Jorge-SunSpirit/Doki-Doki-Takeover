@@ -1,0 +1,53 @@
+{
+	"dependencies":
+	[
+		{
+			"name": "hxcpp",
+			"type": "haxelib"
+		},
+		{
+			"name": "lime",
+			"type": "haxelib"
+		},
+		{
+			"name": "openfl",
+			"type": "haxelib"
+		},
+		{
+			"name": "flixel",
+			"type": "haxelib"
+		},
+		{
+			"name": "flixel-addons",
+			"type": "haxelib"
+		},
+		{
+			"name": "flixel-ui",
+			"type": "haxelib"
+		},
+		{
+			"name": "flixel-tools",
+			"type": "haxelib"
+		},
+		{
+			"name": "firetongue",
+			"type": "haxelib"
+		},
+		{
+			"name": "flxanimate",
+			"type": "haxelib"
+		},
+		{
+			"name": "hxCodec",
+			"type": "git",
+			"ref": "main",
+			"url": "https://github.com/polybiusproxy/hxCodec.git"
+		},
+		{
+			"name": "discord_rpc",
+			"type": "git",
+			"ref": "master",
+			"url": "https://github.com/Aidan63/linc_discord-rpc.git"
+		}
+	]
+}

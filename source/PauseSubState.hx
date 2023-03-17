@@ -38,7 +38,7 @@ class PauseSubState extends MusicBeatSubstate
 	var curSelected:Int = 0;
 
 	var curCharacter:Int = 0;
-	var deathInfo:Array<String> = ["Deleted", "Blue balled", "Pasta'd"];
+	var deathInfo:Array<String> = ["Deleted", "Blue balled", "Pastad"];
 
 	var pauseMusic:FlxSound;
 
@@ -150,7 +150,7 @@ class PauseSubState extends MusicBeatSubstate
 		//	add(levelDifficulty);
 
 		// + 64
-		deathText = new FlxText(20, 15 + 32, 0, '${deathInfo[curCharacter]}: ', 32);
+		deathText = new FlxText(20, 15 + 32, 0, LangUtil.getString(deathInfo[curCharacter].toLowerCase(), 'pause') + ': ', 32);
 		deathText.text += PlayState.deathCounter;
 		deathText.antialiasing = SaveData.globalAntialiasing;
 		deathText.scrollFactor.set();
@@ -173,7 +173,7 @@ class PauseSubState extends MusicBeatSubstate
 		practiceText.updateHitbox();
 		add(practiceText);
 
-		speedText = new FlxText(410, 15, 0, '${LangUtil.getString('cmnSpeed')}: ${Conductor.playbackSpeed}x (Control + Left/Right)', 32);
+		speedText = new FlxText(410, 15, 0, '${LangUtil.getString('cmnSpeed')}: ${Conductor.playbackSpeed}x (CTRL + Left/Right)', 32);
 		speedText.visible = PlayState.practiceMode;
 		speedText.antialiasing = SaveData.globalAntialiasing;
 		speedText.scrollFactor.set();
@@ -236,7 +236,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		for (i in 0...menuItems.length)
 		{
-			var songText:FlxText = new FlxText(-350, 370 + (i * 50), 0, menuItems[i]);
+			var songText:FlxText = new FlxText(-350, 370 + (i * 50), 0, LangUtil.getString(menuItems[i].toLowerCase(), 'pause'));
 			songText.setFormat(LangUtil.getFont('riffic'), 27, FlxColor.WHITE, LEFT);
 			songText.antialiasing = SaveData.globalAntialiasing;
 			songText.setBorderStyle(OUTLINE, itmColor, 2);
@@ -248,7 +248,7 @@ class PauseSubState extends MusicBeatSubstate
 			});
 		}
 
-		globalSongOffset = new FlxText(5, FlxG.height - 42, 0, 'Global Offset: ${SaveData.offset} ms', 12);
+		globalSongOffset = new FlxText(5, FlxG.height - 42, 0, LangUtil.getString('cmnOffset') + ': ${SaveData.offset} ms', 12);
 		globalSongOffset.alpha = 0;
 		globalSongOffset.antialiasing = SaveData.globalAntialiasing;
 		globalSongOffset.scrollFactor.set();
@@ -306,9 +306,9 @@ class PauseSubState extends MusicBeatSubstate
 				txt.antialiasing = false;
 
 				if (txt.ID == curSelected)
-					txt.setFormat('CyberpunkWaifus', 32, itmColor, LEFT);
+					txt.setFormat(LangUtil.getFont('waifu'), 32, itmColor, LEFT);
 				else
-					txt.setFormat('CyberpunkWaifus', 32, FlxColor.WHITE, LEFT);
+					txt.setFormat(LangUtil.getFont('waifu'), 32, FlxColor.WHITE, LEFT);
 			});
 		}
 
@@ -480,9 +480,9 @@ class PauseSubState extends MusicBeatSubstate
 			else if (isVallHallA)
 			{
 				if (txt.ID == curSelected)
-					txt.setFormat('CyberpunkWaifus', 32, itmColor, LEFT);
+					txt.setFormat(LangUtil.getFont('waifu'), 32, itmColor, LEFT);
 				else
-					txt.setFormat('CyberpunkWaifus', 32, FlxColor.WHITE, LEFT);
+					txt.setFormat(LangUtil.getFont('waifu'), 32, FlxColor.WHITE, LEFT);
 			}
 			else
 			{
@@ -567,7 +567,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		for (i in 0...menuItems.length)
 		{
-			var songText:FlxText = new FlxText(50, 370 + (i * 50), 0, menuItems[i]);
+			var songText:FlxText = new FlxText(50, 370 + (i * 50), 0, LangUtil.getString(menuItems[i].toLowerCase(), 'pause'));
 			songText.setFormat(LangUtil.getFont('riffic'), 27, FlxColor.WHITE, LEFT);
 			songText.antialiasing = SaveData.globalAntialiasing;
 			songText.setBorderStyle(OUTLINE, 0xFFFF7CFF, 2);
@@ -598,9 +598,9 @@ class PauseSubState extends MusicBeatSubstate
 				txt.antialiasing = false;
 
 				if (txt.ID == curSelected)
-					txt.setFormat('CyberpunkWaifus', 32, itmColor, LEFT);
+					txt.setFormat(LangUtil.getFont('waifu'), 32, itmColor, LEFT);
 				else
-					txt.setFormat('CyberpunkWaifus', 32, FlxColor.WHITE, LEFT);
+					txt.setFormat(LangUtil.getFont('waifu'), 32, FlxColor.WHITE, LEFT);
 			});
 		}
 

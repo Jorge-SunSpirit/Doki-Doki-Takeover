@@ -152,7 +152,7 @@ class MainMenuState extends MusicBeatState
 		if (CoolUtil.flixelSaveCheck('ShadowMario', 'VS Impostor')) // amogus
 			ten.push('sayomongus');
 
-		var random:Float = FlxG.random.float(0, 1);
+		var random:Float = Random.randNF();
 		if (random < 0.80) // 80% chance
 			show = selectMenuCharacter(twenty);
 		else if (random >= 0.80 && random < 0.98) // 18% chance
@@ -471,7 +471,7 @@ class MainMenuState extends MusicBeatState
 	{
 		var index:Int = 0;
 		if (array.length >= 2)
-			index = FlxG.random.int(0, array.length - 1);
+			index = Random.randUInt(0, array.length - 1);
 
 		var char:String = '';
 		switch (array[index])

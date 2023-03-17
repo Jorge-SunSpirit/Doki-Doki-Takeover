@@ -8,6 +8,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Woah, you’re already a natural songsmith. I know the others will love to hear this!\"",
+			"key": "svEnd1",
 			"side": "right"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Yuri looks away shyly once again and giggles to herself.",
+			"key": "svEnd2",
 			"side": ""
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "yuri",
 			"expression": "happy",
 			"string": "\"Uhuhu… I appreciate you giving me your time.\"",
+			"key": "svEnd3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "yuri",
 			"expression": "happy",
 			"string": "\"I’m going to rehearse a bit more on my own before our next club meeting.\"",
+			"key": "svEnd4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"I’ll see you then, Monika.\"",
+			"key": "svEnd5",
 			"side": "left"
 		}
 	]

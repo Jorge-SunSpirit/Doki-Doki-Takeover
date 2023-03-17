@@ -8,6 +8,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "And through the power of song, Girlfriend was able to write down the lyrics to her very own love song for her darling Boyfriend.",
+			"key": "lnfEnd1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "The girls excitedly ask to see what Girlfriend had come up with, so she handed them the paper with all the lyrics written on it.",
+			"key": "lnfEnd2",
 			"side": "left"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "With much anticipation, the girls began to read, and-",
+			"key": "lnfEnd3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "-their expressions slowly morphed into ones of shock and confusion.",
+			"key": "lnfEnd4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"...I wasn't expecting you to write something so... explicit-\"",
+			"key": "lnfEnd5",
 			"side": "left"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"Eugh, eww!!! Why did you write that?! I don't need to know what you and your boyfriend do at night!\"",
+			"key": "lnfEnd6",
 			"side": "left"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"I'm... curious as to what inspired you to write down several verses about 'The blood of your enemies'-\"",
+			"key": "lnfEnd7",
 			"side": "left"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Eheheh... ehhhhh... maybe next time, try to keep things school appropriate-\"",
+			"key": "lnfEnd8",
 			"side": "left"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "gf",
 			"expression": "peace",
 			"string": "*blep*",
+			"key": "lnfEnd9",
 			"side": "right"
 		}
 	]

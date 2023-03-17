@@ -42,7 +42,7 @@ class CatfightPopup extends MusicBeatSubstate
 			DokiSideStory.sidestoryinstance.acceptInput = false;
 		}
 
-		var select:FlxSprite = new FlxSprite(0, 40).loadGraphic(Paths.image('extraui/selecttext'));
+		var select:FlxSprite = new FlxSprite(0, 40).loadGraphic(Paths.image('extraui/selecttext', true));
 		select.antialiasing = SaveData.globalAntialiasing;
 		select.scale.set(0.8, 0.8);
 		select.updateHitbox();

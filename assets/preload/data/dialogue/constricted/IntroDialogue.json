@@ -14,6 +14,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Ah, Sayori! Yuri! Natsuki! You're back!\"",
+			"key": "consIntro1",
 			"side": "left"
 		},
 		{
@@ -21,6 +22,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"How was your time hanging with Boyfriend and Girlfriend in their hometown?\"",
+			"key": "consIntro2",
 			"side": "left"
 		},
 		{
@@ -28,6 +30,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "(Aha, I still can't believe that's their actual names. Even says so on their character files-)",
+			"key": "consIntro3",
 			"side": "left"
 		},
 		{
@@ -42,6 +45,7 @@
 			"name": "natsuki",
 			"expression": "wah",
 			"string": "\"I had a screaming competition with a rock star! And I totally beat them too.\"",
+			"key": "consIntro4",
 			"side": "right"
 		},
 		{
@@ -49,6 +53,7 @@
 			"name": "natsuki",
 			"expression": "wah",
 			"string": "\"They're inviting me back next week for a rematch. If I win, I get free tickets to their band's next show!\"",
+			"key": "consIntro5",
 			"side": "right"
 		},
 		{
@@ -60,6 +65,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"I had a lot of extra money to spend this week, so I ate dinner at a very nice restaurant not too far off from the city.\"",
+			"key": "consIntro6",
 			"side": "right"
 		},
 		{
@@ -74,6 +80,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"While I was there, I had a nice chat with someone who shared a... similar interest in collecting.\"",
+			"key": "consIntro7",
 			"side": "right"
 		},
 		{
@@ -81,6 +88,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"He also seemed very intrigued when I mentioned our two new club members in a conversation. I didn't want to pry, though.\"",
+			"key": "consIntro8",
 			"side": "right"
 		},
 		{
@@ -92,6 +100,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "(There's a lot of strange, fantastical people out there in the real world, it seems.)",
+			"key": "consIntro9",
 			"side": "left"
 		},
 		{
@@ -99,6 +108,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "(And somewhere out there, my true love... I still have not forgotten about them.)",
+			"key": "consIntro10",
 			"side": "left"
 		},
 		{
@@ -106,6 +116,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "(I'll go back and continue my search soon enough. There's... so much I need to tell them.)",
+			"key": "consIntro11",
 			"side": "left"
 		},
 		{
@@ -113,6 +124,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"Ah- sorry, I got lost in thought. What about you, Sayori? Did you meet any new friends on your trip?\"",
+			"key": "consIntro12",
 			"side": "left"
 		},
 		{
@@ -120,6 +132,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"It was amazing! I didn't even know all these places existed!\"",
+			"key": "consIntro13",
 			"side": "right"
 		},
 		{
@@ -127,6 +140,7 @@
 			"name": "sayori",
 			"expression": "wah",
 			"string": "\"It's almost as if they popped up out of nowhere, ehehe~\"",
+			"key": "consIntro14",
 			"side": "right"
 		},
 		{
@@ -134,6 +148,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"I did meet a new friend, in fact! He's followed me around the whole time we were gone.\"",
+			"key": "consIntro15",
 			"side": "right"
 		},
 		{
@@ -141,6 +156,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"Eh-? That's... a little odd.\"",
+			"key": "consIntro16",
 			"side": "left"
 		},
 		{
@@ -148,6 +164,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"-But I'm glad you all found some great new friends!\"",
+			"key": "consIntro17",
 			"side": "left"
 		},
 		{
@@ -155,6 +172,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"Mhhmm! He followed me back here too! Wanna meet him? He's so cute!\"",
+			"key": "consIntro18",
 			"side": "right"
 		},
 		{
@@ -162,6 +180,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"Oh? S-sure! Bring them in!\"",
+			"key": "consIntro19",
 			"side": "left"
 		},
 		{
@@ -169,6 +188,7 @@
 			"name": "sayori",
 			"expression": "ooh",
 			"string": "\"Say hi, Zipper!\"",
+			"key": "consIntro20",
 			"side": "right"
 		},
 		{
@@ -189,6 +209,7 @@
 			"name": "zipper",
 			"expression": "scream",
 			"string": "\"SKREEEEEEEEEEE!!!!\"",
+			"key": "consIntro21",
 			"side": "left"
 		}
 	]

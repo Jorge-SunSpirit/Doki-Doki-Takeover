@@ -1,6 +1,0 @@
-:sayori_neutral:"Havia uma música naquela lista que se destacou pra mim."
-:sayori_neutral:"A música era feliz e otimista-"
-:sayori_ehh:"mas também triste."
-:sayori_neutral:"Coisas que são ambas felizes e tristes desse jeito chamam a minha atenção."
-:sayori_ehh:"Eheheh, eu não sei..."
-:sayori_ehh:"É complicado."

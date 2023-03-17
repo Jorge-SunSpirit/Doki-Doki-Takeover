@@ -1,6 +1,0 @@
-:sayori_neutral:"Er was één liedje in de lijst dat mijn aandacht trok."
-:sayori_neutral:"Het liedje was heel erg vrolijk-"
-:sayori_ehh:"maar toch voelde het ook droevig aan"
-:sayori_neutral:"Dingen die zowel vrolijk als droevig zijn, spreken mij aan"
-:sayori_ehh:"Eheheh, Ik weet niet precies waarom…"
-:sayori_ehh:"Het is ingewikkeld."

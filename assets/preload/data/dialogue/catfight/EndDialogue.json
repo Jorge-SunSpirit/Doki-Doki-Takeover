@@ -8,6 +8,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"Hah... what was that about you not hitting fast notes, Yuri..?\"",
+			"key": "catEnd1",
 			"side": "right"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"Huff... I see... I was correct about your conviction, though. No melody is too difficult for you.\"",
+			"key": "catEnd2",
 			"side": "left"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Ehehe... You guys must be exhausted after that. Ooo! How about some tea and cookies?\"",
+			"key": "catEnd3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "yuri",
 			"expression": "happy",
 			"string": "\"Uhu... sounds lovely.\"",
+			"key": "catEnd4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "natsuki",
 			"expression": "happy",
 			"string": "\"That... would be great.\"",
+			"key": "catEnd5",
 			"side": "right"
 		}
 	]

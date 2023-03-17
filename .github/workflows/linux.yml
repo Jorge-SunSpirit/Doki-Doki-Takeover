@@ -1,0 +1,76 @@
+name: Linux Build
+on: workflow_dispatch
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Latest Commit
+        uses: actions/checkout@v3.3.0
+
+      - name: Install Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.2.5
+
+      - name: Restore Previous Cache
+        uses: actions/cache@v3
+        with:
+          key: cache-build-linux
+          path: |
+            .haxelib/
+            export/release/linux/haxe/
+            export/release/linux/obj/
+          restore-keys: |
+            cache-build-linux
+
+      - name: Install libVLC
+        run: |
+          sudo apt-get install libvlc-dev
+          sudo apt-get install libvlccore-dev
+
+      - name: Install Libraries
+        run: |
+            haxelib setup ~/haxelib
+            haxelib install hxcpp > /dev/null --quiet
+            haxelib install hmm --quiet
+            haxelib run hmm install
+
+      - name: Compile DDTO
+        run: haxelib run lime build linux -final
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: DDTO-Linux
+          path: 'export/release/linux/bin'
+
+      - name: Clear Previous Cache
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const caches = await github.rest.actions.getActionsCacheList({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+            for (const cache of caches.data.actions_caches) {
+              if (cache.key == "cache-build-linux") {
+                console.log('Clearing ' + cache.key + '...')
+                await github.rest.actions.deleteActionsCacheById({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  cache_id: cache.id,
+                })
+                console.log("Cache cleared.")
+              }
+            }
+
+      - name: Upload New Cache
+        uses: actions/cache@v3
+        with:
+          key: cache-build-linux
+          path: |
+            .haxelib/
+            export/release/linux/haxe/
+            export/release/linux/obj/
+          restore-keys: |
+            cache-build-linux

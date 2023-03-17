@@ -38,7 +38,7 @@ class OptionsState extends MusicBeatState
 			new Judgement(LangUtil.getString('descJudgement', 'option')),
 			new ScrollSpeedOption(LangUtil.getString('descScroll', 'option')),
 			new ResetButtonOption(LangUtil.getString('descReset', 'option')),
-			new BotPlay(LangUtil.getString('descBotplay', 'option')),
+			// new BotPlay(LangUtil.getString('descBotplay', 'option')),
 			new HitSoundOption(LangUtil.getString('descHitSound', 'option')),
 			new HitSoundJudgements(LangUtil.getString('descHitSoundJudge', 'option')),
 			new AutoPause(LangUtil.getString('descAutoPause', 'option'))
@@ -64,6 +64,7 @@ class OptionsState extends MusicBeatState
 		new OptionCategory(LangUtil.getString('catPerformance', 'option'), [
 			new FPSCapOption(LangUtil.getString('descFPSCap', 'option')),
 			new AntiAliasing(LangUtil.getString('descAntialiasing', 'option')),
+			new LowEnd(LangUtil.getString('descLowEnd', 'option')),
 			new GPUTextures(LangUtil.getString('descGPUTextures', 'option')),
 			#if FEATURE_CACHING
 			new CharaCacheOption(LangUtil.getString('descCacheCharacter', 'option')),

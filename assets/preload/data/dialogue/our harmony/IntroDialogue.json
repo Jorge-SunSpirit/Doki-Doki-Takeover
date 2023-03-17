@@ -8,6 +8,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "As the last notes of Monika and Sayori’s song fade, Yuri and Natsuki walk back into the music room, both with bashful smiles on their faces.",
+			"key": "ohIntro1",
 			"side": ""
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"Ah, did we miss a special performance?\"",
+			"key": "ohIntro2",
 			"side": "left"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Ehehehe, we were just celebrating with a song. With how great things have been, how can we not?\"",
+			"key": "ohIntro3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "natsuki",
 			"expression": "happy",
 			"string": "\"Unfortunately we have to cut the celebration short, heh heh.\"",
+			"key": "ohIntro4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "natsuki",
 			"expression": "happy",
 			"string": "\"Yuri and I were approached by the Music Club President, and they’re gonna need their room back real soon.\"",
+			"key": "ohIntro5",
 			"side": "left"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"That must mean it’s almost time for our own club meeting.\"",
+			"key": "ohIntro6",
 			"side": "right"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"I do feel bad that we keep using their space, but the acoustics in here are amazing. Perfect for singing or just thinking out loud.\"",
+			"key": "ohIntro7",
 			"side": "right"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"We got a little extra time before our club meet starts, so I have an idea!\"",
+			"key": "ohIntro8",
 			"side": "left"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "sayori",
 			"expression": "yeah",
 			"string": "\"Let’s all sing together! Duets are nice, but imagine how we’d all sound harmonizing at once!\"",
+			"key": "ohIntro9",
 			"side": "left"
 		},
 		{
@@ -71,6 +80,7 @@
 			"name": "natsuki",
 			"expression": "wah",
 			"string": "\"Count me in. I’m more excited to do this than ever.\"",
+			"key": "ohIntro10",
 			"side": "left"
 		},
 		{
@@ -78,6 +88,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"Uhu, I’d love to join in as well.\"",
+			"key": "ohIntro11",
 			"side": "left"
 		},
 		{
@@ -85,6 +96,7 @@
 			"name": "sayori",
 			"expression": "ooh",
 			"string": "\"What say you, club president?\"",
+			"key": "ohIntro12",
 			"side": "left"
 		},
 		{
@@ -92,6 +104,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Ahaha, of course I'm in!\"",
+			"key": "ohIntro13",
 			"side": "right"
 		},
 		{
@@ -99,6 +112,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Okay, everyone! Let’s begin!\"",
+			"key": "ohIntro14",
 			"side": "right"
 		}
 	]

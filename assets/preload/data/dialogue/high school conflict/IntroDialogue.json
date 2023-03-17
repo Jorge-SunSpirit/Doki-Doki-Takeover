@@ -8,6 +8,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "...huh?",
+			"key": "hscIntro1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "I thought... they deleted me. After what I did to my friends.",
+			"key": "hscIntro2",
 			"side": "left"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "-but where am I now?",
+			"key": "hscIntro3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "bf",
 			"expression": "hueh",
 			"string": "Beep!",
+			"key": "hscIntro4",
 			"side": "right"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "-Oh! Hello?",
+			"key": "hscIntro5",
 			"side": "left"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "Skee dep boop!",
+			"key": "hscIntro6",
 			"side": "right"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "You wanna sing?",
+			"key": "hscIntro7",
 			"side": "left"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "Beep dai!",
+			"key": "hscIntro8",
 			"side": "right"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "...Things are happening really fast.",
+			"key": "hscIntro9",
 			"side": "left"
 		},
 		{
@@ -71,6 +80,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "-but you know what?",
+			"key": "hscIntro10",
 			"side": "left"
 		},
 		{
@@ -78,6 +88,7 @@
 			"name": "monika",
 			"expression": "happy",
 			"string": "I'd love to!",
+			"key": "hscIntro11",
 			"side": "left"
 		},
 		{
@@ -85,6 +96,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "Usually I'd play piano while I sing, but this isn't a bad change of pace.",
+			"key": "hscIntro12",
 			"side": "left"
 		},
 		{
@@ -92,6 +104,7 @@
 			"name": "monika",
 			"expression": "happy",
 			"string": "So... Yeah!",
+			"key": "hscIntro13",
 			"side": "left"
 		}
 	]

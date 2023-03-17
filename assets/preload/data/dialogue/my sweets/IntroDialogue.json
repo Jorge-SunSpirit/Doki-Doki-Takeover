@@ -8,6 +8,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"...okay, you’ve convinced me.\"",
+			"key": "sweeIntro1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"Oh?\"",
+			"key": "sweeIntro2",
 			"side": "right"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"You better not tell this to ANYONE, but I sometimes sing in front of the mirror into my hairbrush.\"",
+			"key": "sweeIntro3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"Only when my dad isn’t home though.\"",
+			"key": "sweeIntro4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"...uhuhu.\"",
+			"key": "sweeIntro5",
 			"side": "right"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"Hey! I heard that, you know!\"",
+			"key": "sweeIntro6",
 			"side": "left"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"Its just... picturing you doing that, its quite an adorable mental image.\"",
+			"key": "sweeIntro7",
 			"side": "right"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"S-shut it! And stop calling me cute! I-I’m not cute.\"",
+			"key": "sweeIntro8",
 			"side": "left"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"Ugh, I shouldn’t have said anything.\"",
+			"key": "sweeIntro9",
 			"side": "left"
 		},
 		{
@@ -71,6 +80,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"Let’s just get this started.\"",
+			"key": "sweeIntro10",
 			"side": "left"
 		}
 	]

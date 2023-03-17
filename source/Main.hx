@@ -124,6 +124,11 @@ class Main extends Sprite
 		#end
 	}
 
+	inline public static function alertPopup(desc:String, title:String = 'Error!')
+	{
+		Application.current.window.alert(desc, title);
+	}
+
 	// Code was entirely made by sqirra-rng for their fnf engine named "Izzy Engine", big props to them!!!
 	// very cool person for real they don't get enough credit for their work
 	#if CRASH_HANDLER
@@ -153,7 +158,6 @@ class Main extends Sprite
 		errMsg += "\nUncaught Error: "
 			+ e.error
 			+ "\nPlease report this error to the GitHub page: https://github.com/Jorge-SunSpirit/Doki-Doki-Takeover\n\n> Crash Handler written by: sqirra-rng";
-			//+ "\nPlease report this error to #playtest-qa-testing.\n\n> Crash Handler written by: sqirra-rng";
 
 		if (!FileSystem.exists("./crash/"))
 			FileSystem.createDirectory("./crash/");

@@ -5,6 +5,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"I'm going to be honest.\"",
+			"key": "beatIntro1",
 			"side": "left"
 		},
 		{
@@ -12,6 +13,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"There were way too many songs in that list you gave us, and I didn't want to sift through every single one.\"",
+			"key": "beatIntro2",
 			"side": "left"
 		},
 		{
@@ -19,6 +21,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"This song had a picture of a cute cat as the album art though, so naturally I went with that one.\"",
+			"key": "beatIntro3",
 			"side": "left"
 		},
 		{
@@ -26,6 +29,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"Cue the music!\"",
+			"key": "beatIntro4",
 			"side": "left"
 		}
 	]

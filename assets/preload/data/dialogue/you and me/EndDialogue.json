@@ -9,6 +9,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "The positivity that club gave everyone involved continued to nurture a stunning flower of friendship amongst the club members.",
+			"key": "yamEnd1",
 			"side": ""
 		},
 		{
@@ -30,6 +31,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Even outside the clubroom, the group was almost never seen apart from each other.",
+			"key": "yamEnd2",
 			"side": ""
 		},
 		{
@@ -37,6 +39,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "It was only a matter of time to see what would bloom next for the Literature Club.",
+			"key": "yamEnd3",
 			"side": ""
 		},
 		{
@@ -44,6 +47,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "But for now, days of pleasant normalcy awaited them.",
+			"key": "yamEnd4",
 			"side": ""
 		},
 		{
@@ -83,6 +87,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "-Or so they thought.",
+			"key": "yamEnd5",
 			"side": ""
 		},
 		{
@@ -103,6 +108,7 @@
 			"name": "bf",
 			"expression": "gone",
 			"string": "\"Skee yeah!\"",
+			"key": "yamEnd6",
 			"side": ""
 		},
 		{
@@ -110,6 +116,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Boyfriend and Girlfriend, seemingly appearing out of thin air, reached out to the group, wanting them to follow.",
+			"key": "yamEnd7",
 			"side": ""
 		},
 		{
@@ -122,6 +129,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "One by one, the group followed the two into the white light, and what they would see next...",
+			"key": "yamEnd8",
 			"side": ""
 		},
 		{
@@ -145,6 +153,7 @@
 			"name": "natsuki",
 			"expression": "gone",
 			"string": "\"Where… are we?\"",
+			"key": "yamEnd9",
 			"side": ""
 		},
 		{
@@ -152,6 +161,7 @@
 			"name": "sayori",
 			"expression": "gone",
 			"string": "\"Woah! I’ve never visited the city before!\"",
+			"key": "yamEnd10",
 			"side": ""
 		},
 		{
@@ -159,6 +169,7 @@
 			"name": "yuri",
 			"expression": "gone",
 			"string": "\"Oh my, what a lovely display of lights.\"",
+			"key": "yamEnd11",
 			"side": ""
 		},
 		{
@@ -166,6 +177,7 @@
 			"name": "protag",
 			"expression": "gone",
 			"string": "\"What the- how did we get here so fast? And wasn’t it still daylight a minute ago?\"",
+			"key": "yamEnd12",
 			"side": ""
 		},
 		{
@@ -173,6 +185,7 @@
 			"name": "protag",
 			"expression": "gone",
 			"string": "\"I also could've sworn we were all in uniform before too-\"",
+			"key": "yamEnd13",
 			"side": ""
 		},
 		{
@@ -180,6 +193,7 @@
 			"name": "gf",
 			"expression": "gone",
 			"string": "*excited cheering*",
+			"key": "yamEnd14",
 			"side": ""
 		},
 		{
@@ -187,6 +201,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Boyfriend and Girlfriend quickly turn to Monika with very excited grins on their faces.",
+			"key": "yamEnd15",
 			"side": ""
 		},
 		{
@@ -194,6 +209,7 @@
 			"name": "bf",
 			"expression": "gone",
 			"string": "\"Dee boop de skee!\"",
+			"key": "yamEnd16",
 			"side": ""
 		},
 		{
@@ -201,6 +217,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"Wait...\"",
+			"key": "yamEnd17",
 			"side": ""
 		},
 		{
@@ -208,6 +225,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"Is this... are we...\"",
+			"key": "yamEnd18",
 			"side": ""
 		},
 		{
@@ -215,6 +233,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "They actually did it. They made it out of the game.",
+			"key": "yamEnd19",
 			"side": ""
 		},
 		{
@@ -222,6 +241,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Boyfriend gestured over to the nearby computer, and in his somehow comprehensible language of beeps and boops, told Monika that this was their gate in and out of their home world.",
+			"key": "yamEnd20",
 			"side": ""
 		},
 		{
@@ -229,6 +249,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Whenever her and the others wanted to visit, this was their ticket.",
+			"key": "yamEnd21",
 			"side": ""
 		},
 		{
@@ -240,6 +261,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Monika quickly became choked up with emotion. Words quickly failed her as she could not describe how overwhelmingly happy she was.",
+			"key": "yamEnd22",
 			"side": ""
 		},
 		{
@@ -260,6 +282,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"I… I don’t know what to say-\"",
+			"key": "yamEnd23",
 			"side": ""
 		},
 		{
@@ -267,6 +290,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"Thank you… Thank you so so much… For everything.\"",
+			"key": "yamEnd24",
 			"side": ""
 		},
 		{
@@ -274,6 +298,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "A new world was out there for the Literature Club to explore. One of crazy possibilities. And somewhere out there is someone very important to Monika.",
+			"key": "yamEnd25",
 			"side": ""
 		},
 		{
@@ -286,6 +311,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"I know you’re out there. There’s so much I need to tell you… So much I need to apologize for… and… and-\"",
+			"key": "yamEnd26",
 			"side": ""
 		},
 		{
@@ -293,6 +319,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"Now that I have this chance… maybe you’ll give me a chance-\"",
+			"key": "yamEnd27",
 			"side": ""
 		},
 		{
@@ -300,6 +327,7 @@
 			"name": "monika",
 			"expression": "gone",
 			"string": "\"-to learn to love in your reality.\"",
+			"key": "yamEnd28",
 			"side": ""
 		},
 		{

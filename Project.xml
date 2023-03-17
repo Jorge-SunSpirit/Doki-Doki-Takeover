@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.teamtbd.dokitakeover" main="Main" version="3.0.2" company="TeamTBD" />
+	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.teamtbd.dokitakeover" main="Main" version="3.0.3" company="TeamTBD" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -41,7 +41,7 @@
 	<!-- <define name="FEATURE_GAMEJOLT" if="PUBLIC_BUILD" unless="hl" /> -->
 	<!-- Defines whether a log file can be created. Depends on FEATURE_FILESYSTEM. Pointless when trace logging is disabled. -->
 	<define name="FEATURE_LOGGING" if="FEATURE_FILESYSTEM" unless="PUBLIC_BUILD" />
-	<!-- Defines whether or not language select is available. -->
+	<!-- Defines whether or not language support is available. -->
 	<!-- <define name="FEATURE_LANGUAGE" /> -->
 	<!-- Defines whether there's an unlock all function in the Options menu. -->
 	<define name="FEATURE_UNLOCK" unless="PUBLIC_BUILD" />
@@ -113,6 +113,7 @@
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
 
+	<haxelib name="flxanimate" />
 	<haxelib name="firetongue" />
 	<haxelib name="hxCodec" if="FEATURE_MP4"/>
 	<haxelib name="extension-androidtools" if="android" />

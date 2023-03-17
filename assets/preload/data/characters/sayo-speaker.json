@@ -131,6 +131,111 @@
 			"anim": "gone",
 			"indices": [],
 			"name": "Sayo_Idle_gone"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "countdownThree",
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "Sayo_Idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "countdownTwo",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"name": "Sayo_Idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "countdownOne",
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "Sayo_Idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				69
+			],
+			"fps": 24,
+			"anim": "countdownGo",
+			"indices": [],
+			"name": "Sayo_singUP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-212
+			],
+			"fps": 24,
+			"anim": "necksnap",
+			"indices": [],
+			"name": "Sayo_Idle_gone"
 		}
 	],
 	"no_antialiasing": false,

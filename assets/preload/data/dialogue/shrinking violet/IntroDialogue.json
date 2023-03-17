@@ -8,6 +8,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Not too long after Natsuki took her leave, another familiar face entered the music room. A certain ‘lovely lavender lady’, to be exact.",
+			"key": "svIntro1",
 			"side": ""
 		},
 		{
@@ -21,6 +22,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"Ah, hopefully I’m not interrupting anything-\"",
+			"key": "svIntro2",
 			"side": "left"
 		},
 		{
@@ -28,6 +30,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"Yuri! No worries, I’ve just been pacing around, passing time until our next club meeting.\"",
+			"key": "svIntro3",
 			"side": "right"
 		},
 		{
@@ -35,6 +38,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"Mhhm. This may be a little odd for me to say out of nowhere, but…\"",
+			"key": "svIntro4",
 			"side": "left"
 		},
 		{
@@ -42,6 +46,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"-thank you.\"",
+			"key": "svIntro5",
 			"side": "left"
 		},
 		{
@@ -49,6 +54,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"Oh? What for?\"",
+			"key": "svIntro6",
 			"side": "right"
 		},
 		{
@@ -56,6 +62,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"With all we’ve been doing in the club, that discomfort I feel… trying to commit to presenting what I do in front of others.\"",
+			"key": "svIntro7",
 			"side": "left"
 		},
 		{
@@ -63,6 +70,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"It’s gradually subsiding the more we do things together as a club.\"",
+			"key": "svIntro8",
 			"side": "left"
 		},
 		{
@@ -70,6 +78,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"The writing, singing, and just… talking. It's all given me a much better alternative to… releasing my emotions.\"",
+			"key": "svIntro9",
 			"side": "left"
 		},
 		{
@@ -77,6 +86,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"I’m so happy to hear that, Yuri! I’ve noticed you stepping out of your comfort zone a lot more as of late, and your confident singing voice is always pleasant to hear.\"",
+			"key": "svIntro10",
 			"side": "right"
 		},
 		{
@@ -84,6 +94,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"Knowing that this club has been such a good place of self-improvement for you, I couldn't be happier to hear that.\"",
+			"key": "svIntro11",
 			"side": "right"
 		},
 		{
@@ -91,6 +102,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Yuri breaks eye contact and looks away for just a second; A shy smile cropping up on her face.",
+			"key": "svIntro12",
 			"side": ""
 		},
 		{
@@ -98,6 +110,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"I wanted to celebrate this personal milestone with something special.\"",
+			"key": "svIntro13",
 			"side": "left"
 		},
 		{
@@ -105,6 +118,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"I… wrote my own song. This is new territory for my writing prowess, so I wanted to ask if you’d like to perform it with me here.\"",
+			"key": "svIntro14",
 			"side": "left"
 		},
 		{
@@ -112,6 +126,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"Just a little bit of peer review before I show the others.\"",
+			"key": "svIntro15",
 			"side": "left"
 		},
 		{
@@ -119,6 +134,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"I’d be honored!\"",
+			"key": "svIntro16",
 			"side": "right"
 		},
 		{
@@ -126,6 +142,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Shall we begin? My vocal chords are already warmed up!\"",
+			"key": "svIntro17",
 			"side": "right"
 		}
 	]

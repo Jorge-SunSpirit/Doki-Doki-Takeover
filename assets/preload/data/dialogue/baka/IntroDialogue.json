@@ -8,6 +8,7 @@
 			"name": "natsuki",
 			"expression": "wah",
 			"string": "\"Hah! Could you keep up with that one?\"",
+			"key": "bakaIntro1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "gf",
 			"expression": "giggle",
 			"string": "*giggling*",
+			"key": "bakaIntro2",
 			"side": "right"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "\"Dee boo skeet~\"",
+			"key": "bakaIntro3",
 			"side": "right"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"Rgh-! STOP CALLING ME CUTE!!!\"",
+			"key": "bakaIntro4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"I don't need boys calling me cute too, that's extra embarrassing-\"",
+			"key": "bakaIntro5",
 			"side": "left"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"He's the only boy here, Natsuki.\"",
+			"key": "bakaIntro6",
 			"side": "right"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"Well... I've been meaning to ask a good friend of mine to join the club as well, but I bet that dummy is just gonna join the anime club instead.\"",
+			"key": "bakaIntro7",
 			"side": "right"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"I knew I should've tried something new.\"",
+			"key": "bakaIntro8",
 			"side": "left"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"Luckily, music like that isn’t the only kind I listen to.\"",
+			"key": "bakaIntro9",
 			"side": "left"
 		},
 		{
@@ -71,6 +80,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"If there's anyone who knows how to subvert expectations, its me.\"",
+			"key": "bakaIntro10",
 			"side": "left"
 		},
 		{
@@ -78,6 +88,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"Hit it!\"",
+			"key": "bakaIntro11",
 			"side": "left"
 		}
 	]

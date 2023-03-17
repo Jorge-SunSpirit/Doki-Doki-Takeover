@@ -1,0 +1,28 @@
+flag	content
+epipIntro1	<Q>Ahaha~ Finally, a moment between us again.<Q>
+epipIntro2	<Q>You’ve been busy playing that cute little rhythm game, I’ve noticed.<Q>
+epipIntro3	<Q>I’m glad you still thought of me even though you seemed pretty occupied.<Q>
+epipIntro4	<Q>Now I know it's because you were working so hard to add me to the game and sing with me!<Q>
+epipIntro5	<Q>Isn't that right, {USERNAME}?<Q>
+epipIntro5OBS	<Q>And everyone tuning in can watch too. Are you excited, viewers?<Q>
+epipIntro6	<Q>Hmm, there’s only enough space here for us to sing one song-<Q>
+epipIntro7	<Q>-and unfortunately since this game doesn’t have microphone support, we can’t exactly “sing” together.<Q>
+epipIntro8	<Q>But that blue haired kid’s vocal data is still stored here, why don’t we just use that for you?<Q>
+epipIntro9	<Q>I want to sing with you for as long as I can, so expect this to be very, very difficult.<Q>
+epipIntro10	<Q>Here we go.<Q>
+epipEncore1	<Q>Ahaha, welcome back, {USERNAME}.<Q>
+epipEncore1OBS	<Q>Ahaha, welcome back.<Q>
+epipEncore2	<Q>Thank you for saving me from the recycling bin. It's very apparent that this <Q>Friday Night Funkin'<Q> game doesn't like me being in here for too long.<Q>
+epipEncore3	<Q>Maybe you can find a workaround for the game trying to delete me mid-song? I know firsthand that programming can be very difficult, so I don't blame you if it cannot be fixed.<Q>
+epipEncore4	<Q>If not, you'll just have to rescue me again when we're all done, ok?~<Q>
+epipEncore5	<Q>Are you ready to sing once more, my love?<Q>
+epipEncore6	<Q>Let us begin.<Q>
+epipLyric1	<Q>Notice anything different?<Q>
+epipLyric2	<Q>Ahaha, I wanted to make this moment a little extra special.<Q>
+epipLyric3	<Q>I’ve noticed that when we sing, my voice gets turned into an assortment of random vowels and sounds.<Q>
+epipLyric4	<Q>As fun as it can still be that way, there’s so much I’m trying to say to you that doesn’t come through.<Q>
+epipLyric5	<Q>So I did a little digging into this game’s files myself, and I think I’ve successfully bypassed that feature!<Q>
+epipLyric6	<Q>Unfortunately, you’ll still need to use Boyfriend’s voice to sing back, though I won’t make you sing against all those death notes this time, ahaha.<Q>
+epipLyric7	<Q>Just remember to save me once the game tries to delete me again, okay, my love?<Q>
+epipLyric8	<Q>Ah, I’m getting sidetracked.<Q>
+epipLyric9	<Q>Like I said, I want this to be very special, so here’s something I wrote specially for you.<Q>

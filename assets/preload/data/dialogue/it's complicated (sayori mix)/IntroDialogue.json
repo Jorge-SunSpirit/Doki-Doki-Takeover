@@ -5,6 +5,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"There was one song in that list that popped out to me.\"",
+			"key": "compIntro1",
 			"side": "left"
 		},
 		{
@@ -12,6 +13,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"The song was both happy and upbeat-\"",
+			"key": "compIntro2",
 			"side": "left"
 		},
 		{
@@ -19,6 +21,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"...and yet it felt really sad too.\"",
+			"key": "compIntro3",
 			"side": "left"
 		},
 		{
@@ -26,6 +29,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"Stuff that's both sad and happy in that way really speaks to me.\"",
+			"key": "compIntro4",
 			"side": "left"
 		},
 		{
@@ -33,6 +37,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Eheheh, I don't know...\"",
+			"key": "compIntro5",
 			"side": "left"
 		},
 		{
@@ -40,6 +45,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"It's complicated.\"",
+			"key": "compIntro6",
 			"side": "left"
 		}
 	]

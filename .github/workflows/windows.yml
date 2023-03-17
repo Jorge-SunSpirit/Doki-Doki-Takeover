@@ -1,49 +1,71 @@
-name: Windows
-
-# This workflow only exists to build the game without having to clear locally
+name: Windows Build
 on: workflow_dispatch
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   Build:
-    # The type of runner that the job will run on
     runs-on: windows-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3.3.0
+      - name: Pull Latest Commit
+        uses: actions/checkout@v3.3.0
 
-      - uses: krdlab/setup-haxe@master
+      - name: Install Haxe
+        uses: krdlab/setup-haxe@master
         with:
           haxe-version: 4.2.5
-      # Runs a set of commands using the runners shell
-      - name: Install Haxelib
+
+      - name: Restore Previous Cache
+        uses: actions/cache@v3
+        with:
+          key: cache-build-windows
+          path: |
+            .haxelib/
+            export/release/windows/haxe/
+            export/release/windows/obj/
+          restore-keys: |
+            cache-build-windows
+
+      - name: Install Libraries
         run: |
-          haxelib setup C:/haxelib
-          haxelib install hxcpp > nul
-          haxelib install lime
-          haxelib install openfl
-          haxelib --never install flixel
-          haxelib run lime setup flixel
-          haxelib run lime setup
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install firetongue
-          haxelib install hxCodec
-          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib git tentools https://github.com/TentaRJ/tentools
-          haxelib git systools https://github.com/haya3218/systools
-          haxelib install hxcpp-debug-server
-          haxelib list
-          haxelib run lime rebuild systools windows
-      - name: Compile
-        run: haxelib run lime build Project.xml windows -final
-        # If this worked, we could've done --app-version="3.0.0-${{github.sha}}"
-      - name: Publish Artifact
+            haxelib setup C:/haxelib
+            haxelib install hxcpp > /dev/null --quiet
+            haxelib install hmm --quiet
+            haxelib run hmm install
+
+      - name: Compile DDTO
+        run: haxelib run lime build windows -final
+
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
           name: DDTO-Windows
           path: 'export/release/windows/bin'
+
+      - name: Clear Previous Cache
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const caches = await github.rest.actions.getActionsCacheList({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+            for (const cache of caches.data.actions_caches) {
+              if (cache.key == "cache-build-windows") {
+                console.log('Clearing ' + cache.key + '...')
+                await github.rest.actions.deleteActionsCacheById({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  cache_id: cache.id,
+                })
+                console.log("Cache cleared.")
+              }
+            }
+
+      - name: Upload New Cache
+        uses: actions/cache@v3
+        with:
+          key: cache-build-windows
+          path: |
+            .haxelib/
+            export/release/windows/haxe/
+            export/release/windows/obj/
+          restore-keys: |
+            cache-build-windows

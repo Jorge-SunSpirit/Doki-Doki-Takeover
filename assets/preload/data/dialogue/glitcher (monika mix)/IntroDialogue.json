@@ -5,6 +5,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"There were a lot of songs that would've worked for me to sing.\"",
+			"key": "glitIntro1",
 			"side": "left"
 		},
 		{
@@ -12,6 +13,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"I'm happy that you even cataloged all our songs too.\"",
+			"key": "glitIntro2",
 			"side": "left"
 		},
 		{
@@ -19,6 +21,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"But this one in particular... it felt like something people would want me to sing.\"",
+			"key": "glitIntro3",
 			"side": "left"
 		},
 		{
@@ -26,6 +29,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"I think it's the name.\"",
+			"key": "glitIntro4",
 			"side": "left"
 		}
 	]

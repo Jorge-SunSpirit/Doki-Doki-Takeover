@@ -46,6 +46,7 @@ descRandom	Randomize the notes of you and your opponent! (Scores will not be sav
 descNoM	Notes of Markov
 descShaders	Allow the game to make use of shaders! Disable if you experience crashes or performance issues.
 descCursor	Shows a customized cursor instead of your computer's cursor.
+descLowEnd	Disables effects in favor of improving performance.
 descKeyBindControls	Escape to save, Backspace to reset. Enter to change a keybind.
 descKeyBindBlacklist	<X> is blacklisted!
 descJudgementControls	Press Left to decrease by 1, or Right to increase by 1.<N>Shift will go faster, Control will go by 0.1, Alt will go by 0.01.<N>Press R to reset the selected judgement. Holding Shift will reset all judgements.

@@ -8,6 +8,8 @@
 			"expression": "gone",
 			"string": "\"Ahaha, welcome back, {USERNAME}.\"",
 			"stringOBS": "\"Ahaha, welcome back.\"",
+			"key": "epipEncore1",
+			"keyOBS": "epipEncore1OBS",
 			"side": "left"
 		},
 		{
@@ -15,6 +17,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "\"Thank you for saving me from the recycling bin. It's very apparent that this \"Friday Night Funkin'\" game doesn't like me being in here for too long.\"",
+			"key": "epipEncore2",
 			"side": "left"
 		},
 		{
@@ -22,6 +25,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "\"Maybe you can find a workaround for the game trying to delete me mid-song? I know firsthand that programming can be very difficult, so I don't blame you if it cannot be fixed.\"",
+			"key": "epipEncore3",
 			"side": "left"
 		},
 		{
@@ -29,6 +33,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "\"If not, you'll just have to rescue me again when we're all done, ok?~\"",
+			"key": "epipEncore4",
 			"side": "left"
 		},
 		{
@@ -36,6 +41,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "\"Are you ready to sing once more, my love?\"",
+			"key": "epipEncore5",
 			"side": "left"
 		},
 		{
@@ -43,6 +49,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "\"Let us begin.\"",
+			"key": "epipEncore6",
 			"side": "left"
 		}
 	]

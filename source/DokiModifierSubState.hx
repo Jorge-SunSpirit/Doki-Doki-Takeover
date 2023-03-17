@@ -12,16 +12,17 @@ class DokiModifierSubState extends MusicBeatSubstate
 {
 	var modifierData:Array<Array<Dynamic>> = [
 		// internal, name, unlock, save, type, default
-		['offset', 'Global Offset', true, 'offset', 'float', 0],
-		['botplay', 'Botplay', true, 'botplay', 'bool', false],
-		['mirror', 'Mirror Mode', SaveData.beatFestival, 'mirrorMode', 'bool', false],
-		['death', 'Sudden Death', true, 'missModeType', 'int', 0],
-		['random', 'Randomized Notes', SaveData.beatFestival, 'randomMode', 'bool', false],
-		['scroll', 'Scroll Speed', true, 'scrollSpeed', 'float', 0.9],
-		['down', 'Downscroll', true, 'downScroll', 'bool', false],
-		['middle', 'Middlescroll', true, 'middleScroll', 'bool', false],
-		['speed', 'Song Speed', true, 'songSpeed', 'float', 1],
-		['selfAware', 'Self Awareness', true, 'selfAware', 'bool', true],
+		['offset', LangUtil.getString('cmnOffset'), true, 'offset', 'float', 0],
+		['botplay', LangUtil.getString('cmnBotplay'), true, 'botplay', 'bool', false],
+		['mirror', LangUtil.getString('nameMirror', 'option'), SaveData.beatFestival, 'mirrorMode', 'bool', false],
+		['ghost', LangUtil.getString('nameGhostTap', 'option'), true, 'ghostTapping', 'bool', true],
+		['death', LangUtil.getString('nameSudden', 'option'), true, 'missModeType', 'int', 0],
+		['random', LangUtil.getString('nameRandom', 'option'), SaveData.beatFestival, 'randomMode', 'bool', false],
+		['scroll', LangUtil.getString('nameScroll', 'option'), true, 'scrollSpeed', 'float', 0.9],
+		['down', LangUtil.getString('nameDownscroll', 'option'), true, 'downScroll', 'bool', false],
+		['middle', LangUtil.getString('nameMiddleScrollOn', 'option'), true, 'middleScroll', 'bool', false],
+		['speed', LangUtil.getString('cmnSpeed'), true, 'songSpeed', 'float', 1],
+		['selfAware', LangUtil.getString('nameSelfAware', 'option'), true, 'selfAware', 'bool', true],
 		['cool', 'Cool gameplay!!!', true, 'coolGameplay', 'bool', false]
 	];
 
@@ -288,7 +289,7 @@ class DokiModifierSubState extends MusicBeatSubstate
 			{
 				if (value < 1)
 				{
-					display = 'Song Default';
+					display = LangUtil.getString('nameScrollDefault', 'option');
 				}
 				else
 				{

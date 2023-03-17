@@ -8,6 +8,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Hmm, Natsuki and Yuri both stopped by already, so I wonder-\"",
+			"key": "joyIntro1",
 			"side": "right"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Monika’s words were quickly cut off by the sound of the music room door swinging wide open.",
+			"key": "joyIntro2",
 			"side": ""
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Quickly running in was the Literature Club’s last major member, with a pep in her step.",
+			"key": "joyIntro3",
 			"side": ""
 		},
 		{
@@ -35,6 +38,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "\"Ahaha, just as I thought! I’m happy you came to visit me too, Sayori.\"",
+			"key": "joyIntro4",
 			"side": "right"
 		},
 		{
@@ -42,6 +46,7 @@
 			"name": "sayori",
 			"expression": "yeah",
 			"string": "\"Ah, were Natsuki and Yuri here already??? Did I miss them??? Aww noooo, I had exciting news to share!\"",
+			"key": "joyIntro5",
 			"side": "left"
 		},
 		{
@@ -49,6 +54,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"Both of them did show up earlier to talk one on one with me.\"",
+			"key": "joyIntro6",
 			"side": "right"
 		},
 		{
@@ -56,6 +62,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"Though what's got you in super high spirits right now? Your smile is the biggest I’ve ever seen!\"",
+			"key": "joyIntro7",
 			"side": "right"
 		},
 		{
@@ -63,6 +70,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"Ehehe, I can’t help it! Everything we’ve been doing recently has been amazing!\"",
+			"key": "joyIntro8",
 			"side": "left"
 		},
 		{
@@ -70,6 +78,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"The festival went perfectly, and now we have seven amazing club members all making each other happy and positive!\"",
+			"key": "joyIntro9",
 			"side": "left"
 		},
 		{
@@ -77,6 +86,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"It's everything I could ever want: Everyone being happy and supporting each other.\"",
+			"key": "joyIntro10",
 			"side": "left"
 		},
 		{
@@ -91,6 +101,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Sayori’s excited demeanor cools down, becoming more solemn but still with a genuine smile on her face.",
+			"key": "joyIntro11",
 			"side": ""
 		},
 		{
@@ -98,6 +109,7 @@
 			"name": "sayori",
 			"expression": "wah",
 			"string": "\"Seeing how much good we’ve been doing… It helps give me a reason to get out of bed every morning, knowing that we were able to accomplish this.\"",
+			"key": "joyIntro12",
 			"side": "left"
 		},
 		{
@@ -105,6 +117,7 @@
 			"name": "sayori",
 			"expression": "wah",
 			"string": "\"It’s still hard for me to always keep those happy thoughts in mind, but it's getting better, bit by bit each day.\"",
+			"key": "joyIntro13",
 			"side": "left"
 		},
 		{
@@ -112,6 +125,7 @@
 			"name": "sayori",
 			"expression": "wah",
 			"string": "\"It makes me more grateful each day that we were able to start this club.\"",
+			"key": "joyIntro14",
 			"side": "left"
 		},
 		{
@@ -126,6 +140,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "All the positive news and happiness from her friends had filled Monika with an overwhelming state of emotion.",
+			"key": "joyIntro15",
 			"side": ""
 		},
 		{
@@ -133,6 +148,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "Tears welled up in Monika’s eyes while she listened to Sayori’s words.",
+			"key": "joyIntro16",
 			"side": ""
 		},
 		{
@@ -140,27 +156,31 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "In a burst of melancholic happiness, Monika walks over and hugs Sayori.",
+			"key": "joyIntro17",
 			"side": ""
 		},
 		{
 			"isCommand": false,
 			"name": "monika",
 			"expression": "cry",
-			"string": "I’m… I’m so proud of you, Sayori. It means so much that you’re here with us to make this club the place it is.",
+			"string": "\"I’m… I’m so proud of you, Sayori. It means so much that you’re here with us to make this club the place it is.\"",
+			"key": "joyIntro18",
 			"side": "right"
 		},
 		{
 			"isCommand": false,
 			"name": "monika",
 			"expression": "cry",
-			"string": "It’s helped so many people… especially me. Thank you…",
+			"string": "\"It’s helped so many people… especially me. Thank you…\"",
+			"key": "joyIntro19",
 			"side": "right"
 		},
 		{
 			"isCommand": false,
 			"name": "sayori",
 			"expression": "wah",
-			"string": "Ehehe… thank you too, Monika.",
+			"string": "\"Ehehe… thank you too, Monika.\"",
+			"key": "joyIntro20",
 			"side": "left"
 		},
 		{
@@ -168,27 +188,31 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "After a few moments pass, the girls break off their hug. Monika wipes her tears and takes a deep breath.",
+			"key": "joyIntro21",
 			"side": ""
 		},
 		{
 			"isCommand": false,
 			"name": "monika",
 			"expression": "ahaha",
-			"string": "Aha- this is going to be a big shift in tone, but when the others came by earlier, they each sang a song with me.",
+			"string": "\"Aha- this is going to be a big shift in tone, but when the others came by earlier, they each sang a song with me.\"",
+			"key": "joyIntro22",
 			"side": "right"
 		},
 		{
 			"isCommand": false,
 			"name": "monika",
 			"expression": "ahaha",
-			"string": "It would make me so happy to be able to do the same with you too.",
+			"string": "\"It would make me so happy to be able to do the same with you too.\"",
+			"key": "joyIntro23",
 			"side": "right"
 		},
 		{
 			"isCommand": false,
 			"name": "sayori",
 			"expression": "yeah",
-			"string": "You don’t need to tell me twice! Let’s sing!",
+			"string": "\"You don’t need to tell me twice! Let’s sing!\"",
+			"key": "joyIntro24",
 			"side": "left"
 		}
 	]

@@ -8,6 +8,7 @@
 			"name": "natsuki",
 			"expression": "what",
 			"string": "\"...bleh. I think I’m done for now. I feel really dizzy after that one.\"",
+			"key": "dbIntro1",
 			"side": "right"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "sayori",
 			"expression": "yeah",
 			"string": "\"That’s ok! Go rest your vocal chords.\"",
+			"key": "dbIntro2",
 			"side": "left"
 		},
 		{
@@ -30,6 +32,7 @@
 			"name": "gf",
 			"expression": "ehh",
 			"string": "*confused glances*",
+			"key": "dbIntro3",
 			"side": "left"
 		},
 		{
@@ -37,6 +40,7 @@
 			"name": "bf",
 			"expression": "think",
 			"string": "\"Skee dep? ...beep de dee skee.\"",
+			"key": "dbIntro4",
 			"side": "right"
 		},
 		{
@@ -44,6 +48,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"eheheh... Well, looks like you’re the only one left, Yuri!\"",
+			"key": "dbIntro5",
 			"side": "left"
 		},
 		{
@@ -51,6 +56,7 @@
 			"name": "yuri",
 			"expression": "blush",
 			"string": "\"...mmh-\"",
+			"key": "dbIntro6",
 			"side": "left"
 		},
 		{
@@ -58,6 +64,7 @@
 			"name": "sayori",
 			"expression": "ooh",
 			"string": "\"Hey, I know you can do it, Yuri. I bet you have one of the nicest singing voices ever!\"",
+			"key": "dbIntro7",
 			"side": "right"
 		},
 		{
@@ -65,6 +72,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"...first having to read my poems aloud to the club... now singing too?\"",
+			"key": "dbIntro8",
 			"side": "left"
 		},
 		{
@@ -72,6 +80,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"This club continues to ask so much out of me.\"",
+			"key": "dbIntro9",
 			"side": "left"
 		}
 	]

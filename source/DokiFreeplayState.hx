@@ -204,7 +204,7 @@ class DokiFreeplayState extends MusicBeatState
 			add(menu_character);
 
 		diff = new FlxSprite(453, 580);
-		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties');
+		diff.frames = Paths.getSparrowAtlas('dokistory/difficulties', 'preload', true);
 		diff.antialiasing = SaveData.globalAntialiasing;
 		diff.animation.addByPrefix('regular', 'Regular', 24);
 		diff.animation.addByPrefix('lyrics', 'Lyrics', 24);
@@ -270,7 +270,7 @@ class DokiFreeplayState extends MusicBeatState
 		trace(curPage + " hewwo");
 		#end
 
-		songPlayback = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/extra/preview', 'preload'));
+		songPlayback = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/extra/preview', 'preload', true));
 		songPlayback.setGraphicSize(Std.int(songPlayback.width * 0.6));
 		songPlayback.updateHitbox();
 		songPlayback.x = (FlxG.width - songPlayback.width) - 10;
@@ -283,7 +283,7 @@ class DokiFreeplayState extends MusicBeatState
 			add(songPlayback);
 		}
 
-		modifierMenu = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/extra/modifiers', 'preload'));
+		modifierMenu = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/extra/modifiers', 'preload', true));
 		modifierMenu.setGraphicSize(Std.int(modifierMenu.width * 0.6));
 		modifierMenu.updateHitbox();
 		modifierMenu.x = (FlxG.width - modifierMenu.width) - 10;
@@ -295,7 +295,7 @@ class DokiFreeplayState extends MusicBeatState
 		if (SaveData.cacheSong)
 			modifierMenu.y -= modifierMenu.height;
 
-		costumeSelect = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/extra/costume', 'preload'));
+		costumeSelect = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/extra/costume', 'preload', true));
 		costumeSelect.setGraphicSize(Std.int(costumeSelect.width * 0.6));
 		costumeSelect.updateHitbox();
 		costumeSelect.x = (FlxG.width - costumeSelect.width) - 10;

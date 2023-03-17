@@ -6,6 +6,9 @@
 	<!-- Used for Main Menu -->
 	<file id="menu" value="mainMenu.tsv"/>
 
+	<!-- Used for Pause Menu -->
+	<file id="pause" value="pauseMenu.tsv"/>
+
 	<!-- Used for Options Menu -->
 	<file id="option" value="optionCategory.tsv"/>
 	<file id="option" value="optionName.tsv"/>
@@ -23,81 +26,62 @@
 
 	<!-- Used for Dialogue -->
 	<file id="dialogue" value="dialogue/high school conflict.tsv"/>
+	<file id="dialogue" value="dialogue/bara no yume.tsv"/>
+	<file id="dialogue" value="dialogue/your demise.tsv"/>
+	<file id="dialogue" value="dialogue/rain clouds.tsv"/>
+	<file id="dialogue" value="dialogue/my confession.tsv"/>
+	<file id="dialogue" value="dialogue/my sweets.tsv"/>
+	<file id="dialogue" value="dialogue/baka.tsv"/>
+	<file id="dialogue" value="dialogue/deep breaths.tsv"/>
+	<file id="dialogue" value="dialogue/obsession.tsv"/>
+	<file id="dialogue" value="dialogue/reconciliation.tsv"/>
+	<file id="dialogue" value="dialogue/crucify (yuri mix).tsv"/>
+	<file id="dialogue" value="dialogue/beathoven (natsuki mix).tsv"/>
+	<file id="dialogue" value="dialogue/it's complicated (sayori mix).tsv"/>
+	<file id="dialogue" value="dialogue/glitcher (monika mix).tsv"/>
+	<file id="dialogue" value="dialogue/hot air balloon.tsv"/>
+	<file id="dialogue" value="dialogue/shrinking violet.tsv"/>
+	<file id="dialogue" value="dialogue/joyride.tsv"/>
+	<file id="dialogue" value="dialogue/our harmony.tsv"/>
+	<file id="dialogue" value="dialogue/neet.tsv"/>
+	<file id="dialogue" value="dialogue/you and me.tsv"/>
+	<file id="dialogue" value="dialogue/love n funkin.tsv"/>
+	<file id="dialogue" value="dialogue/constricted.tsv"/>
+	<file id="dialogue" value="dialogue/catfight.tsv"/>
+	<file id="dialogue" value="dialogue/wilted.tsv"/>
+	<file id="dialogue" value="dialogue/epiphany.tsv"/>
 
-
-	<!--Add locale entries here.
-
-	https://www.techonthenet.com/js/language_tags.php
-
-	1) Add the locale entry
-	2) Add a corresponding folder with localization content matching the id
-	3) Add a corresponding flag image in the _flags folder matching the id
-	4) Add any labels you want to display the language text in the menu
+	<!-- Add locale entries here.
+		https://www.techonthenet.com/js/language_tags.php
 	-->
 
 	<!-- English -->
-	<locale id="en-US" is_default="true" sort="0">
-		<contributors value="SirDusterBuster, Sun Spirit, M&amp;M"/>
+	<locale id="en-US" is_default="true">
 		<label id="en-US" language="English" region="United States"/>
-		<label id="es-US" language="Inglés" region="Estados Unidos"/>
-		<label id="ru-RU" language="Английский" region="Соединенные Штаты"/>
-		<label id="nl-NL" language="Engels" region="Verenigde Staten"/>
-		<label id="pt-BR" language="Inglês" region="Estados Unidos"/>
 	</locale>
 
 	<!-- Spanish -->
-	<locale id="es-US" sort="1">
-		<contributors value="Sulayre"/>
+	<locale id="es-US">
 		<label id="en-US" language="Spanish" region="United States"/>
-		<label id="es-US" language="Español" region="Estados Unidos"/>
-		<label id="ru-RU" language="Испанский" region="Соединенные Штаты"/>
-		<label id="nl-NL" language="Spaans" region="Verenigde Staten"/>
-		<label id="pt-BR" language="Espanhol" region="Estados Unidos"/>
 	</locale>
 
 	<!-- Russian -->
-	<locale id="ru-RU" sort="2">
-		<contributors value="Sprunkle"/>
+	<locale id="ru-RU">
 		<label id="en-US" language="Russian" region="Russia"/>
-		<label id="es-US" language="Ruso" region="Rusia"/>
-		<label id="ru-RU" language="Русский" region="Россия"/>
-		<label id="nl-NL" language="Russisch" region="Rusland"/>
-		<label id="pt-BR" language="Russo" region="Rússia"/>
 	</locale>
 
 	<!-- Dutch -->
-	<locale id="nl-NL" sort="3">
-		<contributors value="Crim"/>
+	<locale id="nl-NL">
 		<label id="en-US" language="Dutch" region="Netherlands"/>
-		<label id="es-US" language="Holandés" region="Países Bajos"/>
-		<label id="ru-RU" language="Голландский" region="Нидерланды"/>
-		<label id="nl-NL" language="Nederlands" region="Nederland"/>
-		<label id="pt-BR" language="Holandês" region="Países Baixos"/>
 	</locale>
 
 	<!-- Brazilian Portuguese -->
-	<locale id="pt-BR" sort="4">
-		<contributors value="Soul, Aizakku"/>
+	<locale id="pt-BR">
 		<label id="en-US" language="Brazilian Portuguese" region="Brazil"/>
-		<label id="es-US" language="Portugués de Brasil" region="Brasil"/>
-		<label id="ru-RU" language="бразильский португальский" region="Бразилия"/>
-		<label id="nl-NL" language="Braziliaans Portugees" region="Brazilië"/>
-		<label id="pt-BR" language="Português" region="Brasil"/>
 	</locale>
 
-	<!---
-	Any text blurbs that the translation interface itself needs are stored here rather than
-	in text files, to avoid the boot-strapping problem of having to load a locale in order
-	to display locale interface text in that locale.
-
-	A good practice is that this note should always display in the currently selected locale as
-	a tooltip over various translations.
-	-->
-
-	<note id="beta">
-		<!--This means that the translation has not been properly integrated yet-->
-		<text id="en-US,en-GB,en-CA,yo-DA" title="BETA" body="This translation is still in beta. Untranslated text, missing characters, and other visual glitches are very likely not the fault of the translator."/>
-		<text id="nb-NO" title="BETA" body="Denne oversettelsen er fortsatt i beta. Uoversatt tekst, manglende bokstaver, og andre visuelle problemer er svært sannsynlig ikke feil av oversetteren."/>
-	</note>
-
+	<!-- Japanese -->
+	<locale id="jp-JP">
+		<label id="en-US" language="Japanese" region="Japan"/>
+	</locale>
 </data>

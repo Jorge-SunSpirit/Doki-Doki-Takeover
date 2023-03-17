@@ -9,6 +9,7 @@
 			"name": "sayori",
 			"expression": "yeah",
 			"string": "\"Yuri, your singing voice is amazing! Sing again, sing again! I wanna hear!\"",
+			"key": "obseIntro1",
 			"side": "left"
 		},
 		{
@@ -16,6 +17,7 @@
 			"name": "natsuki",
 			"expression": "what",
 			"string": "\"Hrk-!\"",
+			"key": "obseIntro2",
 			"side": "right"
 		},
 		{
@@ -23,6 +25,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"Are you ok, Natsuki?\"",
+			"key": "obseIntro3",
 			"side": "left"
 		},
 		{
@@ -35,37 +38,44 @@
 		{
 			"isCommand": true,
 			"name": "autoskip",
-			"string": "\"Bleh... I'm not feeling so gooooooooooo-\""
+			"string": "\"Bleh... I'm not feeling so gooooooooooo-\"",
+			"key": "obseIntro4"
 		},
 		{
 			"isCommand": true,
 			"name": "autoskip",
-			"string": "\"oooooooooooooooooooooooo\""
+			"string": "\"oooooooooooooooooooooooo\"",
+			"key": "obseIntro5"
 		},
 		{
 			"isCommand": true,
 			"name": "autoskip",
-			"string": "\"ooooooooooooo\""
+			"string": "\"ooooooooooooo\"",
+			"key": "obseIntro6"
 		},
 		{
 			"isCommand": true,
 			"name": "autoskip",
-			"string": "\"oooo\""
+			"string": "\"oooo\"",
+			"key": "obseIntro7"
 		},
 		{
 			"isCommand": true,
 			"name": "autoskip",
-			"string": "\"ooooooo\""
+			"string": "\"ooooooo\"",
+			"key": "obseIntro8"
 		},
 		{
 			"isCommand": true,
 			"name": "autoskip",
-			"string": "\"oooo\""
+			"string": "\"oooo\"",
+			"key": "obseIntro9"
 		},
 		{
 			"isCommand": true,
 			"name": "autoskip",
-			"string": "\"ooo\""
+			"string": "\"ooo\"",
+			"key": "obseIntro10"
 		},
 		{
 			"isCommand": true,
@@ -95,6 +105,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"I'm not feeling so good.\"",
+			"key": "obseIntro11",
 			"side": "right"
 		},
 		{
@@ -102,6 +113,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Ah- I’m gonna walk Natsuki to the nurse’s office.\"",
+			"key": "obseIntro12",
 			"side": "left"
 		},
 		{
@@ -109,6 +121,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"Y-you guys have fun singing though!\"",
+			"key": "obseIntro13",
 			"side": "left"
 		},
 		{
@@ -116,6 +129,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Eheh-\"",
+			"key": "obseIntro14",
 			"side": "left"
 		},
 		{
@@ -137,6 +151,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"...ufufu.\"",
+			"key": "obseIntro15",
 			"side": "left"
 		},
 		{
@@ -144,6 +159,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"Singing is much nicer than I thought.\"",
+			"key": "obseIntro16",
 			"side": "left"
 		},
 		{
@@ -151,6 +167,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"Its a nice alternative means to... release my emotions.\"",
+			"key": "obseIntro17",
 			"side": "left"
 		},
 		{
@@ -158,6 +175,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"Let’s sing again. Right now.\"",
+			"key": "obseIntro18",
 			"side": "left"
 		},
 		{
@@ -165,6 +183,7 @@
 			"name": "yuri",
 			"expression": "ahaha",
 			"string": "\"Hahhhh...-\"",
+			"key": "obseIntro19",
 			"side": "left"
 		},
 		{

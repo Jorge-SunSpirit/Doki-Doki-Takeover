@@ -12,6 +12,7 @@
 			"name": "mc",
 			"expression": "neutral",
 			"string": "\"So, you two must be the other members that Monika and the other girls keep mentioning.\"",
+			"key": "crucIntro1",
 			"side": "right"
 		},
 		{
@@ -19,6 +20,7 @@
 			"name": "mc",
 			"expression": "neutral",
 			"string": "\"They seem to know you quite well, even though I haven't seen either of you at a club meeting before.\"",
+			"key": "crucIntro2",
 			"side": "right"
 		},
 		{
@@ -26,6 +28,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"Well, I guess I did get roped into this whole Literature Club thing not too long ago, must've missed when you were around.\"",
+			"key": "crucIntro3",
 			"side": "right"
 		},
 		{
@@ -33,6 +36,7 @@
 			"name": "mc",
 			"expression": "neutral",
 			"string": "\"I'm glad you showed up today though. Your whole singing thing has had the club really inspired.\"",
+			"key": "crucIntro4",
 			"side": "right"
 		},
 		{
@@ -40,6 +44,7 @@
 			"name": "mc",
 			"expression": "neutral",
 			"string": "\"For the school festival later today, they decided to sing live as their club's special activity.\"",
+			"key": "crucIntro5",
 			"side": "right"
 		},
 		{
@@ -47,6 +52,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"Not sure what singing has to do with literature, but everyone seemed on board. Can't be upset at it, though.\"",
+			"key": "crucIntro6",
 			"side": "right"
 		},
 		{
@@ -54,6 +60,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"I haven't seen Sayori this happy in a while.\"",
+			"key": "crucIntro7",
 			"side": "right"
 		},
 		{
@@ -61,6 +68,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"I haven't had to go out of my way to wake her up for school nearly as much as I do, she's right outside with a happy smile waiting for me, humming happy tunes.\"",
+			"key": "crucIntro8",
 			"side": "right"
 		},
 		{
@@ -68,6 +76,7 @@
 			"name": "mc",
 			"expression": "sigh",
 			"string": "\"But if you guys didn't show up, I would've had to be the one to sing with them. I'm not ready to embarrass myself in front of my peers like that yet.\"",
+			"key": "crucIntro9",
 			"side": "right"
 		},
 		{
@@ -75,6 +84,7 @@
 			"name": "mc",
 			"expression": "camera",
 			"string": "\"Plus, none of them could even figure out a song they wanted to duet.\"",
+			"key": "crucIntro10",
 			"side": "right"
 		},
 		{
@@ -82,6 +92,7 @@
 			"name": "mc",
 			"expression": "neutral",
 			"string": "\"You think you guys can help them out?\"",
+			"key": "crucIntro11",
 			"side": "right"
 		},
 		{
@@ -89,6 +100,7 @@
 			"name": "gf",
 			"expression": "neutral",
 			"string": "*happy gesture*",
+			"key": "crucIntro12",
 			"side": "left"
 		},
 		{
@@ -96,6 +108,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "\"Beep!\"",
+			"key": "crucIntro13",
 			"side": "left"
 		},
 		{
@@ -103,6 +116,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"A whole backlog of songs? That should give them all a nice selection to choose from.\"",
+			"key": "crucIntro14",
 			"side": "right"
 		},
 		{
@@ -110,6 +124,7 @@
 			"name": "mc",
 			"expression": "camera",
 			"string": "\"I'll let them know once they come back from prepping.\"",
+			"key": "crucIntro15",
 			"side": "right"
 		},
 		{
@@ -117,6 +132,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"And I'll see you two tonight at the festival.\"",
+			"key": "crucIntro16",
 			"side": "right"
 		},
 		{
@@ -147,6 +163,7 @@
 			"name": "mc",
 			"expression": "happy",
 			"string": "\"Audio is all set up, we're ready to go when you are.\"",
+			"key": "crucIntro17",
 			"side": "right"
 		},
 		{
@@ -154,6 +171,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"Thank you so much for helping us!\"",
+			"key": "crucIntro18",
 			"side": "left"
 		},
 		{
@@ -161,6 +179,7 @@
 			"name": "natsuki",
 			"expression": "wah",
 			"string": "\"It's funny seeing you managing all that music tech.\"",
+			"key": "crucIntro19",
 			"side": "left"
 		},
 		{
@@ -168,6 +187,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"Yeah! You're like our own personal MC!\"",
+			"key": "crucIntro20",
 			"side": "left"
 		},
 		{
@@ -175,6 +195,7 @@
 			"name": "monika",
 			"expression": "ahaha",
 			"string": "(In more ways than one, ahaha-)",
+			"key": "crucIntro21",
 			"side": "left"
 		},
 		{
@@ -182,6 +203,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "(Hmm... I wonder if that joke works in translation-)",
+			"key": "crucIntro22",
 			"side": "left"
 		},
 		{
@@ -193,6 +215,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"Oh, you're gonna go first, Yuri?\"",
+			"key": "crucIntro23",
 			"side": "left"
 		},
 		{
@@ -200,6 +223,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"Mhm...\"",
+			"key": "crucIntro24",
 			"side": "left"
 		},
 		{
@@ -207,6 +231,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"I found myself particularly immersed in the story of the track I picked.\"",
+			"key": "crucIntro25",
 			"side": "left"
 		},
 		{
@@ -214,6 +239,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"A song of two young lovers who wander into the shady parts of their lively hometown and come face to face with a monster.\"",
+			"key": "crucIntro26",
 			"side": "left"
 		},
 		{
@@ -221,6 +247,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"One ready to exact the will of God upon them.\"",
+			"key": "crucIntro27",
 			"side": "left"
 		},
 		{
@@ -228,6 +255,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"With a chainsaw.\"",
+			"key": "crucIntro28",
 			"side": "left"
 		}
 	]

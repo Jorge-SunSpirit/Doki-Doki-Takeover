@@ -67,7 +67,7 @@ class GalleryArtState extends MusicBeatState
 		artwork.antialiasing = SaveData.globalAntialiasing;
 		add(artwork);
 
-		switchState = new FlxSprite(0, 0).loadGraphic(Paths.image('sticker', 'preload'));
+		switchState = new FlxSprite(0, 0).loadGraphic(Paths.image('sticker', 'preload', true));
 		switchState.setGraphicSize(Std.int(switchState.width * 0.5));
 		switchState.updateHitbox();
 		switchState.x = (FlxG.width - switchState.width) - 10;

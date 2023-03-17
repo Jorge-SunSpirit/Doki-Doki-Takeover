@@ -8,6 +8,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"That’s what I’m talking about! Those fast notes alone make you stand out so much, and when you consider everything else, that’s a whole bundle of stunning individuality!\"",
+			"key": "habEnd1",
 			"side": "right"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "natsuki",
 			"expression": "happy",
 			"string": "\"…heh heh. That did help ease my mind.\"",
+			"key": "habEnd2",
 			"side": "left"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "natsuki",
 			"expression": "happy",
 			"string": "\"You know what, next time I see that ‘Boyfriend’ guy, I’m gonna hit him with the fastest solo he’s ever heard! Hahaha!\"",
+			"key": "habEnd3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"Yeah, that’s how you do it!\"",
+			"key": "habEnd4",
 			"side": "right"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "natsuki",
 			"expression": "happy",
 			"string": "\"I… really appreciate the help, Monika.\"",
+			"key": "habEnd5",
 			"side": "left"
 		}
 	]

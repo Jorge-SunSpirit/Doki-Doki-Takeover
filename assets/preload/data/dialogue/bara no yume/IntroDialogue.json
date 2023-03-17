@@ -8,6 +8,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "Wait-",
+			"key": "bnyIntro1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "Is that my microphone? How the hell did you get that?",
+			"key": "bnyIntro2",
 			"side": "left"
 		},
 		{
@@ -29,6 +31,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "and what is that WORM doing here?!",
+			"key": "bnyIntro3",
 			"side": "left"
 		},
 		{
@@ -36,6 +39,7 @@
 			"name": "bf",
 			"expression": "what",
 			"string": "bep-",
+			"key": "bnyIntro4",
 			"side": "right"
 		},
 		{
@@ -43,6 +47,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "Didn't have enough fun making a fool of me last time you showed up?",
+			"key": "bnyIntro5",
 			"side": "left"
 		},
 		{
@@ -50,6 +55,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "Now you're bringing more of your hideously attractive friends here to mock me once again?",
+			"key": "bnyIntro6",
 			"side": "left"
 		},
 		{
@@ -57,6 +63,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Hey, its not-",
+			"key": "bnyIntro7",
 			"side": "right"
 		},
 		{
@@ -64,6 +71,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "You. Give me that back. I have another score to settle.",
+			"key": "bnyIntro8",
 			"side": "left"
 		},
 		{
@@ -71,6 +79,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "Huh? No, wait, I was just about to-",
+			"key": "bnyIntro9",
 			"side": "right"
 		},
 		{
@@ -78,6 +87,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "I said GIVE IT!",
+			"key": "bnyIntro10",
 			"side": "left"
 		},
 		{
@@ -85,6 +95,7 @@
 			"name": "monika",
 			"expression": "gasp",
 			"string": "N-no!",
+			"key": "bnyIntro11",
 			"side": "right"
 		}
 	]

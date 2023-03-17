@@ -106,7 +106,7 @@ class TitleState extends MusicBeatState
 		add(logoBl);
 
 		titleText = new FlxSprite(170, FlxG.height * 0.8);
-		titleText.frames = Paths.getSparrowAtlas('titleEnter');
+		titleText.frames = Paths.getSparrowAtlas('titleEnter', 'preload', true);
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
 		titleText.antialiasing = SaveData.globalAntialiasing;
@@ -126,10 +126,9 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-
 		// Put whatever hueh you want in the array
 		var huehArray:Array<String> = ['TBDHueh', 'NatHueh', 'SayoHueh', 'YuriHueh', 'MoniHueh', 'ProtagHueh'];
-		var hueh:String = huehArray[FlxG.random.int(0, huehArray.length - 1)];
+		var hueh:String = huehArray[Random.randUInt(0, huehArray.length - 1)];
 
 		// hueh = 'TBDHueh'; // Forced hueh string
 		moniSpr = new FlxSprite(0, FlxG.height * .7).loadGraphic(Paths.image('hueh/' + hueh));
@@ -167,7 +166,7 @@ class TitleState extends MusicBeatState
 			dokiArray.push(['ProtagPopup', 770, 170]);
 
 		// The selected doki
-		var selected:Int = FlxG.random.int(0, dokiArray.length - 1);
+		var selected:Int = Random.randUInt(0, dokiArray.length - 1);
 		// selected = 0 // Forced doki for testing
 
 		var dokiIndex:String = dokiArray[selected][0];

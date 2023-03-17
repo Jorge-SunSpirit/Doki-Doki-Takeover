@@ -60,7 +60,7 @@ class DokiCards extends MusicBeatSubstate
 			selectGrp.add(funnySprite);
 		}
 
-		select = new FlxSprite(0, 0).loadGraphic(Paths.image('extraui/selecttext', 'preload'));
+		select = new FlxSprite(0, 0).loadGraphic(Paths.image('extraui/selecttext', 'preload', true));
 		select.antialiasing = SaveData.globalAntialiasing;
 		select.scale.set(0.8, 0.8);
 		select.updateHitbox();

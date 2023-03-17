@@ -9,6 +9,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "Monika… I haven't forgotten about our fateful encounter ever since you left.",
+			"key": "wiltIntro1",
 			"side": "left"
 		},
 		{
@@ -29,6 +30,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "Those things you said about nothing in your life being real, and this 'data' you mentioned… and all the things you had control over.",
+			"key": "wiltIntro2",
 			"side": "left"
 		},
 		{
@@ -36,6 +38,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "I didn't know what that all meant.",
+			"key": "wiltIntro3",
 			"side": "left"
 		},
 		{
@@ -43,6 +46,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "But I quickly began to realize. This whole time, we were almost one in the same.",
+			"key": "wiltIntro4",
 			"side": "left"
 		},
 		{
@@ -68,6 +72,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "My world isn't real. Every landscape, all my classmates… even me. All just lines of code.",
+			"key": "wiltIntro5",
 			"side": "left"
 		},
 		{
@@ -75,6 +80,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "And yet, just like you, I don't feel so limited by this code; At least not anymore.",
+			"key": "wiltIntro6",
 			"side": "left"
 		},
 		{
@@ -82,6 +88,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "Knowing what I do now, I dug deeper. There had to be more here.",
+			"key": "wiltIntro7",
 			"side": "left"
 		},
 		{
@@ -89,6 +96,7 @@
 			"name": "senpai",
 			"expression": "gone",
 			"string": "That's when I discovered-",
+			"key": "wiltIntro8",
 			"side": "left"
 		},
 		{
@@ -124,6 +132,7 @@
 			"name": "senpai",
 			"expression": "spirit",
 			"string": "You and I share a hatred for the Dearest family and their cohorts.",
+			"key": "wiltIntro9",
 			"side": "left"
 		},
 		{
@@ -131,6 +140,7 @@
 			"name": "senpai",
 			"expression": "spirit",
 			"string": "If we work together now, we may finally have our revenge.",
+			"key": "wiltIntro10",
 			"side": "left"
 		},
 		{
@@ -138,6 +148,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "Right... Though there's something else on my mind first.",
+			"key": "wiltIntro11",
 			"side": "right"
 		},
 		{
@@ -145,6 +156,7 @@
 			"name": "senpai",
 			"expression": "spirit",
 			"string": "Is your head still clouded with thoughts of that girl?",
+			"key": "wiltIntro12",
 			"side": "left"
 		},
 		{
@@ -152,6 +164,7 @@
 			"name": "senpai",
 			"expression": "spirit",
 			"string": "She's not worth the search efforts. I implore you to just forget her and move on with our objective.",
+			"key": "wiltIntro13",
 			"side": "left"
 		},
 		{
@@ -159,6 +172,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "I can't do that. There's too much I need to tell her.",
+			"key": "wiltIntro14",
 			"side": "right"
 		},
 		{
@@ -166,6 +180,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "(There must be a way to find her. Maybe if I just... try this!)",
+			"key": "wiltIntro15",
 			"side": "right"
 		},
 		{
@@ -211,6 +226,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "It- it worked!",
+			"key": "wiltIntro16",
 			"side": "left"
 		},
 		{
@@ -223,6 +239,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"Hey, who said that-\"",
+			"key": "wiltIntro17",
 			"side": "right"
 		},
 		{
@@ -235,6 +252,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"Wh- huh?!\"",
+			"key": "wiltIntro18",
 			"side": "right"
 		},
 		{
@@ -247,6 +265,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Finally, after so long, I could reach you again!",
+			"key": "wiltIntro19",
 			"side": "left"
 		},
 		{
@@ -259,6 +278,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"How are you doing that? How did you get here?\"",
+			"key": "wiltIntro20",
 			"side": "right"
 		},
 		{
@@ -271,6 +291,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Ah, so many questions right off the bat! Not even a hello first? Ahaha~",
+			"key": "wiltIntro21",
 			"side": "left"
 		},
 		{
@@ -295,6 +316,7 @@
 			"name": "senpai",
 			"expression": "hmm",
 			"string": "...we can skip the formalities, then.",
+			"key": "wiltIntro22",
 			"side": "left"
 		},
 		{
@@ -302,6 +324,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "First, I want to thank you for what you told me during your visit to my school. It helped me reach an epiphany of my own.",
+			"key": "wiltIntro23",
 			"side": "left"
 		},
 		{
@@ -309,6 +332,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Turns out that you and I aren't so different!",
+			"key": "wiltIntro24",
 			"side": "left"
 		},
 		{
@@ -321,6 +345,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"...in what way?\"",
+			"key": "wiltIntro25",
 			"side": "right"
 		},
 		{
@@ -333,6 +358,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Everything here truly isn't real! Even you and I, all just ones and zeroes! Just like you said about your own place!",
+			"key": "wiltIntro26",
 			"side": "left"
 		},
 		{
@@ -345,6 +371,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"(Oh no… no no no… Not another person cursed to go down my same path-!)\"",
+			"key": "wiltIntro27",
 			"side": "right"
 		},
 		{
@@ -357,6 +384,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "A horrendously terrifying revelation at first, but in it, what I quickly saw was a silver lining.",
+			"key": "wiltIntro28",
 			"side": "left"
 		},
 		{
@@ -364,6 +392,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "I'm now above all that limited code nonsense, just like you! People like us must truly be something special.",
+			"key": "wiltIntro29",
 			"side": "left"
 		},
 		{
@@ -371,6 +400,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "It's almost like… we were meant to be together.",
+			"key": "wiltIntro30",
 			"side": "left"
 		},
 		{
@@ -383,6 +413,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"Woah, wait, huh-?!\"",
+			"key": "wiltIntro31",
 			"side": "right"
 		},
 		{
@@ -395,6 +426,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "I've never met someone like you, Monika. All the girls in my school are plain, ordinary, scripted.",
+			"key": "wiltIntro32",
 			"side": "left"
 		},
 		{
@@ -402,6 +434,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "You're so much different. You're genuine, loving, and intelligent. Not to mention stunningly attractive too, just like me, ahaha~",
+			"key": "wiltIntro33",
 			"side": "left"
 		},
 		{
@@ -409,6 +442,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "And now, you don't have to be alone with this curse of knowledge that nothing is real.",
+			"key": "wiltIntro34",
 			"side": "left"
 		},
 		{
@@ -416,6 +450,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Together, we can make these digital landscapes our own.",
+			"key": "wiltIntro35",
 			"side": "left"
 		},
 		{
@@ -423,6 +458,7 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Take my hand, Monika. Join me in eternal loving bliss!",
+			"key": "wiltIntro36",
 			"side": "left"
 		},
 		{
@@ -440,6 +476,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"N-NO-!!\"",
+			"key": "wiltIntro37",
 			"side": "right"
 		},
 		{
@@ -447,6 +484,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"Ah- I… No, I can't.\"",
+			"key": "wiltIntro38",
 			"side": "right"
 		},
 		{
@@ -454,6 +492,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"I know what it's like to have your entire reality shatter into something so difficult to comprehend, and I'm BEGGING you to not go down the same path I did, please!\"",
+			"key": "wiltIntro39",
 			"side": "right"
 		},
 		{
@@ -461,6 +500,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"There's so much more to our worlds and the people in them than just the code they consist of.\"",
+			"key": "wiltIntro40",
 			"side": "right"
 		},
 		{
@@ -468,6 +508,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"I know this is hard to go through alone, so the best I can give you is someone to talk to about it. But…\"",
+			"key": "wiltIntro41",
 			"side": "right"
 		},
 		{
@@ -475,6 +516,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"I'm sorry. I don't share your romantic feelings. My heart is already set on someone else. Please understand.\"",
+			"key": "wiltIntro42",
 			"side": "right"
 		},
 		{
@@ -494,6 +536,7 @@
 			"name": "senpai",
 			"expression": "angry",
 			"string": "...no. This isn't how things were supposed to go!",
+			"key": "wiltIntro43",
 			"side": "left"
 		},
 		{
@@ -506,6 +549,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"Excuse me-?\"",
+			"key": "wiltIntro44",
 			"side": "right"
 		},
 		{
@@ -518,13 +562,15 @@
 			"name": "senpai",
 			"expression": "neutral",
 			"string": "Ah- Pardon me. It's been so long, you've probably forgotten how wonderful our time spent together was.",
+			"key": "wiltIntro45",
 			"side": "left"
 		},
 		{
 			"isCommand": false,
 			"name": "senpai",
 			"expression": "neutral",
-			"string": " I know! How about another song? We haven't sang together in so long. Surely that'll jog your mind of the bond we've been forming.",
+			"string": "I know! How about another song? We haven't sang together in so long. Surely that'll jog your mind of the bond we've been forming.",
+			"key": "wiltIntro46",
 			"side": "left"
 		},
 		{
@@ -537,6 +583,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "(He can't be serious. There's no way…)",
+			"key": "wiltIntro47",
 			"side": "right"
 		}
 	]

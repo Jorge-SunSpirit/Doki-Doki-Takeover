@@ -67,6 +67,16 @@ class StageData
 			return null;
 		}
 
-		return cast Json.parse(rawJson);
+		try
+		{
+			return cast Json.parse(rawJson);
+		}
+		catch (e)
+		{
+			Main.alertPopup('A stage json ($stage) has failed to load properly, your installation may be corrupt.\n\nPlease try redownloading the mod.');
+			Sys.exit(0);
+
+			return null;
+		}
 	}
 }

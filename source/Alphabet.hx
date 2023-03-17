@@ -208,7 +208,7 @@ class Alphabet extends FlxSpriteGroup
 
 			loopNum += 1;
 
-			tmr.time = FlxG.random.float(0.04, 0.09);
+			tmr.time = Random.randF(0.04, 0.09);
 		}, splitWords.length);
 	}
 

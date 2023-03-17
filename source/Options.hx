@@ -382,7 +382,7 @@ class ScrollSpeedOption extends Option
 
 	override function getValue():String
 	{
-		var visualValue:String = SaveData.scrollSpeed < 1 ? 'Song Default' : Std.string(FlxMath.roundDecimal(SaveData.scrollSpeed, 1));
+		var visualValue:String = SaveData.scrollSpeed < 1 ? LangUtil.getString('nameScrollDefault', 'option') : Std.string(FlxMath.roundDecimal(SaveData.scrollSpeed, 1));
 		return LangUtil.getString('descCurScroll', 'option') + ': ' + visualValue;
 	}
 }
@@ -530,7 +530,7 @@ class LaneUnderlayOption extends Option
 
 	override function right():Bool
 	{
-		SaveData.laneTransparency += 0.1;
+		SaveData.laneTransparency += 0.05;
 
 		if (SaveData.laneTransparency < 0)
 			SaveData.laneTransparency = 0;
@@ -542,7 +542,7 @@ class LaneUnderlayOption extends Option
 
 	override function left():Bool
 	{
-		SaveData.laneTransparency -= 0.1;
+		SaveData.laneTransparency -= 0.05;
 
 		if (SaveData.laneTransparency < 0)
 			SaveData.laneTransparency = 0;
@@ -555,7 +555,7 @@ class LaneUnderlayOption extends Option
 
 	override function getValue():String
 	{
-		return LangUtil.getString('descLaneUnderwayControl', 'option') + ': ${FlxMath.roundDecimal(SaveData.laneTransparency, 1) * 100}%';
+		return LangUtil.getString('descLaneUnderwayControl', 'option') + ': ${FlxMath.roundDecimal(SaveData.laneTransparency, 2) * 100}%';
 	}
 }
 
@@ -1130,6 +1130,27 @@ class Shaders extends Option
 	private override function updateDisplay():String
 	{
 		return LangUtil.getString('nameShaders', 'option') + ' ' + (SaveData.shaders ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
+	}
+}
+
+class LowEnd extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		SaveData.lowEnd = !SaveData.lowEnd;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return LangUtil.getString('nameLowEnd', 'option') + ' ' + (SaveData.lowEnd ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
 	}
 }
 

@@ -5,6 +5,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"Ahahaha.\"",
+			"key": "glitEnd1",
 			"side": "left"
 		},
 		{
@@ -28,6 +29,7 @@
 			"name": "monika",
 			"expression": "neutral",
 			"string": "\"I appreciate you two swinging by to help us put on this performance.\"",
+			"key": "glitEnd2",
 			"side": "left"
 		},
 		{
@@ -35,6 +37,7 @@
 			"name": "monika",
 			"expression": "ahh",
 			"string": "\"On behalf of the Literature Club, I thank you.\"",
+			"key": "glitEnd3",
 			"side": "left"
 		},
 		{
@@ -42,6 +45,7 @@
 			"name": "gf",
 			"expression": "yeah",
 			"string": "*cheery face*",
+			"key": "glitEnd4",
 			"side": "right"
 		},
 		{
@@ -49,6 +53,7 @@
 			"name": "bf",
 			"expression": "yeah",
 			"string": "\"Skee yeah!\"",
+			"key": "glitEnd5",
 			"side": "right"
 		},
 		{
@@ -63,6 +68,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"...now that everyone's left, there's something I want to ask.\"",
+			"key": "glitEnd6",
 			"side": "left"
 		},
 		{
@@ -70,6 +76,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"You aren't \"from here\", from what I've seen.\"",
+			"key": "glitEnd7",
 			"side": "left"
 		},
 		{
@@ -77,6 +84,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"And you can enter and leave this place very easily now. So I must ask...\"",
+			"key": "glitEnd8",
 			"side": "left"
 		},
 		{
@@ -84,6 +92,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"-is there a way to bring us back with you?\"",
+			"key": "glitEnd9",
 			"side": "left"
 		},
 		{
@@ -98,6 +107,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"This game is very limiting with what we can do, and the others will remain blissfully unaware regardless of what happens...\"",
+			"key": "glitEnd10",
 			"side": "left"
 		},
 		{
@@ -105,6 +115,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"-but if they could have the opportunity to see what's beyond their school and homes, I think they would really love it.\"",
+			"key": "glitEnd11",
 			"side": "left"
 		},
 		{
@@ -112,6 +123,7 @@
 			"name": "monika",
 			"expression": "upset",
 			"string": "\"And maybe...\"",
+			"key": "glitEnd12",
 			"side": "left"
 		},
 		{
@@ -119,6 +131,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"-just maybe I can finally find the one who I've been longing for, and see them face to face.\"",
+			"key": "glitEnd13",
 			"side": "left"
 		},
 		{
@@ -126,6 +139,7 @@
 			"name": "monika",
 			"expression": "eeh",
 			"string": "\"...and maybe-\"",
+			"key": "glitEnd14",
 			"side": "left"
 		},
 		{

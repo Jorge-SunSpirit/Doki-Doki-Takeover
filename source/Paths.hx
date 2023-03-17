@@ -198,7 +198,7 @@ class Paths
 
 	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String)
 	{
-		return sound(key + FlxG.random.int(min, max), library);
+		return sound(key + Random.randUInt(min, max), library);
 	}
 
 	inline static public function music(key:String, ?library:String):Dynamic
@@ -233,9 +233,9 @@ class Paths
 		#end
 	}
 
-	inline static public function image(key:String, ?library:String):FlxGraphic
+	inline static public function image(key:String, ?library:String, ?locale:Bool):FlxGraphic
 	{
-		var returnAsset:FlxGraphic = returnGraphic(key, library);
+		var returnAsset:FlxGraphic = returnGraphic(key, library, locale);
 		return returnAsset;
 	}
 
@@ -252,16 +252,30 @@ class Paths
 		return false;
 	}
 
-	inline static public function getSparrowAtlas(key:String, ?library:String)
+	inline static public function getSparrowAtlas(key:String, ?library:String, ?locale:Bool)
 	{
-		var imageLoaded:FlxGraphic = returnGraphic(key);
+		var imageLoaded:FlxGraphic = returnGraphic(key, library, locale);
 
-		return FlxAtlasFrames.fromSparrow((imageLoaded != null ? imageLoaded : image(key, library)), file('images/$key.xml', library));
+		var folder:String = 'images';
+
+		#if FEATURE_LANGUAGE
+		if (locale && SaveData.language != 'en-US')
+		{
+			folder = 'locales/${SaveData.language}/images';
+
+			if (!OpenFlAssets.exists(getPath('$folder/$key.xml', TEXT, 'preload'), TEXT))
+				folder = 'images';
+			else
+				library = 'preload';
+		}
+		#end
+
+		return FlxAtlasFrames.fromSparrow((imageLoaded != null ? imageLoaded : image(key, library, locale)), file('$folder/$key.xml', library));
 	}
 
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
-		var imageLoaded:FlxGraphic = returnGraphic(key);
+		var imageLoaded:FlxGraphic = returnGraphic(key, library);
 
 		return FlxAtlasFrames.fromSpriteSheetPacker((imageLoaded != null ? imageLoaded : image(key, library)), file('images/$key.txt', library));
 	}
@@ -270,9 +284,21 @@ class Paths
 	public static var currentTrackedTextures:Map<String, Texture> = [];
 	public static var currentTrackedAssets:Map<String, FlxGraphic> = [];
 
-	public static function returnGraphic(key:String, ?library:String)
+	public static function returnGraphic(key:String, ?library:String, ?locale:Bool)
 	{
-		var path:String = getPath('images/$key.png', IMAGE, library);
+		var folder:String = 'images';
+
+		#if FEATURE_LANGUAGE
+		var origLibrary = library;
+
+		if (locale && SaveData.language != 'en-US')
+		{
+			folder = 'locales/${SaveData.language}/images';
+			library = 'preload';
+		}
+		#end
+
+		var path:String = getPath('$folder/$key.png', IMAGE, library);
 
 		if (OpenFlAssets.exists(path, IMAGE))
 		{
@@ -308,7 +334,18 @@ class Paths
 		}
 		else
 		{
-			trace('"$key" returned null');
+			var traceMsg:String = '"$key" returned null (library: $library';
+			#if FEATURE_LANGUAGE
+			if (locale && SaveData.language != 'en-US')
+				traceMsg += ', locale: ${SaveData.language}';
+			#end
+			trace('$traceMsg)');
+
+			#if FEATURE_LANGUAGE
+			if (locale && SaveData.language != 'en-US')
+				return returnGraphic(key, origLibrary);
+			else
+			#end
 			return null;
 		}
 	}

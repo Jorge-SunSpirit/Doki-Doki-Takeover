@@ -8,6 +8,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"It appears that we have visitors.\"",
+			"key": "rcIntro1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"Seriously, Sayori? You brought a boy to the club?\"",
+			"key": "rcIntro2",
 			"side": "left"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Hey- I wasn’t expecting anyone new. We haven’t even put out fliers for the club yet!\"",
+			"key": "rcIntro3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"But look, Natsuki! We have another girl too!\"",
+			"key": "rcIntro4",
 			"side": "left"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "gf",
 			"expression": "neutral",
 			"string": "*empty thoughts*",
+			"key": "rcIntro5",
 			"side": "right"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Ehehe, if I knew we were expecting more members- I would've asked Natsuki to bake some welcome cupcakes!\"",
+			"key": "rcIntro6",
 			"side": "left"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"Oh! And maybe I could've asked Yuri to make tea as well!\"",
+			"key": "rcIntro7",
 			"side": "left"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"I need to write this down for later: 'Plan Tea Party for Club Soon'\"",
+			"key": "rcIntro8",
 			"side": "left"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "yuri",
 			"expression": "smile",
 			"string": "\"Sounds like you’re already very excited about our new guests. You haven’t even asked for their names yet-\"",
+			"key": "rcIntro9",
 			"side": "right"
 		},
 		{
@@ -71,6 +80,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Ah, right! Eheh, silly me. What’re your names, new literature club attendees?\"",
+			"key": "rcIntro10",
 			"side": "left"
 		},
 		{
@@ -78,6 +88,7 @@
 			"name": "bf",
 			"expression": "beep",
 			"string": "\"Beep skee!\"",
+			"key": "rcIntro11",
 			"side": "right"
 		},
 		{
@@ -85,6 +96,7 @@
 			"name": "gf",
 			"expression": "yeah",
 			"string": "*happy gesture*",
+			"key": "rcIntro12",
 			"side": "right"
 		},
 		{
@@ -92,6 +104,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"You two are Boyfriend and Girlfriend? Aww, you look so cute together!!!\"",
+			"key": "rcIntro13",
 			"side": "left"
 		},
 		{
@@ -99,6 +112,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"...that’s cute and all, but like, what are your names?\"",
+			"key": "rcIntro14",
 			"side": "left"
 		},
 		{
@@ -106,6 +120,7 @@
 			"name": "bf",
 			"expression": "beep",
 			"string": "\"Beep skee!\"",
+			"key": "rcIntro15",
 			"side": "right"
 		},
 		{
@@ -113,6 +128,7 @@
 			"name": "gf",
 			"expression": "yeah",
 			"string": "*another happy gesture*",
+			"key": "rcIntro16",
 			"side": "right"
 		},
 		{
@@ -120,6 +136,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"Yes, we know that you guys are dating! We wanna know your NAMES!\"",
+			"key": "rcIntro17",
 			"side": "left"
 		},
 		{
@@ -127,6 +144,7 @@
 			"name": "bf",
 			"expression": "neutral",
 			"string": "\"Bee dee skee dep!\"",
+			"key": "rcIntro18",
 			"side": "right"
 		},
 		{
@@ -134,6 +152,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"...I don’t like them already.\"",
+			"key": "rcIntro19",
 			"side": "left"
 		},
 		{
@@ -141,6 +160,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"They’re already messing with me!\"",
+			"key": "rcIntro20",
 			"side": "left"
 		},
 		{
@@ -148,6 +168,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"Natsuki! Not so harsh...\"",
+			"key": "rcIntro21",
 			"side": "left"
 		},
 		{
@@ -155,6 +176,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"Hmph.\"",
+			"key": "rcIntro22",
 			"side": "left"
 		},
 		{
@@ -162,6 +184,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"Eheheh... I’m sorry about that. If you don’t want to tell us your names, that’s ok!\"",
+			"key": "rcIntro23",
 			"side": "left"
 		},
 		{
@@ -169,6 +192,7 @@
 			"name": "sayori",
 			"expression": "happ",
 			"string": "\"I’m Sayori!\"",
+			"key": "rcIntro24",
 			"side": "left"
 		},
 		{
@@ -176,6 +200,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"That lovely lavender lady over there is Yuri, and Natsuki is the one who’s real sassy today.\"",
+			"key": "rcIntro25",
 			"side": "left"
 		},
 		{
@@ -183,6 +208,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"With introductions aside... may we ask what these microphones are for?\"",
+			"key": "rcIntro26",
 			"side": "left"
 		},
 		{
@@ -190,6 +216,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"I was just about to ask that.\"",
+			"key": "rcIntro27",
 			"side": "left"
 		},
 		{
@@ -197,6 +224,7 @@
 			"name": "sayori",
 			"expression": "ehh",
 			"string": "\"I hope you didn’t confuse this place with the music club-\"",
+			"key": "rcIntro28",
 			"side": "left"
 		},
 		{
@@ -204,6 +232,7 @@
 			"name": "bf",
 			"expression": "beep",
 			"string": "\"Boop dee!\"",
+			"key": "rcIntro29",
 			"side": "right"
 		},
 		{
@@ -211,6 +240,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"...you really want to sing with us?\"",
+			"key": "rcIntro30",
 			"side": "left"
 		},
 		{
@@ -218,6 +248,7 @@
 			"name": "yuri",
 			"expression": "blush",
 			"string": "\"I’m... not sure how comfortable I’d feel doing that-\"",
+			"key": "rcIntro31",
 			"side": "left"
 		},
 		{
@@ -225,6 +256,7 @@
 			"name": "bf",
 			"expression": "beep",
 			"string": "\"Skee dep doop!\"",
+			"key": "rcIntro32",
 			"side": "right"
 		},
 		{
@@ -232,6 +264,7 @@
 			"name": "yuri",
 			"expression": "blush",
 			"string": "\"Wh-what do you mean I have to?!\"",
+			"key": "rcIntro33",
 			"side": "left"
 		},
 		{
@@ -243,6 +276,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"You know, we’ve been working so hard on writing and poems lately. I think having a fun singing session with everyone is the perfect break we all need!\"",
+			"key": "rcIntro34",
 			"side": "left"
 		},
 		{
@@ -257,6 +291,7 @@
 			"name": "sayori",
 			"expression": "neutral",
 			"string": "\"When you think about it, songs are just poems with music behind them, aren’t they?\"",
+			"key": "rcIntro35",
 			"side": "left"
 		},
 		{
@@ -264,6 +299,7 @@
 			"name": "sayori",
 			"expression": "yeah",
 			"string": "\"I bet we’d all be great at this!\"",
+			"key": "rcIntro36",
 			"side": "left"
 		},
 		{
@@ -285,6 +321,7 @@
 			"name": "sayori",
 			"expression": "yeah",
 			"string": "\"Here, I’ll go first!\"",
+			"key": "rcIntro37",
 			"side": "left"
 		}
 	]

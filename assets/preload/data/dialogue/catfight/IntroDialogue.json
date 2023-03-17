@@ -8,6 +8,7 @@
 			"name": "no_one",
 			"expression": "gone",
 			"string": "On one seemingly normal day in the Literature Club… Natsuki demonstrates her fast singing skills to fellow club member Yuri.",
+			"key": "catIntro1",
 			"side": "left"
 		},
 		{
@@ -15,6 +16,7 @@
 			"name": "natsuki",
 			"expression": "wah",
 			"string": "\"Hah, this 'rapping' stuff that Boyfriend loves so much ain't hard at all! All that time singing in the mirror really did pay off.\"",
+			"key": "catIntro2",
 			"side": "right"
 		},
 		{
@@ -22,6 +24,7 @@
 			"name": "yuri",
 			"expression": "neutral",
 			"string": "\"So fast, yet still so clear and rhythmic. I haven't seen anyone here be able to pull that off the way you do. I… I'd definitely get too overwhelmed and botch my words.\"",
+			"key": "catIntro3",
 			"side": "left"
 		},
 		{
@@ -29,6 +32,7 @@
 			"name": "natsuki",
 			"expression": "neutral",
 			"string": "\"Hey, you're the one with the actually good singing voice, though. Faster doesn't always mean better sounding, y'know.\"",
+			"key": "catIntro4",
 			"side": "right"
 		},
 		{
@@ -36,6 +40,7 @@
 			"name": "yuri",
 			"expression": "blush",
 			"string": "\"-but the conviction required to pull off such intense lyrical feats! I'm not nearly at that level yet! I'm confined to the slower, more standard melodies.\"",
+			"key": "catIntro5",
 			"side": "left"
 		},
 		{
@@ -43,6 +48,7 @@
 			"name": "natsuki",
 			"expression": "hmmph",
 			"string": "\"And what's wrong with that? You make them sound perfect! I'll sound bad if I even try to sing in your deeper tones!\"",
+			"key": "catIntro6",
 			"side": "right"
 		},
 		{
@@ -50,6 +56,7 @@
 			"name": "yuri",
 			"expression": "ahh",
 			"string": "\"Th-that's not true! You'd be able to get it down so easy! You at least have the confidence to try!\"",
+			"key": "catIntro7",
 			"side": "left"
 		},
 		{
@@ -57,6 +64,7 @@
 			"name": "natsuki",
 			"expression": "sick",
 			"string": "\"Geez, Yuri, just take the compliment already!\"",
+			"key": "catIntro8",
 			"side": "right"
 		},
 		{
@@ -64,6 +72,7 @@
 			"name": "yuri",
 			"expression": "ehh",
 			"string": "\"Putting yourself down is not a compliment-!\"",
+			"key": "catIntro9",
 			"side": "left"
 		},
 		{
@@ -71,6 +80,7 @@
 			"name": "natsuki",
 			"expression": "angy",
 			"string": "\"You're literally doing the same thing!!! Rrragh-! Fine! I'll prove you wrong right now!\"",
+			"key": "catIntro10",
 			"side": "right"
 		}
 	]
