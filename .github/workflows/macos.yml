@@ -1,4 +1,4 @@
-name: Mac Build
+name: macOS Build
 on: workflow_dispatch
 jobs:
   Build:
@@ -15,13 +15,13 @@ jobs:
       - name: Restore Previous Cache
         uses: actions/cache@v3
         with:
-          key: cache-build-mac
+          key: cache-build-macos
           path: |
             .haxelib/
-            export/release/mac/haxe/
-            export/release/mac/obj/
+            export/release/macos/haxe/
+            export/release/macos/obj/
           restore-keys: |
-            cache-build-mac
+            cache-build-macos
 
       - name: Install Libraries
         run: |
@@ -31,13 +31,13 @@ jobs:
             haxelib run hmm install
 
       - name: Compile DDTO
-        run: haxelib run lime build mac -final
+        run: haxelib run lime build macos -final
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
-          name: DDTO-Mac
-          path: 'export/release/mac/bin'
+          name: DDTO-macOS
+          path: 'export/release/macos/bin'
 
       - name: Clear Previous Cache
         uses: actions/github-script@v6
@@ -48,7 +48,7 @@ jobs:
               repo: context.repo.repo,
             })
             for (const cache of caches.data.actions_caches) {
-              if (cache.key == "cache-build-mac") {
+              if (cache.key == "cache-build-macos") {
                 console.log('Clearing ' + cache.key + '...')
                 await github.rest.actions.deleteActionsCacheById({
                   owner: context.repo.owner,
@@ -62,10 +62,10 @@ jobs:
       - name: Upload New Cache
         uses: actions/cache@v3
         with:
-          key: cache-build-mac
+          key: cache-build-macos
           path: |
             .haxelib/
-            export/release/mac/haxe/
-            export/release/mac/obj/
+            export/release/macos/haxe/
+            export/release/macos/obj/
           restore-keys: |
-            cache-build-mac
+            cache-build-macos
