@@ -128,7 +128,7 @@ class TitleState extends MusicBeatState
 
 		// Put whatever hueh you want in the array
 		var huehArray:Array<String> = ['TBDHueh', 'NatHueh', 'SayoHueh', 'YuriHueh', 'MoniHueh', 'ProtagHueh'];
-		var hueh:String = huehArray[Random.randUInt(0, huehArray.length - 1)];
+		var hueh:String = huehArray[Random.randUInt(0, huehArray.length)];
 
 		// hueh = 'TBDHueh'; // Forced hueh string
 		moniSpr = new FlxSprite(0, FlxG.height * .7).loadGraphic(Paths.image('hueh/' + hueh));
@@ -166,7 +166,7 @@ class TitleState extends MusicBeatState
 			dokiArray.push(['ProtagPopup', 770, 170]);
 
 		// The selected doki
-		var selected:Int = Random.randUInt(0, dokiArray.length - 1);
+		var selected:Int = Random.randUInt(0, dokiArray.length);
 		// selected = 0 // Forced doki for testing
 
 		var dokiIndex:String = dokiArray[selected][0];

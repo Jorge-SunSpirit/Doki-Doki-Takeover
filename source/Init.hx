@@ -38,6 +38,9 @@ class Init extends MusicBeatState
 		CoolUtil.precacheMusic('freakyMenu');
 		CoolUtil.precacheMusic('disco');
 
+		// Start random seed based off current time.
+		Random.resetSeed();
+
 		#if FEATURE_DISCORD
 		DiscordClient.initialize();
 

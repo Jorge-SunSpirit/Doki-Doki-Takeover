@@ -471,7 +471,7 @@ class MainMenuState extends MusicBeatState
 	{
 		var index:Int = 0;
 		if (array.length >= 2)
-			index = Random.randUInt(0, array.length - 1);
+			index = Random.randUInt(0, array.length);
 
 		var char:String = '';
 		switch (array[index])

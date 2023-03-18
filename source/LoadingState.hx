@@ -98,7 +98,7 @@ class LoadingState extends MusicBeatState
 				authorData.push(data[1].replace("\\n", "\n"));
 			}
 
-			var randomArtwork:Int = Random.randUInt(0, galleryData.length - 1);
+			var randomArtwork:Int = Random.randUInt(0, galleryData.length);
 
 			artwork = new FlxSprite(0, 0).loadGraphic(Paths.image('gallery/${artworkData[randomArtwork]}'));
 			artwork.antialiasing = SaveData.globalAntialiasing;

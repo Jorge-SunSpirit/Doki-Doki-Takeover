@@ -8394,7 +8394,7 @@ class PlayState extends MusicBeatState
 				if (stickerData.length <= 0)
 					trace('We somehow ran out of stickers!');
 
-				var rand:Int = Random.randUInt(0, stickerData.length - 1);
+				var rand:Int = Random.randUInt(0, stickerData.length);
 				var stike:String = stickerData[rand];
 
 				if (stickerData[rand] == null && rand >= stickerData.length)
@@ -8429,7 +8429,7 @@ class PlayState extends MusicBeatState
 				nicoText.push("it's not even friday...");
 			// else https://youtu.be/SaNmV7Sx5_M
 			Random.advance();
-			var randomText:String = nicoText[Random.randUInt(0, nicoText.length - 1)];
+			var randomText:String = nicoText[Random.randUInt(0, nicoText.length)];
 			trace(randomText);
 			var funnyText:FlxText = new FlxText(0, 0, 0, randomText, 50);
 			funnyText.scrollFactor.set();
