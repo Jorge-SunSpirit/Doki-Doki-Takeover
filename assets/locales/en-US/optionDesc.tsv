@@ -38,7 +38,6 @@ descRatingToggle	Choose whether or not ratings are shown during gameplay.
 descAntialiasing	Make visuals smoother at the cost of performance.
 descMiddleOpponent	Show opponent notes
 descGPUTextures	Load textures through your GPU instead, reducing memory usage.
-descCacheCharacter	Reduce load times by caching every character on boot. (HEAVY MEMORY USAGE)
 descCacheSong	Reduce load times by caching every song on boot. (HEAVY MEMORY USAGE)
 descCache	Reduce further load times in this session by caching what was enabled above.
 descPreload	Preload assets when going into a song to reduce stutters and freezes at the cost of load times.

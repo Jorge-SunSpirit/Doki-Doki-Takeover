@@ -67,7 +67,6 @@ class OptionsState extends MusicBeatState
 			new LowEnd(LangUtil.getString('descLowEnd', 'option')),
 			new GPUTextures(LangUtil.getString('descGPUTextures', 'option')),
 			#if FEATURE_CACHING
-			new CharaCacheOption(LangUtil.getString('descCacheCharacter', 'option')),
 			new SongCacheOption(LangUtil.getString('descCacheSong', 'option')),
 			new CacheState(LangUtil.getString('descCache', 'option')),
 			#end

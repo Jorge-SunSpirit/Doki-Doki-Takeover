@@ -4,7 +4,8 @@
 
 You will need to install [Haxe](https://haxe.org/download/) (4.2.4+), [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/) (5.0.0+), and [Git](https://git-scm.com/downloads).
 
-You also need to install additional libraries. Currently, these are the things that are required:
+You also need to install additional libraries. These can be installed either via Haxe Module Manager, or manually.
+The following is for if you want to install them manually:
 
 ```text
 haxelib install firetongue

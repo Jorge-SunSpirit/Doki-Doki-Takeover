@@ -111,13 +111,9 @@ class FPS extends TextField
 				memPeak = mem;
 			
 			#if (openfl && !hl)
-			// MEM caps at 4GB and gets screwed up with caching enabled
-			if (!SaveData.cacheCharacter && !SaveData.cacheSong)
-			{
-				// need to make memPeak decrease over time
-				// text += '\nMEM: ${getInterval(mem)} / ${getInterval(memPeak)}';
-				text += '\nMEM: ${getInterval(mem)}';
-			}
+			// need to make memPeak decrease over time
+			// text += '\nMEM: ${getInterval(mem)} / ${getInterval(memPeak)}';
+			text += '\nMEM: ${getInterval(mem)}';
 			#end
 
 			textColor = 0xFF1DADBB;

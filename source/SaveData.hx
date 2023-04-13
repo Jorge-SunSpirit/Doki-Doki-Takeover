@@ -41,7 +41,6 @@ class SaveData
 	public static var zoom:Null<Float> = 1;
 	public static var middleOpponent:Null<Bool> = false;
 	public static var gpuTextures:Null<Bool> = true;
-	public static var cacheCharacter:Null<Bool> = false;
 	public static var cacheSong:Null<Bool> = false;
 	public static var middleScroll:Null<Bool> = false;
 	public static var laneUnderlay:Null<Bool> = false;

@@ -18,12 +18,20 @@ class Paths
 	inline public static var SOUND_EXT = "ogg";
 
 	public static var dumpExclusions:Array<String> = [
+		// images
 		'assets/images/Credits_LeftSide.png',
 		'assets/images/cursor.png',
 		'assets/images/DDLCStart_Screen_Assets.png',
 		'assets/images/scrollingBG.png',
+		// music
 		'assets/music/freakyMenu.$SOUND_EXT',
-		'assets/music/disco.$SOUND_EXT'
+		'assets/music/disco.$SOUND_EXT',
+		'assets/music/monic.$SOUND_EXT',
+		'assets/music/natsc.$SOUND_EXT',
+		'assets/music/pixelc.$SOUND_EXT',
+		'assets/music/protagc.$SOUND_EXT',
+		'assets/music/sayoc.$SOUND_EXT',
+		'assets/music/yuric.$SOUND_EXT'
 	];
 
 	/// haya I love you for the base cache dump I took to the max

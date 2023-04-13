@@ -135,7 +135,7 @@ class CostumeSelectState extends MusicBeatState
 			Highscore.getMirrorScore('Catfight', 2) > 0, // Derby, pick Yuri on Catfight (Hard)
 			SaveData.yamYuri, // Picnic, choose Yuri on You and Me
 			Highscore.getAccuracyUnlock('Crucify (Yuri Mix)', 2) >= 90, // Festival, unlocks if Crucify (Hard) is 90%+ accuracy
-			CoolUtil.flixelSaveCheck('Homskiy', 'Tabi', 'homskiy', 'tabi') || Highscore.getMirrorScore('Obsession', 2) > 0, // Friends, save check for Tabi
+			(CoolUtil.flixelSaveCheck('Homskiy', 'Tabi', 'homskiy', 'tabi') || CoolUtil.flixelSaveCheck('Tabi Team', 'Tabi')) || Highscore.getMirrorScore('Obsession', 2) > 0, // Friends, save check for Tabi
 			Highscore.getMirrorScore('Shrinking Violet', 2) > 0 // Blue Skies, play Deep Breaths (Hard) on Mirror Mode
 		],
 		// Protag

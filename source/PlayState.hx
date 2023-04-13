@@ -307,8 +307,10 @@ class PlayState extends MusicBeatState
 	var fishy:FishEyeShader = new FishEyeShader();
 	var warpy:WarpShader = new WarpShader();
 	var inverty:InvertShader = new InvertShader();
+	#if !linux
 	var glitchlol:GlitchShader = new GlitchShader();
 	var glitchlol2:GlitchShader = new GlitchShader();
+	#end
 
 	var barads:BGSprite;
 	var danaBop:BGSprite;
@@ -2406,9 +2408,9 @@ class PlayState extends MusicBeatState
 		{
 			var lyricFile = CoolUtil.coolTextFile(Paths.txt('data/songs/${SONG.song.toLowerCase()}/lyrics'));
 
-			for (i in 0...lyricFile.length)
+			for (lyric in lyricFile)
 			{
-				var data:Array<String> = lyricFile[i].split('::');
+				var data:Array<String> = lyric.split('::');
 				lyricData.push([Std.parseInt(data[0]), data[1]]);
 			}
 
@@ -2651,20 +2653,6 @@ class PlayState extends MusicBeatState
 
 	override function destroy()
 	{
-		// Clean up VideoSprite
-		for (video in members)
-		{
-			var video:Dynamic = video;
-			var video:VideoSprite = video;
-
-			if (video != null && video is VideoSprite)
-			{
-				video.bitmap.dispose();
-				video.destroy();
-				video = null;
-			}
-		}
-
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 		FlxG.mouse.visible = true;
@@ -4518,6 +4506,8 @@ class PlayState extends MusicBeatState
 
 				if (dad.animation.curAnim.name.startsWith('lastNOTE'))
 					dad.animation.curAnim.frameRate = 24 * timescale;
+			case 'love n funkin':
+				poemVideo.anim.framerate = 24 * timescale;
 		}
 
 		for (video in members)
@@ -4557,11 +4547,13 @@ class PlayState extends MusicBeatState
 			if (staticlol2 != null)
 				staticlol2.iTime.value = [iTime];
 
+			#if !linux
 			if (glitchlol != null)
 				glitchlol.time.value = [iTime];
 
 			if (glitchlol2 != null)
 				glitchlol2.time.value = [iTime];
+			#end
 		}
 
 		songOffset = SONG.offset + SaveData.offset + perSongOffset;
@@ -5178,35 +5170,35 @@ class PlayState extends MusicBeatState
 						goodNoteHit(daNote);
 				}
 
-				var center:Float = strumY + Note.swagWidth / 2;
 				if (strumGroup.members[daNote.noteData].sustainReduce
 					&& daNote.isSustainNote
 					&& (daNote.mustPress || !daNote.ignoreNote)
 					&& (!daNote.mustPress || (daNote.wasGoodHit || (daNote.prevNote.wasGoodHit && !daNote.canBeHit))))
 				{
+					var center:Float = strumY + Note.swagWidth / 2;
 					var scaleY:Float = daNote.scale.y * Conductor.playbackSpeed;
+					var swagRect:FlxRect = new FlxRect();
+
 					if (strumScroll)
 					{
 						if (daNote.y - daNote.offset.y * scaleY + daNote.height >= center)
 						{
-							var swagRect = new FlxRect(0, 0, daNote.frameWidth, daNote.frameHeight);
+							swagRect = new FlxRect(0, 0, daNote.frameWidth, daNote.frameHeight);
 							swagRect.height = (center - daNote.y) / daNote.scale.y;
 							swagRect.y = daNote.frameHeight - swagRect.height;
-
-							daNote.clipRect = swagRect;
 						}
 					}
 					else
 					{
 						if (daNote.y + daNote.offset.y * scaleY <= center)
 						{
-							var swagRect = new FlxRect(0, 0, daNote.width / daNote.scale.x, daNote.height / daNote.scale.y);
+							swagRect = new FlxRect(0, 0, daNote.width / daNote.scale.x, daNote.height / daNote.scale.y);
 							swagRect.y = (center - daNote.y) / daNote.scale.y;
 							swagRect.height -= swagRect.y;
-
-							daNote.clipRect = swagRect;
 						}
 					}
+
+					daNote.clipRect = swagRect;
 				}
 
 				// Kill extremely late notes and cause misses
@@ -6403,7 +6395,7 @@ class PlayState extends MusicBeatState
 						case 128:
 							metadataDisplay.tweenIn();
 							positionDisplay.tweenIn();
-						case 224:
+						case 192: // old: 224
 							metadataDisplay.tweenOut();
 					}
 				case 'beathoven (natsuki mix)':
@@ -6412,7 +6404,7 @@ class PlayState extends MusicBeatState
 						case 192:
 							metadataDisplay.tweenIn();
 							positionDisplay.tweenIn();
-						case 304:
+						case 252: // old: 304
 							metadataDisplay.tweenOut();
 					}
 				case "it's complicated (sayori mix)":
@@ -6421,7 +6413,7 @@ class PlayState extends MusicBeatState
 						case 260:
 							metadataDisplay.tweenIn();
 							positionDisplay.tweenIn();
-						case 384:
+						case 320: // old: 384
 							metadataDisplay.tweenOut();
 					}
 				case 'glitcher (monika mix)':
@@ -6430,7 +6422,7 @@ class PlayState extends MusicBeatState
 						case 64:
 							metadataDisplay.tweenIn();
 							positionDisplay.tweenIn();
-						case 192:
+						case 128: // old: 192
 							metadataDisplay.tweenOut();
 						case 566 | 816 | 1072 | 1328: // Start glitch
 							glitchy.upFloat = 0.0;
@@ -7707,7 +7699,8 @@ class PlayState extends MusicBeatState
 	}
 
 	function libShader(show:Bool = true, old:Bool = false)
-	{		
+	{
+		#if !linux
 		if (SaveData.shaders && !SaveData.lowEnd)
 		{
 			var shader = old ? staticlol : glitchlol;
@@ -7724,6 +7717,7 @@ class PlayState extends MusicBeatState
 				camGame2.setFilters(null);
 			}
 		}
+		#end
 	}
 
 	var epipEnding:Bool = false;

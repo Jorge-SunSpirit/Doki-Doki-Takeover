@@ -11,10 +11,10 @@ typedef GlitchJSON =
 
 class GlitchShader extends FlxShader // https://www.shadertoy.com/view/XtyXzW
 {
-	// Steam Deck crashes due to GL_NV_non_square_matrices
+	// Linux crashes due to GL_NV_non_square_matrices
 	// and I haven't found a way to set version to 130
-	// (even when importing Eric's PR (openfl #2577) to this repo it doesn't work)
-	// So for now, deck users will have to disable shaders specifically for Libitina
+	// (importing Eric's PR (openfl/openfl#2577) to this repo caused more errors)
+	// So for now, Linux users will have to disable shaders specifically for Libitina.
 
 	@:glFragmentSource('
 	#extension GL_EXT_gpu_shader4 : enable

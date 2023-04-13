@@ -53,7 +53,7 @@ class FirstBootState extends MusicBeatState
 		localeList = CoolUtil.coolTextFile(Paths.txt('locales/sort', 'preload'));
 
 		for (i in 0...localeList.length)
-			textMenuItems.push(Main.tongue.getIndexString(Language, localeList[i]));
+			textMenuItems.push(Main.tongue.getIndexString(LanguageBilingual, localeList[i]));
 
 		grpOptionsTexts = new FlxTypedGroup<FlxText>();
 		add(grpOptionsTexts);
@@ -61,8 +61,7 @@ class FirstBootState extends MusicBeatState
 		for (i in 0...textMenuItems.length)
 		{
 			var optionText:FlxText = new FlxText(0, 50 + (i * 50), 0, textMenuItems[i]);
-			optionText.setFormat(LangUtil.getFont('riffic'), 32, FlxColor.WHITE, CENTER);
-			optionText.y += LangUtil.getFontOffset('riffic');
+			optionText.setFormat(LangUtil.getFont('lang'), 32, FlxColor.WHITE, CENTER);
 			optionText.screenCenter(X);
 			optionText.antialiasing = SaveData.globalAntialiasing;
 			optionText.ID = i;

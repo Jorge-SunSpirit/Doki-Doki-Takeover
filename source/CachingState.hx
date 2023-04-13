@@ -29,7 +29,6 @@ class CachingState extends MusicBeatState
 	var ddtoLogo:FlxSprite;
 	var loadBar:FlxBar;
 
-	var characters = [];
 	var songs = [];
 
 	override function create()
@@ -68,30 +67,6 @@ class CachingState extends MusicBeatState
 		add(loadBar);
 
 		#if (FEATURE_FILESYSTEM && FEATURE_CACHING)
-		if (SaveData.cacheCharacter)
-		{
-			for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/images/characters")))
-			{
-				if (!i.endsWith(".png"))
-					continue;
-				characters.push(i);
-			}
-	
-			for (i in FileSystem.readDirectory(FileSystem.absolutePath('assets/images/characters')))
-			{
-				if (FileSystem.isDirectory(FileSystem.absolutePath('assets/images/characters/$i')))
-				{
-					for (f in FileSystem.readDirectory(FileSystem.absolutePath('assets/images/characters/$i')))
-					{
-						if (!f.endsWith(".png"))
-							continue;
-	
-						characters.push('$i/$f');
-					}
-				}
-			}
-		}
-
 		if (SaveData.cacheSong)
 		{
 			for (i in FileSystem.readDirectory(FileSystem.absolutePath('assets/songs')))
@@ -110,7 +85,7 @@ class CachingState extends MusicBeatState
 		}
 		#end
 
-		toBeDone = Lambda.count(characters) + Lambda.count(songs);
+		toBeDone = Lambda.count(songs);
 
 		add(ddtoLogo);
 		add(text);
@@ -151,7 +126,6 @@ class CachingState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.D && canSpam)
 		{
-			SaveData.cacheCharacter = false;
 			SaveData.cacheSong = false;
 			SaveData.save();
 
@@ -164,33 +138,6 @@ class CachingState extends MusicBeatState
 
 	function cache()
 	{
-		for (i in characters)
-		{
-			var path = Paths.getPath('images/characters/$i', IMAGE);
-
-			if (Paths.dumpExclusions.contains(path))
-			{
-				done++;
-				continue;
-			}
-
-			if (OpenFlAssets.exists(path, IMAGE))
-			{
-				if (!Paths.currentTrackedAssets.exists(path))
-				{
-					Debug.logTrace('[CHARACTER] Caching ${i.substring(0, i.length - 4)}');
-
-					var newGraphic:FlxGraphic = FlxG.bitmap.add(path, false, path);
-					newGraphic.persist = true;
-					Paths.dumpExclusions.push(path);
-					Paths.localTrackedAssets.push(path);
-					Paths.currentTrackedAssets.set(path, newGraphic);
-				}
-			}
-
-			done++;
-		}
-
 		for (i in songs)
 		{
 			Debug.logTrace('[SONG] Caching ${i.substring(0, i.length - 4)}');

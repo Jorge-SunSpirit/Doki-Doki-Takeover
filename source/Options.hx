@@ -1050,27 +1050,6 @@ class GPUTextures extends Option
 	}
 }
 
-class CharaCacheOption extends Option
-{
-	public function new(desc:String)
-	{
-		super();
-		description = desc;
-	}
-
-	public override function press():Bool
-	{
-		SaveData.cacheCharacter = !SaveData.cacheCharacter;
-		display = updateDisplay();
-		return true;
-	}
-
-	private override function updateDisplay():String
-	{
-		return LangUtil.getString('nameCacheCharacter', 'option') + ' ' + (SaveData.cacheCharacter ? LangUtil.getString('cmnOn') : LangUtil.getString('cmnOff'));
-	}
-}
-
 class SongCacheOption extends Option
 {
 	public function new(desc:String)

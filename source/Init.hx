@@ -12,6 +12,17 @@ import GameJolt.GameJoltAPI;
 
 class Init extends MusicBeatState
 {
+	var preloadMusic:Array<String> = [
+		'freakyMenu',
+		'disco',
+		'monic',
+		'natsc',
+		'pixelc',
+		'protagc',
+		'sayoc',
+		'yuric'
+	];
+
 	override function create()
 	{
 		SaveData.init();
@@ -35,8 +46,8 @@ class Init extends MusicBeatState
 
 		FlxTransitionableState.skipNextTransOut = true;
 
-		CoolUtil.precacheMusic('freakyMenu');
-		CoolUtil.precacheMusic('disco');
+		for (music in preloadMusic)
+			CoolUtil.precacheMusic(music);
 
 		// Start random seed based off current time.
 		Random.resetSeed();
@@ -66,7 +77,7 @@ class Init extends MusicBeatState
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 
-			if (SaveData.cacheCharacter || SaveData.cacheSong)
+			if (SaveData.cacheSong)
 				MusicBeatState.switchState(new CachingState());
 			else
 				MusicBeatState.switchState(new TitleState());

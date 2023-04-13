@@ -153,9 +153,9 @@ class MainMenuState extends MusicBeatState
 			ten.push('sayomongus');
 
 		var random:Float = Random.randNF();
-		if (random < 0.80) // 80% chance
+		if (random < 0.60) // 60% chance
 			show = selectMenuCharacter(twenty);
-		else if (random >= 0.80 && random < 0.98) // 18% chance
+		else if (random >= 0.60 && random < 0.98) // 38% chance
 			show = selectMenuCharacter(ten);
 		else // 2% chance 
 			show = selectMenuCharacter(two);

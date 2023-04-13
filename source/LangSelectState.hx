@@ -56,17 +56,15 @@ class LangSelectState extends MusicBeatState
 		localeList = CoolUtil.coolTextFile(Paths.txt('locales/sort', 'preload'));
 
 		for (i in 0...localeList.length)
-			textMenuItems.push(localeList[i]); // Display tags for now since stuff isn't translated.
-			//textMenuItems.push(Main.tongue.getIndexString(Language, localeList[i]));
+			textMenuItems.push(Main.tongue.getIndexString(LanguageBilingual, localeList[i]));
 
 		grpOptionsTexts = new FlxTypedGroup<FlxText>();
 		add(grpOptionsTexts);
 
 		for (i in 0...textMenuItems.length)
 		{
-			var optionText:FlxText = new FlxText(252, 96 + (i * 43), 500, textMenuItems[i]);
-			optionText.setFormat(LangUtil.getFont('riffic'), 27, FlxColor.WHITE, LEFT);
-			optionText.y += LangUtil.getFontOffset('riffic');
+			var optionText:FlxText = new FlxText(252, 96 + (i * 43), 0, textMenuItems[i]);
+			optionText.setFormat(LangUtil.getFont('lang'), 27, FlxColor.WHITE, LEFT);
 			optionText.borderStyle = OUTLINE;
 			optionText.borderColor = 0xFFEB489C;
 			optionText.antialiasing = SaveData.globalAntialiasing;

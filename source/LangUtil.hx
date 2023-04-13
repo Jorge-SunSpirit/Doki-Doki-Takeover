@@ -87,6 +87,8 @@ class LangUtil
 					default:
 						font = 'LanaPixel';
 				}
+			case 'lang': // https://github.com/satbyy/go-noto-universal
+				font = 'Go Noto Current Regular';
 		}
 
 		return font;
