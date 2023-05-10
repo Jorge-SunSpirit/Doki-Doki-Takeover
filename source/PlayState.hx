@@ -353,7 +353,6 @@ class PlayState extends MusicBeatState
 	var dokiBackdrop:FlxBackdrop;
 	var windowlight:BGSprite;
 	var lightontopofall:BGSprite;
-	var ynmText:Array<String> = CoolUtil.coolTextFile(Paths.txt("data/ynmIntro"));
 	var funnytext:FlxTypeText;
 	var happyEnding:Bool = false;
 
@@ -7128,16 +7127,16 @@ class PlayState extends MusicBeatState
 						case 16:
 							FlxTween.tween(whiteflash, {alpha: 0.001}, 3, {ease: FlxEase.sineOut});
 						case 19:
-							funnytext.resetText(ynmText[0]);
+							funnytext.resetText(LangUtil.getString('yam1', 'yam'));
 							funnytext.start(0.04);
 						case 84:
-							funnytext.resetText(ynmText[1]);
+							funnytext.resetText(LangUtil.getString('yam2', 'yam'));
 							funnytext.start(0.04);
 						case 141:
-							funnytext.resetText(ynmText[2]);
+							funnytext.resetText(LangUtil.getString('yam3', 'yam'));
 							funnytext.start(0.04);
 						case 208:
-							funnytext.resetText(ynmText[3]);
+							funnytext.resetText(LangUtil.getString('yam4', 'yam'));
 							funnytext.start(0.04);
 						case 252:
 							FlxTween.tween(funnytext, {alpha: 0}, 0.5, {ease: FlxEase.sineIn});

@@ -51,6 +51,9 @@
 	<file id="dialogue" value="dialogue/wilted.tsv"/>
 	<file id="dialogue" value="dialogue/epiphany.tsv"/>
 
+	<!-- Used for You and Me -->
+	<file id="yam" value="yamIntro.tsv"/>
+
 	<!-- Add locale entries here.
 		https://www.techonthenet.com/js/language_tags.php
 	-->
