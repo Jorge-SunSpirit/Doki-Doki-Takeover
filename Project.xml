@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.teamtbd.dokitakeover" main="Main" version="3.1.0" company="TeamTBD" />
+	<app title="Friday Night Funkin': Doki Doki Takeover!" file="DokiTakeover" package="com.teamtbd.dokitakeover" main="Main" version="3.1.1" company="TeamTBD" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -31,8 +31,6 @@
 	<define name="FEATURE_FILESYSTEM" if="desktop" />
 	<!-- Defines whether MP4 videos should be enabled. -->
 	<define name="FEATURE_MP4" if="desktop || android" unless="hl" />
-	<!-- Defines whether videos via OpenFL should be enabled. Only works on HTML5. -->
-	<define name="FEATURE_VIDEO" if="html5" />
 	<!-- Defines whether Caching is enabled. Will cause issues on systems with limited memory. Doesn't work with Linux. -->
 	<define name="FEATURE_CACHING" if="desktop" unless="linux || 32bit" />
 	<!-- Defines whether OBS or other Windows recording software can be detected. Unverified with Mac. -->

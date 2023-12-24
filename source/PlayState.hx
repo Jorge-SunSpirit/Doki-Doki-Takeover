@@ -39,11 +39,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-#if (flixel >= "5.3.0")
 import flixel.sound.FlxSound;
-#else
-import flixel.system.FlxSound;
-#end
 import flixel.text.FlxText;
 import flixel.addons.text.FlxTypeText;
 import flixel.tweens.FlxEase;
@@ -75,26 +71,7 @@ import sys.FileSystem;
 import GameJolt.GameJoltAPI;
 #end
 #if FEATURE_MP4
-#if (hxCodec >= "3.0.0")
-import hxcodec.flixel.FlxVideo as VideoHandler;
-#elseif (hxCodec >= "2.6.1")
-import hxcodec.VideoHandler as VideoHandler;
-#elseif (hxCodec == "2.6.0")
-import VideoHandler;
-#else
-import vlc.MP4Handler as VideoHandler;
-#end
-
-#if (hxCodec >= "3.0.0")
 import hxcodec.flixel.FlxVideoSprite as VideoSprite;
-#elseif (hxCodec >= "2.6.1")
-import hxcodec.VideoSprite as VideoSprite;
-#elseif (hxCodec == "2.6.0")
-import VideoSprite;
-#else
-import vlc.VideoSprite as VideoSprite;
-#end
-
 #end
 
 using StringTools;
@@ -1538,7 +1515,6 @@ class PlayState extends MusicBeatState
 
 						rainBG = new VideoSprite();
 						rainBG.play(Paths.video('rain'), true);
-						//rainBG.bitmap.canSkip = false;
 						rainBG.scrollFactor.set();
 						rainBG.setGraphicSize(Std.int(rainBG.width / defaultCamZoom));
 						rainBG.updateHitbox();
@@ -1581,7 +1557,6 @@ class PlayState extends MusicBeatState
 					{
 						testVM = new VideoSprite();
 						testVM.play(Paths.video('testvm'), true);
-						//testVM.bitmap.canSkip = false;
 						testVM.scrollFactor.set();
 						testVM.setGraphicSize(Std.int(testVM.width / defaultCamZoom));
 						testVM.updateHitbox();
@@ -1678,7 +1653,6 @@ class PlayState extends MusicBeatState
 					{
 						crackBG = new VideoSprite(-10, -10);
 						crackBG.play(Paths.video('crackBG'), true);
-						//crackBG.bitmap.canSkip = false;
 						crackBG.scrollFactor.set(0.3, 0.3);
 						crackBG.setGraphicSize(Std.int(crackBG.width / defaultCamZoom));
 						crackBG.updateHitbox();
@@ -2739,15 +2713,15 @@ class PlayState extends MusicBeatState
 				scorePop = false;
 				if (isStoryMode && showCutscene)
 				{
-					#if (FEATURE_MP4 || FEATURE_VIDEO)
-					var video:NetStreamHandler = new NetStreamHandler();
+					#if FEATURE_MP4
+					var video:VideoHandler = new VideoHandler();
 					video.canSkip = SaveData.beatLibitina;
 					video.skipKeys = [FlxKey.ESCAPE, FlxKey.ENTER];
-					video.playVideo(Paths.video('metaintro'), false, true);
-					video.finishCallback = function()
+					video.play(Paths.video('metaintro'));
+					video.onEndReached.add(function()
 					{
 						startCountdown();
-					}
+					});
 					#else
 					startCountdown();
 					#end
@@ -3061,15 +3035,15 @@ class PlayState extends MusicBeatState
 						add(blackScreentwo);
 					});
 
-					#if (FEATURE_MP4 || FEATURE_VIDEO)
-					var video:NetStreamHandler = new NetStreamHandler();
+					#if FEATURE_MP4
+					var video:VideoHandler = new VideoHandler();
 					video.canSkip = SaveData.beatPrologue;
 					video.skipKeys = [FlxKey.ESCAPE, FlxKey.ENTER];
-					video.playVideo(Paths.video('monika'), false, true);
-					video.finishCallback = function()
+					video.play(Paths.video('monika'));
+					video.onEndReached.add(function()
 					{
 						endSong();
-					}
+					});
 					#else
 					endSong();
 					#end
@@ -3112,26 +3086,23 @@ class PlayState extends MusicBeatState
 			}
 			case 'monikatransform':
 			{
-				#if (FEATURE_MP4 || FEATURE_VIDEO)
-				var video:NetStreamHandler = new NetStreamHandler();
-				video.canSkip = false;
-				video.playVideo(Paths.video('monikacodin'));
+				#if FEATURE_MP4
+				var video:VideoHandler = new VideoHandler();
+				video.play(Paths.video('monikacodin'));
 				#end
 			}
 			case 'senpaitransform':
 			{
-				#if (FEATURE_MP4 || FEATURE_VIDEO)
-				var video:NetStreamHandler = new NetStreamHandler();
-				video.canSkip = false;
-				video.playVideo(Paths.video('senpaicodin'));
+				#if FEATURE_MP4
+				var video:VideoHandler = new VideoHandler();
+				video.play(Paths.video('senpaicodin'));
 				#end
 			}
 			case 'youregoingtophilly':
 			{
-				#if (FEATURE_MP4 || FEATURE_VIDEO)
-				var video:NetStreamHandler = new NetStreamHandler();
-				video.canSkip = false;
-				video.playVideo(Paths.video('youregoingtophilly'));
+				#if FEATURE_MP4
+				var video:VideoHandler = new VideoHandler();
+				video.play(Paths.video('youregoingtophilly'));
 				#end
 			}
 			case 'wiltedbgin':

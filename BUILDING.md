@@ -2,14 +2,13 @@
 
 ## Installing the required programs
 
-You will need to install [Haxe](https://haxe.org/download/) (4.2.4+), [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/) (5.0.0+), and [Git](https://git-scm.com/downloads).
+You will need to install [Haxe](https://haxe.org/download/) and [Git](https://git-scm.com/downloads).
 
-You also need to install additional libraries. These can be installed either via Haxe Module Manager, or manually.
-The following is for if you want to install them manually:
+You also need to install additional libraries:
 
 ```text
-haxelib install firetongue
-haxelib install flxanimate
+haxelib install hmm
+haxelib run hmm install
 haxelib git hxCodec https://github.com/polybiusproxy/hxCodec.git
 haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc.git
 ```
@@ -18,8 +17,7 @@ If you're on Linux, you'll need to install libvlc. If you are on Arch, the AUR p
 The following is for distributions based off Ubuntu:
 
 ```text
-sudo apt-get install libvlc-dev
-sudo apt-get install libvlccore-dev
+sudo apt-get install libvlc-dev libvlccore-dev libvlc-bin
 ```
 
 You should have everything ready for compiling the game; follow the guide below to continue!

@@ -1,6 +1,6 @@
 ![Doki Doki Takeover Plus! logo](art/DokiTakeoverPlusLogo.png)
 
-## **[GameBanana](https://gamebanana.com/mods/47364)**
+## **[GameBanana](https://gamebanana.com/mods/47364) - [GameJolt](https://gamejolt.com/games/DDTOPlus/791558)**
 
 # Original Game Links
 
