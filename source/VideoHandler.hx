@@ -6,12 +6,12 @@ import openfl.events.KeyboardEvent;
 
 class VideoHandler extends FlxVideo
 {
-    public var canSkip:Bool = false;
+	public var canSkip:Bool = false;
 	public var skipKeys:Array<FlxKey> = [];
 
 	public function new():Void
 	{
-        super();
+		super();
 
 		onEndReached.add(function()
 		{
@@ -31,20 +31,20 @@ class VideoHandler extends FlxVideo
 	override public function dispose():Void
 	{
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
-        FlxG.mouse.visible = true;
+		FlxG.mouse.visible = true;
 		super.dispose();
 	}
 
 	private function onKeyPress(event:KeyboardEvent):Void
 	{
 		if (!canSkip)
-            return;
+			return;
 
 		if (skipKeys.contains(event.keyCode))
-        {
+		{
 			canSkip = false;
-            onEndReached.dispatch();
-        }
-    }
+			onEndReached.dispatch();
+		}
+	}
 }
 #end
