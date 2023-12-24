@@ -2,7 +2,7 @@ flag	content
 descDefault_BF	A standard school uniform. Those who show up in the club are mysteriously given one<N>to wear.
 descRegular_BF	BF's usual fit. Comfortable to wear and wickedly funky.
 descMinus_BF	BF from an alternate universe. He is but one of three BF variations in his homeworld.
-descSutazu	Who is she? Why does she keep showing up in random places?!
+descSutazu	They say there is a Sutazu in every universe. Her turtle buddy Henry tags along sometimes too.
 descSoft	Benjamin has no idea how he got here, but these schoolgirls seem nice enough, he hopes.
 descCow	Partnered with Mr. Bird, he's always there to offer Sayori some much needed hug<N>energy. Oh, and he's sentient now.
 descBlueSky_BF	Homeroom teacher Sakurai's attire. What better way to woo your girlfriend than by<N>telling her about the atrocities of 20th century history?
@@ -18,7 +18,6 @@ descHoloFunk_GF	This isn't Nene's first time in a spooky high school game.<N>She
 descDefault_MO	A standard school uniform. Monika has hers changed up a bit.
 descCasual_MO	Monika's casual wear. Sweaters are truly the pinnacle of casual comfort. (Yuri would agree.)
 descValentine_MO	A white summer dress. While never seen in game, Monika wears this outfit in several promo artworks.
-descNeo_MO	Monika from an alternate universe. In this futuristic neon world,<N>Monika is a suave but devious AI set on finding her creator.
 descFestival_MO	Hex's uniform. Monika's athletic skill could make her a top notch<N>basketball star like Hex too.
 descFriends_MO	Senpai's uniform. Monika might even wear it better than Senpai does.
 descBlueSky_MO	Monika's winter outfit from Blue Skies. Lacking a route didn't stop the club president from lacking style.
@@ -29,7 +28,8 @@ descPicnic_SA	Sayori's adorable summer clothes. Perfect to wear while sharing sn
 descFestival_SA	Grace's attire. Sayori easily identifies with the emotions Grace expresses in her songs.
 descFriends_SA	A hoodie inspired by Zipper. It's much better than wearing a whole ass straight jacket.
 descBlueSky_SA	Sayori's winter outfit from Blue Skies. Comfy trainers? Check. Simple outfit? Check.<N>Not even fully tucked in? Yep, that's Sayori alright.
-descSleepWear	Sayori's sleepwear. She's only ever seen wearing this during<N>"unfortunate" circumstances.
+descSleepWear	Sayori's sleepwear. She's only ever seen wearing this during<N><Q>unfortunate<Q> circumstances.
+descMinus_SA	Sayori from an alternate universe. An adorable mermaid friend who must remain hydrated, as required by scientist protocals.
 descDefault_NA	A standard school uniform. Natsuki's is the smallest size they offer.
 descCasual_NA	Natsuki's casual wear. She forgot her mic, so she busted out the old reliable hairbrush.
 descSkater_NA	Natsuki's skater fit. Both stylish and sporty!
@@ -46,6 +46,8 @@ descFestival_YU	Taki's church robes. Chainsaw not included.
 descFriends_YU	Tabi's outfit. Yuri and Tabi have formed a mutual bond over their fondness of knives.
 descBlueSky_YU	Yuri's winter outfit from Blue Skies. Yuri truly has an affinity for wearing black.
 descDefault_PR	A standard school uniform. For an equally standard individual.
+descHenry	An outfit inspired by Henry Stickmin. Both Protag and Henry are your humble protagonists<N>getting into larger than life situations.
+descFanon	The Protagonist's Fanon design. Hey, we had to start somewhere.<N>This design may also bring fourth forgotten memories of a certain 'Wallace'.
 descCasual_PR	The protagonist's casual wear. A lot of interpretation here since you only see the<N>top half and back view of this outfit in game.
 descHotline	Rude 1's fit. Monika and Yuri suggested the look after their <N>strange encounter with a certain funky space lady.
 descBlueSky_PR	The protagonist's winter clothes. If you manage to take Yuri to see an exciting <N>fireworks display in Blue Skies, you'll catch Protag in this outfit.

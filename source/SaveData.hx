@@ -1,6 +1,8 @@
 import flixel.FlxG;
 import flixel.util.FlxSave;
-import lime.app.Application;
+#if FEATURE_FILESYSTEM
+import sys.FileSystem;
+#end
 
 class SaveData
 {
@@ -269,5 +271,144 @@ class SaveData
 		}
 
 		return true;
+	}
+
+	/**
+	 * Check for an existing HaxeFlixel save file.
+	 *
+	 * @param   company		The company of the HaxeFlixel title, required for saves before 5.0.0+.
+	 * @param   title		The title/name of the HaxeFlixel title, required for saves before 5.0.0+.
+	 * @param   localPath	The path of the save file.
+	 * @param   name			The name of the save file.
+	 * @param   newPath		Whether or not the save file is from a HaxeFlixel title that's on 5.0.0+.
+	**/
+	public static function getFlixelSave(company:String, title:String, localPath:String = 'ninjamuffin99', name:String = 'funkin', newPath:Bool = false):Bool
+	{
+		// before anyone asks, this is copy-pasted from FlxSave
+		var invalidChars = ~/[ ~%&\\;:"',<>?#]+/;
+
+		// Avoid checking for .sol files directly in AppData
+		if (localPath == "")
+		{
+			var path = company;
+
+			if (path == null || path == "")
+			{
+				path = "HaxeFlixel";
+			}
+			else
+			{
+				#if html5
+				// most chars are fine on browsers
+				#else
+				path = invalidChars.split(path).join("-");
+				#end
+			}
+
+			localPath = path;
+		}
+
+		var directory = lime.system.System.applicationStorageDirectory;
+		var path = '';
+
+		if (newPath)
+			path = haxe.io.Path.normalize('$directory/../../../$localPath') + "/";
+		else
+			path = haxe.io.Path.normalize('$directory/../../../$company/$title/$localPath') + "/";
+
+		name = StringTools.replace(name, "//", "/");
+		name = StringTools.replace(name, "//", "/");
+
+		if (StringTools.startsWith(name, "/"))
+		{
+			name = name.substr(1);
+		}
+
+		if (StringTools.endsWith(name, "/"))
+		{
+			name = name.substring(0, name.length - 1);
+		}
+
+		if (name.indexOf("/") > -1)
+		{
+			var split = name.split("/");
+			name = "";
+
+			for (i in 0...(split.length - 1))
+			{
+				name += "#" + split[i] + "/";
+			}
+
+			name += split[split.length - 1];
+		}
+
+		#if debug
+		trace(path + name + ".sol");
+		#end
+
+		return FileSystem.exists(path + name + ".sol");
+	}
+
+	/**
+		Check for an existing renpy save file.
+	**/
+	public static function getRenpySave(?doki:String = 'DDLC-1454445547'):Bool
+	{
+		var directory = lime.system.System.applicationStorageDirectory;
+		var renpy = 'RenPy';
+		var path = '';
+
+		#if linux
+		renpy = '.renpy';
+		path = haxe.io.Path.normalize('${Sys.getEnv("HOME")}/$renpy/$doki') + "/";
+		#elseif macos
+		path = haxe.io.Path.normalize('$directory/../../../../$renpy/$doki') + "/";
+		#else
+		path = haxe.io.Path.normalize('$directory/../../../$renpy/$doki') + "/";
+		#end
+
+		return FileSystem.exists(path + "persistent");
+	}
+
+	/**
+		Check for an existing Doki Doki Literature Club Plus! save file.
+		NOTE: Linux can't be added as there's no native Linux version, it runs through Proton instead.
+	**/
+	public static function getDDLCPSave():Bool
+	{
+		var path = Sys.getEnv("userprofile") + '\\AppData\\LocalLow\\Team Salvato\\Doki Doki Literature Club Plus\\save_preferences.sav';
+		return FileSystem.exists(path);
+	}
+
+	/**
+		Check for an existing Soft Mod save file.
+	**/
+	inline public static function getSoftSave():Bool
+	{
+		return getFlixelSave('Disky', 'Soft Mod') || getFlixelSave('SoftTeam', 'FNFSoft', '.', 'soft');
+	}
+
+	/**
+		Check for an existing DDTO Bad Ending save file.
+	**/
+	inline public static function getBadEndSave():Bool
+	{
+		return getFlixelSave('Team TBD', 'DokiTakeover', 'teamtbd', 'badending') || getFlixelSave(null, null, 'TeamTBD', 'BadEnding', true);
+	}
+
+	/**
+		Check for an existing Vs. Sunday save file.
+	**/
+	inline public static function getSundaySave():Bool
+	{
+		return getFlixelSave('kadedev', 'Vs Sunday') || getFlixelSave('kadedev', 'Vs Sunday WITH SHADERS');
+	}
+
+	/**
+		Check for an existing Vs. Tabi save file.
+	**/
+	inline public static function getTabiSave():Bool
+	{
+		return getFlixelSave('Homskiy', 'Tabi', 'homskiy', 'tabi') || getFlixelSave('Tabi Team', 'Tabi');
 	}
 }

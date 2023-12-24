@@ -730,7 +730,7 @@ class DialogueBox extends FlxSpriteGroup
 		if (SaveData.shaders)
 		{
 			staticlol = new StaticShader();
-			PlayState.camOverlay.setFilters([new ShaderFilter(staticlol)]);
+			PlayState.camOverlay.filters = [new ShaderFilter(staticlol)];
 		}
 
 		FlxG.sound.play(Paths.sound('glitchin'));
@@ -739,7 +739,7 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			if (SaveData.shaders)
 			{
-				PlayState.camOverlay.setFilters([]);
+				PlayState.camOverlay.filters = [];
 				staticlol = null;
 			}
 

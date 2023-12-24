@@ -145,5 +145,5 @@
 	"scale": 1,
 	"gameover_character": "playablegf_dead",
 	"death_sound": "fnf_loss_sfx",
-	"win_sound": "dah"
+	"win_sound": "gf_blu"
 }

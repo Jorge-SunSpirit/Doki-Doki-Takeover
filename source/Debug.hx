@@ -410,7 +410,7 @@ class Debug
 					state = new CostumeSelectState();
 				case 'costumeold':
 					state = new old.CostumeSelectStateOriginal();
-				case 'animation' | 'debug':
+				case 'animation' | 'debug' | 'character':
 					state = new AnimationDebugState();
 				case 'first' | 'boot' | 'welcome':
 					state = new FirstBootState();

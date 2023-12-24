@@ -70,6 +70,16 @@
 		},
 		{
 			"subfolder":true,
+			"internal_Name": "henry",
+			"charFile":"protag-henry"
+		},
+		{
+			"subfolder":true,
+			"internal_Name": "fanon",
+			"charFile":"protag-fanon"
+		},
+		{
+			"subfolder":true,
 			"internal_Name": "blueskies",
 			"charFile":"protag-blueskies"
 		}

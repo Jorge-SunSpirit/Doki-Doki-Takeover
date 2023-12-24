@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DDLCSpookyKids.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Game Over Death0000" x="8" y="8" width="879" height="295"/>
+	<SubTexture name="Game Over Retry0000" x="895" y="8" width="862" height="282" frameX="-16" frameY="0" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0001" x="895" y="8" width="862" height="282" frameX="-16" frameY="0" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0002" x="1765" y="8" width="883" height="272" frameX="0" frameY="-10" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0003" x="1765" y="8" width="883" height="272" frameX="0" frameY="-10" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0004" x="2656" y="8" width="879" height="272" frameX="-2" frameY="-10" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0005" x="2656" y="8" width="879" height="272" frameX="-2" frameY="-10" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0006" x="2656" y="8" width="879" height="272" frameX="-2" frameY="-10" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0007" x="2656" y="8" width="879" height="272" frameX="-2" frameY="-10" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Retry0008" x="2656" y="8" width="879" height="272" frameX="-2" frameY="-10" frameWidth="883" frameHeight="282"/>
+	<SubTexture name="Game Over Start0000" x="3543" y="8" width="500" height="563" frameX="-259" frameY="-27" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0001" x="3543" y="8" width="500" height="563" frameX="-259" frameY="-27" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0002" x="4051" y="8" width="457" height="590" frameX="-281" frameY="0" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0003" x="4051" y="8" width="457" height="590" frameX="-281" frameY="0" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0004" x="4516" y="8" width="486" height="573" frameX="-266" frameY="-17" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0005" x="4516" y="8" width="486" height="573" frameX="-266" frameY="-17" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0006" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0007" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0008" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0009" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0010" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0011" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0012" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0013" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0014" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0015" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0016" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0017" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0018" x="5010" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0019" x="5503" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0020" x="5996" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0021" x="5996" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0022" x="5996" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0023" x="5996" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0024" x="5996" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0025" x="5996" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0026" x="6489" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0027" x="6982" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0028" x="7475" y="8" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0029" x="8" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0030" x="501" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0031" x="994" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0032" x="1487" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0033" x="1980" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0034" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0035" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0036" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0037" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0038" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0039" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0040" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0041" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0042" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0043" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0044" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0045" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0046" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0047" x="2473" y="606" width="485" height="574" frameX="-266" frameY="-16" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0048" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0049" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0050" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0051" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0052" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0053" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0054" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0055" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0056" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0057" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0058" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0059" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0060" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0061" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0062" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0063" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="Game Over Start0064" x="2966" y="606" width="879" height="296" frameX="0" frameY="-341" frameWidth="879" frameHeight="637"/>
+	<SubTexture name="SPOOKY DANCE0000" x="3853" y="606" width="440" height="582" frameX="0" frameY="0" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0001" x="3853" y="606" width="440" height="582" frameX="0" frameY="0" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0002" x="4301" y="606" width="418" height="574" frameX="-20" frameY="-8" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0003" x="4301" y="606" width="418" height="574" frameX="-20" frameY="-8" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0004" x="4727" y="606" width="339" height="561" frameX="-98" frameY="-21" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0005" x="4727" y="606" width="339" height="561" frameX="-98" frameY="-21" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0006" x="5074" y="606" width="343" height="552" frameX="-94" frameY="-30" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0007" x="5074" y="606" width="343" height="552" frameX="-94" frameY="-30" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0008" x="5425" y="606" width="438" height="581" frameX="-31" frameY="-1" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0009" x="5425" y="606" width="438" height="581" frameX="-31" frameY="-1" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0010" x="5871" y="606" width="420" height="574" frameX="-32" frameY="-8" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0011" x="5871" y="606" width="420" height="574" frameX="-32" frameY="-8" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0012" x="6299" y="606" width="339" height="561" frameX="-98" frameY="-21" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0013" x="6299" y="606" width="339" height="561" frameX="-98" frameY="-21" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0014" x="6646" y="606" width="345" height="552" frameX="-98" frameY="-30" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SPOOKY DANCE0015" x="6646" y="606" width="345" height="552" frameX="-98" frameY="-30" frameWidth="469" frameHeight="582"/>
+	<SubTexture name="SkidPumpDown0000" x="6999" y="606" width="482" height="536" frameX="-5" frameY="-9" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0001" x="6999" y="606" width="482" height="536" frameX="-5" frameY="-9" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0002" x="7489" y="606" width="492" height="544" frameX="-1" frameY="-1" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0003" x="7489" y="606" width="492" height="544" frameX="-1" frameY="-1" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0004" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0005" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0006" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0007" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0008" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0009" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0010" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0011" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0012" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown0013" x="8" y="1196" width="492" height="545" frameX="0" frameY="0" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown MIZZ0000" x="6999" y="606" width="482" height="536" frameX="-5" frameY="-69" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown MIZZ0001" x="6999" y="606" width="482" height="536" frameX="-5" frameY="-69" frameWidth="493" frameHeight="545"/>
+	<SubTexture name="SkidPumpDown MIZZ0002" x="508" y="1196" width="475" height="605" frameX="-8" frameY="0" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0003" x="508" y="1196" width="475" height="605" frameX="-8" frameY="0" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0004" x="991" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0005" x="991" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0006" x="1491" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0007" x="1491" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0008" x="991" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0009" x="991" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0010" x="1491" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0011" x="1491" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0012" x="991" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpDown MIZZ0013" x="991" y="1196" width="492" height="589" frameX="0" frameY="-16" frameWidth="492" frameHeight="605"/>
+	<SubTexture name="SkidPumpIdle0000" x="1991" y="1196" width="476" height="555" frameX="-16" frameY="-19" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0001" x="1991" y="1196" width="476" height="555" frameX="-16" frameY="-19" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0002" x="2475" y="1196" width="484" height="554" frameX="-4" frameY="-20" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0003" x="2475" y="1196" width="484" height="554" frameX="-4" frameY="-20" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0004" x="2967" y="1196" width="484" height="560" frameX="0" frameY="-14" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0005" x="2967" y="1196" width="484" height="560" frameX="0" frameY="-14" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0006" x="3459" y="1196" width="487" height="569" frameX="-1" frameY="-5" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0007" x="3459" y="1196" width="487" height="569" frameX="-1" frameY="-5" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0008" x="3954" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0009" x="3954" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0010" x="3954" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0011" x="3954" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0012" x="4447" y="1196" width="482" height="556" frameX="-5" frameY="-18" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0013" x="4447" y="1196" width="482" height="556" frameX="-5" frameY="-18" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0014" x="4937" y="1196" width="483" height="558" frameX="-13" frameY="-16" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0015" x="4937" y="1196" width="483" height="558" frameX="-13" frameY="-16" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0016" x="5428" y="1196" width="486" height="565" frameX="-15" frameY="-9" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0017" x="5428" y="1196" width="486" height="565" frameX="-15" frameY="-9" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0018" x="5922" y="1196" width="486" height="569" frameX="-11" frameY="-5" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0019" x="5922" y="1196" width="486" height="569" frameX="-11" frameY="-5" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0020" x="6416" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0021" x="6416" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0022" x="6416" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpIdle0023" x="6416" y="1196" width="485" height="574" frameX="-7" frameY="0" frameWidth="501" frameHeight="574"/>
+	<SubTexture name="SkidPumpLeft0000" x="6909" y="1196" width="587" height="525" frameX="0" frameY="-11" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0001" x="6909" y="1196" width="587" height="525" frameX="0" frameY="-11" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0002" x="7504" y="1196" width="582" height="531" frameX="-6" frameY="-5" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0003" x="7504" y="1196" width="582" height="531" frameX="-6" frameY="-5" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0004" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0005" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0006" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0007" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0008" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0009" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0010" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0011" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0012" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft0013" x="8" y="1809" width="578" height="536" frameX="-11" frameY="0" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft MIZZ0000" x="6909" y="1196" width="587" height="525" frameX="0" frameY="-85" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft MIZZ0001" x="6909" y="1196" width="587" height="525" frameX="0" frameY="-85" frameWidth="589" frameHeight="536"/>
+	<SubTexture name="SkidPumpLeft MIZZ0002" x="594" y="1809" width="572" height="610" frameX="-18" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0003" x="594" y="1809" width="572" height="610" frameX="-18" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0004" x="1174" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0005" x="1174" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0006" x="1760" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0007" x="1760" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0008" x="1174" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0009" x="1174" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0010" x="1760" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0011" x="1760" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0012" x="1174" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpLeft MIZZ0013" x="1174" y="1809" width="578" height="610" frameX="-11" frameY="0" frameWidth="590" frameHeight="610"/>
+	<SubTexture name="SkidPumpRight0000" x="2346" y="1809" width="523" height="574" frameX="-13" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0001" x="2346" y="1809" width="523" height="574" frameX="-13" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0002" x="2877" y="1809" width="526" height="574" frameX="-6" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0003" x="2877" y="1809" width="526" height="574" frameX="-6" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0004" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0005" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0006" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0007" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0008" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0009" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0010" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0011" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0012" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight0013" x="3411" y="1809" width="528" height="574" frameX="0" frameY="0" frameWidth="536" frameHeight="574"/>
+	<SubTexture name="SkidPumpRight MIZZ0000" x="3947" y="1809" width="523" height="574" frameX="-27" frameY="-66" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0001" x="3947" y="1809" width="523" height="574" frameX="-27" frameY="-66" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0002" x="4478" y="1809" width="528" height="640" frameX="0" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0003" x="4478" y="1809" width="528" height="640" frameX="0" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0004" x="5014" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0005" x="5014" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0006" x="5550" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0007" x="5550" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0008" x="5014" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0009" x="5014" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0010" x="5550" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0011" x="5550" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0012" x="5014" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpRight MIZZ0013" x="5014" y="1809" width="528" height="640" frameX="-14" frameY="0" frameWidth="550" frameHeight="640"/>
+	<SubTexture name="SkidPumpUp0000" x="6086" y="1809" width="465" height="620" frameX="-2" frameY="0" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0001" x="6086" y="1809" width="465" height="620" frameX="-2" frameY="0" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0002" x="6559" y="1809" width="471" height="612" frameX="-1" frameY="-8" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0003" x="6559" y="1809" width="471" height="612" frameX="-1" frameY="-8" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0004" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0005" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0006" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0007" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0008" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0009" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0010" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0011" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0012" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp0013" x="7038" y="1809" width="477" height="606" frameX="0" frameY="-14" frameWidth="477" frameHeight="620"/>
+	<SubTexture name="SkidPumpUp MIZZ0000" x="7523" y="1809" width="465" height="620" frameX="-24" frameY="-32" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0001" x="7523" y="1809" width="465" height="620" frameX="-24" frameY="-32" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0002" x="8" y="2457" width="524" height="639" frameX="0" frameY="-13" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0003" x="8" y="2457" width="524" height="639" frameX="0" frameY="-13" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0004" x="540" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0005" x="540" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0006" x="1054" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0007" x="1054" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0008" x="540" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0009" x="540" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0010" x="1054" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0011" x="1054" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0012" x="540" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+	<SubTexture name="SkidPumpUp MIZZ0013" x="540" y="2457" width="506" height="652" frameX="-9" frameY="0" frameWidth="524" frameHeight="652"/>
+</TextureAtlas>

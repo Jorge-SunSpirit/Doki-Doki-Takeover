@@ -3,15 +3,22 @@
 		{
 			"realName": "SirDusterBuster",
 			"iconName": "Duster",
-			"description": "Director",
+			"description": "Director\nTeam TBD Lead",
 			"twitter": "https://twitter.com/SirDusterBuster",
 			"whichrole": 0
 		},
 		{
 			"realName": "Jorge - SunSpirit",
 			"iconName": "Jorge",
-			"description": "Co-Director",
+			"description": "Co-Director\nTeam TBD Lead",
 			"twitter": "https://twitter.com/Jorge_SunSpirit",
+			"whichrole": 0
+		},
+		{
+			"realName": "HighPoweredKeyz",
+			"iconName": "HPK",
+			"description": "Team TBD Lead",
+			"twitter": "https://twitter.com/HighPoweredArt",
 			"whichrole": 0
 		},
 		{
@@ -88,7 +95,7 @@
 			"realName": "Miss Beepy",
 			"iconName": "Beepy",
 			"description": "CG Artist\nPause Screen Artist",
-			"twitter": "https://twitter.com/MissBeepy",
+			"twitter": "",
 			"whichrole": 1
 		},
 		{
@@ -103,6 +110,13 @@
 			"iconName": "Ashy",
 			"description": "Pause Screen Artist",
 			"twitter": "https://twitter.com/AshyTown_",
+			"whichrole": 1
+		},
+		{
+			"realName": "Novasaur",
+			"iconName": "Nova",
+			"description": "Pause Screen Artist",
+			"twitter": "https://twitter.com/NNovasaur",
 			"whichrole": 1
 		},
 		{
@@ -122,7 +136,7 @@
 		{
 			"realName": "AnInternetsEcho",
 			"iconName": "Cammy",
-			"description": "Costume Artist",
+			"description": "Costume Artist\nPause Screen Artist",
 			"twitter": "",
 			"whichrole": 2
 		},
@@ -155,7 +169,7 @@
 			"whichrole": 2
 		},
 		{
-			"realName": "Max0KE",
+			"realName": "MaxOKE",
 			"iconName": "Max",
 			"description": "Costume Artist",
 			"twitter": "https://twitter.com/MaxOKE_",
@@ -166,6 +180,13 @@
 			"iconName": "Moxxie",
 			"description": "Artist\nAnimator",
 			"twitter": "https://twitter.com/hasnomoxxie",
+			"whichrole": 2
+		},
+		{
+			"realName": "Raze",
+			"iconName": "Raze",
+			"description": "Pause Screen Artist",
+			"twitter": "https://twitter.com/TheOGFazFilms",
 			"whichrole": 2
 		},
 		{
@@ -211,17 +232,24 @@
 			"whichrole": 4
 		},
 		{
+			"realName": "Cerbera",
+			"iconName": "Cerbera",
+			"description": "Charter",
+			"twitter": "https://twitter.com/Cerberaa",
+			"whichrole": 4
+		},
+		{
 			"realName": "Chompo",
 			"iconName": "Chompo",
 			"description": "Charter",
-			"twitter": "https://twitter.com/MrChompsALot",
+			"twitter": "https://twitter.com/chompoWRLD",
 			"whichrole": 4
 		},
 		{
 			"realName": "Clover",
-			"iconName": "Viva",
+			"iconName": "Clover",
 			"description": "Charter",
-			"twitter": "https://twitter.com/Vivaderus",
+			"twitter": "https://twitter.com/Cloverderus",
 			"whichrole": 4
 		},
 		{
@@ -260,6 +288,13 @@
 			"whichrole": 4
 		},
 		{
+			"realName": "Cocopuffs",
+			"iconName": "Coco",
+			"description": "Musician",
+			"twitter": "https://twitter.com/file_corruption",
+			"whichrole": 5
+		},
+		{
 			"realName": "DatDavi",
 			"iconName": "Davi",
 			"description": "Musician",
@@ -271,6 +306,13 @@
 			"iconName": "DPZ",
 			"description": "Musician",
 			"twitter": "https://twitter.com/dpzmusic",
+			"whichrole": 5
+		},
+		{
+			"realName": "DrazicallyDTM",
+			"iconName": "Draz",
+			"description": "Musician",
+			"twitter": "https://twitter.com/DrazicallyDTM",
 			"whichrole": 5
 		},
 		{
@@ -288,10 +330,10 @@
 			"whichrole": 5
 		},
 		{
-			"realName": "Kairii",
-			"iconName": "Kairii",
+			"realName": "JACKALRUIN",
+			"iconName": "JACKALRUIN",
 			"description": "Musician",
-			"twitter": "https://www.youtube.com/@RiiStudios",
+			"twitter": "https://www.youtube.com/@JACKALRUIN",
 			"whichrole": 5
 		},
 		{
@@ -299,6 +341,13 @@
 			"iconName": "Matt",
 			"description": "Musician",
 			"twitter": "https://twitter.com/matt_currency",
+			"whichrole": 5
+		},
+		{
+			"realName": "Noichi",
+			"iconName": "Noichi",
+			"description": "Musician",
+			"twitter": "https://twitter.com/Noichi_yt",
 			"whichrole": 5
 		},
 		{
@@ -354,7 +403,7 @@
 		{
 			"realName": "Bara no Yume (Plus)",
 			"iconName": "SenpaiMonika",
-			"description": "Composed by Kairii",
+			"description": "Composed by JACKALRUIN",
 			"twitter": "",
 			"whichrole": 6,
 			"funnyName": "Bara no Yume\n(Plus)"
@@ -403,6 +452,14 @@
 			"whichrole": 6
 		},
 		{
+			"realName": "Baka (Tankman Mix)",
+			"iconName": "Tankman",
+			"description": "Remix Composed by Cocopuffs\nOriginal Song by Starrie_blu",
+			"twitter": "",
+			"whichrole": 6,
+			"funnyName": "Baka\n(Tankman Mix)"
+		},
+		{
 			"realName": "Deep Breaths",
 			"iconName": "Yuri",
 			"description": "Composed by Saruky",
@@ -434,7 +491,7 @@
 		{
 			"realName": "Beathoven (Natsuki Mix)",
 			"iconName": "Beathoven",
-			"description": "Remix Composed by Kairii\nOriginal Song by PaperKitty",
+			"description": "Remix Composed by JACKALRUIN\nOriginal Song by PaperKitty",
 			"twitter": "",
 			"whichrole": 6,
 			"funnyName": "Beathoven\n(Natsuki Mix)"
@@ -498,6 +555,14 @@
 			"whichrole": 6
 		},
 		{
+			"realName": "Shrinking Violet (Spooky Mix)",
+			"iconName": "SpookyKids",
+			"description": "Remix Composed by DrazicallyDTM\nOriginal Song by\nHighPoweredKeyz & DatDavi",
+			"twitter": "",
+			"whichrole": 6,
+			"funnyName": "Shrinking Violet\n(Spooky Mix)"
+		},
+		{
 			"realName": "Joyride",
 			"iconName": "Sayori",
 			"description": "Composed by DatDavi",
@@ -528,7 +593,7 @@
 		{
 			"realName": "Takeover Medley",
 			"iconName": "Monika",
-			"description": "Composed by HighPoweredKeyz,\nStardust Tunes, Kairii,\nMiss Beepy, GGalactigal, & DatDavi",
+			"description": "Composed by HighPoweredKeyz,\nStardust Tunes, JACKALRUIN,\nMiss Beepy, GGalactigal, & DatDavi",
 			"twitter": "",
 			"whichrole": 6
 		},
@@ -538,6 +603,14 @@
 			"description": "Composed by DatDavi\n& Stardust Tunes",
 			"twitter": "",
 			"whichrole": 6
+		},
+		{
+			"realName": "Love n' Funkin' (Pico Mix)",
+			"iconName": "Pico",
+			"description": "Remix Composed by Noichi\nOriginal Song by DatDavi\n& Stardust Tunes",
+			"twitter": "",
+			"whichrole": 6,
+			"funnyName": "Love n' Funkin'\n(Pico Mix)"
 		},
 		{
 			"realName": "Catfight",
@@ -578,7 +651,7 @@
 		{
 			"realName": "Libitina",
 			"iconName": "Libitina",
-			"description": "Composed by Kairii",
+			"description": "Composed by JACKALRUIN",
 			"twitter": "",
 			"whichrole": 6,
 			"hiddenType": "libitina"
@@ -668,16 +741,9 @@
 			"whichrole": 8
 		},
 		{
-			"realName": "Grant Paulsen",
-			"iconName": "Grant",
-			"description": "Senpai Speaking Voice\n[Video Dub Exclusive]",
-			"twitter": "https://twitter.com/grantpaulsenva",
-			"whichrole": 8
-		},
-		{
 			"realName": "Loganne Digma",
 			"iconName": "Loganne",
-			"description": "Yuri & Libitina Speaking/Singing Voice",
+			"description": "Yuri Speaking/Singing Voice",
 			"twitter": "https://twitter.com/Loganne_Digma",
 			"whichrole": 8,
 			"hiddenType": "libitinabefore"
@@ -694,7 +760,7 @@
 			"realName": "Miss Beepy",
 			"iconName": "Beepy",
 			"description": "Natsuki Speaking/Singing Voice",
-			"twitter": "https://twitter.com/MissBeepy",
+			"twitter": "",
 			"whichrole": 8
 		},
 		{
@@ -900,17 +966,17 @@
 		{
 			"realName": "Playtesters",
 			"iconName": "Monika",
-			"description": "DatDavi, ItoSaihara_, Jorge_SunSpirit, Kairii,\nM&M, SirDusterBuster, Weeg",
+			"description": "DatDavi, ItoSaihara_, Jorge_SunSpirit,\nJACKALRUIN, M&M, SirDusterBuster, Weeg",
 			"twitter": "",
 			"whichrole": 10
 		},
 		{
 			"realName": "Special Thanks!",
 			"iconName": "BF",
-			"description": "8owser16, AfroDanceMan, Awoofle, Bijuu Mike,\nBlantados, Butterflan, Danish.exe, DesireDelta,\nemeruga, EnigmaticQube, firubii, Iamjace,\nJakeNeutron, Penkaru, Saki760, shiroeyoru,\nSantiOkuu, Shouko-kun, Starbitz, StariiFish,\nThe Dustercord, Tiniest Turtles, UniqueGeese,\nvivwikls, Zee, and you!",
+			"description": "AfroDanceMan, Awoofle, Bijuu Mike,\nBlantados, Butterflan, Danish.exe, DesireDelta,\nemeruga, EnigmaticQube, firubii, Iamjace,\nItsSoraval, JakeNeutron, NooBZiiTo1, Penkaru,\nshiroeyoru, SantiOkuu, Shouko-kun, Starbitz,\nStariiFish, SuperStamps, Tiniest Turtles,\nUniqueGeese, vivwikls, Zee, and you!",
 			"twitter": "",
 			"whichrole": 10
 		}
 	],
-	"listoroles": ["Mod Directors", "Artists", "Guest Artists", "Programmers", "Charters", "Musicians", "Music", "Writing / Translation", "Voices", "Cameos", "Additional Credits"]
+	"listoroles": ["Mod Directors / Leads", "Artists", "Guest Artists", "Programmers", "Charters", "Musicians", "Music", "Writing / Translation", "Voices", "Cameos", "Additional Credits"]
 }

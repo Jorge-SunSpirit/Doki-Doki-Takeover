@@ -27,13 +27,15 @@ class GameOverSubstate extends MusicBeatSubstate
 	public static var crashdeath:Bool = false;
 
 	public function new(x:Float, y:Float, goType:Int)
-	{
+	{		
 		FlxG.camera.bgColor = FlxColor.BLACK;
 
 		libbie = PlayState.SONG.song.toLowerCase() == 'libitina';
 
 		if (!PlayState.isStoryMode && !libbie && PlayState.SONG.song.toLowerCase() != 'catfight')
 			mirrormode = SaveData.mirrorMode;
+
+		PlayState.mirrormode = false;
 
 		switch (goType)
 		{
@@ -77,16 +79,13 @@ class GameOverSubstate extends MusicBeatSubstate
 			trace(bf == null ? "bf if hella dumb" : "bf has a big forehead");
 			add(bf);
 
+			var gameoverSound:String = (mirrormode ? bf.winsound : bf.deathsound);
+
 			camFollow = new FlxObject(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y, 1, 1);
 			add(camFollow);
 
-			if (!crashdeath)
-			{
-				if (!mirrormode)
-					FlxG.sound.play(Paths.sound(bf.deathsound));
-				else
-					FlxG.sound.play(Paths.sound(bf.winsound));
-			}
+			if (!crashdeath && Paths.fileExists('sounds/gameover/' + gameoverSound + '.ogg', SOUND, 'shared'))
+				FlxG.sound.play(Paths.sound('gameover/' + gameoverSound));
 		}
 		else
 		{
@@ -119,7 +118,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			if (!crashdeath)
 			{
-				if (mirrormode && !daBf.startsWith('bigmonika') && daBf != "playablesenpai")
+				if (mirrormode && !daBf.startsWith('bigmonika'))
 				{
 					if (bf.animOffsets.exists('hey'))
 						bf.playAnim('hey');
@@ -163,7 +162,6 @@ class GameOverSubstate extends MusicBeatSubstate
 		{
 			FlxG.sound.music.stop();
 			PlayState.sectionStart = false;
-			PlayState.mirrormode = false;
 			PlayState.chartingMode = false;
 			PlayState.practiceMode = false;
 			PlayState.practiceModeToggled = false;

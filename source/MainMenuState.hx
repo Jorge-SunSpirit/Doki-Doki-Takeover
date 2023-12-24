@@ -149,7 +149,7 @@ class MainMenuState extends MusicBeatState
 		if (SaveData.unlockAntipathyCostume)
 			ten.push('nathank');
 
-		if (CoolUtil.flixelSaveCheck('ShadowMario', 'VS Impostor')) // amogus
+		if (SaveData.getFlixelSave('ShadowMario', 'VS Impostor')) // amogus
 			ten.push('sayomongus');
 
 		var random:Float = Random.randNF();

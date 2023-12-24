@@ -94,9 +94,7 @@ class KeyBindSubstate extends MusicBeatSubstate
 
 	override function update(elapsed:Float)
 	{
-		infoText.text = ${LangUtil.getString('descKeyBindControls', 'option')}
-			+ '\n'
-			+ ${lastKey != '' ? LangUtil.getString('descKeyBindBlacklist', 'option', lastKey) : ''};
+		infoText.text = '${LangUtil.getString('descKeyBindControls', 'option')}\n${lastKey != '' ? LangUtil.getString('descKeyBindBlacklist', 'option', lastKey) : ''}';
 
 		if (acceptInput)
 		{

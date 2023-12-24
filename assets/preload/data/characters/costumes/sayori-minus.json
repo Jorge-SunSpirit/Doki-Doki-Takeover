@@ -1,0 +1,128 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-31,
+				-39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Minus Left"
+		},
+		{
+			"offsets": [
+				30,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Minus Right"
+		},
+		{
+			"offsets": [
+				-67,
+				-63
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Minus Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "Minus Idle",
+			"indices": [
+				25,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "Minus Idle",
+			"indices": [
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
+			]
+		},
+		{
+			"offsets": [
+				80,
+				64
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Minus Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-67,
+				-63
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "nara",
+			"indices": [],
+			"name": "Minus Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sayori/Doki_Minus_Sayo_Assets",
+	"position": [
+		0,
+		-100
+	],
+	"healthicon": "sayori",
+	"flip_x": false,
+	"healthbar_colors": [
+		149,
+		224,
+		250
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

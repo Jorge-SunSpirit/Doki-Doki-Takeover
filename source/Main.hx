@@ -5,7 +5,6 @@ import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.Lib;
-import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import lime.app.Application;
@@ -37,7 +36,7 @@ class Main extends Sprite
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
 
-	public static var fpsVar:FPS;
+	public static var fpsVar:FPSCounter;
 	public static var tongue:FireTongueEx;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
@@ -98,7 +97,7 @@ class Main extends Sprite
 		game = new FlxGame(gameWidth, gameHeight, initialState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash, startFullscreen);
 		addChild(game);
 
-		fpsVar = new FPS(10, 3, 0xFFFFFF);
+		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 
 		if (fpsVar != null)

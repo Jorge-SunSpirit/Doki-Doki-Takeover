@@ -1,0 +1,214 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				200,
+				42
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "SkidPumpLeft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				80
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "SkidPumpRight0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				51
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SkidPumpDown0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				9,
+				125
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SkidPumpUp0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				203,
+				116
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "SkidPumpLeft MIZZ0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-56,
+				147
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "SkidPumpRight MIZZ0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				111
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "SkidPumpDown MIZZ0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				158
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "SkidPumpUp MIZZ0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				80
+			],
+			"anim": "danceLeft",
+			"fps": 12,
+			"name": "SkidPumpIdle0",
+			"indices": [
+				0,
+				2,
+				4,
+				6,
+				8,
+				10
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				80
+			],
+			"anim": "danceRight",
+			"fps": 12,
+			"name": "SkidPumpIdle0",
+			"indices": [
+				13,
+				15,
+				17,
+				19,
+				21
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				36,
+				89
+			],
+			"anim": "danceLeft-alt",
+			"fps": 12,
+			"name": "SPOOKY DANCE",
+			"indices": [
+				0,
+				2,
+				4,
+				6
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				38,
+				89
+			],
+			"anim": "danceRight-alt",
+			"fps": 12,
+			"name": "SPOOKY DANCE0",
+			"indices": [
+				8,
+				10,
+				12,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				259,
+				96
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "Game Over Start0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				259,
+				-245
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "Game Over Death0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				261,
+				-228
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Game Over Retry0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DDLCSpookyKids",
+	"position": [
+		100,
+		-90
+	],
+	"healthicon": "spooky",
+	"flip_x": true,
+	"healthbar_colors": [
+		213,
+		126,
+		0
+	],
+	"camera_position": [
+		-200,
+		50
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"death_sound": "fnf_loss_sfx_spooky",
+	"win_sound": "sk_ayy",
+	"gameover_character": "spooky-doki"
+}

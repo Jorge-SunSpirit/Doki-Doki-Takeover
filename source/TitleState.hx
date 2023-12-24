@@ -39,6 +39,16 @@ class TitleState extends MusicBeatState
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
+		#if sys
+		if (!initialized && Argument.parse(Sys.args()))
+		{
+			initialized = true;
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+			Conductor.changeBPM(120);
+			return;
+		}
+		#end
+
 		startIntro();
 
 		super.create();

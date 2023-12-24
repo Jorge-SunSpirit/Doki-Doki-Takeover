@@ -8,47 +8,47 @@
                     "data": "",
                     "name": "nameDefault",
                     "desc": "descDefault_BF",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 },
                 {
                     "data": "casual",
                     "name": "nameRegular",
                     "desc": "descRegular_BF",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 },
                 {
                     "data": "minus",
                     "name": "nameMinus",
                     "desc": "descMinus_BF",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 },
                 {
                     "data": "soft",
                     "name": "nameSoft",
                     "desc": "descSoft",
                     "unlock": "unlockSoft",
-                    "color": "0xFFAECDEA"
+                    "color": "#AECDEA"
                 },
                 {
                     "data": "mrcow",
                     "name": "nameCow",
                     "desc": "descCow",
                     "unlock": "unlockCow",
-                    "color": "0xFF3D3D3D"
+                    "color": "#3D3D3D"
                 },
                 {
                     "data": "blueskies",
                     "name": "nameBlueSky",
                     "desc": "descBlueSky_BF",
                     "unlock": "unlockBlueSkies_BF",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 },
                 {
                     "data": "holofunk",
                     "name": "nameHoloFunk",
                     "desc": "descHoloFunk_BF",
                     "unlock": "unlockHoloFunk",
-                    "color": "0xFFFF85C8"
+                    "color": "#FF85C8"
                 }
             ]
         },
@@ -60,47 +60,47 @@
                     "data": "",
                     "name": "nameDefault",
                     "desc": "descDefault_GF",
-                    "color": "0xFFF84863"
+                    "color": "#F84863"
                 },
                 {
                     "data": "casual",
                     "name": "nameRegular",
                     "desc": "descRegular_GF",
-                    "color": "0xFFF84863"
+                    "color": "#F84863"
                 },
                 {
                     "data": "minus",
                     "name": "nameMinus",
                     "desc": "descMinusGF",
-                    "color": "0xFFC22D6C"
+                    "color": "#C22D6C"
                 },
                 {
                     "data": "soft",
                     "name": "nameSoftPico",
                     "desc": "descSoftPico",
                     "unlock": "unlockSoft",
-                    "color": "0xFF679B87"
+                    "color": "#679B87"
                 },
                 {
                     "data": "blueskies",
                     "name": "nameBlueSky",
                     "desc": "descBlueSky_GF",
                     "unlock": "unlockBlueSkies_GF",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 },
                 {
                     "data": "holofunk",
                     "name": "nameHoloFunk",
                     "desc": "descHoloFunk_GF",
                     "unlock": "unlockHoloFunk",
-                    "color": "0xFFFFB09E"
+                    "color": "#FFB09E"
                 },
                 {
                     "data": "tbd",
                     "name": "nameTBD",
                     "desc": "descTBD",
                     "unlock": "unlockTBD",
-                    "color": "0xFFFF9EC3"
+                    "color": "#FF9EC3"
                 }
             ]
         },
@@ -112,13 +112,13 @@
                     "data": "",
                     "name": "nameDefault",
                     "desc": "descDefault_MO",
-                    "color": "0xFF6FC96C"
+                    "color": "#6FC96C"
                 },
                 {
                     "data": "casual",
                     "name": "nameCasual",
                     "desc": "descCasual_MO",
-                    "color": "0xFFFCE5C4"
+                    "color": "#FCE5C4"
                 },
                 {
                     "data": "valentine",
@@ -131,28 +131,28 @@
                     "name": "nameFestival",
                     "desc": "descFestival_MO",
                     "unlock": "unlockFestival_MO",
-                    "color": "0xFFEDA469"
+                    "color": "#EDA469"
                 },
                 {
                     "data": "senpai",
                     "name": "nameFriends",
                     "desc": "descFriends_MO",
                     "unlock": "unlockFriends_MO",
-                    "color": "0xFFA5C0F9"
+                    "color": "#A5C0F9"
                 },
                 {
                     "data": "blueskies",
                     "name": "nameBlueSky",
                     "desc": "descBlueSky_MO",
                     "unlock": "unlockBlueSkies_MO",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 },
                 {
                     "data": "vigilante",
                     "name": "nameVigilante",
                     "desc": "descVigilante",
                     "unlock": "unlockVigilante",
-                    "color": "0xFFBD3427"
+                    "color": "#BD3427"
                 }
             ]
         },
@@ -164,7 +164,7 @@
                     "data": "",
                     "name": "nameDefault",
                     "desc": "descDefault_SA",
-                    "color": "0xFF94D9FA"
+                    "color": "#94D9FA"
                 },
                 {
                     "data": "casual",
@@ -176,35 +176,35 @@
                     "name": "nameSleepWear",
                     "desc": "descSleepWear",
                     "unlock": "unlockSleepWear",
-                    "color": "0xFFC4C4C4"
+                    "color": "#C4C4C4"
                 },
                 {
                     "data": "picnic",
                     "name": "namePicnic",
                     "desc": "descPicnic_SA",
                     "unlock": "unlockPicnic_SA",
-                    "color": "0xFF8EDB9B"
+                    "color": "#8EDB9B"
                 },
                 {
                     "data": "grace",
                     "name": "nameFestival",
                     "desc": "descFestival_SA",
                     "unlock": "unlockFestival_SA",
-                    "color": "0xFFFF9D98"
+                    "color": "#FF9D98"
                 },
                 {
                     "data": "zipper",
                     "name": "nameFriends",
                     "desc": "descFriends_SA",
                     "unlock": "unlockFriends_SA",
-                    "color": "0xFF3D3D3D"
+                    "color": "#3D3D3D"
                 },
                 {
                     "data": "blueskies",
                     "name": "nameBlueSky",
                     "desc": "descBlueSky_SA",
                     "unlock": "unlockBlueSkies_SA",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 }
             ]
         },
@@ -227,35 +227,35 @@
                     "name": "nameSkater",
                     "desc": "descSkater_NA",
                     "unlock": "unlockSkater",
-                    "color": "0xFFFDCFB1"
+                    "color": "#FDCFB1"
                 },
                 {
                     "data": "kapi",
                     "name": "nameFestival",
                     "desc": "descFestival_NA",
                     "unlock": "unlockFestival_NA",
-                    "color": "0xFF8D9ED9"
+                    "color": "#8D9ED9"
                 },
                 {
                     "data": "sunday",
                     "name": "nameFriends",
                     "desc": "descFriends_NA",
                     "unlock": "unlockFriends_NA",
-                    "color": "0xFF3D3D3D"
+                    "color": "#3D3D3D"
                 },
                 {
                     "data": "hank",
                     "name": "nameHank",
                     "desc": "descHank",
                     "unlock": "unlockHank",
-                    "color": "0xFFBD3427"
+                    "color": "#BD3427"
                 },
                 {
                     "data": "blueskies",
                     "name": "nameBlueSky",
                     "desc": "descBlueSky_NA",
                     "unlock": "unlockBlueSkies_NA",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 }
             ]
         },
@@ -267,48 +267,48 @@
                     "data": "",
                     "name": "nameDefault",
                     "desc": "descDefault_YU",
-                    "color": "0xFFC68EE8"
+                    "color": "#C68EE8"
                 },
                 {
                     "data": "casual",
                     "name": "nameCasual",
                     "desc": "descCasual_YU",
-                    "color": "0xFF3D3D3D"
+                    "color": "#3D3D3D"
                 },
                 {
                     "data": "derby",
                     "name": "nameDerby",
                     "desc": "descDerby_YU",
                     "unlock": "unlockDerby",
-                    "color": "0xFFA6E0BA"
+                    "color": "#A6E0BA"
                 },
                 {
                     "data": "picnic",
                     "name": "namePicnic",
                     "desc": "descPicnic_YU",
                     "unlock": "unlockPicnic_YU",
-                    "color": "0xFF3D3D3D"
+                    "color": "#3D3D3D"
                 },
                 {
                     "data": "taki",
                     "name": "nameFestival",
                     "desc": "descFestival_YU",
                     "unlock": "unlockFestival_YU",
-                    "color": "0xFFD8D4F3"
+                    "color": "#D8D4F3"
                 },
                 {
                     "data": "tabi",
                     "name": "nameFriends",
                     "desc": "descFriends_YU",
                     "unlock": "unlockFriends_YU",
-                    "color": "0xFFFDEDB6"
+                    "color": "#FDEDB6"
                 },
                 {
                     "data": "blueskies",
                     "name": "nameBlueSky",
                     "desc": "descBlueSky_YU",
                     "unlock": "unlockBlueSkies_YU",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 }
             ]
         },
@@ -320,27 +320,34 @@
                     "data": "",
                     "name": "nameDefault",
                     "desc": "descDefault_PR",
-                    "color": "0xFFBB846F"
+                    "color": "#BB846F"
                 },
                 {
                     "data": "casual",
                     "name": "nameCasual",
                     "desc": "descCasual_PR",
-                    "color": "0xFF9E7782"
+                    "color": "#9E7782"
                 },
                 {
                     "data": "hotline",
                     "name": "nameHotline",
                     "desc": "descHotline",
                     "unlock": "unlockHotline",
-                    "color": "0xFFF75B6C"
+                    "color": "#F75B6C"
+                },
+                {
+                    "data": "henry",
+                    "name": "nameHenry",
+                    "desc": "descHenry",
+                    "unlock": "unlockHenry",
+                    "color": "#F0F4FA"
                 },
                 {
                     "data": "blueskies",
                     "name": "nameBlueSky",
                     "desc": "descBlueSky_PR",
                     "unlock": "unlockBlueSkies_PR",
-                    "color": "0xFFB2EFFF"
+                    "color": "#B2EFFF"
                 }
             ]
         }

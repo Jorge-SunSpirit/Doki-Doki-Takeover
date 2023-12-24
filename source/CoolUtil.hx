@@ -8,7 +8,6 @@ import flixel.addons.transition.FlxTransitionableState;
 import openfl.utils.Assets;
 #if FEATURE_FILESYSTEM
 import sys.io.Process;
-import sys.FileSystem;
 #end
 
 using StringTools;
@@ -157,109 +156,6 @@ class CoolUtil
 	public static function setFPSCap(cap:Int):Void
 	{
 		openfl.Lib.current.stage.frameRate = cap;
-	}
-
-	/**
-		* Check for an existing HaxeFlixel save file.
-		*
-		* @param   company		The company of the HaxeFlixel title, required for saves before 5.0.0+.
-		* @param   title		The title/name of the HaxeFlixel title, required for saves before 5.0.0+.
-		* @param   localPath	The path of the save file.
-		* @param   name			The name of the save file.
-		* @param   newPath		Whether or not the save file is from a HaxeFlixel title that's on 5.0.0+.
-	**/
-	public static function flixelSaveCheck(company:String, title:String, localPath:String = 'ninjamuffin99', name:String = 'funkin', newPath:Bool = false):Bool
-	{
-		// before anyone asks, this is copy-pasted from FlxSave
-		var invalidChars = ~/[ ~%&\\;:"',<>?#]+/;
-
-		// Avoid checking for .sol files directly in AppData
-		if (localPath == "")
-		{
-			var path = company;
-
-			if (path == null || path == "")
-			{
-				path = "HaxeFlixel";
-			}
-			else
-			{
-				#if html5
-				// most chars are fine on browsers
-				#else
-				path = invalidChars.split(path).join("-");
-				#end
-			}
-
-			localPath = path;
-		}
-
-		var directory = lime.system.System.applicationStorageDirectory;
-		var path = '';
-
-		if (newPath)
-			path = haxe.io.Path.normalize('$directory/../../../$localPath') + "/";
-		else
-			path = haxe.io.Path.normalize('$directory/../../../$company/$title/$localPath') + "/";
-
-		name = StringTools.replace(name, "//", "/");
-		name = StringTools.replace(name, "//", "/");
-
-		if (StringTools.startsWith(name, "/"))
-		{
-			name = name.substr(1);
-		}
-
-		if (StringTools.endsWith(name, "/"))
-		{
-			name = name.substring(0, name.length - 1);
-		}
-
-		if (name.indexOf("/") > -1)
-		{
-			var split = name.split("/");
-			name = "";
-
-			for (i in 0...(split.length - 1))
-			{
-				name += "#" + split[i] + "/";
-			}
-
-			name += split[split.length - 1];
-		}
-
-		return FileSystem.exists(path + name + ".sol");
-	}
-
-	/**
-		Check for an existing renpy save file.
-	**/
-	public static function renpySaveCheck(?doki:String = 'DDLC-1454445547'):Bool
-	{
-		var directory = lime.system.System.applicationStorageDirectory;
-		var renpy = 'RenPy';
-		var path = '';
-
-		#if linux 
-		renpy = '.renpy';
-		path = haxe.io.Path.normalize('${Sys.getEnv("HOME")}/$renpy/$doki') + "/";
-		#elseif macos
-		path = haxe.io.Path.normalize('$directory/../../../../$renpy/$doki') + "/";
-		#else
-		path = haxe.io.Path.normalize('$directory/../../../$renpy/$doki') + "/";
-		#end
-
-		return FileSystem.exists(path + "persistent");
-	}
-
-	/**
-		Check for an existing Doki Doki Literature Club Plus! save file.
-		TODO: Add paths for Mac. Linux can't be added as there's no native Linux version, it runs through Proton instead.
-	**/
-	public static function ddlcpSaveCheck():Bool
-	{
-		var path = Sys.getEnv("userprofile") + '\\AppData\\LocalLow\\Team Salvato\\Doki Doki Literature Club Plus\\save_preferences.sav';
-		return FileSystem.exists(path);
 	}
 
 	public static function getUsername():String

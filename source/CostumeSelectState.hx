@@ -70,10 +70,10 @@ class CostumeSelectState extends MusicBeatState
 	var costumeLabel:FlxText;
 	var controlLabel:FlxText;
 	var flavorText:FlxText;
-	var colorShader:ColorMask = new ColorMask(0xFFFDFFFF, 0xFFFDDBF1);
 
 	var colorTween1:FlxSprite = new FlxSprite(-9000, -9000).makeGraphic(1, 1, 0xFFFDFFFF);
 	var colorTween2:FlxSprite = new FlxSprite(-9000, -9000).makeGraphic(1, 1, 0xFFFDDBF1);
+	var colorShader:ColorMask = new ColorMask(0xFFFDFFFF, 0xFFFDDBF1);
 
 	var character:Array<String> = ['bf', 'gf', 'monika', 'sayori', 'natsuki', 'yuri', 'protag'];
 	// costume unlocks
@@ -83,8 +83,8 @@ class CostumeSelectState extends MusicBeatState
 			true, // Uniform, unlocked by default
 			true, // Regular, unlocked by default
 			true, // Minus, unlocked by default
-			CoolUtil.flixelSaveCheck('Disky', 'Soft Mod') || SaveData.unlockSoftCostume, // Soft, save check for Soft Mod or mirror mode It's complicated with festy costume
-			CoolUtil.renpySaveCheck() || CoolUtil.ddlcpSaveCheck() || SaveData.unlockMrCowCostume, // Mr. Cow, save checks for DDLC. If you played this mod and don't have this unlocked then I am extremely dissappointed in you.
+			SaveData.getSoftSave() || SaveData.unlockSoftCostume, // Soft, save check for Soft Mod or mirror mode It's complicated with festy costume
+			SaveData.getRenpySave() || SaveData.getDDLCPSave() || SaveData.unlockMrCowCostume, // Mr. Cow, save checks for DDLC. If you played this mod and don't have this unlocked then I am extremely dissappointed in you.
 			Highscore.getAccuracyUnlock('Your Demise', 2) >= 90, // Blue Skies, 90% Accuracy on Your Demise
 			SaveData.unlockHFCostume // HoloFunk, unlocked by clicking on sticker
 		],
@@ -93,7 +93,7 @@ class CostumeSelectState extends MusicBeatState
 			true, // Uniform, unlocked by default
 			true, // Regular, unlocked by default
 			true, // Minus, unlocked by default
-			CoolUtil.flixelSaveCheck('Disky', 'Soft Mod') || SaveData.unlockSoftCostume, // Soft Pico, save check for Soft Mod or mirror mode It's complicated with festy costume
+			SaveData.getSoftSave() || SaveData.unlockSoftCostume, // Soft Pico, save check for Soft Mod or mirror mode It's complicated with festy costume
 			Highscore.getMirrorScore('Love n Funkin', 1) > 0, // Blue Skies, play Love n' Funkin' on Mirror Mode
 			SaveData.unlockHFCostume, // HoloFunk, unlocked by clicking on sticker
 			SaveData.beatLibitina // TBD-tan, beat Libitina
@@ -112,7 +112,7 @@ class CostumeSelectState extends MusicBeatState
 		[
 			true, // Uniform, unlocked by default
 			true, // Casual, unlocked by default
-			CoolUtil.flixelSaveCheck('Team TBD', 'DokiTakeover', 'teamtbd', 'badending') || CoolUtil.flixelSaveCheck(null, null, 'TeamTBD', 'BadEnding', true) || Highscore.getMirrorScore('Joyride', 2) > 0, // Sleep Wear, save check for BAD ENDING
+			SaveData.getBadEndSave() || Highscore.getMirrorScore('Joyride', 2) > 0, // Sleep Wear, save check for BAD ENDING
 			SaveData.yamSayori, // Picnic, choose Sayori on You and Me
 			Highscore.getAccuracyUnlock("It's Complicated (Sayori Mix)", 2) >= 90, // Festival, unlocks if It's Complicated (Hard) is 90%+ accuracy
 			Highscore.getAccuracyUnlock('Constricted', 2) >= 90, // Friends, unlocks if Constricted (Hard) is 90%+ accuracy
@@ -124,7 +124,7 @@ class CostumeSelectState extends MusicBeatState
 			true, // Casual, unlocked by default
 			SaveData.yamNatsuki, // Skater, choose Natsuki on You and Me
 			Highscore.getAccuracyUnlock('Beathoven (Natsuki Mix)', 2) >= 90, // Festival, unlocks if Beathoven (Hard) is 90%+ accuracy
-			CoolUtil.flixelSaveCheck('kadedev', 'Vs Sunday') || CoolUtil.flixelSaveCheck('kadedev', 'Vs Sunday WITH SHADERS') || Highscore.getMirrorScore('Baka', 2) > 0, // Friends, save checks for Sunday
+			SaveData.getSundaySave() || Highscore.getMirrorScore('Baka', 2) > 0, // Friends, save checks for Sunday
 			SaveData.unlockAntipathyCostume, // Antipathy, unlocked by clicking on artwork
 			Highscore.getScore('Catfight', 1) > 0 // Blue Skies, pick Natsu on Catfight (Hard)
 		],
@@ -135,14 +135,15 @@ class CostumeSelectState extends MusicBeatState
 			Highscore.getMirrorScore('Catfight', 2) > 0, // Derby, pick Yuri on Catfight (Hard)
 			SaveData.yamYuri, // Picnic, choose Yuri on You and Me
 			Highscore.getAccuracyUnlock('Crucify (Yuri Mix)', 2) >= 90, // Festival, unlocks if Crucify (Hard) is 90%+ accuracy
-			(CoolUtil.flixelSaveCheck('Homskiy', 'Tabi', 'homskiy', 'tabi') || CoolUtil.flixelSaveCheck('Tabi Team', 'Tabi')) || Highscore.getMirrorScore('Obsession', 2) > 0, // Friends, save check for Tabi
+			SaveData.getTabiSave() || Highscore.getMirrorScore('Obsession', 2) > 0, // Friends, save check for Tabi
 			Highscore.getMirrorScore('Shrinking Violet', 2) > 0 // Blue Skies, play Deep Breaths (Hard) on Mirror Mode
 		],
 		// Protag
 		[
 			true, // Uniform, unlocked by default
 			true, // Casual, unlocked by default
-			CoolUtil.flixelSaveCheck('Hotline024', 'Hotline024') || Highscore.getMirrorScore('Deep Breaths', 2) > 0 && Highscore.getMirrorScore('Poems n Thorns', 2) > 0, // Hotline, save check for Hotline 024
+			SaveData.getFlixelSave('Hotline024', 'Hotline024') || Highscore.getMirrorScore('Deep Breaths', 2) > 0 && Highscore.getMirrorScore('Poems n Thorns', 2) > 0, // Hotline, save check for Hotline 024
+			Highscore.getAccuracyUnlock('Titular (MC Mix)', 2) >= 90, // Henry, unlocks if Titular is 90%+ accuracy
 			SaveData.yamLoss // Blue Skies, fail You and Me by not picking a doki
 		]
 	];
@@ -220,7 +221,7 @@ class CostumeSelectState extends MusicBeatState
 			var id:String = LangUtil.getString(costumeJSON.list[i].charName, 'costume');
 
 			controlLabel = new FlxText(60, (40 * i) + 370, 0, id, 3);
-			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, LEFT);
 			controlLabel.y += LangUtil.getFontOffset('riffic');
 			controlLabel.scale.set(0.7, 0.7);
 			controlLabel.updateHitbox();
@@ -354,17 +355,16 @@ class CostumeSelectState extends MusicBeatState
 					charCostume = SaveData.bfcostume;
 			}
 		}
-		//trace(charCostume);
 
 		var barColor:FlxColor = forceColor;
+
 		if (costumeJSON.list[curSelected].costumes[costumeSelected].color != null && forceColor == 0xFFFDDBF1)
 			barColor = FlxColor.fromString(costumeJSON.list[curSelected].costumes[costumeSelected].color);
 
-		FlxTween.cancelTweensOf(colorTween1);
-		FlxTween.cancelTweensOf(colorTween2);
-
 		var goku:FlxColor = FlxColor.fromHSB(barColor.hue, barColor.saturation, barColor.brightness * 1.3);
 
+		FlxTween.cancelTweensOf(colorTween1);
+		FlxTween.cancelTweensOf(colorTween2);
 		FlxTween.color(colorTween1, 1, colorShader.color1, goku);
 		FlxTween.color(colorTween2, 1, colorShader.color2, barColor);
 
@@ -376,7 +376,8 @@ class CostumeSelectState extends MusicBeatState
 		if (costumeUnlocked[curSelected][costumeSelected])
 		{
 			// JSON array is always ordered, so should be fine
-			var text:String = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].desc, 'costume');
+			var nameText:String = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].name, 'costume');
+			var descText:String = LangUtil.getString(costumeJSON.list[curSelected].costumes[costumeSelected].desc, 'costume');
 
 			// Descriptions for hidden costumes
 			switch (char)
@@ -386,7 +387,8 @@ class CostumeSelectState extends MusicBeatState
 					switch (charCostume)
 					{
 						case 'buff':
-							text = LangUtil.getString('descBuff_NA', 'costume');
+							nameText = LangUtil.getString('nameBuff', 'costume');
+							descText = LangUtil.getString('descBuff_NA', 'costume');
 					}
 				}
 				case 'bf':
@@ -394,7 +396,8 @@ class CostumeSelectState extends MusicBeatState
 					switch (charCostume)
 					{
 						case 'sutazu':
-							text = LangUtil.getString('descSutazu', 'costume');
+							nameText = LangUtil.getString('nameSutazu', 'costume');
+							descText = LangUtil.getString('descSutazu', 'costume');
 					}
 				}
 				case 'gf':
@@ -402,12 +405,34 @@ class CostumeSelectState extends MusicBeatState
 					switch (charCostume)
 					{
 						case 'sayo':
-							text = LangUtil.getString('descSayoGF', 'costume');
+							nameText = LangUtil.getString('charSayo', 'costume');
+							descText = LangUtil.getString('descSayoGF', 'costume');
+					}
+				}
+				case 'sayori':
+				{
+					switch (charCostume)
+					{
+						case 'minus':
+							nameText = LangUtil.getString('nameMinus', 'costume');
+							descText = LangUtil.getString('descMinus_SA', 'costume');
+					}
+				}
+				case 'protag':
+				{
+					switch (charCostume)
+					{
+						case 'fanon':
+							nameText = LangUtil.getString('nameFanon', 'costume');
+							descText = LangUtil.getString('descFanon', 'costume');
 					}
 				}
 			}
 
-			flavorText.text = text;
+			if (grpControlshueh != null && grpControlshueh.members[costumeSelected].text != nameText)
+				grpControlshueh.members[costumeSelected].text = nameText;
+
+			flavorText.text = descText;
 		}
 		else
 		{
@@ -452,7 +477,7 @@ class CostumeSelectState extends MusicBeatState
 				else
 					costumeLabel = new FlxText(60, (40 * i) + 370, 0, "???", 3);
 
-				costumeLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+				costumeLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, LEFT);
 				costumeLabel.y += LangUtil.getFontOffset('riffic');
 				costumeLabel.scale.set(0.7, 0.7);
 				costumeLabel.updateHitbox();
@@ -559,6 +584,9 @@ class CostumeSelectState extends MusicBeatState
 			{
 				case 6:
 					SaveData.protagcostume = selection.data;
+
+					if (costumeSelected == 0 && FlxG.keys.pressed.B)
+						SaveData.protagcostume = "fanon";
 				case 5:
 					SaveData.yuricostume = selection.data;
 				case 4:
@@ -568,6 +596,9 @@ class CostumeSelectState extends MusicBeatState
 						SaveData.natsukicostume = "buff";
 				case 3:
 					SaveData.sayoricostume = selection.data;
+
+					if (costumeSelected == 0 && FlxG.keys.pressed.B)
+						SaveData.sayoricostume = "minus";
 				case 2:
 					SaveData.monikacostume = selection.data;
 

@@ -64,6 +64,5 @@
 	],
 	"sing_duration": 4,
 	"scale": 1,
-	"death_sound": "fnf_loss_sfx-doki",
-	"win_sound": "dah"
+	"death_sound": "fnf_loss_sfx-doki"
 }

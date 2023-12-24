@@ -18,15 +18,15 @@ class PopupMessage extends MusicBeatSubstate
 	var popupData:Array<Array<Dynamic>> = [
 		['prologue', ['Prologue']],
 		['sayori', ['Sayo', 'GFCount']],
-		['natsuki', ['Nat', 'Extra1']],
+		['natsuki', ['Nat', 'Nat2', 'Extra1']],
 		['yuri', ['Yuri', 'Extra2']],
 		['monika', ['Monika']],
 		['festival', ['Festival', 'Mirror', 'Epiphany']],
-		['encore', ['Encore']],
+		['encore', ['Encore', 'Encore2']],
 		['protag', ['Protag', 'Side', 'Costume', 'Extra3', 'Credits']],
 		['side', ['Gallery', 'VA11HallA']],
 		['epiphany', ['Lyrics']],
-		['libitina', ['Libitina']]
+		['libitina', ['Side2', 'Libitina']]
 	];
 
 	var popupStyles:Array<Array<Dynamic>> = [

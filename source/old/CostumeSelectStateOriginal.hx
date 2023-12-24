@@ -100,8 +100,8 @@ class CostumeSelectStateOriginal extends MusicBeatState
 			true, // Uniform, unlocked by default
 			true, // Regular, unlocked by default
 			true, // Minus, unlocked by default
-			CoolUtil.flixelSaveCheck('Disky', 'Soft Mod'), // Soft, save check for Soft Mod
-			CoolUtil.renpySaveCheck() || CoolUtil.ddlcpSaveCheck(), // Mr. Cow, save checks for DDLC. If you played this mod and don't have this unlocked then I am extremely dissappointed in you.
+			SaveData.getSoftSave(), // Soft, save check for Soft Mod
+			SaveData.getRenpySave() || SaveData.getDDLCPSave(), // Mr. Cow, save checks for DDLC. If you played this mod and don't have this unlocked then I am extremely dissappointed in you.
 			Highscore.getAccuracyUnlock('Your Demise', 2) >= 90, // Blue Skies, 90% Accuracy on Your Demise
 			SaveData.unlockHFCostume // HoloFunk, unlocked by clicking on sticker
 		],
@@ -110,7 +110,7 @@ class CostumeSelectStateOriginal extends MusicBeatState
 			true, // Uniform, unlocked by default
 			true, // Regular, unlocked by default
 			true, // Minus, unlocked by default
-			CoolUtil.flixelSaveCheck('Disky', 'Soft Mod'), // Soft Pico, save check for Soft Mod
+			SaveData.getSoftSave(), // Soft Pico, save check for Soft Mod
 			Highscore.getMirrorScore('Love n Funkin', 1) > 0, // Blue Skies, play Love n' Funkin' on Mirror Mode
 			SaveData.unlockHFCostume, // HoloFunk, unlocked by clicking on sticker
 			SaveData.beatLibitina // TBD-tan, beat Libitina
@@ -129,7 +129,7 @@ class CostumeSelectStateOriginal extends MusicBeatState
 		[
 			true, // Uniform, unlocked by default
 			true, // Casual, unlocked by default
-			CoolUtil.flixelSaveCheck('Team TBD', 'DokiTakeover', 'teamtbd', 'badending') || CoolUtil.flixelSaveCheck(null, null, 'TeamTBD', 'BadEnding', true), // Sleep Wear, save check for BAD ENDING
+			SaveData.getBadEndSave(), // Sleep Wear, save check for BAD ENDING
 			SaveData.yamSayori, // Picnic, choose Sayori on You and Me
 			Highscore.getAccuracyUnlock("It's Complicated (Sayori Mix)", 2) >= 90, // Festival, unlocks if It's Complicated (Hard) is 90%+ accuracy
 			Highscore.getAccuracyUnlock('Constricted', 2) >= 90, // Friends, unlocks if Constricted (Hard) is 90%+ accuracy
@@ -141,7 +141,7 @@ class CostumeSelectStateOriginal extends MusicBeatState
 			true, // Casual, unlocked by default
 			SaveData.yamNatsuki, // Skater, choose Natsuki on You and Me
 			Highscore.getAccuracyUnlock('Beathoven (Natsuki Mix)', 2) >= 90, // Festival, unlocks if Beathoven (Hard) is 90%+ accuracy
-			CoolUtil.flixelSaveCheck('kadedev', 'Vs Sunday') || CoolUtil.flixelSaveCheck('kadedev', 'Vs Sunday WITH SHADERS'), // Friends, save checks for Sunday
+			SaveData.getSundaySave(), // Friends, save checks for Sunday
 			SaveData.unlockAntipathyCostume, // Antipathy, unlocked by clicking on artwork
 			Highscore.getMirrorScore('Baka', 2) > 0 // Blue Skies, play Baka (Hard) on Mirror Mode
 		],
@@ -152,14 +152,14 @@ class CostumeSelectStateOriginal extends MusicBeatState
 			Highscore.getMirrorScore('Catfight', 2) > 0, // Derby, pick Yuri on Catfight (Hard)
 			SaveData.yamYuri, // Picnic, choose Yuri on You and Me
 			Highscore.getAccuracyUnlock('Crucify (Yuri Mix)', 2) >= 90, // Festival, unlocks if Crucify (Hard) is 90%+ accuracy
-			CoolUtil.flixelSaveCheck('Homskiy', 'Tabi', 'homskiy', 'tabi'), // Friends, save check for Tabi
+			SaveData.getTabiSave(), // Friends, save check for Tabi
 			Highscore.getMirrorScore('Deep Breaths', 2) > 0 // Blue Skies, play Deep Breaths (Hard) on Mirror Mode
 		],
 		// Protag
 		[
 			true, // Uniform, unlocked by default
 			true, // Casual, unlocked by default
-			CoolUtil.flixelSaveCheck('Hotline024', 'Hotline024'), // Hotline, save check for Hotline 024
+			SaveData.getFlixelSave('Hotline024', 'Hotline024'), // Hotline, save check for Hotline 024
 			SaveData.yamLoss // Blue Skies, fail You and Me by not picking a doki
 		]
 	];
@@ -436,7 +436,7 @@ class CostumeSelectStateOriginal extends MusicBeatState
 		for (i in 0...visualcharacter.length)
 		{
 			controlLabel = new FlxText(60, (40 * i) + 370, 0, visualcharacter[i], 3);
-			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+			controlLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, LEFT);
 			controlLabel.y += LangUtil.getFontOffset('riffic');
 			controlLabel.scale.set(0.7, 0.7);
 			controlLabel.updateHitbox();
@@ -637,7 +637,7 @@ class CostumeSelectStateOriginal extends MusicBeatState
 				else
 					costumeLabel = new FlxText(60, (40 * i) + 370, 0, "???", 3);
 
-				costumeLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, CENTER);
+				costumeLabel.setFormat(LangUtil.getFont('riffic'), 38, FlxColor.WHITE, LEFT);
 				costumeLabel.y += LangUtil.getFontOffset('riffic');
 				costumeLabel.scale.set(0.7, 0.7);
 				costumeLabel.updateHitbox();

@@ -112,5 +112,6 @@
 		0
 	],
 	"sing_duration": 6,
-	"scale": 0.9
+	"scale": 0.9,
+	"death_sound": "fnf_loss_sfx-doki"
 }
