@@ -91,7 +91,7 @@ class CloseGameSubState extends MusicBeatSubstate
 
 	function selectItem(selection:Int = 1):Void
 	{
-		if (selection == 0)
+		if (selection == 1)
 		{
 			Sys.exit(0);
 		}
