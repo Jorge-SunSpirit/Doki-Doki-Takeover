@@ -121,5 +121,5 @@
 	"scale": 6,
 	"gameover_character": "bf-pixel-dead",
 	"death_sound": "fnf_loss_sfx-pixel",
-	"win_sound": "gameover/dah"
+	"win_sound": "dah"
 }

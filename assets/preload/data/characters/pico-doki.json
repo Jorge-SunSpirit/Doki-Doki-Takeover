@@ -153,6 +153,6 @@
 	"sing_duration": 4,
 	"scale": 1,
 	"death_sound": "fnf_loss_sfx",
-	"win_sound": "gameover/dah",
+	"win_sound": "dah",
 	"gameover_character": "pico-doki"
 }

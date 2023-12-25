@@ -122,5 +122,5 @@
 	"gameover_character": "bf-pixel-dead",
 	"gameover_character_mirror": "bf-pixel",
 	"death_sound": "fnf_loss_sfx-pixel",
-	"win_sound": "gameover/dah"
+	"win_sound": "dah"
 }
