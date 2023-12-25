@@ -75,14 +75,14 @@ class CloseGameSubState extends MusicBeatSubstate
 
 		curSelected += huh;
 
-		if (curSelected >= 2)
+		if (curSelected >= selectGrp.length)
 			curSelected = 0;
 		if (curSelected < 0)
-			curSelected = 1;
+			curSelected = selectGrp.length - 1;
 
 		selectGrp.forEach(function(txt:FlxText)
 		{
-			if (txt.ID != curSelected)
+			if (txt.ID == curSelected)
 				txt.setBorderStyle(OUTLINE, 0xFFFFCFFF, 3);
 			else
 				txt.setBorderStyle(OUTLINE, 0xFFFF7CFF, 3);
