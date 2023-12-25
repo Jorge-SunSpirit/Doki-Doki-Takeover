@@ -709,14 +709,21 @@ class DokiFreeplayState extends MusicBeatState
 
 	function getSongData(songName:String, diff:Int)
 	{
+		var suffixChanged = false;
+
 		if (!multiDiff.contains(songName.toLowerCase()))
 			diff = 1;
 
 		if (songName.contains("-alt") && diffsuffix == "-alt") {
 			diffsuffix = "";
+			suffixChanged = true;
 		}
 
 		intendedScore = Highscore.getScore(songName + diffsuffix, diff);
+
+		if (suffixChanged) {
+			diffsuffix = "-alt";
+		}
 	}
 
 	function changePage(huh:Int = 0)
