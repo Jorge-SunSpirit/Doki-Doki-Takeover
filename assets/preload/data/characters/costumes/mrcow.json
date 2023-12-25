@@ -208,5 +208,5 @@
 	"gameover_character": "costumes/mrcow",
 	"gameover_character_mirror": "costumes/mrcow",
 	"death_sound": "fnf_loss_sfx_cow",
-	"win_sound": "dah"
+	"win_sound": "gameover/dah"
 }

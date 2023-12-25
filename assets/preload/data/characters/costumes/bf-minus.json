@@ -176,5 +176,5 @@
 	"scale": 1,
 	"gameover_character": "costumes/bf-minus",
 	"death_sound": "fnf_loss_sfx",
-	"win_sound": "dah"
+	"win_sound": "gameover/dah"
 }
