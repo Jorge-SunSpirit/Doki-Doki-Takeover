@@ -189,7 +189,7 @@ class DokiFreeplayState extends MusicBeatState
 
 		menu_character = new FlxSprite(40, 490);
 		if (curPage != 3)
-		{			
+		{
 			menu_character.frames = Paths.getSparrowAtlas('freeplay/chibidorks');
 			menu_character.animation.addByPrefix('idle', 'FreeplayChibiIdle', 24, false);
 			menu_character.animation.addByPrefix('pop_off', 'FreeplayChibiCheer', 24, false);
@@ -629,7 +629,7 @@ class DokiFreeplayState extends MusicBeatState
 					FlxG.sound.music.destroy();
 					FlxG.sound.music = null;
 				}
-	
+
 				playSong();
 			}
 		}
@@ -691,7 +691,7 @@ class DokiFreeplayState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			MusicBeatState.switchState(new CostumeSelectState());
 		}
-			
+
 	}
 
 	function onMouseOver(txt:FlxText):Void
@@ -714,16 +714,16 @@ class DokiFreeplayState extends MusicBeatState
 		if (!multiDiff.contains(songName.toLowerCase()))
 			diff = 1;
 
-		if (songName.contains("-alt") && diffsuffix == "-alt") {
+		if (songName.contains("-alt") && diffsuffix == "-alt")
+		{
 			diffsuffix = "";
 			suffixChanged = true;
 		}
 
 		intendedScore = Highscore.getScore(songName + diffsuffix, diff);
 
-		if (suffixChanged) {
+		if (suffixChanged)
 			diffsuffix = "-alt";
-		}
 	}
 
 	function changePage(huh:Int = 0)
