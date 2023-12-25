@@ -8,7 +8,7 @@ import flixel.util.FlxColor;
 
 class CloseGameSubState extends MusicBeatSubstate
 {
-	var isExit:Bool = true;
+	var curSelected:Int = 1;
 	var selectGrp:FlxTypedGroup<FlxText> = new FlxTypedGroup<FlxText>();
 
 	public function new()
@@ -43,45 +43,55 @@ class CloseGameSubState extends MusicBeatSubstate
 		textNo.setFormat(LangUtil.getFont('riffic'), 48, FlxColor.WHITE, FlxTextAlign.CENTER);
 		textNo.y += LangUtil.getFontOffset('riffic');
 		textNo.antialiasing = SaveData.globalAntialiasing;
-		textNo.setBorderStyle(OUTLINE, 0xFFFFCFFF, 3);
+		textNo.setBorderStyle(OUTLINE, 0xFFFF7CFF, 3);
 		textNo.ID = 1;
 
 		selectGrp.add(textYes);
 		selectGrp.add(textNo);
 		add(selectGrp);
+
+		changeItem();
 	}
 
 	override function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
 
-		if (controls.BACK) {
-			isExit = false;
+		if (controls.BACK)
 			selectItem();
-		}
 
-		if (controls.LEFT_P || controls.RIGHT_P) {
-
-			FlxG.sound.play(Paths.sound('scrollMenu'));
-
-			isExit = !isExit;
-
-			selectGrp.forEach(function(txt:FlxText)
-			{
-				if (txt.ID == (isExit ? 1 : 0))
-					txt.setBorderStyle(OUTLINE, 0xFFFFCFFF, 3);
-				else
-					txt.setBorderStyle(OUTLINE, 0xFFFF7CFF, 3);
-			});
-		}
+		if (controls.LEFT_P)
+			changeItem(-1);
+		if (controls.RIGHT_P)
+			changeItem(1);
 
 		if (controls.ACCEPT)
-			selectItem();
+			selectItem(curSelected);
 	}
 
-	function selectItem():Void
+	function changeItem(huh:Int = 0)
 	{
-		if (isExit)
+		FlxG.sound.play(Paths.sound('scrollMenu'));
+
+		curSelected += huh;
+
+		if (curSelected >= selectGrp.length)
+			curSelected = 0;
+		if (curSelected < 0)
+			curSelected = selectGrp.length - 1;
+
+		selectGrp.forEach(function(txt:FlxText)
+		{
+			if (txt.ID == curSelected)
+				txt.setBorderStyle(OUTLINE, 0xFFFFCFFF, 3);
+			else
+				txt.setBorderStyle(OUTLINE, 0xFFFF7CFF, 3);
+		});
+	}
+
+	function selectItem(selection:Int = 1):Void
+	{
+		if (selection == 0)
 		{
 			Sys.exit(0);
 		}
